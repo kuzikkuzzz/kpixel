@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: admin@pixelplanet.fun\n"
-"PO-Revision-Date: 2026-03-13 21:30+0000\n"
-"Last-Translator: Extreme Motorsex <em@noreply.pixelplanet.fun>\n"
+"PO-Revision-Date: 2026-04-01 19:58+0000\n"
+"Last-Translator: Sakuya <sakuya@noreply.pixelplanet.fun>\n"
 "Language-Team: Chinese (Simplified Han script) <https://translate.gs-os.com/"
 "projects/ppfun/client/zh_Hans/>\n"
 "Language: zh\n"
@@ -18,7 +18,7 @@ msgid "# Today"
 msgstr "＃今天"
 
 msgid "# Total"
-msgstr "＃全部的"
+msgstr "＃全部"
 
 #, javascript-format
 msgid "${ mouseSymbol } Hold left mouse button and drag mouse to rotate"
@@ -48,10 +48,10 @@ msgid "(0 = infinite)"
 msgstr "（0即无限）"
 
 msgid "(click a role to activate it)"
-msgstr ""
+msgstr "（点击一个身份以激活它）"
 
 msgid "(click a role to assign or remove it)"
-msgstr ""
+msgstr "（点击一个身份以分配或移除）"
 
 msgid "+last hour"
 msgstr "+最后小时"
@@ -88,7 +88,7 @@ msgid "Always show movement control buttons"
 msgstr "总是显示移动控制按钮"
 
 msgid "An image representing your faction"
-msgstr ""
+msgstr "表示您所在派别的图片"
 
 msgid "Anti Aliasing"
 msgstr "抗锯齿"
@@ -124,10 +124,10 @@ msgid "Badges"
 msgstr "徽章"
 
 msgid "Ban"
-msgstr ""
+msgstr "封禁"
 
 msgid "Ban media"
-msgstr "禁止媒体"
+msgstr "封禁媒体"
 
 msgid "Banned"
 msgstr "已封禁"
@@ -136,7 +136,7 @@ msgid "Banned? Detected as Proxy?"
 msgstr "被封禁了？被检测为代理网络连接了？"
 
 msgid "Bans"
-msgstr ""
+msgstr "封禁"
 
 msgid "Block"
 msgstr "屏蔽"
