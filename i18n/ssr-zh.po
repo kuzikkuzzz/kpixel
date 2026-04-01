@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: admin@pixelplanet.fun\n"
-"PO-Revision-Date: 2026-04-01 19:58+0000\n"
+"PO-Revision-Date: 2026-04-01 20:04+0000\n"
 "Last-Translator: Sakuya <sakuya@noreply.pixelplanet.fun>\n"
 "Language-Team: Chinese (Simplified Han script) <https://translate.gs-os.com/"
 "projects/ppfun/server/zh_Hans/>\n"
@@ -89,20 +89,20 @@ msgid "Can not create a role with a powerlevel of yours or beyond"
 msgstr "不可新建一个地位与你相同或更高的身份"
 
 msgid "Can not delete this role"
-msgstr ""
+msgstr "不可删除这个身份"
 
 msgid "Can not elevate the powerlevel of a role to yours or beyond"
-msgstr ""
+msgstr "不可提升身份地位至你的地位或更高"
 
 msgid "Can not have more than 20 faction roles"
-msgstr ""
+msgstr "不可拥有多于20个派别身份"
 
 msgid "Can not modify user equal to you or above you"
-msgstr ""
+msgstr "不可调整一个地位等于或高于你的用户"
 
 #. when leaving a faction and you are the last owner
 msgid "Can not orphan a faction"
-msgstr ""
+msgstr "不可遗弃派别"
 
 #, javascript-format
 msgid ""
@@ -134,7 +134,7 @@ msgid "Coronavirus"
 msgstr "新冠病毒"
 
 msgid "Could not change this setting. Maybe try again later."
-msgstr ""
+msgstr "暂时无法更改此设置，请稍后再试。"
 
 msgid "Could not close this Session."
 msgstr "无法关闭此会话。"
@@ -146,16 +146,16 @@ msgid "Could not leave this channel"
 msgstr "无法离开此频道"
 
 msgid "Could not set this factions avatar"
-msgstr ""
+msgstr "无法设置该派别头像"
 
 msgid "Could not set your avatar"
-msgstr ""
+msgstr "无法设置个人头像"
 
 msgid "Could not set your faction role"
-msgstr ""
+msgstr "无法设置个人派别身份"
 
 msgid "Could not this roles flag"
-msgstr ""
+msgstr "无法标记此身份"
 
 msgid "Could not upload all files"
 msgstr "无法上传所有文件"
@@ -170,10 +170,10 @@ msgid "Delete Application"
 msgstr "删除应用程序"
 
 msgid "Description can't be empty"
-msgstr ""
+msgstr "描述不可为空"
 
 msgid "Description must be shorter than 1000 characters"
-msgstr ""
+msgstr "描述必须小于1千个字符"
 
 msgid "Display name for your OIDC client"
 msgstr "OIDC 客户端的显示名称"

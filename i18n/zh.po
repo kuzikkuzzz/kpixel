@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: admin@pixelplanet.fun\n"
-"PO-Revision-Date: 2026-04-01 19:58+0000\n"
+"PO-Revision-Date: 2026-04-01 20:04+0000\n"
 "Last-Translator: Sakuya <sakuya@noreply.pixelplanet.fun>\n"
 "Language-Team: Chinese (Simplified Han script) <https://translate.gs-os.com/"
 "projects/ppfun/client/zh_Hans/>\n"
@@ -100,7 +100,7 @@ msgid "Archive"
 msgstr "文档"
 
 msgid "Assign Roles"
-msgstr ""
+msgstr "分配身份"
 
 msgid "Assign new Mod"
 msgstr "指定新管理员"
@@ -292,7 +292,7 @@ msgid "Click a color in palette to select it"
 msgstr "在调色盘中点击一个颜色以选择"
 
 msgid "Click here to cease representation."
-msgstr ""
+msgstr "点击此处停止代理。"
 
 msgid "Click here to request a new verification mail."
 msgstr "点击此处以请求新验证电子邮件。"
@@ -322,10 +322,10 @@ msgid "Compact Palette"
 msgstr "便携调色盘"
 
 msgid "Confirm"
-msgstr ""
+msgstr "确认"
 
 msgid "Confirm Ban"
-msgstr ""
+msgstr "确认封禁"
 
 msgid "Confirm Kick"
 msgstr ""
@@ -469,10 +469,10 @@ msgid "Description"
 msgstr ""
 
 msgid "Description can't be empty"
-msgstr ""
+msgstr "描述不可为空"
 
 msgid "Description must be shorter than 1000 characters"
-msgstr ""
+msgstr "描述必须小于1千个字符"
 
 msgid "Description of your faction"
 msgstr ""
