@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: admin@pixelplanet.fun\n"
-"PO-Revision-Date: 2026-04-01 20:04+0000\n"
+"PO-Revision-Date: 2026-04-01 21:23+0000\n"
 "Last-Translator: Sakuya <sakuya@noreply.pixelplanet.fun>\n"
 "Language-Team: Chinese (Simplified Han script) <https://translate.gs-os.com/"
 "projects/ppfun/client/zh_Hans/>\n"
@@ -328,10 +328,10 @@ msgid "Confirm Ban"
 msgstr "确认封禁"
 
 msgid "Confirm Kick"
-msgstr ""
+msgstr "确认踢除"
 
 msgid "Confirm Leave"
-msgstr ""
+msgstr "确认离开"
 
 msgid "Confirm New Password"
 msgstr "确认新密码"
@@ -412,10 +412,10 @@ msgid "Country"
 msgstr "国家"
 
 msgid "Create Faction"
-msgstr ""
+msgstr "创建派别"
 
 msgid "Create New Faction"
-msgstr ""
+msgstr "创建新派别"
 
 #, javascript-format
 msgid "Credit for the Palette of the 2bit canvas goes to ${ donendoLink }."
@@ -427,7 +427,7 @@ msgstr "月亮调色板的功劳归于 ${ starhouseLink }。"
 
 #, javascript-format
 msgid "Credit for the Palette of the Top10 canvas goes to ${ vinikLink }."
-msgstr ""
+msgstr "前10名画布的调色板由${ vinikLink }提供。"
 
 msgid "Current Cooldown Changes per Country"
 msgstr "当前各国冷却时间变化"
@@ -466,7 +466,7 @@ msgid "Deny"
 msgstr "否定"
 
 msgid "Description"
-msgstr ""
+msgstr "描述"
 
 msgid "Description can't be empty"
 msgstr "描述不可为空"
@@ -475,7 +475,7 @@ msgid "Description must be shorter than 1000 characters"
 msgstr "描述必须小于1千个字符"
 
 msgid "Description of your faction"
-msgstr ""
+msgstr "派别的描述"
 
 msgid ""
 "Didn't get an answer from pixelplanet. Try to refresh if this problem "
@@ -505,13 +505,13 @@ msgstr "对 IP 地址进行操作（每行一个 IP 地址）"
 
 msgid ""
 "Don't let people find this faction in public search or look at its profile."
-msgstr ""
+msgstr "不让人们公开搜索并发现该派别或查看该派别的资料。"
 
 msgid "Don't remember"
 msgstr "不记得了"
 
 msgid "Don't show faction in search"
-msgstr ""
+msgstr "不在搜索中展示派别"
 
 msgid "Don't show me in global stats"
 msgstr "不要在全球统计数据中显示"
@@ -580,7 +580,7 @@ msgid "Enter UserName of new Mod"
 msgstr "输入新版主的用户名"
 
 msgid "Enter a little text that describes your faction"
-msgstr ""
+msgstr "输入一点文字以描述你的派别"
 
 msgid "Enter your mail address and we will send you a new password:"
 msgstr "请输入您的邮箱地址，我们将向您发送新密码："
@@ -608,6 +608,8 @@ msgid ""
 "Factions allow you to coordinate better with other players. Search for "
 "existing factions, find friends or create your own faction."
 msgstr ""
+"派别系统能让你更好地与其他玩家协作，你可以搜索现有派别、结交好友或创建自己的"
+"派别。"
 
 msgid "Factor"
 msgstr "因素"
@@ -708,7 +710,7 @@ msgid "Hide Embed"
 msgstr "隐藏嵌入内容"
 
 msgid "Hide from profile"
-msgstr ""
+msgstr "从个人资料隐藏"
 
 msgid ""
 "Higher zoomlevels take some time to update, the 3D globe gets updated at "
@@ -915,7 +917,7 @@ msgid "Name"
 msgstr ""
 
 msgid "Name can only contain the characters: a-z . _ and -"
-msgstr ""
+msgstr "名字只能含有以下字符：a~z . _ -"
 
 msgid "Name can't be empty."
 msgstr "名称不能为空。"
@@ -1497,16 +1499,16 @@ msgid "Title"
 msgstr ""
 
 msgid "Title can't be empty."
-msgstr ""
+msgstr "标题不能为空。"
 
 msgid "Title contains invalid character like @, /, \\ or #"
-msgstr ""
+msgstr "标题包含无效字符，如：@ / \\ #"
 
 msgid "Title must be at least 2 characters long"
-msgstr ""
+msgstr "标题必须至少为2字符长"
 
 msgid "Title must be shorter than 26 characters"
-msgstr ""
+msgstr "标题必须少于26字符"
 
 msgid "Title of your faction"
 msgstr ""

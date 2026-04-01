@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: admin@pixelplanet.fun\n"
-"PO-Revision-Date: 2026-04-01 20:04+0000\n"
+"PO-Revision-Date: 2026-04-01 21:23+0000\n"
 "Last-Translator: Sakuya <sakuya@noreply.pixelplanet.fun>\n"
 "Language-Team: Chinese (Simplified Han script) <https://translate.gs-os.com/"
 "projects/ppfun/server/zh_Hans/>\n"
@@ -341,7 +341,7 @@ msgid "Name already in use."
 msgstr "该名称已被使用。"
 
 msgid "Name can only contain the characters: a-z . _ and -"
-msgstr ""
+msgstr "名字只能含有以下字符：a~z . _ -"
 
 msgid "Name can't be empty."
 msgstr "名称不能为空。"
@@ -365,7 +365,7 @@ msgid "New Password"
 msgstr "新密码"
 
 msgid "No Avatar given"
-msgstr ""
+msgstr "无头像"
 
 msgid "No Captcha given"
 msgstr "无可用验证码"
@@ -484,10 +484,10 @@ msgid "Reset your password here"
 msgstr "在此重置密码"
 
 msgid "Role flag can only be an image"
-msgstr ""
+msgstr "身份标记只能为图像"
 
 msgid "Role flag needs to be 16x11"
-msgstr ""
+msgstr "身份标记需要为16×11"
 
 msgid "Server Error"
 msgstr "服务器错误"
@@ -577,16 +577,16 @@ msgid "This email provider is not allowed"
 msgstr "此电子邮件提供商未被允许"
 
 msgid "This faction does not exist"
-msgstr ""
+msgstr "该派别不存在"
 
 msgid "This faction is full"
-msgstr ""
+msgstr "该派别已满"
 
 msgid "This faction is hidden"
-msgstr ""
+msgstr "该派系已隐藏"
 
 msgid "This faction is private"
-msgstr ""
+msgstr "该派系是私密的"
 
 #, javascript-format
 msgid "This media is banned ${ reason }. Ban ID: ${ mbid }"
@@ -596,16 +596,16 @@ msgid "This password-reset link isn't valid anymore :("
 msgstr "这个密码重置链接已经失效了 :("
 
 msgid "Title can't be empty."
-msgstr ""
+msgstr "标题不能为空。"
 
 msgid "Title contains invalid character like @, /, \\ or #"
-msgstr ""
+msgstr "标题包含无效字符，如：@ / \\ #"
 
 msgid "Title must be at least 2 characters long"
-msgstr ""
+msgstr "标题必须至少为2字符长"
 
 msgid "Title must be shorter than 26 characters"
-msgstr ""
+msgstr "标题必须少于26字符"
 
 #. "redirect_uris" is a technical term and should not be translated
 msgid "Too many or too long redirect_uris"
@@ -674,13 +674,13 @@ msgid "You already have that name."
 msgstr "你已经有这个名字了。"
 
 msgid "You are already part of this faction"
-msgstr ""
+msgstr "你已经在这个派别"
 
 msgid "You are already verified."
 msgstr "您已通过验证。"
 
 msgid "You are banned from this faction"
-msgstr ""
+msgstr "你已被该派别封禁"
 
 #, javascript-format
 msgid "You are muted for another ${ timeMin } minutes"
@@ -728,11 +728,11 @@ msgstr "使用代理时无法发送聊天消息"
 #, javascript-format
 msgid ""
 "You can only be owner of ${ MAX_OWNED_FACTIONS_PER_USER } factions in total"
-msgstr ""
+msgstr "你只能同时是${ MAX_OWNED_FACTIONS_PER_USER }个派别的拥有者"
 
 #, javascript-format
 msgid "You can only have ${ MAX_FACTIONS_PER_USER } factions in total"
-msgstr ""
+msgstr "你只能同时拥有${ MAX_FACTIONS_PER_USER }个派别"
 
 msgid ""
 "You can register your own application here to get the client_id and "
@@ -767,7 +767,7 @@ msgid "You must be logged in to access this page"
 msgstr "您必须登录才能访问此页面"
 
 msgid "You need an invite to join this faction"
-msgstr ""
+msgstr "你需要被邀请以进入该派别"
 
 #. "scope" is a technical term and should not be translated
 msgid "You need to define a valid scope"
