@@ -181,16 +181,17 @@ const MyFactions = () => {
                 placeholder="Name"
                 required
               /></label>
-            <small>{t`Name of your faction [a-z][A-Z][0-9].-_`}</small>
+            <small>{t`Name of your faction`} [a-z][A-Z][0-9].-_</small>
           </div>
 
           <div className="form-group form-group-avatar">
             <span>{t`Avatar`}:
               <FileUpload
                 acceptedTypes="image/*"
+                keepFile
                 maxFiles={1}
                 uploadRef={uploadRef}
-                minHeight={50}
+                size={60}
               /></span>
             <small>{t`An image representing your faction`}</small>
           </div>

@@ -143,9 +143,7 @@ const OIDCConsent = () => {
     const token = authReturn?.token;
 
     setSubmitting(true);
-    const errors = await dispatch(
-      changeUser({ username: newUsername, token }),
-    );
+    const errors = await dispatch(changeUser({ username: newUsername, token }));
     if (errors) {
       setUsernameErrors(errors);
       return;

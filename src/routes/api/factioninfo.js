@@ -16,7 +16,7 @@ export default async function factionrolechange(req, res) {
   }
 
   const [{ powerlvl }, faction] = await Promise.all([
-    (user) ? getFactionLvlOfUser(user.id, fidOrName) : { powerlvl: -1 },
+    (user) ? getFactionLvlOfUser(user.id, fidOrName) : { powerlvl: null },
     getFactionInfo(fidOrName),
   ]);
 
@@ -24,7 +24,7 @@ export default async function factionrolechange(req, res) {
     throw new Error(t`This faction does not exist`);
   }
 
-  if (faction.isPrivate && powerlvl === -1) {
+  if (faction.isPrivate && powerlvl === null) {
     throw new Error(t`This faction is private`);
   }
 

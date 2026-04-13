@@ -7,7 +7,7 @@
 import Sequelize from 'sequelize';
 
 import {
-  FACTION_FLAGS, CHANNEL_TYPES, FACTIONLVL, FACTION_ROLE_FLAGS,
+  FACTION_FLAGS, CHANNEL_TYPES, FACTION_PERMISSIONS, FACTION_ROLE_FLAGS,
   MAX_ROLES_PER_FACTION, MAX_FACTIONS_PER_USER, MAX_OWNED_FACTIONS_PER_USER,
 } from '../../core/constants.js';
 import {
@@ -301,30 +301,30 @@ BEGIN
     SELECT EXISTS(
       SELECT 1 FROM UserFactionRoles ufr
         INNER JOIN FactionRoles fr ON ufr.frid = fr.id
-      WHERE ufr.uid = uf.uid AND fr.fid = uf.fid AND fr.factionlvl >= ${FACTIONLVL.SOVEREIGN}
+      WHERE ufr.uid = uf.uid AND fr.fid = uf.fid AND fr.factionlvl >= ${FACTION_PERMISSIONS.SOVEREIGN}
     ) AS isOwner
     FROM UserFactions uf WHERE uf.uid = p_uid
   ) AS ufc;
 
   IF v_joined_count >= ${MAX_FACTIONS_PER_USER} THEN
+    ROLLBACK;
     SELECT 1 AS result;
-    ROLLBACK;
   ELSEIF v_owned_count >= ${MAX_OWNED_FACTIONS_PER_USER} THEN
-    SELECT 2 AS result;
     ROLLBACK;
+    SELECT 2 AS result;
   ELSEIF NOT EXISTS(
     SELECT 1 FROM Users WHERE id = p_uid AND createdAt < NOW() - INTERVAL 14 DAY
   ) THEN
+    ROLLBACK;
     SELECT 3 AS result;
-    ROLLBACK;
   ELSEIF v_mid IS NULL THEN
-    SELECT 4 AS result;
     ROLLBACK;
+    SELECT 4 AS result;
   ELSEIF EXISTS(
     SELECT 1 FROM Factions WHERE name = p_name
   ) THEN
-    SELECT 5 AS result;
     ROLLBACK;
+    SELECT 5 AS result;
   ELSE
     INSERT INTO Channels (
       name, type, lastMessage, createdAt
@@ -341,9 +341,9 @@ BEGIN
     INSERT INTO FactionRoles (
       uuid, fid, name, memberCount, factionlvl, flags
     ) VALUES (
-      UUID_TO_BIN(p_sovereign_uuid), v_fid, 'Sovereign', 1, ${FACTIONLVL.SOVEREIGN}, ${0x01 << FACTION_ROLE_FLAGS.PROTECTED}
+      UUID_TO_BIN(p_sovereign_uuid), v_fid, 'Sovereign', 1, ${FACTION_PERMISSIONS.SOVEREIGN}, ${0x01 << FACTION_ROLE_FLAGS.PROTECTED}
     ), (
-      UUID_TO_BIN(p_peasant_uuid), v_fid, 'Peasant', 1, ${FACTIONLVL.PEASANT}, ${(0x01 << FACTION_ROLE_FLAGS.DEFAULT) | (0x01 << FACTION_ROLE_FLAGS.PROTECTED)}
+      UUID_TO_BIN(p_peasant_uuid), v_fid, 'Peasant', 1, ${FACTION_PERMISSIONS.PEASANT}, ${(0x01 << FACTION_ROLE_FLAGS.DEFAULT) | (0x01 << FACTION_ROLE_FLAGS.PROTECTED)}
     );
     INSERT INTO UserFactions (uid, fid, joined) VALUES (p_uid, v_fid, NOW());
     INSERT INTO UserFactionRoles (uid, frid)
@@ -388,6 +388,122 @@ BEGIN
         UUID_TO_BIN(p_factionrole_uuid), v_fid, v_mid, p_name, p_factionlvl, p_flags
       );
       SELECT 0 AS result;
+    END IF;
+  END IF;
+END`,
+    DELETE_FACTION_ROLE: `CREATE PROCEDURE IF NOT EXISTS DELETE_FACTION_ROLE(IN p_initiator_uid INT UNSIGNED, IN p_faction_role_uuid CHAR(36)) NOT DETERMINISTIC MODIFIES SQL DATA
+BEGIN
+  DECLARE v_frid BIGINT UNSIGNED;
+  DECLARE v_fid BIGINT UNSIGNED;
+  DECLARE v_faction_uuid CHAR(36);
+  DECLARE v_role_powerlvl TINYINT;
+  DECLARE v_initiator_powerlvl TINYINT;
+  DECLARE v_flags TINYINT UNSIGNED;
+
+  SELECT MAX(fr.id), MAX(fr.fid), MAX(fr.factionlvl), MAX(fr.flags), BIN_TO_UUID(MAX(f.uuid))
+    INTO v_frid, v_fid, v_role_powerlvl, v_flags, v_faction_uuid
+  FROM FactionRoles fr INNER JOIN Factions f ON fr.fid = f.id
+  WHERE fr.uuid = UUID_TO_BIN(p_faction_role_uuid);
+
+  IF v_fid IS NULL THEN
+    SELECT 1 AS result;
+  ELSEIF v_role_powerlvl >= ${FACTION_PERMISSIONS.SOVEREIGN} THEN
+    SELECT 2 AS result;
+  ELSEIF (v_flags & ${0x01 << FACTION_ROLE_FLAGS.PROTECTED}) != 0 THEN
+    SELECT 3 AS result;
+  ELSEIF NOT EXISTS(
+    SELECT 1 FROM UserFactions WHERE uid = p_initiator_uid AND fid = v_fid LIMIT 1
+  ) THEN
+    SELECT 4 AS result;
+  ELSE
+    SELECT IFNULL(MAX(factionlvl), 0) INTO v_initiator_powerlvl FROM FactionRoles fr
+      INNER JOIN UserFactionRoles ufr ON ufr.frid = fr.id
+    WHERE fr.fid = v_fid AND ufr.uid = p_initiator_uid;
+
+    IF v_initiator_powerlvl < ${FACTION_PERMISSIONS.CREATE_ROLES} THEN
+      SELECT 5 AS result;
+    ELSEIF v_role_powerlvl > v_initiator_powerlvl THEN
+      SELECT 6 AS result;
+    ELSEIF v_role_powerlvl = v_initiator_powerlvl AND v_initiator_powerlvl < ${FACTION_PERMISSIONS.MANAGE_YOURSELF} THEN
+      SELECT 7 AS result;
+    ELSE
+      SELECT 0 AS result, v_faction_uuid AS fid;
+      SELECT uf.uid, p.activeRole = v_frid AS hadRoleActive FROM UserFactions uf
+        LEFT JOIN Profiles p ON uf.uid = p.uid
+      WHERE fid = v_fid;
+
+      DELETE FROM FactionRoles WHERE id = v_frid;
+    END IF;
+  END IF;
+END`,
+    LEAVE_FACTION_ROLE: `CREATE PROCEDURE IF NOT EXISTS LEAVE_FACTION_ROLE(IN p_initiator_uid INT UNSIGNED, IN p_subject_uid INT UNSIGNED, IN p_faction_role_uuid CHAR(36)) NOT DETERMINISTIC MODIFIES SQL DATA
+BEGIN
+  DECLARE v_frid BIGINT UNSIGNED;
+  DECLARE v_fid BIGINT UNSIGNED;
+  DECLARE v_role_powerlvl TINYINT;
+  DECLARE v_faction_uuid CHAR(36);
+  DECLARE v_initiator_powerlvl TINYINT;
+  DECLARE v_subject_powerlvl TINYINT;
+  DECLARE v_is_active_role TINYINT;
+  DECLARE EXIT HANDLER FOR SQLEXCEPTION
+  BEGIN
+    ROLLBACK;
+    RESIGNAL;
+  END;
+  START TRANSACTION;
+
+  SELECT MAX(fr.id), MAX(fr.fid), MAX(fr.factionlvl), BIN_TO_UUID(MAX(f.uuid))
+    INTO v_frid, v_fid, v_role_powerlvl, v_faction_uuid
+  FROM FactionRoles fr INNER JOIN Factions f ON fr.fid = f.id
+  WHERE fr.uuid = UUID_TO_BIN(p_faction_role_uuid);
+
+  IF v_fid IS NULL THEN
+    ROLLBACK;
+    SELECT 1 AS result;
+  ELSEIF NOT EXISTS(
+    SELECT 1 FROM UserFactions WHERE uid = p_initiator_uid AND fid = v_fid LIMIT 1
+  ) THEN
+    ROLLBACK;
+    SELECT 2 AS result;
+  ELSE
+    SELECT IFNULL(MAX(factionlvl), 0) INTO v_initiator_powerlvl FROM FactionRoles fr
+      INNER JOIN UserFactionRoles ufr ON ufr.frid = fr.id
+    WHERE fr.fid = v_fid AND ufr.uid = p_initiator_uid;
+
+    IF v_initiator_powerlvl < ${FACTION_PERMISSIONS.ASSIGN_ROLES} THEN
+      ROLLBACK;
+      SELECT 3 AS result;
+    ELSEIF NOT EXISTS(
+      SELECT 1 FROM UserFactions uf
+        INNER JOIN UserFactionRoles ufr ON ufr.uid = uf.uid
+      WHERE uf.uid = p_subject_uid AND uf.fid = v_fid AND ufr.frid = v_frid LIMIT 1
+    ) THEN
+      ROLLBACK;
+      SELECT 4 AS result;
+    ELSE
+      SELECT IFNULL(MAX(factionlvl), 0) INTO v_subject_powerlvl FROM FactionRoles fr
+        INNER JOIN UserFactionRoles ufr ON ufr.frid = fr.id
+      WHERE fr.fid = v_fid AND ufr.uid = p_subject_uid;
+
+      IF v_subject_powerlvl >= v_initiator_powerlvl AND p_initiator_uid != p_subject_uid THEN
+        ROLLBACK;
+        SELECT 5 AS result;
+      ELSEIF v_role_powerlvl >= ${FACTION_PERMISSIONS.SOVEREIGN} AND NOT EXISTS(
+        SELECT 1 FROM UserFactionRoles WHERE uid != p_subject_uid AND frid = v_frid
+      ) THEN
+        ROLLBACK;
+        SELECT 6 AS result;
+      ELSE
+        DELETE FROM UserFactionRoles WHERE uid = p_subject_uid AND frid = v_frid;
+
+        UPDATE Profiles SET activeRole = NULL WHERE uid = p_subject_uid AND activeRole = v_frid;
+        SET v_is_active_role = (ROW_COUNT() > 0);
+
+        UPDATE FactionRoles SET memberCount = memberCount - 1 WHERE id = v_frid;
+
+        COMMIT;
+        SELECT 0 AS result, v_is_active_role AS hadRoleActive, v_faction_uuid AS fid;
+      END IF;
     END IF;
   END IF;
 END`,
@@ -462,6 +578,7 @@ END`,
     LEAVE_FACTION: `CREATE PROCEDURE IF NOT EXISTS LEAVE_FACTION(IN p_uid INT UNSIGNED, IN p_faction_uuid CHAR(36)) NOT DETERMINISTIC MODIFIES SQL DATA
 BEGIN
   DECLARE v_fid BIGINT UNSIGNED;
+  DECLARE v_is_active_role TINYINT;
   DECLARE EXIT HANDLER FOR SQLEXCEPTION
   BEGIN
     ROLLBACK;
@@ -476,7 +593,7 @@ BEGIN
   ELSEIF NOT EXISTS(
     SELECT 1 FROM UserFactionRoles ufr
       INNER JOIN FactionRoles fr ON ufr.frid = fr.id
-    WHERE fr.fid = v_fid AND ufr.uid != p_uid AND fr.factionlvl >= ${FACTIONLVL.SOVEREIGN}
+    WHERE fr.fid = v_fid AND ufr.uid != p_uid AND fr.factionlvl >= ${FACTION_PERMISSIONS.SOVEREIGN}
   ) THEN
     SELECT 2 AS result;
     ROLLBACK;
@@ -489,6 +606,12 @@ BEGIN
       ) AND fid = v_fid;
       UPDATE Factions SET memberCount = memberCount - 1 WHERE id = v_fid;
 
+      UPDATE Profiles SET activeRole = NULL WHERE uid = p_uid AND EXISTS(
+        SELECT 1 FROM FactionRoles fr
+        WHERE fr.id = Profiles.activeRole AND fr.fid = v_fid
+      );
+      SET v_is_active_role = (ROW_COUNT() > 0);
+
       DELETE uc FROM UserChannels uc
         INNER JOIN Factions f ON f.cid = uc.cid
       WHERE uc.uid = p_uid AND f.id = v_fid;
@@ -497,7 +620,7 @@ BEGIN
       WHERE ufr.uid = p_uid  AND fr.fid = v_fid;
     END IF;
     COMMIT;
-    SELECT 0 AS result;
+    SELECT 0 AS result, v_is_active_role as hadRoleActive;
   END IF;
 END`,
     GET_CLOSE_IMAGE: `CREATE PROCEDURE IF NOT EXISTS GET_CLOSE_IMAGE(IN p_pHash CHAR(16)) READS SQL DATA
@@ -516,7 +639,7 @@ BEGIN
 END`,
   };
 
-  const funcVersion = 5;
+  const funcVersion = 14;
   const curVersion = Number((await sequelize.query('SELECT value FROM Configs WHERE `key`=\'functions_version\''))[0]?.[0]?.value);
   const doUpgrade = funcVersion !== curVersion;
   if (doUpgrade) {

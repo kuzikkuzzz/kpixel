@@ -8,26 +8,25 @@ import {
   getFactionLvlOfUser, getAllMembersOfFaction,
 } from '../../data/sql/Faction.js';
 import { createFactionRole } from '../../data/sql/FactionRole.js';
-import { FACTIONLVL } from '../../core/constants.js';
+import { FACTION_PERMISSIONS } from '../../core/constants.js';
 
 export default async function factionrolecreate(req, res) {
   req.tickRateLimiter(7000);
   const { ttag: { gettext, t }, user, body: factionRoleData } = req;
-  const { customFlagId, fid, factionlvl } = factionRoleData;
+  const { customFlagId, fid, factionlvl, name } = factionRoleData;
 
   if (!fid || typeof fid !== 'string') {
     throw new Error('No faction given');
   }
 
-  let { name, isDefault } = factionRoleData;
-  name = name?.toLowerCase();
+  let { isDefault } = factionRoleData;
   isDefault = !!isDefault;
 
   const { sqlFid, powerlvl } = await getFactionLvlOfUser(user.id, fid);
   if (!sqlFid) {
     throw new Error('This faction does not exist or you are not a member');
   }
-  if (!powerlvl || powerlvl < FACTIONLVL.MAGISTRATE) {
+  if (!powerlvl || powerlvl < FACTION_PERMISSIONS.CREATE_ROLES) {
     throw new Error('Insufficient permissions on this faction');
   }
 
@@ -44,11 +43,20 @@ export default async function factionrolecreate(req, res) {
     errors.push('Invalid factionlvl');
   }
   if (factionlvl >= powerlvl) {
-    errors.push(t`Can not create a role with a powerlevel of yours or beyond`);
+    if (factionlvl > powerlvl) {
+      errors.push(t`Can not create a role with a powerlevel beyond yours`);
+    }
+    if (factionlvl === FACTION_PERMISSIONS.SOVEREIGN) {
+      errors.push(t`Can only have one Sovereign role`);
+    }
+    if (powerlvl < FACTION_PERMISSIONS.MANAGE_YOURSELF) {
+      errors.push(t`Can not create a role on the same level as yours`);
+    }
   }
 
   if (errors.length) {
     res.status(400).json({ errors });
+    return;
   }
 
   const [createRet, frid] = await createFactionRole(
@@ -78,9 +86,10 @@ export default async function factionrolecreate(req, res) {
     socketEvents.patchUserState(user.id, 'profile', profilePatch);
   }
 
-  logger.info(`User ${user.id} created new faction ${name}`);
+  logger.info(`User ${user.id} created new faction role ${name}`);
   res.json({
     status: 'ok',
-    profilePatch,
+    frid,
+    patches: [['profile', profilePatch]],
   });
 }

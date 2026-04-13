@@ -3,13 +3,7 @@
  */
 import logger from '../../core/logger.js';
 import socketEvents from '../../socket/socketEvents.js';
-import {
-  getFactionLvlOfUser, getAmountOfFactionOwners,
-} from '../../data/sql/Faction.js';
-import {
-  getFactionRole, leaveFactionRole,
-} from '../../data/sql/FactionRole.js';
-import { FACTIONLVL } from '../../core/constants.js';
+import { leaveFactionRole } from '../../data/sql/FactionRole.js';
 
 export default async function factionroleleave(req, res) {
   req.tickRateLimiter(500);
@@ -22,45 +16,26 @@ export default async function factionroleleave(req, res) {
     throw new Error('No user given');
   }
 
-  const {
-    fid, sqlFrid, factionlvl: cFactionlvl,
-  } = await getFactionRole(frid);
-
-  if (!fid || !sqlFrid) {
-    throw new Error('This faction or faction role does not exist');
-  }
-
   const [
-    { sqlFid, powerlvl: ownPowerlvl },
-    { sqlFid: sqlTargetFid, powerlvl: targetPowerlvl },
-  ] = await Promise.all([
-    getFactionLvlOfUser(user.id, fid),
-    getFactionLvlOfUser(uid, fid),
-  ]);
-  if (!sqlFid) {
-    throw new Error('This faction does not exist or you are not a member');
-  }
-  if (!sqlTargetFid) {
-    throw new Error('User is not a member');
-  }
-  if (!ownPowerlvl || ownPowerlvl < FACTIONLVL.NOBLE) {
-    throw new Error('Insufficient permissions on this faction');
-  }
-  if (targetPowerlvl >= ownPowerlvl
-    && uid !== user.id
-  ) {
-    throw new Error(t`Can not modify user equal to you or above you`);
-  }
-
-  if (cFactionlvl >= FACTIONLVL.SOVEREIGN
-    && await getAmountOfFactionOwners(sqlFid) < 2
-  ) {
-    throw new Error(t`Can not orphan a faction`);
-  }
-
-  const success = await leaveFactionRole(sqlFrid, uid);
-  if (!success) {
-    throw new Error(t`Server Error`);
+    leaveRet, hadRoleActive, fid,
+  ] = await leaveFactionRole(user.id, uid, frid);
+  switch (leaveRet) {
+    case 0:
+      break;
+    case 1:
+      throw new Error('This faction or faction role does not exist');
+    case 2:
+      throw new Error('You are not a member of this faction');
+    case 3:
+      throw new Error('Insufficient permissions on this faction');
+    case 4:
+      throw new Error('User is not a member');
+    case 5:
+      throw new Error(t`Can not modify user equal to you or above you`);
+    case 6:
+      throw new Error(t`Can not orphan a faction`);
+    default:
+      throw new Error(t`Server Error`);
   }
 
   const profilePatch = {
@@ -69,6 +44,15 @@ export default async function factionroleleave(req, res) {
     value: false,
   };
   socketEvents.patchUserState(uid, 'profile', profilePatch);
+
+  if (hadRoleActive) {
+    const activeProfilePatch = {
+      op: 'set',
+      path: 'activeFactionRole',
+      value: null,
+    };
+    socketEvents.patchUserState(uid, 'profile', activeProfilePatch);
+  }
 
   logger.info(`User ${user.id} joined ${uid} to role ${frid}`);
   res.json({

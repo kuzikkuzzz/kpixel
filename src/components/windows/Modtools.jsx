@@ -68,8 +68,8 @@ function Modtools() {
       {(parts.length > 1) && (
         <div
           key="tabm"
-          className="content"
-          style={{ overflowWrap: 'anywhere', marginTop: 34 }}
+          className="content wrap-container"
+          style={{ marginTop: 34 }}
         >
           {parts.map((part, ind) => (
             <React.Fragment key={part}>

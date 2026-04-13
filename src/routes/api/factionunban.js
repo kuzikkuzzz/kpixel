@@ -8,7 +8,7 @@ import {
 import {
   unbanFromFaction,
 } from '../../data/sql/FactionBan.js';
-import { FACTIONLVL } from '../../core/constants.js';
+import { FACTION_PERMISSIONS } from '../../core/constants.js';
 
 export default async function factionunban(req, res) {
   req.tickRateLimiter(7000);
@@ -25,7 +25,7 @@ export default async function factionunban(req, res) {
   if (!sqlFid) {
     throw new Error('This faction does not exist or you are not a member');
   }
-  if (!powerlvl || powerlvl < FACTIONLVL.MAGISTRATE) {
+  if (!powerlvl || powerlvl < FACTION_PERMISSIONS.UNBAN) {
     throw new Error('Insufficient permissions on this faction');
   }
 

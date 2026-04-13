@@ -41,6 +41,7 @@ export default async function factioncreate(req, res) {
 
   if (errors.length) {
     res.status(400).json({ errors });
+    return;
   }
 
   const [createRet, fid] = await createFaction(
@@ -113,6 +114,7 @@ export default async function factioncreate(req, res) {
   logger.info(`User ${user.id} created new faction ${name}`);
   res.json({
     status: 'ok',
+    fid,
     patches,
   });
 }

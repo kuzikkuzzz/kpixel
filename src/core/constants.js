@@ -151,12 +151,22 @@ export const FACTION_ROLE_FLAGS = {
   DEFAULT: 1,
 };
 
-export const FACTIONLVL = {
+/*
+ * factionlvl at which a user can do certain tasks
+ */
+export const FACTION_PERMISSIONS = {
   PEASANT: 0,
-  /* ban and invite people */
-  NOBLE: 50,
-  /* unban and change roles */
-  MAGISTRATE: 80,
+  MANAGE_INVITES: 49,
+  KICK: 50,
+  SEE_HIDDEN_USERS: 59,
+  ASSIGN_ROLES: 60,
+  BAN: 65,
+  UNBAN: 70,
+  EDIT_ROLES: 74,
+  CREATE_ROLES: 75,
+  EDIT_FACTION: 80,
+  MANAGE_YOURSELF: 99,
+  DELETE_FACTION: 100,
   SOVEREIGN: 100,
 };
 

@@ -21,10 +21,12 @@ import { checkIfMediaBanned } from '../../core/ban.js';
 const router = express.Router();
 
 
-/*
+/**
  * generate upload route based on restrictions
+ * @param restrictType type like "image"
+ * @param resize size to scale to [16, 11]
  */
-function preflightRouteFactory(restrictType) {
+function preflightRouteFactory(restrictType, resize) {
   return (req, res) => {
     req.tickRateLimiter(1000);
     const { ttag: { t } } = req;
@@ -187,7 +189,9 @@ function preflightRouteFactory(restrictType) {
             *    hash, name, mimeType, extension, shortId, originalFilename,
             *  }, ... ]
             */
-          if (model.shortId) {
+          if (model.shortId && (
+            !resize || (resize[0] === model.width && resize[1] === model.height)
+          )) {
             availableFiles.push(model);
           } else if (allowUploads) {
             readyToUpload.push(model);
@@ -225,10 +229,12 @@ function preflightRouteFactory(restrictType) {
  */
 router.post('/preflight', preflightRouteFactory());
 
-router.post('/flagpreflight', preflightRouteFactory('image'));
+router.post('/flagpreflight', preflightRouteFactory('image', [16, 11]));
 
-/*
+/**
  * generate upload route based on restrictions
+ * @param restrictType type like "image"
+ * @param resize size to scale to [16, 11]
  */
 function uploadRouteFactory(restrictType, resize) {
   return (req, res) => {

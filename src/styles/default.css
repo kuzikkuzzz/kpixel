@@ -989,14 +989,14 @@ table td span {
   color: var(--caption-txt-color);
 }
 
-.factionlist-title, .memberlist-name {
+.factionlist-title {
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
   font-size: 16px;
 }
 
-.factionlist-name, .memberlist-username {
+.factionlist-name {
   flex-grow: 1;
   color: var(--caption-txt-color);
 }
@@ -1051,10 +1051,10 @@ table td span {
 }
 
 /*
- * =============================== FACTION =====================================
+ * =============================== Faction =====================================
  */
 
-.factionwin-overview, .factionwin-bans, .factionwin-members {
+.factionwin-overview, .factionwin-bans, .factionwin-members, .factionwin-roles {
   margin-top: 20px;
   line-height: 1.8em;
 }
@@ -1070,10 +1070,114 @@ table td span {
   display: flex;
 }
 
+.memberlist-name, .rolelist-name {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  font-size: 16px;
+}
+
 .memberlist-avatar {
   flex-shrink: 0;
   width: 20px;
   height: 20px;
+}
+
+.memberlist-username {
+  flex-grow: 1;
+  color: var(--caption-txt-color);
+}
+
+.rolelist-name {
+  flex-grow: 1;
+}
+
+.factionlist-edit.role {
+  line-height: 2em;
+}
+
+.chatflag.faction {
+  margin: 2px;
+}
+
+/*
+ * ============================= UPLOAD BUTTON =================================
+ */
+
+.fileupload-input-container {
+  transition: width 200ms ease-in-out;
+  padding: 0px;
+  overflow: hidden;
+}
+
+.fileupload-input-btn {
+  width: 100%;
+  height: 100%;
+}
+
+.fileupload-input-hidden {
+  position: absolute;
+  opacity: 0;
+  width: 0px;
+  height: 0px;
+}
+
+.fileupload-result-container {
+  transition: width 200ms ease-in-out;
+  padding: 0px;
+  overflow: hidden;
+  position: relative;
+}
+
+.fileupload-result-btn {
+  width: 100%;
+  height: 100%;
+}
+
+.fileupload-result-btn-preview {
+  width: 100%;
+  height: 100%;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.fileupload-result-btn-placeholder {
+  width: 100%;
+  height: 100%;
+  background-color: #9ca3af;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 10px;
+  color: white;
+  opacity: 0.4;
+}
+
+.fileupload-result-progress {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  height: 3px;
+  transition: width 200ms ease-in-out;
+  z-index: 2;
+}
+
+.fileupload-result-x {
+  position: 'absolute;
+  top: 0px;
+  right: 0px;
+  width: 16px;
+  height: 16px;
+  border-radius: 0 4px 0 4px;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 3;
+  line-height: 1px;
 }
 
 /*
@@ -1227,7 +1331,7 @@ table td span {
   flex-wrap: wrap;
 }
 
-avatar, .channelavatar {
+.avatar, .channelavatar {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -1237,7 +1341,7 @@ avatar, .channelavatar {
   font-weight: 600;
 }
 
-avatar {
+.avatar {
   width: 28px;
   height: 28px;
   font-size: 14px;
@@ -1460,6 +1564,19 @@ avatar {
   vertical-align: middle;
   cursor: pointer;
   color: red;
+}
+
+/*
+ * ============================= RANDOM TRASH ==================================
+ */
+
+.little-fileupload-container {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+.wrap-container {
+  overflow-wrap: anywhere;
 }
 
 /*

@@ -10,7 +10,9 @@ import { getLastIPOfUser } from '../../data/sql/User.js';
 import {
   banUserFromFaction,
 } from '../../data/sql/FactionBan.js';
-import { FACTIONLVL, CHANNEL_TYPES } from '../../core/constants.js';
+import {
+  FACTION_PERMISSIONS, CHANNEL_TYPES,
+} from '../../core/constants.js';
 
 export default async function factionkickban(req, res) {
   req.tickRateLimiter(7000);
@@ -36,7 +38,10 @@ export default async function factionkickban(req, res) {
   if (!sqlTargetFid) {
     throw new Error('User is not a member');
   }
-  if (!ownPowerlvl || ownPowerlvl < FACTIONLVL.NOBLE) {
+  if (!ownPowerlvl
+    || (ownPowerlvl < FACTION_PERMISSIONS.KICK && !isBan)
+    || ownPowerlvl < FACTION_PERMISSIONS.BAN
+  ) {
     throw new Error('Insufficient permissions on this faction');
   }
   if (targetPowerlvl >= ownPowerlvl) {
@@ -45,7 +50,7 @@ export default async function factionkickban(req, res) {
 
   const lastOnlineIPString = await getLastIPOfUser(uid);
 
-  const [leaveRet, factionInfo] = await Promise.all([
+  const [[leaveRet, hadRoleActive], factionInfo] = await Promise.all([
     leaveFaction(uid, fid),
     getFactionInfo(fid),
   ]);
@@ -102,6 +107,15 @@ export default async function factionkickban(req, res) {
     path: `factions[fid:${fid}]`,
   };
   socketEvents.patchUserState(uid, 'profile', profilePatch);
+
+  if (hadRoleActive) {
+    const activeProfilePatch = {
+      op: 'set',
+      path: 'activeFactionRole',
+      value: null,
+    };
+    socketEvents.patchUserState(uid, 'profile', activeProfilePatch);
+  }
 
   logger.info(`User ${uid} banned ${uid} from faction ${factionInfo.name}`);
   res.json({

@@ -7,7 +7,7 @@ import { DataTypes, QueryTypes } from 'sequelize';
 import sequelize, { nestQuery } from './sequelize.js';
 import { generateUUID, bufferToUUID } from '../../utils/hash.js';
 import {
-  FACTION_FLAGS, USER_FACTION_FLAGS, FACTION_ROLE_FLAGS, FACTIONLVL,
+  FACTION_FLAGS, USER_FACTION_FLAGS, FACTION_ROLE_FLAGS, FACTION_PERMISSIONS,
 } from '../../core/constants.js';
 
 const Faction = sequelize.define('Faction', {
@@ -282,11 +282,14 @@ export async function setFlagOfFaction(uid, fid, index, value) {
  * get powerlevel and faction sql id of user in faction
  * @param uid user id
  * @param fidOrName faction uuid (NOT sql id) or name
- * @return { sqlFid | null, powerlvl | null }
+ * @return {
+ *   sqlFid: null if not member of the faction or it doesn't exist,
+ *   powerlvl: 0 if member but no role, null if not member or faction not exist
+ * }
  */
 export async function getFactionLvlOfUser(uid, fidOrName) {
   let sqlFid = null;
-  let powerlvl = -1;
+  let powerlvl = null;
   try {
     const model = await sequelize.query(
       /* eslint-disable max-len */
@@ -325,7 +328,7 @@ export async function getAmountOfFactionOwners(sqlFid) {
       `SELECT COUNT(DISTINCT ufr.uid) AS count FROM UserFactionRoles ufr
   INNER JOIN FactionRoles fr ON ufr.frid = fr.id
 WHERE fr.fid = ? AND fr.factionlvl >= ?`, {
-        replacements: [sqlFid, FACTIONLVL.SOVEREIGN],
+        replacements: [sqlFid, FACTION_PERMISSIONS.SOVEREIGN],
         plain: true,
         type: QueryTypes.SELECT,
       },
@@ -334,7 +337,7 @@ WHERE fr.fid = ? AND fr.factionlvl >= ?`, {
       return model.count;
     }
   } catch (error) {
-    console.error(`SQL Error on getAllMembersOfFaction: ${error.message}`);
+    console.error(`SQL Error on getAmountOfFactionOwners: ${error.message}`);
   }
   return 0;
 }
@@ -493,7 +496,7 @@ export async function deleteFaction(sqlFid) {
  * leave faction
  * @param uid user id
  * @param fid uuid of faction
- * @return number
+ * @return [number, hadRoleActive]
  *   0 success
  *   1 no such faction
  *   2 no other sovereign
@@ -508,14 +511,18 @@ export async function leaveFaction(uid, fid) {
         type: QueryTypes.SELECT,
       },
     );
-    const ret = model?.[0]?.result;
-    if (ret || ret === 0) {
-      return ret;
+    const returnCode = model?.[0]?.result;
+    if (returnCode || returnCode === 0) {
+      if (returnCode === 0) {
+        const { 0: { hadRoleActive } } = model;
+        return [returnCode, !!hadRoleActive];
+      }
+      return [returnCode, false];
     }
   } catch (error) {
     console.error('SQL Error on leaveFaction:', error.message);
   }
-  return -1;
+  return [-1, false];
 }
 
 /**

@@ -188,11 +188,11 @@ export async function requestChangeUser(user) {
     '/api/userchange',
     user,
   );
-  if (res.errors?.length) {
+  if (res.errors) {
     return res.errors;
   }
   if (res.status === 'ok') {
-    return null;
+    return [];
   }
   return [t`Unknown Error`];
 }
@@ -211,11 +211,11 @@ export async function requestChangeProfile(profile) {
     '/api/profilechange',
     profile,
   );
-  if (res.errors?.length) {
+  if (res.errors) {
     return res.errors;
   }
   if (res.status === 'ok') {
-    return null;
+    return [];
   }
   return [t`Unknown Error`];
 }
@@ -233,11 +233,11 @@ export async function requestChangeUserFaction(userFaction) {
     '/api/userfactionchange',
     userFaction,
   );
-  if (res.errors?.length) {
+  if (res.errors) {
     return res.errors;
   }
   if (res.status === 'ok') {
-    return null;
+    return [];
   }
   return [t`Unknown Error`];
 }
@@ -261,11 +261,11 @@ export async function requestChangeFaction(faction) {
     '/api/factionchange',
     faction,
   );
-  if (res.errors?.length) {
+  if (res.errors) {
     return res.errors;
   }
   if (res.status === 'ok') {
-    return null;
+    return [];
   }
   return [t`Unknown Error`];
 }
@@ -285,11 +285,11 @@ export async function requestChangeFactionRole(factionRole) {
     '/api/factionrolechange',
     factionRole,
   );
-  if (res.errors?.length) {
+  if (res.errors) {
     return res.errors;
   }
   if (res.status === 'ok') {
-    return null;
+    return [];
   }
   return [t`Unknown Error`];
 }
@@ -511,6 +511,13 @@ export function requestRemoveFactionRole(uid, frid) {
   );
 }
 
+export function requestFactionRoleDelete(frid) {
+  return makeAPIPOSTRequest(
+    '/api/factionroledelete',
+    { frid },
+  );
+}
+
 export function requestKickBanFactionMember(
   uid, fid, isBan, reason = '',
 ) {
@@ -524,6 +531,15 @@ export function requestLiftFactionBan(fbid, fid) {
   return makeAPIPOSTRequest(
     '/api/factionunban',
     { fbid, fid },
+  );
+}
+
+export function requestFactionRoleCreate(
+  fid, name, isDefault, customFlagId, factionlvl,
+) {
+  return makeAPIPOSTRequest(
+    '/api/factionrolecreate',
+    { fid, name, isDefault, customFlagId, factionlvl },
   );
 }
 

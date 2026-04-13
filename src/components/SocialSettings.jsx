@@ -84,7 +84,7 @@ const SocialSettings = ({ done }) => {
       <div className="setitem">
         <div className="setrow">
           <h3 className="settitle">{t`Avatar`}</h3>
-          <div style={{ display: 'flex', flexWrap: 'nowrap' }}>
+          <div className="little-fileupload-container">
             <Avatar uid={userId} isDarkMode={isDarkMode} avatarId={avatarId} />
             <FileUpload
               acceptedTypes="image/*"
@@ -101,7 +101,7 @@ const SocialSettings = ({ done }) => {
                 }
               }}
               title={t`Clear`}
-              disabled={fetchChange}
+              disabled={fetchChange || avatarId === null}
             >
               <IoTrashOutline />
             </button>

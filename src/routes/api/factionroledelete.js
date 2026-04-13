@@ -3,13 +3,7 @@
  */
 import logger from '../../core/logger.js';
 import socketEvents from '../../socket/socketEvents.js';
-import {
-  getFactionLvlOfUser, getAllMembersOfFaction,
-} from '../../data/sql/Faction.js';
-import {
-  getFactionRole, deleteFactionRole,
-} from '../../data/sql/FactionRole.js';
-import { FACTIONLVL } from '../../core/constants.js';
+import { deleteFactionRole } from '../../data/sql/FactionRole.js';
 
 export default async function factionroledelete(req, res) {
   req.tickRateLimiter(10000);
@@ -19,49 +13,56 @@ export default async function factionroledelete(req, res) {
     throw new Error('No faction role given');
   }
 
-  const {
-    fid, sqlFrid, factionlvl: cFactionlvl, isProtected,
-  } = await getFactionRole(frid);
-
-  if (!fid || !sqlFrid) {
-    throw new Error('This faction or faction role does not exist');
-  }
-  if (isProtected) {
-    throw new Error(t`Can not delete this role`);
-  }
-
-  const { sqlFid, powerlvl } = await getFactionLvlOfUser(user.id, fid);
-  if (!sqlFid) {
-    throw new Error('This faction does not exist or you are not a member');
-  }
-  if (!powerlvl || powerlvl < FACTIONLVL.MAGISTRATE) {
-    throw new Error('Insufficient permissions on this faction');
-  }
-  if (cFactionlvl >= powerlvl) {
-    throw new Error(t`Can not change a role above or equal to your own`);
-  }
-  if (cFactionlvl >= FACTIONLVL.SOVEREIGN) {
-    throw new Error('Can not delete the Sovereign');
-  }
-
-  const success = await deleteFactionRole(sqlFid);
-  if (!success) {
-    throw new Error('Could not delete faction');
+  const [
+    deleteRet, fid, affectedUsers, affectedActiveRoleUsers,
+  ] = await deleteFactionRole(user.id, frid);
+  switch (deleteRet) {
+    case 0:
+      break;
+    case 1:
+      throw new Error('This faction or faction role does not exist');
+    case 2:
+      throw new Error('Can not delete the Sovereign');
+    case 3:
+      throw new Error(t`Can not delete this role`);
+    case 4:
+      throw new Error('You are not a member of this faction');
+    case 5:
+      throw new Error('Insufficient permissions on this faction');
+    case 6:
+      throw new Error(t`Can not change a role above your own`);
+    case 7:
+      throw new Error(t`Can not delete a role on the same level as yours`);
+    default:
+      throw new Error(t`Server Error`);
   }
 
   const profilePatch = {
     op: 'del',
     path: `factions[fid:${fid}].roles[frid:${frid}]`,
   };
+  const patches = [['profile', profilePatch]];
 
-  const affectedUserIds = await getAllMembersOfFaction(sqlFid);
-  if (affectedUserIds.length) {
-    socketEvents.patchUserState(user.id, 'profile', profilePatch);
+  if (affectedUsers.length) {
+    socketEvents.patchUserState(affectedUsers, 'profile', profilePatch);
+  }
+  if (affectedActiveRoleUsers.length) {
+    const activeProfilePatch = {
+      op: 'set',
+      path: 'activeFactionRole',
+      value: null,
+    };
+    socketEvents.patchUserState(
+      affectedActiveRoleUsers, 'profile', activeProfilePatch,
+    );
+    if (affectedActiveRoleUsers.includes(user.id)) {
+      patches.push(['profile', activeProfilePatch]);
+    }
   }
 
   logger.info(`User ${user.id} deleted faction role ${frid}`);
   res.json({
     status: 'ok',
-    profilePatch,
+    patches,
   });
 }

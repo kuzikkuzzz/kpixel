@@ -1,13 +1,18 @@
 /*
  * faction
  */
-import React, { useState, useEffect, useContext, useCallback } from 'react';
+import React, {
+  useState, useEffect, useContext, useCallback, useRef,
+} from 'react';
 import { useDispatch } from 'react-redux';
 import { t } from 'ttag';
-
+import { RiSave3Line } from 'react-icons/ri';
+import { IoTrashOutline } from 'react-icons/io5';
 import { IoIosRefresh } from 'react-icons/io';
+
 import { cdn } from '../../utils/utag.js';
 import { getUrlsFromMediaIdAndName } from '../../utils/media/utils.js';
+import { validateFactionName } from '../../utils/validation.js';
 import WindowContext from '../context/window.js';
 import {
   requestFactionInfo,
@@ -19,19 +24,26 @@ import {
   requestRemoveFactionRole,
   requestKickBanFactionMember,
   requestLiftFactionBan,
+  requestFactionRoleCreate,
+  requestFactionRoleDelete,
 } from '../../store/actions/fetch.js';
+import {
+  changeFactionRole,
+} from '../../store/actions/thunks.js';
 import {
   applyPatches,
 } from '../../store/actions/index.js';
-import { FACTIONLVL } from '../../core/constants.js';
+import { FACTION_PERMISSIONS } from '../../core/constants.js';
 import useLink from '../hooks/link.js';
 import ClipboardCopyField from '../ClipboardCopyField.jsx';
+import FileUpload from '../FileUpload.jsx';
 import { buildPopUpUrl } from './popUpAvailable.js';
 
 /* eslint-disable max-len */
 
 const Faction = () => {
   const [submitting, setSubmitting] = useState(false);
+  const submittingRef = useRef(false);
   const [confirm, setConfirm] = useState(false);
   const [selected, setSelected] = useState(null);
   const [errors, setErrors] = useState([]);
@@ -54,15 +66,20 @@ const Faction = () => {
     setTitle,
   } = useContext(WindowContext);
   const { activeTab = 'overview', name } = args;
+  const uploadRef = useRef();
   const link = useLink();
   const dispatch = useDispatch();
+
+  useEffect(() => {
+    submittingRef.current = submitting;
+  }, [submitting]);
 
   const tabNames = {
     overview: t`Overview`,
     members: t`Members`,
     bans: t`Bans`,
     roles: t`Roles`,
-    edit: t`Profile`,
+    edit: t`Edit`,
     invites: t`Invites`,
   };
 
@@ -142,7 +159,7 @@ const Faction = () => {
   }, [memberData, banData, factionData, activeTab, name]);
 
   const submitLeaveFaction = useCallback(async (fid) => {
-    if (submitting) {
+    if (submittingRef.current) {
       return;
     }
     setSubmitting(true);
@@ -157,18 +174,18 @@ const Faction = () => {
     } else {
       setErrors([]);
       setMemberData(null);
-      setFactionData((faction) => ({
-        ...faction,
-        powerlvl: -1,
+      setFactionData((pFactionData) => ({
+        ...pFactionData,
+        powerlvl: null,
       }));
     }
     setConfirm(false);
     setSubmitting(false);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [submitting]);
+  }, []);
 
   const submitJoinFaction = useCallback(async (fid) => {
-    if (submitting) {
+    if (submittingRef.current) {
       return;
     }
     setSubmitting(true);
@@ -183,18 +200,18 @@ const Faction = () => {
     } else {
       setErrors([]);
       setMemberData(null);
-      setFactionData((faction) => ({
-        ...faction,
+      setFactionData((pFactionData) => ({
+        ...pFactionData,
         powerlvl: 0,
       }));
     }
     setConfirm(false);
     setSubmitting(false);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [submitting]);
+  }, []);
 
   const submitAddFactionRole = useCallback(async (uid, frid) => {
-    if (submitting) {
+    if (submittingRef.current) {
       return;
     }
     setSubmitting(true);
@@ -220,10 +237,10 @@ const Faction = () => {
     setConfirm(false);
     setSubmitting(false);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [submitting]);
+  }, []);
 
   const submitRemoveFactionRole = useCallback(async (uid, frid) => {
-    if (submitting) {
+    if (submittingRef.current) {
       return;
     }
     setSubmitting(true);
@@ -249,10 +266,40 @@ const Faction = () => {
     setConfirm(false);
     setSubmitting(false);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [submitting]);
+  }, []);
+
+  const submitDeleteFactionRole = useCallback(async (frid) => {
+    if (submittingRef.current) {
+      return;
+    }
+    setSubmitting(true);
+    const {
+      errors: respErrors, patches,
+    } = await requestFactionRoleDelete(frid);
+    if (patches) {
+      dispatch(applyPatches(patches));
+    }
+    if (respErrors) {
+      setErrors(respErrors);
+    } else {
+      setErrors([]);
+      setFactionData((pFactionData) => ({
+        ...pFactionData,
+        faction: {
+          ...pFactionData.faction,
+          roles: pFactionData.faction.roles.filter(
+            (role) => role.frid !== frid,
+          ),
+        },
+      }));
+    }
+    setConfirm(false);
+    setSubmitting(false);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const submitKickBanMember = useCallback(async (uid, fid, isBan) => {
-    if (submitting) {
+    if (submittingRef.current) {
       return;
     }
     setSubmitting(true);
@@ -269,10 +316,10 @@ const Faction = () => {
     setConfirm(false);
     setSubmitting(false);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [submitting]);
+  }, []);
 
   const submitLiftBan = useCallback(async (fbid, fid) => {
-    if (submitting) {
+    if (submittingRef.current) {
       return;
     }
     setSubmitting(true);
@@ -286,7 +333,161 @@ const Faction = () => {
     setConfirm(false);
     setSubmitting(false);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [submitting]);
+  }, []);
+
+  const submitCreateRole = useCallback(async (evt) => {
+    evt.preventDefault();
+    if (submittingRef.current || !factionData) {
+      return;
+    }
+    const factionlvl = Number(evt.target.factionlvl.value);
+    const roleName = evt.target.name.value;
+    const isDefault = evt.target.isdefault.checked;
+    const valErrors = [];
+    const error = validateFactionName(roleName);
+    if (error) valErrors.push(error);
+    if ((!factionlvl && factionlvl !== 0)
+      || (factionlvl > 127 || factionlvl < -128)
+    ) {
+      valErrors.push(t`Select a valid pwerlevel`);
+    }
+    if (valErrors.length) {
+      setErrors(valErrors);
+      return;
+    }
+
+    setSubmitting(true);
+    const files = await uploadRef.current?.();
+    const customFlagId = files?.[0]?.mediaId || null;
+    const {
+      errors: respErrors, patches, frid,
+    } = await requestFactionRoleCreate(
+      factionData.faction.fid, roleName, isDefault, customFlagId, factionlvl,
+    );
+    if (patches) {
+      dispatch(applyPatches(patches));
+    }
+    if (respErrors) {
+      setErrors(respErrors);
+    } else {
+      setSelected(null);
+      setErrors([]);
+      setFactionData((pFactionData) => ({
+        ...pFactionData,
+        faction: {
+          ...pFactionData.faction,
+          roles: [...pFactionData.faction.roles, {
+            frid,
+            name: roleName,
+            factionlvl,
+            customFlagId,
+            isProtected: false,
+            isDefault,
+          }],
+        },
+      }));
+    }
+    setConfirm(false);
+    setSubmitting(false);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [factionData]);
+
+  const submitEditRole = useCallback(async (evt, role) => {
+    evt.preventDefault();
+    if (submittingRef.current) {
+      return;
+    }
+    const {
+      frid,
+      name: prevRoleName,
+      factionlvl: prevFactionlvl,
+      isDefault: prevIsDefault,
+    } = role;
+    const factionlvl = Number(evt.target.factionlvl.value);
+    const roleName = evt.target.name.value;
+    const isDefault = evt.target.isdefault.checked;
+
+    let changed = false;
+    const factionRoleChanges = { frid };
+    if (factionlvl !== prevFactionlvl) {
+      changed = true;
+      factionRoleChanges.factionlvl = factionlvl;
+    }
+    if (roleName !== prevRoleName) {
+      changed = true;
+      factionRoleChanges.name = roleName;
+    }
+    if (isDefault !== prevIsDefault) {
+      changed = true;
+      factionRoleChanges.isDefault = isDefault;
+    }
+    if (!changed) {
+      return;
+    }
+
+    const valErrors = [];
+    const error = validateFactionName(roleName);
+    if (error) valErrors.push(error);
+    if ((!factionlvl && factionlvl !== 0)
+      || (factionlvl > 127 || factionlvl < -128)
+    ) {
+      valErrors.push(t`Select a valid pwerlevel`);
+    }
+    if (valErrors.length) {
+      setErrors(valErrors);
+      return;
+    }
+
+    setSubmitting(true);
+    const respErrors = await dispatch(
+      changeFactionRole(factionRoleChanges),
+    );
+    if (!respErrors.length) {
+      setFactionData((pFactionData) => ({
+        ...pFactionData,
+        faction: {
+          ...pFactionData.faction,
+          roles: pFactionData.faction.roles.map((pRole) => {
+            if (pRole.frid !== frid) {
+              return pRole;
+            }
+            return { ...pRole, ...factionRoleChanges };
+          }),
+        },
+      }));
+    }
+    setErrors(respErrors);
+    setConfirm(false);
+    setSubmitting(false);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  const submitEditRoleFlag = useCallback(async (frid, customFlagId) => {
+    if (submittingRef.current) {
+      return;
+    }
+    setSubmitting(true);
+    const respErrors = await dispatch(
+      changeFactionRole({ frid, customFlagId }),
+    );
+    if (!respErrors.length) {
+      setFactionData((pFactionData) => ({
+        ...pFactionData,
+        faction: {
+          ...pFactionData.faction,
+          roles: pFactionData.faction.roles.map((pRole) => {
+            if (pRole.frid !== frid) {
+              return pRole;
+            }
+            return { ...pRole, customFlagId };
+          }),
+        },
+      }));
+    }
+    setErrors(respErrors);
+    setSubmitting(false);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   if (!factionData) {
     return (
@@ -307,11 +508,13 @@ const Faction = () => {
   ].filter((p) => {
     switch (p) {
       case 'edit':
+        return powerlvl >= FACTION_PERMISSIONS.EDIT_FACTION;
       case 'roles':
+        return powerlvl >= FACTION_PERMISSIONS.EDIT_ROLES;
       case 'bans':
-        return powerlvl >= FACTIONLVL.MAGISTRATE;
+        return powerlvl >= FACTION_PERMISSIONS.UNBAN;
       case 'invites':
-        return powerlvl >= FACTIONLVL.NOBLE;
+        return powerlvl >= FACTION_PERMISSIONS.MANAGE_INVITES;
       default:
         return true;
     }
@@ -362,7 +565,7 @@ const Faction = () => {
         {(faction.roles.find((r) => r.customFlagId)) && (
           <React.Fragment key="rolelist">
             <span className="factionlist-key">{t`Role Flags`}: </span>
-            {faction.roles.map(({ customFlagId }) => {
+            {faction.roles.map(({ customFlagId, name: roleName }) => {
               const [flagUrl] = getUrlsFromMediaIdAndName(customFlagId);
               if (!flagUrl) {
                 return null;
@@ -370,8 +573,9 @@ const Faction = () => {
               return (
                 <img
                   key={customFlagId}
-                  className="chatflag"
+                  className="chatflag faction"
                   src={cdn`${flagUrl}`}
+                  title={roleName}
                   alt=""
                 />
               );
@@ -392,7 +596,7 @@ const Faction = () => {
               setMemberData(null);
             }}
           ><IoIosRefresh /></button>
-          {(powerlvl === -1 && faction.isPublic) && (
+          {(powerlvl === null && faction.isPublic) && (
             <button
               key="joinbutton"
               type="button"
@@ -405,7 +609,7 @@ const Faction = () => {
               {t`Join Faction`}
             </button>
           )}
-          {(powerlvl !== -1) && (
+          {(powerlvl !== null) && (
             <button
               key="leavebutton"
               type="button"
@@ -429,8 +633,8 @@ const Faction = () => {
     );
   } else if (activeTab === 'members' && memberData) {
     /* =============================== MEMBERS =============================== */
-    const canBan = powerlvl >= FACTIONLVL.NOBLE;
-    const canChangeRoles = powerlvl >= FACTIONLVL.MAGISTRATE;
+    const canBan = powerlvl >= FACTION_PERMISSIONS.BAN;
+    const canChangeRoles = powerlvl >= FACTION_PERMISSIONS.ASSIGN_ROLES;
     didPrintErrors = true;
     content = (
       <div className={`factionwin-${activeTab}`} key={activeTab}>
@@ -525,7 +729,7 @@ const Faction = () => {
                         >
                           {(flagUrl) && (
                           <img
-                            className="chatflag"
+                            className="chatflag faction"
                             src={cdn`${flagUrl}`}
                             alt=""
                           />
@@ -686,26 +890,357 @@ const Faction = () => {
         </div>
       );
     }
+  } else if (activeTab === 'roles') {
+    /* =============================== Roles ================================ */
+    let roleContent;
+    if (selected === '@create-role') {
+      roleContent = (
+        <React.Fragment key="role-create">
+          <h3>{t`Create Role`}</h3>
+          <form onSubmit={submitCreateRole} className="client-form">
+            <div className="form-group">
+              <label>{t`Name`}:
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="Name"
+                  required
+                /></label>
+              <small>{t`Name of this role`} [a-z][A-Z][0-9].-_</small>
+            </div>
+
+            <div className="form-group form-group-avatar">
+              <span>{t`Custom Flag`}:
+                <FileUpload
+                  acceptedTypes="image/*"
+                  keepFiles
+                  maxFiles={1}
+                  uploadRef={uploadRef}
+                  size={32}
+                  preflightRoute="flagpreflight"
+                  uploadRoute="flagupload"
+                /></span>
+              <small>{t`A flag representing the role, it should be 16x11 pixels. If left empty, users with this role selected will still show their own flags.`}</small>
+            </div>
+
+            <div className="form-group">
+              <label>{t`Powerlevel`}:
+                <input
+                  type="number"
+                  name="factionlvl"
+                  defaultValue={0}
+                  min="-100"
+                  max="100"
+                  step="1"
+                  required
+                /></label>
+              <small>{t`Powerlevel of this role. See table below for explenation.`}</small>
+            </div>
+
+            <div className="form-group checkbox-group">
+              <label className="checkbox-label">
+                <input
+                  type="checkbox"
+                  name="isdefault"
+                  defaultValue={false}
+                />
+                <span className="checkmark" />
+                {t`Assign role per default to new members`}
+              </label>
+              <small>{t`Assign this role to every new member automatically on join.`}</small>
+            </div>
+
+            <div className="form-actions">
+              <button
+                type="submit"
+                disabled={submitting}
+              >
+                {t`Submit`}
+              </button>
+              <button
+                type="button"
+                onClick={() => {
+                  setSelected(null);
+                  setErrors([]);
+                  setConfirm(false);
+                }}
+              >
+                {t`Cancel`}
+              </button>
+            </div>
+          </form>
+        </React.Fragment>
+      );
+    } else {
+      const { roles } = faction;
+      roleContent = (
+        <React.Fragment key="role-edit">
+          <div className="factionlist">{roles.map((role) => {
+            const { frid, customFlagId, factionlvl, isProtected } = role;
+            const [flagUrl] = getUrlsFromMediaIdAndName(customFlagId);
+            let nameClass = 'rolelist-name';
+            if (isProtected) {
+              nameClass += ' protected';
+            }
+            let rolePowerlvlName = 'peasant';
+            if (factionlvl >= 100) {
+              rolePowerlvlName = 'sovereign';
+            } else if (factionlvl >= 80) {
+              rolePowerlvlName = 'magistrate';
+            } else if (factionlvl >= 50) {
+              rolePowerlvlName = 'noble';
+            }
+
+            const item = (
+              <div
+                key={frid}
+                className="factionlist-item"
+                onClick={() => {
+                  if (frid === selected) {
+                    setSelected(null);
+                  } else {
+                    setSelected(frid);
+                  }
+                  setErrors([]);
+                  setConfirm(false);
+                }}
+                role="button"
+                tabIndex={0}
+              >
+                {(flagUrl) && (
+                  <img
+                    src={cdn`${flagUrl}`}
+                    loading="lazy"
+                    className="chatflag"
+                    alt=""
+                  />
+                )}
+                <span className={nameClass}>{role.name}</span>
+                <span className={`factionlist-square powerlvl-${rolePowerlvlName}`} />
+              </div>
+            );
+
+            if (frid === selected) {
+              didPrintErrors = true;
+
+              return (
+                <div
+                  key={`edit-${frid}`}
+                >
+                  {item}
+                  <div className="factionlist-edit role">
+                    {errors.map((error) => (
+                      <p key={error} className="errormessage">
+                        <span>{t`Error`}</span>:&nbsp;{error}</p>
+                    ))}
+                    <div className="little-fileupload-container">
+                      <span className="factionlist-key">{t`Change Flag`}:&nbsp;</span>
+                      <FileUpload
+                        acceptedTypes="image/*"
+                        maxFiles={1}
+                        uploadRef={uploadRef}
+                        preflightRoute="flagpreflight"
+                        uploadRoute="flagupload"
+                      />
+                      <button
+                        type="button"
+                        onClick={() => submitEditRoleFlag(frid, null)}
+                        title={t`Clear`}
+                        disabled={submitting || customFlagId === null}
+                      >
+                        <IoTrashOutline />
+                      </button>
+                      <button
+                        type="button"
+                        onClick={async () => {
+                          const files = await uploadRef.current?.();
+                          if (files.length) {
+                            submitEditRoleFlag(frid, files[0].mediaId);
+                          }
+                        }}
+                        title={t`Save`}
+                        disabled={submitting}
+                      >
+                        <RiSave3Line />
+                      </button>
+                    </div>
+
+                    <form
+                      onSubmit={(evt) => submitEditRole(evt, role)}
+                      className="client-form"
+                    >
+                      <span className="factionlist-key">{t`Name`}:&nbsp;</span>
+                      <input
+                        type="text"
+                        name="name"
+                        placeholder="Name"
+                        defaultValue={role.name}
+                        required
+                      /><br />
+
+                      <span className="factionlist-key">{t`Powerlevel`}:&nbsp;</span>
+                      <input
+                        type="number"
+                        name="factionlvl"
+                        defaultValue={role.factionlvl}
+                        min="-100"
+                        max="100"
+                        step="1"
+                        required
+                      /><br />
+
+                      <input
+                        type="checkbox"
+                        name="isdefault"
+                        defaultChecked={role.isDefault}
+                      /> {t`Assigned role per default`}
+
+                      <div className="form-actions">
+                        <button
+                          type="submit"
+                          disabled={submitting}
+                        >
+                          {t`Save`}
+                        </button>
+                        {(!role.isProtected && powerlvl >= FACTION_PERMISSIONS.CREATE_ROLES) && (
+                          <button
+                            type="button"
+                            key="delete-role"
+                            className={(confirm === 'delete') ? 'confirm' : undefined}
+                            onClick={() => {
+                              if (confirm !== 'delete') {
+                                setConfirm('delete');
+                                return;
+                              }
+                              submitDeleteFactionRole(frid);
+                            }}
+                          >
+                            {/* t: button for deleting a faction role, it asks for confirmation */}
+                            {(confirm === 'delete') ? t`Confirm Delete` : t`Delete`}
+                          </button>
+                        )}
+                        <button
+                          type="button"
+                          onClick={() => {
+                            setSelected(null);
+                            setErrors([]);
+                            setConfirm(false);
+                          }}
+                        >
+                          {t`Cancel`}
+                        </button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              );
+            }
+            return item;
+          })}
+          </div>
+
+          {(powerlvl >= FACTION_PERMISSIONS.CREATE_ROLES) && (
+            <div className="form-actions" key="create-roles">
+              <button
+                type="button"
+                onClick={() => {
+                  setSelected('@create-role');
+                  setErrors([]);
+                  setConfirm(false);
+                }}
+              >
+                {t`Create New Role`}
+              </button>
+            </div>
+          )}
+        </React.Fragment>
+      );
+    }
+
+    content = (
+      <div className={`factionwin-${activeTab}`} key={activeTab}>
+        {roleContent}
+        <h3>{t`Permissions of Powerlevels`}</h3>
+        <p>{t`A role has all the permissions of all levels below and equal to it. In example: Every role with a power level of >=50 can manage invites (50).`}</p>
+        <table>
+          <thead>
+            <tr>
+              <th>{t`Permission`}</th>
+              { /* t: Powerlevel of faction role, don't translate if in doubt */ }
+              <th>{t`Level`}</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>{t`Manage invites`}</th>
+              <th>{FACTION_PERMISSIONS.MANAGE_INVITES}</th>
+            </tr>
+            <tr>
+              <th>{t`Kick members`}</th>
+              <th>{FACTION_PERMISSIONS.KICK}</th>
+            </tr>
+            <tr>
+              <th>{t`See hidden users in member list`}</th>
+              <th>{FACTION_PERMISSIONS.SEE_HIDDEN_USERS}</th>
+            </tr>
+            <tr>
+              <th>{t`Assign roles below their own`}</th>
+              <th>{FACTION_PERMISSIONS.ASSIGN_ROLES}</th>
+            </tr>
+            <tr>
+              <th>{t`Ban members`}</th>
+              <th>{FACTION_PERMISSIONS.BAN}</th>
+            </tr>
+            <tr>
+              <th>{t`Unban members`}</th>
+              <th>{FACTION_PERMISSIONS.UNBAN}</th>
+            </tr>
+            <tr>
+              <th>{t`Edit roles below their own`}</th>
+              <th>{FACTION_PERMISSIONS.EDIT_ROLES}</th>
+            </tr>
+            <tr>
+              <th>{t`Create roles`}</th>
+              <th>{FACTION_PERMISSIONS.CREATE_ROLES}</th>
+            </tr>
+            <tr>
+              <th>{t`Edit faction`}</th>
+              <th>{FACTION_PERMISSIONS.EDIT_FACTION}</th>
+            </tr>
+            <tr>
+              <th>{t`Edit their own role and elevate users to their own level`}</th>
+              <th>{FACTION_PERMISSIONS.MANAGE_YOURSELF}</th>
+            </tr>
+            <tr>
+              <th>{t`Delete the faction`}</th>
+              <th>{FACTION_PERMISSIONS.DELETE_FACTION}</th>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    );
   }
 
   return (
     <div className="content" key="factionpage">
       <h2>{faction.title}</h2>
       <h3><span className={`factionlist-square powerlvl-${powerlvlName}`} /> [{faction.name}]</h3>
-      {availableTabs.map((tab, ind) => (
-        <React.Fragment key={tab}>
-          <span
-            role="button"
-            tabIndex={-1}
-            className={
+      <div className="wrap-container">
+        {availableTabs.map((tab, ind) => (
+          <React.Fragment key={tab}>
+            <span
+              role="button"
+              tabIndex={-1}
+              className={
               (activeTab === tab) ? 'modallink selected' : 'modallink'
             }
-            onClick={() => setActiveTab(tab)}
-          >{tabNames[tab]}</span>
-          {(ind !== availableTabs.length - 1)
+              onClick={() => setActiveTab(tab)}
+            >{tabNames[tab]}</span>
+            {(ind !== availableTabs.length - 1)
             && <span className="hdivider" />}
-        </React.Fragment>
-      ))}
+          </React.Fragment>
+        ))}
+      </div>
       <div className="modaldivider" />
       {!didPrintErrors && errors.map((error) => (
         <p key={error} className="errormessage">

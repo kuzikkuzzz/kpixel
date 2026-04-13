@@ -7,7 +7,7 @@ import { getFactionLvlOfUser } from '../../data/sql/Faction.js';
 import {
   getFactionRole, joinFactionRole,
 } from '../../data/sql/FactionRole.js';
-import { FACTIONLVL } from '../../core/constants.js';
+import { FACTION_PERMISSIONS } from '../../core/constants.js';
 
 export default async function factionrolejoin(req, res) {
   req.tickRateLimiter(500);
@@ -41,7 +41,7 @@ export default async function factionrolejoin(req, res) {
   if (!sqlTargetFid) {
     throw new Error('User is not a member');
   }
-  if (!ownPowerlvl || ownPowerlvl < FACTIONLVL.NOBLE) {
+  if (!ownPowerlvl || ownPowerlvl < FACTION_PERMISSIONS.ASSIGN_ROLES) {
     throw new Error('Insufficient permissions on this faction');
   }
   if (targetPowerlvl >= ownPowerlvl
@@ -52,11 +52,8 @@ export default async function factionrolejoin(req, res) {
   if (cFactionlvl > ownPowerlvl) {
     throw new Error(t`Can not change a role above your own`);
   }
-  if (ownPowerlvl < FACTIONLVL.SOVEREIGN
-    /* cant join others to your own role, unless your are Sovereign */
-    && cFactionlvl === ownPowerlvl
-    /* may join yourself to roles equal to yours */
-    && uid !== user.id
+  if (cFactionlvl === ownPowerlvl
+    && ownPowerlvl < FACTION_PERMISSIONS.MANAGE_YOURSELF
   ) {
     throw new Error(t`Can not change a role that is equal to your own`);
   }

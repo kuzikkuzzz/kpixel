@@ -4,7 +4,7 @@
 import logger from '../../core/logger.js';
 import socketEvents from '../../socket/socketEvents.js';
 import { deleteFaction, getFactionLvlOfUser } from '../../data/sql/Faction.js';
-import { FACTIONLVL } from '../../core/constants.js';
+import { FACTION_PERMISSIONS } from '../../core/constants.js';
 
 export default async function factiondelete(req, res) {
   req.tickRateLimiter(10000);
@@ -17,7 +17,7 @@ export default async function factiondelete(req, res) {
   if (!sqlFid) {
     throw new Error('This faction does not exist or you are not a member');
   }
-  if (!powerlvl || powerlvl < FACTIONLVL.SOVEREIGN) {
+  if (!powerlvl || powerlvl < FACTION_PERMISSIONS.DELETE_FACTION) {
     throw new Error('Insufficient permissions on this faction');
   }
 

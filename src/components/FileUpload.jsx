@@ -24,8 +24,8 @@ const FileUploadElement = ({
   active,
   // number of upload progress (parent does the uploading)
   completion,
-  // minimum height of elements
-  minHeight,
+  // minimum height / width of elements
+  size,
 
   // callback to call to close, argument must be id
   close,
@@ -71,86 +71,52 @@ const FileUploadElement = ({
       progressColor = '#3b82f6';
   }
 
-  const buttonStyle = {
-    width: active && render ? 40 : 0,
-    height: minHeight,
-    transition: 'width 200ms ease-in-out',
-    padding: 0,
-    overflow: 'hidden',
-    position: 'relative',
-  };
-
-  // base image (grayscale)
-  const imageBaseStyle = previewUrl ? {
-    width: '100%',
-    height: '100%',
-    backgroundImage: `url(${previewUrl})`,
-    backgroundSize: 'contain',
-    backgroundPosition: 'center',
-    backgroundRepeat: 'no-repeat',
-    filter: (completion === 100) ? undefined : 'grayscale(100%)',
-  } : {
-    width: '100%',
-    height: '100%',
-    backgroundColor: '#9ca3af',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    fontSize: 10,
-    color: 'white',
-    opacity: 0.4,
-  };
-
-  // Small progress indicator line at bottom (optional additional indicator)
-  const progressBarStyle = {
-    position: 'absolute',
-    bottom: 0,
-    left: 0,
-    width: progressWidth,
-    height: 3,
-    backgroundColor: progressColor,
-    transition: 'width 200ms ease-in-out',
-    zIndex: 2,
-  };
-
-  // X indicator - always visible
-  const xIndicatorStyle = {
-    position: 'absolute',
-    top: 0,
-    right: 0,
-    width: 16,
-    height: 16,
-    borderRadius: '0 4px 0 4px',
-    backgroundColor: completion === -1 ? '#ef4444' : 'rgba(0, 0, 0, 0.7)',
-    color: 'white',
-    fontSize: 12,
-    fontWeight: 'bold',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    zIndex: 3,
-    lineHeight: 1,
-  };
+  const resultContainerWidth = size || 40;
 
   return (
     <div
-      style={buttonStyle}
+      style={{
+        width: active && render ? resultContainerWidth : 0,
+        height: size,
+      }}
+      className="fileupload-result-container"
       onTransitionEnd={active ? undefined : () => close(id)}
     >
       <button
         tabIndex={0}
         type="button"
-        style={{ width: '100%', height: '100%' }}
+        className="fileupload-result-btn"
         onClick={() => removeFile(id)}
         title={t`Click to remove`}
       >
-        <div style={imageBaseStyle}>
+        <div
+          style={(previewUrl) ? {
+            backgroundImage: `url(${previewUrl})`,
+            filter: (completion === 100) ? undefined : 'grayscale(100%)',
+          } : undefined}
+          className={(previewUrl)
+            ? 'fileupload-result-btn-preview'
+            : 'fileupload-result-btn-placeholder'}
+        >
           {!previewUrl && '📷'}
         </div>
 
-        <div style={progressBarStyle} />
+        <div
+          style={{
+            width: progressWidth,
+            backgroundColor: progressColor,
+          }}
+          className="fileupload-result-progress"
+        />
 
-        <span style={xIndicatorStyle}>
+        <span
+          className="fileupload-result-x"
+          style={{
+            backgroundColor: (completion === -1)
+              ? '#ef4444'
+              : 'rgba(0, 0, 0, 0.7)',
+          }}
+        >
           {completion === -1 ? '!' : '×'}
         </span>
       </button>
@@ -162,13 +128,17 @@ const FileUploadElement = ({
 const FileUpload = ({
   acceptedTypes = 'image/*,video/*',
   maxFiles = 4,
-  // minimum height of elements
-  minHeight,
+  // minimum height / width of elements
+  size,
   // callback to print errors, gets array of error messages
   printErrors,
   // ref that we define a function on, that the parent calls when all should
   // be uploaded
   uploadRef,
+  /*
+   * boolean whether or not we keep files after upload
+   */
+  keepFiles,
   /*
    * routes to use for upload within /api/media, is only used if we need a
    * route doing specific things, like a flag upload that resizes an image
@@ -464,10 +434,15 @@ const FileUpload = ({
       const oldInfos = await new Promise((resolve) => {
         setFileInfos((infos) => {
           resolve(infos);
-          return [];
+          return infos;
         });
       });
-      setDisplayedUploadElements(0);
+
+      if (!keepFiles) {
+        setDisplayedUploadElements(0);
+        setFileInfos([]);
+      }
+
       const finishedFileInfos = [];
       for (let i = 0; i < oldInfos.length; i += 1) {
         const { fileInfo } = oldInfos[i];
@@ -475,10 +450,9 @@ const FileUpload = ({
           finishedFileInfos.push(fileInfo);
         }
       }
-
       return finishedFileInfos;
     };
-  }, [uploadRef, uploadFile, doPreflight]);
+  }, [uploadRef, uploadFile, doPreflight, keepFiles]);
 
   useEffect(() => () => {
     // clear timeouts
@@ -550,12 +524,7 @@ const FileUpload = ({
     }
   }, [inputButtonState]);
 
-  const inputButtonStyle = {
-    width: inputButtonState === 1 ? 24 : 0,
-    transition: 'width 200ms ease-in-out',
-    padding: 0,
-    overflow: 'hidden',
-  };
+  const inputContainerWidth = size || 24;
 
   return (
     <>
@@ -568,20 +537,23 @@ const FileUpload = ({
           completion={completion}
           close={closeFileUploadElement}
           removeFile={removeFile}
-          minHeight={minHeight}
+          size={size}
         />
       ))}
       {inputButtonState !== 3 && (
         <div
-          style={inputButtonStyle}
+          style={{
+            width: inputButtonState === 1 ? inputContainerWidth : 0,
+            height: size,
+          }}
+          className="fileupload-input-container"
           onTransitionEnd={inputButtonState !== 2 ? undefined
             : () => setInputButtonState(3)}
         >
           <button
             key="ipt"
             type="button"
-            style={{ width: '100%', height: '100%' }}
-            className="fileupload"
+            className="fileupload-input-btn"
             tabIndex={0}
             title={t`Attach File`}
             onClick={handleInputClick}
@@ -594,12 +566,7 @@ const FileUpload = ({
             type="file"
             accept={acceptedTypes}
             onChange={handleInputChange}
-            style={{
-              position: 'absolute',
-              opacity: 0,
-              width: 0,
-              height: 0,
-            }}
+            className="fileupload-input-hidden"
           />
         </div>
       )}

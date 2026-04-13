@@ -29,7 +29,7 @@ const ChangeName = ({ done }) => {
     }
 
     setSubmitting(true);
-    const { errors: respErrors } = await dispatch(changeUser({ name }));
+    const respErrors = await dispatch(changeUser({ name }));
     setSubmitting(false);
     if (respErrors) {
       setErrors(respErrors);

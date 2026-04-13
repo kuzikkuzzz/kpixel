@@ -162,7 +162,11 @@ export async function storeMediaStream(
      */
     await hasMedia(model);
     if (model.shortId) {
-      return model;
+      if (resize && (resize[0] !== model.width || resize[1] !== model.height)) {
+        delete model.shortId;
+      } else {
+        return model;
+      }
     }
   }
 
@@ -219,13 +223,23 @@ export async function storeMediaStream(
      */
     await hasMedia(model);
     if (model.shortId) {
-      return model;
+      if (resize && (resize[0] !== model.width || resize[1] !== model.height)) {
+        delete model.shortId;
+      } else {
+        return model;
+      }
     }
 
     if (pHash) {
       await hasSimilarMedia(model, pHash);
       if (model.shortId) {
-        return model;
+        if (resize && (
+          resize[0] !== model.width || resize[1] !== model.height
+        )) {
+          delete model.shortId;
+        } else {
+          return model;
+        }
       }
     }
 
@@ -276,6 +290,15 @@ export async function storeMediaStream(
         await resizeImage(temporaryFile, targetWidth, targetHeight);
         width = targetWidth;
         height = targetHeight;
+      }
+
+      /*
+       * need to recalculate hash and recheck for duplicates
+       */
+      model.hash = await calculateHash(temporaryFile);
+      await hasMedia(model);
+      if (model.shortId) {
+        return model;
       }
     }
 

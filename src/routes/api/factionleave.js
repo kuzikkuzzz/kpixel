@@ -14,7 +14,7 @@ export default async function factionleave(req, res) {
     throw new Error('No faction given');
   }
 
-  const [leaveRet, factionInfo] = await Promise.all([
+  const [[leaveRet, hadRoleActive], factionInfo] = await Promise.all([
     leaveFaction(user.id, fid),
     getFactionInfo(fid),
   ]);
@@ -50,6 +50,16 @@ export default async function factionleave(req, res) {
   };
   socketEvents.patchUserState(user.id, 'profile', profilePatch);
   patches.push(['profile', profilePatch]);
+
+  if (hadRoleActive) {
+    const activeProfilePatch = {
+      op: 'set',
+      path: 'activeFactionRole',
+      value: null,
+    };
+    socketEvents.patchUserState(user.id, 'profile', activeProfilePatch);
+    patches.push(['profile', activeProfilePatch]);
+  }
 
   logger.info(`User ${user.id} left faction ${factionInfo.name}`);
   res.json({

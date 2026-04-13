@@ -5,7 +5,7 @@
 import {
   getFactionLvlOfUser, getFactionBanInfo,
 } from '../../data/sql/Faction.js';
-import { FACTIONLVL } from '../../core/constants.js';
+import { FACTION_PERMISSIONS } from '../../core/constants.js';
 
 export default async function factionrolechange(req, res) {
   req.tickRateLimiter(5000);
@@ -21,7 +21,7 @@ export default async function factionrolechange(req, res) {
   if (!sqlFid) {
     throw new Error(t`This faction does not exist`);
   }
-  if (!powerlvl || powerlvl < FACTIONLVL.MAGISTRATE) {
+  if (!powerlvl || powerlvl < FACTION_PERMISSIONS.UNBAN) {
     throw new Error('Insufficient permissions on this faction');
   }
 

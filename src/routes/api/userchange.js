@@ -44,7 +44,7 @@ export default async function userchange(req, res) {
     if (!success) {
       throw new Error(t`Could not change this setting. Maybe try again later.`);
     }
-    logger.info(`User ${user.name} changed priv to ${priv}`);
+    logger.info(`AUTH: User ${user.name} changed priv to ${priv}`);
   }
 
   if (typeof blockDm === 'boolean') {
@@ -54,7 +54,7 @@ export default async function userchange(req, res) {
     if (!success) {
       throw new Error(t`Could not change this setting. Maybe try again later.`);
     }
-    logger.info(`User ${user.name} changed blockDm to ${blockDm}`);
+    logger.info(`AUTH: User ${user.name} changed blockDm to ${blockDm}`);
   }
 
   if (typeof username === 'string') {

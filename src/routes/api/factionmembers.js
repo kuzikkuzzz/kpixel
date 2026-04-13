@@ -5,7 +5,7 @@
 import {
   getFactionLvlOfUser, getFactionInfo, getFactionMemberInfo,
 } from '../../data/sql/Faction.js';
-import { FACTIONLVL } from '../../core/constants.js';
+import { FACTION_PERMISSIONS } from '../../core/constants.js';
 
 export default async function factionrolechange(req, res) {
   req.tickRateLimiter(1000);
@@ -17,18 +17,18 @@ export default async function factionrolechange(req, res) {
   }
 
   const [{ powerlvl }, faction] = await Promise.all([
-    (user) ? getFactionLvlOfUser(user.id, fidOrName) : { powerlvl: -1 },
+    (user) ? getFactionLvlOfUser(user.id, fidOrName) : { powerlvl: null },
     getFactionInfo(fidOrName),
   ]);
 
   if (!faction) {
     throw new Error(t`This faction does not exist`);
   }
-  if (faction.isHidden && powerlvl < 0) {
-    throw new Error(t`This faction is hidden`);
+  if (faction.isPrivate && powerlvl === null) {
+    throw new Error(t`This faction is private`);
   }
 
-  const showHiddenUsers = powerlvl >= FACTIONLVL.NOBLE;
+  const showHiddenUsers = powerlvl >= FACTION_PERMISSIONS.SEE_HIDDEN_USERS;
   const members = await getFactionMemberInfo(faction.sqlFid, showHiddenUsers);
   if (!members) {
     throw new Error(t`Server Error`);

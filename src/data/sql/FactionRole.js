@@ -7,7 +7,9 @@ import { DataTypes, QueryTypes } from 'sequelize';
 
 import sequelize from './sequelize.js';
 import { generateUUID, bufferToUUID } from '../../utils/hash.js';
-import { FACTIONLVL, FACTION_ROLE_FLAGS } from '../../core/constants.js';
+import {
+  FACTION_ROLE_FLAGS, FACTION_PERMISSIONS,
+} from '../../core/constants.js';
 
 const FactionRole = sequelize.define('FactionRole', {
   id: {
@@ -58,7 +60,7 @@ const FactionRole = sequelize.define('FactionRole', {
   factionlvl: {
     type: DataTypes.TINYINT,
     allowNull: false,
-    defaultValue: FACTIONLVL.PEASANT,
+    defaultValue: FACTION_PERMISSIONS.PEASANT,
   },
 
   memberCount: {
@@ -174,7 +176,7 @@ export async function setFactionRoleProperty(sqlFrid, property, value) {
  *   1 faction doesn't exist
  *   2 customFlagId invalid
  *   3 max role count reached
- *   4 failure
+ *   -1 failure
  */
 export async function createFactionRole(
   fid, name, factionlvl, customFlagId, isDefault,
@@ -198,12 +200,60 @@ export async function createFactionRole(
     );
     const ret = model?.[0]?.result;
     if (ret || ret === 0) {
-      return [ret, ret === 0 ? fid : null];
+      return [ret, ret === 0 ? frid : null];
     }
   } catch (error) {
     console.error('SQL Error on createFactionRole:', error.message);
   }
-  return [3, null];
+  return [-1, null];
+}
+
+/**
+ * delete a faction role
+ * @param uid user id
+ * @param frid faction role uuid
+ * @return [number, fid, affectedUsers, affectedActiveRoleUsers]
+ *   0 success
+ *   1 faction or role doesn't exist
+ *   2 role is sovereign
+ *   3 role is protected
+ *   4 user not member of this faction
+ *   5 user powerlvl too low to create roles
+ *   6 user powerlvl below role
+ *   7 user powerlvl equal to role but not allowed
+ *   -1 failure
+ */
+export async function deleteFactionRole(uid, frid) {
+  const affectedUsers = [];
+  const affectedActiveRoleUsers = [];
+  let fid = null;
+  try {
+    let models = await sequelize.query(
+      'CALL DELETE_FACTION_ROLE(?, ?)', {
+        replacements: [uid, frid],
+        raw: true,
+        type: QueryTypes.SELECT,
+      },
+    );
+    const returnCode = models?.[0]?.[0]?.result;
+    if (returnCode || returnCode === 0) {
+      if (returnCode === 0) {
+        [{ 0: { fid } }] = models;
+        models = Object.values(models[1]);
+        for (let i = 0; i < models.length; i += 1) {
+          const { uid: memberUid, hadRoleActive } = models[i];
+          if (hadRoleActive) {
+            affectedActiveRoleUsers.push(memberUid);
+          }
+          affectedUsers.push(memberUid);
+        }
+      }
+      return [returnCode, fid, affectedUsers, affectedActiveRoleUsers];
+    }
+  } catch (error) {
+    console.error('SQL Error on deleteFactionRole:', error.message);
+  }
+  return [-1, fid, affectedUsers, affectedActiveRoleUsers];
 }
 
 /**
@@ -281,54 +331,40 @@ export async function joinFactionRole(sqlFrid, uid) {
 
 /**
  * remove user from a faction role
- * @param sqlFrid sql id of faction role
- * @param uid user id
- * @return success
+ * @param initiatorUid user id of initiator
+ * @param subjectUid user id of user to join
+ * @param frid faction role uuid
+ * @return [number, hadRoleActive, fid]
+ *   0 success
+ *   1 faction doesn't exist
+ *   2 initiator not in faction
+ *   3 initiator not enough permissions
+ *   4 subject not in faction or not in role
+ *   5 subject has more power than initiator
+ *   6 would orphan faction
+ *   -1 failure
  */
-export async function leaveFactionRole(sqlFrid, uid) {
+export async function leaveFactionRole(initiatorUid, subjectUid, frid) {
   try {
-    await Promise.all([
-      sequelize.query(
-        'DELETE FROM UserFactionRoles WHERE uid = ? AND frid = ?', {
-          replacements: [uid, sqlFrid],
-          raw: true,
-          type: QueryTypes.DELETE,
-        },
-      ),
-      sequelize.query(
-        'UPDATE FactionRoles SET memberCount = memberCount - 1 WHERE id = ?', {
-          replacements: [sqlFrid],
-          raw: true,
-          type: QueryTypes.UPDATE,
-        },
-      ),
-    ]);
-    return true;
-  } catch (error) {
-    console.error(`SQL Error on setFactionRoleProperty: ${error.message}`);
-  }
-  return false;
-}
-
-/**
- * change a property of a faction role
- * @param sqlFrid sql id of faction role
- * @return success
- */
-export async function deleteFactionRole(sqlFrid) {
-  try {
-    await sequelize.query(
-      'DELETE FROM FactionRoles WHERE id = ?', {
-        replacements: [sqlFrid],
-        raw: true,
-        type: QueryTypes.DELETE,
+    const model = await sequelize.query(
+      'CALL LEAVE_FACTION_ROLE(?, ?, ?)', {
+        replacements: [initiatorUid, subjectUid, frid],
+        plain: true,
+        type: QueryTypes.SELECT,
       },
     );
-    return true;
+    const returnCode = model?.[0]?.result;
+    if (returnCode || returnCode === 0) {
+      if (returnCode === 0) {
+        const { 0: { hadRoleActive, fid } } = model;
+        return [returnCode, !!hadRoleActive, fid];
+      }
+      return [returnCode, false, null];
+    }
   } catch (error) {
-    console.error(`SQL Error on setFactionRoleProperty: ${error.message}`);
+    console.error('SQL Error on leaveFactionRole:', error.message);
   }
-  return false;
+  return [-1, false, null];
 }
 
 export default FactionRole;

@@ -12,7 +12,7 @@ import {
   setFlagOfFaction, setFactionProperty, setFactionAvatar,
 } from '../../data/sql/Faction.js';
 import { getMediaType } from '../../data/sql/Media.js';
-import { FACTIONLVL, FACTION_FLAGS } from '../../core/constants.js';
+import { FACTION_PERMISSIONS, FACTION_FLAGS } from '../../core/constants.js';
 
 export default async function factionchange(req, res) {
   req.tickRateLimiter(7000);
@@ -27,7 +27,7 @@ export default async function factionchange(req, res) {
   if (!sqlFid) {
     throw new Error('This faction does not exist or you are not a member');
   }
-  if (!powerlvl || powerlvl < FACTIONLVL.MAGISTRATE) {
+  if (!powerlvl || powerlvl < FACTION_PERMISSIONS.EDIT_FACTION) {
     throw new Error('Insufficient permissions on this faction');
   }
 
@@ -46,7 +46,7 @@ export default async function factionchange(req, res) {
       throw new Error('Could not set this factions private property');
     }
     logger.info(
-      `User ${user.username} changed faction ${fid} private to ${isPrivate}`,
+      `AUTH: Changed faction ${fid} private to ${isPrivate} by ${user.id}`,
     );
   }
 
@@ -60,7 +60,7 @@ export default async function factionchange(req, res) {
       throw new Error('Could not set this factions public property');
     }
     logger.info(
-      `User ${user.username} changed faction ${fid} private to ${isPublic}`,
+      `AUTH: Changed faction ${fid} private to ${isPublic} by ${user.id}`,
     );
   }
 
@@ -132,7 +132,9 @@ export default async function factionchange(req, res) {
     if (!success) {
       throw new Error(t`Could not set this factions avatar`);
     }
-    logger.info(`User ${user.id} changed faction ${fid} avatar to ${avatarId}`);
+    logger.info(
+      `AUTH: Changed faction ${fid} avatar to ${avatarId} by ${user.id}`,
+    );
   }
 
   if (!changed) {

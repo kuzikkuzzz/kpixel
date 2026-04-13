@@ -13,7 +13,9 @@ import {
   setFlagOfFactionRole,
 } from '../../data/sql/FactionRole.js';
 import { getMediaDimensions } from '../../data/sql/Media.js';
-import { FACTIONLVL, FACTION_ROLE_FLAGS } from '../../core/constants.js';
+import {
+  FACTION_PERMISSIONS, FACTION_ROLE_FLAGS,
+} from '../../core/constants.js';
 
 export default async function factionrolechange(req, res) {
   req.tickRateLimiter(7000);
@@ -36,17 +38,19 @@ export default async function factionrolechange(req, res) {
   if (!sqlFid) {
     throw new Error('This faction does not exist or you are not a member');
   }
-  if (!powerlvl || powerlvl < FACTIONLVL.MAGISTRATE) {
+  if (!powerlvl || powerlvl < FACTION_PERMISSIONS.EDIT_ROLES) {
     throw new Error('Insufficient permissions on this faction');
   }
   if (cFactionlvl > powerlvl) {
     throw new Error(t`Can not change a role above your own`);
   }
-  if (powerlvl < FACTIONLVL.SOVEREIGN && cFactionlvl === powerlvl) {
+  if (powerlvl < FACTION_PERMISSIONS.MANAGE_YOURSELF
+    && cFactionlvl === powerlvl
+  ) {
     throw new Error(t`Can not change a role that is equal to your own`);
   }
 
-  let { name } = factionRoleData;
+  const { name } = factionRoleData;
 
   let changed = false;
   const factionRoleChanges = {};
@@ -55,7 +59,7 @@ export default async function factionrolechange(req, res) {
     changed = true;
     factionRoleChanges.isDefault = isDefault;
     if (isProtected) {
-      throw new Error(t`Can not change this role`);
+      throw new Error(t`Can not change the default setting of this role`);
     }
     const success = await setFlagOfFactionRole(
       sqlFrid, FACTION_ROLE_FLAGS.DEFAULT, isDefault,
@@ -64,14 +68,15 @@ export default async function factionrolechange(req, res) {
       throw new Error('Could not set this faction roles default property');
     }
     logger.info(
-      `User ${user.username} changed role ${frid} default to ${isDefault}`,
+      // eslint-disable-next-line max-len
+      `AUTH: Changed faction role ${frid} default to ${isDefault} by ${user.id}`,
     );
   }
 
   if (typeof factionlvl === 'number') {
     changed = true;
     factionRoleChanges.factionlvl = factionlvl;
-    if (cFactionlvl >= FACTIONLVL.SOVEREIGN) {
+    if (cFactionlvl >= FACTION_PERMISSIONS.SOVEREIGN) {
       throw new Error(t`Can not change the powerlevel of the Sovereign`);
     }
     if (cFactionlvl >= powerlvl) {
@@ -80,9 +85,21 @@ export default async function factionrolechange(req, res) {
       );
     }
     if (factionlvl >= powerlvl) {
-      throw new Error(
-        t`Can not elevate the powerlevel of a role to yours or beyond`,
-      );
+      if (factionlvl > powerlvl) {
+        throw new Error(
+          t`Can not elevate the powerlevel of a role beyond yours`,
+        );
+      }
+      if (factionlvl === FACTION_PERMISSIONS.SOVEREIGN) {
+        throw new Error(
+          t`Can only have one Sovereign role`,
+        );
+      }
+      if (powerlvl < FACTION_PERMISSIONS.MANAGE_YOURSELF) {
+        throw new Error(
+          t`Can not elevate the powerlevel of a role to yours`,
+        );
+      }
     }
     if (factionlvl > 127 || factionlvl < -128) {
       throw new Error('Invalid powerlevel');
@@ -94,14 +111,14 @@ export default async function factionrolechange(req, res) {
       throw new Error('Could not set this roles powerlevel');
     }
     logger.info(
-      `User ${user.username} changed role ${frid} powerlevel to ${factionlvl}`,
+      // eslint-disable-next-line max-len
+      `AUTH: Changed faction role ${frid} powerlevel to ${factionlvl} by ${user.id}`,
     );
   }
 
   if (typeof name === 'string') {
     changed = true;
 
-    name = name.toLowerCase();
     const error = validateFactionName(name);
     if (error) {
       throw new Error(gettext(error));
@@ -112,7 +129,7 @@ export default async function factionrolechange(req, res) {
       throw new Error('Could not set name');
     }
     logger.info(
-      `AUTH: Changed factions name for ${frid} to ${name} by ${user.id}`,
+      `AUTH: Changed faction role name for ${frid} to ${name} by ${user.id}`,
     );
   }
 
@@ -132,7 +149,10 @@ export default async function factionrolechange(req, res) {
     if (!success) {
       throw new Error(t`Could not this roles flag`);
     }
-    logger.info(`User ${user.id} changed role ${frid} flag to ${customFlagId}`);
+    logger.info(
+      // eslint-disable-next-line max-len
+      `AUTH: Changed faction role ${frid} flag to ${customFlagId} by ${user.id}`,
+    );
   }
 
   if (!changed) {

@@ -378,7 +378,7 @@ export async function registerMedia(
     } while (exists);
     await sequelize.query(
       // eslint-disable-next-line max-len
-      'INSERT INTO Media (hash, shortId, extension, mimeType, size, width, height, avgColor, lastUpload) VALUES (UNHEX(?), ?, ?, ?, ?, ?, ?, ?, NOW()) ON DUPLICATE KEY UPDATE lastUpload = VALUES(lastUpload)', {
+      'INSERT INTO Media (hash, shortId, extension, mimeType, size, width, height, avgColor, lastUpload) VALUES (UNHEX(?), ?, ?, ?, ?, ?, ?, ?, NOW())', {
         replacements: [
           hash, shortId, extension, mimeType, size, width, height, avgColor,
         ],

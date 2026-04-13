@@ -38,7 +38,7 @@ export default async function profilechange(req, res) {
     if (!success) {
       throw new Error(t`Could not set your avatar`);
     }
-    logger.info(`User ${user.name} changed avatar to ${avatarId}`);
+    logger.info(`AUTH: User ${user.name} changed avatar to ${avatarId}`);
   }
 
   if (customFlag === null) {
@@ -48,7 +48,7 @@ export default async function profilechange(req, res) {
     if (!success) {
       throw new Error('Could not remove your custom flag');
     }
-    logger.info(`User ${user.name} removed his custom flag`);
+    logger.info(`AUTH: User ${user.name} removed his custom flag`);
   } else if (typeof customFlag === 'string') {
     changed = true;
     profileChanges.customFlag = customFlag;
@@ -65,7 +65,7 @@ export default async function profilechange(req, res) {
     if (!success) {
       throw new Error('Could not set your custom flag');
     }
-    logger.info(`User ${user.name} changed flag to ${customFlag}`);
+    logger.info(`AUTH: User ${user.name} changed flag to ${customFlag}`);
   }
 
   if (activeFactionRole === null || typeof activeFactionRole === 'string') {
@@ -76,7 +76,7 @@ export default async function profilechange(req, res) {
       throw new Error(t`Could not set your faction role`);
     }
     logger.info(
-      `User ${user.name} changed active faction to ${activeFactionRole}`,
+      `AUTH: User ${user.name} changed active faction to ${activeFactionRole}`,
     );
   }
 
