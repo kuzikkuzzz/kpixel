@@ -5,7 +5,7 @@
 import logger from '../../core/logger.js';
 import socketEvents from '../../socket/socketEvents.js';
 import {
-  validateFactionTitle, validateFactionName, validateDescription,
+  validateFactionTitle, validateDescription,
 } from '../../utils/validation.js';
 import {
   getFactionLvlOfUser, getAllMembersOfFaction,
@@ -17,7 +17,7 @@ import { FACTION_PERMISSIONS, FACTION_FLAGS } from '../../core/constants.js';
 export default async function factionchange(req, res) {
   req.tickRateLimiter(7000);
   const { ttag: { gettext, t }, user, body: factionData } = req;
-  const { fid, isPrivate, isPublic, avatarId } = factionData;
+  const { fid, isPrivate, isPublic, avatarId, name } = factionData;
 
   if (!fid || typeof fid !== 'string') {
     throw new Error('No faction given');
@@ -31,7 +31,7 @@ export default async function factionchange(req, res) {
     throw new Error('Insufficient permissions on this faction');
   }
 
-  let { name, title, description } = factionData;
+  let { title, description } = factionData;
 
   let changed = false;
   const factionChanges = {};
@@ -65,21 +65,7 @@ export default async function factionchange(req, res) {
   }
 
   if (typeof name === 'string') {
-    changed = true;
-
-    name = name.toLowerCase();
-    const error = validateFactionName(name);
-    if (error) {
-      throw new Error(gettext(error));
-    }
-    factionChanges.name = name;
-    const success = await setFactionProperty(sqlFid, 'name', name);
-    if (!success) {
-      throw new Error(t`Name already in use.`);
-    }
-    logger.info(
-      `AUTH: Changed factions name for  ${fid} to ${name} by ${user.id}`,
-    );
+    throw new Error('We do not allow faction nae changes');
   }
 
   if (typeof title === 'string') {
@@ -121,12 +107,14 @@ export default async function factionchange(req, res) {
     );
   }
 
-  if (typeof avatarId === 'string') {
+  if (typeof avatarId === 'string' || avatarId === null) {
     changed = true;
     factionChanges.avatarId = avatarId;
-    const isLegitMedia = await getMediaType(avatarId) === 'image';
-    if (!isLegitMedia) {
-      throw new Error(t`Avatar can only be an image`);
+    if (avatarId) {
+      const isLegitMedia = await getMediaType(avatarId) === 'image';
+      if (!isLegitMedia) {
+        throw new Error(t`Avatar can only be an image`);
+      }
     }
     const success = await setFactionAvatar(sqlFid, avatarId);
     if (!success) {

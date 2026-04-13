@@ -1054,7 +1054,7 @@ table td span {
  * =============================== Faction =====================================
  */
 
-.factionwin-overview, .factionwin-bans, .factionwin-members, .factionwin-roles {
+.factionwin-overview, .factionwin-bans, .factionwin-members, .factionwin-roles, .factionwin-edit {
   margin-top: 20px;
   line-height: 1.8em;
 }

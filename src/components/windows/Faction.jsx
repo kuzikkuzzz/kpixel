@@ -12,7 +12,11 @@ import { IoIosRefresh } from 'react-icons/io';
 
 import { cdn } from '../../utils/utag.js';
 import { getUrlsFromMediaIdAndName } from '../../utils/media/utils.js';
-import { validateFactionName } from '../../utils/validation.js';
+import {
+  validateFactionName,
+  validateFactionTitle,
+  validateDescription,
+} from '../../utils/validation.js';
 import WindowContext from '../context/window.js';
 import {
   requestFactionInfo,
@@ -29,6 +33,7 @@ import {
 } from '../../store/actions/fetch.js';
 import {
   changeFactionRole,
+  changeFaction,
 } from '../../store/actions/thunks.js';
 import {
   applyPatches,
@@ -481,6 +486,96 @@ const Faction = () => {
             }
             return { ...pRole, customFlagId };
           }),
+        },
+      }));
+    }
+    setErrors(respErrors);
+    setSubmitting(false);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  const submitEditFaction = useCallback(async (evt, faction) => {
+    evt.preventDefault();
+    if (submittingRef.current) {
+      return;
+    }
+    const {
+      fid,
+      title: prevTitle,
+      description: prevDescription,
+      isPrivate: prevIsPrivate,
+      isPublic: prevIsPublic,
+    } = faction;
+    const factionTitle = evt.target.title.value;
+    const factionDescription = evt.target.description.value;
+    const isPrivate = evt.target.isprivate.checked;
+    const isPublic = evt.target.ispublic.checked;
+
+    let changed = false;
+    const factionChanges = { fid };
+    if (factionTitle !== prevTitle) {
+      changed = true;
+      factionChanges.title = factionTitle;
+    }
+    if (factionDescription !== prevDescription) {
+      changed = true;
+      factionChanges.description = factionDescription;
+    }
+    if (isPrivate !== prevIsPrivate) {
+      changed = true;
+      factionChanges.isPrivate = isPrivate;
+    }
+    if (isPublic !== prevIsPublic) {
+      changed = true;
+      factionChanges.isPublic = isPublic;
+    }
+    if (!changed) {
+      return;
+    }
+
+    const valErrors = [];
+    let error = validateFactionTitle(factionTitle);
+    if (error) valErrors.push(error);
+    error = validateDescription(factionDescription);
+    if (error) valErrors.push(error);
+    if (valErrors.length) {
+      setErrors(valErrors);
+      return;
+    }
+
+    setSubmitting(true);
+    const respErrors = await dispatch(
+      changeFaction(factionChanges),
+    );
+    if (!respErrors.length) {
+      setFactionData((pFactionData) => ({
+        ...pFactionData,
+        faction: {
+          ...pFactionData.faction,
+          ...factionChanges,
+        },
+      }));
+    }
+    setErrors(respErrors);
+    setConfirm(false);
+    setSubmitting(false);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  const submitEditFactionAvatar = useCallback(async (fid, avatarId) => {
+    if (submittingRef.current) {
+      return;
+    }
+    setSubmitting(true);
+    const respErrors = await dispatch(
+      changeFaction({ fid, avatarId }),
+    );
+    if (!respErrors.length) {
+      setFactionData((pFactionData) => ({
+        ...pFactionData,
+        faction: {
+          ...pFactionData.faction,
+          avatarId,
         },
       }));
     }
@@ -942,7 +1037,7 @@ const Faction = () => {
                 <input
                   type="checkbox"
                   name="isdefault"
-                  defaultValue={false}
+                  defaultChecked={false}
                 />
                 <span className="checkmark" />
                 {t`Assign role per default to new members`}
@@ -1217,6 +1312,135 @@ const Faction = () => {
             </tr>
           </tbody>
         </table>
+      </div>
+    );
+  } else if (activeTab === 'edit') {
+    /* ================================ EDIT ================================ */
+    const { avatarId, fid } = faction;
+    const [thumbUrl] = getUrlsFromMediaIdAndName(avatarId, 'avatar');
+    didPrintErrors = true;
+
+    content = (
+      <div className={`factionwin-${activeTab}`} key={activeTab}>
+
+        <div className="setitem">
+          <div className="setrow">
+            <h3 className="settitle">{t`Avatar`}</h3>
+            <div className="little-fileupload-container">
+              {(thumbUrl) && (
+                <div
+                  className="avatar"
+                  style={{
+                    backgroundImage: `url(${cdn`${thumbUrl}`})`,
+                  }}
+                  title={avatarId}
+                />
+              )}
+              <FileUpload
+                acceptedTypes="image/*"
+                maxFiles={1}
+                uploadRef={uploadRef}
+              />
+              <button
+                type="button"
+                onClick={() => submitEditFactionAvatar(fid, null)}
+                title={t`Clear`}
+                disabled={submitting || avatarId === null}
+              >
+                <IoTrashOutline />
+              </button>
+              <button
+                type="button"
+                onClick={async () => {
+                  const files = await uploadRef.current?.();
+                  if (files.length) {
+                    submitEditFactionAvatar(fid, files[0].mediaId);
+                  }
+                }}
+                title={t`Save`}
+                disabled={submitting}
+              >
+                <RiSave3Line />
+              </button>
+            </div>
+          </div>
+          <div className="modaldesc">{
+            t`Select Avatar of this Faction. Supported Formats: jpg, gif, png, webp`
+          }</div>
+          <div className="modaldivider" />
+        </div>
+
+        <form
+          onSubmit={(evt) => submitEditFaction(evt, faction)}
+          className="client-form"
+        >
+          <div className="form-group">
+            <label htmlFor="title">{t`Title`}:
+              <input
+                type="text"
+                name="title"
+                defaultValue={faction.title}
+                required
+              /></label>
+            <small>{t`Title of your faction`}</small>
+          </div>
+
+          <div className="form-group">
+            <label>{t`Description`}:
+              <textarea
+                name="description"
+                defaultValue={faction.description}
+                rows="3"
+                required
+              /></label>
+            <small>{t`Description of your faction`}</small>
+          </div>
+
+          <div className="form-group checkbox-group">
+            <label className="checkbox-label">
+              <input
+                type="checkbox"
+                name="isprivate"
+                defaultChecked={faction.isPrivate}
+              />
+              <span className="checkmark" />
+              {t`Don't show faction in search`}
+            </label>
+            <small>{t`Don't let people find this faction in public search or look at its profile.`}</small>
+          </div>
+
+          <div className="form-group checkbox-group">
+            <label className="checkbox-label">
+              <input
+                type="checkbox"
+                name="ispublic"
+                defaultChecked={faction.isPublic}
+              />
+              <span className="checkmark" />
+              {t`Let everyone join this faction`}
+            </label>
+            <small>{t`Let people join this faction without needing an invite.`}</small>
+          </div>
+
+          {errors.map((error) => (
+            <p key={error} className="errormessage">
+              <span>{t`Error`}</span>:&nbsp;{error}</p>
+          ))}
+          <div className="form-actions">
+            <button
+              type="submit"
+              disabled={submitting}
+            >
+              {t`Save`}
+            </button>
+            <button
+              type="button"
+              onClick={() => setActiveTab('overview')}
+            >
+              {t`Cancel`}
+            </button>
+          </div>
+        </form>
       </div>
     );
   }

@@ -134,10 +134,7 @@ const SocialSettings = ({ done }) => {
 
 
       <h3
-        style={{
-          textAlign: 'left',
-          marginLeft: 10,
-        }}
+        style={{ textAlign: 'left' }}
       >{t`Custom Flag`}</h3>
       <p>
         {(selectedCustomFlag) ? (

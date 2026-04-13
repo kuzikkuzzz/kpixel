@@ -181,7 +181,7 @@ const MyFactions = () => {
                 placeholder="Name"
                 required
               /></label>
-            <small>{t`Name of your faction`} [a-z][A-Z][0-9].-_</small>
+            <small>{t`Name of your faction (this can not be changed later)`} [a-z][A-Z][0-9].-_</small>
           </div>
 
           <div className="form-group form-group-avatar">
@@ -223,7 +223,7 @@ const MyFactions = () => {
               <input
                 type="checkbox"
                 name="isprivate"
-                value="true"
+                defaultChecked={false}
               />
               <span className="checkmark" />
               {t`Don't show faction in search`}
@@ -236,7 +236,7 @@ const MyFactions = () => {
               <input
                 type="checkbox"
                 name="ispublic"
-                value="true"
+                defaultChecked={false}
               />
               <span className="checkmark" />
               {t`Let everyone join this faction`}
