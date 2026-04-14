@@ -43,18 +43,17 @@ export default async (req, res) => {
     }
   }
 
+  const dmChannels = await deleteUser(user.id);
+
   // eslint-disable-next-line max-len
   logger.info(`AUTH: Deleted user ${user.name}(${user.id}) by ${req.ip.ipString}`);
-
-  const ret = await deleteUser(user.id);
-  if (!ret) {
+  if (!dmChannels) {
     res.status(500);
     res.json({
       errors: [t`Server error while deleting user.`],
     });
     return;
   }
-  const { dmChannels } = ret;
   if (dmChannels.length) {
     dmChannels.forEach(({ dmuid }) => {
       socketEvents.reloadUser(dmuid);

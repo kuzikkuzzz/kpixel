@@ -593,7 +593,7 @@ BEGIN
   ELSEIF NOT EXISTS(
     SELECT 1 FROM UserFactionRoles ufr
       INNER JOIN FactionRoles fr ON ufr.frid = fr.id
-    WHERE fr.fid = v_fid AND ufr.uid != p_uid AND fr.factionlvl >= ${FACTION_PERMISSIONS.SOVEREIGN}
+    WHERE fr.fid = v_fid AND ufr.uid != p_uid AND fr.factionlvl >= ${FACTION_PERMISSIONS.SOVEREIGN} LIMIT 1
   ) THEN
     SELECT 2 AS result;
     ROLLBACK;
@@ -602,13 +602,12 @@ BEGIN
     IF ROW_COUNT() > 0 THEN
       UPDATE FactionRoles SET memberCount = memberCount - 1
       WHERE EXISTS (
-        SELECT 1 FROM UserFactionRoles ufr WHERE ufr.frid = FactionRoles.id AND ufr.uid = p_uid
+        SELECT 1 FROM UserFactionRoles ufr WHERE ufr.frid = FactionRoles.id AND ufr.uid = p_uid LIMIT 1
       ) AND fid = v_fid;
       UPDATE Factions SET memberCount = memberCount - 1 WHERE id = v_fid;
 
       UPDATE Profiles SET activeRole = NULL WHERE uid = p_uid AND EXISTS(
-        SELECT 1 FROM FactionRoles fr
-        WHERE fr.id = Profiles.activeRole AND fr.fid = v_fid
+        SELECT 1 FROM FactionRoles fr WHERE fr.id = Profiles.activeRole AND fr.fid = v_fid LIMIT 1
       );
       SET v_is_active_role = (ROW_COUNT() > 0);
 
@@ -622,6 +621,99 @@ BEGIN
     COMMIT;
     SELECT 0 AS result, v_is_active_role as hadRoleActive;
   END IF;
+END`,
+    /**
+     * Delete all DMs of user
+     * first result set is dmuid, cid of other affected users
+     * @param p_uid user id
+     */
+    DELETE_USER_DMS: `CREATE PROCEDURE IF NOT EXISTS DELETE_USER_DMS(IN p_uid INT UNSIGNED) NOT DETERMINISTIC MODIFIES SQL DATA
+BEGIN
+  DECLARE EXIT HANDLER FOR SQLEXCEPTION
+  BEGIN
+    DROP TEMPORARY TABLE IF EXISTS temp_dm_channels;
+    RESIGNAL;
+  END;
+
+  DROP TEMPORARY TABLE IF EXISTS temp_dm_channels;
+  CREATE TEMPORARY TABLE temp_dm_channels (
+    cid INT UNSIGNED PRIMARY KEY,
+    dmuid INT UNSIGNED
+  );
+
+  INSERT INTO temp_dm_channels (dmuid, cid)
+    SELECT uc.uid AS dmuid, uc.cid FROM UserChannels uc
+    WHERE uc.cid IN (
+      SELECT DISTINCT c.id FROM Channels c
+        INNER JOIN UserChannels uci ON uci.cid = c.id
+      WHERE c.type = ${CHANNEL_TYPES.DM} AND uci.uid = p_uid
+    ) AND uc.uid != p_uid;
+
+  DELETE FROM Channels WHERE id IN (SELECT cid FROM temp_dm_channels);
+
+  SELECT cid, dmuid FROM temp_dm_channels;
+  DROP TEMPORARY TABLE IF EXISTS temp_dm_channels;
+END`,
+    /**
+     * Deleting User
+     * - delete DM channels and return affected dmuid, cid in first result set
+     * - delete factions that only have this user and nobody else
+     * - elevate best other user if deleted user is last sovereign
+     * - correct member count of factions the user was a member in
+     * - delete user
+     * @param p_uid user id
+     */
+    DELETE_USER: `CREATE PROCEDURE IF NOT EXISTS DELETE_USER(IN p_uid INT UNSIGNED) NOT DETERMINISTIC MODIFIES SQL DATA
+BEGIN
+  DECLARE EXIT HANDLER FOR SQLEXCEPTION
+  BEGIN
+    ROLLBACK;
+    RESIGNAL;
+  END;
+  START TRANSACTION;
+
+  CALL DELETE_USER_DMS(p_uid);
+
+  DELETE FROM Channels WHERE id IN (
+    SELECT f.cid FROM Factions f
+      INNER JOIN UserFactions uf ON uf.fid = f.id
+    WHERE uf.uid = p_uid AND NOT EXISTS(
+      SELECT 1 FROM UserFactions uff WHERE uff.uid != p_uid AND uff.fid = f.id
+    )
+  );
+
+  INSERT INTO UserFactionRoles (uid, frid)
+    SELECT (
+      SELECT ufr.uid FROM UserFactionRoles ufr
+        INNER JOIN FactionRoles fr ON ufr.frid = fr.id
+        INNER JOIN UserFactions uf ON uf.uid = ufr.uid AND uf.fid = fr.fid
+      WHERE fr.fid = t.fid AND ufr.uid != p_uid AND uf.joined IS NOT NULL
+      ORDER BY fr.factionlvl DESC, uf.joined ASC LIMIT 1
+    ), (
+      SELECT frs.id FROM FactionRoles frs WHERE frs.fid = t.fid AND frs.factionlvl >= ${FACTION_PERMISSIONS.SOVEREIGN} LIMIT 1
+    ) FROM (
+      SELECT DISTINCT fr.fid FROM FactionRoles fr
+        INNER JOIN UserFactionRoles ufr ON ufr.frid = fr.id
+      WHERE ufr.uid = p_uid AND fr.factionlvl >= ${FACTION_PERMISSIONS.SOVEREIGN} AND NOT EXISTS(
+        SELECT 1 FROM UserFactionRoles uffr
+          INNER JOIN FactionRoles ffr ON uffr.frid = ffr.id
+        WHERE ffr.fid = fr.fid AND uffr.uid != p_uid AND ffr.factionlvl >= ${FACTION_PERMISSIONS.SOVEREIGN} LIMIT 1
+      )
+    ) AS t;
+
+  UPDATE FactionRoles SET memberCount = memberCount - 1
+  WHERE EXISTS (
+    SELECT 1 FROM UserFactionRoles ufr WHERE ufr.frid = FactionRoles.id AND ufr.uid = p_uid
+  );
+
+  UPDATE Factions SET memberCount = memberCount - 1
+  WHERE EXISTS (
+    SELECT 1 FROM UserFactions uf WHERE uf.fid = Factions.id AND uf.uid = p_uid
+  );
+
+  DELETE FROM Users WHERE id = p_uid;
+
+  COMMIT;
 END`,
     GET_CLOSE_IMAGE: `CREATE PROCEDURE IF NOT EXISTS GET_CLOSE_IMAGE(IN p_pHash CHAR(16)) READS SQL DATA
 BEGIN
@@ -639,7 +731,7 @@ BEGIN
 END`,
   };
 
-  const funcVersion = 14;
+  const funcVersion = 17;
   const curVersion = Number((await sequelize.query('SELECT value FROM Configs WHERE `key`=\'functions_version\''))[0]?.[0]?.value);
   const doUpgrade = funcVersion !== curVersion;
   if (doUpgrade) {

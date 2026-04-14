@@ -13,7 +13,6 @@ import { setEmail } from './ThreePID.js';
 import {
   USERLVL, THREEPID_PROVIDERS, USER_FLAGS,
 } from '../../core/constants.js';
-import { deleteAllDMChannelsOfUser } from './Channel.js';
 import { ADMIN_IDS } from '../../core/config.js';
 
 export { USERLVL, THREEPID_PROVIDERS, USER_FLAGS };
@@ -100,22 +99,6 @@ BEGIN
   ELSE
     SET NEW.username = REGEXP_REPLACE(NEW.username, '[^a-zA-Z0-9._-]', '');
   END IF;
-END`);
-  await sequelize.query(
-    `CREATE TRIGGER IF NOT EXISTS before_user_delete
-BEFORE DELETE ON Users FOR EACH ROW
-BEGIN
-  UPDATE FactionRoles SET memberCount = memberCount - 1
-  WHERE EXISTS (
-      SELECT 1 FROM UserFactionRoles ufr
-      WHERE ufr.frid = FactionRoles.id AND ufr.uid = OLD.id
-  );
-
-  UPDATE Factions SET memberCount = memberCount - 1
-  WHERE EXISTS (
-    SELECT 1 FROM UserFactions uf
-    WHERE uf.fid = Factions.id AND uf.uid = OLD.id
-  );
 END`);
 });
 
@@ -791,15 +774,18 @@ export function setPassword(id, password) {
 /**
  * delete user
  * @param id user id
- * @return {
- *   dmChannels: [{ cid, uidA, uidB }, ...] destroyed channels
- * }
+ * @return [{ cid, dmuid }, ...] destroyed DM channels
  */
 export async function deleteUser(id) {
   try {
-    const dmChannels = await deleteAllDMChannelsOfUser(id);
-    await User.destroy({ where: { id } });
-    return { dmChannels };
+    const models = await sequelize.query(
+      'CALL DELETE_USER(?)', {
+        replacements: [id],
+        plain: true,
+        type: QueryTypes.SELECT,
+      },
+    );
+    return Object.values(models);
   } catch (error) {
     console.error(`SQL Error on deleteUser: ${error.message}`);
     return null;

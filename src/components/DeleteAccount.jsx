@@ -56,7 +56,11 @@ const DeleteAccount = ({ done }) => {
     <div className="inarea" style={{ backgroundColor: '#ff6666' }}>
       <form onSubmit={handleSubmit}>
         {errors.map((error) => (
-          <p key={error} className="errormessage"><span>{t`Error`}</span>
+          <p
+            key={error}
+            className="errormessage"
+            style={{ color: '#000' }}
+          ><span>{t`Error`}</span>
             :&nbsp;{error}</p>
         ))}
         {(havePassword)

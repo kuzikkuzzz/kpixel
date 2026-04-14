@@ -220,45 +220,6 @@ WHERE c.id = ? AND uc.uid = ?`, {
   return null;
 }
 
-
-/**
- * delete all DM channels belonging to a user
- * @param uid user id
- * @return [{ cid, uidA, uidB }, ...] destroyed channels
- */
-export async function deleteAllDMChannelsOfUser(uid) {
-  try {
-    /* [{ dmuid, cid }, ...] */
-    const dmChannels = await sequelize.query(
-      `SELECT uc.uid AS 'dmuid', uc.cid FROM UserChannels uc
-WHERE uc.cid IN (
-  SELECT DISTINCT c.id FROM Channels c
-    INNER JOIN UserChannels uci ON uci.cid = c.id
-  WHERE c.type = ? AND uci.uid = ?
-) AND uc.uid != ?`, {
-        replacements: [CHANNEL_TYPES.DM, uid, uid],
-        raw: true,
-        type: QueryTypes.SELECT,
-      },
-    );
-    if (dmChannels.length) {
-      await sequelize.query(
-        `DELETE FROM Channels WHERE id IN (${
-          dmChannels.map(() => '?').join(', ')
-        })`, {
-          replacements: dmChannels.map((r) => r.cid),
-          raw: true,
-          type: QueryTypes.DELETE,
-        },
-      );
-    }
-    return dmChannels;
-  } catch (error) {
-    console.error(`SQL Error on deleteAllDMChannelsOfUser: ${error.message}`);
-    return null;
-  }
-}
-
 /**
  * find or create a default channel
  * @param name name of channel
