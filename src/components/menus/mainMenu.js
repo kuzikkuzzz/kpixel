@@ -127,12 +127,6 @@ export default function mainMenu(store) {
         link: 'MYFACTIONS',
         text: t`My Factions`,
         reuse: true,
-      }, {
-        id: 'uaco',
-        type: 'link',
-        symbol: GiConvergenceTarget,
-        link: 'CONVERTER',
-        text: t`Converter`,
       }],
     });
   } else {
@@ -198,6 +192,16 @@ export default function mainMenu(store) {
         templateList,
       );
     }
+    templateSubmenu.push({
+      id: 'st2',
+      type: 'spacer',
+    }, {
+      id: 'uaco',
+      type: 'link',
+      symbol: GiConvergenceTarget,
+      link: 'CONVERTER',
+      text: t`Converter`,
+    });
 
     elements.push({
       id: 'te',
