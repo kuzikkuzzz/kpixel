@@ -194,6 +194,7 @@ export const OVERLAY_SP_TH = 8;
 export const POPUP_ARGS = {
   MODTOOLS: ['activeTab'],
   FACTION: ['name', 'activeTab'],
+  SEARCH: ['activeTab'],
   CHAT: [['chatChannel', 'int']],
   FISH_DISPLAY: [['id', 'int']],
   BADGE_DISPLAY: [['id', 'int']],
@@ -217,6 +218,7 @@ export const AVAILABLE_POPUPS = [
   'MODTOOLS',
   'MYFACTIONS',
   'FACTION',
+  'SEARCH',
   'CONVERTER',
 ];
 

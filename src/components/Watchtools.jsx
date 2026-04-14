@@ -20,22 +20,6 @@ const keepState = {
   iid: '',
 };
 
-/*
- * sorting function for array sort
- */
-function compare(a, b, asc) {
-  if (typeof a === 'string' && typeof b === 'string') {
-    let ret = a.localeCompare(b);
-    if (asc) ret *= -1;
-    return ret;
-  }
-  if (!a || a === 'N/A') a = 0;
-  if (!b || b === 'N/A') b = 0;
-  if (a < b) return (asc) ? -1 : 1;
-  if (a > b) return (asc) ? 1 : -1;
-  return 0;
-}
-
 async function submitWatchAction(
   action,
   canvas,
@@ -326,170 +310,182 @@ function ModWatchtools() {
               </tr>
             </thead>
             <tbody style={{ userSelect: 'text' }}>
-              {rows.sort((a, b) => compare(a[sortBy], b[sortBy], sortAsc))
-                .map((row) => (
-                  <tr key={row[0]}>
-                    {row.slice(1).map((val, ind) => {
-                      const type = types[ind + 1];
-                      if (val === null) {
-                        return (<td key={type}>N/A</td>);
+              {rows.sort((a, b) => {
+                a = a[sortBy];
+                b = b[sortBy];
+                if (typeof a === 'string' && typeof b === 'string') {
+                  let ret = a.localeCompare(b);
+                  if (sortAsc) ret *= -1;
+                  return ret;
+                }
+                if (!a || a === 'N/A') a = 0;
+                if (!b || b === 'N/A') b = 0;
+                if (a < b) return (sortAsc) ? -1 : 1;
+                if (a > b) return (sortAsc) ? 1 : -1;
+                return 0;
+              }).map((row) => (
+                <tr key={row[0]}>
+                  {row.slice(1).map((val, ind) => {
+                    const type = types[ind + 1];
+                    if (val === null) {
+                      return (<td key={type}>N/A</td>);
+                    }
+                    switch (type) {
+                      case 'ts': {
+                        const date = new Date(val);
+                        const hours = date.getHours();
+                        const minutes = `0${date.getMinutes()}`.slice(-2);
+                        const seconds = `0${date.getSeconds()}`.slice(-2);
+                        const ms = `00${date.getMilliseconds()}`.slice(-3);
+                        return (
+                          <td key={type} title={date.toLocaleDateString()}>
+                            {`${hours}:${minutes}:${seconds}.${ms}`}
+                          </td>
+                        );
                       }
-                      switch (type) {
-                        case 'ts': {
-                          const date = new Date(val);
-                          const hours = date.getHours();
-                          const minutes = `0${date.getMinutes()}`.slice(-2);
-                          const seconds = `0${date.getSeconds()}`.slice(-2);
-                          const ms = `00${date.getMilliseconds()}`.slice(-3);
-                          return (
-                            <td key={type} title={date.toLocaleDateString()}>
-                              {`${hours}:${minutes}:${seconds}.${ms}`}
-                            </td>
-                          );
-                        }
-                        case 'clr': {
-                          const cid = (cidColumn > 0)
-                            ? row[cidColumn] : canvasId;
-                          const rgb = canvases[cid]
+                      case 'clr': {
+                        const cid = (cidColumn > 0)
+                          ? row[cidColumn] : canvasId;
+                        const rgb = canvases[cid]
                           && canvases[cid].colors
                           && canvases[cid].colors[val];
-                          if (!rgb) {
-                            return (<td key={type}>{val}</td>);
-                          }
-                          const color = `rgb(${rgb[0]},${rgb[1]},${rgb[2]})`;
-                          return (
-                            <td
-                              key={type}
-                              style={{ backgroundColor: color }}
-                            >{val}</td>
-                          );
+                        if (!rgb) {
+                          return (<td key={type}>{val}</td>);
                         }
-                        case 'coord': {
-                          const cid = (cidColumn > 0)
-                            ? row[cidColumn] : canvasId;
-                          const ident = canvases[cid] && canvases[cid].ident;
-                          const coords = `./#${ident},${val},47`;
-                          return (
-                            <td key={type}>
-                              <a href={coords}>{val}</a>
-                            </td>
-                          );
+                        const color = `rgb(${rgb[0]},${rgb[1]},${rgb[2]})`;
+                        return (
+                          <td
+                            key={type}
+                            style={{ backgroundColor: color }}
+                          >{val}</td>
+                        );
+                      }
+                      case 'coord': {
+                        const cid = (cidColumn > 0)
+                          ? row[cidColumn] : canvasId;
+                        const ident = canvases[cid] && canvases[cid].ident;
+                        const coords = `./#${ident},${val},47`;
+                        return (
+                          <td key={type}>
+                            <a href={coords}>{val}</a>
+                          </td>
+                        );
+                      }
+                      case 'flag': {
+                        const flag = val.toLowerCase();
+                        return (
+                          <td key={type} title={val}><img
+                            style={{
+                              height: '1em',
+                              imageRendering: 'crisp-edges',
+                            }}
+                            alt={val}
+                            src={cdn`/cf/${flag}.gif`}
+                          /></td>
+                        );
+                      }
+                      case 'cid': {
+                        const ident = canvases[val]?.ident;
+                        return (<td key={type}>{ident}</td>);
+                      }
+                      case 'code': {
+                        const code = Number(val);
+                        let color = '#8eff8e';
+                        if (code === 9) {
+                          /* stack used up */
+                          color = 'yellow';
+                        } else if (code === 10) {
+                          /* captcha */
+                          color = 'orange';
+                        } else if (code > 0) {
+                          /* other error */
+                          color = 'red';
                         }
-                        case 'flag': {
-                          const flag = val.toLowerCase();
-                          return (
-                            <td key={type} title={val}><img
+                        return (
+                          <td
+                            key={type}
+                            style={{ backgroundColor: color }}
+                          >{val}</td>
+                        );
+                      }
+                      case 'cidr': {
+                        return (
+                          <td key={type}>
+                            <span
+                              role="button"
+                              tabIndex={-1}
                               style={{
-                                height: '1em',
-                                imageRendering: 'crisp-edges',
+                                cursor: 'pointer',
+                                whiteSpace: 'initial',
                               }}
-                              alt={val}
-                              src={cdn`/cf/${flag}.gif`}
-                            /></td>
-                          );
-                        }
-                        case 'cid': {
-                          const ident = canvases[val]?.ident;
-                          return (<td key={type}>{ident}</td>);
-                        }
-                        case 'code': {
-                          const code = Number(val);
-                          let color = '#8eff8e';
-                          if (code === 9) {
-                            /* stack used up */
-                            color = 'yellow';
-                          } else if (code === 10) {
-                            /* captcha */
-                            color = 'orange';
-                          } else if (code > 0) {
-                            /* other error */
-                            color = 'red';
-                          }
-                          return (
-                            <td
-                              key={type}
-                              style={{ backgroundColor: color }}
-                            >{val}</td>
-                          );
-                        }
-                        case 'cidr': {
-                          return (
-                            <td key={type}>
+                              title={t`Copy to Clipboard`}
+                              onClick={() => copyTextToClipboard(
+                                val.slice(0, val.indexOf('/')),
+                              )}
+                            >{val}</span>
+                          </td>
+                        );
+                      }
+                      case 'uuid': {
+                        return (
+                          <td key={type}>
+                            <div className="checkcontainer">
+                              <input
+                                type="checkbox"
+                                value={val}
+                                checked={checkedValues.has(val)}
+                                onChange={checkValue}
+                              />
                               <span
                                 role="button"
                                 tabIndex={-1}
-                                style={{
-                                  cursor: 'pointer',
-                                  whiteSpace: 'initial',
-                                }}
+                                className="modallink"
+                                style={{ whiteSpace: 'initial' }}
                                 title={t`Copy to Clipboard`}
-                                onClick={() => copyTextToClipboard(
-                                  val.slice(0, val.indexOf('/')),
-                                )}
+                                onClick={() => copyTextToClipboard(val)}
                               >{val}</span>
-                            </td>
-                          );
+                            </div>
+                          </td>
+                        );
+                      }
+                      case 'user': {
+                        const seperator = val.lastIndexOf(',');
+                        if (seperator === -1) {
+                          return (<td key={type}><span>{val}</span></td>);
                         }
-                        case 'uuid': {
-                          return (
-                            <td key={type}>
-                              <div className="checkcontainer">
-                                <input
-                                  type="checkbox"
-                                  value={val}
-                                  checked={checkedValues.has(val)}
-                                  onChange={checkValue}
-                                />
-                                <span
-                                  role="button"
-                                  tabIndex={-1}
-                                  className="modallink"
-                                  style={{ whiteSpace: 'initial' }}
-                                  title={t`Copy to Clipboard`}
-                                  onClick={() => copyTextToClipboard(val)}
-                                >{val}</span>
-                              </div>
-                            </td>
-                          );
-                        }
-                        case 'user': {
-                          const seperator = val.lastIndexOf(',');
-                          if (seperator === -1) {
-                            return (<td key={type}><span>{val}</span></td>);
-                          }
-                          const uid = val.slice(seperator + 1);
-                          return (
-                            <td key={type}>
-                              <div className="checkcontainer">
-                                <input
-                                  type="checkbox"
-                                  value={uid}
-                                  checked={checkedValues.has(uid)}
-                                  onChange={checkValue}
-                                />
-                                <span
-                                  role="button"
-                                  tabIndex={-1}
-                                  className="modallink"
-                                  title={t`Copy UserId to Clipboard`}
-                                  onClick={() => copyTextToClipboard(uid)}
-                                >
-                                  {
+                        const uid = val.slice(seperator + 1);
+                        return (
+                          <td key={type}>
+                            <div className="checkcontainer">
+                              <input
+                                type="checkbox"
+                                value={uid}
+                                checked={checkedValues.has(uid)}
+                                onChange={checkValue}
+                              />
+                              <span
+                                role="button"
+                                tabIndex={-1}
+                                className="modallink"
+                                title={t`Copy UserId to Clipboard`}
+                                onClick={() => copyTextToClipboard(uid)}
+                              >
+                                {
                                     // eslint-disable-next-line max-len
                                     `${val.slice(0, seperator)} [${uid}]`
                                   }
-                                </span>
-                              </div>
-                            </td>
-                          );
-                        }
-                        default: {
-                          return (<td key={type}>{val}</td>);
-                        }
+                              </span>
+                            </div>
+                          </td>
+                        );
                       }
-                    })}
-                  </tr>
-                ))}
+                      default: {
+                        return (<td key={type}>{val}</td>);
+                      }
+                    }
+                  })}
+                </tr>
+              ))}
             </tbody>
           </table>
           <br />

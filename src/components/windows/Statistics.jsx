@@ -150,7 +150,7 @@ const Rankings = () => {
   }, [area]);
 
   return (
-    <div style={{ textAlign: 'center', marginTop: 34 }}>
+    <div className="margin-container" style={{ textAlign: 'center' }}>
       <div className="content">
         <span
           role="button"

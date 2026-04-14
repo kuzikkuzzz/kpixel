@@ -953,6 +953,7 @@ WHERE (u.flags & ?) = 0 AND u.id IN (?);`, {
  *   username,
  *   customFlagId,
  *   avatarId,
+ *   ts,
  * }, ...]
  */
 export async function searchUser(term) {
@@ -960,15 +961,16 @@ export async function searchUser(term) {
     const sqlTerm = `%${term}%`;
     const model = await sequelize.query(
       `SELECT u.id AS uid, u.name, u.username,
-CONCAT(frm.shortId, ':', frm.extension) AS 'roles.customFlagId',
+UNIX_TIMESTAMP(createdAt) * 1000 AS ts,
+CONCAT(frm.shortId, ':', frm.extension) AS 'customFlagId',
 CONCAT(a.shortId, ':', a.extension) AS avatarId FROM Users u
-  LEFT JOIN Media a ON a.id = u.avatar
-  LEFT JOIN Profile p ON p.uid = u.id
+  LEFT JOIN Profiles p ON p.uid = u.id
+  LEFT JOIN Media a ON a.id = p.avatar
   LEFT JOIN FactionRoles fr ON p.activeRole = fr.id
   LEFT JOIN Media frm ON fr.customFlag = frm.id
 WHERE (u.flags & ?) = 0 AND (
   u.name LIKE ? OR u.username LIKE ?
-) LIMIT 100`, {
+) LIMIT 50`, {
         replacements: [0x01 << USER_FLAGS.PRIV, sqlTerm, sqlTerm],
         raw: true,
         type: QueryTypes.SELECT,

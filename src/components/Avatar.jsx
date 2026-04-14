@@ -24,18 +24,16 @@ const Avatar = ({ uid, isDarkMode, avatarId }) => {
     <div
       className="avatar"
       style={avatarStyle}
-      onClick={(evt) => {
+      onClick={(image) ? (evt) => {
         evt.stopPropagation();
         if (image) {
           link('PLAYER', {
             reuse: true,
             target: 'blank',
-            args: {
-              uri: image,
-            },
+            args: { uri: image },
           });
         }
-      }}
+      } : undefined}
     >
       {!avatarId && getCharFromId(uid)}
     </div>

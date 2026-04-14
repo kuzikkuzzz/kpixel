@@ -68,8 +68,7 @@ function Modtools() {
       {(parts.length > 1) && (
         <div
           key="tabm"
-          className="content wrap-container"
-          style={{ marginTop: 34 }}
+          className="content tab-container margin-container"
         >
           {parts.map((part, ind) => (
             <React.Fragment key={part}>

@@ -459,6 +459,13 @@ export function requestRankings() {
   );
 }
 
+export function requestSearch(type, term) {
+  return makeAPIPOSTRequest(
+    '/api/search',
+    { type, term },
+  );
+}
+
 export function requestCreateFaction(
   name, title, description, isPrivate, isPublic, avatarId,
 ) {

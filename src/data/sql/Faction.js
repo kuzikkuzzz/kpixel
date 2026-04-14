@@ -758,14 +758,14 @@ export async function searchFaction(term) {
   try {
     const sqlTerm = `%${term}%`;
     const model = await sequelize.query(
-      `SELECT BIN_TO_UUID(f.uuid) AS fid, f.name, f.ttle, f.description,
+      `SELECT BIN_TO_UUID(f.uuid) AS fid, f.name, f.title, f.description,
 f.memberCount,
 (f.flags & ?) != 0 AS isPublic,
 CONCAT(a.shortId, ':', a.extension) AS avatarId FROM Factions f
   LEFT JOIN Media a ON a.id = f.avatar
 WHERE (f.flags & ?) = 0 AND (
   f.name LIKE ? OR f.title LIKE ? OR f.description LIKE ?
-) LIMIT 100`, {
+) LIMIT 50`, {
         replacements: [
           0x01 << FACTION_FLAGS.PUBLIC, 0x01 << FACTION_FLAGS.PRIV,
           sqlTerm, sqlTerm, sqlTerm,

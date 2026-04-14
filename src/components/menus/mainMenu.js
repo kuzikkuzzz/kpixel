@@ -12,6 +12,8 @@ import {
   FaPaintRoller,
   // shield
   FaShieldAlt,
+  // search icon
+  FaSearch,
 } from 'react-icons/fa';
 import {
   // download symbol
@@ -143,6 +145,15 @@ export default function mainMenu(store) {
     });
   }
 
+  elements.push({
+    id: 'sea',
+    type: 'link',
+    symbol: FaSearch,
+    link: 'SEARCH',
+    reuse: true,
+    text: t`Search`,
+  });
+
   if (state.user.userlvl >= USERLVL.CHATMOD) {
     let activeTab = 'Media';
     if (state.user.userlvl >= USERLVL.MOD) {
@@ -207,7 +218,7 @@ export default function mainMenu(store) {
     },
     { id: 's2', type: 'spacer' },
     {
-      id: 'se',
+      id: 'set',
       type: 'link',
       symbol: FaCog,
       link: 'SETTINGS',

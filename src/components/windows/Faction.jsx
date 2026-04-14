@@ -544,6 +544,7 @@ const Faction = () => {
     }
 
     setSubmitting(true);
+    console.log('change faction', factionChanges);
     const respErrors = await dispatch(
       changeFaction(factionChanges),
     );
@@ -598,9 +599,7 @@ const Faction = () => {
 
   const { powerlvl, faction } = factionData;
 
-  const availableTabs = [
-    'overview', 'members', 'bans', 'roles', 'edit', 'invites',
-  ].filter((p) => {
+  const availableTabs = Object.keys(tabNames).filter((p) => {
     switch (p) {
       case 'edit':
         return powerlvl >= FACTION_PERMISSIONS.EDIT_FACTION;
@@ -1450,7 +1449,7 @@ const Faction = () => {
     <div className="content" key="factionpage">
       <h2>{faction.title}</h2>
       <h3><span className={`factionlist-square powerlvl-${powerlvlName}`} /> [{faction.name}]</h3>
-      <div className="wrap-container">
+      <div className="tab-container">
         {availableTabs.map((tab, ind) => (
           <React.Fragment key={tab}>
             <span
@@ -1465,12 +1464,12 @@ const Faction = () => {
             && <span className="hdivider" />}
           </React.Fragment>
         ))}
+        <div className="modaldivider" />
+        {!didPrintErrors && errors.map((error) => (
+          <p key={error} className="errormessage">
+            <span>{t`Error`}</span>:&nbsp;{error}</p>
+        ))}
       </div>
-      <div className="modaldivider" />
-      {!didPrintErrors && errors.map((error) => (
-        <p key={error} className="errormessage">
-          <span>{t`Error`}</span>:&nbsp;{error}</p>
-      ))}
       {content}
     </div>
   );

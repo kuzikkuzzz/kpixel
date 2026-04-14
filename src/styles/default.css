@@ -1059,7 +1059,6 @@ table td span {
  */
 
 .factionwin-overview, .factionwin-bans, .factionwin-members, .factionwin-roles, .factionwin-edit {
-  margin-top: 20px;
   line-height: 1.8em;
 }
 
@@ -1182,6 +1181,11 @@ table td span {
   justify-content: center;
   z-index: 3;
   line-height: 1px;
+}
+
+.little-fileupload-container {
+  display: flex;
+  flex-wrap: nowrap;
 }
 
 /*
@@ -1571,16 +1575,27 @@ table td span {
 }
 
 /*
+ * ================================ SEARCH =====================================
+ */
+
+.search-media {
+  width: 16px;
+  height: 16px;
+  background-size: contain;
+  display: inline-block;
+}
+
+/*
  * ============================= RANDOM TRASH ==================================
  */
 
-.little-fileupload-container {
-  display: flex;
-  flex-wrap: nowrap;
+.tab-container {
+  overflow-wrap: anywhere;
+  margin-bottom: 20px;
 }
 
-.wrap-container {
-  overflow-wrap: anywhere;
+.margin-container {
+  margin-top: 34px;
 }
 
 /*
