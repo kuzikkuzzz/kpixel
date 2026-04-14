@@ -201,7 +201,7 @@ const SocialSettings = ({ done }) => {
             setFetchChange(false);
           }
         }}
-      >{t`Block all Private Messages. Enabling this will delete all your current DMs. You can still start new DMs with other users, but other users won't be able to start DMs with you.`}</SettingsItem>
+      >{t`Block all Private Messages. Enabling this will make it impossible for other users to start messaging you. You can still start new DMs with other users and already ongoing DMs will still be open.`}</SettingsItem>
       <SettingsItem
         title={t`Private`}
         value={priv}
