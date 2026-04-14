@@ -244,19 +244,18 @@ export async function setFlagOfUserFaction(uid, fid, index, value) {
 
 /**
  * set one bit in flags of faction
- * @param uid user id
  * @param fid faction uuid (NOT sql id)
  * @param index index of flag
  * @param value 0 or 1, true or false
  * @return success boolean
  */
-export async function setFlagOfFaction(uid, fid, index, value) {
+export async function setFlagOfFaction(fid, index, value) {
   try {
     const mask = 0x01 << index;
     if (value) {
       await sequelize.query(
         'UPDATE Factions SET flags = flags | ? WHERE uuid = UUID_TO_BIN(?)', {
-          replacements: [mask, uid, fid],
+          replacements: [mask, fid],
           raw: true,
           type: QueryTypes.UPDATE,
         },
@@ -265,7 +264,7 @@ export async function setFlagOfFaction(uid, fid, index, value) {
       await sequelize.query(
         // eslint-disable-next-line max-len
         'UPDATE Factions SET flags = flags & ~(?) WHERE uuid = UUID_TO_BIN(?)', {
-          replacements: [mask, uid, fid],
+          replacements: [mask, fid],
           raw: true,
           type: QueryTypes.UPDATE,
         },
@@ -394,22 +393,30 @@ export async function checkIfFactionExists(name) {
  * @param mediaId shortId:extension of media
  */
 export async function setFactionAvatar(sqlFid, mediaId = null) {
-  if (!mediaId) {
-    return false;
-  }
   try {
-    const [shortId, extension] = mediaId.split(':');
-    if (!shortId || !extension) {
-      return false;
+    if (!mediaId) {
+      await sequelize.query(
+        // eslint-disable-next-line max-len
+        'UPDATE Factions SET avatar = NULL WHERE id = ?', {
+          replacements: [sqlFid],
+          raw: true,
+          type: QueryTypes.UPDATE,
+        },
+      );
+    } else {
+      const [shortId, extension] = mediaId.split(':');
+      if (!shortId || !extension) {
+        return false;
+      }
+      await sequelize.query(
+        // eslint-disable-next-line max-len
+        'UPDATE Factions SET avatar = (SELECT id FROM Media WHERE shortId = ? AND extension = ?) WHERE id = ?', {
+          replacements: [shortId, extension, sqlFid],
+          raw: true,
+          type: QueryTypes.UPDATE,
+        },
+      );
     }
-    await sequelize.query(
-      // eslint-disable-next-line max-len
-      'UPDATE Factions SET avatar = (SELECT id FROM Media WHERE shortId = ? AND extension = ?) WHERE id = ?', {
-        replacements: [shortId, extension, sqlFid],
-        raw: true,
-        type: QueryTypes.UPDATE,
-      },
-    );
     return true;
   } catch (error) {
     console.error('SQL Error on setFactionAvatar:', error.message);

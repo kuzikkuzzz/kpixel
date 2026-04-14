@@ -40,7 +40,7 @@ export default async function factionchange(req, res) {
     changed = true;
     factionChanges.isPrivate = isPrivate;
     const success = await setFlagOfFaction(
-      user.id, fid, FACTION_FLAGS.PRIV, isPrivate,
+      fid, FACTION_FLAGS.PRIV, isPrivate,
     );
     if (!success) {
       throw new Error('Could not set this factions private property');
@@ -54,13 +54,13 @@ export default async function factionchange(req, res) {
     changed = true;
     factionChanges.isPublic = isPublic;
     const success = await setFlagOfFaction(
-      user.id, fid, FACTION_FLAGS.PUBLIC, isPublic,
+      fid, FACTION_FLAGS.PUBLIC, isPublic,
     );
     if (!success) {
       throw new Error('Could not set this factions public property');
     }
     logger.info(
-      `AUTH: Changed faction ${fid} private to ${isPublic} by ${user.id}`,
+      `AUTH: Changed faction ${fid} public to ${isPublic} by ${user.id}`,
     );
   }
 

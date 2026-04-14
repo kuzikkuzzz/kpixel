@@ -311,7 +311,7 @@ const MyFactions = () => {
             /* determine highest user powerlvl */
             let powerlvl = 0;
             for (const role of faction.roles) {
-              if (role.factionlvl > powerlvl) {
+              if (role.isMember && role.factionlvl > powerlvl) {
                 powerlvl = role.factionlvl;
               }
             }
