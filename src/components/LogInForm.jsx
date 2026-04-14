@@ -187,7 +187,7 @@ const LogInForm = ({
   const path = encodeURIComponent(window.location.pathname + window.location.search + window.location.hash);
 
   return (
-    <div style={{ textAlign: 'center' }}>
+    <div className="content">
       {(title) && <p>{title}</p>}
       {(() => {
         switch (page) {
@@ -314,54 +314,63 @@ const LogInForm = ({
           case 'register':
             return (
               <React.Fragment key="rest">
-                <form
-                  style={{ paddingLeft: '5%', paddingRight: '5%' }}
-                  onSubmit={submitRegister}
-                >
-                  <h2>{t`Register new account here`}</h2>
-                  <h3>{t`Name`}:</h3>
-                  <p>{t`This is the name that other people see, e.g. in Chat. You can change it at any time. All characters except @, /, \, >, < and # are allowed.`}</p>
-                  <input
-                    name="name"
-                    className="reginput"
-                    autoComplete="username"
-                    type="text"
-                    placeholder={t`Name`}
-                  />
-                  <h3>{t`User Name`}:</h3>
-                  <p>{t`The name of your account, only a-z, A-Z, -, ., and - characters are allowed. It is permanent, you can not change it later.`}</p>
-                  <input
-                    name="username"
-                    className="reginput"
-                    autoComplete="username"
-                    type="text"
-                    placeholder={t`User Name`}
-                  />
-                  <h3>{t`Email`}:</h3>
-                  <p>{t`Email is used to verify your account. You might get a cofirmation mail after registering.`}</p>
-                  <input
-                    name="email"
-                    className="reginput"
-                    autoComplete="email"
-                    type="text"
-                    placeholder={t`Email`}
-                  />
-                  <h3>{t`Password`}:</h3>
-                  <input
-                    name="password"
-                    className="reginput"
-                    autoComplete="new-password"
-                    type="password"
-                    placeholder={t`Password`}
-                  />
-                  <h3>{t`Confirm Password`}:</h3>
-                  <input
-                    name="confirmpassword"
-                    className="reginput"
-                    autoComplete="new-password"
-                    type="password"
-                    placeholder={t`Confirm Password`}
-                  />
+                <h2>{t`Register new account here`}</h2>
+                <form onSubmit={submitRegister} className="client-form">
+                  <div className="form-group">
+                    <label>{t`Name`}:
+                      <input
+                        name="name"
+                        autoComplete="username"
+                        type="text"
+                        placeholder={t`Name`}
+                        required
+                      /></label>
+                    <small>{t`This is the name that other people see, e.g. in Chat. You can change it at any time. All characters except @, /, \, >, < and # are allowed.`}</small>
+                  </div>
+                  <div className="form-group">
+                    <label>{t`User Name`}:
+                      <input
+                        name="username"
+                        autoComplete="username"
+                        type="text"
+                        placeholder={t`User Name`}
+                        required
+                      /></label>
+                    <small>{t`The name of your account, only a-z, A-Z, -, ., and - characters are allowed. It is permanent, you can not change it later.`}</small>
+                  </div>
+                  <div className="form-group">
+                    <label>{t`Email`}:
+                      <input
+                        name="email"
+                        autoComplete="email"
+                        type="text"
+                        placeholder={t`Email`}
+                        required
+                      /></label>
+                    <small>{t`Email is used to verify your account. You might get a cofirmation mail after registering.`}</small>
+                  </div>
+                  <div className="form-group">
+                    <label>{t`Password`}:
+                      <input
+                        name="password"
+                        autoComplete="new-password"
+                        type="password"
+                        placeholder={t`Password`}
+                        required
+                      /></label>
+                    <small>{t`The password for your account.`}</small>
+                  </div>
+                  <div className="form-group">
+                    <label>{t`Confirm Password`}:
+                      <input
+                        name="confirmpassword"
+                        autoComplete="new-password"
+                        type="password"
+                        placeholder={t`Confirm Password`}
+                        required
+                      /></label>
+                    <small>{t`Confirm your password.`}</small>
+                  </div>
                   <p
                     style={{
                       visibility: (reauthenticate) ? 'hidden' : 'visible',
@@ -376,29 +385,33 @@ const LogInForm = ({
                       <option value="forever">{t`Forever`}</option>
                     </select>
                   </p>
-                  <h3>{t`Captcha`}:</h3>
-                  <Captcha
-                    autoload={false}
-                    width={85}
-                    key={captKey}
-                    onReadyStateChange={setSuccess}
-                  /><br />
-                  {errors.map((error) => (
-                    <p key={error} className="errormessage"><span>{t`Error`}</span>
-                      :&nbsp;{error}</p>
-                  ))}
-                  <button
-                    type="submit"
-                    disabled={submitting || !success}
-                  >
-                    {t`Submit`}
-                  </button>
-                  <button
-                    type="button"
-                    onClick={changePage('login')}
-                  >
-                    {t`Cancel`}
-                  </button>
+                  <div style={{ textAlign: 'center' }}>
+                    <h3>{t`Captcha`}</h3>
+                    <Captcha
+                      autoload={false}
+                      width={85}
+                      key={captKey}
+                      onReadyStateChange={setSuccess}
+                    /><br />
+                    {errors.map((error) => (
+                      <p key={error} className="errormessage"><span>{t`Error`}</span>
+                        :&nbsp;{error}</p>
+                    ))}
+                  </div>
+                  <div className="form-actions">
+                    <button
+                      type="submit"
+                      disabled={submitting || !success}
+                    >
+                      {t`Submit`}
+                    </button>
+                    <button
+                      type="button"
+                      onClick={changePage('login')}
+                    >
+                      {t`Cancel`}
+                    </button>
+                  </div>
                 </form>
               </React.Fragment>
             );

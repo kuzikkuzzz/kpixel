@@ -907,7 +907,7 @@ table td span {
   font-size: 15px;
 }
 
-.form-group > label > input[type="text"], .form-group > label > textarea {
+.form-group > label > input[type="text"], .form-group > label > textarea, .form-group > label > input[type="password"] {
   width: 100%;
   max-width: 100%;
   padding: 6px;
@@ -1700,12 +1700,6 @@ button:hover {
 
 .notifybox.red {
   background-color: #ffa9a9cc;
-}
-
-.reginput {
-  display: inline-block;
-  width: 100%;
-  max-width: 35em;
 }
 
 .errormessage {
