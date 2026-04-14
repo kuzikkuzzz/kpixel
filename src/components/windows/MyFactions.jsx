@@ -428,7 +428,6 @@ const MyFactions = () => {
                           evt.stopPropagation();
                           link('FACTION', {
                             target: 'parent',
-                            reuse: true,
                             args: { name: faction.name },
                           });
                         }}

@@ -996,6 +996,10 @@ table td span {
   font-size: 16px;
 }
 
+.factionlist-title.hidden {
+  font-style: italic;
+}
+
 .factionlist-name {
   flex-grow: 1;
   color: var(--caption-txt-color);

@@ -689,6 +689,7 @@ const Faction = () => {
               setFactionData(null);
               setBanData(null);
               setMemberData(null);
+              setConfirm(null);
             }}
           ><IoIosRefresh /></button>
           {(powerlvl === null && faction.isPublic) && (
