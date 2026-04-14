@@ -257,6 +257,23 @@ export default function chat(
       };
     }
 
+    case 's/DELETE_USR_CHN_MSGS': {
+      const { user, cid } = action;
+
+      const channelMessages = state.messages[cid];
+      if (!channelMessages) {
+        return state;
+      }
+
+      return {
+        ...state,
+        messages: {
+          ...state.messages,
+          [cid]: channelMessages.filter((m) => m[3] !== user),
+        },
+      };
+    }
+
     case 's/DELETE_CHAT_MSGS': {
       const { cid, msgIds } = action;
 

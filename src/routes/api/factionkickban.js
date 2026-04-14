@@ -6,6 +6,7 @@ import socketEvents from '../../socket/socketEvents.js';
 import {
   getFactionInfo, leaveFaction, getFactionLvlOfUser,
 } from '../../data/sql/Faction.js';
+import { deleteUserChannelMessages } from '../../data/sql/Message.js';
 import { getLastIPOfUser } from '../../data/sql/User.js';
 import {
   banUserFromFaction,
@@ -95,11 +96,14 @@ export default async function factionkickban(req, res) {
 
   let chatPatch;
   if (factionInfo.channelId) {
+    const { channelId } = factionInfo;
     chatPatch = {
       op: 'del',
-      path: `channels.${CHANNEL_TYPES.FACTION}[0:${factionInfo.channelId}]`,
+      path: `channels.${CHANNEL_TYPES.FACTION}[0:${channelId}]`,
     };
     socketEvents.patchUserState(uid, 'chat', chatPatch);
+    await deleteUserChannelMessages(uid, channelId);
+    socketEvents.broadcastUserChannelMessageDeletion(uid, channelId);
   }
 
   const profilePatch = {
@@ -117,7 +121,10 @@ export default async function factionkickban(req, res) {
     socketEvents.patchUserState(uid, 'profile', activeProfilePatch);
   }
 
-  logger.info(`User ${uid} banned ${uid} from faction ${factionInfo.name}`);
+  logger.info(
+    // eslint-disable-next-line max-len
+    `User ${uid} ${(isBan) ? 'banned' : 'kicked'} ${uid} from faction ${factionInfo.name}`,
+  );
   res.json({
     status: 'ok',
   });

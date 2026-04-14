@@ -208,8 +208,23 @@ class SocketServer {
       }
     });
 
-    socketEvents.on('deletePublicUserMessages', (uid) => {
-      this.broadcast(`dpum,${JSON.stringify(uid)}`);
+    socketEvents.on('deletePublicUserMessages', (userId) => {
+      this.broadcast(`dpum,${JSON.stringify(userId)}`);
+    });
+
+    socketEvents.on('deleteUserChannelMessages', (userId, channelId) => {
+      const text = `dmc,${JSON.stringify([userId, channelId])}`;
+      const clientArray = [];
+      const isPublicChannel = chatProvider.isPublicChannel(channelId);
+      this.wss.clients.forEach((ws) => {
+        const hasChannelOpen = ws.openChatChannels.has(channelId);
+        if (hasChannelOpen && (
+          isPublicChannel || ws.user?.hasChannel(channelId)
+        )) {
+          clientArray.push(ws);
+        }
+      });
+      SocketServer.broadcastSelected(clientArray, text);
     });
 
     socketEvents.on('deleteMessages', (channelId, messageIds) => {

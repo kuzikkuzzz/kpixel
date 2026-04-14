@@ -39,6 +39,14 @@ export function deletePublicUserMessages(user) {
   };
 }
 
+export function deleteUserChannelMessages(user, cid) {
+  return {
+    type: 's/DELETE_USR_CHN_MSGS',
+    user,
+    cid,
+  };
+}
+
 export function deleteMessages(cid, msgIds) {
   return {
     type: 's/DELETE_CHAT_MSGS',

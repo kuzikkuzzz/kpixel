@@ -165,6 +165,27 @@ WHERE m.uid = ? AND c.type = ?`, {
 }
 
 /**
+ * delete all messages of a user written in public channels
+ * @param uid user id
+ * @return success
+ */
+export async function deleteUserChannelMessages(uid, cid) {
+  try {
+    await sequelize.query(
+      'DELETE FROM Messages WHERE uid = ? AND cid = ?', {
+        replacements: [uid, cid],
+        raw: true,
+        type: QueryTypes.DELETE,
+      },
+    );
+    return true;
+  } catch (error) {
+    console.error(`SQL Error on deleteUserChannelMessages: ${error.message}`);
+  }
+  return false;
+}
+
+/**
  * delete messages by ids
  * @param ids ids of messages
  * @return success

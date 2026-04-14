@@ -36,6 +36,7 @@ import {
   receiveCoolDown,
   receiveChatMessage,
   deletePublicUserMessages,
+  deleteUserChannelMessages,
   deleteMessages,
 } from '../store/actions/socket.js';
 import {
@@ -313,6 +314,9 @@ class SocketClient {
         break;
       case 'dpum':
         this.store.dispatch(deletePublicUserMessages(val));
+        break;
+      case 'dmc':
+        this.store.dispatch(deleteUserChannelMessages(...val));
         break;
       case 'dmm':
         this.store.dispatch(deleteMessages(...val));

@@ -228,12 +228,21 @@ class SocketEvents extends EventEmitter {
   /**
    * broadcast chat deletion of a users messages to all users
    * @param name chatname
-   * @param uid user id
+   * @param userId user id
    * @param sendapi If chat message should get broadcasted to api websockets
    *                (useful if the api is supposed to not answer to its own messages)
    */
-  broadcastUserPublicChatMessageDeletion(uid, sendapi = true) {
-    this.emit('deletePublicUserMessages', uid, sendapi);
+  broadcastUserPublicChatMessageDeletion(userId, sendapi = true) {
+    this.emit('deletePublicUserMessages', userId, sendapi);
+  }
+
+  /**
+   * broadcast deletion of user messages within a channel
+   * @param userId user id
+   * @param channelId channel id
+   */
+  broadcastUserChannelMessageDeletion(userId, channelId) {
+    this.emit('deleteUserChannelMessages', userId, channelId);
   }
 
   /**
