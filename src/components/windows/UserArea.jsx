@@ -6,6 +6,9 @@ import React, { useState, useCallback } from 'react';
 import { useSelector, shallowEqual, useDispatch } from 'react-redux';
 import { t } from 'ttag';
 
+import { cdn } from '../../utils/utag.js';
+import { getUrlsFromMediaIdAndName } from '../../utils/media/utils.js';
+import useLink from '../hooks/link.js';
 import UserMessages from '../UserMessages.jsx';
 import FishList from '../FishList.jsx';
 import BadgeList from '../BadgeList.jsx';
@@ -65,8 +68,11 @@ const UserArea = () => {
   ], shallowEqual);
 
   const [
-    badges, fishes,
-  ] = useProfile((profile) => [profile.badges, profile.fishes]);
+    badges, fishes, avatarId,
+  ] = useProfile((profile) => [
+    profile.badges, profile.fishes, profile.avatarId,
+  ]);
+  const link = useLink();
 
   if (!name) {
     return <LogInForm title={t`Login to access more features and stats.`} />;
@@ -74,9 +80,27 @@ const UserArea = () => {
 
   const Area = AREAS[area];
 
+  const [mediaUrl, thumbUrl] = getUrlsFromMediaIdAndName(avatarId, 'avatar');
+
   return (
     <div className="content">
       <h2>{t`Profile`}</h2>
+      {(thumbUrl) && (
+        <div
+          className="avatar-big"
+          style={{
+            backgroundImage: `url(${cdn`${thumbUrl}`})`,
+          }}
+          onClick={(evt) => {
+            evt.stopPropagation();
+            link('PLAYER', {
+              reuse: true,
+              target: 'blank',
+              args: { uri: mediaUrl },
+            });
+          }}
+        />
+      )}
       <UserMessages />
       <Stat
         text={t`Today Placed Pixels`}
