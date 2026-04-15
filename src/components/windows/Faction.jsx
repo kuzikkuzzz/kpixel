@@ -65,12 +65,13 @@ const Faction = () => {
    */
   const [memberData, setMemberData] = useState(null);
   const [banData, setBanData] = useState(null);
+
   const {
-    args,
+    args: { activeTab = 'overview', name },
     setArgs,
     setTitle,
   } = useContext(WindowContext);
-  const { activeTab = 'overview', name } = args;
+
   const uploadRef = useRef();
   const link = useLink();
   const dispatch = useDispatch();
@@ -640,7 +641,7 @@ const Faction = () => {
       <div className={`factionwin-${activeTab}`} key={activeTab}>
         {(thumbUrl) && (
           <div
-            className="factionavatar"
+            className="avatar-big"
             style={{
               backgroundImage: `url(${cdn`${thumbUrl}`})`,
             }}
@@ -667,7 +668,7 @@ const Faction = () => {
               return (
                 <img
                   key={customFlagId}
-                  className="chatflag faction"
+                  className="chatflag presentation"
                   src={cdn`${flagUrl}`}
                   title={roleName}
                   alt=""
@@ -824,7 +825,7 @@ const Faction = () => {
                         >
                           {(flagUrl) && (
                           <img
-                            className="chatflag faction"
+                            className="chatflag presentation"
                             src={cdn`${flagUrl}`}
                             alt=""
                           />

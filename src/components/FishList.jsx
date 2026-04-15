@@ -5,14 +5,12 @@ import React, { useState } from 'react';
 import { t } from 'ttag';
 
 import useLink from './hooks/link.js';
-import useProfile from './hooks/useProfile.js';
 import { setBrightness, colorFromText } from '../core/utils.js';
 import { FISH_TYPES } from '../core/constants.js';
 import { cdn } from '../utils/utag.js';
 
-const FishList = () => {
+const FishList = ({ fishes }) => {
   const [expanded, setExpanded] = useState(false);
-  const [fishes] = useProfile((profile) => profile.fishes);
   const link = useLink();
   if (!fishes.length) {
     return null;

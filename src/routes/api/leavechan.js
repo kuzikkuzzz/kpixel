@@ -11,6 +11,7 @@ import {
 } from '../../data/sql/Channel.js';
 
 async function leaveChan(req, res) {
+  req.tickRateLimiter(4000);
   const channelId = parseInt(req.body.channelId, 10);
   const { user, ttag: { t } } = req;
 

@@ -55,7 +55,6 @@ export async function storeFish(uid, type, size) {
 export async function getFishById(id) {
   try {
     const fish = await sequelize.query(
-      // eslint-disable-next-line max-len
       `SELECT f.type, f.size, f.createdAt,
 f.uid AS caughtByUid, u.name AS caughtByName, u.username AS caughtByUsername,
 (u.flags & ?) != 0 AS isPrivate FROM Fishes f
@@ -80,17 +79,14 @@ WHERE f.id = ?`, {
 export async function getFishesOfUser(uid) {
   const fishes = [];
   try {
-    const fishModels = await Fish.findAll({
-      attributes: [
-        'id',
-        'type',
-        'size',
-        'createdAt',
-      ],
-      where: { uid },
-      order: [['createdAt', 'DESC']],
-      raw: true,
-    });
+    const fishModels = await sequelize.query(
+      // eslint-disable-next-line max-len
+      'SELECT id, type, size, createdAt FROM Fishes WHERE uid = ? ORDER BY createdAt DESC', {
+        replacements: [uid],
+        raw: true,
+        type: QueryTypes.SELECT,
+      },
+    );
     let i = fishModels.length;
     while (i > 0) {
       i -= 1;

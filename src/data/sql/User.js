@@ -7,7 +7,7 @@
 import { randomUUID } from 'crypto';
 import Sequelize, { DataTypes, QueryTypes, Op } from 'sequelize';
 
-import sequelize from './sequelize.js';
+import sequelize, { nestQuery } from './sequelize.js';
 import { generateHash } from '../../utils/hash.js';
 import { setEmail } from './ThreePID.js';
 import {
@@ -177,13 +177,14 @@ export async function getDummyUser(name) {
  *   uid, name, country, userlvl, isMuted, customFlag
  * }
  */
-export async function getInfoByUsernameOrId(usernameOrId) {
-  if (!usernameOrId) {
+export async function getBasicUserInfo(uidOrUsername) {
+  if (!uidOrUsername) {
     return null;
   }
   try {
-    /* eslint-disable max-len */
-    let query = `SELECT u.id AS uid, u.name, u.username, s.country, u.userlvl, p.customFlag,
+    return await sequelize.query(
+      /* eslint-disable max-len */
+      `SELECT u.id AS uid, u.name, u.username, s.country, u.userlvl, p.customFlag,
 CONCAT(a.shortId, ':', a.extension) AS avatarId,
 CONCAT(frm.shortId, ':', frm.extension) AS customRoleFlagId,
 EXISTS(SELECT 1 FROM Bans b INNER JOIN UserBans ub ON ub.bid = b.id WHERE ub.uid = u.id AND (b.flags & 0x02) != 0 AND (b.expires > NOW() OR b.expires IS NULL)) AS isMuted
@@ -193,19 +194,78 @@ FROM Users u
     LEFT JOIN FactionRoles fr ON fr.id = p.activeRole
     LEFT JOIN Media frm ON frm.id = fr.customFlag
     LEFT JOIN Sessions s ON s.uid = u.id AND s.country != 'xx'
-WHERE `;
-    /* eslint-enable max-len */
-    if (Number.isInteger(usernameOrId)) {
-      query += 'u.id = ?';
-    } else {
-      query += 'u.username = ?';
-    }
-    return await sequelize.query(query, {
-      replacements: [usernameOrId], type: QueryTypes.SELECT, plain: true,
-    },
+WHERE ${Number(uidOrUsername) ? 'u.id = ?' : 'u.username = ?'}`, {
+      /* eslint-enable max-len */
+        replacements: [uidOrUsername],
+        plain: true,
+        type: QueryTypes.SELECT,
+      },
     );
   } catch (error) {
-    console.error(`SQL Error on getInfoByUsername: ${error.message}`);
+    console.error(`SQL Error on getBasicUserInfo: ${error.message}`);
+  }
+  return null;
+}
+
+/**
+ * get extended userinfo by username or id
+ * @param uidOrUsername uid or username
+ * @return {
+ *   uid,
+ *   name,
+ *   username,
+ *   avatarId,
+ *   customFlag,
+ *   isPrivate,
+ *   activeFactionRoleName,
+ *   activeFactionTitle,
+ *   activeFactionRoleFlag,
+ *   factions: [{
+ *     title,
+ *     name,
+ *   }, ...]
+ * }
+ */
+export async function getUserInfo(uidOrUsername) {
+  if (!uidOrUsername) {
+    return null;
+  }
+  try {
+    let model = await sequelize.query(
+      /* eslint-disable max-len */
+      `SELECT u.id AS uid, u.name, u.username, u.flags,
+p.customFlag,
+CONCAT(a.shortId, ':', a.extension) AS avatarId,
+CONCAT(afrm.shortId, ':', afrm.extension) AS activeFactionRoleFlag,
+afr.name AS activeFactionRoleName,
+af.title AS activeFactionTitle,
+f.title AS 'factions.title',
+f.name AS 'factions.name'
+FROM Users u
+    LEFT JOIN Profiles p ON p.uid = u.id
+    LEFT JOIN Media a ON a.id = p.avatar
+    LEFT JOIN FactionRoles afr ON afr.id = p.activeRole
+    LEFT JOIN Factions af ON afr.fid = af.id
+    LEFT JOIN Media afrm ON afrm.id = afr.customFlag
+    LEFT JOIN UserFactions uf ON uf.uid = u.id
+    LEFT JOIN Factions f ON f.id = uf.fid
+WHERE ${Number(uidOrUsername) ? 'u.id = ?' : 'u.username = ?'}`, {
+      /* eslint-enable max-len */
+        replacements: [uidOrUsername],
+        raw: true,
+        type: QueryTypes.SELECT,
+      },
+    );
+    if (model) {
+      model = nestQuery(model);
+
+      model.isPrivate = (model.flags & (0x01 << USER_FLAGS.PRIV)) !== 0;
+      delete model.flags;
+
+      return model;
+    }
+  } catch (error) {
+    console.error(`SQL Error on getUserInfo: ${error.message}`);
   }
   return null;
 }

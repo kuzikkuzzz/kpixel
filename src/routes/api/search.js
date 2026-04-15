@@ -15,11 +15,13 @@ export default async function search(req, res) {
     throw new Error('No search type given');
   }
 
+  let columnIds;
   let columns;
   let types;
   const rows = [];
   switch (type) {
     case 'factions': {
+      columnIds = ['avatar', 'title', 'description', 'ispublic', 'members'];
       columns = [t`Avatar`, t`Title`, t`Description`, t`Public`, t`Members`];
       types = ['mediaId', 'faction', 'string', 'bool', 'number'];
       const factionResults = await searchFaction(term);
@@ -34,6 +36,7 @@ export default async function search(req, res) {
       break;
     }
     case 'users': {
+      columnIds = ['avatar', 'name', 'description', 'role', 'joined'];
       columns = [t`Avatar`, t`Name`, t`Role`, t`Joined`];
       types = ['mediaId', 'user', 'flagId', 'ts'];
       const userResults = await searchUser(term);
@@ -51,5 +54,5 @@ export default async function search(req, res) {
       throw new Error('Unknown search type');
   }
 
-  res.json({ columns, types, rows });
+  res.json({ columnIds, columns, types, rows });
 }

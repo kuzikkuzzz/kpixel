@@ -490,6 +490,13 @@ export function requestFactionInfo(fidOrName) {
   );
 }
 
+export function requestUserInfo(uidOrUsername) {
+  return makeAPIPOSTRequest(
+    '/api/userinfo',
+    { uidOrUsername },
+  );
+}
+
 export function requestFactionMembers(fidOrName) {
   return makeAPIPOSTRequest(
     '/api/factionmembers',

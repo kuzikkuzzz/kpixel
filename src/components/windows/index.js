@@ -14,6 +14,7 @@ import OIDCConsent from './OIDCConsent.jsx';
 import Templates from './Templates.jsx';
 import MyFactions from './MyFactions.jsx';
 import Faction from './Faction.jsx';
+import User from './User.jsx';
 import Search from './Search.jsx';
 
 // eslint-disable-next-line max-len
@@ -43,7 +44,8 @@ export default {
   MODTOOLS: [Modtools, t`Modtools`, false],
   STATISTICS: [Statistics, t`Statistics`, false],
   MYFACTIONS: [MyFactions, t`My Factions`, false],
-  FACTION: [Faction, t`My Factions`, true],
+  FACTION: [Faction, t`Faction`, true],
+  USER: [User, t`User`, true],
   SEARCH: [Search, t`Search`, true],
   /*
    * OIDC Consent is a very special case, because it is only available as

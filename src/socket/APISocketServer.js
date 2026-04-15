@@ -16,7 +16,7 @@ import { setPixelByCoords } from '../core/setPixel.js';
 import logger from '../core/logger.js';
 import { APISOCKET_KEY } from '../core/config.js';
 import authenticateAPIClient from './authenticateAPIClient.js';
-import { getInfoByUsernameOrId, getChatStaff } from '../data/sql/User.js';
+import { getUserInfo, getChatStaff } from '../data/sql/User.js';
 import mapFlag from '../utils/flagMapping.js';
 import { DailyCron } from '../utils/cron.js';
 
@@ -39,7 +39,7 @@ class APISocketServer {
   static async #getUserData(usernameOrId) {
     let userData = APISocketServer.#usernameMapping.get(usernameOrId);
     if (!userData || Date.now() - userData.fetchedAt > 3600 * 1000) {
-      userData = await getInfoByUsernameOrId(usernameOrId);
+      userData = await getUserInfo(usernameOrId);
       if (userData) {
         userData.fetchedAt = Date.now();
         APISocketServer.#usernameMapping.set(usernameOrId, userData);

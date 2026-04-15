@@ -1,0 +1,270 @@
+/*
+ * User
+ */
+import React, {
+  useState, useEffect, useContext,
+} from 'react';
+import { useSelector, useStore } from 'react-redux';
+import { t, jt } from 'ttag';
+import { IoIosRefresh } from 'react-icons/io';
+
+import { cdn } from '../../utils/utag.js';
+import { getUrlsFromMediaIdAndName } from '../../utils/media/utils.js';
+import WindowContext from '../context/window.js';
+import useLink from '../hooks/link.js';
+import ClipboardCopyField from '../ClipboardCopyField.jsx';
+import { buildPopUpUrl } from './popUpAvailable.js';
+import { requestUserInfo } from '../../store/actions/fetch.js';
+import { startDm, setUserBlock } from '../../store/actions/thunks.js';
+import Stat from '../Stat.jsx';
+import BadgeList from '../BadgeList.jsx';
+import FishList from '../FishList.jsx';
+
+/* eslint-disable max-len */
+
+const User = () => {
+  /*
+   * {
+   *   uid,
+   *   name,
+   *   username,
+   *   avatarId,
+   *   customFlag,
+   *   isPrivate,
+   *   activeFactionRoleName,
+   *   activeFactionTitle,
+   *   activeFactionRoleFlag,
+   *   totalPixels,
+   *   dailyTotalPixels,
+   *   ranking,
+   *   dailyRanking,
+   *   factions: [{
+   *     title,
+   *     name,
+   *   }, ...],
+   *   fishes: [{
+   *     id,
+   *     type,
+   *     size,
+   *     ts,
+   *   }, ...],
+   *   badges: [{
+   *     id,
+   *     name,
+   *     description,
+   *     ts,
+   *   }, ...],
+   * } | null
+   */
+  const [userData, setUserData] = useState(null);
+  const [errors, setErrors] = useState([]);
+
+  const { args: { username } } = useContext(WindowContext);
+
+  const link = useLink();
+
+  /* fetch name only to check if we are logged in */
+  const ownUid = useSelector((state) => state.user.id);
+  const blocked = useSelector((state) => state.chat.blocked);
+  const store = useStore();
+
+  useEffect(() => {
+    (async () => {
+      if (userData) {
+        return;
+      }
+      const reqUserData = await requestUserInfo(username);
+      if (reqUserData.errors) {
+        setErrors(reqUserData.errors);
+        return;
+      }
+      setUserData(reqUserData);
+    })();
+  }, [userData, username]);
+
+  if (!userData) {
+    return (
+      <div className="content" key="loading">
+        {errors.map((error) => (
+          <p key={error} className="errormessage">
+            <span>{t`Error`}</span>:&nbsp;{error}</p>
+        ))}
+        {!errors.length && (<h3>{t`Loading...`}</h3>)}
+      </div>
+    );
+  }
+
+  const { uid } = userData;
+
+  const [mediaUrl, thumbUrl] = getUrlsFromMediaIdAndName(
+    userData.avatarId, 'avatar',
+  );
+
+  let activeFactionTitle = null;
+  let activeFactionRoleName = null;
+  if (userData.activeFactionRoleName) {
+    activeFactionTitle = <strong>&quot;{userData.activeFactionTitle}&quot;</strong>;
+    activeFactionRoleName = <strong>&quot;{userData.activeFactionRoleName}&quot;</strong>;
+  }
+
+  let isBlocked = false;
+  if (ownUid) {
+    isBlocked = blocked.some((b) => b[0] === uid);
+  }
+
+  return (
+    <div className="content" key="userpage">
+      <h2>{userData.name}</h2>
+      <h3>
+        {(userData.customFlag) && (
+          <img
+            className="chatflag presentation"
+            src={cdn`/cf/${userData.customFlag}.gif`}
+            alt=""
+          />
+        )}
+        {userData.username}&nbsp; #{uid}
+      </h3>
+      {(userData.activeFactionRoleName) && (
+        <p>
+          {jt`Represents ${activeFactionTitle} as ${activeFactionRoleName}`}
+          {(userData.activeFactionRoleFlag) && (
+          <img
+            className="chatflag presentation"
+            src={cdn`${getUrlsFromMediaIdAndName(userData.activeFactionRoleFlag)[0]}`}
+            alt=""
+          />
+          )}.&nbsp;
+        </p>
+      )}
+      {(thumbUrl) && (
+        <div
+          className="avatar-big"
+          style={{
+            backgroundImage: `url(${cdn`${thumbUrl}`})`,
+          }}
+          onClick={(evt) => {
+            evt.stopPropagation();
+            link('PLAYER', {
+              reuse: true,
+              target: 'blank',
+              args: { uri: mediaUrl },
+            });
+          }}
+        />
+      )}
+      <Stat
+        text={t`Today Placed Pixels`}
+        value={userData.dailyTotalPixels}
+      />
+      <Stat
+        text={t`Daily Rank`}
+        value={userData.dailyRanking}
+        zero="N/A"
+        rank
+      />
+      <Stat
+        text={t`Placed Pixels`}
+        value={userData.totalPixels}
+      />
+      <Stat
+        text={t`Total Rank`}
+        value={userData.ranking}
+        zero="N/A"
+        rank
+      />
+      <BadgeList badges={userData.badges} />
+      <FishList fishes={userData.fishes} />
+      {(userData.factions.length > 0) && (
+        <table>
+          <thead>
+            <tr>
+              <th>{t`Factions`}</th>
+            </tr>
+          </thead>
+          <tbody>
+            {userData.factions.map(({ title, name }) => (
+              <tr key={name}>
+                <td>
+                  <span
+                    role="button"
+                    tabIndex={-1}
+                    className="modallink"
+                    onClick={(evt) => {
+                      evt.stopPropagation();
+                      link('FACTION', {
+                        target: 'blank',
+                        args: { name },
+                      });
+                    }}
+                  >
+                    {`${title} [${name}]`}
+                  </span>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      )}
+      <div className="form-actions">
+        <ClipboardCopyField
+          hideField="true"
+          text={window.location.origin + buildPopUpUrl('USER', { username })}
+        />
+        <button
+          type="button"
+          title={t`Refresh`}
+          onClick={() => {
+            setUserData(null);
+          }}
+        ><IoIosRefresh /></button>
+        {(ownUid && ownUid !== uid) && (
+        <React.Fragment key="user-actions">
+          <button
+            type="button"
+            title={(isBlocked) ? t`Unblock` : t`Block`}
+            onClick={() => {
+              store.dispatch(setUserBlock(uid, userData.name, !isBlocked));
+            }}
+          >
+            {(isBlocked) ? t`Unblock` : t`Block`}
+          </button>
+          <button
+            type="button"
+            title={t`DM`}
+            onClick={(evt) => {
+              evt.stopPropagation();
+              /*
+                * if dm channel already exists,
+                * just switch
+                */
+              const { chat: { channels } } = store.getState();
+              const cids = Object.keys(channels);
+              for (let i = 0; i < cids.length; i += 1) {
+                const cid = cids[i];
+                if (channels[cid].length === 4 && channels[cid][3] === uid) {
+                  link('CHAT', {
+                    target: 'parent',
+                    args: { chatChannel: cid },
+                  });
+                  return;
+                }
+              }
+              store.dispatch(startDm({ userId: uid }, (cid) => {
+                link('CHAT', {
+                  target: 'parent',
+                  args: { chatChannel: cid },
+                });
+              }));
+            }}
+          >
+            {t`DM`}
+          </button>
+        </React.Fragment>
+        )}
+      </div>
+    </div>
+  );
+};
+
+export default User;

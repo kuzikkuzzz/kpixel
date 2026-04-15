@@ -127,7 +127,7 @@ const Search = () => {
               ))}
             </tr>
           </thead>
-          <tbody style={{ userSelect: 'text' }}>
+          <tbody>
             {results.rows.sort((a, b) => {
               a = a[sortBy];
               b = b[sortBy];

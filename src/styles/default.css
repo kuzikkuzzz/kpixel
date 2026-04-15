@@ -186,6 +186,10 @@ table {
   width: 100%;
 }
 
+tbody {
+  user-select: text;
+}
+
 td, th {
   border: 1px solid #dddddd;
   text-align: left;
@@ -377,7 +381,7 @@ tr:nth-child(even) {
 .cvimg {
   max-width: 20%;
   opacity: 0.3;
-  padding: 2;
+  padding: 2px;
   display: inline-block;
   vertical-align: middle;
 }
@@ -1062,7 +1066,7 @@ table td span {
   line-height: 1.8em;
 }
 
-.factionavatar {
+.avatar-big {
   width: 100%;
   height: 150px;
   max-width: 100%;
@@ -1099,7 +1103,7 @@ table td span {
   line-height: 2em;
 }
 
-.chatflag.faction {
+.chatflag.presentation {
   margin: 2px;
 }
 
@@ -1167,7 +1171,7 @@ table td span {
 }
 
 .fileupload-result-x {
-  position: 'absolute;
+  position: absolute;
   top: 0px;
   right: 0px;
   width: 16px;
@@ -1651,7 +1655,7 @@ button:hover {
 }
 
 .watchtable {
-  font-size: 11;
+  font-size: 11px;
 }
 
 .checkcontainer {
@@ -1828,8 +1832,15 @@ button:hover {
 }
 
 @keyframes sway {
-  0% 100% { transform: rotate(var(--current-angle)) rotate(-14deg); }
-  50% { transform: rotate(var(--current-angle)) rotate(14deg); }
+  0% {
+    transform: rotate(var(--current-angle)) rotate(-14deg);
+  }
+  50% {
+    transform: rotate(var(--current-angle)) rotate(14deg);
+  }
+  100% {
+    transform: rotate(var(--current-angle)) rotate(-14deg);
+  }
 }
 
 #mvmctrls {

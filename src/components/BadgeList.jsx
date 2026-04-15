@@ -4,13 +4,11 @@
 import React, { useState } from 'react';
 import { t } from 'ttag';
 
-import useProfile from './hooks/useProfile.js';
 import useLink from './hooks/link.js';
 import { cdn } from '../utils/utag.js';
 
-const BadgeList = () => {
+const BadgeList = ({ badges }) => {
   const [expanded, setExpanded] = useState(false);
-  const [badges] = useProfile((profile) => profile.badges);
   const link = useLink();
   if (!badges.length) {
     return null;

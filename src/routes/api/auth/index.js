@@ -31,6 +31,11 @@ const router = express.Router();
  * JSON APIs
  */
 
+router.use((req, res, next) => {
+  req.tickRateLimiter(3000);
+  next();
+});
+
 router.get('/verify', verify);
 
 router.post('/restore_password', restore_password);

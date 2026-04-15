@@ -9,6 +9,7 @@ import socketEvents from '../../socket/socketEvents.js';
 import { setUserChannelMute } from '../../data/sql/Channel.js';
 
 export default async function block(req, res) {
+  req.tickRateLimiter(4000);
   const channelId = parseInt(req.body.channelId, 10);
   const { mute } = req.body;
 

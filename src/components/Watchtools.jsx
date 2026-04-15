@@ -309,7 +309,7 @@ function ModWatchtools() {
                 ))}
               </tr>
             </thead>
-            <tbody style={{ userSelect: 'text' }}>
+            <tbody>
               {rows.sort((a, b) => {
                 a = a[sortBy];
                 b = b[sortBy];

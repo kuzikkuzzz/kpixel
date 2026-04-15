@@ -7,7 +7,7 @@ import { getFactionInfo, joinFactionPublic } from '../../data/sql/Faction.js';
 import { MAX_FACTIONS_PER_USER, CHANNEL_TYPES } from '../../core/constants.js';
 
 export default async function factionjoin(req, res) {
-  req.tickRateLimiter(2000);
+  req.tickRateLimiter(4000);
   const { ttag: { t }, user, ip: { ipString }, body: { fid } } = req;
 
   if (!fid || typeof fid !== 'string') {

@@ -13,6 +13,8 @@ import { t } from 'ttag';
 // eslint-disable-next-line no-useless-escape, max-len
 const mailTester = /^[-!#$%&'*+\/0-9=?A-Z^_a-z{|}~](\.?[-!#$%&'*+\/0-9=?A-Z^_a-z`{|}~])*@[a-zA-Z0-9](-*\.?[a-zA-Z0-9])*\.[a-zA-Z](-?[a-zA-Z0-9])+$/;
 
+const azTester = /^[a-zA-Z][a-zA-Z0-9._-]+$/;
+
 export function validateEMail(email) {
   if (!email) return t`Email can't be empty.`;
   if (email.length < 5) return t`Email should be at least 5 characters long.`;
@@ -50,7 +52,7 @@ export function validateUsername(username) {
   if (username.length > 26) {
     return t`Username must be shorter than 26 characters`;
   }
-  if (/[^a-zA-Z0-9._-]/.test(username)) {
+  if (!azTester.test(username)) {
     return t`Username can only contain the characters: a-z . _ and -`;
   }
   return false;
@@ -80,7 +82,7 @@ export function validateFactionName(name) {
   if (name.length > 26) {
     return t`Name must be shorter than 26 characters`;
   }
-  if (/[^a-zA-Z0-9._-]/.test(name)) {
+  if (!azTester.test(name)) {
     return t`Name can only contain the characters: a-z . _ and -`;
   }
   return false;

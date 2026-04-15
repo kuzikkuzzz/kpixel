@@ -75,6 +75,11 @@ export default async function getMe(user, ip, lang) {
     me.dailyTotalPixels = dailyTotalPixels;
     me.ranking = ranking;
     me.dailyRanking = dailyRanking;
+  } else {
+    me.totalPixels = 0;
+    me.dailyTotalPixels = 0;
+    me.ranking = 0;
+    me.dailyRanking = 0;
   }
 
   if (user && TIMEBLOCK_USERS) {

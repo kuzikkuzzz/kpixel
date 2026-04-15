@@ -14,6 +14,7 @@ import { getAvatarById } from '../../data/sql/Profile.js';
 import { USER_FLAGS } from '../../core/constants.js';
 
 async function startDm(req, res) {
+  req.tickRateLimiter(5000);
   let userId = parseInt(req.body.userId, 10);
   let { userName } = req.body;
   const { user } = req;

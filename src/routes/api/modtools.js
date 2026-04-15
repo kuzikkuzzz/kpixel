@@ -52,6 +52,7 @@ router.use(requireOidc('modtools', true));
  * make sure User is logged in and at least Mod
  */
 router.use(async (req, res, next) => {
+  req.tickRateLimiter(3000);
   /*
    * special case for oauth, this user object has only a subset of values
    */

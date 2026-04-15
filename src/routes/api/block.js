@@ -13,6 +13,7 @@ import {
 } from '../../data/sql/association_models/UserBlock.js';
 
 async function block(req, res) {
+  req.tickRateLimiter(4000);
   let userId = parseInt(req.body.userId, 10);
   let { userName } = req.body;
   const { block: blocking } = req.body;

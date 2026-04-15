@@ -17,6 +17,7 @@ import factionchange from './factionchange.js';
 import userfactionchange from './userfactionchange.js';
 import factionrolechange from './factionrolechange.js';
 import factioninfo from './factioninfo.js';
+import userinfo from './userinfo.js';
 import factioncreate from './factioncreate.js';
 import factiondelete from './factiondelete.js';
 import factionjoin from './factionjoin.js';
@@ -90,15 +91,10 @@ router.get('/baninfo', baninfo);
 
 router.post('/lanme', banme);
 
-
-router.use((req, res, next) => {
-  req.tickRateLimiter(3000);
-  next();
-});
-
 router.get('/me', me);
 
 router.post('/factioninfo', factioninfo);
+router.post('/userinfo', userinfo);
 router.post('/factionmembers', factionmembers);
 
 router.use(parseDevice);

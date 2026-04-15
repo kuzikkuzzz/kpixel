@@ -16,10 +16,11 @@ import ChangeMail from '../ChangeMail.jsx';
 import DeleteAccount from '../DeleteAccount.jsx';
 import LogInForm from '../LogInForm.jsx';
 import SocialSettings from '../SocialSettings.jsx';
+import Stat from '../Stat.jsx';
 import { logoutUser } from '../../store/actions/index.js';
 import { requestLogOut } from '../../store/actions/fetch.js';
-import { numberToString } from '../../core/utils.js';
 import { selectIsDarkMode } from '../../store/selectors/gui.js';
+import useProfile from '../hooks/useProfile.js';
 
 const AREAS = {
   CHANGE_NAME: ChangeName,
@@ -29,16 +30,6 @@ const AREAS = {
   DELETE_ACCOUNT: DeleteAccount,
   SOCIAL_SETTINGS: SocialSettings,
 };
-
-const Stat = ({
-  text, value, rank, zero,
-}) => (
-  <p>
-    <span className="stattext">{(rank) ? `${text}: #` : `${text}: `}</span>
-    &nbsp;
-    <span className="statvalue">{numberToString(value, zero)}</span>
-  </p>
-);
 
 const UserArea = () => {
   const [area, setArea] = useState('NONE');
@@ -73,6 +64,10 @@ const UserArea = () => {
     state.ranks.dailyRanking,
   ], shallowEqual);
 
+  const [
+    badges, fishes,
+  ] = useProfile((profile) => [profile.badges, profile.fishes]);
+
   if (!name) {
     return <LogInForm title={t`Login to access more features and stats.`} />;
   }
@@ -103,8 +98,8 @@ const UserArea = () => {
         zero="N/A"
         rank
       />
-      <BadgeList />
-      <FishList />
+      <BadgeList badges={badges} />
+      <FishList fishes={fishes} />
       <div>
         <p>
           {t`Your name is:`}<span className="statvalue">{` ${name} `}</span>
