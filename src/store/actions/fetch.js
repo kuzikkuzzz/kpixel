@@ -546,6 +546,13 @@ export function requestFactionRoleDelete(frid) {
   );
 }
 
+export function requestFactionInviteDelete(id) {
+  return makeAPIPOSTRequest(
+    '/api/factioninvitedelete',
+    { id },
+  );
+}
+
 export function requestKickBanFactionMember(
   uid, factionName, isBan, reason = '',
 ) {
@@ -568,6 +575,13 @@ export function requestFactionRoleCreate(
   return makeAPIPOSTRequest(
     '/api/factionrolecreate',
     { factionName, name, isDefault, customFlagId, factionlvl },
+  );
+}
+
+export function requestFactionInviteCreate(factionName, isOneTime) {
+  return makeAPIPOSTRequest(
+    '/api/factioninvitecreate',
+    { factionName, isOneTime },
   );
 }
 

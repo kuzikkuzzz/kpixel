@@ -66,7 +66,7 @@ export default async function factionrolecreate(req, res) {
     case 0:
       break;
     case 1:
-      throw new Error(t`This faction does not exist`);
+      throw new Error('This faction does not exist');
     case 2:
       throw new Error('Invalid customFlagId');
     case 3:

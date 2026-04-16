@@ -30,6 +30,9 @@ import factionkickban from './factionkickban.js';
 import factionunban from './factionunban.js';
 import factionmembers from './factionmembers.js';
 import factionbans from './factionbans.js';
+import factioninvites from './factioninvites.js';
+import factioninvitecreate from './factioninvitecreate.js';
+import factioninvitedelete from './factioninvitedelete.js';
 import search from './search.js';
 import modtools from './modtools.js';
 import baninfo from './baninfo.js';
@@ -128,6 +131,7 @@ router.post('/userfactionchange', userfactionchange);
 router.post('/factionrolechange', factionrolechange);
 
 router.post('/factionbans', factionbans);
+router.post('/factioninvites', factioninvites);
 
 router.post('/factioncreate', factioncreate);
 router.post('/factiondelete', factiondelete);
@@ -135,6 +139,9 @@ router.post('/factionjoin', factionjoin);
 router.post('/factionleave', factionleave);
 router.post('/factionkickban', factionkickban);
 router.post('/factionunban', factionunban);
+
+router.post('/factioninvitecreate', factioninvitecreate);
+router.post('/factioninvitedelete', factioninvitedelete);
 
 router.post('/factionrolecreate', factionrolecreate);
 router.post('/factionroledelete', factionroledelete);

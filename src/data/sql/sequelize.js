@@ -9,7 +9,7 @@ import Sequelize from 'sequelize';
 import {
   FACTION_FLAGS, CHANNEL_TYPES, FACTION_PERMISSIONS, FACTION_ROLE_FLAGS,
   MAX_ROLES_PER_FACTION, MAX_FACTIONS_PER_USER, MAX_OWNED_FACTIONS_PER_USER,
-  INVITE_FLAGS,
+  INVITE_FLAGS, MAX_INVITES_PER_FACTION,
 } from '../../core/constants.js';
 import {
   MARIADB_HOST, MARIADB_DATABASE, MARIADB_USER, MARIADB_PW, LOG_MARIADB,
@@ -558,6 +558,7 @@ END`,
 BEGIN
   DECLARE v_fid BIGINT UNSIGNED;
   DECLARE v_initiator_powerlvl TINYINT;
+  DECLARE v_invite_count INT UNSIGNED;
 
   SELECT MAX(id) INTO v_fid FROM Factions WHERE name = p_faction_name;
 
@@ -572,12 +573,16 @@ BEGIN
       INNER JOIN UserFactionRoles ufr ON ufr.frid = fr.id
     WHERE fr.fid = v_fid AND ufr.uid = p_initiator_uid;
 
+    SELECT COUNT(*) INTO v_invite_count FROM FactionRoles WHERE fid = v_fid;
+
     IF v_initiator_powerlvl < ${FACTION_PERMISSIONS.MANAGE_INVITES} THEN
       SELECT 3 AS result;
+    ELSEIF v_invite_count >= ${MAX_INVITES_PER_FACTION} THEN
+      SELECT 4 AS result;
     ELSEIF EXISTS(
       SELECT 1 FROM FactionInvites WHERE midId = p_midId
     ) THEN
-      SELECT 4 AS result;
+      SELECT 5 AS result;
     ELSE
       INSERT INTO FactionInvites (
         fid, midId, flags, expires, used, createdAt
@@ -862,7 +867,7 @@ BEGIN
 END`,
   };
 
-  const funcVersion = 19;
+  const funcVersion = 20;
   const curVersion = Number((await sequelize.query('SELECT value FROM Configs WHERE `key`=\'functions_version\''))[0]?.[0]?.value);
   const doUpgrade = funcVersion !== curVersion;
   if (doUpgrade) {

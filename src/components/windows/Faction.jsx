@@ -22,6 +22,7 @@ import {
   requestFactionInfo,
   requestFactionMembers,
   requestFactionBans,
+  requestFactionInvites,
   requestLeaveFaction,
   requestJoinFaction,
   requestAddFactionRole,
@@ -31,6 +32,8 @@ import {
   requestFactionRoleCreate,
   requestFactionRoleDelete,
   requestDeleteFaction,
+  requestFactionInviteCreate,
+  requestFactionInviteDelete,
 } from '../../store/actions/fetch.js';
 import {
   changeFactionRole,
@@ -66,6 +69,7 @@ const Faction = () => {
    */
   const [memberData, setMemberData] = useState(null);
   const [banData, setBanData] = useState(null);
+  const [inviteData, setInviteData] = useState(null);
 
   const {
     args: { activeTab = 'overview', name },
@@ -128,9 +132,8 @@ const Faction = () => {
           setErrors(reqMemberData.errors);
           return;
         }
-        const { members } = reqMemberData;
         const { roles } = factionData.faction;
-        for (const member of members) {
+        for (const member of reqMemberData) {
           let userPowerlvl = -1;
           if (member.roles?.length) {
             userPowerlvl = Math.max(
@@ -152,14 +155,21 @@ const Faction = () => {
           member.powerlvl = userPowerlvl;
           member.powerlvlName = powerlvlName;
         }
-        setMemberData(members);
+        setMemberData(reqMemberData);
       } else if (activeTab === 'bans' && !banData) {
         const reqBanData = await requestFactionBans(name);
         if (reqBanData.errors) {
           setErrors(reqBanData.errors);
           return;
         }
-        setBanData(reqBanData.bans);
+        setBanData(reqBanData);
+      } else if (activeTab === 'invites' && !inviteData) {
+        const reqInviteData = await requestFactionInvites(name);
+        if (reqInviteData.errors) {
+          setErrors(reqInviteData.errors);
+          return;
+        }
+        setInviteData(reqInviteData);
       }
     })();
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -422,6 +432,57 @@ const Faction = () => {
     setSubmitting(false);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [name]);
+
+  const submitCreateInvite = useCallback(async (evt) => {
+    evt.preventDefault();
+    if (submittingRef.current) {
+      return;
+    }
+    const isOneTime = evt.target.isonetime.checked;
+
+    setSubmitting(true);
+    const {
+      errors: respErrors, inviteId,
+    } = await requestFactionInviteCreate(name, isOneTime);
+    if (respErrors) {
+      setErrors(respErrors);
+    } else {
+      setSelected(null);
+      setErrors([]);
+      setInviteData((pInviteData) => [
+        ...pInviteData,
+        {
+          id: inviteId,
+          isOneTime,
+          createdAt: (new Date()).toLocaleString(),
+        },
+      ]);
+    }
+    setConfirm(false);
+    setSubmitting(false);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [name]);
+
+  const submitDeleteInvite = useCallback(async (inviteId) => {
+    if (submittingRef.current) {
+      return;
+    }
+    setSubmitting(true);
+    const {
+      errors: respErrors,
+    } = await requestFactionInviteDelete(inviteId);
+    if (respErrors) {
+      setErrors(respErrors);
+    } else {
+      setErrors([]);
+      setInviteData((pInviteData) => pInviteData.filter(
+        ({ id }) => id !== inviteId,
+      ));
+    }
+    setConfirm(false);
+    setSubmitting(false);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   const submitEditRole = useCallback(async (evt, role) => {
     evt.preventDefault();
@@ -714,6 +775,7 @@ const Faction = () => {
               setFactionData(null);
               setBanData(null);
               setMemberData(null);
+              setInviteData(null);
               setConfirm(null);
             }}
           ><IoIosRefresh /></button>
@@ -1487,6 +1549,106 @@ const Faction = () => {
         </form>
       </div>
     );
+  } else if (activeTab === 'invites' && inviteData) {
+    /* ============================== Invites =============================== */
+    if (selected === '@create-invite') {
+      content = (
+        <div className={`factionwin-${activeTab}`} key={activeTab}>
+          <h3>{t`Create Invite`}</h3>
+          <form onSubmit={submitCreateInvite} className="client-form">
+            <div className="form-group checkbox-group">
+              <label className="checkbox-label">
+                <input
+                  type="checkbox"
+                  name="isonetime"
+                  defaultChecked={false}
+                />
+                <span className="checkmark" />
+                {t`Is One-Time-Invite`}
+              </label>
+              <small>{t`Whether or not invite can only be used once.`}</small>
+            </div>
+
+            <div className="form-actions">
+              <button
+                type="submit"
+                disabled={submitting}
+              >
+                {t`Submit`}
+              </button>
+              <button
+                type="button"
+                onClick={() => {
+                  setSelected(null);
+                  setErrors([]);
+                  setConfirm(false);
+                }}
+              >
+                {t`Cancel`}
+              </button>
+            </div>
+          </form>
+        </div>
+      );
+    } else {
+      content = (
+        <div className={`factionwin-${activeTab}`} key={activeTab}>
+          {(inviteData.length > 0) ? (
+            <table className="factionbans-table">
+              <thead>
+                <tr>
+                  { /* t: faction invite id, no need to translate */ }
+                  <th>{t`ID`}</th>
+                  { /* t: for faction invites, if it can only be used once */ }
+                  <th>{t`One-Time`}</th>
+                  <th>{t`created at`}</th>
+                  <th>{t`Delete`}</th>
+                </tr>
+              </thead>
+              <tbody>
+                {inviteData.map(({ id, isOneTime, createdAt }) => (
+                  <tr key={id}>
+                    <td>{id}</td>
+                    <td>{isOneTime ? 'X' : ''}</td>
+                    <td>{createdAt}</td>
+                    <td>
+                      <button
+                        type="button"
+                        className={confirm === `delete-inv-${id}` ? 'confirm' : undefined}
+                        disabled={submitting}
+                        onClick={() => {
+                          if (confirm !== `delete-inv-${id}`) {
+                            setConfirm(`delete-inv-${id}`);
+                            return;
+                          }
+                          submitDeleteInvite(id);
+                        }}
+                      >
+                        {(confirm !== `delete-inv-${id}`) ? '🗑' : '‣'}
+                      </button>
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          ) : (
+            <p>{t`This faction has no invites`}</p>
+          )}
+          <div className="form-actions">
+            <button
+              type="button"
+              onClick={() => {
+                setSelected('@create-invite');
+                setErrors([]);
+                setConfirm(false);
+              }}
+            >
+              {t`Create New Invite`}
+            </button>
+          </div>
+        </div>
+      );
+    }
   }
 
   return (

@@ -7,7 +7,7 @@ import {
 } from '../../data/sql/Faction.js';
 import { FACTION_PERMISSIONS } from '../../core/constants.js';
 
-export default async function factionrolechange(req, res) {
+export default async function factionbans(req, res) {
   req.tickRateLimiter(5000);
   /* user can be undefined when not logged in */
   const { ttag: { t }, user, body: { name } } = req;
@@ -30,16 +30,14 @@ export default async function factionrolechange(req, res) {
     throw new Error(t`Server Error`);
   }
 
-  res.json({
-    /*
-     * [{
-     *   fbid,
-     *   affects,
-     *   createdBy,
-     *   createdAt,
-     *   reason,
-     * },...]
-     */
-    bans,
-  });
+  /*
+    * [{
+    *   fbid,
+    *   affects,
+    *   createdBy,
+    *   createdAt,
+    *   reason,
+    * },...]
+    */
+  res.json(bans);
 }

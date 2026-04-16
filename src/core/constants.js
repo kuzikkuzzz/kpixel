@@ -176,6 +176,8 @@ export const FACTION_PERMISSIONS = {
 
 export const MAX_FACTIONS_PER_USER = 20;
 
+export const MAX_INVITES_PER_FACTION = 20;
+
 export const MAX_OWNED_FACTIONS_PER_USER = 10;
 
 export const MAX_FLAGS_PER_FACTION = 10;

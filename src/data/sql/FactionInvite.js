@@ -73,7 +73,8 @@ const FactionInvite = sequelize.define('FactionInvite', {
  *   1 no such faction
  *   2 user not in faction
  *   3 user not allowed
- *   4 no free inviteId found
+ *   4 no more invites possible
+ *   5 no free inviteId found
  *   -1 failure
  */
 export async function createInvite(initiatorUid, factionName, isOneTimeInvite) {
@@ -84,9 +85,9 @@ export async function createInvite(initiatorUid, factionName, isOneTimeInvite) {
 
   try {
     let midId;
-    let returnCode = 4;
+    let returnCode = 5;
     let retries = 5;
-    while (returnCode === 4 && retries > 0) {
+    while (returnCode === 5 && retries > 0) {
       midId = getRandomShortId(10);
       retries -= 1;
       // eslint-disable-next-line no-await-in-loop
@@ -174,21 +175,19 @@ export async function useInvite(uid, ipString, inviteId) {
 
 /**
  * get all invites of faction
- * @param factionName
+ * @param sqlFid sql id of faction
  * @return [{
  *   id,
  *   isOneTime,
- *   ts,
+ *   createdAt,
  * }, ...]
  */
-export async function getInvites(factionName) {
+export async function getInviteInfo(sqlFid) {
   try {
     const models = await sequelize.query(
-      `SELECT midId AS id, flags,
-UNIX_TIMESTAMP(createdAt) * 1000 AS ts FROM FactionInvites fi
-  INNER JOIN Factions f ON f.id = fi.fid
-WHERE f.name = ?`, {
-        replacements: [factionName],
+      // eslint-disable-next-line max-len
+      'SELECT midId AS id, flags, createdAt FROM FactionInvites WHERE fid = ?', {
+        replacements: [sqlFid],
         raw: true,
         type: QueryTypes.SELECT,
       },
@@ -199,6 +198,10 @@ WHERE f.name = ?`, {
         // eslint-disable-next-line max-len
         invite.isOneTime = (invite.flags & (0x01 << INVITE_FLAGS.ONE_TIME)) !== 0;
         delete invite.flags;
+
+        if (invite.createdAt) {
+          invite.createdAt = invite.createdAt.toLocaleString();
+        }
       }
       return models;
     }

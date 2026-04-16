@@ -34,16 +34,14 @@ export default async function factionrolechange(req, res) {
     throw new Error(t`Server Error`);
   }
 
-  res.json({
-    /*
-     * [{
-     *   uid,
-     *   name,
-     *   username,
-     *   avatarId,
-     *   roles: [frid1, frid2, ...],
-     * }, ...]
-     */
-    members,
-  });
+  /*
+    * [{
+    *   uid,
+    *   name,
+    *   username,
+    *   avatarId,
+    *   roles: [frid1, frid2, ...],
+    * }, ...]
+    */
+  res.json(members);
 }
