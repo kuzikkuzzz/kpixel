@@ -1,11 +1,19 @@
 # Pixelplanet 4.0
 
 With this release, we drop support for MySQL and only support MariaDB now.
-MariaDB can be fed with a backup created by mysqldump, so if you are on mysql
-and want to migrate, you may do:
+MariaDB supports backups created by mysqldump, so if you are on mysql and want
+to migrate, you may do:
 `backup -> remove mysql and install mariadb -> restore`
-We won't clarify here how this works exactly. But remember that that the 3.1.0
-release is very stable, so no need to rush.
+No more details about this process are mentioned here. But remember that that
+the 3.1.0 release is very stable, so no need to rush.
+
+Users are not allowed to choose usernames that do not start with [a-z][A-Z]
+anymore, if you want to reset old users, that don't do that, run the following
+sql query:
+
+```
+UPDATE User SET username = CONCAT('pp_', id) WHERE username NOT REGEXP '^[A-Za-z]';
+```
 
 # Pixelplanet <2.0 to 2.0
 
