@@ -525,6 +525,13 @@ export function requestRemoveFactionRole(uid, frid) {
   );
 }
 
+export function requestDeleteFaction(name) {
+  return makeAPIPOSTRequest(
+    '/api/factiondelete',
+    { name },
+  );
+}
+
 export function requestFactionRoleDelete(frid) {
   return makeAPIPOSTRequest(
     '/api/factionroledelete',

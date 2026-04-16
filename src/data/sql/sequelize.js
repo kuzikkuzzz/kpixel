@@ -354,6 +354,53 @@ BEGIN
     SELECT 0 AS result;
   END IF;
 END`,
+    /**
+     * delete a faction
+     * @param p_initiator_uid uid of initiator
+     * @param p_faction_name faction name
+     * If success, then second result set is users with [uid, hadFactionActive]
+     */
+    DELETE_FACTION: `CREATE PROCEDURE IF NOT EXISTS DELETE_FACTION(IN p_initiator_uid INT UNSIGNED, IN p_faction_name VARCHAR(32) CHARACTER SET ascii) NOT DETERMINISTIC MODIFIES SQL DATA
+BEGIN
+  DECLARE v_fid BIGINT UNSIGNED;
+  DECLARE v_initiator_powerlvl TINYINT;
+  DECLARE v_faction_channel_id INT UNSIGNED;
+  DECLARE EXIT HANDLER FOR SQLEXCEPTION
+  BEGIN
+    ROLLBACK;
+    RESIGNAL;
+  END;
+  START TRANSACTION;
+
+  SELECT MAX(id), MAX(cid) INTO v_fid, v_faction_channel_id FROM Factions WHERE name = p_faction_name;
+
+  IF v_fid IS NULL THEN
+    ROLLBACK;
+    SELECT 1 AS result;
+  ELSEIF NOT EXISTS(
+    SELECT 1 FROM UserFactions WHERE uid = p_initiator_uid AND fid = v_fid LIMIT 1
+  ) THEN
+    ROLLBACK;
+    SELECT 2 AS result;
+  ELSE
+    SELECT IFNULL(MAX(factionlvl), 0) INTO v_initiator_powerlvl FROM FactionRoles fr
+      INNER JOIN UserFactionRoles ufr ON ufr.frid = fr.id
+    WHERE fr.fid = v_fid AND ufr.uid = p_initiator_uid;
+
+    IF v_initiator_powerlvl < ${FACTION_PERMISSIONS.DELETE_FACTION} THEN
+      ROLLBACK;
+      SELECT 3 AS result;
+    ELSE
+      SELECT 0 AS result, v_faction_channel_id AS factionChannelId;
+      SELECT uf.uid, fr.id IS NOT NULL AS hadFactionActive FROM UserFactions uf
+        LEFT JOIN Profiles p ON uf.uid = p.uid
+        LEFT JOIN FactionRoles fr ON p.activeRole = fr.id AND fr.fid = uf.fid
+      WHERE uf.fid = v_fid;
+      DELETE FROM Channels WHERE id = v_faction_channel_id;
+      COMMIT;
+    END IF;
+  END IF;
+END`,
     CREATE_FACTION_ROLE: `CREATE PROCEDURE IF NOT EXISTS CREATE_FACTION_ROLE(
   IN p_faction_uuid CHAR(36),
   IN p_factionrole_uuid CHAR(36),

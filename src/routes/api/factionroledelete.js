@@ -43,9 +43,6 @@ export default async function factionroledelete(req, res) {
   };
   const patches = [['profile', profilePatch]];
 
-  if (affectedUsers.length) {
-    socketEvents.patchUserState(affectedUsers, 'profile', profilePatch);
-  }
   if (affectedActiveRoleUsers.length) {
     const activeProfilePatch = {
       op: 'set',
@@ -58,6 +55,9 @@ export default async function factionroledelete(req, res) {
     if (affectedActiveRoleUsers.includes(user.id)) {
       patches.push(['profile', activeProfilePatch]);
     }
+  }
+  if (affectedUsers.length) {
+    socketEvents.patchUserState(affectedUsers, 'profile', profilePatch);
   }
 
   logger.info(`User ${user.id} deleted faction role ${frid}`);

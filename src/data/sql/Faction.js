@@ -465,30 +465,49 @@ export async function createFaction(
 }
 
 /**
- * delete faction
- * @param sqlFid sql faction id
- * @return [userId1, userId2, ...] affected users
+ * delete a faction
+ * @param initiatorUid user id of owner
+ * @param factionName faction name
+ * @return [number, factionChannelId, affectedUsers, affectedActiveRoleUsers]
+ *   0 success
+ *   1 faction doesn't exist
+ *   2 user not in faction
+ *   3 user not allowed
+ *   -1 failure
  */
-export async function deleteFaction(sqlFid) {
+export async function deleteFaction(initiatorUid, factionName) {
+  const affectedUsers = [];
+  const affectedActiveRoleUsers = [];
+  let factionChannelId = null;
   try {
-    const affectedUsers = await getAllMembersOfFaction();
-    /*
-     * faction channel deletion should cascade to everything related, since
-     * faction depends on it
-     */
-    await sequelize.query(
-      // eslint-disable-next-line max-len
-      'DELETE FROM Channels WHERE id = (SELECT f.cid FROM Factions f WHERE f.id = ?)', {
-        replacements: [sqlFid],
+    let models = await sequelize.query(
+      'CALL DELETE_FACTION(?, ?)', {
+        replacements: [initiatorUid, factionName],
         raw: true,
-        type: QueryTypes.DELETE,
+        type: QueryTypes.SELECT,
       },
     );
-    return affectedUsers;
+    const returnCode = models?.[0]?.[0]?.result;
+    if (returnCode || returnCode === 0) {
+      if (returnCode === 0) {
+        [{ 0: { factionChannelId } }] = models;
+        models = Object.values(models[1]);
+        for (let i = 0; i < models.length; i += 1) {
+          const { uid: memberUid, hadFactionActive } = models[i];
+          if (hadFactionActive) {
+            affectedActiveRoleUsers.push(memberUid);
+          }
+          affectedUsers.push(memberUid);
+        }
+      }
+      return [
+        returnCode, factionChannelId, affectedUsers, affectedActiveRoleUsers,
+      ];
+    }
   } catch (error) {
     console.error('SQL Error on deleteFaction:', error.message);
   }
-  return [];
+  return [-1, factionChannelId, affectedUsers, affectedActiveRoleUsers];
 }
 
 /**

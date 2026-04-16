@@ -30,6 +30,7 @@ import {
   requestLiftFactionBan,
   requestFactionRoleCreate,
   requestFactionRoleDelete,
+  requestDeleteFaction,
 } from '../../store/actions/fetch.js';
 import {
   changeFactionRole,
@@ -215,6 +216,28 @@ const Faction = () => {
     setSubmitting(false);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+
+  const submitDeleteFaction = useCallback(async () => {
+    if (submitting) {
+      return;
+    }
+    setSubmitting(true);
+    const {
+      errors: respErrors, patches,
+    } = await requestDeleteFaction(name);
+    if (patches) {
+      dispatch(applyPatches(patches));
+    }
+    if (respErrors) {
+      setErrors(respErrors);
+    } else {
+      setErrors([]);
+      setFactionData(null);
+    }
+    setConfirm(false);
+    setSubmitting(false);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [submitting, name]);
 
   const submitAddFactionRole = useCallback(async (uid, frid) => {
     if (submittingRef.current) {
@@ -1434,6 +1457,24 @@ const Faction = () => {
             >
               {t`Save`}
             </button>
+            {(powerlvl >= FACTION_PERMISSIONS.DELETE_FACTION) && (
+              <button
+                key="delete"
+                type="button"
+                className={confirm === 'delete-faction' ? 'confirm' : undefined}
+                onClick={() => {
+                  if (confirm !== 'delete-faction') {
+                    setConfirm('delete-faction');
+                    return;
+                  }
+                  submitDeleteFaction();
+                }}
+                disabled={submitting}
+              >
+                {/* t: button for deleting a faction, it asks for confirmation */}
+                {(confirm === 'delete-faction') ? t`Confirm Delete` : t`Delete Faction`}
+              </button>
+            )}
             <button
               type="button"
               onClick={() => setActiveTab('overview')}
