@@ -585,6 +585,20 @@ export function requestFactionInviteCreate(factionName, isOneTime) {
   );
 }
 
+export function requestInviteData(id) {
+  return makeAPIPOSTRequest(
+    '/api/factioninvitedata',
+    { id },
+  );
+}
+
+export function requestUseInvite(id) {
+  return makeAPIPOSTRequest(
+    '/api/factioninviteuse',
+    { id },
+  );
+}
+
 export function requestProfile() {
   return makeAPIGETRequest(
     '/api/profile',

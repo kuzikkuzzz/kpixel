@@ -619,7 +619,14 @@ BEGIN
     END IF;
   END IF;
 END`,
-    JOIN_FACTION: `CREATE PROCEDURE IF NOT EXISTS JOIN_FACTION(IN p_uid INT UNSIGNED, IN p_ipString VARCHAR(39), IN p_fid BIGINT UNSIGNED, IN p_invite_id BIGINT UNSIGNED, IN p_is_on_time_invite TINYINT UNSIGNED) NOT DETERMINISTIC MODIFIES SQL DATA
+    JOIN_FACTION: `CREATE PROCEDURE IF NOT EXISTS JOIN_FACTION(
+  IN p_uid INT UNSIGNED,
+  IN p_ipString VARCHAR(39),
+  IN p_fid BIGINT UNSIGNED,
+  IN p_faction_name VARCHAR(32) CHARACTER SET ascii,
+  IN p_invite_id BIGINT UNSIGNED,
+  IN p_is_on_time_invite TINYINT UNSIGNED
+) NOT DETERMINISTIC MODIFIES SQL DATA
 BEGIN
   DECLARE v_ip VARBINARY(8);
   DECLARE v_joined_count INT UNSIGNED;
@@ -677,7 +684,7 @@ BEGIN
     END IF;
 
     COMMIT;
-    SELECT 0 AS result;
+    SELECT 0 AS result, p_faction_name AS factionName;
   END IF;
 END`,
     JOIN_FACTION_PUBLIC: `CREATE PROCEDURE IF NOT EXISTS JOIN_FACTION_PUBLIC(IN p_uid INT UNSIGNED, IN p_ipString VARCHAR(39), IN p_faction_name VARCHAR(32) CHARACTER SET ascii) NOT DETERMINISTIC MODIFIES SQL DATA
@@ -692,23 +699,26 @@ BEGIN
   ) THEN
     SELECT 6 AS result;
   ELSE
-    CALL JOIN_FACTION(p_uid, p_ipString, v_fid, NULL, NULL);
+    CALL JOIN_FACTION(p_uid, p_ipString, v_fid, p_faction_name, NULL, NULL);
   END IF;
 END`,
     JOIN_FACTION_WITH_INVITE: `CREATE PROCEDURE IF NOT EXISTS JOIN_FACTION_WITH_INVITE(IN p_uid INT UNSIGNED, IN p_ipString VARCHAR(39), IN p_invite_midId VARCHAR(16) CHARACTER SET ascii) NOT DETERMINISTIC MODIFIES SQL DATA
 BEGIN
   DECLARE v_fid BIGINT UNSIGNED;
   DECLARE v_iid BIGINT UNSIGNED;
+  DECLARE v_faction_name VARCHAR(32) CHARACTER SET ascii;
   DECLARE v_is_on_time_invite TINYINT UNSIGNED;
 
-  SELECT MAX(fid), MAX(id), (MAX(flags) & ${0x01 << INVITE_FLAGS.ONE_TIME}) != 0
-    INTO v_fid, v_iid, v_is_on_time_invite
-  FROM FactionInvites WHERE midId = p_invite_midId;
+  SELECT MAX(i.fid), MAX(f.name), MAX(i.id), (MAX(i.flags) & ${0x01 << INVITE_FLAGS.ONE_TIME}) != 0
+    INTO v_fid, v_faction_name, v_iid, v_is_on_time_invite
+  FROM FactionInvites i
+    INNER JOIN Factions f ON f.id = i.fid
+  WHERE midId = p_invite_midId;
 
   IF v_fid IS NULL THEN
     SELECT 1 AS result;
   ELSE
-    CALL JOIN_FACTION(p_uid, p_ipString, v_fid, v_iid, v_is_on_time_invite);
+    CALL JOIN_FACTION(p_uid, p_ipString, v_fid, v_faction_name, v_iid, v_is_on_time_invite);
   END IF;
 END`,
     LEAVE_FACTION: `CREATE PROCEDURE IF NOT EXISTS LEAVE_FACTION(IN p_uid INT UNSIGNED, IN p_faction_name VARCHAR(32) CHARACTER SET ascii) NOT DETERMINISTIC MODIFIES SQL DATA
@@ -867,7 +877,7 @@ BEGIN
 END`,
   };
 
-  const funcVersion = 20;
+  const funcVersion = 21;
   const curVersion = Number((await sequelize.query('SELECT value FROM Configs WHERE `key`=\'functions_version\''))[0]?.[0]?.value);
   const doUpgrade = funcVersion !== curVersion;
   if (doUpgrade) {

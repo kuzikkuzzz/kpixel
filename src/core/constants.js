@@ -206,6 +206,7 @@ export const POPUP_ARGS = {
   FISH_DISPLAY: [['id', 'int']],
   BADGE_DISPLAY: [['id', 'int']],
   PLAYER: ['uri'],
+  I: ['inviteId'],
 };
 
 /*
@@ -228,6 +229,7 @@ export const AVAILABLE_POPUPS = [
   'USER',
   'SEARCH',
   'CONVERTER',
+  'I',
 ];
 
 /*

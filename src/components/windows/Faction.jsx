@@ -39,9 +39,7 @@ import {
   changeFactionRole,
   changeFaction,
 } from '../../store/actions/thunks.js';
-import {
-  applyPatches,
-} from '../../store/actions/index.js';
+import { applyPatches } from '../../store/actions/index.js';
 import { FACTION_PERMISSIONS } from '../../core/constants.js';
 import useLink from '../hooks/link.js';
 import ClipboardCopyField from '../ClipboardCopyField.jsx';
@@ -455,6 +453,7 @@ const Faction = () => {
           id: inviteId,
           isOneTime,
           createdAt: (new Date()).toLocaleString(),
+          amountUsed: 0,
         },
       ]);
     }
@@ -1566,7 +1565,7 @@ const Faction = () => {
                 <span className="checkmark" />
                 {t`Is One-Time-Invite`}
               </label>
-              <small>{t`Whether or not invite can only be used once.`}</small>
+              <small>{t`Whether or not this invite can only be used once.`}</small>
             </div>
 
             <div className="form-actions">
@@ -1602,15 +1601,19 @@ const Faction = () => {
                   { /* t: for faction invites, if it can only be used once */ }
                   <th>{t`One-Time`}</th>
                   <th>{t`created at`}</th>
+                  { /* t: column name of how many times an invite got used */ }
+                  <th>{t`times used`}</th>
                   <th>{t`Delete`}</th>
+                  <th>{t`Copy`}</th>
                 </tr>
               </thead>
               <tbody>
-                {inviteData.map(({ id, isOneTime, createdAt }) => (
+                {inviteData.map(({ id, isOneTime, createdAt, amountUsed }) => (
                   <tr key={id}>
                     <td>{id}</td>
                     <td>{isOneTime ? 'X' : ''}</td>
                     <td>{createdAt}</td>
+                    <td>{amountUsed}</td>
                     <td>
                       <button
                         type="button"
@@ -1626,6 +1629,12 @@ const Faction = () => {
                       >
                         {(confirm !== `delete-inv-${id}`) ? '🗑' : '‣'}
                       </button>
+                    </td>
+                    <td>
+                      <ClipboardCopyField
+                        hideField="true"
+                        text={window.location.origin + buildPopUpUrl('I', { inviteId: id })}
+                      />
                     </td>
                   </tr>
                 ))}

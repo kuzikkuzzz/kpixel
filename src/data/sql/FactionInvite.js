@@ -144,7 +144,7 @@ export async function deleteInvite(initiatorUid, inviteId) {
  * @param uid user id of initiator
  * @param ipString ip of initiator
  * @param inviteId midId of invite
- * @return number
+ * @return [number, factionName]
  *   0 success
  *   1 no such invite
  *   2 max factions reached
@@ -154,10 +154,10 @@ export async function deleteInvite(initiatorUid, inviteId) {
  *   6 faction not public
  *   -1 failure
  */
-export async function useInvite(uid, ipString, inviteId) {
+export async function consumeInvite(uid, ipString, inviteId) {
   try {
     const model = await sequelize.query(
-      'CALL JOIN_FACTION_WITH_INVITE(?, ?)', {
+      'CALL JOIN_FACTION_WITH_INVITE(?, ?, ?)', {
         replacements: [uid, ipString, inviteId],
         plain: true,
         type: QueryTypes.SELECT,
@@ -165,12 +165,44 @@ export async function useInvite(uid, ipString, inviteId) {
     );
     const returnCode = model?.[0]?.result;
     if (returnCode || returnCode === 0) {
-      return returnCode;
+      return [returnCode, model[0].factionName];
     }
   } catch (error) {
-    console.error('SQL Error on useInvite:', error.message);
+    console.error('SQL Error on consumeInvite:', error.message);
   }
-  return -1;
+  return [-1, null];
+}
+
+/**
+ * get data of invite
+ * @param inviteId invite id
+ * @return {
+ *   factionName,
+ *   factionTitle,
+ *   factionDescription,
+ *   avatarId,
+ *   memberCount,
+ * } | null
+ */
+export async function getInviteData(inviteId) {
+  try {
+    const model = await sequelize.query(
+      `SELECT f.name AS factionName, f.title AS factionTitle,
+f.description AS factionDescription, f.memberCount,
+CONCAT(a.shortId, ':', a.extension) AS avatarId FROM FactionInvites i
+  INNER JOIN Factions f ON i.fid = f.id
+  LEFT JOIN Media a ON a.id = f.avatar
+WHERE i.midId = ?`, {
+        replacements: [inviteId],
+        plain: true,
+        type: QueryTypes.SELECT,
+      },
+    );
+    return model;
+  } catch (error) {
+    console.error('SQL Error on getInviteData:', error.message);
+  }
+  return null;
 }
 
 /**
@@ -180,13 +212,14 @@ export async function useInvite(uid, ipString, inviteId) {
  *   id,
  *   isOneTime,
  *   createdAt,
+ *   amountUsed,
  * }, ...]
  */
 export async function getInviteInfo(sqlFid) {
   try {
     const models = await sequelize.query(
       // eslint-disable-next-line max-len
-      'SELECT midId AS id, flags, createdAt FROM FactionInvites WHERE fid = ?', {
+      'SELECT midId AS id, flags, used AS amountUsed, createdAt FROM FactionInvites WHERE fid = ?', {
         replacements: [sqlFid],
         raw: true,
         type: QueryTypes.SELECT,

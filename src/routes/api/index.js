@@ -33,6 +33,8 @@ import factionbans from './factionbans.js';
 import factioninvites from './factioninvites.js';
 import factioninvitecreate from './factioninvitecreate.js';
 import factioninvitedelete from './factioninvitedelete.js';
+import factioninviteuse from './factioninviteuse.js';
+import factioninvitedata from './factioninvitedata.js';
 import search from './search.js';
 import modtools from './modtools.js';
 import baninfo from './baninfo.js';
@@ -99,6 +101,7 @@ router.get('/me', me);
 router.post('/factioninfo', factioninfo);
 router.post('/userinfo', userinfo);
 router.post('/factionmembers', factionmembers);
+router.post('/factioninvitedata', factioninvitedata);
 
 router.use(parseDevice);
 
@@ -140,6 +143,7 @@ router.post('/factionleave', factionleave);
 router.post('/factionkickban', factionkickban);
 router.post('/factionunban', factionunban);
 
+router.post('/factioninviteuse', factioninviteuse);
 router.post('/factioninvitecreate', factioninvitecreate);
 router.post('/factioninvitedelete', factioninvitedelete);
 

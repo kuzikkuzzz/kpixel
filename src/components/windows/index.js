@@ -10,7 +10,6 @@ import Chat from './Chat.jsx';
 import Player from './Player.jsx';
 import FishDisplay from './FishDisplay.jsx';
 import BadgeDisplay from './BadgeDisplay.jsx';
-import OIDCConsent from './OIDCConsent.jsx';
 import Templates from './Templates.jsx';
 import MyFactions from './MyFactions.jsx';
 import Faction from './Faction.jsx';
@@ -23,6 +22,10 @@ const Modtools = React.lazy(() => import(/* webpackChunkName: "modtools" */ './M
 const Statistics = React.lazy(() => import(/* webpackChunkName: "stats" */ './Statistics.jsx'));
 // eslint-disable-next-line max-len
 const Converter = React.lazy(() => import(/* webpackChunkName: "stats" */ './Converter.jsx'));
+// eslint-disable-next-line max-len
+const Invite = React.lazy(() => import(/* webpackChunkName: "invite" */ './Invite.jsx'));
+// eslint-disable-next-line max-len
+const OIDCConsent = React.lazy(() => import(/* webpackChunkName: "oidc" */ './OIDCConsent.jsx'));
 
 export default {
   /*
@@ -47,12 +50,13 @@ export default {
   FACTION: [Faction, t`Faction`, true],
   USER: [User, t`User`, true],
   SEARCH: [Search, t`Search`, true],
+  I: [Invite, t`Invite`, true],
   /*
    * OIDC Consent is a very special case, because it is only available as
    * seperate popup, hoever, this is a single-page-applications, so we include
    * it everywhere.
-   * Maybe some React.lazy to lazyload things would be good, but OIDC requests
-   * shouldn't be slow.
+   * OIDC requests should not be slow, so it would be great to include its chunk
+   * at the html already.
    * It's also not in AVAILABLE_POPUPS, but rather gets served sepeartely by
    * the /oidc route and it can not work without window.ssv.params.
    *

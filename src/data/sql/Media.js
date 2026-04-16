@@ -654,8 +654,6 @@ export async function cleanMedia() {
           type: QueryTypes.DELETE,
         },
       );
-    } else {
-      console.log('No Media to delete for cleanMedia');
     }
   } catch (error) {
     console.error(`SQL Error on cleanMedia: ${error.message}`);
