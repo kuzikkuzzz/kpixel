@@ -26,7 +26,7 @@ const FactionInvite = sequelize.define('FactionInvite', {
    */
   midId: {
     type: 'VARCHAR(16) CHARACTER SET ascii COLLATE ascii_bin',
-    unique: 'midId',
+    unique: 'midid',
     allowNull: false,
   },
 
