@@ -23,7 +23,7 @@ const OIDCClient = sequelize.define('OIDCClient', {
   },
 
   name: {
-    type: DataTypes.STRING(255),
+    type: 'VARCHAR(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci',
     allowNull: false,
     unique: 'name',
   },
@@ -36,20 +36,20 @@ const OIDCClient = sequelize.define('OIDCClient', {
   },
 
   secret: {
-    type: DataTypes.CHAR(40),
+    type: 'CHAR(40) CHARACTER SET ascii COLLATE ascii_general_ci',
     allowNull: false,
     defaultValue: generateToken,
   },
 
   image: {
-    type: DataTypes.STRING(255),
+    type: 'VARCHAR(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci',
   },
 
   /*
    * space seperated list of uris
    */
   redirectUris: {
-    type: `${DataTypes.TEXT} CHARACTER SET ascii COLLATE ascii_general_ci`,
+    type: 'TEXT CHARACTER SET latin1 COLLATE latin1_swedish_ci',
     allowNull: false,
   },
 
@@ -57,8 +57,7 @@ const OIDCClient = sequelize.define('OIDCClient', {
    * max scopes that client is allowed, user then can choose a subset
    */
   scope: {
-    // eslint-disable-next-line max-len
-    type: `${DataTypes.STRING(255)} CHARACTER SET ascii COLLATE ascii_general_ci`,
+    type: 'VARCHAR(255) CHARACTER SET ascii COLLATE ascii_general_ci',
     defaultValue: 'openid profile email',
     allowNull: false,
   },
@@ -67,8 +66,7 @@ const OIDCClient = sequelize.define('OIDCClient', {
    * scopes used when no scope is given
    */
   defaultScope: {
-    // eslint-disable-next-line max-len
-    type: `${DataTypes.STRING(255)} CHARACTER SET ascii COLLATE ascii_general_ci`,
+    type: 'VARCHAR(255) CHARACTER SET ascii COLLATE ascii_general_ci',
   },
 
   /*

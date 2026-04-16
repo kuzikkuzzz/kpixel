@@ -69,6 +69,7 @@ export async function cleanDB() {
     'DELETE FROM Sessions WHERE expires < NOW()',
     'DELETE FROM WhoisReferrals WHERE expires < NOW()',
     'DELETE FROM FactionBans WHERE expires IS NOT NULL AND expires < NOW()',
+    'DELETE FROM FactionInvites WHERE expires IS NOT NULL AND expires < NOW()',
     'DELETE FROM OIDCConsents WHERE expires < NOW()',
     'DELETE FROM OIDCAccessTokens WHERE expires < NOW()',
     'DELETE FROM OIDCAuthCodes WHERE expires < NOW()',

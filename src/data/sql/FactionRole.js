@@ -40,7 +40,7 @@ const FactionRole = sequelize.define('FactionRole', {
 
   name: {
     // eslint-disable-next-line max-len
-    type: `${DataTypes.STRING(32)} CHARACTER SET ascii COLLATE ascii_general_ci`,
+    type: 'VARCHAR(32) CHARACTER SET ascii COLLATE ascii_bin',
     allowNull: false,
   },
 

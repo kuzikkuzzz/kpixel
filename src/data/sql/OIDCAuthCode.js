@@ -26,7 +26,7 @@ const OIDCAuthCode = sequelize.define('OIDCAuthCode', {
   },
 
   code: {
-    type: DataTypes.CHAR(80),
+    type: 'CHAR(80) CHARACTER SET ascii COLLATE ascii_bin',
     allowNull: false,
     unique: 'code',
     defaultValue: generateLargeToken,
@@ -36,13 +36,12 @@ const OIDCAuthCode = sequelize.define('OIDCAuthCode', {
    * scope actually approved that user (subset of scope of client)
    */
   scope: {
-    // eslint-disable-next-line max-len
-    type: `${DataTypes.STRING(255)} CHARACTER SET ascii COLLATE ascii_general_ci`,
+    type: 'VARCHAR(255) CHARACTER SET ascii COLLATE ascii_general_ci',
     allowNull: false,
   },
 
   nonce: {
-    type: DataTypes.STRING(255),
+    type: 'VARCHAR(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci',
   },
 
   authAge: {
@@ -50,11 +49,11 @@ const OIDCAuthCode = sequelize.define('OIDCAuthCode', {
   },
 
   pkceChallenge: {
-    type: DataTypes.STRING(255),
+    type: 'VARCHAR(255) CHARACTER SET latin1 COLLATE latin1_swedish_ci',
   },
 
   pkceMethod: {
-    type: DataTypes.STRING(10),
+    type: 'VARCHAR(10) CHARACTER SET ascii COLLATE ascii_general_ci',
   },
 
   createdAt: {

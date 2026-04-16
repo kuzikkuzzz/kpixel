@@ -12,7 +12,7 @@ const Profile = sequelize.define('Profile', {
    * custom flags set by user
    */
   customFlag: {
-    type: DataTypes.STRING(2),
+    type: 'CHAR(2) CHARACTER SET ascii COLLATE ascii_general_ci',
     allowNull: true,
   },
 

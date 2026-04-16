@@ -33,7 +33,7 @@ const WhoisReferral = sequelize.define('WhoisReferral', {
   },
 
   host: {
-    type: DataTypes.STRING(60),
+    type: 'VARCHAR(60) CHARACTER SET latin1 COLLATE latin1_swedish_ci',
     allowNull: false,
   },
 

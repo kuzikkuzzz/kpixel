@@ -27,22 +27,21 @@ const User = sequelize.define('User', {
 
   /* [a-zA-Z0-9._-] */
   username: {
-    // eslint-disable-next-line max-len
-    type: `${DataTypes.STRING(32)} CHARACTER SET ascii COLLATE ascii_general_ci`,
+    type: 'VARCHAR(32) CHARACTER SET ascii COLLATE ascii_bin',
     allowNull: false,
     unique: 'username',
   },
 
   // STRING is VARCHAR
   name: {
-    type: `${DataTypes.STRING(32)} CHARSET utf8mb4 COLLATE utf8mb4_unicode_ci`,
+    type: 'VARCHAR(32) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci',
     allowNull: false,
     unique: 'name',
   },
 
   // null if only ever used external oauth
   password: {
-    type: DataTypes.CHAR(60),
+    type: 'CHAR(60) CHARACTER SET ascii COLLATE ascii_bin',
     set(value) {
       if (value) this.setDataValue('password', generateHash(value));
     },
@@ -1031,7 +1030,7 @@ CONCAT(a.shortId, ':', a.extension) AS avatarId FROM Users u
 WHERE (u.flags & ?) = 0 AND (
   u.name LIKE ? OR u.username LIKE ?
 ) LIMIT 50`, {
-        replacements: [0x01 << USER_FLAGS.PRIV, sqlTerm, sqlTerm],
+        replacements: [0x01 << USER_FLAGS.PRIV, sqlTerm, sqlTerm.toLowerCase()],
         raw: true,
         type: QueryTypes.SELECT,
       },

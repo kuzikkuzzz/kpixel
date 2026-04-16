@@ -21,7 +21,7 @@ const Channel = sequelize.define('Channel', {
   },
 
   name: {
-    type: `${DataTypes.STRING(32)} CHARSET utf8mb4 COLLATE utf8mb4_unicode_ci`,
+    type: 'VARCHAR(32) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci',
     allowNull: true,
     set(value) {
       this.setDataValue('name', value.slice(0, 32));

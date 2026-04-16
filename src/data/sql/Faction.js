@@ -25,20 +25,18 @@ const Faction = sequelize.define('Faction', {
 
   /* [a-zA-Z0-9._-] */
   name: {
-    // eslint-disable-next-line max-len
-    type: `${DataTypes.STRING(32)} CHARACTER SET ascii COLLATE ascii_general_ci`,
+    type: 'VARCHAR(32) CHARACTER SET ascii COLLATE ascii_bin',
     allowNull: false,
     unique: 'name',
   },
 
   title: {
-    type: `${DataTypes.STRING(32)} CHARSET utf8mb4 COLLATE utf8mb4_unicode_ci`,
+    type: 'VARCHAR(32) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci',
     allowNull: false,
   },
 
   description: {
-    // eslint-disable-next-line max-len
-    type: `${DataTypes.STRING(1000)} CHARSET utf8mb4 COLLATE utf8mb4_unicode_ci`,
+    type: 'VARCHAR(1000) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci',
     defaultValue: '',
     allowNull: false,
   },
@@ -768,7 +766,7 @@ WHERE (f.flags & ?) = 0 AND (
 ) LIMIT 50`, {
         replacements: [
           0x01 << FACTION_FLAGS.PUBLIC, 0x01 << FACTION_FLAGS.PRIV,
-          sqlTerm, sqlTerm, sqlTerm,
+          sqlTerm.toLowerCase(), sqlTerm, sqlTerm,
         ],
         raw: true,
         type: QueryTypes.SELECT,

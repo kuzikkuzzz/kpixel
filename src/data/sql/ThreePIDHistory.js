@@ -25,12 +25,12 @@ const ThreePIDHistory = sequelize.define('ThreePIDHistory', {
   },
 
   tpid: {
-    type: DataTypes.STRING(80),
+    type: 'VARCHAR(80) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci',
     allowNull: false,
   },
 
   normalizedTpid: {
-    type: DataTypes.STRING(80),
+    type: 'VARCHAR(80) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci',
   },
 
   verified: {

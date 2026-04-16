@@ -26,7 +26,7 @@ const ThreePID = sequelize.define('ThreePID', {
   },
 
   tpid: {
-    type: DataTypes.STRING(80),
+    type: 'VARCHAR(80) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci',
     allowNull: false,
   },
 
@@ -38,7 +38,7 @@ const ThreePID = sequelize.define('ThreePID', {
      * that.
      */
     // eslint-disable-next-line max-len
-    type: 'VARCHAR(80) GENERATED ALWAYS AS (CASE WHEN provider != 1 THEN NULL WHEN LOCATE(\'@\', tpid) = 0 THEN NULL ELSE LOWER(CONCAT(REPLACE(SUBSTRING_INDEX(SUBSTRING_INDEX(tpid, \'@\', 1), \'+\', 1), \'.\', \'\'),\'@\',(SUBSTRING_INDEX(tpid, \'@\', -1)))) END) STORED',
+    type: 'VARCHAR(80) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci GENERATED ALWAYS AS (CASE WHEN provider != 1 THEN NULL WHEN LOCATE(\'@\', tpid) = 0 THEN NULL ELSE LOWER(CONCAT(REPLACE(SUBSTRING_INDEX(SUBSTRING_INDEX(tpid, \'@\', 1), \'+\', 1), \'.\', \'\'),\'@\',(SUBSTRING_INDEX(tpid, \'@\', -1)))) END) STORED',
   },
 
   verified: {

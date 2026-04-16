@@ -2,19 +2,19 @@
  * table for shared states and config, that are not updated frequently, but
  * needed often (so cached in memory)
  */
-import { DataTypes, QueryTypes } from 'sequelize';
+import { QueryTypes } from 'sequelize';
 
 import sequelize from './sequelize.js';
 
 const Config = sequelize.define('Config', {
   key: {
-    type: DataTypes.STRING(32),
+    type: 'VARCHAR(32) CHARACTER SET ascii COLLATE ascii_bin',
     primaryKey: true,
   },
 
   // JSON string
   value: {
-    type: DataTypes.STRING(200),
+    type: 'VARCHAR(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin',
   },
 });
 

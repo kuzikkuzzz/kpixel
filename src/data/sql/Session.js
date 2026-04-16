@@ -17,13 +17,13 @@ const Session = sequelize.define('Session', {
   },
 
   token: {
-    type: DataTypes.CHAR(38),
+    type: 'CHAR(38) CHARACTER SET ascii COLLATE ascii_bin',
     allowNull: false,
     unique: 'token',
   },
 
   country: {
-    type: DataTypes.CHAR(2),
+    type: 'CHAR(2) CHARACTER SET ascii COLLATE ascii_general_ci',
     defaultValue: 'xx',
     allowNull: false,
   },

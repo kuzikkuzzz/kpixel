@@ -10,25 +10,25 @@ const Device = sequelize.define('Device', {
   },
 
   hash: {
-    type: `${DataTypes.CHAR(15)} CHARACTER SET ascii COLLATE ascii_general_ci`,
+    type: 'CHAR(15) CHARACTER SET ascii COLLATE ascii_bin',
     allowNull: false,
     unique: 'hash',
   },
 
   os: {
-    type: DataTypes.STRING(20),
+    type: 'VARCHAR(20) CHARACTER SET ascii COLLATE ascii_general_ci',
   },
 
   browser: {
-    type: DataTypes.STRING(20),
+    type: 'VARCHAR(20) CHARACTER SET ascii COLLATE ascii_general_ci',
   },
 
   device: {
-    type: DataTypes.STRING(20),
+    type: 'VARCHAR(20) CHARACTER SET ascii COLLATE ascii_general_ci',
   },
 
   headerSig: {
-    type: `${DataTypes.CHAR(12)} CHARACTER SET ascii COLLATE ascii_general_ci`,
+    type: 'CHAR(12) CHARACTER SET ascii COLLATE ascii_bin',
     allowNull: false,
   },
 

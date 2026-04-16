@@ -140,6 +140,10 @@ export const FACTION_FLAGS = {
   PUBLIC: 1,
 };
 
+export const INVITE_FLAGS = {
+  ONE_TIME: 0,
+};
+
 export const USER_FACTION_FLAGS = {
   HIDDEN: 0,
 };

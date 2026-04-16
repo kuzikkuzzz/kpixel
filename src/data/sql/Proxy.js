@@ -23,7 +23,7 @@ const ProxyData = sequelize.define('Proxy', {
    * or it not proxy: Residential, Wireless, Business
    */
   type: {
-    type: DataTypes.STRING(20),
+    type: 'VARCHAR(20) CHARACTER SET latin1 COLLATE latin1_swedish_ci',
     set(value) {
       if (value) this.setDataValue('type', value.slice(0, 20));
     },
@@ -33,14 +33,14 @@ const ProxyData = sequelize.define('Proxy', {
    * operator of vpn if available
    */
   operator: {
-    type: `${DataTypes.STRING(60)} CHARSET utf8mb4 COLLATE utf8mb4_unicode_ci`,
+    type: 'VARCHAR(60) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci',
   },
 
   /*
    * city of ip
    */
   city: {
-    type: `${DataTypes.STRING(60)} CHARSET utf8mb4 COLLATE utf8mb4_unicode_ci`,
+    type: 'VARCHAR(60) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci',
   },
 
   /*

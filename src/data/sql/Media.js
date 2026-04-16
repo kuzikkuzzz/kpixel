@@ -25,17 +25,17 @@ const Media = sequelize.define('Media', {
    * short identifier for file, will be 6 chars usually, but can be more
    */
   shortId: {
-    type: DataTypes.STRING(16),
+    type: 'VARCHAR(16) CHARACTER SET ascii COLLATE ascii_bin',
     allowNull: false,
   },
 
   extension: {
-    type: DataTypes.STRING(12),
+    type: 'VARCHAR(12) CHARACTER SET ascii COLLATE ascii_bin',
     allowNull: false,
   },
 
   mimeType: {
-    type: DataTypes.STRING(255),
+    type: 'VARCHAR(255) CHARACTER SET ascii COLLATE ascii_bin',
     allowNull: false,
   },
 
@@ -44,7 +44,7 @@ const Media = sequelize.define('Media', {
    */
   type: {
     // eslint-disable-next-line max-len
-    type: 'VARCHAR(128) GENERATED ALWAYS AS (SUBSTR(mimeType, 1, INSTR(mimeType, \'/\') - 1)) VIRTUAL',
+    type: 'VARCHAR(128) CHARACTER SET ascii COLLATE ascii_bin GENERATED ALWAYS AS (SUBSTR(mimeType, 1, INSTR(mimeType, \'/\') - 1)) VIRTUAL',
   },
 
   /*

@@ -9,6 +9,7 @@ import Sequelize from 'sequelize';
 import {
   FACTION_FLAGS, CHANNEL_TYPES, FACTION_PERMISSIONS, FACTION_ROLE_FLAGS,
   MAX_ROLES_PER_FACTION, MAX_FACTIONS_PER_USER, MAX_OWNED_FACTIONS_PER_USER,
+  INVITE_FLAGS,
 } from '../../core/constants.js';
 import {
   MARIADB_HOST, MARIADB_DATABASE, MARIADB_USER, MARIADB_PW, LOG_MARIADB,
@@ -255,7 +256,7 @@ BEGIN
         SUBSTR(hex_uuid, 21, 12)
     ));
 END`,
-    STORE_CHAT_MESSAGE: `CREATE PROCEDURE IF NOT EXISTS STORE_CHAT_MESSAGE(IN p_cid INT UNSIGNED, IN p_uid INT UNSIGNED, IN p_message VARCHAR(200) CHARSET utf8mb4) NOT DETERMINISTIC MODIFIES SQL DATA
+    STORE_CHAT_MESSAGE: `CREATE PROCEDURE IF NOT EXISTS STORE_CHAT_MESSAGE(IN p_cid INT UNSIGNED, IN p_uid INT UNSIGNED, IN p_message VARCHAR(200) CHARACTER SET utf8mb4) NOT DETERMINISTIC MODIFIES SQL DATA
 BEGIN
   UPDATE Channels SET lastMessage = NOW() WHERE id = p_cid;
   INSERT INTO Messages (message, uid, cid, createdAt) VALUES (p_message, p_uid, p_cid, NOW());
@@ -268,7 +269,7 @@ BEGIN
 END`,
     CREATE_FACTION: `CREATE PROCEDURE IF NOT EXISTS CREATE_FACTION(
   IN p_uid INT UNSIGNED,
-  IN p_name VARCHAR(32) CHARACTER SET ascii COLLATE ascii_general_ci,
+  IN p_name VARCHAR(32) CHARACTER SET ascii COLLATE ascii_bin,
   IN p_title VARCHAR(32) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
   IN p_description VARCHAR(1000) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
   IN p_flags TINYINT UNSIGNED,
@@ -356,7 +357,7 @@ END`,
     CREATE_FACTION_ROLE: `CREATE PROCEDURE IF NOT EXISTS CREATE_FACTION_ROLE(
   IN p_faction_uuid CHAR(36),
   IN p_factionrole_uuid CHAR(36),
-  IN p_name VARCHAR(32) CHARACTER SET ascii COLLATE ascii_general_ci,
+  IN p_name VARCHAR(32) CHARACTER SET ascii COLLATE ascii_bin,
   IN p_factionlvl TINYINT SIGNED,
   IN p_custom_flag_id VARCHAR(29),
   IN p_flags TINYINT UNSIGNED
@@ -507,7 +508,7 @@ BEGIN
     END IF;
   END IF;
 END`,
-    JOIN_FACTION: `CREATE PROCEDURE IF NOT EXISTS JOIN_FACTION(IN p_uid INT UNSIGNED, IN p_ipString VARCHAR(39), IN p_fid BIGINT UNSIGNED) NOT DETERMINISTIC MODIFIES SQL DATA
+    JOIN_FACTION: `CREATE PROCEDURE IF NOT EXISTS JOIN_FACTION(IN p_uid INT UNSIGNED, IN p_ipString VARCHAR(39), IN p_fid BIGINT UNSIGNED, IN p_invite_id BIGINT UNSIGNED, IN p_is_on_time_invite TINYINT UNSIGNED) NOT DETERMINISTIC MODIFIES SQL DATA
 BEGIN
   DECLARE v_ip VARBINARY(8);
   DECLARE v_joined_count INT UNSIGNED;
@@ -556,6 +557,14 @@ BEGIN
     ) AND fid = p_fid;
     UPDATE Factions SET memberCount = memberCount + 1 WHERE id = p_fid;
 
+    IF p_invite_id IS NOT NULL THEN
+      IF p_is_on_time_invite != 0 THEN
+        DELETE FROM FactionInvites WHERE id = p_invite_id;
+      ELSE
+        UPDATE FactionInvites SET used = used + 1 WHERE id = p_invite_id;
+      END IF;
+    END IF;
+
     COMMIT;
     SELECT 0 AS result;
   END IF;
@@ -572,7 +581,23 @@ BEGIN
   ) THEN
     SELECT 6 AS result;
   ELSE
-    CALL JOIN_FACTION(p_uid, p_ipString, v_fid);
+    CALL JOIN_FACTION(p_uid, p_ipString, v_fid, NULL, NULL);
+  END IF;
+END`,
+    JOIN_FACTION_WITH_INVITE: `CREATE PROCEDURE IF NOT EXISTS JOIN_FACTION_WITH_INVITE(IN p_uid INT UNSIGNED, IN p_ipString VARCHAR(39), IN p_invite_midId VARCHAR(16)) NOT DETERMINISTIC MODIFIES SQL DATA
+BEGIN
+  DECLARE v_fid BIGINT UNSIGNED;
+  DECLARE v_iid BIGINT UNSIGNED;
+  DECLARE v_is_on_time_invite TINYINT UNSIGNED;
+
+  SELECT MAX(fid), MAX(id), (MAX(flags) & ${0x01 << INVITE_FLAGS.ONE_TIME}) != 0
+    INTO v_fid, v_iid, v_is_on_time_invite
+  FROM FactionInvites WHERE midId = p_invite_midId;
+
+  IF v_fid IS NULL THEN
+    SELECT 1 AS result;
+  ELSE
+    CALL JOIN_FACTION(p_uid, p_ipString, v_fid, v_iid, v_is_on_time_invite);
   END IF;
 END`,
     LEAVE_FACTION: `CREATE PROCEDURE IF NOT EXISTS LEAVE_FACTION(IN p_uid INT UNSIGNED, IN p_faction_uuid CHAR(36)) NOT DETERMINISTIC MODIFIES SQL DATA
@@ -731,7 +756,7 @@ BEGIN
 END`,
   };
 
-  const funcVersion = 17;
+  const funcVersion = 18;
   const curVersion = Number((await sequelize.query('SELECT value FROM Configs WHERE `key`=\'functions_version\''))[0]?.[0]?.value);
   const doUpgrade = funcVersion !== curVersion;
   if (doUpgrade) {

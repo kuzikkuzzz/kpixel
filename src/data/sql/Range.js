@@ -35,7 +35,7 @@ const RangeData = sequelize.define('Range', {
   },
 
   country: {
-    type: DataTypes.CHAR(2),
+    type: 'CHAR(2) CHARACTER SET ascii COLLATE ascii_general_ci',
     defaultValue: 'xx',
     allowNull: false,
     set(value) {
@@ -47,14 +47,14 @@ const RangeData = sequelize.define('Range', {
   },
 
   org: {
-    type: `${DataTypes.STRING(60)} CHARSET utf8mb4 COLLATE utf8mb4_unicode_ci`,
+    type: 'VARCHAR(60) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci',
     set(value) {
       if (value) this.setDataValue('org', value.slice(0, 60));
     },
   },
 
   descr: {
-    type: `${DataTypes.STRING(60)} CHARSET utf8mb4 COLLATE utf8mb4_unicode_ci`,
+    type: 'VARCHAR(60) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci',
     set(value) {
       if (value) this.setDataValue('descr', value.slice(0, 60));
     },

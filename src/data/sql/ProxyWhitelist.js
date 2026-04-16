@@ -9,7 +9,7 @@ const ProxyWhitelist = sequelize.define('ProxyWhitelist', {
   },
 
   reason: {
-    type: `${DataTypes.STRING(200)} CHARSET utf8mb4 COLLATE utf8mb4_unicode_ci`,
+    type: 'VARCHAR(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci',
     set(value) {
       this.setDataValue('reason', value.slice(0, 200));
     },

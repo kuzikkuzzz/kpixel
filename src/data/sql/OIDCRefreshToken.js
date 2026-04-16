@@ -25,15 +25,14 @@ const OIDCRefreshToken = sequelize.define('OIDCRefreshToken', {
   },
 
   token: {
-    type: DataTypes.CHAR(80),
+    type: 'CHAR(80) CHARACTER SET ascii COLLATE ascii_bin',
     allowNull: false,
     unique: 'token',
     defaultValue: generateLargeToken,
   },
 
   scope: {
-    // eslint-disable-next-line max-len
-    type: `${DataTypes.STRING(255)} CHARACTER SET ascii COLLATE ascii_general_ci`,
+    type: 'VARCHAR(255) CHARACTER SET ascii COLLATE ascii_general_ci',
     allowNull: false,
   },
 

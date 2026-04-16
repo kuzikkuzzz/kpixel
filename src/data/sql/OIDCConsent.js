@@ -35,8 +35,7 @@ const OIDCConsent = sequelize.define('OIDCConsent', {
    * space seperated list
    */
   scope: {
-    // eslint-disable-next-line max-len
-    type: `${DataTypes.STRING(255)} CHARACTER SET ascii COLLATE ascii_general_ci`,
+    type: 'VARCHAR(255) CHARACTER SET ascii COLLATE ascii_general_ci',
     allowNull: false,
   },
 
