@@ -256,11 +256,23 @@ BEGIN
         SUBSTR(hex_uuid, 21, 12)
     ));
 END`,
+    /**
+     * store chat message,
+     * return the inserted message id or 0 if the channel doesn't exist
+     * @param p_cid channel id
+     * @param p_uid user id
+     * @param p_message message
+     */
     STORE_CHAT_MESSAGE: `CREATE PROCEDURE IF NOT EXISTS STORE_CHAT_MESSAGE(IN p_cid INT UNSIGNED, IN p_uid INT UNSIGNED, IN p_message VARCHAR(200) CHARACTER SET utf8mb4) NOT DETERMINISTIC MODIFIES SQL DATA
 BEGIN
   UPDATE Channels SET lastMessage = NOW() WHERE id = p_cid;
-  INSERT INTO Messages (message, uid, cid, createdAt) VALUES (p_message, p_uid, p_cid, NOW());
-  SELECT LAST_INSERT_ID() AS id;
+
+  IF ROW_COUNT() = 0 THEN
+    SELECT 0 AS id;
+  ELSE
+    INSERT INTO Messages (message, uid, cid, createdAt) VALUES (p_message, p_uid, p_cid, NOW());
+    SELECT LAST_INSERT_ID() AS id;
+  END IF;
 END`,
     STORE_FISH: `CREATE PROCEDURE IF NOT EXISTS STORE_FISH(IN p_uid INT UNSIGNED, IN p_type TINYINT UNSIGNED, IN p_size FLOAT) NOT DETERMINISTIC MODIFIES SQL DATA
 BEGIN
@@ -877,7 +889,7 @@ BEGIN
 END`,
   };
 
-  const funcVersion = 21;
+  const funcVersion = 23;
   const curVersion = Number((await sequelize.query('SELECT value FROM Configs WHERE `key`=\'functions_version\''))[0]?.[0]?.value);
   const doUpgrade = funcVersion !== curVersion;
   if (doUpgrade) {

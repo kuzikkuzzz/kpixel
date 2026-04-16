@@ -22,13 +22,6 @@ async function leaveChan(req, res) {
     return;
   }
 
-  if (!user.hasChannel(channelId)) {
-    res.status(401).json({
-      errors: ['You are not in this channel'],
-    });
-    return;
-  }
-
   const affectedUsers = await leaveChannel(user.id, channelId);
 
   if (!affectedUsers) {

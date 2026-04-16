@@ -329,13 +329,12 @@ export async function requestSolveCaptcha(text, captchaid) {
 export async function requestHistoricalTimes(day, canvasId, controller) {
   try {
     const date = dateToString(day);
-    // Not going over shard url
-    const url = api`/history?day=${date}&id=${canvasId}`;
-    const response = await fetchWithTimeout(url, {
-      credentials: 'omit',
-      timeout: 45000,
-      signal: controller.signal,
-    });
+    const response = await fetch(
+      api`/history?day=${date}&id=${canvasId}`, {
+        credentials: 'omit',
+        signal: controller.signal,
+      },
+    );
     if (response.status !== 200) {
       return [];
     }
@@ -349,12 +348,17 @@ export async function requestHistoricalTimes(day, canvasId, controller) {
 export async function requestChatMessages(cid, controller) {
   try {
     const response = await fetch(
-      api`/api/chathistory?cid=${cid}&limit=50`,
-      {
+      api`/api/chathistory?cid=${cid}&limit=50`, {
         credentials: 'include',
         signal: controller.signal,
       },
     );
+    if (response.status === 403) {
+      /*
+       * in case of requesting a non-existing channel
+       */
+      return [];
+    }
     if (response.ok) {
       const { history } = await response.json();
       return history;

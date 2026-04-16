@@ -98,9 +98,7 @@ export async function cleanDB() {
   }
   if (Math.random() < 0.1) {
     /*
-     * delete all messages except the most recent 1000 per channel,
-     * this is highly database specific, that query is for MySQL 8+ and
-     * seems to work on MariaDB as well
+     * delete all messages except the most recent 1000 per channel
      */
     try {
       await sequelize.query(`DELETE m FROM Messages m
@@ -118,6 +116,29 @@ WHERE keep.id IS NULL`, {
     } catch (error) {
       console.error(
         `SQL Error on clean-up messages : ${error.message}`,
+      );
+    }
+  } else if (Math.random() < 0.555) {
+    /*
+     * delete dm channels where nobody wrote anything,
+     * we deal with users writing in dead channels in
+     * ../../core/ChatProvider.js:427
+     * ../../routes/api/chathistory.js
+     */
+    try {
+      await sequelize.query(`DELETE FROM Channels
+WHERE type = ${CHANNEL_TYPES.DM}
+  AND createdAt < NOW() - INTERVAL 1 HOUR
+  AND NOT EXISTS (
+    SELECT 1 FROM Messages m WHERE m.cid = Channels.id LIMIT 1
+  )`, {
+        raw: true,
+        type: QueryTypes.DELETE,
+      },
+      );
+    } catch (error) {
+      console.error(
+        `SQL Error on clean-up dm channels : ${error.message}`,
       );
     }
   }

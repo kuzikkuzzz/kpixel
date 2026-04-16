@@ -172,7 +172,9 @@ const Chat = () => {
       if (cid === chatChannel) {
         return;
       }
-      controller.abort();
+      if (!controller.signal.aborted) {
+        controller.abort();
+      }
     }
 
     const fetchHistory = async () => {
@@ -189,6 +191,16 @@ const Chat = () => {
     fetchHistory();
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [chatChannel, messages, channelName, channelViews]);
+
+  useEffect(() => () => {
+    // cancel history fetches
+    if (historyFetchRef.current) {
+      const { controller } = historyFetchRef.current;
+      if (!controller.signal.aborted) {
+        controller.abort();
+      }
+    }
+  }, []);
 
   useLayoutEffect(() => {
     stayScrolled();

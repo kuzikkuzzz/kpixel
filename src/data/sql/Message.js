@@ -81,7 +81,7 @@ export async function storeMessage(message, cid, uid) {
       );
       const id = model[0]?.id;
       if (!id) {
-        throw new Error('no_id');
+        throw new Error('no_such_channel');
       }
 
       const attachments = [];
@@ -133,6 +133,9 @@ WHERE mm.sid = ?`, {
       throw error;
     }
   } catch (error) {
+    if (error.message === 'no_such_channel') {
+      throw error;
+    }
     console.error(`SQL Error on storeMessage: ${error.message}`);
     throw new Error('store_error');
   }

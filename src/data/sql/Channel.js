@@ -170,8 +170,12 @@ WHERE c.id = ? AND uc.uid = ?`, {
         type: QueryTypes.SELECT,
       },
     );
+    const affectedUsers = [uid];
     if (!model) {
-      return null;
+      /*
+       * if channel doesnt exist, pretend that we left it
+       */
+      return affectedUsers;
     }
     const { type, memberAmount } = model;
     /*
@@ -183,7 +187,6 @@ WHERE c.id = ? AND uc.uid = ?`, {
     /*
      * delete whole channel if only one person or nobody would be left
      */
-    const affectedUsers = [uid];
     if (memberAmount === 2) {
       const partnerModel = await sequelize.query(
         'SELECT uid FROM UserChannels WHERE cid = ? and uid != ?', {

@@ -3,7 +3,7 @@
  */
 import logger from './logger.js';
 import RateLimiter from '../utils/RateLimiter.js';
-import { USERLVL } from '../data/sql/index.js';
+import { USERLVL, CHANNEL_TYPES } from '../data/sql/index.js';
 import {
   findIdByNameOrId, getDummyUser, getLastIPOfUser,
 } from '../data/sql/User.js';
@@ -418,6 +418,18 @@ export class ChatProvider {
           return t`You can\'t send a message this long :(`;
         case 'too_many_files':
           return t`You attached too many files`;
+        case 'no_such_channel': {
+          /*
+           * channel is deleted, remove it from user,
+           * assume its DM, because that is what we clear regularly,
+           * the patch doesn't matter if its not
+           */
+          socketEvents.patchUserState(id, 'chat', {
+            op: 'del',
+            path: `channels.${CHANNEL_TYPES.DM}[0:${channelId}]`,
+          });
+          return null;
+        }
         default:
           return 'Server Error';
       }
