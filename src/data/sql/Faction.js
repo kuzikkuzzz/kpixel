@@ -17,12 +17,6 @@ const Faction = sequelize.define('Faction', {
     primaryKey: true,
   },
 
-  uuid: {
-    type: 'BINARY(16)',
-    allowNull: false,
-    unique: 'uuid',
-  },
-
   /* [a-zA-Z0-9._-] */
   name: {
     type: 'VARCHAR(32) CHARACTER SET ascii COLLATE ascii_bin',
@@ -755,7 +749,7 @@ WHERE fb.fid = ?`, {
 export async function searchFaction(term) {
   try {
     const sqlTerm = `%${term}%`;
-    const model = await sequelize.query(
+    const models = await sequelize.query(
       `SELECT BIN_TO_UUID(f.uuid) AS fid, f.name, f.title, f.description,
 f.memberCount,
 (f.flags & ?) != 0 AS isPublic,
@@ -772,12 +766,12 @@ WHERE (f.flags & ?) = 0 AND (
         type: QueryTypes.SELECT,
       },
     );
-    if (model) {
-      for (let i = 0; i < model.length; i += 1) {
-        const faction = model[i];
+    if (models) {
+      for (let i = 0; i < models.length; i += 1) {
+        const faction = models[i];
         faction.isPublic = faction.isPublic === 1;
       }
-      return model;
+      return models;
     }
   } catch (error) {
     console.error('SQL Error on searchFaction:', error.message);

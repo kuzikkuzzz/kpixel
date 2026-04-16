@@ -56,6 +56,7 @@ ALTER TABLE Devices MODIFY browser varchar(20) CHARACTER SET ascii COLLATE ascii
 ALTER TABLE Devices MODIFY device varchar(20) CHARACTER SET ascii COLLATE ascii_general_ci;
 ALTER TABLE Devices MODIFY headerSig char(12) CHARACTER SET ascii COLLATE ascii_bin NOT NULL;
 
+ALTER TABLE Factions DROP COLUMN IF EXISTS uuid;
 ALTER TABLE Factions MODIFY name varchar(32) CHARACTER SET ascii COLLATE ascii_bin NOT NULL;
 ALTER TABLE Factions MODIFY title varchar(32) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL;
 ALTER TABLE Factions MODIFY description varchar(1000) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL;

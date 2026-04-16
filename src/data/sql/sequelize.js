@@ -508,6 +508,66 @@ BEGIN
     END IF;
   END IF;
 END`,
+    CREATE_FACTION_INVITE: `CREATE PROCEDURE IF NOT EXISTS CREATE_FACTION_INVITE(IN p_initiator_uid INT UNSIGNED, IN p_faction_name VARCHAR(32) CHARACTER SET ascii, IN p_midId CHARACTER SET ascii, IN p_flags TINYINT UNSIGNED, IN p_expires DATETIME) NOT DETERMINISTIC MODIFIES SQL DATA
+BEGIN
+  DECLARE v_fid BIGINT UNSIGNED;
+  DECLARE v_initiator_powerlvl TINYINT;
+
+  SELECT MAX(id) INTO v_fid FROM Factions WHERE name = p_faction_name;
+
+  IF v_fid IS NULL THEN
+    SELECT 1 AS result;
+  ELSEIF NOT EXISTS(
+    SELECT 1 FROM UserFactions WHERE uid = p_initiator_uid AND fid = v_fid LIMIT 1
+  ) THEN
+    SELECT 2 AS result;
+  ELSE
+    SELECT IFNULL(MAX(factionlvl), 0) INTO v_initiator_powerlvl FROM FactionRoles fr
+      INNER JOIN UserFactionRoles ufr ON ufr.frid = fr.id
+    WHERE fr.fid = v_fid AND ufr.uid = p_initiator_uid;
+
+    IF v_initiator_powerlvl < ${FACTION_PERMISSIONS.MANAGE_INVITES} THEN
+      SELECT 3 AS result;
+    IF EXISTS(
+      SELECT 1 FROM FactionInvites WHERE midId = p_midId
+    ) THEN
+      SELECT 4 AS result;
+    ELSE
+      INSERT INTO FactionInvites (
+        fid, midId, flags, expires, used, createdAt
+      ) VALUES (
+        v_fid, p_midId, p_flags, p_expires, 0, NOW()
+      );
+      SELECT 0 AS result;
+    END IF;
+  END IF;
+END`,
+    DELETE_FACTION_INVITE: `CREATE PROCEDURE IF NOT EXISTS DELETE_FACTION_INVITE(IN p_initiator_uid INT UNSIGNED, IN p_midId CHARACTER SET ascii) NOT DETERMINISTIC MODIFIES SQL DATA
+BEGIN
+  DECLARE v_fid BIGINT UNSIGNED;
+  DECLARE v_initiator_powerlvl TINYINT;
+
+  SELECT MAX(fid) INTO v_fid FROM FactionInvites WHERE midId = p_midId;
+
+  IF v_fid IS NULL THEN
+    SELECT 1 AS result;
+  ELSEIF NOT EXISTS(
+    SELECT 1 FROM UserFactions WHERE uid = p_initiator_uid AND fid = v_fid LIMIT 1
+  ) THEN
+    SELECT 2 AS result;
+  ELSE
+    SELECT IFNULL(MAX(factionlvl), 0) INTO v_initiator_powerlvl FROM FactionRoles fr
+      INNER JOIN UserFactionRoles ufr ON ufr.frid = fr.id
+    WHERE fr.fid = v_fid AND ufr.uid = p_initiator_uid;
+
+    IF v_initiator_powerlvl < ${FACTION_PERMISSIONS.MANAGE_INVITES} THEN
+      SELECT 3 AS result;
+    ELSE
+      DELETE FROM FactionInvites WHERE midId = p_midId;
+      SELECT 0 AS result;
+    END IF;
+  END IF;
+END`,
     JOIN_FACTION: `CREATE PROCEDURE IF NOT EXISTS JOIN_FACTION(IN p_uid INT UNSIGNED, IN p_ipString VARCHAR(39), IN p_fid BIGINT UNSIGNED, IN p_invite_id BIGINT UNSIGNED, IN p_is_on_time_invite TINYINT UNSIGNED) NOT DETERMINISTIC MODIFIES SQL DATA
 BEGIN
   DECLARE v_ip VARBINARY(8);
@@ -584,7 +644,7 @@ BEGIN
     CALL JOIN_FACTION(p_uid, p_ipString, v_fid, NULL, NULL);
   END IF;
 END`,
-    JOIN_FACTION_WITH_INVITE: `CREATE PROCEDURE IF NOT EXISTS JOIN_FACTION_WITH_INVITE(IN p_uid INT UNSIGNED, IN p_ipString VARCHAR(39), IN p_invite_midId VARCHAR(16)) NOT DETERMINISTIC MODIFIES SQL DATA
+    JOIN_FACTION_WITH_INVITE: `CREATE PROCEDURE IF NOT EXISTS JOIN_FACTION_WITH_INVITE(IN p_uid INT UNSIGNED, IN p_ipString VARCHAR(39), IN p_invite_midId VARCHAR(16) CHARACTER SET ascii) NOT DETERMINISTIC MODIFIES SQL DATA
 BEGIN
   DECLARE v_fid BIGINT UNSIGNED;
   DECLARE v_iid BIGINT UNSIGNED;
