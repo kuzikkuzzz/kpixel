@@ -8,15 +8,15 @@ import { CHANNEL_TYPES } from '../../core/constants.js';
 
 export default async function factionleave(req, res) {
   req.tickRateLimiter(2000);
-  const { ttag: { t }, user, body: { fid } } = req;
+  const { ttag: { t }, user, body: { name } } = req;
 
-  if (!fid || typeof fid !== 'string') {
+  if (!name || typeof name !== 'string') {
     throw new Error('No faction given');
   }
 
   const [[leaveRet, hadRoleActive], factionInfo] = await Promise.all([
-    leaveFaction(user.id, fid),
-    getFactionInfo(fid),
+    leaveFaction(user.id, name),
+    getFactionInfo(name),
   ]);
   switch (leaveRet) {
     case 0:
@@ -45,7 +45,7 @@ export default async function factionleave(req, res) {
 
   const profilePatch = {
     op: 'del',
-    path: `factions[fid:${fid}]`,
+    path: `factions[name:${name}]`,
     value: factionInfo,
   };
   socketEvents.patchUserState(user.id, 'profile', profilePatch);
@@ -61,7 +61,7 @@ export default async function factionleave(req, res) {
     patches.push(['profile', activeProfilePatch]);
   }
 
-  logger.info(`User ${user.id} left faction ${factionInfo.name}`);
+  logger.info(`User ${user.id} left faction ${name}`);
   res.json({
     status: 'ok',
     patches,

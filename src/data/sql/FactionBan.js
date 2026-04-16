@@ -118,19 +118,19 @@ export async function banUserFromFaction(
 
 /**
  * unban user
- * @param fid uuid of faction
+ * @param factionName name of faction
  * @param fbid uuid of faction ban
  * @return success
  */
-export async function unbanFromFaction(fid, fbid) {
+export async function unbanFromFaction(factionName, fbid) {
   try {
     await sequelize.query(
       /* eslint-disable max-len */
       `DELETE FROM FactionBans WHERE uuid = UUID_TO_BIN(?) AND EXISTS(
-  SELECT id FROM Factions f WHERE f.id = FactionBans.fid AND f.uuid = UUID_TO_BIN(?)
+  SELECT id FROM Factions f WHERE f.id = FactionBans.fid AND f.name = ?)
 )`, {
         /* eslint-enable max-len */
-        replacements: [fbid, fid],
+        replacements: [fbid, factionName],
         raw: true,
         type: QueryTypes.DELETE,
       },

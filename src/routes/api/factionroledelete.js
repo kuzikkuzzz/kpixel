@@ -14,7 +14,7 @@ export default async function factionroledelete(req, res) {
   }
 
   const [
-    deleteRet, fid, affectedUsers, affectedActiveRoleUsers,
+    deleteRet, factionName, affectedUsers, affectedActiveRoleUsers,
   ] = await deleteFactionRole(user.id, frid);
   switch (deleteRet) {
     case 0:
@@ -39,7 +39,7 @@ export default async function factionroledelete(req, res) {
 
   const profilePatch = {
     op: 'del',
-    path: `factions[fid:${fid}].roles[frid:${frid}]`,
+    path: `factions[name:${factionName}].roles[frid:${frid}]`,
   };
   const patches = [['profile', profilePatch]];
 

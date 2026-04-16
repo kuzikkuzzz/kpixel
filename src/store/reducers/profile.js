@@ -5,7 +5,6 @@ const initialState = {
   badges: [],
   /*
    * [{
-   *     fid,
    *     name,
    *     title,
    *     description,

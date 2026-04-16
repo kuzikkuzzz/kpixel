@@ -178,13 +178,15 @@ export function changeUserFaction(userFactionChanges) {
     }
     fetchStates.changeUserFaction = true;
 
-    const { fid } = userFactionChanges;
-    const state = getState().profile.factions.find((f) => f.fid === fid);
+    const { factionName } = userFactionChanges;
+    const state = getState().profile.factions.find(
+      (f) => f.name === factionName,
+    );
     const revertOperations = [];
     if (state) {
       for (const [key, value] of Object.entries(userFactionChanges)) {
-        if (key !== 'fid') {
-          const path = `factions[fid:${fid}].${key}`;
+        if (key !== 'factionName') {
+          const path = `factions[name:${factionName}].${key}`;
           revertOperations.push([path, state[key]]);
           dispatch(patchState('profile', 'setex', path, value));
         }
@@ -212,13 +214,13 @@ export function changeFaction(factionChanges) {
     }
     fetchStates.changeFaction = true;
 
-    const { fid } = factionChanges;
-    const state = getState().profile.factions.find((f) => f.fid === fid);
+    const { name } = factionChanges;
+    const state = getState().profile.factions.find((f) => f.name === name);
     const revertOperations = [];
     if (state) {
       for (const [key, value] of Object.entries(factionChanges)) {
-        if (key !== 'fid') {
-          const path = `factions[fid:${fid}].${key}`;
+        if (key !== 'name') {
+          const path = `factions[name:${name}].${key}`;
           revertOperations.push([path, state[key]]);
           dispatch(patchState('profile', 'setex', path, value));
         }
@@ -247,7 +249,7 @@ export function changeFactionRole(factionRoleChanges) {
     fetchStates.changeFactionRole = true;
 
     const { frid } = factionRoleChanges;
-    let fid;
+    let factionName;
     let state;
     const factionsState = getState().profile.factions;
     if (factionsState) {
@@ -255,7 +257,7 @@ export function changeFactionRole(factionRoleChanges) {
         const factionState = factionsState[i];
         state = factionState.roles.find((r) => r.frid === frid);
         if (state) {
-          fid = factionState.fid;
+          factionName = factionState.name;
           break;
         }
       }
@@ -265,7 +267,8 @@ export function changeFactionRole(factionRoleChanges) {
     if (state) {
       for (const [key, value] of Object.entries(factionRoleChanges)) {
         if (key !== 'frid') {
-          const path = `factions[fid:${fid}].roles[frid:${frid}].${key}`;
+          // eslint-disable-next-line max-len
+          const path = `factions[name:${factionName}].roles[frid:${frid}].${key}`;
           revertOperations.push([path, state[key]]);
           dispatch(patchState('profile', 'setex', path, value));
         }

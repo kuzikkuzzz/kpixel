@@ -10,15 +10,15 @@ import { FACTION_PERMISSIONS } from '../../core/constants.js';
 export default async function factionrolechange(req, res) {
   req.tickRateLimiter(1000);
   /* user can be undefined when not logged in */
-  const { ttag: { t }, user, body: { fidOrName } } = req;
+  const { ttag: { t }, user, body: { name } } = req;
 
-  if (!fidOrName || typeof fidOrName !== 'string') {
+  if (!name || typeof name !== 'string') {
     throw new Error('No faction given');
   }
 
   const [{ powerlvl }, faction] = await Promise.all([
-    (user) ? getFactionLvlOfUser(user.id, fidOrName) : { powerlvl: null },
-    getFactionInfo(fidOrName),
+    (user) ? getFactionLvlOfUser(user.id, name) : { powerlvl: null },
+    getFactionInfo(name),
   ]);
 
   if (!faction) {

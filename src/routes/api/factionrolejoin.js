@@ -21,10 +21,10 @@ export default async function factionrolejoin(req, res) {
   }
 
   const {
-    fid, sqlFrid, factionlvl: cFactionlvl,
+    factionName, sqlFrid, factionlvl: cFactionlvl,
   } = await getFactionRole(frid);
 
-  if (!fid || !sqlFrid) {
+  if (!factionName || !sqlFrid) {
     throw new Error('This faction or faction role does not exist');
   }
 
@@ -32,8 +32,8 @@ export default async function factionrolejoin(req, res) {
     { sqlFid, powerlvl: ownPowerlvl },
     { sqlFid: sqlTargetFid, powerlvl: targetPowerlvl },
   ] = await Promise.all([
-    getFactionLvlOfUser(user.id, fid),
-    getFactionLvlOfUser(uid, fid),
+    getFactionLvlOfUser(user.id, factionName),
+    getFactionLvlOfUser(uid, factionName),
   ]);
   if (!sqlFid) {
     throw new Error('This faction does not exist or you are not a member');
@@ -65,7 +65,7 @@ export default async function factionrolejoin(req, res) {
 
   const profilePatch = {
     op: 'set',
-    path: `factions[fid:${fid}].roles[frid:${frid}].isMember`,
+    path: `factions[name:${factionName}].roles[frid:${frid}].isMember`,
     value: true,
   };
   socketEvents.patchUserState(uid, 'profile', profilePatch);

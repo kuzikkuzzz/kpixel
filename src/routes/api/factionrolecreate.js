@@ -13,16 +13,16 @@ import { FACTION_PERMISSIONS } from '../../core/constants.js';
 export default async function factionrolecreate(req, res) {
   req.tickRateLimiter(7000);
   const { ttag: { gettext, t }, user, body: factionRoleData } = req;
-  const { customFlagId, fid, factionlvl, name } = factionRoleData;
+  const { customFlagId, factionName, factionlvl, name } = factionRoleData;
 
-  if (!fid || typeof fid !== 'string') {
+  if (!factionName || typeof factionName !== 'string') {
     throw new Error('No faction given');
   }
 
   let { isDefault } = factionRoleData;
   isDefault = !!isDefault;
 
-  const { sqlFid, powerlvl } = await getFactionLvlOfUser(user.id, fid);
+  const { sqlFid, powerlvl } = await getFactionLvlOfUser(user.id, factionName);
   if (!sqlFid) {
     throw new Error('This faction does not exist or you are not a member');
   }
@@ -60,7 +60,7 @@ export default async function factionrolecreate(req, res) {
   }
 
   const [createRet, frid] = await createFactionRole(
-    fid, name, factionlvl, customFlagId, isDefault,
+    factionName, name, factionlvl, customFlagId, isDefault,
   );
   switch (createRet) {
     case 0:
@@ -77,7 +77,7 @@ export default async function factionrolecreate(req, res) {
 
   const profilePatch = {
     op: 'add',
-    path: `factions[fid:${fid}].roles`,
+    path: `factions[name:${factionName}].roles`,
     value: { frid, name, customFlagId, factionlvl, isMember: false },
   };
 

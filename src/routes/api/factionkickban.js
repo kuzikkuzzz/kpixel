@@ -17,9 +17,9 @@ import {
 
 export default async function factionkickban(req, res) {
   req.tickRateLimiter(7000);
-  const { ttag: { t }, user, body: { fid, uid, isBan } } = req;
+  const { ttag: { t }, user, body: { factionName, uid, isBan } } = req;
 
-  if (!fid || typeof fid !== 'string') {
+  if (!factionName || typeof factionName !== 'string') {
     throw new Error('No faction given');
   }
   if (typeof uid !== 'number' || !Number.isInteger(uid)) {
@@ -30,8 +30,8 @@ export default async function factionkickban(req, res) {
     { sqlFid, powerlvl: ownPowerlvl },
     { sqlFid: sqlTargetFid, powerlvl: targetPowerlvl },
   ] = await Promise.all([
-    getFactionLvlOfUser(user.id, fid),
-    getFactionLvlOfUser(uid, fid),
+    getFactionLvlOfUser(user.id, factionName),
+    getFactionLvlOfUser(uid, factionName),
   ]);
   if (!sqlFid) {
     throw new Error('This faction does not exist or you are not a member');
@@ -52,8 +52,8 @@ export default async function factionkickban(req, res) {
   const lastOnlineIPString = await getLastIPOfUser(uid);
 
   const [[leaveRet, hadRoleActive], factionInfo] = await Promise.all([
-    leaveFaction(uid, fid),
-    getFactionInfo(fid),
+    leaveFaction(uid, factionName),
+    getFactionInfo(factionName),
   ]);
   switch (leaveRet) {
     case 0:
@@ -108,7 +108,7 @@ export default async function factionkickban(req, res) {
 
   const profilePatch = {
     op: 'del',
-    path: `factions[fid:${fid}]`,
+    path: `factions[name:${factionName}]`,
   };
   socketEvents.patchUserState(uid, 'profile', profilePatch);
 

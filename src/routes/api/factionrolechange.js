@@ -27,14 +27,14 @@ export default async function factionrolechange(req, res) {
   }
 
   const {
-    fid, sqlFrid, factionlvl: cFactionlvl, isProtected,
+    factionName, sqlFrid, factionlvl: cFactionlvl, isProtected,
   } = await getFactionRole(frid);
 
-  if (!fid || !sqlFrid) {
+  if (!factionName || !sqlFrid) {
     throw new Error('This faction or faction role does not exist');
   }
 
-  const { sqlFid, powerlvl } = await getFactionLvlOfUser(user.id, fid);
+  const { sqlFid, powerlvl } = await getFactionLvlOfUser(user.id, factionName);
   if (!sqlFid) {
     throw new Error('This faction does not exist or you are not a member');
   }
@@ -167,7 +167,7 @@ export default async function factionrolechange(req, res) {
       const value = factionRoleChanges[key];
       socketEvents.patchUserState(user.id, 'profile', {
         op: 'setex',
-        path: `factions[fid:${fid}].roles[frid:${frid}].${key}`,
+        path: `factions[name:${factionName}].roles[frid:${frid}].${key}`,
         value,
       });
     }

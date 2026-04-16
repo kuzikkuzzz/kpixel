@@ -8,15 +8,15 @@ import { MAX_FACTIONS_PER_USER, CHANNEL_TYPES } from '../../core/constants.js';
 
 export default async function factionjoin(req, res) {
   req.tickRateLimiter(4000);
-  const { ttag: { t }, user, ip: { ipString }, body: { fid } } = req;
+  const { ttag: { t }, user, ip: { ipString }, body: { name } } = req;
 
-  if (!fid || typeof fid !== 'string') {
+  if (!name || typeof name !== 'string') {
     throw new Error('No faction given');
   }
 
   const [joinRet, factionInfo] = await Promise.all([
-    joinFactionPublic(user.id, ipString, fid),
-    getFactionInfo(fid),
+    joinFactionPublic(user.id, ipString, name),
+    getFactionInfo(name),
   ]);
   switch (joinRet) {
     case 0:
@@ -69,7 +69,7 @@ export default async function factionjoin(req, res) {
 
   const profilePatch = {
     op: 'pushnx',
-    path: `factions[fid:${fid}]`,
+    path: `factions[name:${name}]`,
     value: factionInfo,
   };
   socketEvents.patchUserState(user.id, 'profile', profilePatch);

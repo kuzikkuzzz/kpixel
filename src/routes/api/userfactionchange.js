@@ -11,9 +11,9 @@ import { USER_FACTION_FLAGS } from '../../core/constants.js';
 
 export default async function userfactionchange(req, res) {
   req.tickRateLimiter(7000);
-  const { user, body: { fid, isHidden } } = req;
+  const { user, body: { factionName, isHidden } } = req;
 
-  if (!fid || typeof fid !== 'string') {
+  if (!factionName || typeof factionName !== 'string') {
     throw new Error('No faction given');
   }
 
@@ -24,13 +24,14 @@ export default async function userfactionchange(req, res) {
     changed = true;
     userFactionChanges.isHidden = isHidden;
     const success = await setFlagOfUserFaction(
-      user.id, fid, USER_FACTION_FLAGS.HIDDEN, isHidden,
+      user.id, factionName, USER_FACTION_FLAGS.HIDDEN, isHidden,
     );
     if (!success) {
       throw new Error('Could not set this users faction hidden property');
     }
     logger.info(
-      `User ${user.username} changed faction ${fid} hidden to ${isHidden}`,
+      // eslint-disable-next-line max-len
+      `User ${user.username} changed faction ${factionName} hidden to ${isHidden}`,
     );
   }
 
@@ -44,7 +45,7 @@ export default async function userfactionchange(req, res) {
     const value = userFactionChanges[key];
     socketEvents.patchUserState(user.id, 'profile', {
       op: 'setex',
-      path: `factions[fid:${fid}].${key}`,
+      path: `factions[name:${factionName}].${key}`,
       value,
     });
   }

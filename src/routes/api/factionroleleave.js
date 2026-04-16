@@ -17,7 +17,7 @@ export default async function factionroleleave(req, res) {
   }
 
   const [
-    leaveRet, hadRoleActive, fid,
+    leaveRet, hadRoleActive, factionName,
   ] = await leaveFactionRole(user.id, uid, frid);
   switch (leaveRet) {
     case 0:
@@ -40,7 +40,7 @@ export default async function factionroleleave(req, res) {
 
   const profilePatch = {
     op: 'set',
-    path: `factions[fid:${fid}].roles[frid:${frid}].isMember`,
+    path: `factions[name:${factionName}].roles[frid:${frid}].isMember`,
     value: false,
   };
   socketEvents.patchUserState(uid, 'profile', profilePatch);

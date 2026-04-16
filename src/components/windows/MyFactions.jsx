@@ -55,7 +55,7 @@ const MyFactions = () => {
       for (let u = 0; u < roles.length; u += 1) {
         if (roles[u].frid === activeFactionRole) {
           return [
-            factions[i].fid,
+            factions[i].name,
             // eslint-disable-next-line react/jsx-key
             <strong>&quot;{factions[i].title}&quot;</strong>,
             // eslint-disable-next-line react/jsx-key
@@ -81,9 +81,9 @@ const MyFactions = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  const setFactionHidden = useCallback(async (fid, isHidden) => {
+  const setFactionHidden = useCallback(async (factionName, isHidden) => {
     const respErrors = await dispatch(
-      changeUserFaction({ fid, isHidden }),
+      changeUserFaction({ factionName, isHidden }),
     );
     setErrors((oErrors) => {
       if (respErrors) {
@@ -142,14 +142,14 @@ const MyFactions = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [submitting]);
 
-  const submitLeaveFaction = useCallback(async (fid) => {
+  const submitLeaveFaction = useCallback(async (factionName) => {
     if (submitting) {
       return;
     }
     setSubmitting(true);
     const {
       errors: respErrors, patches,
-    } = await requestLeaveFaction(fid);
+    } = await requestLeaveFaction(factionName);
     if (patches) {
       dispatch(applyPatches(patches));
     }
@@ -299,9 +299,9 @@ const MyFactions = () => {
             <p key="pres">{t`You are currently not representing any faction. To represent one, activate a role in one of your factions below.`}</p>
           )}
           <div className="factionlist">{factions.map((faction) => {
-            const { fid } = faction;
+            const { name } = faction;
             let titleClass = 'factionlist-title';
-            if (fid === activeFaction) {
+            if (name === activeFaction) {
               titleClass += ' active';
             }
             if (faction.isHidden) {
@@ -327,13 +327,13 @@ const MyFactions = () => {
 
             const item = (
               <div
-                key={faction.fid}
+                key={faction.name}
                 className="factionlist-item"
                 onClick={() => {
-                  if (fid === selected) {
+                  if (name === selected) {
                     setSelected(null);
                   } else {
-                    setSelected(fid);
+                    setSelected(name);
                   }
                   setErrors([]);
                   setConfirmLeave(false);
@@ -356,10 +356,10 @@ const MyFactions = () => {
               </div>
             );
 
-            if (fid === selected) {
+            if (name === selected) {
               return (
                 <div
-                  key={`edit-${faction.fid}`}
+                  key={`edit-${faction.name}`}
                 >
                   {item}
                   <div className="factionlist-edit">
@@ -404,7 +404,7 @@ const MyFactions = () => {
                       type="checkbox"
                       checked={faction.isHidden}
                       onChange={(evt) => {
-                        setFactionHidden(faction.fid, evt.target.checked);
+                        setFactionHidden(faction.name, evt.target.checked);
                       }}
                     /> {t`Hide from profile`}
                     <div className="form-actions">
@@ -416,7 +416,7 @@ const MyFactions = () => {
                             setConfirmLeave(true);
                             return;
                           }
-                          submitLeaveFaction(faction.fid);
+                          submitLeaveFaction(faction.name);
                         }}
                       >
                         {/* t: button for leaving a faction, it asks for confirmation */}

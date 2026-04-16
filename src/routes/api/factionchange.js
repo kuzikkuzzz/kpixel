@@ -17,13 +17,13 @@ import { FACTION_PERMISSIONS, FACTION_FLAGS } from '../../core/constants.js';
 export default async function factionchange(req, res) {
   req.tickRateLimiter(7000);
   const { ttag: { gettext, t }, user, body: factionData } = req;
-  const { fid, isPrivate, isPublic, avatarId, name } = factionData;
+  const { isPrivate, isPublic, avatarId, name } = factionData;
 
-  if (!fid || typeof fid !== 'string') {
+  if (!name || typeof name !== 'string') {
     throw new Error('No faction given');
   }
 
-  const { sqlFid, powerlvl } = await getFactionLvlOfUser(user.id, fid);
+  const { sqlFid, powerlvl } = await getFactionLvlOfUser(user.id, name);
   if (!sqlFid) {
     throw new Error('This faction does not exist or you are not a member');
   }
@@ -40,13 +40,13 @@ export default async function factionchange(req, res) {
     changed = true;
     factionChanges.isPrivate = isPrivate;
     const success = await setFlagOfFaction(
-      fid, FACTION_FLAGS.PRIV, isPrivate,
+      name, FACTION_FLAGS.PRIV, isPrivate,
     );
     if (!success) {
       throw new Error('Could not set this factions private property');
     }
     logger.info(
-      `AUTH: Changed faction ${fid} private to ${isPrivate} by ${user.id}`,
+      `AUTH: Changed faction ${name} private to ${isPrivate} by ${user.id}`,
     );
   }
 
@@ -54,18 +54,14 @@ export default async function factionchange(req, res) {
     changed = true;
     factionChanges.isPublic = isPublic;
     const success = await setFlagOfFaction(
-      fid, FACTION_FLAGS.PUBLIC, isPublic,
+      name, FACTION_FLAGS.PUBLIC, isPublic,
     );
     if (!success) {
       throw new Error('Could not set this factions public property');
     }
     logger.info(
-      `AUTH: Changed faction ${fid} public to ${isPublic} by ${user.id}`,
+      `AUTH: Changed faction ${name} public to ${isPublic} by ${user.id}`,
     );
-  }
-
-  if (typeof name === 'string') {
-    throw new Error('We do not allow faction nae changes');
   }
 
   if (typeof title === 'string') {
@@ -82,7 +78,7 @@ export default async function factionchange(req, res) {
       throw new Error('Title could not be set.');
     }
     logger.info(
-      `AUTH: Changed factions title for  ${fid} to ${title} by ${user.id}`,
+      `AUTH: Changed factions title for  ${name} to ${title} by ${user.id}`,
     );
   }
 
@@ -103,7 +99,7 @@ export default async function factionchange(req, res) {
     }
     logger.info(
       // eslint-disable-next-line max-len
-      `AUTH: Changed factions description for ${fid} to ${description} by ${user.id}`,
+      `AUTH: Changed factions description for ${name} to ${description} by ${user.id}`,
     );
   }
 
@@ -121,7 +117,7 @@ export default async function factionchange(req, res) {
       throw new Error(t`Could not set this factions avatar`);
     }
     logger.info(
-      `AUTH: Changed faction ${fid} avatar to ${avatarId} by ${user.id}`,
+      `AUTH: Changed faction ${name} avatar to ${avatarId} by ${user.id}`,
     );
   }
 
@@ -137,7 +133,7 @@ export default async function factionchange(req, res) {
       const value = factionChanges[key];
       socketEvents.patchUserState(affectedUserIds, 'profile', {
         op: 'setex',
-        path: `factions[fid:${fid}].${key}`,
+        path: `factions[fid:${name}].${key}`,
         value,
       });
     }

@@ -79,17 +79,17 @@ const FactionRole = sequelize.define('FactionRole', {
 /**
  * get powerlevel and faction and role sql id of user in faction based on role
  * @param frid faction role uuid (NOT sql id)
- * @return { fid | null, sqlFrid | null, factionlvl | null }
+ * @return { factionName | null, sqlFrid | null, factionlvl | null }
  */
 export async function getFactionRole(frid) {
-  let fid = null;
+  let factionName = null;
   let sqlFrid = null;
   let factionlvl = 0;
   let isProtected = true;
   try {
     const model = await sequelize.query(
       // eslint-disable-next-line max-len
-      `SELECT BIN_TO_UUID(f.uuid) AS fid, fr.id AS sqlFrid, fr.flags, fr.factionlvl FROM FactionRoles fr
+      `SELECT f.name AS factionName, fr.id AS sqlFrid, fr.flags, fr.factionlvl FROM FactionRoles fr
   INNER JOIN Factions f ON fr.fid = f.id
 WHERE fr.uuid = UUID_TO_BIN(?)`, {
         replacements: [frid],
@@ -98,14 +98,14 @@ WHERE fr.uuid = UUID_TO_BIN(?)`, {
       },
     );
     if (model) {
-      ({ fid, sqlFrid, factionlvl } = model);
+      ({ factionName, sqlFrid, factionlvl } = model);
       // eslint-disable-next-line max-len
       isProtected = (model.flags & (0x01 << FACTION_ROLE_FLAGS.PROTECTED)) !== 0;
     }
   } catch (error) {
     console.error(`SQL Error on getFactionRole: ${error.message}`);
   }
-  return { fid, sqlFrid, factionlvl, isProtected };
+  return { factionName, sqlFrid, factionlvl, isProtected };
 }
 
 /**
@@ -170,7 +170,7 @@ export async function setFactionRoleProperty(sqlFrid, property, value) {
 
 /**
  * create a new faction role
- * @param fid uuid of faction
+ * @param factionName name of faction
  * @return [number, frid]
  *   0 success
  *   1 faction doesn't exist
@@ -179,7 +179,7 @@ export async function setFactionRoleProperty(sqlFrid, property, value) {
  *   -1 failure
  */
 export async function createFactionRole(
-  fid, name, factionlvl, customFlagId, isDefault,
+  factionName, name, factionlvl, customFlagId, isDefault,
 ) {
   let flags = 0;
   if (isDefault) {
@@ -192,7 +192,7 @@ export async function createFactionRole(
     const model = await sequelize.query(
       'CALL CREATE_FACTION_ROLE(?, ?, ?, ?, ?, ?)', {
         replacements: [
-          fid, frid, name, factionlvl, customFlagId, flags,
+          factionName, frid, name, factionlvl, customFlagId, flags,
         ],
         plain: true,
         type: QueryTypes.SELECT,
@@ -212,7 +212,7 @@ export async function createFactionRole(
  * delete a faction role
  * @param uid user id
  * @param frid faction role uuid
- * @return [number, fid, affectedUsers, affectedActiveRoleUsers]
+ * @return [number, factionName, affectedUsers, affectedActiveRoleUsers]
  *   0 success
  *   1 faction or role doesn't exist
  *   2 role is sovereign
@@ -226,7 +226,7 @@ export async function createFactionRole(
 export async function deleteFactionRole(uid, frid) {
   const affectedUsers = [];
   const affectedActiveRoleUsers = [];
-  let fid = null;
+  let factionName = null;
   try {
     let models = await sequelize.query(
       'CALL DELETE_FACTION_ROLE(?, ?)', {
@@ -238,7 +238,7 @@ export async function deleteFactionRole(uid, frid) {
     const returnCode = models?.[0]?.[0]?.result;
     if (returnCode || returnCode === 0) {
       if (returnCode === 0) {
-        [{ 0: { fid } }] = models;
+        [{ 0: { factionName } }] = models;
         models = Object.values(models[1]);
         for (let i = 0; i < models.length; i += 1) {
           const { uid: memberUid, hadRoleActive } = models[i];
@@ -248,12 +248,12 @@ export async function deleteFactionRole(uid, frid) {
           affectedUsers.push(memberUid);
         }
       }
-      return [returnCode, fid, affectedUsers, affectedActiveRoleUsers];
+      return [returnCode, factionName, affectedUsers, affectedActiveRoleUsers];
     }
   } catch (error) {
     console.error('SQL Error on deleteFactionRole:', error.message);
   }
-  return [-1, fid, affectedUsers, affectedActiveRoleUsers];
+  return [-1, factionName, affectedUsers, affectedActiveRoleUsers];
 }
 
 /**
@@ -356,8 +356,8 @@ export async function leaveFactionRole(initiatorUid, subjectUid, frid) {
     const returnCode = model?.[0]?.result;
     if (returnCode || returnCode === 0) {
       if (returnCode === 0) {
-        const { 0: { hadRoleActive, fid } } = model;
-        return [returnCode, !!hadRoleActive, fid];
+        const { 0: { hadRoleActive, factionName } } = model;
+        return [returnCode, !!hadRoleActive, factionName];
       }
       return [returnCode, false, null];
     }

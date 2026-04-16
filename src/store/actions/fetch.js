@@ -223,7 +223,7 @@ export async function requestChangeProfile(profile) {
 /**
  * change stuff in a users faction
  * @param userFaction {
- *   fid: faction uuid,
+ *   factionName: faction name,
  *   [isHidden],
  * }
  * @return error array or null if successful
@@ -246,7 +246,7 @@ export async function requestChangeUserFaction(userFaction) {
 /**
  * change stuff in a faction
  * @param faction {
- *   fid: faction uuid,
+ *   name: faction name,
  *   [isPrivate],
  *   [isPublic],
  *   [avatarId],
@@ -475,18 +475,18 @@ export function requestCreateFaction(
   return makeAPIPOSTRequest('/api/factioncreate', body);
 }
 
-export function requestLeaveFaction(fid) {
-  return makeAPIPOSTRequest('/api/factionleave', { fid });
+export function requestLeaveFaction(name) {
+  return makeAPIPOSTRequest('/api/factionleave', { name });
 }
 
-export function requestJoinFaction(fid) {
-  return makeAPIPOSTRequest('/api/factionjoin', { fid });
+export function requestJoinFaction(name) {
+  return makeAPIPOSTRequest('/api/factionjoin', { name });
 }
 
-export function requestFactionInfo(fidOrName) {
+export function requestFactionInfo(name) {
   return makeAPIPOSTRequest(
     '/api/factioninfo',
-    { fidOrName },
+    { name },
   );
 }
 
@@ -497,17 +497,24 @@ export function requestUserInfo(uidOrUsername) {
   );
 }
 
-export function requestFactionMembers(fidOrName) {
+export function requestFactionMembers(name) {
   return makeAPIPOSTRequest(
     '/api/factionmembers',
-    { fidOrName },
+    { name },
   );
 }
 
-export function requestFactionBans(fidOrName) {
+export function requestFactionBans(name) {
   return makeAPIPOSTRequest(
     '/api/factionbans',
-    { fidOrName },
+    { name },
+  );
+}
+
+export function requestFactionInvites(name) {
+  return makeAPIPOSTRequest(
+    '/api/factioninvites',
+    { name },
   );
 }
 
@@ -540,27 +547,27 @@ export function requestFactionRoleDelete(frid) {
 }
 
 export function requestKickBanFactionMember(
-  uid, fid, isBan, reason = '',
+  uid, factionName, isBan, reason = '',
 ) {
   return makeAPIPOSTRequest(
     '/api/factionkickban',
-    { uid, fid, isBan, reason },
+    { uid, factionName, isBan, reason },
   );
 }
 
-export function requestLiftFactionBan(fbid, fid) {
+export function requestLiftFactionBan(fbid, factionName) {
   return makeAPIPOSTRequest(
     '/api/factionunban',
-    { fbid, fid },
+    { fbid, factionName },
   );
 }
 
 export function requestFactionRoleCreate(
-  fid, name, isDefault, customFlagId, factionlvl,
+  factionName, name, isDefault, customFlagId, factionlvl,
 ) {
   return makeAPIPOSTRequest(
     '/api/factionrolecreate',
-    { fid, name, isDefault, customFlagId, factionlvl },
+    { factionName, name, isDefault, customFlagId, factionlvl },
   );
 }
 

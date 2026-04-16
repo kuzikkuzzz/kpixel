@@ -44,7 +44,7 @@ export default async function factioncreate(req, res) {
     return;
   }
 
-  const [createRet, fid] = await createFaction(
+  const createRet = await createFaction(
     user.id, name, title, description, isPrivate, isPublic, avatarId,
   );
   switch (createRet) {
@@ -72,7 +72,7 @@ export default async function factioncreate(req, res) {
       throw new Error(t`Server Error`);
   }
 
-  const factionInfo = await getFactionInfo(fid);
+  const factionInfo = await getFactionInfo(name);
   if (!factionInfo) {
     /* no reason why this should even happen */
     throw new Error(t`Server Error`);
@@ -105,7 +105,7 @@ export default async function factioncreate(req, res) {
 
   const profilePatch = {
     op: 'pushnx',
-    path: `factions[fid:${fid}]`,
+    path: `factions[name:${name}]`,
     value: factionInfo,
   };
   socketEvents.patchUserState(user.id, 'profile', profilePatch);
@@ -114,7 +114,7 @@ export default async function factioncreate(req, res) {
   logger.info(`User ${user.id} created new faction ${name}`);
   res.json({
     status: 'ok',
-    fid,
+    name,
     patches,
   });
 }

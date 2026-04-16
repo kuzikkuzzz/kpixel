@@ -274,7 +274,6 @@ END`,
   IN p_description VARCHAR(1000) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
   IN p_flags TINYINT UNSIGNED,
   IN p_avatar_id VARCHAR(29),
-  IN p_faction_uuid CHAR(36),
   IN p_sovereign_uuid CHAR(36),
   IN p_peasant_uuid CHAR(36)
 ) NOT DETERMINISTIC MODIFIES SQL DATA
@@ -334,9 +333,9 @@ BEGIN
     );
     SELECT LAST_INSERT_ID() INTO v_cid;
     INSERT INTO Factions (
-      uuid, name, title, description, avatar, flags, memberCount, createdAt, cid
+      name, title, description, avatar, flags, memberCount, createdAt, cid
     ) VALUES (
-      UUID_TO_BIN(p_faction_uuid), p_name, p_title, p_description, v_mid, p_flags, 1, NOW(), v_cid
+      p_name, p_title, p_description, v_mid, p_flags, 1, NOW(), v_cid
     );
     SELECT LAST_INSERT_ID() INTO v_fid;
     INSERT INTO FactionRoles (
@@ -402,7 +401,7 @@ BEGIN
   END IF;
 END`,
     CREATE_FACTION_ROLE: `CREATE PROCEDURE IF NOT EXISTS CREATE_FACTION_ROLE(
-  IN p_faction_uuid CHAR(36),
+  IN p_faction_name VARCHAR(32) CHARACTER SET ascii,
   IN p_factionrole_uuid CHAR(36),
   IN p_name VARCHAR(32) CHARACTER SET ascii COLLATE ascii_bin,
   IN p_factionlvl TINYINT SIGNED,
@@ -414,7 +413,7 @@ BEGIN
   DECLARE v_mid BIGINT UNSIGNED;
   DECLARE v_role_count INT UNSIGNED;
 
-  SELECT MAX(id) INTO v_fid FROM Factions WHERE uuid = UUID_TO_BIN(p_faction_uuid);
+  SELECT MAX(id) INTO v_fid FROM Factions WHERE name = p_faction_name;
   IF v_fid IS NULL THEN
     SELECT 1 AS result;
   ELSE
@@ -443,13 +442,13 @@ END`,
 BEGIN
   DECLARE v_frid BIGINT UNSIGNED;
   DECLARE v_fid BIGINT UNSIGNED;
-  DECLARE v_faction_uuid CHAR(36);
+  DECLARE v_faction_name VARCHAR(32) CHARACTER SET ascii;
   DECLARE v_role_powerlvl TINYINT;
   DECLARE v_initiator_powerlvl TINYINT;
   DECLARE v_flags TINYINT UNSIGNED;
 
-  SELECT MAX(fr.id), MAX(fr.fid), MAX(fr.factionlvl), MAX(fr.flags), BIN_TO_UUID(MAX(f.uuid))
-    INTO v_frid, v_fid, v_role_powerlvl, v_flags, v_faction_uuid
+  SELECT MAX(fr.id), MAX(fr.fid), MAX(fr.factionlvl), MAX(fr.flags), MAX(f.name)
+    INTO v_frid, v_fid, v_role_powerlvl, v_flags, v_faction_name
   FROM FactionRoles fr INNER JOIN Factions f ON fr.fid = f.id
   WHERE fr.uuid = UUID_TO_BIN(p_faction_role_uuid);
 
@@ -475,7 +474,7 @@ BEGIN
     ELSEIF v_role_powerlvl = v_initiator_powerlvl AND v_initiator_powerlvl < ${FACTION_PERMISSIONS.MANAGE_YOURSELF} THEN
       SELECT 7 AS result;
     ELSE
-      SELECT 0 AS result, v_faction_uuid AS fid;
+      SELECT 0 AS result, v_faction_name AS factionName;
       SELECT uf.uid, p.activeRole = v_frid AS hadRoleActive FROM UserFactions uf
         LEFT JOIN Profiles p ON uf.uid = p.uid
       WHERE fid = v_fid;
@@ -489,7 +488,7 @@ BEGIN
   DECLARE v_frid BIGINT UNSIGNED;
   DECLARE v_fid BIGINT UNSIGNED;
   DECLARE v_role_powerlvl TINYINT;
-  DECLARE v_faction_uuid CHAR(36);
+  DECLARE v_faction_name VARCHAR(32) CHARACTER SET ascii;
   DECLARE v_initiator_powerlvl TINYINT;
   DECLARE v_subject_powerlvl TINYINT;
   DECLARE v_is_active_role TINYINT;
@@ -500,8 +499,8 @@ BEGIN
   END;
   START TRANSACTION;
 
-  SELECT MAX(fr.id), MAX(fr.fid), MAX(fr.factionlvl), BIN_TO_UUID(MAX(f.uuid))
-    INTO v_frid, v_fid, v_role_powerlvl, v_faction_uuid
+  SELECT MAX(fr.id), MAX(fr.fid), MAX(fr.factionlvl), MAX(f.name)
+    INTO v_frid, v_fid, v_role_powerlvl, v_faction_name
   FROM FactionRoles fr INNER JOIN Factions f ON fr.fid = f.id
   WHERE fr.uuid = UUID_TO_BIN(p_faction_role_uuid);
 
@@ -550,7 +549,7 @@ BEGIN
         UPDATE FactionRoles SET memberCount = memberCount - 1 WHERE id = v_frid;
 
         COMMIT;
-        SELECT 0 AS result, v_is_active_role AS hadRoleActive, v_faction_uuid AS fid;
+        SELECT 0 AS result, v_is_active_role AS hadRoleActive, v_faction_name AS factionName;
       END IF;
     END IF;
   END IF;
@@ -676,11 +675,11 @@ BEGIN
     SELECT 0 AS result;
   END IF;
 END`,
-    JOIN_FACTION_PUBLIC: `CREATE PROCEDURE IF NOT EXISTS JOIN_FACTION_PUBLIC(IN p_uid INT UNSIGNED, IN p_ipString VARCHAR(39), IN p_faction_uuid CHAR(36)) NOT DETERMINISTIC MODIFIES SQL DATA
+    JOIN_FACTION_PUBLIC: `CREATE PROCEDURE IF NOT EXISTS JOIN_FACTION_PUBLIC(IN p_uid INT UNSIGNED, IN p_ipString VARCHAR(39), IN p_faction_name VARCHAR(32) CHARACTER SET ascii) NOT DETERMINISTIC MODIFIES SQL DATA
 BEGIN
   DECLARE v_fid BIGINT UNSIGNED;
 
-  SELECT MAX(id) INTO v_fid FROM Factions WHERE uuid = UUID_TO_BIN(p_faction_uuid);
+  SELECT MAX(id) INTO v_fid FROM Factions WHERE name = p_faction_name;
   IF v_fid IS NULL THEN
     SELECT 1 AS result;
   ELSEIF EXISTS(
@@ -707,7 +706,7 @@ BEGIN
     CALL JOIN_FACTION(p_uid, p_ipString, v_fid, v_iid, v_is_on_time_invite);
   END IF;
 END`,
-    LEAVE_FACTION: `CREATE PROCEDURE IF NOT EXISTS LEAVE_FACTION(IN p_uid INT UNSIGNED, IN p_faction_uuid CHAR(36)) NOT DETERMINISTIC MODIFIES SQL DATA
+    LEAVE_FACTION: `CREATE PROCEDURE IF NOT EXISTS LEAVE_FACTION(IN p_uid INT UNSIGNED, IN p_faction_name VARCHAR(32) CHARACTER SET ascii) NOT DETERMINISTIC MODIFIES SQL DATA
 BEGIN
   DECLARE v_fid BIGINT UNSIGNED;
   DECLARE v_is_active_role TINYINT;
@@ -718,7 +717,7 @@ BEGIN
   END;
   START TRANSACTION;
 
-  SELECT MAX(id) INTO v_fid FROM Factions WHERE uuid = UUID_TO_BIN(p_faction_uuid);
+  SELECT MAX(id) INTO v_fid FROM Factions WHERE name = p_faction_name;
   IF v_fid IS NULL THEN
     SELECT 1 AS result;
     ROLLBACK;
@@ -863,7 +862,7 @@ BEGIN
 END`,
   };
 
-  const funcVersion = 18;
+  const funcVersion = 19;
   const curVersion = Number((await sequelize.query('SELECT value FROM Configs WHERE `key`=\'functions_version\''))[0]?.[0]?.value);
   const doUpgrade = funcVersion !== curVersion;
   if (doUpgrade) {

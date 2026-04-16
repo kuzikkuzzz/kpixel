@@ -165,14 +165,14 @@ const Faction = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [memberData, banData, factionData, activeTab, name]);
 
-  const submitLeaveFaction = useCallback(async (fid) => {
+  const submitLeaveFaction = useCallback(async (factionName) => {
     if (submittingRef.current) {
       return;
     }
     setSubmitting(true);
     const {
       errors: respErrors, patches,
-    } = await requestLeaveFaction(fid);
+    } = await requestLeaveFaction(factionName);
     if (patches) {
       dispatch(applyPatches(patches));
     }
@@ -191,14 +191,14 @@ const Faction = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  const submitJoinFaction = useCallback(async (fid) => {
+  const submitJoinFaction = useCallback(async (factionName) => {
     if (submittingRef.current) {
       return;
     }
     setSubmitting(true);
     const {
       errors: respErrors, patches,
-    } = await requestJoinFaction(fid);
+    } = await requestJoinFaction(factionName);
     if (patches) {
       dispatch(applyPatches(patches));
     }
@@ -327,14 +327,14 @@ const Faction = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  const submitKickBanMember = useCallback(async (uid, fid, isBan) => {
+  const submitKickBanMember = useCallback(async (uid, factionName, isBan) => {
     if (submittingRef.current) {
       return;
     }
     setSubmitting(true);
     const {
       errors: respErrors,
-    } = await requestKickBanFactionMember(uid, fid, isBan);
+    } = await requestKickBanFactionMember(uid, factionName, isBan);
     if (respErrors) {
       setErrors(respErrors);
     } else {
@@ -347,12 +347,14 @@ const Faction = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  const submitLiftBan = useCallback(async (fbid, fid) => {
+  const submitLiftBan = useCallback(async (fbid, factionName) => {
     if (submittingRef.current) {
       return;
     }
     setSubmitting(true);
-    const { errors: respErrors } = await requestLiftFactionBan(fbid, fid);
+    const { errors: respErrors } = await requestLiftFactionBan(
+      fbid, factionName,
+    );
     if (respErrors) {
       setErrors(respErrors);
     } else {
@@ -366,7 +368,7 @@ const Faction = () => {
 
   const submitCreateRole = useCallback(async (evt) => {
     evt.preventDefault();
-    if (submittingRef.current || !factionData) {
+    if (submittingRef.current) {
       return;
     }
     const factionlvl = Number(evt.target.factionlvl.value);
@@ -391,7 +393,7 @@ const Faction = () => {
     const {
       errors: respErrors, patches, frid,
     } = await requestFactionRoleCreate(
-      factionData.faction.fid, roleName, isDefault, customFlagId, factionlvl,
+      name, roleName, isDefault, customFlagId, factionlvl,
     );
     if (patches) {
       dispatch(applyPatches(patches));
@@ -419,7 +421,7 @@ const Faction = () => {
     setConfirm(false);
     setSubmitting(false);
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [factionData]);
+  }, [name]);
 
   const submitEditRole = useCallback(async (evt, role) => {
     evt.preventDefault();
@@ -524,7 +526,7 @@ const Faction = () => {
       return;
     }
     const {
-      fid,
+      name: factionName,
       title: prevTitle,
       description: prevDescription,
       isPrivate: prevIsPrivate,
@@ -536,7 +538,7 @@ const Faction = () => {
     const isPublic = evt.target.ispublic.checked;
 
     let changed = false;
-    const factionChanges = { fid };
+    const factionChanges = { name: factionName };
     if (factionTitle !== prevTitle) {
       changed = true;
       factionChanges.title = factionTitle;
@@ -587,13 +589,13 @@ const Faction = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  const submitEditFactionAvatar = useCallback(async (fid, avatarId) => {
+  const submitEditFactionAvatar = useCallback(async (factionName, avatarId) => {
     if (submittingRef.current) {
       return;
     }
     setSubmitting(true);
     const respErrors = await dispatch(
-      changeFaction({ fid, avatarId }),
+      changeFaction({ name: factionName, avatarId }),
     );
     if (!respErrors.length) {
       setFactionData((pFactionData) => ({
@@ -722,7 +724,7 @@ const Faction = () => {
               disabled={submitting}
               title={t`Join Faction`}
               onClick={() => {
-                submitJoinFaction(faction.fid);
+                submitJoinFaction(name);
               }}
             >
               {t`Join Faction`}
@@ -740,7 +742,7 @@ const Faction = () => {
                   setConfirm('leave');
                   return;
                 }
-                submitLeaveFaction(faction.fid);
+                submitLeaveFaction(name);
               }}
             >
               {/* t: button for leaving a faction, it asks for confirmation */}
@@ -804,7 +806,7 @@ const Faction = () => {
             const { roles: memberRolesIds } = member;
             return (
               <div
-                key={`edit-${faction.fid}`}
+                key={`edit-${faction.name}`}
               >
                 {item}
                 <div className="factionlist-edit">
@@ -913,7 +915,7 @@ const Faction = () => {
                             setConfirm('kick');
                             return;
                           }
-                          submitKickBanMember(member.uid, faction.fid, false);
+                          submitKickBanMember(member.uid, name, false);
                         }}
                       >
                         {/* t: button for kicking a user from a faction, it asks for confirmation */}
@@ -928,7 +930,7 @@ const Faction = () => {
                             setConfirm('ban');
                             return;
                           }
-                          submitKickBanMember(member.uid, faction.fid, true);
+                          submitKickBanMember(member.uid, name, true);
                         }}
                       >
                         {/* t: button for banning a user from a faction, it asks for confirmation */}
@@ -996,7 +998,7 @@ const Faction = () => {
                           setConfirm(`lift-${fbid}`);
                           return;
                         }
-                        submitLiftBan(fbid, faction.fid);
+                        submitLiftBan(fbid, name);
                       }}
                     >
                       {(confirm !== `lift-${fbid}`) ? '🗑' : '‣'}
@@ -1340,7 +1342,7 @@ const Faction = () => {
     );
   } else if (activeTab === 'edit') {
     /* ================================ EDIT ================================ */
-    const { avatarId, fid } = faction;
+    const { avatarId } = faction;
     const [thumbUrl] = getUrlsFromMediaIdAndName(avatarId, 'avatar');
     didPrintErrors = true;
 
@@ -1367,7 +1369,7 @@ const Faction = () => {
               />
               <button
                 type="button"
-                onClick={() => submitEditFactionAvatar(fid, null)}
+                onClick={() => submitEditFactionAvatar(name, null)}
                 title={t`Clear`}
                 disabled={submitting || avatarId === null}
               >
@@ -1378,7 +1380,7 @@ const Faction = () => {
                 onClick={async () => {
                   const files = await uploadRef.current?.();
                   if (files.length) {
-                    submitEditFactionAvatar(fid, files[0].mediaId);
+                    submitEditFactionAvatar(name, files[0].mediaId);
                   }
                 }}
                 title={t`Save`}
