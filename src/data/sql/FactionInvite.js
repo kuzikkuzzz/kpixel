@@ -192,7 +192,7 @@ f.description AS factionDescription, f.memberCount,
 CONCAT(a.shortId, ':', a.extension) AS avatarId FROM FactionInvites i
   INNER JOIN Factions f ON i.fid = f.id
   LEFT JOIN Media a ON a.id = f.avatar
-WHERE i.midId = ?`, {
+WHERE i.midId = ? AND (i.expires IS NULL OR i.expires > NOW())`, {
         replacements: [inviteId],
         plain: true,
         type: QueryTypes.SELECT,
@@ -219,7 +219,8 @@ export async function getInviteInfo(sqlFid) {
   try {
     const models = await sequelize.query(
       // eslint-disable-next-line max-len
-      'SELECT midId AS id, flags, used AS amountUsed, createdAt FROM FactionInvites WHERE fid = ?', {
+      `SELECT midId AS id, flags, used AS amountUsed, createdAt FROM FactionInvites
+WHERE fid = ? AND (expires IS NULL OR expires > NOW())`, {
         replacements: [sqlFid],
         raw: true,
         type: QueryTypes.SELECT,

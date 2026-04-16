@@ -13,7 +13,9 @@ export default async function factioninfo(req, res) {
 
   const inviteData = await getInviteData(id);
   if (!inviteData) {
-    throw new Error('Invite could not be found');
+    throw new Error(
+      'Invite could not be found, is expired or got used already',
+    );
   }
 
   res.json(inviteData);
