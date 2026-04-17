@@ -11,7 +11,7 @@ import sequelize, { nestQuery } from './sequelize.js';
 import { generateHash } from '../../utils/hash.js';
 import { setEmail } from './ThreePID.js';
 import {
-  USERLVL, THREEPID_PROVIDERS, USER_FLAGS,
+  USERLVL, THREEPID_PROVIDERS, USER_FLAGS, USER_FACTION_FLAGS,
 } from '../../core/constants.js';
 import { ADMIN_IDS } from '../../core/config.js';
 
@@ -248,7 +248,7 @@ FROM Users u
     LEFT JOIN FactionRoles afr ON afr.id = p.activeRole
     LEFT JOIN Factions af ON afr.fid = af.id
     LEFT JOIN Media afrm ON afrm.id = afr.customFlag
-    LEFT JOIN UserFactions uf ON uf.uid = u.id
+    LEFT JOIN UserFactions uf ON uf.uid = u.id AND (uf.flags & ${0x01 << USER_FACTION_FLAGS.HIDDEN}) = 0
     LEFT JOIN Factions f ON f.id = uf.fid
 WHERE ${Number(uidOrUsername) ? 'u.id = ?' : 'u.username = ?'}`, {
       /* eslint-enable max-len */
@@ -980,6 +980,7 @@ export async function getChatStaff() {
  * take array of objects that include user ids and add user informations if
  * user if not private
  * @param rawRanks array of {id: userId, ...} objects
+ * @param
  */
 export async function populateUserIdObj(rawRanks) {
   if (!rawRanks.length) {
@@ -1005,13 +1006,6 @@ WHERE (u.flags & ?) = 0 AND u.id IN (?)`, {
       rank.name = name;
       rank.username = username;
       rank.avatarId = avatarId;
-    }
-  }
-  for (const rank of rawRanks) {
-    if (!rank.name) {
-      rank.name = null;
-      rank.username = null;
-      rank.avatarId = null;
     }
   }
   return rawRanks;

@@ -130,8 +130,8 @@ if ARGV[10] == "0" and pxlcnt > 0 then
     if ARGV[6] ~= "0" then
       redis.call('zincrby', KEYS[5], pxlcnt, ARGV[6])
       redis.call('zincrby', KEYS[6], pxlcnt, ARGV[6])
-      redis.call('zincrby', KEYS[7], pxlcnt, ARGV[6])
-      redis.call('zincrby', KEYS[8], pxlcnt, ARGV[6])
+      redis.call('zincrby', KEYS[7], pxlcnt, ARGV[7])
+      redis.call('zincrby', KEYS[8], pxlcnt, ARGV[7])
     end
     -- country stats
     if ARGV[8] ~= "xx" then

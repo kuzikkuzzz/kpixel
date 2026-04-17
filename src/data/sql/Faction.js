@@ -406,13 +406,6 @@ WHERE (f.flags & ?) = 0 AND f.id IN (?)`, {
       rank.avatarId = avatarId;
     }
   }
-  for (const rank of rawRanks) {
-    if (!rank.name) {
-      rank.name = null;
-      rank.title = null;
-      rank.avatarId = null;
-    }
-  }
   return rawRanks;
 }
 

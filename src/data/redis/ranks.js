@@ -44,7 +44,7 @@ export async function getUserRanks(userId) {
  */
 export async function getFactionRanks(factionId) {
   const ranks = await client.getRanks(
-    RANKED_KEY, DAILY_RANKED_KEY,
+    FRANKED_KEY, DAILY_FRANKED_KEY,
     factionId,
   );
   return ranks.map((r) => Number(r));
