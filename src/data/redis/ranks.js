@@ -5,9 +5,12 @@ import client from './client.js';
 import { getDateKeyOfTs } from '../../core/utils.js';
 
 export const RANKED_KEY = 'rank';
+export const FRANKED_KEY = 'frank';
+// users
 export const DAILY_RANKED_KEY = 'rankd';
-export const FACTION_RANKED_KEY = 'frank';
-export const FACTION_DAILY_RANKED_KEY = 'frankd';
+// faction
+export const DAILY_FRANKED_KEY = 'frankd';
+// countries
 export const DAILY_CRANKED_KEY = 'crankd';
 export const HOURLY_CRANKED_KEY = 'crankh';
 export const PREV_DAILY_CRANKED_KEY = 'pcrankd';
@@ -15,31 +18,51 @@ export const PREV_DAILY_CRANKED_TS_KEY = 'pcrankdts';
 export const PREV_DAY_TOP_KEY = 'prankd';
 const DAY_STATS_RANKS_KEY = 'ds';
 const CDAY_STATS_RANKS_KEY = 'cds';
+const FDAY_STATS_RANKS_KEY = 'fds';
 const ONLINE_CNTR_KEY = 'tonl';
 const PREV_HOURLY_PLACED_KEY = 'tmph';
 const HOURLY_PXL_CNTR_KEY = 'thpx';
 const DAILY_PXL_CNTR_KEY = 'tdpx';
 
-/*
+/**
  * get pixelcount and ranking
  * @param userId
  * @return [ totalPixels, dailyPixels, totalRanking, dailyRanking ]
  */
 export async function getUserRanks(userId) {
-  const ranks = await client.getUserRanks(
+  const ranks = await client.getRanks(
     RANKED_KEY, DAILY_RANKED_KEY,
     userId,
   );
   return ranks.map((r) => Number(r));
 }
 
-/*
+/**
+ * get pixelcount and ranking
+ * @param factionId
+ * @return [ totalPixels, dailyPixels, totalRanking, dailyRanking ]
+ */
+export async function getFactionRanks(factionId) {
+  const ranks = await client.getRanks(
+    RANKED_KEY, DAILY_RANKED_KEY,
+    factionId,
+  );
+  return ranks.map((r) => Number(r));
+}
+
+/**
  * get userIds by ranks
  * @param daily integer if using daily or total score
  * @param start, amount rank to start and end
- * @return Array of objects with {userId, score, dailyScore} in given range
+ * @return [{
+ *   id: user id,
+ *   r: total rank,
+ *   t: total pixels,
+ *   dr: daily rank,
+ *   dt: daily pixels,
+ * }, ...]
  */
-export async function getRanks(daily, start, amount) {
+export async function getTopUserRanks(daily, start, amount) {
   start -= 1;
   amount -= 1;
   let key;
@@ -88,7 +111,68 @@ export async function getRanks(daily, start, amount) {
   return ret;
 }
 
-/*
+/**
+ * get factionIds by ranks
+ * @param daily integer if using daily or total score
+ * @param start, amount rank to start and end
+ * @return [{
+ *   id: faction id,
+ *   r: total rank,
+ *   t: total pixels,
+ *   dr: daily rank,
+ *   dt: daily pixels,
+ * }, ...]
+ */
+export async function getTopFactionRanks(daily, start, amount) {
+  start -= 1;
+  amount -= 1;
+  let key;
+  let valueName;
+  let rankName;
+  let oKey;
+  let oValueName;
+  let oRankName;
+  if (daily) {
+    key = DAILY_FRANKED_KEY;
+    valueName = 'dt';
+    rankName = 'dr';
+    oKey = FRANKED_KEY;
+    oValueName = 't';
+    oRankName = 'r';
+  } else {
+    key = FRANKED_KEY;
+    valueName = 't';
+    rankName = 'r';
+    oKey = DAILY_FRANKED_KEY;
+    oValueName = 'dt';
+    oRankName = 'dr';
+  }
+  /* returns { value: uid, score: pixelCnt } */
+  const ranks = await client.zRangeWithScores(key, start, start + amount, {
+    REV: true,
+  });
+  const fids = ranks.map((r) => r.value);
+  if (!fids.length) {
+    return fids;
+  }
+  const oScores = await client.zmScore(oKey, fids);
+  /* impolemented with lua, which blocks :( */
+  const oRanks = await client.zmRankRev(oKey, fids);
+  const ret = [];
+  for (let i = 0; i < ranks.length; i += 1) {
+    const uob = {
+      id: Number(fids[i]),
+      [valueName]: ranks[i].score,
+      [rankName]: i + 1,
+      [oValueName]: oScores[i],
+      [oRankName]: oRanks[i],
+    };
+    ret.push(uob);
+  }
+  return ret;
+}
+
+/**
  * get daily country ranking
  */
 export async function getCountryRanks(start, amount) {
@@ -105,7 +189,7 @@ export async function getCountryRanks(start, amount) {
   return ranks;
 }
 
-/*
+/**
  * get previous daily country ranking (one hour before cranks)
  */
 export async function getHourlyCountryStats(start, amount) {
@@ -230,9 +314,10 @@ export async function getPrevTop() {
   let prevTop = await client.zRangeWithScores(PREV_DAY_TOP_KEY, 0, 9, {
     REV: true,
   });
-  prevTop = prevTop.map((r) => ({
+  prevTop = prevTop.map((r, i) => ({
+    dr: i + 1,
     id: Number(r.value),
-    px: Number(r.score),
+    dt: Number(r.score),
   }));
   return prevTop;
 }
@@ -396,6 +481,11 @@ export async function resetDailyRanks() {
     DAILY_CRANKED_KEY,
     `${CDAY_STATS_RANKS_KEY}:${dateKey}`,
   );
+  // daily faction rank
+  await client.rename(
+    DAILY_FRANKED_KEY,
+    `${FDAY_STATS_RANKS_KEY}:${dateKey}`,
+  );
   // daily pixel counter
   const sum = await sumZSet(`${CDAY_STATS_RANKS_KEY}:${dateKey}`);
   await client.lPush(DAILY_PXL_CNTR_KEY, String(sum));
@@ -406,4 +496,5 @@ export async function resetDailyRanks() {
   );
   await client.del(`${DAY_STATS_RANKS_KEY}:${purgeDateKey}`);
   await client.del(`${CDAY_STATS_RANKS_KEY}:${purgeDateKey}`);
+  await client.del(`${FDAY_STATS_RANKS_KEY}:${purgeDateKey}`);
 }

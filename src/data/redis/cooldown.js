@@ -7,8 +7,8 @@ import { PREFIX as CAPTCHA_PREFIX } from './captcha.js';
 import {
   RANKED_KEY,
   DAILY_RANKED_KEY,
-  FACTION_RANKED_KEY,
-  FACTION_DAILY_RANKED_KEY,
+  FRANKED_KEY,
+  DAILY_FRANKED_KEY,
   DAILY_CRANKED_KEY,
   PREV_DAY_TOP_KEY,
 } from './ranks.js';
@@ -66,7 +66,7 @@ export default function allowPlace(
   const dailyset = (ranked) ? DAILY_RANKED_KEY : 'nope';
   /* eslint-disable max-len */
   return client.placePixel(
-    captKey, ipCdKey, idCdKey, chunkKey, RANKED_KEY, dailyset, FACTION_RANKED_KEY, FACTION_DAILY_RANKED_KEY, DAILY_CRANKED_KEY, PREV_DAY_TOP_KEY,
+    captKey, ipCdKey, idCdKey, chunkKey, RANKED_KEY, dailyset, FRANKED_KEY, DAILY_FRANKED_KEY, DAILY_CRANKED_KEY, PREV_DAY_TOP_KEY,
     clrIgnore, bcd, pcd, cds, cdIfNull, id, activeFactionId, cc, req, dontIncreaseCounters ? 1 : 0,
     ...pxls,
   );

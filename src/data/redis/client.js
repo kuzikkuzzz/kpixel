@@ -17,7 +17,7 @@ const scripts = {
     },
     transformReply(arr) { return arr.map((r) => Number(r)); },
   },
-  getUserRanks: {
+  getRanks: {
     NUMBER_OF_KEYS: 2,
     transformArguments(...args) {
       return args.map((a) => ((typeof a === 'string') ? a : a.toString()));

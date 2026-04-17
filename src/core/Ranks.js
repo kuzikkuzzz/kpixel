@@ -2,9 +2,11 @@
  * timers and cron for account related actions
  */
 
-import { populateIdObj } from '../data/sql/User.js';
+import { populateUserIdObj } from '../data/sql/User.js';
+import { populateFactionIdObj } from '../data/sql/Faction.js';
 import {
-  getRanks,
+  getTopUserRanks,
+  getTopFactionRanks,
   resetDailyRanks,
   getPrevTop,
   getOnlineUserStats,
@@ -32,16 +34,52 @@ import { DailyCron, HourlyCron } from '../utils/cron.js';
 
 class Ranks {
   ranks = {
-    // ranking today of users by pixels
-    dailyRanking: [],
+    // todays ranking of users by pixels
+    dailyRanking: {
+      columnIds: [
+        'daily_rank', 'avatar', 'user', 'daily_pixel', 'today_rank',
+        'today_pixel',
+      ],
+      types: ['number', 'mediaId', 'user', 'number', 'number', 'number'],
+      rows: [],
+    },
     // ranking of users by pixels
-    ranking: [],
+    ranking: {
+      columnIds: [
+        'total_rank', 'avatar', 'user', 'total_pixel', 'today_rank',
+        'today_pixel',
+      ],
+      types: ['number', 'mediaId', 'user', 'number', 'number', 'number'],
+      rows: [],
+    },
+    // yesterdays ranking of users by pixels
+    prevTop: {
+      columnIds: ['yesterday_rank', 'avatar', 'user', 'yesterday_pixel'],
+      types: ['number', 'mediaId', 'user', 'number'],
+      rows: [],
+    },
+    // todays ranking of users by pixels
+    dailyFactionRanking: {
+      columnIds: [
+        'daily_rank', 'avatar', 'faction', 'daily_pixel', 'today_rank',
+        'today_pixel',
+      ],
+      types: ['number', 'mediaId', 'faction', 'number', 'number', 'number'],
+      rows: [],
+    },
+    // ranking of users by pixels
+    factionRanking: {
+      columnIds: [
+        'total_rank', 'avatar', 'faction', 'total_pixel', 'today_rank',
+        'today_pixel',
+      ],
+      types: ['number', 'mediaId', 'faction', 'number', 'number', 'number'],
+      rows: [],
+    },
     // ranking today of countries by pixels
     dailyCRanking: [],
     // ranking hourly of countries by pixels
     cHourlyStats: [],
-    // yesterdays ranking of users by pixels
-    prevTop: [],
     // online user amount by hour
     onlineStats: [],
     // ranking of countries by day
@@ -87,6 +125,38 @@ class Ranks {
     if (!newRanks) {
       return;
     }
+
+    if (newRanks.ranking) {
+      newRanks.ranking = {
+        ...this.ranks.ranking,
+        rows: newRanks.ranking,
+      };
+    }
+    if (newRanks.dailyRanking) {
+      newRanks.dailyRanking = {
+        ...this.ranks.dailyRanking,
+        rows: newRanks.dailyRanking,
+      };
+    }
+    if (newRanks.factionRanking) {
+      newRanks.factionRanking = {
+        ...this.ranks.factionRanking,
+        rows: newRanks.factionRanking,
+      };
+    }
+    if (newRanks.dailyFactionRanking) {
+      newRanks.dailyFactionRanking = {
+        ...this.ranks.dailyFactionRanking,
+        rows: newRanks.dailyFactionRanking,
+      };
+    }
+    if (newRanks.prevTop) {
+      newRanks.prevTop = {
+        ...this.ranks.prevTop,
+        rows: newRanks.prevTop,
+      };
+    }
+
     if (newRanks.cHourlyStats) {
       this.setPunishments(newRanks.cHourlyStats);
     }
@@ -95,18 +165,6 @@ class Ranks {
       ...newRanks,
     };
   }
-
-  /*
-   * populate ranking list with userdata inplace, censor private users
-   * @param ranks Array of rank objects with userIds
-   * @return ranks Array
-   */
-  static async #populateRanking(ranks) {
-    const popRanks = await populateIdObj(ranks);
-    // remove data of private users
-    return popRanks.map((rank) => (rank.name ? rank : {}));
-  }
-
 
   setPunishments(cHourlyStats) {
     if (!cHourlyStats.length || !PUNISH_DOMINATOR) {
@@ -176,22 +234,60 @@ class Ranks {
     if (!socketEvents.important) {
       return null;
     }
-    const ranking = await Ranks.#populateRanking(
-      await getRanks(
-        false,
-        1,
-        100,
-      ));
-    const dailyRanking = await Ranks.#populateRanking(
-      await getRanks(
-        true,
-        1,
-        100,
-      ));
+    let ranking = await populateUserIdObj(
+      await getTopUserRanks(false, 1, 100),
+    );
+    /*
+     * { id, dt, dr, t, r, name, title, avatarId }
+     */
+    ranking = ranking.map(({
+      dt, dr, t, r, name, title, avatarId,
+    }) => [
+      r, avatarId, (name) ? `${title},${name}` : null, t, dr, dt,
+    ]);
+
+    let dailyRanking = await populateUserIdObj(
+      await getTopUserRanks(true, 1, 100),
+    );
+    /*
+     * { id, dt, dr, t, r, name, title, avatarId }
+     */
+    dailyRanking = dailyRanking.map(({
+      dt, dr, t, r, name, title, avatarId,
+    }) => [
+      dr, avatarId, (name) ? `${title},${name}` : null, dt, r, t,
+    ]);
+
+    let factionRanking = await populateFactionIdObj(
+      await getTopFactionRanks(false, 1, 100),
+    );
+    /*
+     * { id, dt, dr, t, r, name, title, avatarId }
+     */
+    factionRanking = factionRanking.map(({
+      dt, dr, t, r, name, title, avatarId,
+    }) => [
+      r, avatarId, (name) ? `${title},${name}` : null, t, dr, dt,
+    ]);
+
+    let dailyFactionRanking = await populateFactionIdObj(
+      await getTopFactionRanks(true, 1, 100),
+    );
+    /*
+     * { id, dt, dr, t, r, name, title, avatarId }
+     */
+    dailyFactionRanking = dailyFactionRanking.map(({
+      dt, dr, t, r, name, title, avatarId,
+    }) => [
+      dr, avatarId, (name) ? `${title},${name}` : null, dt, r, t,
+    ]);
+
     const dailyCRanking = await getCountryRanks(1, 100);
     const ret = {
       ranking,
       dailyRanking,
+      factionRanking,
+      dailyFactionRanking,
       dailyCRanking,
     };
     socketEvents.rankingListUpdate(ret);
@@ -217,12 +313,19 @@ class Ranks {
   }
 
   static async dailyUpdateRanking() {
-    const prevTop = await Ranks.#populateRanking(
-      await getPrevTop(),
-    );
+    let prevTop = await populateUserIdObj(await getPrevTop());
+    /*
+     * { id, dr, dt, name, title, avatarId }
+     */
+    prevTop = prevTop.map(({
+      dr, dt, name, title, avatarId,
+    }) => [
+      dr, avatarId, `${title},${name}`, dt,
+    ]);
+
     const pDailyStats = await getDailyPixelStats();
     const histStats = await getTopDailyHistory();
-    const hisUsers = await Ranks.#populateRanking(histStats.users);
+    const hisUsers = await populateUserIdObj(histStats.users);
     histStats.users = hisUsers.filter((r) => r.name);
     histStats.stats = histStats.stats.map((day) => day.filter(
       (r) => histStats.users.some((u) => u.id === r.id),

@@ -215,6 +215,7 @@ WHERE ${Number(uidOrUsername) ? 'u.id = ?' : 'u.username = ?'}`, {
  *   username,
  *   avatarId,
  *   customFlag,
+ *   age,
  *   isPrivate,
  *   activeFactionRoleName,
  *   activeFactionTitle,
@@ -233,6 +234,7 @@ export async function getUserInfo(uidOrUsername) {
     let model = await sequelize.query(
       /* eslint-disable max-len */
       `SELECT u.id AS uid, u.name, u.username, u.flags,
+DATEDIFF(CURRENT_TIMESTAMP(), u.createdAt) AS age,
 p.customFlag,
 CONCAT(a.shortId, ':', a.extension) AS avatarId,
 CONCAT(afrm.shortId, ':', afrm.extension) AS activeFactionRoleFlag,
@@ -975,29 +977,41 @@ export async function getChatStaff() {
 }
 
 /**
- * take array of objects that include user ids and add
- * user informations if user if not private
+ * take array of objects that include user ids and add user informations if
+ * user if not private
  * @param rawRanks array of {id: userId, ...} objects
  */
-export async function populateIdObj(rawRanks) {
+export async function populateUserIdObj(rawRanks) {
   if (!rawRanks.length) {
     return rawRanks;
   }
   const uids = rawRanks.map((r) => r.id);
   const userData = await sequelize.query(
     // eslint-disable-next-line max-len
-    `SELECT u.id, u.name, DATEDIFF(CURRENT_TIMESTAMP(), u.createdAt) AS 'age' FROM Users u
-WHERE (u.flags & ?) = 0 AND u.id IN (?);`, {
+    `SELECT u.id, u.title, u.name,
+CONCAT(a.shortId, ':', a.extension) AS avatarId
+FROM Users u
+  LEFT JOIN Profiles p ON p.uid = u.id
+  LEFT JOIN Media a ON a.id = p.avatar
+WHERE (u.flags & ?) = 0 AND u.id IN (?)`, {
       replacements: [0x01 << USER_FLAGS.PRIV, uids],
       raw: true,
       type: QueryTypes.SELECT,
     },
   );
-  for (const { id, name, age } of userData) {
-    const dat = rawRanks.find((r) => r.id === id);
-    if (dat) {
-      dat.name = name;
-      dat.age = age;
+  for (const { id, name, title, avatarId } of userData) {
+    const rank = rawRanks.find((r) => r.id === id);
+    if (rank) {
+      rank.name = name;
+      rank.title = title;
+      rank.avatarId = avatarId;
+    }
+  }
+  for (const rank of rawRanks) {
+    if (!rank.name) {
+      rank.name = null;
+      rank.title = null;
+      rank.avatarId = null;
     }
   }
   return rawRanks;

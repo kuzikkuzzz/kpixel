@@ -5,6 +5,7 @@
 import {
   getFactionLvlOfUser, getFactionInfo,
 } from '../../data/sql/Faction.js';
+import { getFactionRanks } from '../../data/redis/ranks.js';
 
 export default async function factioninfo(req, res) {
   req.tickRateLimiter(1000);
@@ -26,6 +27,25 @@ export default async function factioninfo(req, res) {
 
   if (faction.isPrivate && powerlvl === null) {
     throw new Error(t`This faction is private`);
+  }
+
+  const ranks = await getFactionRanks(faction.sqlFid);
+  if (ranks) {
+    const [
+      totalPixels,
+      dailyTotalPixels,
+      ranking,
+      dailyRanking,
+    ] = ranks;
+    faction.totalPixels = totalPixels;
+    faction.dailyTotalPixels = dailyTotalPixels;
+    faction.ranking = ranking;
+    faction.dailyRanking = dailyRanking;
+  } else {
+    faction.totalPixels = 0;
+    faction.dailyTotalPixels = 0;
+    faction.ranking = 0;
+    faction.dailyRanking = 0;
   }
 
   delete faction.sqlFid;

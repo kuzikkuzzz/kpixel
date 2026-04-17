@@ -377,6 +377,46 @@ export async function checkIfFactionExists(name) {
 }
 
 /**
+ * take array of objects that include faction ids and add faction informations
+ * if faction is not private
+ * @param rawRanks array of {id: factionIds, ...} objects
+ */
+export async function populateFactionIdObj(rawRanks) {
+  if (!rawRanks.length) {
+    return rawRanks;
+  }
+  const fids = rawRanks.map((r) => r.id);
+  const userData = await sequelize.query(
+    // eslint-disable-next-line max-len
+    `SELECT f.id, f.title, f.name,
+CONCAT(a.shortId, ':', a.extension) AS avatarId
+FROM Factions f
+  LEFT JOIN Media a ON a.id = f.avatar
+WHERE (f.flags & ?) = 0 AND f.id IN (?)`, {
+      replacements: [0x01 << FACTION_FLAGS.PRIV, fids],
+      raw: true,
+      type: QueryTypes.SELECT,
+    },
+  );
+  for (const { id, name, title, avatarId } of userData) {
+    const rank = rawRanks.find((r) => r.id === id);
+    if (rank) {
+      rank.name = name;
+      rank.title = title;
+      rank.avatarId = avatarId;
+    }
+  }
+  for (const rank of rawRanks) {
+    if (!rank.name) {
+      rank.name = null;
+      rank.title = null;
+      rank.avatarId = null;
+    }
+  }
+  return rawRanks;
+}
+
+/**
  * set avatar of faction
  * @param sqlFid sql id of faction
  * @param mediaId shortId:extension of media
