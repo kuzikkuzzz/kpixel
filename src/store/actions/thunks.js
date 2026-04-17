@@ -71,17 +71,16 @@ export function startDm(query, cb = null, alert = true) {
           ));
         }
         return res;
-      } else {
-        dispatch(addChatChannel(CHANNEL_TYPES.DM, res));
-        if (cb) {
-          cb(res[0]);
-        }
+      }
+      dispatch(addChatChannel(CHANNEL_TYPES.DM, res));
+      if (cb) {
+        cb(res[0]);
       }
     } finally {
       delete fetchStates.startDm;
     }
+    return null;
   };
-  return null;
 }
 
 export function fetchStats() {

@@ -453,35 +453,72 @@ export async function getIPofIID(uuid) {
  * find other users and ips connected to one
  * @param uid userId
  * @param ipString ipString
+ * @param [daysLookBack] how many days to look back
  * @return [ ipStrings, userIds ]
  */
-export async function findAlts(userId, ipString) {
+export async function findAlts(userId, ipString, daysLookBack) {
   const userIds = new Set();
   const iids = new Set();
   try {
     if (userId) {
-      const userIps = await sequelize.query(
-        // eslint-disable-next-line max-len
-        'SELECT BIN_TO_UUID(i.uuid) AS iid, l.uid FROM UserIPs l INNER JOIN IPs i ON l.ip = i.ip INNER JOIN UserIPs m ON m.ip = l.ip WHERE m.uid = ?', {
-          replacements: [userId],
-          raw: true,
-          type: QueryTypes.SELECT,
-        },
-      );
+      let userIps;
+      if (daysLookBack) {
+        userIps = await sequelize.query(
+          // eslint-disable-next-line max-len
+          `SELECT BIN_TO_UUID(i.uuid) AS iid, l.uid FROM UserIPs l
+    INNER JOIN IPs i ON l.ip = i.ip
+    INNER JOIN UserIPs m ON m.ip = l.ip
+  WHERE m.uid = ? AND m.lastSeen > NOW() - INTERVAL ? DAY`, {
+            replacements: [userId, daysLookBack],
+            raw: true,
+            type: QueryTypes.SELECT,
+          },
+        );
+      } else {
+        userIps = await sequelize.query(
+          // eslint-disable-next-line max-len
+          `SELECT BIN_TO_UUID(i.uuid) AS iid, l.uid FROM UserIPs l
+  INNER JOIN IPs i ON l.ip = i.ip
+  INNER JOIN UserIPs m ON m.ip = l.ip
+WHERE m.uid = ?`, {
+            replacements: [userId],
+            raw: true,
+            type: QueryTypes.SELECT,
+          },
+        );
+      }
       userIps.forEach(({ iid, uid }) => {
         iids.add(iid);
         userIds.add(uid);
       });
     }
     if (ipString) {
-      const userIps = await sequelize.query(
-        // eslint-disable-next-line max-len
-        'SELECT BIN_TO_UUID(i.uuid) AS iid, l.uid FROM UserIPs l INNER JOIN IPs i ON l.ip = i.ip INNER JOIN UserIPs m ON m.uid = l.uid WHERE m.ip = IP_TO_BIN(?)', {
-          replacements: [ipString],
-          raw: true,
-          type: QueryTypes.SELECT,
-        },
-      );
+      let userIps;
+      if (daysLookBack) {
+        userIps = await sequelize.query(
+          // eslint-disable-next-line max-len
+          `SELECT BIN_TO_UUID(i.uuid) AS iid, l.uid FROM UserIPs l
+    INNER JOIN IPs i ON l.ip = i.ip
+    INNER JOIN UserIPs m ON m.uid = l.uid
+  WHERE m.ip = IP_TO_BIN(?) AND m.lastSeen > NOW() - INTERVAL ? DAY`, {
+            replacements: [ipString, daysLookBack],
+            raw: true,
+            type: QueryTypes.SELECT,
+          },
+        );
+      } else {
+        userIps = await sequelize.query(
+          // eslint-disable-next-line max-len
+          `SELECT BIN_TO_UUID(i.uuid) AS iid, l.uid FROM UserIPs l
+  INNER JOIN IPs i ON l.ip = i.ip
+  INNER JOIN UserIPs m ON m.uid = l.uid
+WHERE m.ip = IP_TO_BIN(?)`, {
+            replacements: [ipString],
+            raw: true,
+            type: QueryTypes.SELECT,
+          },
+        );
+      }
       userIps.forEach(({ iid, uid }) => {
         iids.add(iid);
         userIds.add(uid);

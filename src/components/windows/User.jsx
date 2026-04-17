@@ -209,7 +209,7 @@ const User = () => {
       )}
       {errors.map((error) => (
         <p key={error} className="errormessage">
-        <span>{t`Error`}</span>:&nbsp;{error}</p>
+          <span>{t`Error`}</span>:&nbsp;{error}</p>
       ))}
       <div className="form-actions">
         <ClipboardCopyField

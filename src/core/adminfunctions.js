@@ -223,7 +223,15 @@ export async function executeIIDAction(
       }
       break;
     }
-    case 'searchalts':
+    case 'searchalts': {
+      duration = parseInt(time, 10);
+      if (Number.isNaN(duration) || (duration <= 0)) {
+        duration = null;
+      }
+      // duration in days
+      duration = Math.ceil(duration / (1000 * 3600 * 24));
+      // fall through
+    }
     case 'status': {
       if (!iidOrUserIdOrName) {
         return 'You must enter an IID or UserId or Name';
@@ -242,6 +250,7 @@ export async function executeIIDAction(
       break;
     }
     case 'ban': {
+      // duration in seconds
       duration = Math.ceil(parseInt(time, 10) / 1000);
       if (Number.isNaN(duration) || (duration < 0)) {
         return 'No valid expiration time';
@@ -366,7 +375,7 @@ export async function executeIIDAction(
           }
         }
       }
-      const [iids, userIds] = await findAlts(userId, ipString);
+      const [iids, userIds] = await findAlts(userId, ipString, duration);
       return `UserIds:\n${userIds.join('\n')}\n\nIIDs:\n${iids.join('\n')}\n`;
     }
     case 'baninfo': {

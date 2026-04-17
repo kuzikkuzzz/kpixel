@@ -41,7 +41,11 @@ async function submitIIDAction(
       data.append('bid', bid);
       break;
     }
-    case 'searchalts':
+    case 'searchalts': {
+      const time = parseInterval(duration);
+      data.append('time', time);
+      // fall through
+    }
     case 'status': {
       if (!iidoruser) {
         return t`You must enter an IID or UserId`;
@@ -62,9 +66,6 @@ async function submitIIDAction(
     }
     case 'ban': {
       const time = parseInterval(duration);
-      if (time === 0 && duration !== '0') {
-        return t`You must enter a duration`;
-      }
       if (!reason) {
         return t`You must enter a reason`;
       }
@@ -157,22 +158,6 @@ function ModIIDtools() {
               placeholder={t`Enter Reason`}
               onChange={(evt) => setReason(evt.target.value)}
             />
-            <p>
-              {`${t`Duration`}: `}
-              <input
-                style={{
-                  display: 'inline-block',
-                  width: '100%',
-                  maxWidth: '7em',
-                }}
-                value={duration}
-                placeholder="1d"
-                onChange={(evt) => {
-                  setDuration(evt.target.value.trim());
-                }}
-              />
-              {t`(0 = infinite)`}
-            </p>
           </React.Fragment>
         )}
         {(iIDAction === 'whitelist' || iIDAction === 'unwhitelist' || iIDAction === 'givecaptcha' || iIDAction === 'ipstatus') && (
@@ -227,6 +212,26 @@ function ModIIDtools() {
               }}
             />
           </p>
+        )}
+        {(iIDAction === 'ban' || iIDAction === 'searchalts') && (
+          <React.Fragment key="duration">
+            <p>
+              {`${t`Duration`}: `}
+              <input
+                style={{
+                  display: 'inline-block',
+                  width: '100%',
+                  maxWidth: '7em',
+                }}
+                value={duration}
+                placeholder="0"
+                onChange={(evt) => {
+                  setDuration(evt.target.value.trim());
+                }}
+              />
+              {t`(0 = infinite)`}
+            </p>
+          </React.Fragment>
         )}
         {(iIDAction === 'changeusername') && (
           <React.Fragment key="changeusername">
