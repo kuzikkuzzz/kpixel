@@ -6,6 +6,8 @@ import { getDateKeyOfTs } from '../../core/utils.js';
 
 export const RANKED_KEY = 'rank';
 export const DAILY_RANKED_KEY = 'rankd';
+export const FACTION_RANKED_KEY = 'frank';
+export const FACTION_DAILY_RANKED_KEY = 'frankd';
 export const DAILY_CRANKED_KEY = 'crankd';
 export const HOURLY_CRANKED_KEY = 'crankh';
 export const PREV_DAILY_CRANKED_KEY = 'pcrankd';

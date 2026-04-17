@@ -7,6 +7,8 @@ import { PREFIX as CAPTCHA_PREFIX } from './captcha.js';
 import {
   RANKED_KEY,
   DAILY_RANKED_KEY,
+  FACTION_RANKED_KEY,
+  FACTION_DAILY_RANKED_KEY,
   DAILY_CRANKED_KEY,
   PREV_DAY_TOP_KEY,
 } from './ranks.js';
@@ -20,6 +22,7 @@ const PREFIX = 'cd';
  * and returns the number of pixels to set
  * @param ip ip of request
  * @param id userId
+ * @param activeFactionId | null id of faction user places for
  * @param ranked boolean if increasing rank (should only be true if logged in)
  * @param clrIgnore, bcd, pcd, cds information about canvas
  * @param canvasId id of the canvas we are placing on
@@ -31,6 +34,7 @@ const PREFIX = 'cd';
 export default function allowPlace(
   ipString,
   id,
+  activeFactionId,
   country,
   ranked,
   canvasId,
@@ -59,12 +63,11 @@ export default function allowPlace(
   }
   const chunkKey = `ch:${canvasId}:${i}:${j}`;
   const cc = country || 'xx';
-  const rankset = RANKED_KEY;
   const dailyset = (ranked) ? DAILY_RANKED_KEY : 'nope';
   /* eslint-disable max-len */
   return client.placePixel(
-    captKey, ipCdKey, idCdKey, chunkKey, rankset, dailyset, DAILY_CRANKED_KEY, PREV_DAY_TOP_KEY,
-    clrIgnore, bcd, pcd, cds, cdIfNull, id, cc, req, dontIncreaseCounters ? 1 : 0,
+    captKey, ipCdKey, idCdKey, chunkKey, RANKED_KEY, dailyset, FACTION_RANKED_KEY, FACTION_DAILY_RANKED_KEY, DAILY_CRANKED_KEY, PREV_DAY_TOP_KEY,
+    clrIgnore, bcd, pcd, cds, cdIfNull, id, activeFactionId, cc, req, dontIncreaseCounters ? 1 : 0,
     ...pxls,
   );
   /* eslint-enable max-len */
