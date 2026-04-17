@@ -44,6 +44,7 @@ import { FACTION_PERMISSIONS } from '../../core/constants.js';
 import useLink from '../hooks/link.js';
 import ClipboardCopyField from '../ClipboardCopyField.jsx';
 import FileUpload from '../FileUpload.jsx';
+import Stat from '../Stat.jsx';
 import { buildPopUpUrl } from './popUpAvailable.js';
 
 /* eslint-disable max-len */
@@ -741,7 +742,30 @@ const Faction = () => {
           />
         )}
         <span className="factionlist-key">{t`Description`}: </span>{faction.description}<br />
-        <span className="factionlist-key">{t`Members`}: </span>{faction.memberCount}<br />
+        <Stat
+          text={t`Today Placed Pixels`}
+          value={faction.dailyTotalPixels}
+        />
+        <Stat
+          text={t`Daily Rank`}
+          value={faction.dailyRanking}
+          zero="N/A"
+          rank
+        />
+        <Stat
+          text={t`Placed Pixels`}
+          value={faction.totalPixels}
+        />
+        <Stat
+          text={t`Total Rank`}
+          value={faction.ranking}
+          zero="N/A"
+          rank
+        />
+        <Stat
+          text={t`Members`}
+          value={faction.memberCount}
+        />
         {(faction.roles.find((r) => r.customFlagId)) && (
           <React.Fragment key="rolelist">
             <span className="factionlist-key">{t`Role Flags`}: </span>

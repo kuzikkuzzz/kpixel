@@ -16,13 +16,42 @@ const initialState = {
     total: 0,
   },
   // user all time
-  totalRanking: [],
+  totalRanking: {
+    columnIds: [],
+    types: [],
+    rows: [],
+    uniqueColumnKey: 2,
+  },
   // user current day
-  totalDailyRanking: [],
+  totalDailyRanking: {
+    columnIds: [],
+    types: [],
+    rows: [],
+    uniqueColumnKey: 2,
+  },
+  // faction all time
+  factionRanking: {
+    columnIds: [],
+    types: [],
+    rows: [],
+    uniqueColumnKey: 2,
+  },
+  // faction current day
+  dailyFactionRanking: {
+    columnIds: [],
+    types: [],
+    rows: [],
+    uniqueColumnKey: 2,
+  },
   // countries current day
   dailyCRanking: [],
   // users top 10 of previous day
-  prevTop: [],
+  prevTop: {
+    columnIds: [],
+    types: [],
+    rows: [],
+    uniqueColumnKey: 2,
+  },
   // amount of users online hourly for past 7 days
   onlineStats: [],
   // countries daily past 14 days
@@ -87,38 +116,11 @@ export default function ranks(
     }
 
     case 'REC_STATS': {
-      const {
-        totalRanking,
-        totalDailyRanking,
-        dailyCRanking,
-        prevTop,
-        onlineStats,
-        cHistStats,
-        cHourlyStatsOrdered,
-        histStats,
-        pDailyStats,
-        pHourlyStats,
-        cooldownChanges,
-      } = action;
-      const cHourlyStats = {};
-      for (const { cc, px } of cHourlyStatsOrdered) {
-        cHourlyStats[cc] = px;
-      }
       const lastFetch = Date.now();
       return {
         ...state,
         lastFetch,
-        totalRanking,
-        totalDailyRanking,
-        dailyCRanking,
-        prevTop,
-        onlineStats,
-        cHistStats,
-        cHourlyStats,
-        histStats,
-        pDailyStats,
-        pHourlyStats,
-        cooldownChanges: Object.entries(cooldownChanges),
+        ...action.rankings,
       };
     }
 

@@ -325,32 +325,19 @@ export function receiveMe(me) {
 }
 
 export function receiveStats(rankings) {
-  const {
-    ranking: totalRanking,
-    dailyRanking: totalDailyRanking,
-    dailyCRanking,
-    prevTop,
-    onlineStats,
-    cHistStats,
-    cHourlyStats: cHourlyStatsOrdered,
-    histStats,
-    pDailyStats,
-    pHourlyStats,
-    cooldownChanges,
-  } = rankings;
+  rankings.totalRanking = rankings.ranking;
+  rankings.totalDailyRanking = rankings.dailyRanking;
+  delete rankings.ranking;
+  delete rankings.dailyRanking;
+  const cHourlyStats = {};
+  for (const { cc, px } of rankings.cHourlyStats) {
+    cHourlyStats[cc] = px;
+  }
+  rankings.cHourlyStats = cHourlyStats;
+  rankings.cooldownChanges = Object.entries(rankings.cooldownChanges);
   return {
     type: 'REC_STATS',
-    totalRanking,
-    totalDailyRanking,
-    dailyCRanking,
-    prevTop,
-    onlineStats,
-    cHistStats,
-    cHourlyStatsOrdered,
-    histStats,
-    pDailyStats,
-    pHourlyStats,
-    cooldownChanges,
+    rankings,
   };
 }
 

@@ -988,7 +988,7 @@ export async function populateUserIdObj(rawRanks) {
   const uids = rawRanks.map((r) => r.id);
   const userData = await sequelize.query(
     // eslint-disable-next-line max-len
-    `SELECT u.id, u.title, u.name,
+    `SELECT u.id, u.name, u.username,
 CONCAT(a.shortId, ':', a.extension) AS avatarId
 FROM Users u
   LEFT JOIN Profiles p ON p.uid = u.id
@@ -999,18 +999,18 @@ WHERE (u.flags & ?) = 0 AND u.id IN (?)`, {
       type: QueryTypes.SELECT,
     },
   );
-  for (const { id, name, title, avatarId } of userData) {
+  for (const { id, name, username, avatarId } of userData) {
     const rank = rawRanks.find((r) => r.id === id);
     if (rank) {
       rank.name = name;
-      rank.title = title;
+      rank.username = username;
       rank.avatarId = avatarId;
     }
   }
   for (const rank of rawRanks) {
     if (!rank.name) {
       rank.name = null;
-      rank.title = null;
+      rank.username = null;
       rank.avatarId = null;
     }
   }

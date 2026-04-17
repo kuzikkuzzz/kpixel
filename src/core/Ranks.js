@@ -37,43 +37,44 @@ class Ranks {
     // todays ranking of users by pixels
     dailyRanking: {
       columnIds: [
-        'daily_rank', 'avatar', 'user', 'daily_pixel', 'today_rank',
-        'today_pixel',
+        'today_rank', 'avatar', 'name', 'today_pixel', 'rank', 'pixel',
       ],
       types: ['number', 'mediaId', 'user', 'number', 'number', 'number'],
+      uniqueColumnKey: 2,
       rows: [],
     },
     // ranking of users by pixels
     ranking: {
       columnIds: [
-        'total_rank', 'avatar', 'user', 'total_pixel', 'today_rank',
-        'today_pixel',
+        'rank', 'avatar', 'name', 'pixel', 'today_rank', 'today_pixel',
       ],
       types: ['number', 'mediaId', 'user', 'number', 'number', 'number'],
+      uniqueColumnKey: 2,
       rows: [],
     },
     // yesterdays ranking of users by pixels
     prevTop: {
-      columnIds: ['yesterday_rank', 'avatar', 'user', 'yesterday_pixel'],
+      columnIds: ['yesterday_rank', 'avatar', 'name', 'yesterday_pixel'],
       types: ['number', 'mediaId', 'user', 'number'],
+      uniqueColumnKey: 2,
       rows: [],
     },
     // todays ranking of users by pixels
     dailyFactionRanking: {
       columnIds: [
-        'daily_rank', 'avatar', 'faction', 'daily_pixel', 'today_rank',
-        'today_pixel',
+        'today_rank', 'avatar', 'title', 'today_pixel', 'rank', 'pixel',
       ],
       types: ['number', 'mediaId', 'faction', 'number', 'number', 'number'],
+      uniqueColumnKey: 2,
       rows: [],
     },
     // ranking of users by pixels
     factionRanking: {
       columnIds: [
-        'total_rank', 'avatar', 'faction', 'total_pixel', 'today_rank',
-        'today_pixel',
+        'rank', 'avatar', 'title', 'pixel', 'today_rank', 'today_pixel',
       ],
       types: ['number', 'mediaId', 'faction', 'number', 'number', 'number'],
+      uniqueColumnKey: 2,
       rows: [],
     },
     // ranking today of countries by pixels
@@ -238,24 +239,24 @@ class Ranks {
       await getTopUserRanks(false, 1, 100),
     );
     /*
-     * { id, dt, dr, t, r, name, title, avatarId }
+     * { id, dt, dr, t, r, name, username, avatarId }
      */
     ranking = ranking.map(({
-      dt, dr, t, r, name, title, avatarId,
+      dt, dr, t, r, name, username, avatarId,
     }) => [
-      r, avatarId, (name) ? `${title},${name}` : null, t, dr, dt,
+      r, avatarId, (name) ? `${name},${username}` : null, t, dr, dt,
     ]);
 
     let dailyRanking = await populateUserIdObj(
       await getTopUserRanks(true, 1, 100),
     );
     /*
-     * { id, dt, dr, t, r, name, title, avatarId }
+     * { id, dt, dr, t, r, name, username, avatarId }
      */
     dailyRanking = dailyRanking.map(({
-      dt, dr, t, r, name, title, avatarId,
+      dt, dr, t, r, name, username, avatarId,
     }) => [
-      dr, avatarId, (name) ? `${title},${name}` : null, dt, r, t,
+      dr, avatarId, (name) ? `${name},${username}` : null, dt, r, t,
     ]);
 
     let factionRanking = await populateFactionIdObj(
@@ -315,12 +316,12 @@ class Ranks {
   static async dailyUpdateRanking() {
     let prevTop = await populateUserIdObj(await getPrevTop());
     /*
-     * { id, dr, dt, name, title, avatarId }
+     * { id, dr, dt, name, username, avatarId }
      */
     prevTop = prevTop.map(({
-      dr, dt, name, title, avatarId,
+      dr, dt, name, username, avatarId,
     }) => [
-      dr, avatarId, `${title},${name}`, dt,
+      dr, avatarId, `${name},${username}`, dt,
     ]);
 
     const pDailyStats = await getDailyPixelStats();

@@ -6,7 +6,7 @@ import { searchUser } from '../../data/sql/User.js';
 
 export default async function search(req, res) {
   req.tickRateLimiter(1000);
-  const { ttag: { t }, body: { type, term } } = req;
+  const { body: { type, term } } = req;
 
   if (!term || typeof term !== 'string') {
     throw new Error('No search term given');
@@ -16,14 +16,14 @@ export default async function search(req, res) {
   }
 
   let columnIds;
-  let columns;
   let types;
+  let uniqueColumnKey;
   const rows = [];
   switch (type) {
     case 'factions': {
       columnIds = ['avatar', 'title', 'description', 'ispublic', 'members'];
-      columns = [t`Avatar`, t`Title`, t`Description`, t`Public`, t`Members`];
       types = ['mediaId', 'faction', 'string', 'bool', 'number'];
+      uniqueColumnKey = 1;
       const factionResults = await searchFaction(term);
       for (let i = 0; i < factionResults.length; i += 1) {
         const {
@@ -36,9 +36,9 @@ export default async function search(req, res) {
       break;
     }
     case 'users': {
-      columnIds = ['avatar', 'name', 'description', 'role', 'joined'];
-      columns = [t`Avatar`, t`Name`, t`Role`, t`Joined`];
+      columnIds = ['avatar', 'name', 'role', 'joined'];
       types = ['mediaId', 'user', 'flagId', 'ts'];
+      uniqueColumnKey = 1;
       const userResults = await searchUser(term);
       for (let i = 0; i < userResults.length; i += 1) {
         const {
@@ -54,5 +54,10 @@ export default async function search(req, res) {
       throw new Error('Unknown search type');
   }
 
-  res.json({ columnIds, columns, types, rows });
+  res.json({
+    columnIds,
+    types,
+    rows,
+    uniqueColumnKey,
+  });
 }

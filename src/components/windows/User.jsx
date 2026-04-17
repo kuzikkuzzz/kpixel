@@ -28,6 +28,7 @@ const User = () => {
    *   uid,
    *   name,
    *   username,
+   *   age: number of age in days,
    *   avatarId,
    *   customFlag,
    *   isPrivate,
@@ -173,6 +174,11 @@ const User = () => {
         value={userData.ranking}
         zero="N/A"
         rank
+      />
+      <Stat
+        text={t`Age`}
+        value={userData.age}
+        unit={t`days`}
       />
       <BadgeList badges={userData.badges} />
       <FishList fishes={userData.fishes} />
