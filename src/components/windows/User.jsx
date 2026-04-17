@@ -78,6 +78,7 @@ const User = () => {
         setErrors(reqUserData.errors);
         return;
       }
+      setErrors([]);
       setUserData(reqUserData);
     })();
   }, [userData, username]);
@@ -206,6 +207,10 @@ const User = () => {
           </tbody>
         </table>
       )}
+      {errors.map((error) => (
+        <p key={error} className="errormessage">
+        <span>{t`Error`}</span>:&nbsp;{error}</p>
+      ))}
       <div className="form-actions">
         <ClipboardCopyField
           hideField="true"
@@ -216,6 +221,7 @@ const User = () => {
           title={t`Refresh`}
           onClick={() => {
             setUserData(null);
+            setErrors([]);
           }}
         ><IoIosRefresh /></button>
         {(ownUid && ownUid !== uid) && (
@@ -224,6 +230,7 @@ const User = () => {
             type="button"
             title={(isBlocked) ? t`Unblock` : t`Block`}
             onClick={() => {
+              setErrors([]);
               store.dispatch(setUserBlock(uid, userData.name, !isBlocked));
             }}
           >
@@ -232,7 +239,7 @@ const User = () => {
           <button
             type="button"
             title={t`DM`}
-            onClick={(evt) => {
+            onClick={async (evt) => {
               evt.stopPropagation();
               /*
                 * if dm channel already exists,
@@ -250,12 +257,17 @@ const User = () => {
                   return;
                 }
               }
-              store.dispatch(startDm({ userId: uid }, (cid) => {
-                link('CHAT', {
-                  target: 'parent',
-                  args: { chatChannel: cid },
-                });
-              }));
+              const error = await store.dispatch(
+                startDm({ userId: uid }, (cid) => {
+                  link('CHAT', {
+                    target: 'parent',
+                    args: { chatChannel: cid },
+                  });
+                }, false),
+              );
+              if (error) {
+                setErrors([error]);
+              }
             }}
           >
             {t`DM`}

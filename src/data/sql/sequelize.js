@@ -873,6 +873,38 @@ BEGIN
 
   COMMIT;
 END`,
+    TRANSFER_FACTION: `CREATE PROCEDURE IF NOT EXISTS TRANSFER_FACTION(
+  p_faction_name VARCHAR(32) CHARACTER SET ascii,
+  IN p_uid INT UNSIGNED
+) NOT DETERMINISTIC MODIFIES SQL DATA
+BEGIN
+  DECLARE v_fid BIGINT UNSIGNED;
+  DECLARE v_sovereign_frid BIGINT UNSIGNED;
+  DECLARE v_old_uid INT UNSIGNED;
+  DECLARE EXIT HANDLER FOR SQLEXCEPTION
+  BEGIN
+    ROLLBACK;
+    RESIGNAL;
+  END;
+  START TRANSACTION;
+
+  SELECT MAX(fr.fid), MAX(fr.id), MAX(ufr.uid)
+  INTO v_fid, v_sovereign_frid, v_old_uid FROM FactionRoles fr
+    INNER JOIN Factions f ON f.id = fr.fid
+    LEFT JOIN UserFactionRoles ufr ON ufr.frid = fr.id
+  WHERE f.name = p_faction_name AND fr.factionlvl >= ${FACTION_PERMISSIONS.SOVEREIGN};
+
+  IF v_sovereign_frid IS NOT NULL THEN
+    UPDATE Profiles SET activeRole = NULL WHERE activeRole = v_sovereign_frid;
+    DELETE FROM UserFactions WHERE fid = v_fid AND EXISTS(
+      SELECT 1 FROM UserFactionRoles WHERE frid = v_sovereign_frid AND uid = UserFactions.uid
+    );
+    DELETE FROM UserFactionRoles WHERE frid = v_sovereign_frid;
+    INSERT INTO UserFactionRoles (uid, frid) VALUES (p_uid, v_sovereign_frid);
+    INSERT IGNORE INTO UserFactions (uid, fid, joined, flags) VALUES (p_uid, v_fid, NOW(), 0);
+  END IF;
+  COMMIT;
+END`,
     GET_CLOSE_IMAGE: `CREATE PROCEDURE IF NOT EXISTS GET_CLOSE_IMAGE(IN p_pHash CHAR(16)) READS SQL DATA
 BEGIN
   DECLARE i_pHash BIGINT UNSIGNED;
@@ -889,7 +921,7 @@ BEGIN
 END`,
   };
 
-  const funcVersion = 23;
+  const funcVersion = 25;
   const curVersion = Number((await sequelize.query('SELECT value FROM Configs WHERE `key`=\'functions_version\''))[0]?.[0]?.value);
   const doUpgrade = funcVersion !== curVersion;
   if (doUpgrade) {

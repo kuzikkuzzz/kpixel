@@ -52,22 +52,25 @@ export function receiveChatHistory(
 /*
  * query with either userId or userName
  */
-export function startDm(query, cb = null) {
+export function startDm(query, cb = null, alert = true) {
   return async (dispatch) => {
     if (fetchStates.startDm) {
-      return;
+      return null;
     }
     fetchStates.startDm = true;
 
     try {
       const res = await requestStartDm(query);
       if (typeof res === 'string') {
-        dispatch(pAlert(
-          'Direct Message Error',
-          res,
-          'error',
-          'OK',
-        ));
+        if (alert) {
+          dispatch(pAlert(
+            'Direct Message Error',
+            res,
+            'error',
+            'OK',
+          ));
+        }
+        return res;
       } else {
         dispatch(addChatChannel(CHANNEL_TYPES.DM, res));
         if (cb) {
@@ -78,6 +81,7 @@ export function startDm(query, cb = null) {
       delete fetchStates.startDm;
     }
   };
+  return null;
 }
 
 export function fetchStats() {

@@ -6,7 +6,9 @@ import fs from 'fs';
 import path from 'path';
 import sharp from 'sharp';
 
-const FORBIDDEN_FLAGS = ['zz', 'z1', 'z2', 'z3', 'xx', 'a1', 'a2', 'yy', 'ap'];
+const FORBIDDEN_FLAGS = [
+  'zz', 'z1', 'z2', 'z3', 'xx', 'a1', 'a2', 'yy', 'ap', 'eu', 'fa',
+];
 const MARGIN = 2;
 const FLAG_WIDTH = 16;
 const FLAG_HEIGHT = 11;
