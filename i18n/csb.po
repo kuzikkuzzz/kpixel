@@ -598,6 +598,9 @@ msgstr ""
 msgid "Don't show me in global stats"
 msgstr "Nie pòkôzuj mie na swiatowëch statistikach"
 
+msgid "Done"
+msgstr ""
+
 msgid "Download"
 msgstr ""
 

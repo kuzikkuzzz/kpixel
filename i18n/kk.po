@@ -592,6 +592,9 @@ msgstr ""
 msgid "Don't show me in global stats"
 msgstr "Мені ғаламдық статистикада көрсетпеу"
 
+msgid "Done"
+msgstr ""
+
 msgid "Download"
 msgstr ""
 

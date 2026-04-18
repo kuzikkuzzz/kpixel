@@ -573,6 +573,9 @@ msgstr ""
 msgid "Don't show me in global stats"
 msgstr ""
 
+msgid "Done"
+msgstr ""
+
 msgid "Download"
 msgstr ""
 

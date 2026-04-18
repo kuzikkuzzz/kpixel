@@ -611,6 +611,9 @@ msgstr ""
 msgid "Don't show me in global stats"
 msgstr "ʻOua te ke fakaʻaliʻali mai kiate au ʻi he fakamāmani lahí stats"
 
+msgid "Done"
+msgstr ""
+
 msgid "Download"
 msgstr ""
 

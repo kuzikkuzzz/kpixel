@@ -589,6 +589,9 @@ msgstr ""
 msgid "Don't show me in global stats"
 msgstr "Ära näita mind edetabelis"
 
+msgid "Done"
+msgstr ""
+
 msgid "Download"
 msgstr ""
 

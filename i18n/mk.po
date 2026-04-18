@@ -594,6 +594,9 @@ msgstr ""
 msgid "Don't show me in global stats"
 msgstr "Не ми покажувај во глобалната статистика"
 
+msgid "Done"
+msgstr ""
+
 msgid "Download"
 msgstr ""
 

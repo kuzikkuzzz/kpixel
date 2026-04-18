@@ -586,6 +586,9 @@ msgstr ""
 msgid "Don't show me in global stats"
 msgstr "لا تظهرني بالاحصائيات العامة"
 
+msgid "Done"
+msgstr ""
+
 msgid "Download"
 msgstr ""
 

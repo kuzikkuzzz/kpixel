@@ -594,6 +594,9 @@ msgstr ""
 msgid "Don't show me in global stats"
 msgstr "Di statîstîkên gerdûnî de nîşanî min nedin"
 
+msgid "Done"
+msgstr ""
+
 msgid "Download"
 msgstr ""
 

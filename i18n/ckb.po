@@ -591,6 +591,9 @@ msgstr ""
 msgid "Don't show me in global stats"
 msgstr "لە ئاماری جیهانیدا نیشانم مەدە"
 
+msgid "Done"
+msgstr ""
+
 msgid "Download"
 msgstr ""
 

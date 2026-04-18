@@ -604,6 +604,9 @@ msgstr ""
 msgid "Don't show me in global stats"
 msgstr "Laat me niet zien in wereldwijde statistieken"
 
+msgid "Done"
+msgstr ""
+
 msgid "Download"
 msgstr ""
 

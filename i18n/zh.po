@@ -575,6 +575,9 @@ msgstr "不在搜索中展示派别"
 msgid "Don't show me in global stats"
 msgstr "不要在全球统计数据中显示"
 
+msgid "Done"
+msgstr ""
+
 msgid "Download"
 msgstr "下载"
 
