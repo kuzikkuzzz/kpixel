@@ -147,7 +147,7 @@ export default async function factionrolechange(req, res) {
     }
     const success = await setFactionRoleFlag(sqlFrid, customFlagId);
     if (!success) {
-      throw new Error(t`Could not this roles flag`);
+      throw new Error(t`Could not change the flag of this role`);
     }
     logger.info(
       // eslint-disable-next-line max-len

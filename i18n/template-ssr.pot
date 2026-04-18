@@ -190,6 +190,10 @@ msgstr ""
 msgid "Coronavirus"
 msgstr ""
 
+#: src/routes/api/factionrolechange.js:150
+msgid "Could not change the flag of this role"
+msgstr ""
+
 #: src/routes/api/userchange.js:45
 #: src/routes/api/userchange.js:55
 msgid "Could not change this setting. Maybe try again later."
@@ -218,10 +222,6 @@ msgstr ""
 
 #: src/routes/api/profilechange.js:76
 msgid "Could not set your faction role"
-msgstr ""
-
-#: src/routes/api/factionrolechange.js:150
-msgid "Could not this roles flag"
 msgstr ""
 
 #: src/routes/api/media.js:318

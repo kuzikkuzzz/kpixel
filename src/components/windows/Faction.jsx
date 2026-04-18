@@ -923,7 +923,20 @@ const Faction = () => {
                     alt=""
                   />
                 )}
-                <span className="memberlist-name">{memberName}</span>
+                <span className="memberlist-name">
+                  <span
+                    role="button"
+                    tabIndex={-1}
+                    className="modallink"
+                    onClick={(evt) => {
+                      evt.stopPropagation();
+                      link('USER', {
+                        target: 'parent',
+                        args: { username },
+                      });
+                    }}
+                  >{memberName}</span>
+                </span>
                 <span className="memberlist-username">[{username}]</span>
                 <span className={`factionlist-square powerlvl-${memberPowerlvlName}`} />
               </div>

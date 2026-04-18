@@ -149,7 +149,7 @@ const Table = ({
                   // eslint-disable-next-line prefer-const
                   let [url,, thumb] = getUrlsFromMediaIdAndName(val);
                   if (thumb) {
-                    thumb = `url(${cdn`${url}`})`;
+                    thumb = `url(${cdn`${thumb}`})`;
                   }
                   return (
                     <td key={key}>

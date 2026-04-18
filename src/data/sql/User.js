@@ -1037,7 +1037,7 @@ CONCAT(a.shortId, ':', a.extension) AS avatarId FROM Users u
   LEFT JOIN FactionRoles fr ON p.activeRole = fr.id
   LEFT JOIN Media frm ON fr.customFlag = frm.id
 WHERE (u.flags & ?) = 0 AND (
-  u.name LIKE ? OR u.username LIKE ?
+  u.name LIKE ? OR u.username LIKE CONVERT(? USING ascii)
 ) LIMIT 50`, {
         replacements: [0x01 << USER_FLAGS.PRIV, sqlTerm, sqlTerm.toLowerCase()],
         raw: true,

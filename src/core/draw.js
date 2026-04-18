@@ -233,7 +233,7 @@ export default async function drawByOffsets(
     ] = await allowPlace(
       ipString,
       userId,
-      user.data.activeFactionId || 0,
+      user?.data.activeFactionId || 0,
       ip.country,
       ranked,
       canvasId,

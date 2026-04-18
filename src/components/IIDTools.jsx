@@ -99,7 +99,7 @@ function ModIIDtools() {
   const [identifierList, setIdentifierList] = useState('');
   const [reason, setReason] = useState('');
   const [username, setUsername] = useState('');
-  const [duration, setDuration] = useState('1d');
+  const [duration, setDuration] = useState('3d');
   const [resp, setResp] = useState('');
   const [submitting, setSubmitting] = useState(false);
 

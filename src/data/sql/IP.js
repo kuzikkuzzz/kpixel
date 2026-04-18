@@ -466,10 +466,12 @@ export async function findAlts(userId, ipString, daysLookBack) {
         userIps = await sequelize.query(
           // eslint-disable-next-line max-len
           `SELECT BIN_TO_UUID(i.uuid) AS iid, l.uid FROM UserIPs l
-    INNER JOIN IPs i ON l.ip = i.ip
-    INNER JOIN UserIPs m ON m.ip = l.ip
-  WHERE m.uid = ? AND m.lastSeen > NOW() - INTERVAL ? DAY`, {
-            replacements: [userId, daysLookBack],
+  INNER JOIN IPs i ON l.ip = i.ip
+  INNER JOIN UserIPs m ON m.ip = l.ip
+WHERE m.uid = ?
+  AND l.lastSeen > NOW() - INTERVAL ? DAY
+  AND m.lastSeen > NOW() - INTERVAL ? DAY`, {
+            replacements: [userId, daysLookBack, daysLookBack],
             raw: true,
             type: QueryTypes.SELECT,
           },
@@ -498,10 +500,12 @@ WHERE m.uid = ?`, {
         userIps = await sequelize.query(
           // eslint-disable-next-line max-len
           `SELECT BIN_TO_UUID(i.uuid) AS iid, l.uid FROM UserIPs l
-    INNER JOIN IPs i ON l.ip = i.ip
-    INNER JOIN UserIPs m ON m.uid = l.uid
-  WHERE m.ip = IP_TO_BIN(?) AND m.lastSeen > NOW() - INTERVAL ? DAY`, {
-            replacements: [ipString, daysLookBack],
+  INNER JOIN IPs i ON l.ip = i.ip
+  INNER JOIN UserIPs m ON m.uid = l.uid
+WHERE m.ip = IP_TO_BIN(?)
+  AND l.lastSeen > NOW() - INTERVAL ? DAY
+  AND m.lastSeen > NOW() - INTERVAL ? DAY`, {
+            replacements: [ipString, daysLookBack, daysLookBack],
             raw: true,
             type: QueryTypes.SELECT,
           },

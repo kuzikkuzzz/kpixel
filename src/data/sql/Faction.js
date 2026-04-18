@@ -800,7 +800,7 @@ f.memberCount,
 CONCAT(a.shortId, ':', a.extension) AS avatarId FROM Factions f
   LEFT JOIN Media a ON a.id = f.avatar
 WHERE (f.flags & ?) = 0 AND (
-  f.name LIKE ? OR f.title LIKE ? OR f.description LIKE ?
+  f.name LIKE CONVERT(? USING ascii) OR f.title LIKE ? OR f.description LIKE ?
 ) LIMIT 50`, {
         replacements: [
           0x01 << FACTION_FLAGS.PUBLIC, 0x01 << FACTION_FLAGS.PRIV,
