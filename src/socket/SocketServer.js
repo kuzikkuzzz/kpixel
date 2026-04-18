@@ -138,9 +138,10 @@ class SocketServer {
       id,
       country,
     ) => {
+      const ts = Math.floor(Date.now() / 1000);
       const text = `ck,${JSON.stringify(
-        // eslint-disable-next-line max-len
-        [channelId, false, name, message, country, id, Math.floor(Date.now / 1000), 0, false, null, []],
+        [channelId, false, name, message, country, id, ts,
+          ts, false, null, []],
       )}`;
       this.findAllWsByUerId(userId).forEach((ws) => {
         ws.send(text);
@@ -189,16 +190,16 @@ class SocketServer {
 
       if (viewingClientArray.length) {
         const text = `ck,${JSON.stringify(
-          // eslint-disable-next-line max-len
-          [channelId, false, name, message, flag, userId, ts, msgId, flagLegit, avatarId, attachments],
+          [channelId, false, name, message, flag, userId, ts,
+            msgId, flagLegit, avatarId, attachments],
         )}`;
         SocketServer.broadcastSelected(viewingClientArray, text);
       }
 
       if (viewingClientArrayNotify.length) {
         const text = `ck,${JSON.stringify(
-          // eslint-disable-next-line max-len
-          [channelId, true, name, message, flag, userId, ts, msgId, flagLegit, avatarId, attachments],
+          [channelId, true, name, message, flag, userId, ts,
+            msgId, flagLegit, avatarId, attachments],
         )}`;
         SocketServer.broadcastSelected(viewingClientArrayNotify, text);
       }

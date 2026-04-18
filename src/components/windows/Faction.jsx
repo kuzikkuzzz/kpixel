@@ -137,7 +137,6 @@ const Faction = () => {
     const { roles } = factionData.faction;
     for (let i = 0; i < pMembers.length; i += 1) {
       const member = pMembers[i];
-      console.log('check', member.uid, memberUid);
       if (!memberUid || member.uid === memberUid) {
         let memberPowerlvl = 0;
         if (member.roles?.length) {
@@ -666,7 +665,6 @@ const Faction = () => {
     }
 
     setSubmitting(true);
-    console.log('change faction', factionChanges);
     const respErrors = await dispatch(
       changeFaction(factionChanges),
     );
