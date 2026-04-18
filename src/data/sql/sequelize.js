@@ -9,7 +9,7 @@ import Sequelize from 'sequelize';
 import {
   FACTION_FLAGS, CHANNEL_TYPES, FACTION_PERMISSIONS, FACTION_ROLE_FLAGS,
   MAX_ROLES_PER_FACTION, MAX_FACTIONS_PER_USER, MAX_OWNED_FACTIONS_PER_USER,
-  INVITE_FLAGS, MAX_INVITES_PER_FACTION,
+  INVITE_FLAGS, MAX_INVITES_PER_FACTION, USER_FLAGS, USER_FACTION_FLAGS,
 } from '../../core/constants.js';
 import {
   MARIADB_HOST, MARIADB_DATABASE, MARIADB_USER, MARIADB_PW, LOG_MARIADB,
@@ -675,7 +675,9 @@ BEGIN
     SELECT 5 AS result;
     ROLLBACK;
   ELSE
-    INSERT INTO UserFactions (uid, fid, joined) VALUES (p_uid, p_fid, NOW());
+    INSERT INTO UserFactions (uid, fid, joined, flags) SELECT p_uid, p_fid, NOW(),
+      IF(u.flags & ${0x01 << USER_FLAGS.PRIV} != 0, ${0x01 << USER_FACTION_FLAGS.HIDDEN}, 0)
+    FROM Users u WHERE u.id = p_uid;
     INSERT INTO UserFactionRoles (uid, frid)
       SELECT p_uid, fr.id FROM FactionRoles fr WHERE fr.fid = p_fid AND (fr.flags & ${0x01 << FACTION_ROLE_FLAGS.DEFAULT}) != 0;
     INSERT INTO UserChannels (uid, cid, lastRead)
@@ -921,7 +923,7 @@ BEGIN
 END`,
   };
 
-  const funcVersion = 26;
+  const funcVersion = 27;
   const curVersion = Number((await sequelize.query('SELECT value FROM Configs WHERE `key`=\'functions_version\''))[0]?.[0]?.value);
   const doUpgrade = funcVersion !== curVersion;
   if (doUpgrade) {

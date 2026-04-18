@@ -45,7 +45,7 @@ export default async function factionjoin(req, res) {
   /*
    * turn info object into faction object for user profile
    */
-  factionInfo.isHidden = false;
+  factionInfo.isHidden = user.isPrivate;
   for (let i = 0; i < factionInfo.roles.length; i += 1) {
     const role = factionInfo.roles[i];
     role.isMember = role.isDefault;

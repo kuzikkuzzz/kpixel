@@ -409,6 +409,8 @@ WHERE ub.uid = ?`, {
           user.channels[type] = [channel];
         }
       }
+    } else {
+      user.channels = {};
     }
 
     /*

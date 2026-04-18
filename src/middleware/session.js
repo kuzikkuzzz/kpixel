@@ -36,7 +36,9 @@ export class User {
    *   tpids: [ { tpid, provider }, ... ],
    *   blocked: [ { id, name }, ...],
    *   channels: {
-   *     PUBLIC: [[cid, name, lastTs, lastReadTs, muted, avatar], ...], ...
+   *     [CHANNEL_TYPES.DM]: [
+   *       [cid, name, lastTs, lastReadTs, muted, avatar], ...
+   *     ], ...
    *   },
    * }
    */
