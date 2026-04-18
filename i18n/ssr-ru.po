@@ -70,13 +70,13 @@ msgstr ""
 msgid "Black and White canvas"
 msgstr "Чёрно-белое полотно"
 
-msgid "Can not change a role above or equal to your own"
-msgstr ""
-
 msgid "Can not change a role above your own"
 msgstr ""
 
 msgid "Can not change a role that is equal to your own"
+msgstr ""
+
+msgid "Can not change the default setting of this role"
 msgstr ""
 
 msgid "Can not change the powerlevel of a role equal or above you"
@@ -85,22 +85,31 @@ msgstr ""
 msgid "Can not change the powerlevel of the Sovereign"
 msgstr ""
 
-msgid "Can not change this role"
-msgstr ""
-
 msgid "Can not chat while being banned"
 msgstr "Нельзя писать в чат находясь в бане"
 
-msgid "Can not create a role with a powerlevel of yours or beyond"
+msgid "Can not create a role on the same level as yours"
+msgstr ""
+
+msgid "Can not create a role with a powerlevel beyond yours"
+msgstr ""
+
+msgid "Can not delete a role on the same level as yours"
 msgstr ""
 
 msgid "Can not delete this role"
 msgstr ""
 
-msgid "Can not elevate the powerlevel of a role to yours or beyond"
+msgid "Can not elevate the powerlevel of a role beyond yours"
+msgstr ""
+
+msgid "Can not elevate the powerlevel of a role to yours"
 msgstr ""
 
 msgid "Can not have more than 20 faction roles"
+msgstr ""
+
+msgid "Can not have more than 20 invites per faction"
 msgstr ""
 
 msgid "Can not modify user equal to you or above you"
@@ -117,6 +126,9 @@ msgid ""
 msgstr ""
 "Нельзя загрузить столько файлов одновременно, разрешено только 5. У вас $"
 "{ amountOfFiles }"
+
+msgid "Can only have one Sovereign role"
+msgstr ""
 
 msgid "Click here"
 msgstr "Нажмите здесь"
@@ -612,9 +624,6 @@ msgstr ""
 msgid "This faction is full"
 msgstr ""
 
-msgid "This faction is hidden"
-msgstr ""
-
 msgid "This faction is private"
 msgstr ""
 
@@ -624,6 +633,9 @@ msgstr "Этот медиафайл забанен по причине ${ reason
 
 msgid "This password-reset link isn't valid anymore :("
 msgstr "Эта ссылка для сброса пароля больше недействительна :("
+
+msgid "This user is private"
+msgstr ""
 
 msgid "Title can't be empty."
 msgstr ""

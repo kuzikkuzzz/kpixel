@@ -17,12 +17,6 @@ msgstr ""
 msgid " which is in "
 msgstr " som er i "
 
-msgid "# Today"
-msgstr ""
-
-msgid "# Total"
-msgstr ""
-
 #, javascript-format
 msgid "${ mouseSymbol } Hold left mouse button and drag mouse to rotate"
 msgstr "${ mouseSymbol } Hold venstre museknap og træk din mus for at rotere"
@@ -70,8 +64,18 @@ msgstr "...indlæser Loginmetoder og sessioner..."
 msgid "A Phish!"
 msgstr "En Phisk!"
 
+msgid ""
+"A flag representing the role, it should be 16x11 pixels. If left empty, "
+"users with this role selected will still show their own flags."
+msgstr ""
+
 msgid "A new verification mail is getting sent to you."
 msgstr "En ny bekræftelsesmail bliver sent til dig."
+
+msgid ""
+"A role has all the permissions of all levels below and equal to it. In "
+"example: Every role with a power level of >=50 can manage invites (50)."
+msgstr ""
 
 msgid "ACCESS MODTOOLS"
 msgstr "BRUG MODVÆRKTØJER"
@@ -86,6 +90,12 @@ msgstr "Tilføj skabelon"
 #. This if for moderation tools, it's not important to translate this
 msgid "Admintools"
 msgstr "Adminværktøjer"
+
+msgid "Age"
+msgstr ""
+
+msgid "All members of this faction are hidden"
+msgstr ""
 
 msgid "All sound effects will be disabled."
 msgstr "Alle lyde vil blive deaktiveret."
@@ -114,6 +124,18 @@ msgstr ""
 msgid "Assign new Mod"
 msgstr "Tildel ny Mod"
 
+msgid "Assign role per default to new members"
+msgstr ""
+
+msgid "Assign roles below their own"
+msgstr ""
+
+msgid "Assign this role to every new member automatically on join."
+msgstr ""
+
+msgid "Assigned role per default"
+msgstr ""
+
 msgid "Attach File"
 msgstr ""
 
@@ -138,6 +160,9 @@ msgstr ""
 msgid "Ban media"
 msgstr ""
 
+msgid "Ban members"
+msgstr ""
+
 msgid "Banned"
 msgstr "Bannet"
 
@@ -154,13 +179,10 @@ msgid "Block DMs"
 msgstr "Blokér DM'er"
 
 msgid ""
-"Block all Private Messages. Enabling this will delete all your current DMs. "
-"You can still start new DMs with other users, but other users won't be able "
-"to start DMs with you."
+"Block all Private Messages. Enabling this will make it impossible for other "
+"users to start messaging you. You can still start new DMs with other users "
+"and already ongoing DMs will still be open."
 msgstr ""
-"Blokér alle Private Beskeder. Aktivering af dette vil slette alle dine "
-"nuværende DM'er. Du kan stadig starte nye DM'er med andre brugere, men andre "
-"brugere vil ikke kunne starte DM'er med dig."
 
 msgid "Blocked"
 msgstr "Blokeret"
@@ -221,6 +243,9 @@ msgstr "Captcha"
 
 msgid "Caught by"
 msgstr "Fanget af"
+
+msgid "Change Flag"
+msgstr ""
 
 msgid "Change Happened"
 msgstr "Ændring Skete"
@@ -341,6 +366,9 @@ msgstr ""
 msgid "Confirm Ban"
 msgstr ""
 
+msgid "Confirm Delete"
+msgstr ""
+
 msgid "Confirm Kick"
 msgstr ""
 
@@ -352,6 +380,9 @@ msgstr "Bekræft Nye Adgangskode"
 
 msgid "Confirm Password"
 msgstr "Bekræft Adgangskode"
+
+msgid "Confirm your password."
+msgstr ""
 
 #, javascript-format
 msgid "Connection error ${ code } :("
@@ -430,7 +461,22 @@ msgstr "Land"
 msgid "Create Faction"
 msgstr ""
 
+msgid "Create Invite"
+msgstr ""
+
 msgid "Create New Faction"
+msgstr ""
+
+msgid "Create New Invite"
+msgstr ""
+
+msgid "Create New Role"
+msgstr ""
+
+msgid "Create Role"
+msgstr ""
+
+msgid "Create roles"
 msgstr ""
 
 #, javascript-format
@@ -457,8 +503,14 @@ msgstr ""
 msgid "DM"
 msgstr "DM"
 
+msgid "Daily Pixel"
+msgstr ""
+
 msgid "Daily Pixels per Country"
 msgstr "Daglige Pixels per Land"
+
+msgid "Daily Pixels per Faction"
+msgstr ""
 
 msgid "Daily Pixels per Player"
 msgstr "Daglige Pixels per Spiller"
@@ -477,6 +529,12 @@ msgstr "Slet"
 
 msgid "Delete Account"
 msgstr "Slet Konto"
+
+msgid "Delete Faction"
+msgstr ""
+
+msgid "Delete the faction"
+msgstr ""
 
 msgid "Deny"
 msgstr "Nægt"
@@ -557,6 +615,15 @@ msgstr "Hemmelighed PÅ"
 msgid "Edit"
 msgstr "Redigér"
 
+msgid "Edit faction"
+msgstr ""
+
+msgid "Edit roles below their own"
+msgstr ""
+
+msgid "Edit their own role and elevate users to their own level"
+msgstr ""
+
 msgid "Email"
 msgstr "Email"
 
@@ -603,6 +670,9 @@ msgstr "Indsæt BrugerNavn af ny mod"
 msgid "Enter a little text that describes your faction"
 msgstr ""
 
+msgid "Enter search term and press Search."
+msgstr ""
+
 msgid "Enter your mail address and we will send you a new password:"
 msgstr "Indsæt din mailadresse og vi vil sende dig en ny adgangskode:"
 
@@ -622,7 +692,16 @@ msgstr "Udvid"
 msgid "Export enabled templates"
 msgstr "Eksportér aktiverede skabeloner"
 
+msgid "Faction"
+msgstr ""
+
 msgid "Factions"
+msgstr ""
+
+msgid "Factions Today"
+msgstr ""
+
+msgid "Factions Total"
 msgstr ""
 
 msgid ""
@@ -757,6 +836,9 @@ msgstr "Hvordan pixelplanet burde se ud."
 msgid "I forgot my Password."
 msgstr "Jeg glemte min Adgangskode."
 
+msgid "ID"
+msgstr ""
+
 msgid "IID (optional)"
 msgstr "IID (valgfrit)"
 
@@ -812,10 +894,16 @@ msgstr "Ugyldige Koordinater"
 msgid "Invalid color selected"
 msgstr "Ugyldig farve valgt"
 
+msgid "Invite"
+msgstr ""
+
 msgid "Invited to Chat"
 msgstr "Inviteret til Chat"
 
 msgid "Invites"
+msgstr ""
+
+msgid "Is One-Time-Invite"
 msgstr ""
 
 msgid ""
@@ -827,7 +915,13 @@ msgstr ""
 msgid "Jannies can rollback and protect, but not watch or ban."
 msgstr "Jannier kan tilbagerulle og beskytte, men ikke holde øje eller banne."
 
+msgid "Join"
+msgstr ""
+
 msgid "Join Faction"
+msgstr ""
+
+msgid "Joined"
 msgstr ""
 
 msgid "Just for registered Users"
@@ -843,6 +937,9 @@ msgid "Keep Ratio"
 msgstr "Behold Forhold"
 
 msgid "Kick"
+msgstr ""
+
+msgid "Kick members"
 msgstr ""
 
 msgid "Know that an account exists"
@@ -861,6 +958,9 @@ msgid "Let everyone join this faction"
 msgstr ""
 
 msgid "Let people join this faction without needing an invite."
+msgstr ""
+
+msgid "Level"
 msgstr ""
 
 msgid "Light Grid"
@@ -896,6 +996,9 @@ msgstr "Login for at få adgang til flere funktioner og statistikker."
 msgid "Login to grant access to other application."
 msgstr "Login for at give adgang til andre applikationer."
 
+msgid "Login to join us."
+msgstr ""
+
 msgid "Login to other application"
 msgstr "Login til anden applikation"
 
@@ -909,6 +1012,9 @@ msgid "Manage Moderators"
 msgstr "Administrer Moderatorer"
 
 msgid "Manage Templates"
+msgstr ""
+
+msgid "Manage invites"
 msgstr ""
 
 msgid "Map Data"
@@ -963,7 +1069,10 @@ msgstr "Navn skal være mindst 2 tegn langt"
 msgid "Name must be shorter than 26 characters"
 msgstr "Navn skal være kortere end 26 tegn"
 
-msgid "Name of your faction [a-z][A-Z][0-9].-_"
+msgid "Name of this role"
+msgstr ""
+
+msgid "Name of your faction (this can not be changed later)"
 msgstr ""
 
 msgid "Name or Email"
@@ -1002,6 +1111,9 @@ msgstr "Ingen eller ugyldig captcha text"
 msgid "No password given."
 msgstr "Ingen adgangskode angivet."
 
+msgid "No results."
+msgstr ""
+
 msgid "Nobody is banned from this faction"
 msgstr ""
 
@@ -1031,6 +1143,9 @@ msgstr "Åh nej, phisken undslap. Bedre held næste gang!"
 
 msgid "Old Password"
 msgstr "Gamle Adgangskode"
+
+msgid "One-Time"
+msgstr ""
 
 msgid "Online Users"
 msgstr "Online Brugerer"
@@ -1118,6 +1233,9 @@ msgstr "Blyant vælger: "
 msgid "Permission"
 msgstr "Tilladelse"
 
+msgid "Permissions of Powerlevels"
+msgstr ""
+
 msgid "Phish!"
 msgstr "Phisk!"
 
@@ -1126,6 +1244,9 @@ msgstr "Phisk"
 
 msgid "Ping"
 msgstr "Ping"
+
+msgid "Pixel"
+msgstr ""
 
 msgid "Pixel Notify OFF"
 msgstr "Pixel Notificer Fra"
@@ -1138,12 +1259,6 @@ msgstr "Pixel Beskyttelse"
 
 msgid "Pixel protected"
 msgstr "Pixel beskyttet"
-
-msgid "Pixels"
-msgstr ""
-
-msgid "Pixels Today"
-msgstr ""
 
 msgid "Place color pixels on a large canvas with other players online!"
 msgstr "Placer farvede pixels på en stor kanvas med andre spillere online!"
@@ -1178,6 +1293,12 @@ msgstr "Politisk Kompas Kanvas"
 
 msgid "Potato Mode"
 msgstr "Kartoffeltilstand"
+
+msgid "Powerlevel"
+msgstr ""
+
+msgid "Powerlevel of this role. See table below for explenation."
+msgstr ""
 
 #, javascript-format
 msgid ""
@@ -1228,6 +1349,9 @@ msgstr "Hurtige Handlinger"
 
 msgid "Range Banned"
 msgstr "Rækkevide Forbudt"
+
+msgid "Rank"
+msgstr ""
 
 msgid "Ranked"
 msgstr "Rangeret"
@@ -1284,6 +1408,10 @@ msgstr ""
 msgid "Remove a Login method:"
 msgstr "Fjern en Loginmetode:"
 
+#, javascript-format
+msgid "Represents ${ activeFactionTitle } as ${ activeFactionRoleName }"
+msgstr ""
+
 msgid "Require Verification to Place"
 msgstr "Kræv Bekræftelse for at Placere"
 
@@ -1314,6 +1442,9 @@ msgstr "Tilbagetræk"
 msgid "Revoke consent of third party applications:"
 msgstr "Tilbagekald samtykke for tredjepartsapplikationer:"
 
+msgid "Role"
+msgstr ""
+
 msgid "Role Flags"
 msgstr ""
 
@@ -1340,7 +1471,19 @@ msgid "Scroll ${ mouseSymbol } mouse wheel or ${ touchSymbol } pinch to zoom"
 msgstr ""
 "Skrol ${ mouseSymbol } mus hjul eller ${ touchSymbol } knib for at zoome"
 
+msgid "Search"
+msgstr ""
+
 msgid "Search Existing Faction"
+msgstr ""
+
+msgid "Search Term"
+msgstr ""
+
+msgid "See hidden users in member list"
+msgstr ""
+
+msgid "Select Avatar of this Faction. Supported Formats: jpg, gif, png, webp"
 msgstr ""
 
 msgid "Select Date above"
@@ -1354,6 +1497,9 @@ msgstr ""
 
 msgid "Select Language"
 msgstr "Vælg Sprog"
+
+msgid "Select a valid pwerlevel"
+msgstr ""
 
 msgid ""
 "Select the canvas you want to use.\n"
@@ -1514,6 +1660,9 @@ msgstr ""
 "Navnet af din konto, kun a-z, A-Z, -, ., og - tegn er tilladt. Det er "
 "permanent, du kan ikke ændre det senere."
 
+msgid "The password for your account."
+msgstr ""
+
 msgid "Themes"
 msgstr "Temaer"
 
@@ -1533,6 +1682,9 @@ msgstr ""
 "Jorden kanvasset. Det var et 1024x1024 representation af det politiske "
 "kompas med et 5s nedkøling og 60s stabling. Den blev iværksat i Maj 11th og "
 "forblev aktiv i måneder indtil det blev lukket ned i November 30th."
+
+msgid "This faction has no invites"
+msgstr ""
 
 msgid ""
 "This is the name that other people see, e.g. in Chat. You can change it at "
@@ -1612,7 +1764,7 @@ msgstr "I Alt"
 msgid "Total Online Users"
 msgstr "Online Brugere i alt"
 
-msgid "Total Pixels"
+msgid "Total Pixels per Faction"
 msgstr ""
 
 msgid "Total Pixels per Player"
@@ -1641,6 +1793,12 @@ msgid "Type the characters from the following image:"
 msgstr "Skriv tegnene fra det følgene billede:"
 
 msgid "Unban media"
+msgstr ""
+
+msgid "Unban members"
+msgstr ""
+
+msgid "Unblock"
 msgstr ""
 
 msgid "Unblock Users"
@@ -1697,6 +1855,9 @@ msgstr "Brugernavn skal være mindst 2 tegn langt"
 msgid "Username must be shorter than 26 characters"
 msgstr "Brugernavn skal være kortere end 26 tegn"
 
+msgid "Users"
+msgstr ""
+
 #, javascript-format
 msgid "We are Libre Software under the ${ agplLink }, "
 msgstr "Vi er Libre Software under ${ agplLink }, "
@@ -1722,6 +1883,9 @@ msgstr "Underligt"
 
 msgid "What the pencil should draw on the current canvas."
 msgstr "Hvad blyanten bør tegne på det nuværende kanvas."
+
+msgid "Whether or not this invite can only be used once."
+msgstr ""
 
 msgid ""
 "While we tend to not delete canvases, some canvases are started for fun or "
@@ -1788,6 +1952,10 @@ msgid ""
 "You are currently representing ${ activeFactionTitle } as ${ activeRoleName }"
 msgstr ""
 
+#, javascript-format
+msgid "You are logged in as ${ name } [${ username }]."
+msgstr ""
+
 msgid "You are not allowed to play this game right now :("
 msgstr "Du er ikke tilladt at spille dette spil lige nu :("
 
@@ -1824,6 +1992,12 @@ msgstr "Du gav ikke samtykke"
 msgid "You failed your captcha"
 msgstr "Du mislykkede din captcha"
 
+#, javascript-format
+msgid ""
+"You have been invited to join us on pixelplanet. We currently have $"
+"{ memberCount } members."
+msgstr ""
+
 msgid "You have no users blocked"
 msgstr "Du har ingen brugere blokeret"
 
@@ -1838,9 +2012,6 @@ msgstr "Du skal være logget ind for at chatte"
 
 msgid "You must enter a UserId"
 msgstr "Du skal angive en BrugerId"
-
-msgid "You must enter a duration"
-msgstr "Du skal angive en varighed"
 
 msgid "You must enter a mediaId or media BID"
 msgstr ""
@@ -1927,6 +2098,9 @@ msgstr "Check overholdelse her"
 msgid "created at"
 msgstr ""
 
+msgid "days"
+msgstr ""
+
 msgid "download here"
 msgstr ""
 
@@ -1941,6 +2115,9 @@ msgstr "eller register her:"
 
 msgid "recommended"
 msgstr "anbefalede"
+
+msgid "times used"
+msgstr ""
 
 #, javascript-format
 msgid "try again after ${ ti }min"
@@ -2014,6 +2191,18 @@ msgstr "W"
 msgctxt "keybinds"
 msgid "X"
 msgstr "X"
+
+#~ msgid ""
+#~ "Block all Private Messages. Enabling this will delete all your current "
+#~ "DMs. You can still start new DMs with other users, but other users won't "
+#~ "be able to start DMs with you."
+#~ msgstr ""
+#~ "Blokér alle Private Beskeder. Aktivering af dette vil slette alle dine "
+#~ "nuværende DM'er. Du kan stadig starte nye DM'er med andre brugere, men "
+#~ "andre brugere vil ikke kunne starte DM'er med dig."
+
+#~ msgid "You must enter a duration"
+#~ msgstr "Du skal angive en varighed"
 
 #~ msgid "Consider joining us on Matrix:"
 #~ msgstr "Overvej at være med os på Matrix:"

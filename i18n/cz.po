@@ -17,12 +17,6 @@ msgstr ""
 msgid " which is in "
 msgstr " Což je za "
 
-msgid "# Today"
-msgstr ""
-
-msgid "# Total"
-msgstr ""
-
 #, javascript-format
 msgid "${ mouseSymbol } Hold left mouse button and drag mouse to rotate"
 msgstr ""
@@ -74,8 +68,18 @@ msgstr ""
 msgid "A Phish!"
 msgstr ""
 
+msgid ""
+"A flag representing the role, it should be 16x11 pixels. If left empty, "
+"users with this role selected will still show their own flags."
+msgstr ""
+
 msgid "A new verification mail is getting sent to you."
 msgstr "Novej ověřující mail se vám posílá."
+
+msgid ""
+"A role has all the permissions of all levels below and equal to it. In "
+"example: Every role with a power level of >=50 can manage invites (50)."
+msgstr ""
 
 msgid "ACCESS MODTOOLS"
 msgstr ""
@@ -88,6 +92,12 @@ msgstr "Přidat Šablonu"
 
 #. This if for moderation tools, it's not important to translate this
 msgid "Admintools"
+msgstr ""
+
+msgid "Age"
+msgstr ""
+
+msgid "All members of this faction are hidden"
 msgstr ""
 
 msgid "All sound effects will be disabled."
@@ -117,6 +127,18 @@ msgstr ""
 msgid "Assign new Mod"
 msgstr "Přidat nového Moderátora"
 
+msgid "Assign role per default to new members"
+msgstr ""
+
+msgid "Assign roles below their own"
+msgstr ""
+
+msgid "Assign this role to every new member automatically on join."
+msgstr ""
+
+msgid "Assigned role per default"
+msgstr ""
+
 msgid "Attach File"
 msgstr ""
 
@@ -141,6 +163,9 @@ msgstr ""
 msgid "Ban media"
 msgstr ""
 
+msgid "Ban members"
+msgstr ""
+
 msgid "Banned"
 msgstr "Zabanován"
 
@@ -157,9 +182,9 @@ msgid "Block DMs"
 msgstr "Blokovat DMs"
 
 msgid ""
-"Block all Private Messages. Enabling this will delete all your current DMs. "
-"You can still start new DMs with other users, but other users won't be able "
-"to start DMs with you."
+"Block all Private Messages. Enabling this will make it impossible for other "
+"users to start messaging you. You can still start new DMs with other users "
+"and already ongoing DMs will still be open."
 msgstr ""
 
 msgid "Blocked"
@@ -220,6 +245,9 @@ msgid "Captcha"
 msgstr "Captcha"
 
 msgid "Caught by"
+msgstr ""
+
+msgid "Change Flag"
 msgstr ""
 
 #, fuzzy
@@ -343,6 +371,9 @@ msgstr ""
 msgid "Confirm Ban"
 msgstr ""
 
+msgid "Confirm Delete"
+msgstr ""
+
 msgid "Confirm Kick"
 msgstr ""
 
@@ -354,6 +385,9 @@ msgstr "Potvrdit Nový Heslo"
 
 msgid "Confirm Password"
 msgstr "Potvrďte heslo"
+
+msgid "Confirm your password."
+msgstr ""
 
 #, javascript-format
 msgid "Connection error ${ code } :("
@@ -432,7 +466,22 @@ msgstr "Stát"
 msgid "Create Faction"
 msgstr ""
 
+msgid "Create Invite"
+msgstr ""
+
 msgid "Create New Faction"
+msgstr ""
+
+msgid "Create New Invite"
+msgstr ""
+
+msgid "Create New Role"
+msgstr ""
+
+msgid "Create Role"
+msgstr ""
+
+msgid "Create roles"
 msgstr ""
 
 #, javascript-format
@@ -459,8 +508,14 @@ msgstr ""
 msgid "DM"
 msgstr "DM"
 
+msgid "Daily Pixel"
+msgstr ""
+
 msgid "Daily Pixels per Country"
 msgstr "Denní počet pixelů na zemi"
+
+msgid "Daily Pixels per Faction"
+msgstr ""
 
 msgid "Daily Pixels per Player"
 msgstr "Počet pixelů položeno za den pro hráče"
@@ -479,6 +534,12 @@ msgstr "Odstranit"
 
 msgid "Delete Account"
 msgstr "Odstranit Účet"
+
+msgid "Delete Faction"
+msgstr ""
+
+msgid "Delete the faction"
+msgstr ""
 
 msgid "Deny"
 msgstr ""
@@ -558,6 +619,15 @@ msgstr "Easter Egg Zapnutý"
 msgid "Edit"
 msgstr "Editovat"
 
+msgid "Edit faction"
+msgstr ""
+
+msgid "Edit roles below their own"
+msgstr ""
+
+msgid "Edit their own role and elevate users to their own level"
+msgstr ""
+
 msgid "Email"
 msgstr "Email"
 
@@ -602,6 +672,9 @@ msgstr "Vlož Jméno nového Moderátora"
 msgid "Enter a little text that describes your faction"
 msgstr ""
 
+msgid "Enter search term and press Search."
+msgstr ""
+
 msgid "Enter your mail address and we will send you a new password:"
 msgstr "Zadejte svojí emailovou adresu a pošleme vám nové heslo:"
 
@@ -621,7 +694,16 @@ msgstr ""
 msgid "Export enabled templates"
 msgstr "Exportovat zapnuté šablony"
 
+msgid "Faction"
+msgstr ""
+
 msgid "Factions"
+msgstr ""
+
+msgid "Factions Today"
+msgstr ""
+
+msgid "Factions Total"
 msgstr ""
 
 msgid ""
@@ -750,6 +832,9 @@ msgstr "Jak pixelplanet by měl vypadat."
 msgid "I forgot my Password."
 msgstr "Zapomenul jsem svoje Heslo."
 
+msgid "ID"
+msgstr ""
+
 msgid "IID (optional)"
 msgstr "IID (dobrovolný)"
 
@@ -799,10 +884,16 @@ msgstr "Neplatné Souřadnice"
 msgid "Invalid color selected"
 msgstr "Byla vybrána neplatná barva"
 
+msgid "Invite"
+msgstr ""
+
 msgid "Invited to Chat"
 msgstr ""
 
 msgid "Invites"
+msgstr ""
+
+msgid "Is One-Time-Invite"
 msgstr ""
 
 msgid ""
@@ -812,7 +903,13 @@ msgstr ""
 msgid "Jannies can rollback and protect, but not watch or ban."
 msgstr ""
 
+msgid "Join"
+msgstr ""
+
 msgid "Join Faction"
+msgstr ""
+
+msgid "Joined"
 msgstr ""
 
 msgid "Just for registered Users"
@@ -828,6 +925,9 @@ msgid "Keep Ratio"
 msgstr "Zanechat Poměr"
 
 msgid "Kick"
+msgstr ""
+
+msgid "Kick members"
 msgstr ""
 
 msgid "Know that an account exists"
@@ -846,6 +946,9 @@ msgid "Let everyone join this faction"
 msgstr ""
 
 msgid "Let people join this faction without needing an invite."
+msgstr ""
+
+msgid "Level"
 msgstr ""
 
 msgid "Light Grid"
@@ -881,6 +984,9 @@ msgstr "Přihlaste se aby jste měli přístup k více funkcím a statistikám."
 msgid "Login to grant access to other application."
 msgstr ""
 
+msgid "Login to join us."
+msgstr ""
+
 msgid "Login to other application"
 msgstr ""
 
@@ -894,6 +1000,9 @@ msgid "Manage Moderators"
 msgstr "Spravovat Moderátory"
 
 msgid "Manage Templates"
+msgstr ""
+
+msgid "Manage invites"
 msgstr ""
 
 msgid "Map Data"
@@ -948,7 +1057,10 @@ msgstr "Jméno musí obsahovat alespoň dva znaky"
 msgid "Name must be shorter than 26 characters"
 msgstr "Jméno musí být menší jak 26 znaků"
 
-msgid "Name of your faction [a-z][A-Z][0-9].-_"
+msgid "Name of this role"
+msgstr ""
+
+msgid "Name of your faction (this can not be changed later)"
 msgstr ""
 
 msgid "Name or Email"
@@ -987,6 +1099,9 @@ msgstr "Žádný nebo neplatný captcha text"
 msgid "No password given."
 msgstr "Nebylo zadané heslo."
 
+msgid "No results."
+msgstr ""
+
 msgid "Nobody is banned from this faction"
 msgstr ""
 
@@ -1016,6 +1131,9 @@ msgstr ""
 
 msgid "Old Password"
 msgstr "Staré Heslo"
+
+msgid "One-Time"
+msgstr ""
 
 msgid "Online Users"
 msgstr "Online Uživatelů"
@@ -1104,6 +1222,9 @@ msgstr "Tužka vybrana: "
 msgid "Permission"
 msgstr ""
 
+msgid "Permissions of Powerlevels"
+msgstr ""
+
 msgid "Phish!"
 msgstr ""
 
@@ -1112,6 +1233,9 @@ msgstr ""
 
 msgid "Ping"
 msgstr "Ping"
+
+msgid "Pixel"
+msgstr ""
 
 msgid "Pixel Notify OFF"
 msgstr "Vypnuty oznámení na pixely"
@@ -1124,12 +1248,6 @@ msgstr "Chránění pixely"
 
 msgid "Pixel protected"
 msgstr "Chráněný pixel"
-
-msgid "Pixels"
-msgstr ""
-
-msgid "Pixels Today"
-msgstr ""
 
 msgid "Place color pixels on a large canvas with other players online!"
 msgstr "Položte barevné pixely na velkém plátnu s ostatními online hráči!"
@@ -1162,6 +1280,12 @@ msgstr "Plátno Politického Kompasu"
 
 msgid "Potato Mode"
 msgstr "Bramborový mod"
+
+msgid "Powerlevel"
+msgstr ""
+
+msgid "Powerlevel of this role. See table below for explenation."
+msgstr ""
 
 #, javascript-format
 msgid ""
@@ -1213,6 +1337,9 @@ msgstr ""
 
 msgid "Range Banned"
 msgstr "Rozsahově zabanován"
+
+msgid "Rank"
+msgstr ""
 
 msgid "Ranked"
 msgstr "Hodnoceno"
@@ -1270,6 +1397,10 @@ msgstr ""
 msgid "Remove a Login method:"
 msgstr ""
 
+#, javascript-format
+msgid "Represents ${ activeFactionTitle } as ${ activeFactionRoleName }"
+msgstr ""
+
 msgid "Require Verification to Place"
 msgstr ""
 
@@ -1300,6 +1431,9 @@ msgstr ""
 msgid "Revoke consent of third party applications:"
 msgstr ""
 
+msgid "Role"
+msgstr ""
+
 msgid "Role Flags"
 msgstr ""
 
@@ -1328,7 +1462,19 @@ msgstr ""
 "Rolujte ${ mouseSymbol } kolečko na myši nebo ${ touchSymbol } zatáhněte pro "
 "přiblížení"
 
+msgid "Search"
+msgstr ""
+
 msgid "Search Existing Faction"
+msgstr ""
+
+msgid "Search Term"
+msgstr ""
+
+msgid "See hidden users in member list"
+msgstr ""
+
+msgid "Select Avatar of this Faction. Supported Formats: jpg, gif, png, webp"
 msgstr ""
 
 msgid "Select Date above"
@@ -1342,6 +1488,9 @@ msgstr ""
 
 msgid "Select Language"
 msgstr "Vybrat Jazyk"
+
+msgid "Select a valid pwerlevel"
+msgstr ""
 
 msgid ""
 "Select the canvas you want to use.\n"
@@ -1494,6 +1643,9 @@ msgid ""
 "It is permanent, you can not change it later."
 msgstr ""
 
+msgid "The password for your account."
+msgstr ""
+
 msgid "Themes"
 msgstr "Témata"
 
@@ -1513,6 +1665,9 @@ msgstr ""
 "plátnu. Byla to 1024x1024 reprezentace politického kompasu s 5s cooldownem a "
 "60s zásobníkem. Bylo to puštěno 11. Května a zůstalo to být aktivní několik "
 "měsíců než to bylo uzavřeno 30. Listopadu."
+
+msgid "This faction has no invites"
+msgstr ""
 
 msgid ""
 "This is the name that other people see, e.g. in Chat. You can change it at "
@@ -1590,7 +1745,7 @@ msgstr "Celkem"
 msgid "Total Online Users"
 msgstr "Celkem online uživatelů"
 
-msgid "Total Pixels"
+msgid "Total Pixels per Faction"
 msgstr ""
 
 msgid "Total Pixels per Player"
@@ -1619,6 +1774,12 @@ msgid "Type the characters from the following image:"
 msgstr "Zadejte znaky z následujícího obrázku:"
 
 msgid "Unban media"
+msgstr ""
+
+msgid "Unban members"
+msgstr ""
+
+msgid "Unblock"
 msgstr ""
 
 msgid "Unblock Users"
@@ -1675,6 +1836,9 @@ msgstr ""
 msgid "Username must be shorter than 26 characters"
 msgstr ""
 
+msgid "Users"
+msgstr ""
+
 #, javascript-format
 msgid "We are Libre Software under the ${ agplLink }, "
 msgstr ""
@@ -1698,6 +1862,9 @@ msgstr "Zvláštní"
 
 msgid "What the pencil should draw on the current canvas."
 msgstr "Co by tužka měla kreslit na vybraném plátně."
+
+msgid "Whether or not this invite can only be used once."
+msgstr ""
 
 msgid ""
 "While we tend to not delete canvases, some canvases are started for fun or "
@@ -1758,6 +1925,10 @@ msgid ""
 "You are currently representing ${ activeFactionTitle } as ${ activeRoleName }"
 msgstr ""
 
+#, javascript-format
+msgid "You are logged in as ${ name } [${ username }]."
+msgstr ""
+
 msgid "You are not allowed to play this game right now :("
 msgstr ""
 
@@ -1790,6 +1961,12 @@ msgstr ""
 msgid "You failed your captcha"
 msgstr "Nepodařila se vám captcha"
 
+#, javascript-format
+msgid ""
+"You have been invited to join us on pixelplanet. We currently have $"
+"{ memberCount } members."
+msgstr ""
+
 msgid "You have no users blocked"
 msgstr "Nemáté žádný blokovaný uživatele"
 
@@ -1804,9 +1981,6 @@ msgstr "Musíte být přihlášení aby jste mohli chatovat"
 
 msgid "You must enter a UserId"
 msgstr ""
-
-msgid "You must enter a duration"
-msgstr "Musíš nastavit dobu"
 
 msgid "You must enter a mediaId or media BID"
 msgstr ""
@@ -1891,6 +2065,9 @@ msgstr ""
 msgid "created at"
 msgstr ""
 
+msgid "days"
+msgstr ""
+
 msgid "download here"
 msgstr ""
 
@@ -1905,6 +2082,9 @@ msgstr "nebo registrujte se tady:"
 
 msgid "recommended"
 msgstr "doporučené"
+
+msgid "times used"
+msgstr ""
 
 #, javascript-format
 msgid "try again after ${ ti }min"
@@ -1978,6 +2158,9 @@ msgstr "W"
 msgctxt "keybinds"
 msgid "X"
 msgstr "X"
+
+#~ msgid "You must enter a duration"
+#~ msgstr "Musíš nastavit dobu"
 
 #~ msgid "Close Menu"
 #~ msgstr "Zavřít Menu"

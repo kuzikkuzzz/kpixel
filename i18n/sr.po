@@ -18,12 +18,6 @@ msgstr ""
 msgid " which is in "
 msgstr "koje je"
 
-msgid "# Today"
-msgstr ""
-
-msgid "# Total"
-msgstr ""
-
 #, javascript-format
 msgid "${ mouseSymbol } Hold left mouse button and drag mouse to rotate"
 msgstr ""
@@ -74,8 +68,18 @@ msgstr ""
 msgid "A Phish!"
 msgstr "Ribu!"
 
+msgid ""
+"A flag representing the role, it should be 16x11 pixels. If left empty, "
+"users with this role selected will still show their own flags."
+msgstr ""
+
 msgid "A new verification mail is getting sent to you."
 msgstr "Nov e-mail za verifikaciju će vam uskoro biti poslat."
+
+msgid ""
+"A role has all the permissions of all levels below and equal to it. In "
+"example: Every role with a power level of >=50 can manage invites (50)."
+msgstr ""
 
 msgid "ACCESS MODTOOLS"
 msgstr ""
@@ -89,6 +93,12 @@ msgstr "Dodaj šablon"
 #. This if for moderation tools, it's not important to translate this
 msgid "Admintools"
 msgstr "Adminalati"
+
+msgid "Age"
+msgstr ""
+
+msgid "All members of this faction are hidden"
+msgstr ""
 
 msgid "All sound effects will be disabled."
 msgstr "Svi zvukovi će biti isključeni."
@@ -117,6 +127,18 @@ msgstr ""
 msgid "Assign new Mod"
 msgstr "Dodaj novog moderatora"
 
+msgid "Assign role per default to new members"
+msgstr ""
+
+msgid "Assign roles below their own"
+msgstr ""
+
+msgid "Assign this role to every new member automatically on join."
+msgstr ""
+
+msgid "Assigned role per default"
+msgstr ""
+
 msgid "Attach File"
 msgstr ""
 
@@ -141,6 +163,9 @@ msgstr ""
 msgid "Ban media"
 msgstr ""
 
+msgid "Ban members"
+msgstr ""
+
 msgid "Banned"
 msgstr "Banovani ste"
 
@@ -157,9 +182,9 @@ msgid "Block DMs"
 msgstr "Blokiraj ćaskanja"
 
 msgid ""
-"Block all Private Messages. Enabling this will delete all your current DMs. "
-"You can still start new DMs with other users, but other users won't be able "
-"to start DMs with you."
+"Block all Private Messages. Enabling this will make it impossible for other "
+"users to start messaging you. You can still start new DMs with other users "
+"and already ongoing DMs will still be open."
 msgstr ""
 
 msgid "Blocked"
@@ -220,6 +245,9 @@ msgid "Captcha"
 msgstr "Verifikacija"
 
 msgid "Caught by"
+msgstr ""
+
+msgid "Change Flag"
 msgstr ""
 
 #, fuzzy
@@ -343,6 +371,9 @@ msgstr ""
 msgid "Confirm Ban"
 msgstr ""
 
+msgid "Confirm Delete"
+msgstr ""
+
 msgid "Confirm Kick"
 msgstr ""
 
@@ -354,6 +385,9 @@ msgstr "Potvrdi novu lozinku"
 
 msgid "Confirm Password"
 msgstr "Potvrdi lozinku"
+
+msgid "Confirm your password."
+msgstr ""
 
 #, javascript-format
 msgid "Connection error ${ code } :("
@@ -430,7 +464,22 @@ msgstr "Država"
 msgid "Create Faction"
 msgstr ""
 
+msgid "Create Invite"
+msgstr ""
+
 msgid "Create New Faction"
+msgstr ""
+
+msgid "Create New Invite"
+msgstr ""
+
+msgid "Create New Role"
+msgstr ""
+
+msgid "Create Role"
+msgstr ""
+
+msgid "Create roles"
 msgstr ""
 
 #, javascript-format
@@ -457,9 +506,15 @@ msgstr ""
 msgid "DM"
 msgstr "DM-uj"
 
+msgid "Daily Pixel"
+msgstr ""
+
 #, fuzzy
 msgid "Daily Pixels per Country"
 msgstr "Igrači i njihovi postavljeni pikseli u satu"
+
+msgid "Daily Pixels per Faction"
+msgstr ""
 
 #, fuzzy
 msgid "Daily Pixels per Player"
@@ -479,6 +534,12 @@ msgstr "Izbriši"
 
 msgid "Delete Account"
 msgstr "Izbriši nalog"
+
+msgid "Delete Faction"
+msgstr ""
+
+msgid "Delete the faction"
+msgstr ""
 
 msgid "Deny"
 msgstr ""
@@ -557,6 +618,15 @@ msgstr "Uskršnje jaje UKLJUČENO"
 msgid "Edit"
 msgstr "uredi"
 
+msgid "Edit faction"
+msgstr ""
+
+msgid "Edit roles below their own"
+msgstr ""
+
+msgid "Edit their own role and elevate users to their own level"
+msgstr ""
+
 msgid "Email"
 msgstr "E-mail"
 
@@ -601,6 +671,9 @@ msgstr "Stavi ime novog moderatora"
 msgid "Enter a little text that describes your faction"
 msgstr ""
 
+msgid "Enter search term and press Search."
+msgstr ""
+
 msgid "Enter your mail address and we will send you a new password:"
 msgstr "Upišite svoju e-mail adresu i poslaćemo vam novu lozinku"
 
@@ -620,7 +693,16 @@ msgstr ""
 msgid "Export enabled templates"
 msgstr "Šabloni omogućeni za izvoz"
 
+msgid "Faction"
+msgstr ""
+
 msgid "Factions"
+msgstr ""
+
+msgid "Factions Today"
+msgstr ""
+
+msgid "Factions Total"
 msgstr ""
 
 msgid ""
@@ -751,6 +833,9 @@ msgstr "Kako pixelplanet treba da izgleda."
 msgid "I forgot my Password."
 msgstr "Zaboravio sam lozinku"
 
+msgid "ID"
+msgstr ""
+
 msgid "IID (optional)"
 msgstr "IID (opcionalno)"
 
@@ -800,10 +885,16 @@ msgstr "Nevažeće koordinate"
 msgid "Invalid color selected"
 msgstr "Nevažeća boja izabrano"
 
+msgid "Invite"
+msgstr ""
+
 msgid "Invited to Chat"
 msgstr ""
 
 msgid "Invites"
+msgstr ""
+
+msgid "Is One-Time-Invite"
 msgstr ""
 
 msgid ""
@@ -813,7 +904,13 @@ msgstr ""
 msgid "Jannies can rollback and protect, but not watch or ban."
 msgstr ""
 
+msgid "Join"
+msgstr ""
+
 msgid "Join Faction"
+msgstr ""
+
+msgid "Joined"
 msgstr ""
 
 msgid "Just for registered Users"
@@ -829,6 +926,9 @@ msgid "Keep Ratio"
 msgstr "Drži odnos"
 
 msgid "Kick"
+msgstr ""
+
+msgid "Kick members"
 msgstr ""
 
 msgid "Know that an account exists"
@@ -847,6 +947,9 @@ msgid "Let everyone join this faction"
 msgstr ""
 
 msgid "Let people join this faction without needing an invite."
+msgstr ""
+
+msgid "Level"
 msgstr ""
 
 msgid "Light Grid"
@@ -882,6 +985,9 @@ msgstr "Uloguj se da bi dobio pristup statistici i drugim stvarima."
 msgid "Login to grant access to other application."
 msgstr ""
 
+msgid "Login to join us."
+msgstr ""
+
 msgid "Login to other application"
 msgstr ""
 
@@ -895,6 +1001,9 @@ msgid "Manage Moderators"
 msgstr "Upravljaj moderatore"
 
 msgid "Manage Templates"
+msgstr ""
+
+msgid "Manage invites"
 msgstr ""
 
 msgid "Map Data"
@@ -949,7 +1058,10 @@ msgstr "Ime mora sadržati barem 2 karaktera"
 msgid "Name must be shorter than 26 characters"
 msgstr "Ime mora imati manje od 26 karaktera"
 
-msgid "Name of your faction [a-z][A-Z][0-9].-_"
+msgid "Name of this role"
+msgstr ""
+
+msgid "Name of your faction (this can not be changed later)"
 msgstr ""
 
 msgid "Name or Email"
@@ -988,6 +1100,9 @@ msgstr "Pogrešan verifikacijski tekst"
 msgid "No password given."
 msgstr "Nije data lozinka"
 
+msgid "No results."
+msgstr ""
+
 msgid "Nobody is banned from this faction"
 msgstr ""
 
@@ -1017,6 +1132,9 @@ msgstr ""
 
 msgid "Old Password"
 msgstr "Stara lozinka"
+
+msgid "One-Time"
+msgstr ""
 
 msgid "Online Users"
 msgstr "Onlajn korisnici"
@@ -1105,6 +1223,9 @@ msgstr ""
 msgid "Permission"
 msgstr ""
 
+msgid "Permissions of Powerlevels"
+msgstr ""
+
 msgid "Phish!"
 msgstr ""
 
@@ -1113,6 +1234,9 @@ msgstr ""
 
 msgid "Ping"
 msgstr "Označi"
+
+msgid "Pixel"
+msgstr ""
 
 msgid "Pixel Notify OFF"
 msgstr "Notifikacije oko piksela ISKLJUČENA"
@@ -1125,12 +1249,6 @@ msgstr "Zaštićeni pikseli"
 
 msgid "Pixel protected"
 msgstr "Piksel je zaštićen!"
-
-msgid "Pixels"
-msgstr ""
-
-msgid "Pixels Today"
-msgstr ""
 
 msgid "Place color pixels on a large canvas with other players online!"
 msgstr "Postavi obojene piksele na velikom platnu sa drugim ljudima onlajn!"
@@ -1163,6 +1281,12 @@ msgstr "Platno \"Politički kompas\""
 
 msgid "Potato Mode"
 msgstr "Režim krompira"
+
+msgid "Powerlevel"
+msgstr ""
+
+msgid "Powerlevel of this role. See table below for explenation."
+msgstr ""
 
 #, javascript-format
 msgid ""
@@ -1215,6 +1339,9 @@ msgstr ""
 
 msgid "Range Banned"
 msgstr "Vaš domet je banovan"
+
+msgid "Rank"
+msgstr ""
 
 msgid "Ranked"
 msgstr "Rangiran"
@@ -1270,6 +1397,10 @@ msgstr ""
 msgid "Remove a Login method:"
 msgstr ""
 
+#, javascript-format
+msgid "Represents ${ activeFactionTitle } as ${ activeFactionRoleName }"
+msgstr ""
+
 msgid "Require Verification to Place"
 msgstr ""
 
@@ -1300,6 +1431,9 @@ msgstr ""
 msgid "Revoke consent of third party applications:"
 msgstr ""
 
+msgid "Role"
+msgstr ""
+
 msgid "Role Flags"
 msgstr ""
 
@@ -1328,7 +1462,19 @@ msgstr ""
 "Klizaj ${ mouseSymbol } točkićem miša ili ${ touchSymbol } stisnite za "
 "zumiranje"
 
+msgid "Search"
+msgstr ""
+
 msgid "Search Existing Faction"
+msgstr ""
+
+msgid "Search Term"
+msgstr ""
+
+msgid "See hidden users in member list"
+msgstr ""
+
+msgid "Select Avatar of this Faction. Supported Formats: jpg, gif, png, webp"
 msgstr ""
 
 msgid "Select Date above"
@@ -1342,6 +1488,9 @@ msgstr ""
 
 msgid "Select Language"
 msgstr "Izaberite jezik"
+
+msgid "Select a valid pwerlevel"
+msgstr ""
 
 msgid ""
 "Select the canvas you want to use.\n"
@@ -1499,6 +1648,9 @@ msgid ""
 "It is permanent, you can not change it later."
 msgstr ""
 
+msgid "The password for your account."
+msgstr ""
+
 msgid "Themes"
 msgstr "Teme"
 
@@ -1518,6 +1670,9 @@ msgstr ""
 "Zemlje. Bio je 1024x1024 reprezentacija političkog kompasa sa tajmerom od 5 "
 "sekundi  i 60sekunde. Bio je napravljen 11-og maja i bio je aktivan nekoliko "
 "meseci dok je nestao na 30-om novembrom."
+
+msgid "This faction has no invites"
+msgstr ""
 
 msgid ""
 "This is the name that other people see, e.g. in Chat. You can change it at "
@@ -1596,7 +1751,7 @@ msgstr "Ukupno"
 msgid "Total Online Users"
 msgstr "Ukupno onlajn korisnika"
 
-msgid "Total Pixels"
+msgid "Total Pixels per Faction"
 msgstr ""
 
 #, fuzzy
@@ -1626,6 +1781,12 @@ msgid "Type the characters from the following image:"
 msgstr "Napišite brojeve i slova sa sledeće slike:"
 
 msgid "Unban media"
+msgstr ""
+
+msgid "Unban members"
+msgstr ""
+
+msgid "Unblock"
 msgstr ""
 
 msgid "Unblock Users"
@@ -1682,6 +1843,9 @@ msgstr ""
 msgid "Username must be shorter than 26 characters"
 msgstr ""
 
+msgid "Users"
+msgstr ""
+
 #, javascript-format
 msgid "We are Libre Software under the ${ agplLink }, "
 msgstr ""
@@ -1706,6 +1870,9 @@ msgid "Weird"
 msgstr "Čudno"
 
 msgid "What the pencil should draw on the current canvas."
+msgstr ""
+
+msgid "Whether or not this invite can only be used once."
 msgstr ""
 
 msgid ""
@@ -1766,6 +1933,10 @@ msgid ""
 "You are currently representing ${ activeFactionTitle } as ${ activeRoleName }"
 msgstr ""
 
+#, javascript-format
+msgid "You are logged in as ${ name } [${ username }]."
+msgstr ""
+
 msgid "You are not allowed to play this game right now :("
 msgstr ""
 
@@ -1798,6 +1969,12 @@ msgstr ""
 msgid "You failed your captcha"
 msgstr "Neuspela verifikacija"
 
+#, javascript-format
+msgid ""
+"You have been invited to join us on pixelplanet. We currently have $"
+"{ memberCount } members."
+msgstr ""
+
 msgid "You have no users blocked"
 msgstr "Nemate nikakve korisnike blokirane"
 
@@ -1812,9 +1989,6 @@ msgstr "Moraš biti ulogovan da bi ćaskao"
 
 msgid "You must enter a UserId"
 msgstr ""
-
-msgid "You must enter a duration"
-msgstr "Morate postaviti trajanje"
 
 msgid "You must enter a mediaId or media BID"
 msgstr ""
@@ -1898,6 +2072,9 @@ msgstr ""
 msgid "created at"
 msgstr ""
 
+msgid "days"
+msgstr ""
+
 msgid "download here"
 msgstr ""
 
@@ -1912,6 +2089,9 @@ msgstr "ili se registruj ovde:"
 
 msgid "recommended"
 msgstr "preporučeno"
+
+msgid "times used"
+msgstr ""
 
 #, javascript-format
 msgid "try again after ${ ti }min"
@@ -1985,6 +2165,9 @@ msgstr "W"
 msgctxt "keybinds"
 msgid "X"
 msgstr "X"
+
+#~ msgid "You must enter a duration"
+#~ msgstr "Morate postaviti trajanje"
 
 #~ msgid "Close Menu"
 #~ msgstr "Zatvori meni"

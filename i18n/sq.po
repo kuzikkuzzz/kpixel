@@ -17,12 +17,6 @@ msgstr ""
 msgid " which is in "
 msgstr " e cila është në "
 
-msgid "# Today"
-msgstr "# Sot"
-
-msgid "# Total"
-msgstr "# Totale"
-
 #, javascript-format
 msgid "${ mouseSymbol } Hold left mouse button and drag mouse to rotate"
 msgstr ""
@@ -74,8 +68,18 @@ msgstr "…duke ngarkuar metodat e Hyrjes dhe seancat…"
 msgid "A Phish!"
 msgstr "Një Peshk!"
 
+msgid ""
+"A flag representing the role, it should be 16x11 pixels. If left empty, "
+"users with this role selected will still show their own flags."
+msgstr ""
+
 msgid "A new verification mail is getting sent to you."
 msgstr "Një email i ri verifikimi po ju dërgohet."
+
+msgid ""
+"A role has all the permissions of all levels below and equal to it. In "
+"example: Every role with a power level of >=50 can manage invites (50)."
+msgstr ""
 
 msgid "ACCESS MODTOOLS"
 msgstr "Aksesoni veglat e moderatorit"
@@ -89,6 +93,12 @@ msgstr "Shto Shabllon"
 #. This if for moderation tools, it's not important to translate this
 msgid "Admintools"
 msgstr "Veglat e administratorit"
+
+msgid "Age"
+msgstr ""
+
+msgid "All members of this faction are hidden"
+msgstr ""
 
 msgid "All sound effects will be disabled."
 msgstr "Të gjitha efektet zanore do të çaktivizohen."
@@ -117,6 +127,18 @@ msgstr ""
 msgid "Assign new Mod"
 msgstr "Cakto Mod të ri"
 
+msgid "Assign role per default to new members"
+msgstr ""
+
+msgid "Assign roles below their own"
+msgstr ""
+
+msgid "Assign this role to every new member automatically on join."
+msgstr ""
+
+msgid "Assigned role per default"
+msgstr ""
+
 msgid "Attach File"
 msgstr "Bashkangjit Skedar"
 
@@ -141,6 +163,9 @@ msgstr ""
 msgid "Ban media"
 msgstr "Ndaloni media"
 
+msgid "Ban members"
+msgstr ""
+
 msgid "Banned"
 msgstr "Përjashtuar"
 
@@ -157,14 +182,10 @@ msgid "Block DMs"
 msgstr "Blloko DM"
 
 msgid ""
-"Block all Private Messages. Enabling this will delete all your current DMs. "
-"You can still start new DMs with other users, but other users won't be able "
-"to start DMs with you."
+"Block all Private Messages. Enabling this will make it impossible for other "
+"users to start messaging you. You can still start new DMs with other users "
+"and already ongoing DMs will still be open."
 msgstr ""
-"Blloko të gjitha mesazhet private. Aktivizimi i kësaj do të fshijë të gjitha "
-"DM-të tuaja aktuale. Ju ende mund të filloni DM të reja me përdorues të "
-"tjerë, por përdoruesit e tjerë nuk do të jenë në gjendje të fillojnë DM me "
-"ju."
 
 msgid "Blocked"
 msgstr "Bllokuar"
@@ -227,6 +248,9 @@ msgstr "Captcha"
 
 msgid "Caught by"
 msgstr "Kapur nga"
+
+msgid "Change Flag"
+msgstr ""
 
 msgid "Change Happened"
 msgstr "Ndodhi Ndryshim"
@@ -348,6 +372,9 @@ msgstr ""
 msgid "Confirm Ban"
 msgstr ""
 
+msgid "Confirm Delete"
+msgstr ""
+
 msgid "Confirm Kick"
 msgstr ""
 
@@ -359,6 +386,9 @@ msgstr "Konfirmo Fjalëkalimin e Ri"
 
 msgid "Confirm Password"
 msgstr "Konfirmo Fjalëkalimin"
+
+msgid "Confirm your password."
+msgstr ""
 
 #, javascript-format
 msgid "Connection error ${ code } :("
@@ -437,7 +467,22 @@ msgstr "Shteti"
 msgid "Create Faction"
 msgstr ""
 
+msgid "Create Invite"
+msgstr ""
+
 msgid "Create New Faction"
+msgstr ""
+
+msgid "Create New Invite"
+msgstr ""
+
+msgid "Create New Role"
+msgstr ""
+
+msgid "Create Role"
+msgstr ""
+
+msgid "Create roles"
 msgstr ""
 
 #, javascript-format
@@ -464,8 +509,14 @@ msgstr "Flamur i personalizuar"
 msgid "DM"
 msgstr "DM"
 
+msgid "Daily Pixel"
+msgstr ""
+
 msgid "Daily Pixels per Country"
 msgstr "Pikselët Ditorë për Shtet"
+
+msgid "Daily Pixels per Faction"
+msgstr ""
 
 msgid "Daily Pixels per Player"
 msgstr "Pikselët Ditorë për Lojtar"
@@ -484,6 +535,12 @@ msgstr "Fshij"
 
 msgid "Delete Account"
 msgstr "Fshij llogarinë"
+
+msgid "Delete Faction"
+msgstr ""
+
+msgid "Delete the faction"
+msgstr ""
 
 msgid "Deny"
 msgstr "Refuzo"
@@ -564,6 +621,15 @@ msgstr "Vezë e Pashkëve ON"
 msgid "Edit"
 msgstr "Redakto"
 
+msgid "Edit faction"
+msgstr ""
+
+msgid "Edit roles below their own"
+msgstr ""
+
+msgid "Edit their own role and elevate users to their own level"
+msgstr ""
+
 msgid "Email"
 msgstr "Email"
 
@@ -610,6 +676,9 @@ msgstr "Fut UserName të Moderatorit të ri"
 msgid "Enter a little text that describes your faction"
 msgstr ""
 
+msgid "Enter search term and press Search."
+msgstr ""
+
 msgid "Enter your mail address and we will send you a new password:"
 msgstr ""
 "Shkruaj adresën tënde të postës dhe ne do t'ju dërgojmë një fjalëkalim të ri:"
@@ -630,7 +699,16 @@ msgstr "Zgjero"
 msgid "Export enabled templates"
 msgstr "Eksporto shabllonet aktive"
 
+msgid "Faction"
+msgstr ""
+
 msgid "Factions"
+msgstr ""
+
+msgid "Factions Today"
+msgstr ""
+
+msgid "Factions Total"
 msgstr ""
 
 msgid ""
@@ -764,6 +842,9 @@ msgstr "Si duhet të duket pixelplanet."
 msgid "I forgot my Password."
 msgstr "Kam harruar Fjalëkalimin tim."
 
+msgid "ID"
+msgstr ""
+
 msgid "IID (optional)"
 msgstr "IID (opsionale)"
 
@@ -819,10 +900,16 @@ msgstr "Koordinata të pavlefshme"
 msgid "Invalid color selected"
 msgstr "Ngjyrë e pavlefshme e zgjedhur"
 
+msgid "Invite"
+msgstr ""
+
 msgid "Invited to Chat"
 msgstr "Të ftuar në Bisedë"
 
 msgid "Invites"
+msgstr ""
+
+msgid "Is One-Time-Invite"
 msgstr ""
 
 msgid ""
@@ -836,7 +923,13 @@ msgstr ""
 "Jannies mund të kthejnë mbrapsht dhe të mbrojnë, por jo të vëzhgojnë apo të "
 "dënojnë."
 
+msgid "Join"
+msgstr ""
+
 msgid "Join Faction"
+msgstr ""
+
+msgid "Joined"
 msgstr ""
 
 msgid "Just for registered Users"
@@ -852,6 +945,9 @@ msgid "Keep Ratio"
 msgstr "Mbaj Raportin"
 
 msgid "Kick"
+msgstr ""
+
+msgid "Kick members"
 msgstr ""
 
 msgid "Know that an account exists"
@@ -870,6 +966,9 @@ msgid "Let everyone join this faction"
 msgstr ""
 
 msgid "Let people join this faction without needing an invite."
+msgstr ""
+
+msgid "Level"
 msgstr ""
 
 msgid "Light Grid"
@@ -905,6 +1004,9 @@ msgstr "Hyr për të pasur akses në më shumë veçori dhe statistika."
 msgid "Login to grant access to other application."
 msgstr "Hyr për t'i dhënë akses aplikacionit tjetër."
 
+msgid "Login to join us."
+msgstr ""
+
 msgid "Login to other application"
 msgstr "Hyr në aplikacion tjetër"
 
@@ -918,6 +1020,9 @@ msgid "Manage Moderators"
 msgstr "Menaxhoni Moderatorët"
 
 msgid "Manage Templates"
+msgstr ""
+
+msgid "Manage invites"
 msgstr ""
 
 msgid "Map Data"
@@ -972,7 +1077,10 @@ msgstr "Emri duhet të jetë të paktën 2 karaktere i gjatë"
 msgid "Name must be shorter than 26 characters"
 msgstr "Emri duhet të jetë më i shkurtër se 26 karaktere"
 
-msgid "Name of your faction [a-z][A-Z][0-9].-_"
+msgid "Name of this role"
+msgstr ""
+
+msgid "Name of your faction (this can not be changed later)"
 msgstr ""
 
 msgid "Name or Email"
@@ -1011,6 +1119,9 @@ msgstr "Asnjë captcha ose tekst i pavlefshëm"
 msgid "No password given."
 msgstr "Nuk është dhënë asnjë fjalëkalim."
 
+msgid "No results."
+msgstr ""
+
 msgid "Nobody is banned from this faction"
 msgstr ""
 
@@ -1040,6 +1151,9 @@ msgstr "Oh jo, peshku të shpëtoi. Fat më të mirë herën tjetër!"
 
 msgid "Old Password"
 msgstr "Fjalëkalimi i Vjetër"
+
+msgid "One-Time"
+msgstr ""
 
 msgid "Online Users"
 msgstr "Përdoruesit Online"
@@ -1128,6 +1242,9 @@ msgstr "Zgjedhjet e lapsit: "
 msgid "Permission"
 msgstr "Leje"
 
+msgid "Permissions of Powerlevels"
+msgstr ""
+
 msgid "Phish!"
 msgstr "Peshk!"
 
@@ -1136,6 +1253,9 @@ msgstr "Peshqit"
 
 msgid "Ping"
 msgstr "Ping"
+
+msgid "Pixel"
+msgstr ""
 
 msgid "Pixel Notify OFF"
 msgstr "Njoftimi Pixel OFF"
@@ -1148,12 +1268,6 @@ msgstr "Mbrojtje e Pikselit"
 
 msgid "Pixel protected"
 msgstr "Piksel i mbrojtur"
-
-msgid "Pixels"
-msgstr "Piksel"
-
-msgid "Pixels Today"
-msgstr "Piksel Sot"
 
 msgid "Place color pixels on a large canvas with other players online!"
 msgstr ""
@@ -1189,6 +1303,12 @@ msgstr "Kanavacë e Busullës Politike"
 
 msgid "Potato Mode"
 msgstr "Modaliteti i Patates"
+
+msgid "Powerlevel"
+msgstr ""
+
+msgid "Powerlevel of this role. See table below for explenation."
+msgstr ""
 
 #, javascript-format
 msgid ""
@@ -1241,6 +1361,9 @@ msgstr "Veprimet e Shpejta"
 
 msgid "Range Banned"
 msgstr "Kufiri i Dënuar"
+
+msgid "Rank"
+msgstr ""
 
 msgid "Ranked"
 msgstr "Me renditje"
@@ -1297,6 +1420,10 @@ msgstr ""
 msgid "Remove a Login method:"
 msgstr "Hiq një metodë Hyrjeje:"
 
+#, javascript-format
+msgid "Represents ${ activeFactionTitle } as ${ activeFactionRoleName }"
+msgstr ""
+
 msgid "Require Verification to Place"
 msgstr "Kërkon Verifikim për të Vendosur"
 
@@ -1327,6 +1454,9 @@ msgstr "Tërhiq"
 msgid "Revoke consent of third party applications:"
 msgstr "Hiq autorizimin e aplikacioneve të palëve të treta:"
 
+msgid "Role"
+msgstr ""
+
 msgid "Role Flags"
 msgstr ""
 
@@ -1354,7 +1484,19 @@ msgstr ""
 "Lëviz ${ mouseSymbol } rrotën e mausit ose ${ touchSymbol } shtypni për të "
 "zmadhuar"
 
+msgid "Search"
+msgstr ""
+
 msgid "Search Existing Faction"
+msgstr ""
+
+msgid "Search Term"
+msgstr ""
+
+msgid "See hidden users in member list"
+msgstr ""
+
+msgid "Select Avatar of this Faction. Supported Formats: jpg, gif, png, webp"
 msgstr ""
 
 msgid "Select Date above"
@@ -1368,6 +1510,9 @@ msgstr "Zgjidh Flamurin"
 
 msgid "Select Language"
 msgstr "Zgjidhni Gjuhën"
+
+msgid "Select a valid pwerlevel"
+msgstr ""
 
 msgid ""
 "Select the canvas you want to use.\n"
@@ -1529,6 +1674,9 @@ msgstr ""
 "Emri i llogarisë suaj, lejohen vetëm karakteret a-z, A-Z, -, ., dhe _. Është "
 "e përhershme, nuk mund ta ndryshoni më vonë."
 
+msgid "The password for your account."
+msgstr ""
+
 msgid "Themes"
 msgstr "Temat"
 
@@ -1548,6 +1696,9 @@ msgstr ""
 "kryesore të Tokës. Ishte një përfaqësim 1024x1024 i busullës politike me një "
 "kohë pritjeje 5s dhe grumbullim 60s. Ajo u lançua më 11 maj dhe mbeti aktiv "
 "për muaj të tërë derisa u mbyll më 30 nëntor."
+
+msgid "This faction has no invites"
+msgstr ""
 
 msgid ""
 "This is the name that other people see, e.g. in Chat. You can change it at "
@@ -1631,8 +1782,8 @@ msgstr "Total"
 msgid "Total Online Users"
 msgstr "Përdoruesit Online Gjithsej"
 
-msgid "Total Pixels"
-msgstr "Pikselë total"
+msgid "Total Pixels per Faction"
+msgstr ""
 
 msgid "Total Pixels per Player"
 msgstr "Pikselët për Lojtar Gjithsej"
@@ -1661,6 +1812,12 @@ msgstr "Shkruani karakteret nga imazhi i mëposhtëm:"
 
 msgid "Unban media"
 msgstr "Rilejo media"
+
+msgid "Unban members"
+msgstr ""
+
+msgid "Unblock"
+msgstr ""
 
 msgid "Unblock Users"
 msgstr "Zhbllokoni Përdoruesit"
@@ -1717,6 +1874,9 @@ msgstr "Emri i përdoruesit duhet të jetë të paktën 2 karaktere i gjatë"
 msgid "Username must be shorter than 26 characters"
 msgstr "Emri i përdoruesit duhet të jetë më i shkurtër se 26 karaktere"
 
+msgid "Users"
+msgstr ""
+
 #, javascript-format
 msgid "We are Libre Software under the ${ agplLink }, "
 msgstr "Ne jemi Softuer Libre nën ${ agplLink }, "
@@ -1742,6 +1902,9 @@ msgstr "Çudi"
 
 msgid "What the pencil should draw on the current canvas."
 msgstr "Çfarë duhet të vizatojë lapsi në kanavacën aktuale."
+
+msgid "Whether or not this invite can only be used once."
+msgstr ""
 
 msgid ""
 "While we tend to not delete canvases, some canvases are started for fun or "
@@ -1808,6 +1971,10 @@ msgid ""
 "You are currently representing ${ activeFactionTitle } as ${ activeRoleName }"
 msgstr ""
 
+#, javascript-format
+msgid "You are logged in as ${ name } [${ username }]."
+msgstr ""
+
 msgid "You are not allowed to play this game right now :("
 msgstr "Ju nuk mund të luani këtë lojë tani :("
 
@@ -1846,6 +2013,12 @@ msgstr "Ju nuk pranuat"
 msgid "You failed your captcha"
 msgstr "Ju keni dështuar captcha-n tuaj"
 
+#, javascript-format
+msgid ""
+"You have been invited to join us on pixelplanet. We currently have $"
+"{ memberCount } members."
+msgstr ""
+
 msgid "You have no users blocked"
 msgstr "Ju nuk keni përdorues të bllokuar"
 
@@ -1860,9 +2033,6 @@ msgstr "Ju duhet të jeni të regjistruar për të biseduar"
 
 msgid "You must enter a UserId"
 msgstr "Ju duhet të futni një UserId"
-
-msgid "You must enter a duration"
-msgstr "Ju duhet të futni një kohëzgjatje"
 
 msgid "You must enter a mediaId or media BID"
 msgstr "Ju duhet të shkruani një ID media ose një BID media"
@@ -1950,6 +2120,9 @@ msgstr "kontrolloni pajtueshmërinë këtu"
 msgid "created at"
 msgstr ""
 
+msgid "days"
+msgstr ""
+
 msgid "download here"
 msgstr "shkarko këtu"
 
@@ -1964,6 +2137,9 @@ msgstr "ose regjistrohuni këtu:"
 
 msgid "recommended"
 msgstr "rekomandohet"
+
+msgid "times used"
+msgstr ""
 
 #, javascript-format
 msgid "try again after ${ ti }min"
@@ -2037,6 +2213,34 @@ msgstr "W"
 msgctxt "keybinds"
 msgid "X"
 msgstr "X"
+
+#~ msgid "# Today"
+#~ msgstr "# Sot"
+
+#~ msgid "# Total"
+#~ msgstr "# Totale"
+
+#~ msgid ""
+#~ "Block all Private Messages. Enabling this will delete all your current "
+#~ "DMs. You can still start new DMs with other users, but other users won't "
+#~ "be able to start DMs with you."
+#~ msgstr ""
+#~ "Blloko të gjitha mesazhet private. Aktivizimi i kësaj do të fshijë të "
+#~ "gjitha DM-të tuaja aktuale. Ju ende mund të filloni DM të reja me "
+#~ "përdorues të tjerë, por përdoruesit e tjerë nuk do të jenë në gjendje të "
+#~ "fillojnë DM me ju."
+
+#~ msgid "Pixels"
+#~ msgstr "Piksel"
+
+#~ msgid "Pixels Today"
+#~ msgstr "Piksel Sot"
+
+#~ msgid "Total Pixels"
+#~ msgstr "Pikselë total"
+
+#~ msgid "You must enter a duration"
+#~ msgstr "Ju duhet të futni një kohëzgjatje"
 
 #~ msgid "Consider joining us on Matrix:"
 #~ msgstr "Konsidero të na bashkohesh në Matrix:"

@@ -17,12 +17,6 @@ msgstr ""
 msgid " which is in "
 msgstr " che è in "
 
-msgid "# Today"
-msgstr ""
-
-msgid "# Total"
-msgstr ""
-
 #, javascript-format
 msgid "${ mouseSymbol } Hold left mouse button and drag mouse to rotate"
 msgstr ""
@@ -71,8 +65,18 @@ msgstr ""
 msgid "A Phish!"
 msgstr ""
 
+msgid ""
+"A flag representing the role, it should be 16x11 pixels. If left empty, "
+"users with this role selected will still show their own flags."
+msgstr ""
+
 msgid "A new verification mail is getting sent to you."
 msgstr "Una nuova email di verifica ti è stata mandata."
+
+msgid ""
+"A role has all the permissions of all levels below and equal to it. In "
+"example: Every role with a power level of >=50 can manage invites (50)."
+msgstr ""
 
 msgid "ACCESS MODTOOLS"
 msgstr ""
@@ -86,6 +90,12 @@ msgstr "Download Template"
 
 #. This if for moderation tools, it's not important to translate this
 msgid "Admintools"
+msgstr ""
+
+msgid "Age"
+msgstr ""
+
+msgid "All members of this faction are hidden"
 msgstr ""
 
 msgid "All sound effects will be disabled."
@@ -115,6 +125,18 @@ msgstr ""
 msgid "Assign new Mod"
 msgstr "Assegna nuovo Mod"
 
+msgid "Assign role per default to new members"
+msgstr ""
+
+msgid "Assign roles below their own"
+msgstr ""
+
+msgid "Assign this role to every new member automatically on join."
+msgstr ""
+
+msgid "Assigned role per default"
+msgstr ""
+
 msgid "Attach File"
 msgstr ""
 
@@ -139,6 +161,9 @@ msgstr ""
 msgid "Ban media"
 msgstr ""
 
+msgid "Ban members"
+msgstr ""
+
 msgid "Banned"
 msgstr "Sei stato bannato"
 
@@ -155,9 +180,9 @@ msgid "Block DMs"
 msgstr "Blocca DMs"
 
 msgid ""
-"Block all Private Messages. Enabling this will delete all your current DMs. "
-"You can still start new DMs with other users, but other users won't be able "
-"to start DMs with you."
+"Block all Private Messages. Enabling this will make it impossible for other "
+"users to start messaging you. You can still start new DMs with other users "
+"and already ongoing DMs will still be open."
 msgstr ""
 
 msgid "Blocked"
@@ -220,6 +245,9 @@ msgid "Captcha"
 msgstr "Captcha"
 
 msgid "Caught by"
+msgstr ""
+
+msgid "Change Flag"
 msgstr ""
 
 #, fuzzy
@@ -343,6 +371,9 @@ msgstr ""
 msgid "Confirm Ban"
 msgstr ""
 
+msgid "Confirm Delete"
+msgstr ""
+
 msgid "Confirm Kick"
 msgstr ""
 
@@ -354,6 +385,9 @@ msgstr "Conferma nuova password"
 
 msgid "Confirm Password"
 msgstr "Conferma password"
+
+msgid "Confirm your password."
+msgstr ""
 
 #, javascript-format
 msgid "Connection error ${ code } :("
@@ -433,7 +467,22 @@ msgstr "Paese"
 msgid "Create Faction"
 msgstr ""
 
+msgid "Create Invite"
+msgstr ""
+
 msgid "Create New Faction"
+msgstr ""
+
+msgid "Create New Invite"
+msgstr ""
+
+msgid "Create New Role"
+msgstr ""
+
+msgid "Create Role"
+msgstr ""
+
+msgid "Create roles"
 msgstr ""
 
 #, fuzzy, javascript-format
@@ -460,9 +509,15 @@ msgstr ""
 msgid "DM"
 msgstr "DM"
 
+msgid "Daily Pixel"
+msgstr ""
+
 #, fuzzy
 msgid "Daily Pixels per Country"
 msgstr "Player e pixel/ora"
+
+msgid "Daily Pixels per Faction"
+msgstr ""
 
 #, fuzzy
 msgid "Daily Pixels per Player"
@@ -483,6 +538,12 @@ msgstr "Elimina l'Account"
 
 msgid "Delete Account"
 msgstr "Elimina l'Account"
+
+msgid "Delete Faction"
+msgstr ""
+
+msgid "Delete the faction"
+msgstr ""
 
 msgid "Deny"
 msgstr ""
@@ -563,6 +624,15 @@ msgstr "Easter Egg ATTIVE"
 msgid "Edit"
 msgstr ""
 
+msgid "Edit faction"
+msgstr ""
+
+msgid "Edit roles below their own"
+msgstr ""
+
+msgid "Edit their own role and elevate users to their own level"
+msgstr ""
+
 msgid "Email"
 msgstr "Email"
 
@@ -607,6 +677,9 @@ msgstr "Inserisci UserName di un nuovo Mod"
 msgid "Enter a little text that describes your faction"
 msgstr ""
 
+msgid "Enter search term and press Search."
+msgstr ""
+
 msgid "Enter your mail address and we will send you a new password:"
 msgstr ""
 "Inserisci il tuo novo indirizzo email e ti manderemo una nuova password"
@@ -627,7 +700,16 @@ msgstr ""
 msgid "Export enabled templates"
 msgstr ""
 
+msgid "Faction"
+msgstr ""
+
 msgid "Factions"
+msgstr ""
+
+msgid "Factions Today"
+msgstr ""
+
+msgid "Factions Total"
 msgstr ""
 
 msgid ""
@@ -758,6 +840,9 @@ msgstr "Come pixelplanet dovrebbe essere esteticamente"
 msgid "I forgot my Password."
 msgstr "Mi sono dimenticato la password"
 
+msgid "ID"
+msgstr ""
+
 msgid "IID (optional)"
 msgstr "IID (opzionale)"
 
@@ -807,10 +892,16 @@ msgstr "Coordinate invalide"
 msgid "Invalid color selected"
 msgstr "Colore selezionato invalido"
 
+msgid "Invite"
+msgstr ""
+
 msgid "Invited to Chat"
 msgstr ""
 
 msgid "Invites"
+msgstr ""
+
+msgid "Is One-Time-Invite"
 msgstr ""
 
 msgid ""
@@ -820,7 +911,13 @@ msgstr ""
 msgid "Jannies can rollback and protect, but not watch or ban."
 msgstr ""
 
+msgid "Join"
+msgstr ""
+
 msgid "Join Faction"
+msgstr ""
+
+msgid "Joined"
 msgstr ""
 
 msgid "Just for registered Users"
@@ -836,6 +933,9 @@ msgid "Keep Ratio"
 msgstr "Mantieni proporzioni"
 
 msgid "Kick"
+msgstr ""
+
+msgid "Kick members"
 msgstr ""
 
 msgid "Know that an account exists"
@@ -854,6 +954,9 @@ msgid "Let everyone join this faction"
 msgstr ""
 
 msgid "Let people join this faction without needing an invite."
+msgstr ""
+
+msgid "Level"
 msgstr ""
 
 msgid "Light Grid"
@@ -889,6 +992,9 @@ msgstr "Effettua l'accesso per avere più funzioni e statistiche"
 msgid "Login to grant access to other application."
 msgstr ""
 
+msgid "Login to join us."
+msgstr ""
+
 msgid "Login to other application"
 msgstr ""
 
@@ -902,6 +1008,9 @@ msgid "Manage Moderators"
 msgstr "Gestisci moderatori"
 
 msgid "Manage Templates"
+msgstr ""
+
+msgid "Manage invites"
 msgstr ""
 
 msgid "Map Data"
@@ -956,7 +1065,10 @@ msgstr "Il nome deve avere almeno 2 caratteri"
 msgid "Name must be shorter than 26 characters"
 msgstr "Il nome deve essere più piccolo di 26 caratteri"
 
-msgid "Name of your faction [a-z][A-Z][0-9].-_"
+msgid "Name of this role"
+msgstr ""
+
+msgid "Name of your faction (this can not be changed later)"
 msgstr ""
 
 msgid "Name or Email"
@@ -995,6 +1107,9 @@ msgstr "Nessun captcha text o invalido"
 msgid "No password given."
 msgstr "Nessuna password data"
 
+msgid "No results."
+msgstr ""
+
 msgid "Nobody is banned from this faction"
 msgstr ""
 
@@ -1024,6 +1139,9 @@ msgstr ""
 
 msgid "Old Password"
 msgstr "Vecchia password"
+
+msgid "One-Time"
+msgstr ""
 
 msgid "Online Users"
 msgstr "Utenti online"
@@ -1113,6 +1231,9 @@ msgstr ""
 msgid "Permission"
 msgstr ""
 
+msgid "Permissions of Powerlevels"
+msgstr ""
+
 msgid "Phish!"
 msgstr ""
 
@@ -1121,6 +1242,9 @@ msgstr ""
 
 msgid "Ping"
 msgstr "Ping"
+
+msgid "Pixel"
+msgstr ""
 
 msgid "Pixel Notify OFF"
 msgstr "Notifiche Pixel DISATTIVE"
@@ -1133,12 +1257,6 @@ msgstr "Protezione pixel"
 
 msgid "Pixel protected"
 msgstr "Pixel protetto"
-
-msgid "Pixels"
-msgstr ""
-
-msgid "Pixels Today"
-msgstr ""
 
 msgid "Place color pixels on a large canvas with other players online!"
 msgstr "Piazza pixel colorati su un canvas enorme con altri giocatori online!"
@@ -1171,6 +1289,12 @@ msgstr "Political Compass Canvas"
 
 msgid "Potato Mode"
 msgstr "Modalità Spranga"
+
+msgid "Powerlevel"
+msgstr ""
+
+msgid "Powerlevel of this role. See table below for explenation."
+msgstr ""
 
 #, javascript-format
 msgid ""
@@ -1222,6 +1346,9 @@ msgstr ""
 
 msgid "Range Banned"
 msgstr "Range Bannato"
+
+msgid "Rank"
+msgstr ""
 
 msgid "Ranked"
 msgstr "Rankes"
@@ -1279,6 +1406,10 @@ msgstr ""
 msgid "Remove a Login method:"
 msgstr ""
 
+#, javascript-format
+msgid "Represents ${ activeFactionTitle } as ${ activeFactionRoleName }"
+msgstr ""
+
 msgid "Require Verification to Place"
 msgstr ""
 
@@ -1309,6 +1440,9 @@ msgstr ""
 msgid "Revoke consent of third party applications:"
 msgstr ""
 
+msgid "Role"
+msgstr ""
+
 msgid "Role Flags"
 msgstr ""
 
@@ -1337,7 +1471,19 @@ msgstr ""
 "Scrolla ${ mouseSymbol } la rotellina del muose o  ${ touchSymbol } pinch "
 "per zoomare "
 
+msgid "Search"
+msgstr ""
+
 msgid "Search Existing Faction"
+msgstr ""
+
+msgid "Search Term"
+msgstr ""
+
+msgid "See hidden users in member list"
+msgstr ""
+
+msgid "Select Avatar of this Faction. Supported Formats: jpg, gif, png, webp"
 msgstr ""
 
 msgid "Select Date above"
@@ -1352,6 +1498,9 @@ msgstr ""
 
 msgid "Select Language"
 msgstr "Seleziona la lingua "
+
+msgid "Select a valid pwerlevel"
+msgstr ""
 
 #, fuzzy
 msgid ""
@@ -1510,6 +1659,9 @@ msgid ""
 "It is permanent, you can not change it later."
 msgstr ""
 
+msgid "The password for your account."
+msgstr ""
+
 msgid "Themes"
 msgstr "Temi"
 
@@ -1529,6 +1681,9 @@ msgstr ""
 "canvas Terra (Earth). Era un 1024x1024 rappresentato dal political compas "
 "con 5s di cooldown e 60s di stacking. E' stato lanciato l'11 maggio ed è "
 "rimasto attivo per mesi fino a quando non è stato spento il 30 novembre"
+
+msgid "This faction has no invites"
+msgstr ""
 
 msgid ""
 "This is the name that other people see, e.g. in Chat. You can change it at "
@@ -1603,7 +1758,7 @@ msgstr "Totale"
 msgid "Total Online Users"
 msgstr "Utenti online in totale"
 
-msgid "Total Pixels"
+msgid "Total Pixels per Faction"
 msgstr ""
 
 #, fuzzy
@@ -1631,6 +1786,12 @@ msgid "Type the characters from the following image:"
 msgstr "Scrivi i caratteri dell'immagine seguente"
 
 msgid "Unban media"
+msgstr ""
+
+msgid "Unban members"
+msgstr ""
+
+msgid "Unblock"
 msgstr ""
 
 msgid "Unblock Users"
@@ -1687,6 +1848,9 @@ msgstr ""
 msgid "Username must be shorter than 26 characters"
 msgstr ""
 
+msgid "Users"
+msgstr ""
+
 #, javascript-format
 msgid "We are Libre Software under the ${ agplLink }, "
 msgstr ""
@@ -1711,6 +1875,9 @@ msgid "Weird"
 msgstr "Strano, "
 
 msgid "What the pencil should draw on the current canvas."
+msgstr ""
+
+msgid "Whether or not this invite can only be used once."
 msgstr ""
 
 #, fuzzy
@@ -1774,6 +1941,10 @@ msgid ""
 "You are currently representing ${ activeFactionTitle } as ${ activeRoleName }"
 msgstr ""
 
+#, javascript-format
+msgid "You are logged in as ${ name } [${ username }]."
+msgstr ""
+
 msgid "You are not allowed to play this game right now :("
 msgstr ""
 
@@ -1807,6 +1978,12 @@ msgstr ""
 msgid "You failed your captcha"
 msgstr "Hai sbagliato il captcha"
 
+#, javascript-format
+msgid ""
+"You have been invited to join us on pixelplanet. We currently have $"
+"{ memberCount } members."
+msgstr ""
+
 msgid "You have no users blocked"
 msgstr "Non hai utenti bloccati"
 
@@ -1821,9 +1998,6 @@ msgstr "Devi aver fatto l'accesso per chattare"
 
 msgid "You must enter a UserId"
 msgstr ""
-
-msgid "You must enter a duration"
-msgstr "Devi inserire una durata"
 
 msgid "You must enter a mediaId or media BID"
 msgstr ""
@@ -1908,6 +2082,9 @@ msgstr ""
 msgid "created at"
 msgstr ""
 
+msgid "days"
+msgstr ""
+
 msgid "download here"
 msgstr ""
 
@@ -1922,6 +2099,9 @@ msgstr "o registrati qui: "
 
 msgid "recommended"
 msgstr "Consigliato"
+
+msgid "times used"
+msgstr ""
 
 #, javascript-format
 msgid "try again after ${ ti }min"
@@ -1996,6 +2176,9 @@ msgstr ""
 msgctxt "keybinds"
 msgid "X"
 msgstr ""
+
+#~ msgid "You must enter a duration"
+#~ msgstr "Devi inserire una durata"
 
 #~ msgid "Close Menu"
 #~ msgstr "Chiudi il menù"

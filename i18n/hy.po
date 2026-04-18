@@ -16,12 +16,6 @@ msgstr ""
 msgid " which is in "
 msgstr " , որը "
 
-msgid "# Today"
-msgstr ""
-
-msgid "# Total"
-msgstr ""
-
 #, javascript-format
 msgid "${ mouseSymbol } Hold left mouse button and drag mouse to rotate"
 msgstr ""
@@ -69,8 +63,18 @@ msgstr ""
 msgid "A Phish!"
 msgstr ""
 
+msgid ""
+"A flag representing the role, it should be 16x11 pixels. If left empty, "
+"users with this role selected will still show their own flags."
+msgstr ""
+
 msgid "A new verification mail is getting sent to you."
 msgstr "Ձեզ ուղարկվել է ստուգման նոր նամակ:"
+
+msgid ""
+"A role has all the permissions of all levels below and equal to it. In "
+"example: Every role with a power level of >=50 can manage invites (50)."
+msgstr ""
 
 msgid "ACCESS MODTOOLS"
 msgstr ""
@@ -84,6 +88,12 @@ msgstr "Ավելացնել Կաղապար"
 #. This if for moderation tools, it's not important to translate this
 msgid "Admintools"
 msgstr "Ադմինիստրատորի գործիքներ"
+
+msgid "Age"
+msgstr ""
+
+msgid "All members of this faction are hidden"
+msgstr ""
 
 msgid "All sound effects will be disabled."
 msgstr "Բոլոր ձայնային էֆեկտները անջատված կլինեն։"
@@ -112,6 +122,18 @@ msgstr ""
 msgid "Assign new Mod"
 msgstr "Նոր մոդերատոր նշանակեք"
 
+msgid "Assign role per default to new members"
+msgstr ""
+
+msgid "Assign roles below their own"
+msgstr ""
+
+msgid "Assign this role to every new member automatically on join."
+msgstr ""
+
+msgid "Assigned role per default"
+msgstr ""
+
 msgid "Attach File"
 msgstr ""
 
@@ -136,6 +158,9 @@ msgstr ""
 msgid "Ban media"
 msgstr ""
 
+msgid "Ban members"
+msgstr ""
+
 msgid "Banned"
 msgstr "Դուք արգելափակված եք"
 
@@ -152,9 +177,9 @@ msgid "Block DMs"
 msgstr "Արգելափակել անձնական նամակները"
 
 msgid ""
-"Block all Private Messages. Enabling this will delete all your current DMs. "
-"You can still start new DMs with other users, but other users won't be able "
-"to start DMs with you."
+"Block all Private Messages. Enabling this will make it impossible for other "
+"users to start messaging you. You can still start new DMs with other users "
+"and already ongoing DMs will still be open."
 msgstr ""
 
 msgid "Blocked"
@@ -217,6 +242,9 @@ msgid "Captcha"
 msgstr "Captcha"
 
 msgid "Caught by"
+msgstr ""
+
+msgid "Change Flag"
 msgstr ""
 
 #, fuzzy
@@ -340,6 +368,9 @@ msgstr ""
 msgid "Confirm Ban"
 msgstr ""
 
+msgid "Confirm Delete"
+msgstr ""
+
 msgid "Confirm Kick"
 msgstr ""
 
@@ -351,6 +382,9 @@ msgstr "Հաստատեք նոր գաղտնաբառը"
 
 msgid "Confirm Password"
 msgstr "Հաստատել գաղտնաբառը"
+
+msgid "Confirm your password."
+msgstr ""
 
 #, javascript-format
 msgid "Connection error ${ code } :("
@@ -427,7 +461,22 @@ msgstr "Երկիր"
 msgid "Create Faction"
 msgstr ""
 
+msgid "Create Invite"
+msgstr ""
+
 msgid "Create New Faction"
+msgstr ""
+
+msgid "Create New Invite"
+msgstr ""
+
+msgid "Create New Role"
+msgstr ""
+
+msgid "Create Role"
+msgstr ""
+
+msgid "Create roles"
 msgstr ""
 
 #, javascript-format
@@ -454,9 +503,15 @@ msgstr ""
 msgid "DM"
 msgstr "Անձնական հաղորդակցություն"
 
+msgid "Daily Pixel"
+msgstr ""
+
 #, fuzzy
 msgid "Daily Pixels per Country"
 msgstr "Խաղացողներ և Պիքսելներ ժամում"
+
+msgid "Daily Pixels per Faction"
+msgstr ""
 
 #, fuzzy
 msgid "Daily Pixels per Player"
@@ -476,6 +531,12 @@ msgstr "Ջնջել"
 
 msgid "Delete Account"
 msgstr "Ջնջել օգտահաշիվը"
+
+msgid "Delete Faction"
+msgstr ""
+
+msgid "Delete the faction"
+msgstr ""
 
 msgid "Deny"
 msgstr "Հերքել"
@@ -557,6 +618,15 @@ msgstr "Հուշումները միացված են"
 msgid "Edit"
 msgstr "Խմբագրել"
 
+msgid "Edit faction"
+msgstr ""
+
+msgid "Edit roles below their own"
+msgstr ""
+
+msgid "Edit their own role and elevate users to their own level"
+msgstr ""
+
 msgid "Email"
 msgstr "Փոստ"
 
@@ -601,6 +671,9 @@ msgstr "Մուտքագրեք նոր մոդերատորի օգտատիրոջ ան
 msgid "Enter a little text that describes your faction"
 msgstr ""
 
+msgid "Enter search term and press Search."
+msgstr ""
+
 msgid "Enter your mail address and we will send you a new password:"
 msgstr ""
 "Մուտքագրեք ձեր էլեկտրոնային փոստի հասցեն, և մենք ձեզ նոր գաղտնաբառ "
@@ -622,7 +695,16 @@ msgstr ""
 msgid "Export enabled templates"
 msgstr "Արտահանել միացված կաղապարները"
 
+msgid "Faction"
+msgstr ""
+
 msgid "Factions"
+msgstr ""
+
+msgid "Factions Today"
+msgstr ""
+
+msgid "Factions Total"
 msgstr ""
 
 msgid ""
@@ -753,6 +835,9 @@ msgstr "Ինչպես պետք է լինի pixelplanet-ը:"
 msgid "I forgot my Password."
 msgstr "Ես մոռացել եմ իմ գաղտնաբառը։"
 
+msgid "ID"
+msgstr ""
+
 msgid "IID (optional)"
 msgstr "IID (ըստ ցանկության)"
 
@@ -802,10 +887,16 @@ msgstr "Անվավեր կոորդինատներ"
 msgid "Invalid color selected"
 msgstr "Ընտրված է անվավեր գույն"
 
+msgid "Invite"
+msgstr ""
+
 msgid "Invited to Chat"
 msgstr ""
 
 msgid "Invites"
+msgstr ""
+
+msgid "Is One-Time-Invite"
 msgstr ""
 
 msgid ""
@@ -815,7 +906,13 @@ msgstr ""
 msgid "Jannies can rollback and protect, but not watch or ban."
 msgstr ""
 
+msgid "Join"
+msgstr ""
+
 msgid "Join Faction"
+msgstr ""
+
+msgid "Joined"
 msgstr ""
 
 msgid "Just for registered Users"
@@ -831,6 +928,9 @@ msgid "Keep Ratio"
 msgstr "Պահպանել հարաբերակցությունը"
 
 msgid "Kick"
+msgstr ""
+
+msgid "Kick members"
 msgstr ""
 
 msgid "Know that an account exists"
@@ -849,6 +949,9 @@ msgid "Let everyone join this faction"
 msgstr ""
 
 msgid "Let people join this faction without needing an invite."
+msgstr ""
+
+msgid "Level"
 msgstr ""
 
 msgid "Light Grid"
@@ -886,6 +989,9 @@ msgstr ""
 msgid "Login to grant access to other application."
 msgstr ""
 
+msgid "Login to join us."
+msgstr ""
+
 msgid "Login to other application"
 msgstr ""
 
@@ -899,6 +1005,9 @@ msgid "Manage Moderators"
 msgstr "Կառավարել մոդերատորներին"
 
 msgid "Manage Templates"
+msgstr ""
+
+msgid "Manage invites"
 msgstr ""
 
 msgid "Map Data"
@@ -953,7 +1062,10 @@ msgstr "Անունը պետք է կազմի առնվազն 2 նիշ"
 msgid "Name must be shorter than 26 characters"
 msgstr "Անունը պետք է պակաս լինի 26 նիշից"
 
-msgid "Name of your faction [a-z][A-Z][0-9].-_"
+msgid "Name of this role"
+msgstr ""
+
+msgid "Name of your faction (this can not be changed later)"
 msgstr ""
 
 msgid "Name or Email"
@@ -992,6 +1104,9 @@ msgstr "Սխալ կամ բացակայող captcha-ի տեքստ"
 msgid "No password given."
 msgstr "Գաղտնաբառ չի տրվել:"
 
+msgid "No results."
+msgstr ""
+
 msgid "Nobody is banned from this faction"
 msgstr ""
 
@@ -1021,6 +1136,9 @@ msgstr ""
 
 msgid "Old Password"
 msgstr "Հին Գաղտնաբառ"
+
+msgid "One-Time"
+msgstr ""
 
 msgid "Online Users"
 msgstr "Առցանց Օգտատերեր"
@@ -1109,6 +1227,9 @@ msgstr ""
 msgid "Permission"
 msgstr ""
 
+msgid "Permissions of Powerlevels"
+msgstr ""
+
 msgid "Phish!"
 msgstr ""
 
@@ -1117,6 +1238,9 @@ msgstr ""
 
 msgid "Ping"
 msgstr "Պինգ"
+
+msgid "Pixel"
+msgstr ""
 
 msgid "Pixel Notify OFF"
 msgstr "Պիքսելի ակտիվությունը անջատված է"
@@ -1129,12 +1253,6 @@ msgstr "Պիքսելի պաշտպանություն"
 
 msgid "Pixel protected"
 msgstr "Պիքսելը պաշտպանվա՜ծ է"
-
-msgid "Pixels"
-msgstr ""
-
-msgid "Pixels Today"
-msgstr ""
 
 msgid "Place color pixels on a large canvas with other players online!"
 msgstr "Տեղադրեք գունավոր պիքսելներ մեծ կտավի վրա այլ խաղացողների հետ:"
@@ -1168,6 +1286,12 @@ msgstr "Քաղաքական կողմնացույցի կտավ"
 
 msgid "Potato Mode"
 msgstr "Թույլ համակարգչի ռեժիմ"
+
+msgid "Powerlevel"
+msgstr ""
+
+msgid "Powerlevel of this role. See table below for explenation."
+msgstr ""
 
 #, javascript-format
 msgid ""
@@ -1219,6 +1343,9 @@ msgstr ""
 
 msgid "Range Banned"
 msgstr "Ձեր տարածքն արգելված է"
+
+msgid "Rank"
+msgstr ""
 
 msgid "Ranked"
 msgstr "Դասակարգված"
@@ -1276,6 +1403,10 @@ msgstr ""
 msgid "Remove a Login method:"
 msgstr ""
 
+#, javascript-format
+msgid "Represents ${ activeFactionTitle } as ${ activeFactionRoleName }"
+msgstr ""
+
 msgid "Require Verification to Place"
 msgstr ""
 
@@ -1306,6 +1437,9 @@ msgstr ""
 msgid "Revoke consent of third party applications:"
 msgstr ""
 
+msgid "Role"
+msgstr ""
+
 msgid "Role Flags"
 msgstr ""
 
@@ -1333,7 +1467,19 @@ msgid "Scroll ${ mouseSymbol } mouse wheel or ${ touchSymbol } pinch to zoom"
 msgstr ""
 "Մեծացնելու համար պտտեք ${ mouseSymbol } մկնիկի անիվը կամ ${ touchSymbol }"
 
+msgid "Search"
+msgstr ""
+
 msgid "Search Existing Faction"
+msgstr ""
+
+msgid "Search Term"
+msgstr ""
+
+msgid "See hidden users in member list"
+msgstr ""
+
+msgid "Select Avatar of this Faction. Supported Formats: jpg, gif, png, webp"
 msgstr ""
 
 msgid "Select Date above"
@@ -1347,6 +1493,9 @@ msgstr ""
 
 msgid "Select Language"
 msgstr "Ընտրեք լեզուն"
+
+msgid "Select a valid pwerlevel"
+msgstr ""
 
 msgid ""
 "Select the canvas you want to use.\n"
@@ -1504,6 +1653,9 @@ msgid ""
 "It is permanent, you can not change it later."
 msgstr ""
 
+msgid "The password for your account."
+msgstr ""
+
 msgid "Themes"
 msgstr "Թեմաներ"
 
@@ -1523,6 +1675,9 @@ msgstr ""
 "Դա քաղաքական կողմնացույցի 1024x1024 ներկայացում էր` 5 վրկ վերալիցքավորմամբ և "
 "60-ականների դասախցիկներով: Այն մեկնարկվեց մայիսի 11-ին և ամիսներ շարունակ "
 "ակտիվ մնաց, մինչև այն դադարեցվեց նոյեմբերի 30-ին:"
+
+msgid "This faction has no invites"
+msgstr ""
 
 msgid ""
 "This is the name that other people see, e.g. in Chat. You can change it at "
@@ -1602,7 +1757,7 @@ msgstr "Ընդհանուր"
 msgid "Total Online Users"
 msgstr "Ընդհանուր օնլայն օգտատերեր"
 
-msgid "Total Pixels"
+msgid "Total Pixels per Faction"
 msgstr ""
 
 #, fuzzy
@@ -1632,6 +1787,12 @@ msgid "Type the characters from the following image:"
 msgstr "Գրեք այն նշանները, որը տեսնում եք տվյալ նկարի մեջ."
 
 msgid "Unban media"
+msgstr ""
+
+msgid "Unban members"
+msgstr ""
+
+msgid "Unblock"
 msgstr ""
 
 msgid "Unblock Users"
@@ -1688,6 +1849,9 @@ msgstr ""
 msgid "Username must be shorter than 26 characters"
 msgstr ""
 
+msgid "Users"
+msgstr ""
+
 #, javascript-format
 msgid "We are Libre Software under the ${ agplLink }, "
 msgstr ""
@@ -1712,6 +1876,9 @@ msgid "Weird"
 msgstr "Տարօրինակ է"
 
 msgid "What the pencil should draw on the current canvas."
+msgstr ""
+
+msgid "Whether or not this invite can only be used once."
 msgstr ""
 
 msgid ""
@@ -1773,6 +1940,10 @@ msgid ""
 "You are currently representing ${ activeFactionTitle } as ${ activeRoleName }"
 msgstr ""
 
+#, javascript-format
+msgid "You are logged in as ${ name } [${ username }]."
+msgstr ""
+
 msgid "You are not allowed to play this game right now :("
 msgstr ""
 
@@ -1807,6 +1978,12 @@ msgstr ""
 msgid "You failed your captcha"
 msgstr "Դուք ձեր captcha-ն ձախողեցիք"
 
+#, javascript-format
+msgid ""
+"You have been invited to join us on pixelplanet. We currently have $"
+"{ memberCount } members."
+msgstr ""
+
 msgid "You have no users blocked"
 msgstr "Դուք արգելափակված օգտատերեր չունեք"
 
@@ -1821,9 +1998,6 @@ msgstr "Դուք պետք է մուտք գործեք զրուցելու համա
 
 msgid "You must enter a UserId"
 msgstr ""
-
-msgid "You must enter a duration"
-msgstr "Դուք պետք է մուտքագրեք տևողություն"
 
 msgid "You must enter a mediaId or media BID"
 msgstr ""
@@ -1909,6 +2083,9 @@ msgstr ""
 msgid "created at"
 msgstr ""
 
+msgid "days"
+msgstr ""
+
 msgid "download here"
 msgstr ""
 
@@ -1923,6 +2100,9 @@ msgstr "կամ գրանցվեք այստեղ."
 
 msgid "recommended"
 msgstr "Առաջարկվում է"
+
+msgid "times used"
+msgstr ""
 
 #, javascript-format
 msgid "try again after ${ ti }min"
@@ -1996,6 +2176,9 @@ msgstr "W"
 msgctxt "keybinds"
 msgid "X"
 msgstr "X"
+
+#~ msgid "You must enter a duration"
+#~ msgstr "Դուք պետք է մուտքագրեք տևողություն"
 
 #~ msgid "Close Menu"
 #~ msgstr "Փակել ընտրացանկը"

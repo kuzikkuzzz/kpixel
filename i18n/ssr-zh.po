@@ -64,14 +64,14 @@ msgstr "无头像或头像不是图片"
 msgid "Black and White canvas"
 msgstr "黑白画布"
 
-msgid "Can not change a role above or equal to your own"
-msgstr "不可改变一个地位高于自己或等于自己的身份"
-
 msgid "Can not change a role above your own"
 msgstr "不可改变一个地位高于自己的身份"
 
 msgid "Can not change a role that is equal to your own"
 msgstr "不可改变一个地位等于自己的身份"
+
+msgid "Can not change the default setting of this role"
+msgstr ""
 
 msgid "Can not change the powerlevel of a role equal or above you"
 msgstr "不可更改一个高于或等于自己的身份地位"
@@ -79,23 +79,32 @@ msgstr "不可更改一个高于或等于自己的身份地位"
 msgid "Can not change the powerlevel of the Sovereign"
 msgstr "不可更改主权的地位"
 
-msgid "Can not change this role"
-msgstr "不可更改这个身份"
-
 msgid "Can not chat while being banned"
 msgstr "被禁期间无法聊天"
 
-msgid "Can not create a role with a powerlevel of yours or beyond"
-msgstr "不可新建一个地位与你相同或更高的身份"
+msgid "Can not create a role on the same level as yours"
+msgstr ""
+
+msgid "Can not create a role with a powerlevel beyond yours"
+msgstr ""
+
+msgid "Can not delete a role on the same level as yours"
+msgstr ""
 
 msgid "Can not delete this role"
 msgstr "不可删除这个身份"
 
-msgid "Can not elevate the powerlevel of a role to yours or beyond"
-msgstr "不可提升身份地位至你的地位或更高"
+msgid "Can not elevate the powerlevel of a role beyond yours"
+msgstr ""
+
+msgid "Can not elevate the powerlevel of a role to yours"
+msgstr ""
 
 msgid "Can not have more than 20 faction roles"
 msgstr "不可拥有多于20个派别身份"
+
+msgid "Can not have more than 20 invites per faction"
+msgstr ""
 
 msgid "Can not modify user equal to you or above you"
 msgstr "不可调整一个地位等于或高于你的用户"
@@ -109,6 +118,9 @@ msgid ""
 "Can not upload this many files at once, only 5 are allowed, you have $"
 "{ amountOfFiles }"
 msgstr "一次上传的文件数量不能超过 5 个，您有 ${ amountOfFiles } 个文件"
+
+msgid "Can only have one Sovereign role"
+msgstr ""
 
 msgid "Click here"
 msgstr "点击这里"
@@ -582,9 +594,6 @@ msgstr "该派别不存在"
 msgid "This faction is full"
 msgstr "该派别已满"
 
-msgid "This faction is hidden"
-msgstr "该派系已隐藏"
-
 msgid "This faction is private"
 msgstr "该派系是私密的"
 
@@ -594,6 +603,9 @@ msgstr "此媒体已被禁${ reason }。禁播 ID：${ mbid }"
 
 msgid "This password-reset link isn't valid anymore :("
 msgstr "这个密码重置链接已经失效了 :("
+
+msgid "This user is private"
+msgstr ""
 
 msgid "Title can't be empty."
 msgstr "标题不能为空。"
@@ -859,6 +871,21 @@ msgid ""
 msgstr ""
 "欢迎来到我们的像素画爱好者小社区！要使用您的账号，您需要验证邮箱。您可以在这"
 "里进行验证： "
+
+#~ msgid "Can not change a role above or equal to your own"
+#~ msgstr "不可改变一个地位高于自己或等于自己的身份"
+
+#~ msgid "Can not change this role"
+#~ msgstr "不可更改这个身份"
+
+#~ msgid "Can not create a role with a powerlevel of yours or beyond"
+#~ msgstr "不可新建一个地位与你相同或更高的身份"
+
+#~ msgid "Can not elevate the powerlevel of a role to yours or beyond"
+#~ msgstr "不可提升身份地位至你的地位或更高"
+
+#~ msgid "This faction is hidden"
+#~ msgstr "该派系已隐藏"
 
 #~ msgid "Could not set your avtar"
 #~ msgstr "无法设置您的头像"

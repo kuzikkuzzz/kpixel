@@ -17,12 +17,6 @@ msgstr ""
 msgid " which is in "
 msgstr " ki bu da şu tarihte "
 
-msgid "# Today"
-msgstr ""
-
-msgid "# Total"
-msgstr ""
-
 #, javascript-format
 msgid "${ mouseSymbol } Hold left mouse button and drag mouse to rotate"
 msgstr ""
@@ -74,8 +68,18 @@ msgstr ""
 msgid "A Phish!"
 msgstr ""
 
+msgid ""
+"A flag representing the role, it should be 16x11 pixels. If left empty, "
+"users with this role selected will still show their own flags."
+msgstr ""
+
 msgid "A new verification mail is getting sent to you."
 msgstr "Sana yeni bir doğrulama postası gönderdik."
+
+msgid ""
+"A role has all the permissions of all levels below and equal to it. In "
+"example: Every role with a power level of >=50 can manage invites (50)."
+msgstr ""
 
 msgid "ACCESS MODTOOLS"
 msgstr ""
@@ -88,6 +92,12 @@ msgstr "Şablon Ekle"
 
 #. This if for moderation tools, it's not important to translate this
 msgid "Admintools"
+msgstr ""
+
+msgid "Age"
+msgstr ""
+
+msgid "All members of this faction are hidden"
 msgstr ""
 
 msgid "All sound effects will be disabled."
@@ -117,6 +127,18 @@ msgstr ""
 msgid "Assign new Mod"
 msgstr "Yeni moderatör ata"
 
+msgid "Assign role per default to new members"
+msgstr ""
+
+msgid "Assign roles below their own"
+msgstr ""
+
+msgid "Assign this role to every new member automatically on join."
+msgstr ""
+
+msgid "Assigned role per default"
+msgstr ""
+
 msgid "Attach File"
 msgstr ""
 
@@ -141,6 +163,9 @@ msgstr ""
 msgid "Ban media"
 msgstr ""
 
+msgid "Ban members"
+msgstr ""
+
 msgid "Banned"
 msgstr "Yasaklandınız"
 
@@ -157,9 +182,9 @@ msgid "Block DMs"
 msgstr "DM'leri Engelle"
 
 msgid ""
-"Block all Private Messages. Enabling this will delete all your current DMs. "
-"You can still start new DMs with other users, but other users won't be able "
-"to start DMs with you."
+"Block all Private Messages. Enabling this will make it impossible for other "
+"users to start messaging you. You can still start new DMs with other users "
+"and already ongoing DMs will still be open."
 msgstr ""
 
 msgid "Blocked"
@@ -222,6 +247,9 @@ msgid "Captcha"
 msgstr "Captcha"
 
 msgid "Caught by"
+msgstr ""
+
+msgid "Change Flag"
 msgstr ""
 
 #, fuzzy
@@ -344,6 +372,9 @@ msgstr ""
 msgid "Confirm Ban"
 msgstr ""
 
+msgid "Confirm Delete"
+msgstr ""
+
 msgid "Confirm Kick"
 msgstr ""
 
@@ -355,6 +386,9 @@ msgstr "Yeni Parolayı Doğrula"
 
 msgid "Confirm Password"
 msgstr "Parolayı Onayla"
+
+msgid "Confirm your password."
+msgstr ""
 
 #, javascript-format
 msgid "Connection error ${ code } :("
@@ -433,7 +467,22 @@ msgstr "Ülke"
 msgid "Create Faction"
 msgstr ""
 
+msgid "Create Invite"
+msgstr ""
+
 msgid "Create New Faction"
+msgstr ""
+
+msgid "Create New Invite"
+msgstr ""
+
+msgid "Create New Role"
+msgstr ""
+
+msgid "Create Role"
+msgstr ""
+
+msgid "Create roles"
 msgstr ""
 
 #, javascript-format
@@ -460,8 +509,14 @@ msgstr ""
 msgid "DM"
 msgstr "DM"
 
+msgid "Daily Pixel"
+msgstr ""
+
 msgid "Daily Pixels per Country"
 msgstr "Ülke başına atılan günlük piksel"
+
+msgid "Daily Pixels per Faction"
+msgstr ""
 
 msgid "Daily Pixels per Player"
 msgstr "Oyuncu başına atılan günlük piksel"
@@ -480,6 +535,12 @@ msgstr "Sil"
 
 msgid "Delete Account"
 msgstr "Hesabı Sil"
+
+msgid "Delete Faction"
+msgstr ""
+
+msgid "Delete the faction"
+msgstr ""
 
 msgid "Deny"
 msgstr ""
@@ -561,6 +622,15 @@ msgstr "Easter Egg AÇIK"
 msgid "Edit"
 msgstr "Düzenle"
 
+msgid "Edit faction"
+msgstr ""
+
+msgid "Edit roles below their own"
+msgstr ""
+
+msgid "Edit their own role and elevate users to their own level"
+msgstr ""
+
 msgid "Email"
 msgstr "E-Posta Adresi"
 
@@ -605,6 +675,9 @@ msgstr "Yeni moderatörün adını gir"
 msgid "Enter a little text that describes your faction"
 msgstr ""
 
+msgid "Enter search term and press Search."
+msgstr ""
+
 msgid "Enter your mail address and we will send you a new password:"
 msgstr ""
 "E-Posta adresinizi giriniz, ardından size yeni bir parola göndereceğiz:"
@@ -625,7 +698,16 @@ msgstr ""
 msgid "Export enabled templates"
 msgstr "Etkin olan şablonları dışa aktar"
 
+msgid "Faction"
+msgstr ""
+
 msgid "Factions"
+msgstr ""
+
+msgid "Factions Today"
+msgstr ""
+
+msgid "Factions Total"
 msgstr ""
 
 msgid ""
@@ -756,6 +838,9 @@ msgstr "Oyunun nasıl görüneceğidir."
 msgid "I forgot my Password."
 msgstr "Parolamı Unuttum."
 
+msgid "ID"
+msgstr ""
+
 msgid "IID (optional)"
 msgstr "IID (tercihen)"
 
@@ -805,10 +890,16 @@ msgstr "Geçersiz Koordinatlar"
 msgid "Invalid color selected"
 msgstr "Geçersiz renk seçili"
 
+msgid "Invite"
+msgstr ""
+
 msgid "Invited to Chat"
 msgstr ""
 
 msgid "Invites"
+msgstr ""
+
+msgid "Is One-Time-Invite"
 msgstr ""
 
 msgid ""
@@ -818,7 +909,13 @@ msgstr ""
 msgid "Jannies can rollback and protect, but not watch or ban."
 msgstr ""
 
+msgid "Join"
+msgstr ""
+
 msgid "Join Faction"
+msgstr ""
+
+msgid "Joined"
 msgstr ""
 
 msgid "Just for registered Users"
@@ -834,6 +931,9 @@ msgid "Keep Ratio"
 msgstr "Oranı Koru"
 
 msgid "Kick"
+msgstr ""
+
+msgid "Kick members"
 msgstr ""
 
 msgid "Know that an account exists"
@@ -852,6 +952,9 @@ msgid "Let everyone join this faction"
 msgstr ""
 
 msgid "Let people join this faction without needing an invite."
+msgstr ""
+
+msgid "Level"
 msgstr ""
 
 msgid "Light Grid"
@@ -887,6 +990,9 @@ msgstr "Daha fazla özellik ve istatistik için giriş yapın."
 msgid "Login to grant access to other application."
 msgstr ""
 
+msgid "Login to join us."
+msgstr ""
+
 msgid "Login to other application"
 msgstr ""
 
@@ -900,6 +1006,9 @@ msgid "Manage Moderators"
 msgstr "Moderatörleri Yönet"
 
 msgid "Manage Templates"
+msgstr ""
+
+msgid "Manage invites"
 msgstr ""
 
 msgid "Map Data"
@@ -955,7 +1064,10 @@ msgstr "Kullanıcı adınız en az 2 karakterden oluşmalıdır"
 msgid "Name must be shorter than 26 characters"
 msgstr "Kullanıcı adınız 26 karakterden az olmalıdır"
 
-msgid "Name of your faction [a-z][A-Z][0-9].-_"
+msgid "Name of this role"
+msgstr ""
+
+msgid "Name of your faction (this can not be changed later)"
 msgstr ""
 
 msgid "Name or Email"
@@ -994,6 +1106,9 @@ msgstr "Olmayan veya yanlış captcha metni"
 msgid "No password given."
 msgstr "Bir parola girilmedi."
 
+msgid "No results."
+msgstr ""
+
 msgid "Nobody is banned from this faction"
 msgstr ""
 
@@ -1023,6 +1138,9 @@ msgstr ""
 
 msgid "Old Password"
 msgstr "Eski Parola"
+
+msgid "One-Time"
+msgstr ""
 
 msgid "Online Users"
 msgstr "Çevrimiçi Kullanıcılar"
@@ -1111,6 +1229,9 @@ msgstr "Kalemin seçtiği: "
 msgid "Permission"
 msgstr ""
 
+msgid "Permissions of Powerlevels"
+msgstr ""
+
 msgid "Phish!"
 msgstr ""
 
@@ -1119,6 +1240,9 @@ msgstr ""
 
 msgid "Ping"
 msgstr "Ping"
+
+msgid "Pixel"
+msgstr ""
 
 msgid "Pixel Notify OFF"
 msgstr "Piksel Bildirimleri KAPALI"
@@ -1131,12 +1255,6 @@ msgstr "Piksel Koruması"
 
 msgid "Pixel protected"
 msgstr "Piksel korunuyor"
-
-msgid "Pixels"
-msgstr ""
-
-msgid "Pixels Today"
-msgstr ""
 
 msgid "Place color pixels on a large canvas with other players online!"
 msgstr ""
@@ -1170,6 +1288,12 @@ msgstr "Siyasi Pusula Tuvali"
 
 msgid "Potato Mode"
 msgstr "Patates Modu"
+
+msgid "Powerlevel"
+msgstr ""
+
+msgid "Powerlevel of this role. See table below for explenation."
+msgstr ""
 
 #, javascript-format
 msgid ""
@@ -1225,6 +1349,9 @@ msgstr ""
 
 msgid "Range Banned"
 msgstr "Alan Yasaklısınız"
+
+msgid "Rank"
+msgstr ""
 
 msgid "Ranked"
 msgstr "Sıralama"
@@ -1282,6 +1409,10 @@ msgstr ""
 msgid "Remove a Login method:"
 msgstr ""
 
+#, javascript-format
+msgid "Represents ${ activeFactionTitle } as ${ activeFactionRoleName }"
+msgstr ""
+
 msgid "Require Verification to Place"
 msgstr ""
 
@@ -1312,6 +1443,9 @@ msgstr ""
 msgid "Revoke consent of third party applications:"
 msgstr ""
 
+msgid "Role"
+msgstr ""
+
 msgid "Role Flags"
 msgstr ""
 
@@ -1340,7 +1474,19 @@ msgstr ""
 "Fare tekerini ${ mouseSymbol } veya ${ touchSymbol } iki parmağınızı "
 "kullanarak yakınlaştırın"
 
+msgid "Search"
+msgstr ""
+
 msgid "Search Existing Faction"
+msgstr ""
+
+msgid "Search Term"
+msgstr ""
+
+msgid "See hidden users in member list"
+msgstr ""
+
+msgid "Select Avatar of this Faction. Supported Formats: jpg, gif, png, webp"
 msgstr ""
 
 msgid "Select Date above"
@@ -1354,6 +1500,9 @@ msgstr ""
 
 msgid "Select Language"
 msgstr "Dil Seç"
+
+msgid "Select a valid pwerlevel"
+msgstr ""
 
 msgid ""
 "Select the canvas you want to use.\n"
@@ -1510,6 +1659,9 @@ msgid ""
 "It is permanent, you can not change it later."
 msgstr ""
 
+msgid "The password for your account."
+msgstr ""
+
 msgid "Themes"
 msgstr "Temalar"
 
@@ -1530,6 +1682,9 @@ msgstr ""
 "pikselin bekleme süresi 5 saniye olup 60 saniyeye kadar "
 "biriktirilebiliyordu. 11 Mayıstan başladı ve 30 Kasımda kapatılana kadar "
 "aylarca aktif olarak oynandı."
+
+msgid "This faction has no invites"
+msgstr ""
 
 msgid ""
 "This is the name that other people see, e.g. in Chat. You can change it at "
@@ -1608,7 +1763,7 @@ msgstr "Toplam"
 msgid "Total Online Users"
 msgstr "Toplam Çevrim İçi Oyuncular"
 
-msgid "Total Pixels"
+msgid "Total Pixels per Faction"
 msgstr ""
 
 msgid "Total Pixels per Player"
@@ -1637,6 +1792,12 @@ msgid "Type the characters from the following image:"
 msgstr "Resimdeki karakterleri yazınız:"
 
 msgid "Unban media"
+msgstr ""
+
+msgid "Unban members"
+msgstr ""
+
+msgid "Unblock"
 msgstr ""
 
 msgid "Unblock Users"
@@ -1693,6 +1854,9 @@ msgstr ""
 msgid "Username must be shorter than 26 characters"
 msgstr ""
 
+msgid "Users"
+msgstr ""
+
 #, javascript-format
 msgid "We are Libre Software under the ${ agplLink }, "
 msgstr ""
@@ -1716,6 +1880,9 @@ msgstr "Garip"
 
 msgid "What the pencil should draw on the current canvas."
 msgstr "Kalem mevcut kanvasta ne çizmeli."
+
+msgid "Whether or not this invite can only be used once."
+msgstr ""
 
 msgid ""
 "While we tend to not delete canvases, some canvases are started for fun or "
@@ -1780,6 +1947,10 @@ msgid ""
 "You are currently representing ${ activeFactionTitle } as ${ activeRoleName }"
 msgstr ""
 
+#, javascript-format
+msgid "You are logged in as ${ name } [${ username }]."
+msgstr ""
+
 msgid "You are not allowed to play this game right now :("
 msgstr ""
 
@@ -1812,6 +1983,12 @@ msgstr ""
 msgid "You failed your captcha"
 msgstr "Doğrulamayı yanlış çözdünüz"
 
+#, javascript-format
+msgid ""
+"You have been invited to join us on pixelplanet. We currently have $"
+"{ memberCount } members."
+msgstr ""
+
 msgid "You have no users blocked"
 msgstr "Engellediğin kullanıcı yok"
 
@@ -1826,9 +2003,6 @@ msgstr "Sohbete katılmak için giriş yapmanız gerekir"
 
 msgid "You must enter a UserId"
 msgstr ""
-
-msgid "You must enter a duration"
-msgstr "Bir zaman girmelisin"
 
 msgid "You must enter a mediaId or media BID"
 msgstr ""
@@ -1913,6 +2087,9 @@ msgstr ""
 msgid "created at"
 msgstr ""
 
+msgid "days"
+msgstr ""
+
 msgid "download here"
 msgstr ""
 
@@ -1927,6 +2104,9 @@ msgstr "veya buradan kayıt ol:"
 
 msgid "recommended"
 msgstr "tavsiye edilir"
+
+msgid "times used"
+msgstr ""
 
 #, javascript-format
 msgid "try again after ${ ti }min"
@@ -2000,6 +2180,9 @@ msgstr "W"
 msgctxt "keybinds"
 msgid "X"
 msgstr "X"
+
+#~ msgid "You must enter a duration"
+#~ msgstr "Bir zaman girmelisin"
 
 #~ msgid "Close Menu"
 #~ msgstr "Menüyü Kapat"
