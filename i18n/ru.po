@@ -1519,6 +1519,9 @@ msgstr "Выбрать флаг"
 msgid "Select Language"
 msgstr "Выбрать язык"
 
+msgid "Select a valid powerlevel"
+msgstr ""
+
 msgid "Select a valid pwerlevel"
 msgstr ""
 
@@ -2108,6 +2111,9 @@ msgid ""
 msgstr ""
 "Увеличение масштаба вместо размещения пикселя, когда вы пытаетесь поставить "
 "пиксель и масштаб невелик."
+
+msgid "a hidden faction"
+msgstr ""
 
 msgid "affects"
 msgstr ""

@@ -1509,6 +1509,9 @@ msgstr ""
 msgid "Select Language"
 msgstr "Выбраць Мову"
 
+msgid "Select a valid powerlevel"
+msgstr ""
+
 msgid "Select a valid pwerlevel"
 msgstr ""
 
@@ -2078,6 +2081,9 @@ msgid ""
 msgstr ""
 "Калі ваш маштаб маленькі, вы набліжаецеся замест таго, каб ставіць пікселі, "
 "калі вы націскаеце на палатно."
+
+msgid "a hidden faction"
+msgstr ""
 
 msgid "affects"
 msgstr ""

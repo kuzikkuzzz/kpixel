@@ -1511,6 +1511,9 @@ msgstr ""
 msgid "Select Language"
 msgstr "Roghnaigh Teanga"
 
+msgid "Select a valid powerlevel"
+msgstr ""
+
 msgid "Select a valid pwerlevel"
 msgstr ""
 
@@ -2090,6 +2093,9 @@ msgid ""
 msgstr ""
 "Zúmáil isteach in ait cuir picteilíní nuair a cliceáileann tú are an cambhas "
 "agus tá do zúm beag."
+
+msgid "a hidden faction"
+msgstr ""
 
 msgid "affects"
 msgstr ""

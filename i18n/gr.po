@@ -1527,6 +1527,9 @@ msgstr ""
 msgid "Select Language"
 msgstr "Επιλογή γλώσσας"
 
+msgid "Select a valid powerlevel"
+msgstr ""
+
 msgid "Select a valid pwerlevel"
 msgstr ""
 
@@ -2100,6 +2103,9 @@ msgid ""
 msgstr ""
 "Κάντε μεγέθυνση αντί να τοποθετήσετε ένα pixel όταν αγγίζετε τον καμβά και "
 "το ζουμ σας είναι μικρό."
+
+msgid "a hidden faction"
+msgstr ""
 
 msgid "affects"
 msgstr ""

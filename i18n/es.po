@@ -1,17 +1,18 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: admin@pixelplanet.fun\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2024-06-07 09:09+0000\n"
-"Last-Translator: weblate <weblate@noreply.pixelplanet.fun>\n"
-"Language-Team: Spanish <https://hosted.weblate.org/projects/pixelplanet/"
-"client/es/>\n"
+"PO-Revision-Date: 2026-04-18 17:01+0000\n"
+"Last-Translator: bambiiii <bambiiii@noreply.pixelplanet.fun>\n"
+"Language-Team: Spanish <https://translate.gs-os.com/projects/ppfun/client/es/"
+">\n"
 "Language: es\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.6-dev\n"
+"X-Generator: Weblate 5.15.2\n"
 
 msgid " which is in "
 msgstr " que es en "
@@ -51,24 +52,27 @@ msgid "(0 = infinite)"
 msgstr "(0 = infinito)"
 
 msgid "(click a role to activate it)"
-msgstr ""
+msgstr "(presiona en un rol para activarlo)"
 
 msgid "(click a role to assign or remove it)"
-msgstr ""
+msgstr "(presiona en un rol para asignarlo o eliminarlo)"
 
 msgid "+last hour"
 msgstr "+última hora"
 
 msgid "...loading Login methods and sessions..."
-msgstr ""
+msgstr "...cargando Métodos de inicio de sesión y sesiones..."
 
 msgid "A Phish!"
-msgstr ""
+msgstr "Un Pez!"
 
 msgid ""
 "A flag representing the role, it should be 16x11 pixels. If left empty, "
 "users with this role selected will still show their own flags."
 msgstr ""
+"Una bandera representando el rol, debería ser de 16x11 pixeles. Si esta "
+"vacío, los usuarios con este rol seleccionado aun mostraran sus banderas de "
+"origen."
 
 msgid "A new verification mail is getting sent to you."
 msgstr "Un nuevo correo de verificación está siendo enviado."
@@ -77,9 +81,12 @@ msgid ""
 "A role has all the permissions of all levels below and equal to it. In "
 "example: Every role with a power level of >=50 can manage invites (50)."
 msgstr ""
+"Un rol tiene todos los permisos de todos los niveles debajo e iguales. "
+"Ejemplo: Todos los roles con un nivel de poder de >=50 pueden manejar las "
+"invitaciones (50)."
 
 msgid "ACCESS MODTOOLS"
-msgstr ""
+msgstr "ACCEDER A LAS HERRAMIENTAS DE MODERADOR"
 
 msgid "Add Grid (uncheck if you need a 1:1 template)"
 msgstr "Agregar Cuadrícula (desactivar si necesitas una plantilla 1:1)"
@@ -92,10 +99,10 @@ msgid "Admintools"
 msgstr "Herramientas de Administración"
 
 msgid "Age"
-msgstr ""
+msgstr "Edad"
 
 msgid "All members of this faction are hidden"
-msgstr ""
+msgstr "Todos los miembros de esta facción están ocultos"
 
 msgid "All sound effects will be disabled."
 msgstr "Se desactivarán todos los efectos de sonido."
@@ -107,7 +114,7 @@ msgid "Always show movement control buttons"
 msgstr "Mostrar siempre los botones de control de movimiento"
 
 msgid "An image representing your faction"
-msgstr ""
+msgstr "Una imagen representando tu faccion"
 
 msgid "Anti Aliasing"
 msgstr "Anti-Aliasiado"
@@ -119,19 +126,19 @@ msgid "Archive"
 msgstr "Archivo"
 
 msgid "Assign Roles"
-msgstr ""
+msgstr "Asignar Roles"
 
 msgid "Assign new Mod"
 msgstr "Asignar nuevo Mod"
 
 msgid "Assign role per default to new members"
-msgstr ""
+msgstr "Asignar roles por defecto a los nuevos miembros"
 
 msgid "Assign roles below their own"
-msgstr ""
+msgstr "Asignar roles debajo del tuyo"
 
 msgid "Assign this role to every new member automatically on join."
-msgstr ""
+msgstr "Asignar este rol a cada nuevo miembro automáticamente cuando se una."
 
 msgid "Assigned role per default"
 msgstr ""
@@ -391,7 +398,7 @@ msgid "Connection error ${ code } :("
 msgstr "Error de conección ${ code } :("
 
 msgid "Consent"
-msgstr ""
+msgstr "Consentir"
 
 msgid "Controls"
 msgstr ": controles"
@@ -1498,6 +1505,9 @@ msgstr ""
 msgid "Select Language"
 msgstr "Seleccionar Lenguaje"
 
+msgid "Select a valid powerlevel"
+msgstr ""
+
 msgid "Select a valid pwerlevel"
 msgstr ""
 
@@ -2069,6 +2079,9 @@ msgid ""
 msgstr ""
 "Si el zoom está alejado, este se acercará en lugar de colocar un píxel al "
 "hacer clic en el lienzo."
+
+msgid "a hidden faction"
+msgstr ""
 
 msgid "affects"
 msgstr ""

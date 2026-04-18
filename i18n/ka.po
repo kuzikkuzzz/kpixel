@@ -1495,6 +1495,9 @@ msgstr ""
 msgid "Select Language"
 msgstr "Აირჩიეთ ენა"
 
+msgid "Select a valid powerlevel"
+msgstr ""
+
 msgid "Select a valid pwerlevel"
 msgstr ""
 
@@ -2061,6 +2064,9 @@ msgid ""
 msgstr ""
 "გაადიდეთ პიქსელის განთავსების ნაცვლად, როდესაც ტილოზე შეხებით და თქვენი "
 "მასშტაბირება მცირეა."
+
+msgid "a hidden faction"
+msgstr ""
 
 msgid "affects"
 msgstr ""

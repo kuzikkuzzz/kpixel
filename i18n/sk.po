@@ -1479,6 +1479,9 @@ msgstr ""
 msgid "Select Language"
 msgstr "Vyber jazyk"
 
+msgid "Select a valid powerlevel"
+msgstr ""
+
 msgid "Select a valid pwerlevel"
 msgstr ""
 
@@ -2039,6 +2042,9 @@ msgid ""
 msgstr ""
 "Keď klepneš na plátno a priblíženie je malé, namiesto umiestnenia pixelu "
 "priblíž."
+
+msgid "a hidden faction"
+msgstr ""
 
 msgid "affects"
 msgstr ""

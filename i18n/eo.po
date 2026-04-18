@@ -1522,6 +1522,9 @@ msgstr ""
 msgid "Select Language"
 msgstr "Selektu Lingvon"
 
+msgid "Select a valid powerlevel"
+msgstr ""
+
 msgid "Select a valid pwerlevel"
 msgstr ""
 
@@ -2101,6 +2104,9 @@ msgid ""
 "small."
 msgstr ""
 "Zomu anstataŭe meti pikselon kiam vi frapetas l' kanvason kaj vian zomo etas."
+
+msgid "a hidden faction"
+msgstr ""
 
 msgid "affects"
 msgstr ""

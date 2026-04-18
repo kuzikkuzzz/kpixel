@@ -1507,6 +1507,9 @@ msgstr ""
 msgid "Select Language"
 msgstr "Æвзаджы Равзарын"
 
+msgid "Select a valid powerlevel"
+msgstr ""
+
 msgid "Select a valid pwerlevel"
 msgstr ""
 
@@ -2071,6 +2074,9 @@ msgid ""
 msgstr ""
 "Масштабы ахадæн уыцы бæсты цæмæй пикселы бынæттæ кæнын, кæддæ ныдзæв четæн "
 "æмæ дæ масштаб къаннæг."
+
+msgid "a hidden faction"
+msgstr ""
 
 msgid "affects"
 msgstr ""

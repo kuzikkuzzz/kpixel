@@ -1486,6 +1486,9 @@ msgstr ""
 msgid "Select Language"
 msgstr "زمان هەڵبژێرە"
 
+msgid "Select a valid powerlevel"
+msgstr ""
+
 msgid "Select a valid pwerlevel"
 msgstr ""
 
@@ -2051,6 +2054,9 @@ msgid ""
 msgstr ""
 "زووم بکە لەبری دانانی پێکسڵ کاتێک پەنجە دەخەیتە سەر کانڤاسەکە و زوومەکەت "
 "بچووکە."
+
+msgid "a hidden faction"
+msgstr ""
 
 msgid "affects"
 msgstr ""

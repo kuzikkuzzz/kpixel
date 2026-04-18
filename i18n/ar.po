@@ -1475,6 +1475,9 @@ msgstr ""
 msgid "Select Language"
 msgstr "اختيار اللغة"
 
+msgid "Select a valid powerlevel"
+msgstr ""
+
 msgid "Select a valid pwerlevel"
 msgstr ""
 
@@ -2035,6 +2038,9 @@ msgid ""
 "Zoom in instead of placing a pixel when you tap the canvas and your zoom is "
 "small."
 msgstr "قم بالتكبير بدلًا من وضع بكسل عند النقر على اللوحة وكان التكبير صغيرًا."
+
+msgid "a hidden faction"
+msgstr ""
 
 msgid "affects"
 msgstr ""

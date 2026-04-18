@@ -1507,6 +1507,9 @@ msgstr ""
 msgid "Select Language"
 msgstr "Selecteer Taal"
 
+msgid "Select a valid powerlevel"
+msgstr ""
+
 msgid "Select a valid pwerlevel"
 msgstr ""
 
@@ -2079,6 +2082,9 @@ msgid ""
 msgstr ""
 "Inzoomen in plaats van een pixel te plaatsen wanneer u op het canvas tikt en "
 "uw zoomlens klein is."
+
+msgid "a hidden faction"
+msgstr ""
 
 msgid "affects"
 msgstr ""

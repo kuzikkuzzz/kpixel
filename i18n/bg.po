@@ -1490,6 +1490,9 @@ msgstr ""
 msgid "Select Language"
 msgstr "Избиране на език"
 
+msgid "Select a valid powerlevel"
+msgstr ""
+
 msgid "Select a valid pwerlevel"
 msgstr ""
 
@@ -2060,6 +2063,9 @@ msgid ""
 msgstr ""
 "Увеличаване, вместо да се поставя пиксел, когато се докосне платното и "
 "Вашето увеличение е малко."
+
+msgid "a hidden faction"
+msgstr ""
 
 msgid "affects"
 msgstr ""

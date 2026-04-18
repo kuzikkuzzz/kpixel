@@ -145,6 +145,9 @@ msgstr "同意"
 msgid "Coronavirus"
 msgstr "新冠病毒"
 
+msgid "Could not change the flag of this role"
+msgstr ""
+
 msgid "Could not change this setting. Maybe try again later."
 msgstr "暂时无法更改此设置，请稍后再试。"
 
@@ -165,9 +168,6 @@ msgstr "无法设置个人头像"
 
 msgid "Could not set your faction role"
 msgstr "无法设置个人派别身份"
-
-msgid "Could not this roles flag"
-msgstr "无法标记此身份"
 
 msgid "Could not upload all files"
 msgstr "无法上传所有文件"
@@ -871,6 +871,9 @@ msgid ""
 msgstr ""
 "欢迎来到我们的像素画爱好者小社区！要使用您的账号，您需要验证邮箱。您可以在这"
 "里进行验证： "
+
+#~ msgid "Could not this roles flag"
+#~ msgstr "无法标记此身份"
 
 #~ msgid "Can not change a role above or equal to your own"
 #~ msgstr "不可改变一个地位高于自己或等于自己的身份"

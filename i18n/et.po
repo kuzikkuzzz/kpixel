@@ -1485,6 +1485,9 @@ msgstr ""
 msgid "Select Language"
 msgstr "Vali Keel"
 
+msgid "Select a valid powerlevel"
+msgstr ""
+
 msgid "Select a valid pwerlevel"
 msgstr ""
 
@@ -2048,6 +2051,9 @@ msgid ""
 msgstr ""
 "Suumi sisse, piksli panemise asemel, kui sa vajutad lõuendile ja su "
 "suumitase on madal."
+
+msgid "a hidden faction"
+msgstr ""
 
 msgid "affects"
 msgstr ""

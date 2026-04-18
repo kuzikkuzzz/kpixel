@@ -1515,6 +1515,9 @@ msgstr ""
 msgid "Select Language"
 msgstr "Selecciona l'Idioma"
 
+msgid "Select a valid powerlevel"
+msgstr ""
+
 msgid "Select a valid pwerlevel"
 msgstr ""
 
@@ -2105,6 +2108,9 @@ msgid ""
 msgstr ""
 "Fes zoom enlloc de col·locar un píxel quan fas un toc/clic sobre el llenç i "
 "el teu nivell de zoom és baix."
+
+msgid "a hidden faction"
+msgstr ""
 
 msgid "affects"
 msgstr ""

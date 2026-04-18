@@ -1500,6 +1500,9 @@ msgstr ""
 msgid "Select Language"
 msgstr "زبانت رو انتخاب کن"
 
+msgid "Select a valid powerlevel"
+msgstr ""
+
 msgid "Select a valid pwerlevel"
 msgstr ""
 
@@ -2069,6 +2072,9 @@ msgid ""
 "Zoom in instead of placing a pixel when you tap the canvas and your zoom is "
 "small."
 msgstr "وقتی که بومت کوچیکه و میخوای پیکسل بزاری، بجای پیکسل گذاشتن زوم کن."
+
+msgid "a hidden faction"
+msgstr ""
 
 msgid "affects"
 msgstr ""

@@ -1491,6 +1491,9 @@ msgstr ""
 msgid "Select Language"
 msgstr "Тілді таңдаңыз"
 
+msgid "Select a valid powerlevel"
+msgstr ""
+
 msgid "Select a valid pwerlevel"
 msgstr ""
 
@@ -2059,6 +2062,9 @@ msgid ""
 "small."
 msgstr ""
 "Масштаб кіші болса, кенепті басқанда пиксел салудың орнына картаны үлкейту."
+
+msgid "a hidden faction"
+msgstr ""
 
 msgid "affects"
 msgstr ""

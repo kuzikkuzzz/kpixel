@@ -1496,6 +1496,9 @@ msgstr ""
 msgid "Select Language"
 msgstr "Wëbierzë jãzëk"
 
+msgid "Select a valid powerlevel"
+msgstr ""
+
 msgid "Select a valid pwerlevel"
 msgstr ""
 
@@ -2069,6 +2072,9 @@ msgid ""
 msgstr ""
 "Przëblëżë miast stawiania pikseli czedë cëskasz płótna ë twòje przëblëżenië "
 "je małé."
+
+msgid "a hidden faction"
+msgstr ""
 
 msgid "affects"
 msgstr ""

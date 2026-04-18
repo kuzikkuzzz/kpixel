@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: admin@pixelplanet.fun\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2026-03-09 08:30+0000\n"
-"Last-Translator: Extreme Motorsex <em@noreply.pixelplanet.fun>\n"
+"PO-Revision-Date: 2026-04-18 20:25+0000\n"
+"Last-Translator: Coldi <coldi@noreply.pixelplanet.fun>\n"
 "Language-Team: Albanian <https://translate.gs-os.com/projects/ppfun/client/"
 "sq/>\n"
 "Language: sq\n"
@@ -54,10 +54,10 @@ msgid "(0 = infinite)"
 msgstr "(0 = pafund)"
 
 msgid "(click a role to activate it)"
-msgstr ""
+msgstr "(Kliko një rol për ta aktivizuar)"
 
 msgid "(click a role to assign or remove it)"
-msgstr ""
+msgstr "(Kliko njër rol për ta caktusr ose hequr)"
 
 msgid "+last hour"
 msgstr "+ora e fundit"
@@ -72,6 +72,8 @@ msgid ""
 "A flag representing the role, it should be 16x11 pixels. If left empty, "
 "users with this role selected will still show their own flags."
 msgstr ""
+"Flamuri që po e përfaqëson rolin, duhet të jet 16x11 piksela. Nëse lënë "
+"bosh,përdoruesi me kët rol vendosur do ti shfaqet flamuri i tij."
 
 msgid "A new verification mail is getting sent to you."
 msgstr "Një email i ri verifikimi po ju dërgohet."
@@ -80,6 +82,8 @@ msgid ""
 "A role has all the permissions of all levels below and equal to it. In "
 "example: Every role with a power level of >=50 can manage invites (50)."
 msgstr ""
+"Një rol ka të gjitha fuqitë e niveleve ndër dhe baraz me të. Përshembull: "
+"Secili rol me fuqinë e nivelit >=50 mund të menaxhoj ftesat(50)."
 
 msgid "ACCESS MODTOOLS"
 msgstr "Aksesoni veglat e moderatorit"
@@ -95,10 +99,10 @@ msgid "Admintools"
 msgstr "Veglat e administratorit"
 
 msgid "Age"
-msgstr ""
+msgstr "Mosha"
 
 msgid "All members of this faction are hidden"
-msgstr ""
+msgstr "Të gjithë pjesëtarët e këtij fraksioni janë të fshehur"
 
 msgid "All sound effects will be disabled."
 msgstr "Të gjitha efektet zanore do të çaktivizohen."
@@ -110,7 +114,7 @@ msgid "Always show movement control buttons"
 msgstr "Gjithmonë trego butonat e kontrollit të lëvizjes"
 
 msgid "An image representing your faction"
-msgstr ""
+msgstr "Një imazh që prezanton fraksionin e juaj"
 
 msgid "Anti Aliasing"
 msgstr "Anti Aliasimi"
@@ -122,22 +126,22 @@ msgid "Archive"
 msgstr "Arkivi"
 
 msgid "Assign Roles"
-msgstr ""
+msgstr "Cakto Role"
 
 msgid "Assign new Mod"
 msgstr "Cakto Mod të ri"
 
 msgid "Assign role per default to new members"
-msgstr ""
+msgstr "Cakto role sipas parazgjedhjes për pjesëtar të ri"
 
 msgid "Assign roles below their own"
-msgstr ""
+msgstr "Cakto role poshtë roleve të tyre"
 
 msgid "Assign this role to every new member automatically on join."
-msgstr ""
+msgstr "Cakto kët rol gjithë pjesëtarëve të rinj automatikisht në hyrje."
 
 msgid "Assigned role per default"
-msgstr ""
+msgstr "Roli i caktuar i parazgjedhur"
 
 msgid "Attach File"
 msgstr "Bashkangjit Skedar"
@@ -158,22 +162,22 @@ msgid "Badges"
 msgstr "Stemat"
 
 msgid "Ban"
-msgstr ""
+msgstr "Dëbo"
 
 msgid "Ban media"
-msgstr "Ndaloni media"
+msgstr "Media e Ndaluar"
 
 msgid "Ban members"
-msgstr ""
+msgstr "Dëbo pjesëtar"
 
 msgid "Banned"
-msgstr "Përjashtuar"
+msgstr "Dëbuar"
 
 msgid "Banned? Detected as Proxy?"
-msgstr "Përjashtuar? Zbuluar si Proxy?"
+msgstr "Dëbuar? Zbuluar si Proxy?"
 
 msgid "Bans"
-msgstr ""
+msgstr "Dëbimet"
 
 msgid "Block"
 msgstr "Blloko"
@@ -186,6 +190,9 @@ msgid ""
 "users to start messaging you. You can still start new DMs with other users "
 "and already ongoing DMs will still be open."
 msgstr ""
+"Blloko të gjitha Mesazhet Private.Duke e mundësuar kët e bën që të tjerët të "
+"mos ken mundësi të të shkruajn ty. Ti mund të nisësh DMs me përdorues të "
+"tjerë akoma dhe DMs që janë tashmë në vazhdim do të jenë akoma të hapura."
 
 msgid "Blocked"
 msgstr "Bllokuar"
@@ -250,7 +257,7 @@ msgid "Caught by"
 msgstr "Kapur nga"
 
 msgid "Change Flag"
-msgstr ""
+msgstr "Ndrysho Flamurin"
 
 msgid "Change Happened"
 msgstr "Ndodhi Ndryshim"
@@ -337,7 +344,7 @@ msgid "Click a color in palette to select it"
 msgstr "Kliko një ngjyrë në paletë për ta zgjedhur atë"
 
 msgid "Click here to cease representation."
-msgstr ""
+msgstr "Kliko këtu për të ndalur përfaqësimin."
 
 msgid "Click here to request a new verification mail."
 msgstr "Kliko këtu për të kërkuar një email të ri verifikimi."
@@ -367,19 +374,19 @@ msgid "Compact Palette"
 msgstr "Paleta Kompakte"
 
 msgid "Confirm"
-msgstr ""
+msgstr "Konfirmo"
 
 msgid "Confirm Ban"
-msgstr ""
+msgstr "Konfirmo Dëbimin"
 
 msgid "Confirm Delete"
-msgstr ""
+msgstr "Konfirmo Fshirjen"
 
 msgid "Confirm Kick"
-msgstr ""
+msgstr "Konfirmo Përzënien"
 
 msgid "Confirm Leave"
-msgstr ""
+msgstr "Konfirmo Daljen"
 
 msgid "Confirm New Password"
 msgstr "Konfirmo Fjalëkalimin e Ri"
@@ -388,7 +395,7 @@ msgid "Confirm Password"
 msgstr "Konfirmo Fjalëkalimin"
 
 msgid "Confirm your password."
-msgstr ""
+msgstr "Konfirmo fjalëkalimin e juaj."
 
 #, javascript-format
 msgid "Connection error ${ code } :("
@@ -465,25 +472,25 @@ msgid "Country"
 msgstr "Shteti"
 
 msgid "Create Faction"
-msgstr ""
+msgstr "Krijo një Fraksion"
 
 msgid "Create Invite"
-msgstr ""
+msgstr "Krijo një Ftes"
 
 msgid "Create New Faction"
-msgstr ""
+msgstr "Krijo Fraksion Të Ri"
 
 msgid "Create New Invite"
-msgstr ""
+msgstr "Krijo Ftes të Re"
 
 msgid "Create New Role"
-msgstr ""
+msgstr "Krijo një Rol të Ri"
 
 msgid "Create Role"
-msgstr ""
+msgstr "Krijo Rol"
 
 msgid "Create roles"
-msgstr ""
+msgstr "Krijo role"
 
 #, javascript-format
 msgid "Credit for the Palette of the 2bit canvas goes to ${ donendoLink }."
@@ -510,13 +517,13 @@ msgid "DM"
 msgstr "DM"
 
 msgid "Daily Pixel"
-msgstr ""
+msgstr "Piksela Ditor"
 
 msgid "Daily Pixels per Country"
 msgstr "Pikselët Ditorë për Shtet"
 
 msgid "Daily Pixels per Faction"
-msgstr ""
+msgstr "Piksela Ditor për Fraksion"
 
 msgid "Daily Pixels per Player"
 msgstr "Pikselët Ditorë për Lojtar"
@@ -537,25 +544,25 @@ msgid "Delete Account"
 msgstr "Fshij llogarinë"
 
 msgid "Delete Faction"
-msgstr ""
+msgstr "Fshij Fraksion"
 
 msgid "Delete the faction"
-msgstr ""
+msgstr "Fshij Fraksionin"
 
 msgid "Deny"
 msgstr "Refuzo"
 
 msgid "Description"
-msgstr ""
+msgstr "Përshkrimi"
 
 msgid "Description can't be empty"
-msgstr ""
+msgstr "Përshkrimi nuk mund të jetë bosh"
 
 msgid "Description must be shorter than 1000 characters"
-msgstr ""
+msgstr "Përshkrimi duhet të jetë më i shkurtër se 1000 karaktere"
 
 msgid "Description of your faction"
-msgstr ""
+msgstr "Përshkrimi i fraksionit të juaj"
 
 msgid ""
 "Didn't get an answer from pixelplanet. Try to refresh if this problem "
@@ -588,18 +595,20 @@ msgstr "Bëni gjëra me IP (një IP për rresht)"
 msgid ""
 "Don't let people find this faction in public search or look at its profile."
 msgstr ""
+"Mos lejo që përdoruesit të gjejnë fraksionin në kërkuesin publik ose të "
+"shikoj në profilin e tij."
 
 msgid "Don't remember"
 msgstr "Mos mbaj mend"
 
 msgid "Don't show faction in search"
-msgstr ""
+msgstr "Mos e shfaq fraksionin në kërkues"
 
 msgid "Don't show me in global stats"
 msgstr "Mos më shfaq në statistikat globale"
 
 msgid "Done"
-msgstr ""
+msgstr "Përfunduar"
 
 msgid "Download"
 msgstr "Shkarko"
@@ -625,13 +634,13 @@ msgid "Edit"
 msgstr "Redakto"
 
 msgid "Edit faction"
-msgstr ""
+msgstr "Redakto Fraksionin"
 
 msgid "Edit roles below their own"
-msgstr ""
+msgstr "Redakto rolet poshtë roleve të juaj"
 
 msgid "Edit their own role and elevate users to their own level"
-msgstr ""
+msgstr "Redakto rolin e juaj dhe rrit përdoruesit në nivelin e juaj"
 
 msgid "Email"
 msgstr "Email"
@@ -677,10 +686,10 @@ msgid "Enter UserName of new Mod"
 msgstr "Fut UserName të Moderatorit të ri"
 
 msgid "Enter a little text that describes your faction"
-msgstr ""
+msgstr "Fut një tekst të shkurtur që përshkruan fraksionin e juaj"
 
 msgid "Enter search term and press Search."
-msgstr ""
+msgstr "Fut termin e kërkimit dhe kliko Kërko."
 
 msgid "Enter your mail address and we will send you a new password:"
 msgstr ""
@@ -703,21 +712,23 @@ msgid "Export enabled templates"
 msgstr "Eksporto shabllonet aktive"
 
 msgid "Faction"
-msgstr ""
+msgstr "Fraksion"
 
 msgid "Factions"
-msgstr ""
+msgstr "Fraksionet"
 
 msgid "Factions Today"
-msgstr ""
+msgstr "Fraksionet Sot"
 
 msgid "Factions Total"
-msgstr ""
+msgstr "Fraksionet në Total"
 
 msgid ""
 "Factions allow you to coordinate better with other players. Search for "
 "existing factions, find friends or create your own faction."
 msgstr ""
+"Fraksionet mundësojn që ti koordinosh lojtarët e juaj më mir. Kërko për "
+"fraksione ekzistuese,gjej shoqëri ose krijo fraksionin tënd."
 
 msgid "Factor"
 msgstr "Faktori"
@@ -822,7 +833,7 @@ msgid "Hide Embed"
 msgstr "Fshih Embed"
 
 msgid "Hide from profile"
-msgstr ""
+msgstr "Fsheh nga profili"
 
 msgid ""
 "Higher zoomlevels take some time to update, the 3D globe gets updated at "
@@ -846,7 +857,7 @@ msgid "I forgot my Password."
 msgstr "Kam harruar Fjalëkalimin tim."
 
 msgid "ID"
-msgstr ""
+msgstr "ID"
 
 msgid "IID (optional)"
 msgstr "IID (opsionale)"
@@ -868,9 +879,9 @@ msgid ""
 "ban message."
 msgstr ""
 "Nëse jeni zbuluar si proxy, por nuk jeni duke përdorur një, ose mendoni se "
-"jeni përjashtuar gabimisht, ju lutemi shkoni tek ${ guildedLink } ynë ose na "
-"dërgoni një email në ${ mailLink } dhe, në rast të përjashtimit, përfshini "
-"BID që keni marrë në mesazhin e përjashtimit."
+"jeni dëbuar gabimisht, ju lutemi shkoni tek ${ guildedLink } ynë ose na "
+"dërgoni një email në ${ mailLink } dhe, në rast të dëbimit, përfshini BID që "
+"keni marrë në mesazhin e dëbimit."
 
 msgid ""
 "If you talk to moderators or administrators, you might get asked for one of "
@@ -904,16 +915,16 @@ msgid "Invalid color selected"
 msgstr "Ngjyrë e pavlefshme e zgjedhur"
 
 msgid "Invite"
-msgstr ""
+msgstr "Fto"
 
 msgid "Invited to Chat"
 msgstr "Të ftuar në Bisedë"
 
 msgid "Invites"
-msgstr ""
+msgstr "Ftesat"
 
 msgid "Is One-Time-Invite"
-msgstr ""
+msgstr "Është ftes njëherëshe"
 
 msgid ""
 "It requests the following permissions. Uncheck what you don't want to grant:"
@@ -924,16 +935,16 @@ msgstr ""
 msgid "Jannies can rollback and protect, but not watch or ban."
 msgstr ""
 "Jannies mund të kthejnë mbrapsht dhe të mbrojnë, por jo të vëzhgojnë apo të "
-"dënojnë."
+"dëbojn."
 
 msgid "Join"
-msgstr ""
+msgstr "Hyj"
 
 msgid "Join Faction"
-msgstr ""
+msgstr "Hy në Fraksion"
 
 msgid "Joined"
-msgstr ""
+msgstr "Hyri"
 
 msgid "Just for registered Users"
 msgstr "Vetëm për Përdoruesit e regjistruar"
@@ -948,31 +959,31 @@ msgid "Keep Ratio"
 msgstr "Mbaj Raportin"
 
 msgid "Kick"
-msgstr ""
+msgstr "Përze"
 
 msgid "Kick members"
-msgstr ""
+msgstr "Përze pjesëtarë"
 
 msgid "Know that an account exists"
 msgstr "Të dijë që një llogari ekziston"
 
 msgid "Leave"
-msgstr ""
+msgstr "Largohu"
 
 msgid "Leave Faction"
-msgstr ""
+msgstr "Largohu nga Fraksioni"
 
 msgid "Legal Requests"
 msgstr "Kërkesat Ligjore"
 
 msgid "Let everyone join this faction"
-msgstr ""
+msgstr "Lejo që të gjithë të hyjnë në kët fraksion"
 
 msgid "Let people join this faction without needing an invite."
-msgstr ""
+msgstr "Lejo njerëz të hyjnë kët fraksion pa pasur nevoj për ftes."
 
 msgid "Level"
-msgstr ""
+msgstr "Nivel"
 
 msgid "Light Grid"
 msgstr "Rrjeta e Çelur"
@@ -987,7 +998,7 @@ msgid "Loading..."
 msgstr "Duke ngarkuar…"
 
 msgid "Log in or Register"
-msgstr ""
+msgstr "Kyçu ose Regjistrohu"
 
 msgid "Log out"
 msgstr "Dil"
@@ -996,25 +1007,25 @@ msgid "Log out a Session:"
 msgstr "Dil nga një Seancë:"
 
 msgid "LogIn"
-msgstr "Identifikohu"
+msgstr "Kyçu"
 
 msgid "Login Methods"
-msgstr "Metodat e Hyrjes"
+msgstr "Metodat e Kyçjes"
 
 msgid "Login to access more features and stats."
-msgstr "Hyr për të pasur akses në më shumë veçori dhe statistika."
+msgstr "Kyçu për të pasur akses në më shumë veçori dhe statistika."
 
 msgid "Login to grant access to other application."
-msgstr "Hyr për t'i dhënë akses aplikacionit tjetër."
+msgstr "Kyçu për t'i dhënë akses aplikacionit tjetër."
 
 msgid "Login to join us."
-msgstr ""
+msgstr "Kyçu që të bashkangjitesh."
 
 msgid "Login to other application"
-msgstr "Hyr në aplikacion tjetër"
+msgstr "Kyçu në aplikacion tjetër"
 
 msgid "Login with Name or Mail:"
-msgstr "Identifikohu me Emër apo Postë:"
+msgstr "Kyçu me Emër apo Email:"
 
 msgid "Make Screenshot"
 msgstr "Bëni Screenshot"
@@ -1023,10 +1034,10 @@ msgid "Manage Moderators"
 msgstr "Menaxhoni Moderatorët"
 
 msgid "Manage Templates"
-msgstr ""
+msgstr "Menagjo Shabllonat"
 
 msgid "Manage invites"
-msgstr ""
+msgstr "Menagjo ftesat"
 
 msgid "Map Data"
 msgstr "Të Dhënat e Hartës"
@@ -1038,7 +1049,7 @@ msgid "Media Actions"
 msgstr "Veprimet Media"
 
 msgid "Members"
-msgstr ""
+msgstr "Pjesëtarët"
 
 msgid "Minimum Color Distance"
 msgstr "Distanca Minimale e Ngjyrave"
@@ -1060,13 +1071,13 @@ msgid "Muted Sound"
 msgstr "Tingull i Heshtur"
 
 msgid "My Factions"
-msgstr ""
+msgstr "Fraksionet e mia"
 
 msgid "Name"
 msgstr "Emri"
 
 msgid "Name can only contain the characters: a-z . _ and -"
-msgstr ""
+msgstr "Emri mund të ket vetëm karakteret: a-z . _ dhe -"
 
 msgid "Name can't be empty."
 msgstr "Emri nuk mund të jetë bosh."
@@ -1081,10 +1092,10 @@ msgid "Name must be shorter than 26 characters"
 msgstr "Emri duhet të jetë më i shkurtër se 26 karaktere"
 
 msgid "Name of this role"
-msgstr ""
+msgstr "Emri i ktij rolit"
 
 msgid "Name of your faction (this can not be changed later)"
-msgstr ""
+msgstr "Emri i fraksionit tuaj(nuk mund të ndryshohet më von)"
 
 msgid "Name or Email"
 msgstr "Emri ose Email"
@@ -1123,13 +1134,13 @@ msgid "No password given."
 msgstr "Nuk është dhënë asnjë fjalëkalim."
 
 msgid "No results."
-msgstr ""
+msgstr "Nuk ka rezultat."
 
 msgid "Nobody is banned from this faction"
-msgstr ""
+msgstr "Askush nuk ësht i dëbuar nga ky fraksion"
 
 msgid "Not Allowed"
-msgstr ""
+msgstr "Nuk lejohet"
 
 msgid "Not allowed"
 msgstr "Nuk lejohet"
@@ -1139,9 +1150,10 @@ msgstr "Shënim"
 
 msgid "Note: Your active Faction may overwrite your flag settings."
 msgstr ""
+"Shënim: Fraksioni i juaj aktiv mund të anashkaloj cilësimet e flamurit tuaj."
 
 msgid "OIDC LogIn"
-msgstr "Hyrje OIDC"
+msgstr "Kyçje OIDC"
 
 msgid "OK"
 msgstr "OK"
@@ -1156,7 +1168,7 @@ msgid "Old Password"
 msgstr "Fjalëkalimi i Vjetër"
 
 msgid "One-Time"
-msgstr ""
+msgstr "Njëherësh"
 
 msgid "Online Users"
 msgstr "Përdoruesit Online"
@@ -1171,7 +1183,7 @@ msgid "Opacity of Overlay in percent."
 msgstr "Tejdukshmëria e Mbivendosjes në përqindje."
 
 msgid "Open"
-msgstr ""
+msgstr "Hap"
 
 msgid "Open Chat"
 msgstr "Hap Bisedën"
@@ -1211,7 +1223,7 @@ msgid "Overlay Opacity"
 msgstr "Tejdukshmëria e Mbivendosjes"
 
 msgid "Overview"
-msgstr ""
+msgstr "Përmbledhje"
 
 msgid "Palette Download"
 msgstr "Shkarkimi i Paletës"
@@ -1246,7 +1258,7 @@ msgid "Permission"
 msgstr "Leje"
 
 msgid "Permissions of Powerlevels"
-msgstr ""
+msgstr "Lejet e niveleve të fuqisë"
 
 msgid "Phish!"
 msgstr "Peshk!"
@@ -1258,7 +1270,7 @@ msgid "Ping"
 msgstr "Ping"
 
 msgid "Pixel"
-msgstr ""
+msgstr "Piksel"
 
 msgid "Pixel Notify OFF"
 msgstr "Njoftimi Pixel OFF"
@@ -1298,7 +1310,7 @@ msgid ""
 "Please verify your mail address or add a new one, otherwise your account "
 "could get deleted in the future."
 msgstr ""
-"Ju lutem verifikoni adresën tuaj të postës ose shtoni një të re, në të "
+"Ju lutem verifikoni adresën tuaj të emailit ose shtoni një të re, në të "
 "kundërt llogaria juaj mund të fshihet në të ardhmen."
 
 msgid "Political Compass Canvas"
@@ -1308,10 +1320,10 @@ msgid "Potato Mode"
 msgstr "Modaliteti i Patates"
 
 msgid "Powerlevel"
-msgstr ""
+msgstr "Nivel i fuqisë"
 
 msgid "Powerlevel of this role. See table below for explenation."
-msgstr ""
+msgstr "Niveli i fuqisë i ktij roli. Shiko tableten poshtë për shpjegim."
 
 #, javascript-format
 msgid ""
@@ -1363,10 +1375,10 @@ msgid "Quick Actions"
 msgstr "Veprimet e Shpejta"
 
 msgid "Range Banned"
-msgstr "Kufiri i Dënuar"
+msgstr "Kufiri i Dëbimit"
 
 msgid "Rank"
-msgstr ""
+msgstr "Rang"
 
 msgid "Ranked"
 msgstr "Me renditje"
@@ -1418,14 +1430,14 @@ msgid "Remove Moderator"
 msgstr "Hiq Moderatorin"
 
 msgid "Remove Roles"
-msgstr ""
+msgstr "Heq Role"
 
 msgid "Remove a Login method:"
-msgstr "Hiq një metodë Hyrjeje:"
+msgstr "Hiq një metodë Kyçje:"
 
 #, javascript-format
 msgid "Represents ${ activeFactionTitle } as ${ activeFactionRoleName }"
-msgstr ""
+msgstr "Përfaqëson ${ activeFactionTitle } si ${ activeFactionRoleName }"
 
 msgid "Require Verification to Place"
 msgstr "Kërkon Verifikim për të Vendosur"
@@ -1458,13 +1470,13 @@ msgid "Revoke consent of third party applications:"
 msgstr "Hiq autorizimin e aplikacioneve të palëve të treta:"
 
 msgid "Role"
-msgstr ""
+msgstr "Roli"
 
 msgid "Role Flags"
-msgstr ""
+msgstr "Flamuri i Rolit"
 
 msgid "Roles"
-msgstr ""
+msgstr "Rolet"
 
 msgid "Roll different Captcha Fonts"
 msgstr "Rrotulloni Shkronja të ndryshme Captcha"
@@ -1488,19 +1500,21 @@ msgstr ""
 "zmadhuar"
 
 msgid "Search"
-msgstr ""
+msgstr "Kërko"
 
 msgid "Search Existing Faction"
-msgstr ""
+msgstr "Kërko Fraksione ekzistuese"
 
 msgid "Search Term"
-msgstr ""
+msgstr "Termi Kërkues"
 
 msgid "See hidden users in member list"
-msgstr ""
+msgstr "Shiko pjesëtar të fshehur në listen e pjesëtarëve"
 
 msgid "Select Avatar of this Faction. Supported Formats: jpg, gif, png, webp"
 msgstr ""
+"Zgjidh Avatarin e këtij Fraksioni. Formatet e Mbështetura janë: jpg, gif, "
+"png, webp"
 
 msgid "Select Date above"
 msgstr "Zgjidhni Datën më lart"
@@ -1514,8 +1528,11 @@ msgstr "Zgjidh Flamurin"
 msgid "Select Language"
 msgstr "Zgjidhni Gjuhën"
 
-msgid "Select a valid pwerlevel"
+msgid "Select a valid powerlevel"
 msgstr ""
+
+msgid "Select a valid pwerlevel"
+msgstr "Zgjidh një nivel të vlefshëm fuqie"
 
 msgid ""
 "Select the canvas you want to use.\n"
@@ -1567,8 +1584,8 @@ msgid ""
 "Setting a password allows you to login by username or email, rather than "
 "only relying on 3rd party login."
 msgstr ""
-"Vendosja e një fjalëkalimi ju lejon të identifikoheni me emër përdoruesi ose "
-"email, në vend që të mbështeteni vetëm në hyrjen e palës së 3-të."
+"Vendosja e një fjalëkalimi ju lejon të kyçeni me emër përdoruesi ose email, "
+"në vend që të mbështeteni vetëm në hyrjen e palës së 3-të."
 
 msgid "Settings"
 msgstr "Cilësimet"
@@ -1678,7 +1695,7 @@ msgstr ""
 "e përhershme, nuk mund ta ndryshoni më vonë."
 
 msgid "The password for your account."
-msgstr ""
+msgstr "Fjalëkalimi i llogarisë juaj."
 
 msgid "Themes"
 msgstr "Temat"
@@ -1701,7 +1718,7 @@ msgstr ""
 "për muaj të tërë derisa u mbyll më 30 nëntor."
 
 msgid "This faction has no invites"
-msgstr ""
+msgstr "Ky Fraksion nuk ka ftesa"
 
 msgid ""
 "This is the name that other people see, e.g. in Chat. You can change it at "
@@ -1713,7 +1730,7 @@ msgstr ""
 
 msgid "This login may only work if your account is verified."
 msgstr ""
-"Kjo hyrje mund të funksionojë vetëm nëse llogaria juaj është e verifikuar."
+"Kjo kyçje mund të funksionojë vetëm nëse llogaria juaj është e verifikuar."
 
 msgid "This permission is required"
 msgstr "Kjo leje është e detyrueshme"
@@ -1738,22 +1755,22 @@ msgstr ""
 "kanavacë."
 
 msgid "Title"
-msgstr ""
+msgstr "Titull"
 
 msgid "Title can't be empty."
-msgstr ""
+msgstr "Titulli nuk mundë të jetë bosh."
 
 msgid "Title contains invalid character like @, /, \\ or #"
-msgstr ""
+msgstr "Titulli ka karaktere invalide përshembull @,/,\\ ose #"
 
 msgid "Title must be at least 2 characters long"
-msgstr ""
+msgstr "Titulli duhet të jetë të paktën 2 karaktere i gjat"
 
 msgid "Title must be shorter than 26 characters"
-msgstr ""
+msgstr "Titulli nuk mundë të jetë më i shkurtër se 26 karaktere"
 
 msgid "Title of your faction"
-msgstr ""
+msgstr "Titulli i fraksionit juaj"
 
 msgid "To use this page, enter your Password:"
 msgstr "Për të përdorur këtë faqe, futni Fjalëkalimin tuaj:"
@@ -1786,7 +1803,7 @@ msgid "Total Online Users"
 msgstr "Përdoruesit Online Gjithsej"
 
 msgid "Total Pixels per Faction"
-msgstr ""
+msgstr "Pikselet totale të Fraksionit juaj"
 
 msgid "Total Pixels per Player"
 msgstr "Pikselët për Lojtar Gjithsej"
@@ -1817,10 +1834,10 @@ msgid "Unban media"
 msgstr "Rilejo media"
 
 msgid "Unban members"
-msgstr ""
+msgstr "Heq Dëbimin Pjesëtarëve"
 
 msgid "Unblock"
-msgstr ""
+msgstr "Heq Bllokun"
 
 msgid "Unblock Users"
 msgstr "Zhbllokoni Përdoruesit"
@@ -1878,7 +1895,7 @@ msgid "Username must be shorter than 26 characters"
 msgstr "Emri i përdoruesit duhet të jetë më i shkurtër se 26 karaktere"
 
 msgid "Users"
-msgstr ""
+msgstr "Përdoruesit"
 
 #, javascript-format
 msgid "We are Libre Software under the ${ agplLink }, "
@@ -1907,7 +1924,7 @@ msgid "What the pencil should draw on the current canvas."
 msgstr "Çfarë duhet të vizatojë lapsi në kanavacën aktuale."
 
 msgid "Whether or not this invite can only be used once."
-msgstr ""
+msgstr "Nëse kjo ftesë mund të përdoret vetëm një herë apo jo."
 
 msgid ""
 "While we tend to not delete canvases, some canvases are started for fun or "
@@ -1954,12 +1971,12 @@ msgid ""
 "You are banned. You think it is unjustified? Check out the ${ helpButton } "
 "on how to appeal. And don't forget to include the BID you can get below."
 msgstr ""
-"Jeni të përjashtuar. Mendoni se është e pajustifikuar? Shikoni seksionin $"
+"Jeni të dëbuar. Mendoni se është e pajustifikuar? Shikoni seksionin $"
 "{ helpButton } për të parë se si të apeloni. Dhe mos harroni të përfshini "
 "BID që mund të merrni më poshtë."
 
 msgid "You are currently not a member of any faction."
-msgstr ""
+msgstr "Ti për momentin nuk je pjesëtar i asnjë fraksionit."
 
 msgid "You are currently not allowed to access this game."
 msgstr "Ju nuk mund të aksesoni këtë lojë për momentin."
@@ -1968,15 +1985,18 @@ msgid ""
 "You are currently not representing any faction. To represent one, activate a "
 "role in one of your factions below."
 msgstr ""
+"Aktualisht nuk përfaqëson asnjë fraksion. Për të përfaqësuar një të tillë, "
+"aktivizo një rol në njërën nga fraksionet e tua më poshtë."
 
 #, javascript-format
 msgid ""
 "You are currently representing ${ activeFactionTitle } as ${ activeRoleName }"
 msgstr ""
+"Ti për momentin përfaqëson ${ activeFactionTitle } si ${ activeRoleName }"
 
 #, javascript-format
 msgid "You are logged in as ${ name } [${ username }]."
-msgstr ""
+msgstr "Ti je kyçur si ${ name }${ username }."
 
 msgid "You are not allowed to play this game right now :("
 msgstr "Ju nuk mund të luani këtë lojë tani :("
@@ -2021,18 +2041,20 @@ msgid ""
 "You have been invited to join us on pixelplanet. We currently have $"
 "{ memberCount } members."
 msgstr ""
+"Ti je ftuar të hysh të ne në pixelplanet. Ne aktualisht kemi $"
+"{ memberCount } pjesëtar."
 
 msgid "You have no users blocked"
 msgstr "Ju nuk keni përdorues të bllokuar"
 
 msgid "You have to be logged in to place on this canvas"
-msgstr "Ju duhet të jeni të regjistruar për të vendosur në këtë kanavacë"
+msgstr "Ju duhet të jeni të kyçur për të vendosur në këtë kanavacë"
 
 msgid "You made too many requests"
 msgstr "Ju keni bërë shumë kërkesa"
 
 msgid "You must be logged in to chat"
-msgstr "Ju duhet të jeni të regjistruar për të biseduar"
+msgstr "Ju duhet të jeni të kyçeni për të biseduar"
 
 msgid "You must enter a UserId"
 msgstr "Ju duhet të futni një UserId"
@@ -2059,7 +2081,7 @@ msgid "You must enter at least one IID, User Id or BID"
 msgstr "Ju duhet të futni të paktën një IID, User Id apo BID"
 
 msgid "You must select an avatar for your faction"
-msgstr ""
+msgstr "Ti duhesh të zgjedhës një avatar për fraksionin e juaj"
 
 msgid "You took too long, try again."
 msgstr "U vonuat shumë, provoni përsëri."
@@ -2075,16 +2097,16 @@ msgid "Your Browser looks shady"
 msgstr "Shfletuesi juaj duket i dyshimtë"
 
 msgid "Your Factions"
-msgstr ""
+msgstr "Fraksionet e Tua"
 
 msgid "Your Internet Provider is banned from this game"
-msgstr "Ofruesi juaj i Internetit është i përjashtuar nga kjo lojë"
+msgstr "Ofruesi juaj i Internetit është i dëbuar nga kjo lojë"
 
 msgid "Your Roles"
-msgstr ""
+msgstr "Rolet e Tua"
 
 msgid "Your ban expires at "
-msgstr "Përjashtimi juaj skadon në "
+msgstr "Dëbimi juaj skadon në "
 
 msgid ""
 "Your did not set your username yet. A username is required to login to other "
@@ -2107,33 +2129,36 @@ msgstr ""
 "Zmadho në vend që të vendosësh një pixel kur prekni kanavacën dhe zmadhimi "
 "juaj është i vogël."
 
+msgid "a hidden faction"
+msgstr "Një fraksion i fshehur"
+
 msgid "affects"
-msgstr ""
+msgstr "ndikon"
 
 #, javascript-format
 msgid "and ${ canvas.req } Pixels set"
 msgstr "dhe ${ canvas.req } Piksele të vendosura"
 
 msgid "by"
-msgstr ""
+msgstr "nga"
 
 msgid "check compliance here"
 msgstr "kontrolloni pajtueshmërinë këtu"
 
 msgid "created at"
-msgstr ""
+msgstr "krijuar në"
 
 msgid "days"
-msgstr ""
+msgstr "ditë"
 
 msgid "download here"
 msgstr "shkarko këtu"
 
 msgid "lift"
-msgstr ""
+msgstr "ngrit"
 
 msgid "or login with:"
-msgstr "ose identifikohuni me:"
+msgstr "ose kyçunj me:"
 
 msgid "or register here:"
 msgstr "ose regjistrohuni këtu:"
@@ -2142,7 +2167,7 @@ msgid "recommended"
 msgstr "rekomandohet"
 
 msgid "times used"
-msgstr ""
+msgstr "herë të përdorura"
 
 #, javascript-format
 msgid "try again after ${ ti }min"

@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: admin@pixelplanet.fun\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2025-10-26 11:17+0000\n"
-"Last-Translator: weblate <weblate@noreply.pixelplanet.fun>\n"
+"PO-Revision-Date: 2026-04-18 17:01+0000\n"
+"Last-Translator: FenixYM <fenixym@noreply.pixelplanet.fun>\n"
 "Language-Team: Spanish <https://translate.gs-os.com/projects/ppfun/server/es/"
 ">\n"
 "Language: es\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.14\n"
+"X-Generator: Weblate 5.15.2\n"
 
 msgid "1bit"
 msgstr "1bit"
@@ -34,10 +34,10 @@ msgstr ""
 "se actualiza a las 00:00 UTC."
 
 msgid "A file was too large"
-msgstr ""
+msgstr "El archivo era muy grande"
 
 msgid "Access modtools"
-msgstr ""
+msgstr "Acceder a herramientas de moderador"
 
 msgid "Add Application"
 msgstr "Añadir Aplicación"
@@ -61,25 +61,25 @@ msgid "Application successfully added"
 msgstr "Aplicación agregada correctamente"
 
 msgid "Avatar can only be an image"
-msgstr ""
+msgstr "El avatar solo puede ser una imagen"
 
 msgid "Avatar not given or not an image"
-msgstr ""
+msgstr "Avatar no aplicado o no es una imagen"
 
 msgid "Black and White canvas"
 msgstr "Lienzo en Blanco y Negro"
 
 msgid "Can not change a role above your own"
-msgstr ""
+msgstr "No puedes cambiar un rol por encima del tuyo"
 
 msgid "Can not change a role that is equal to your own"
-msgstr ""
+msgstr "No puedes cambiar un rol que es igual al tuyo"
 
 msgid "Can not change the default setting of this role"
-msgstr ""
+msgstr "No puedes cambiar la configuración predeterminada de este rol"
 
 msgid "Can not change the powerlevel of a role equal or above you"
-msgstr ""
+msgstr "No puedes cambiar el nivel de poder de un rol igual o mayor al tuyo"
 
 msgid "Can not change the powerlevel of the Sovereign"
 msgstr ""
@@ -88,25 +88,25 @@ msgid "Can not chat while being banned"
 msgstr "No puedes chatear mientras estas baneado"
 
 msgid "Can not create a role on the same level as yours"
-msgstr ""
+msgstr "No puedes crear un rol con el mismo nivel que el tuyo"
 
 msgid "Can not create a role with a powerlevel beyond yours"
-msgstr ""
+msgstr "No puedes crear un rol con un nivel superior al tuyo"
 
 msgid "Can not delete a role on the same level as yours"
-msgstr ""
+msgstr "No puedes eliminar un rol con el mismo nivel que el tuyo"
 
 msgid "Can not delete this role"
-msgstr ""
+msgstr "No puedes eliminar este rol"
 
 msgid "Can not elevate the powerlevel of a role beyond yours"
-msgstr ""
+msgstr "No puedes elevar un nivel de poder de un rol superior al tuyo"
 
 msgid "Can not elevate the powerlevel of a role to yours"
-msgstr ""
+msgstr "No puedes elevar un nivel de poder de un rol al tuyo"
 
 msgid "Can not have more than 20 faction roles"
-msgstr ""
+msgstr "No puedes tener mas de 20 roles de facción"
 
 msgid "Can not have more than 20 invites per faction"
 msgstr ""
@@ -152,6 +152,9 @@ msgstr "Consentir"
 msgid "Coronavirus"
 msgstr "Coronavirus"
 
+msgid "Could not change the flag of this role"
+msgstr ""
+
 msgid "Could not change this setting. Maybe try again later."
 msgstr ""
 
@@ -171,9 +174,6 @@ msgid "Could not set your avatar"
 msgstr ""
 
 msgid "Could not set your faction role"
-msgstr ""
-
-msgid "Could not this roles flag"
 msgstr ""
 
 msgid "Could not upload all files"

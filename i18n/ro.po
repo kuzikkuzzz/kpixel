@@ -1507,6 +1507,9 @@ msgstr "Selectați Steag"
 msgid "Select Language"
 msgstr "Selectează limba"
 
+msgid "Select a valid powerlevel"
+msgstr ""
+
 msgid "Select a valid pwerlevel"
 msgstr ""
 
@@ -2089,6 +2092,9 @@ msgid ""
 msgstr ""
 "Zoom in în loc să pui in pixel atunci când apeși canvasul și zoomul tău este "
 "mic."
+
+msgid "a hidden faction"
+msgstr ""
 
 msgid "affects"
 msgstr ""

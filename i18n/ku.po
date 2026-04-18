@@ -1496,6 +1496,9 @@ msgstr ""
 msgid "Select Language"
 msgstr "Ziman hilbijêrin"
 
+msgid "Select a valid powerlevel"
+msgstr ""
+
 msgid "Select a valid pwerlevel"
 msgstr ""
 
@@ -2064,6 +2067,9 @@ msgid ""
 msgstr ""
 "Dema ku hûn li ser kanavê bixin li şûna ku hûn pixelek bixin zoom bikin û "
 "zooma we piçûk e."
+
+msgid "a hidden faction"
+msgstr ""
 
 msgid "affects"
 msgstr ""

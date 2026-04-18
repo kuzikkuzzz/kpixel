@@ -1501,6 +1501,9 @@ msgstr ""
 msgid "Select Language"
 msgstr "Vælg Sprog"
 
+msgid "Select a valid powerlevel"
+msgstr ""
+
 msgid "Select a valid pwerlevel"
 msgstr ""
 
@@ -2084,6 +2087,9 @@ msgid ""
 msgstr ""
 "Zoom ind i stedet for at placere en pixel når du trykker på kanvasset og dit "
 "zoom er lille."
+
+msgid "a hidden faction"
+msgstr ""
 
 msgid "affects"
 msgstr ""

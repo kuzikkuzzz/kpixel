@@ -1517,6 +1517,9 @@ msgstr ""
 msgid "Select Language"
 msgstr "Fili ʻa e Lea Fakafonuá"
 
+msgid "Select a valid powerlevel"
+msgstr ""
+
 msgid "Select a valid pwerlevel"
 msgstr ""
 
@@ -2095,6 +2098,9 @@ msgid ""
 msgstr ""
 "Fakaʻata ke ʻoua naʻa ke fokotuʻu ha pixel ʻi he taimi ʻoku ke lomiʻi ai ʻa "
 "e fakatataa pea ʻoku siʻisiʻi hoʻo fakaʻata."
+
+msgid "a hidden faction"
+msgstr ""
 
 msgid "affects"
 msgstr ""

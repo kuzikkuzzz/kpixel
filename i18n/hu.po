@@ -1499,6 +1499,9 @@ msgstr ""
 msgid "Select Language"
 msgstr "Nyelv kiválasztása"
 
+msgid "Select a valid powerlevel"
+msgstr ""
+
 msgid "Select a valid pwerlevel"
 msgstr ""
 
@@ -2069,6 +2072,9 @@ msgid ""
 msgstr ""
 "Ha a zoomolás túl kicsi ahhoz, hogy pixelt helyezz el, automatikusan "
 "kinagyítja."
+
+msgid "a hidden faction"
+msgstr ""
 
 msgid "affects"
 msgstr ""

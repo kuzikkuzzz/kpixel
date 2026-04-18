@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: admin@pixelplanet.fun\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2026-03-09 08:30+0000\n"
-"Last-Translator: Extreme Motorsex <em@noreply.pixelplanet.fun>\n"
+"PO-Revision-Date: 2026-04-18 20:25+0000\n"
+"Last-Translator: Coldi <coldi@noreply.pixelplanet.fun>\n"
 "Language-Team: Albanian <https://translate.gs-os.com/projects/ppfun/server/"
 "sq/>\n"
 "Language: sq\n"
@@ -64,59 +64,61 @@ msgid "Avatar can only be an image"
 msgstr "Avatari mund të jetë vetëm një imazh"
 
 msgid "Avatar not given or not an image"
-msgstr ""
+msgstr "Avatari nuk është japur ose nuk është imazh"
 
 msgid "Black and White canvas"
 msgstr "Kanavacë Bardhë e Zi"
 
 msgid "Can not change a role above your own"
-msgstr ""
+msgstr "Nuk mund të ndryshosh një rol mbi tëndin"
 
 msgid "Can not change a role that is equal to your own"
-msgstr ""
+msgstr "Nuk mund të ndryshosh një rol që eshtë i barabartë me tëndin"
 
 msgid "Can not change the default setting of this role"
-msgstr ""
+msgstr "Nuk mund të ndryshosh cilësimet e parazgjedhura të ktij roli"
 
 msgid "Can not change the powerlevel of a role equal or above you"
 msgstr ""
+"Nuk mund të ndryshosh nivelin e fuqisë së një roli që eshtë i barabartë me "
+"tëndin ose mbi tëndin"
 
 msgid "Can not change the powerlevel of the Sovereign"
-msgstr ""
+msgstr "Nuk mund të ndryshosh nivelin e fuqisë së Sovranit"
 
 msgid "Can not chat while being banned"
-msgstr "Nuk mund të bisedoni ndërkohë që jeni të përjashtuar"
+msgstr "Nuk mund të bisedoni ndërkohë që jeni të dëbuar"
 
 msgid "Can not create a role on the same level as yours"
-msgstr ""
+msgstr "Nuk mund të krijosh një rol që eshtë i barabartë me tëndin"
 
 msgid "Can not create a role with a powerlevel beyond yours"
-msgstr ""
+msgstr "Nuk mund të krijosh një rol me nivel fuqie mbi tëndin"
 
 msgid "Can not delete a role on the same level as yours"
-msgstr ""
+msgstr "Nuk mund të fshish një rol në nivelin tënd"
 
 msgid "Can not delete this role"
-msgstr ""
+msgstr "Nuk mund të fshish kët rol"
 
 msgid "Can not elevate the powerlevel of a role beyond yours"
-msgstr ""
+msgstr "Nuk mund të ngritësh nivelin e fuqisë së një roli mbi tëndin"
 
 msgid "Can not elevate the powerlevel of a role to yours"
-msgstr ""
+msgstr "Nuk mund të ngritësh nivelin e fuqisë së një rolin me ty"
 
 msgid "Can not have more than 20 faction roles"
-msgstr ""
+msgstr "Nuk mund të kesh më shumë se 20 role fraksionit"
 
 msgid "Can not have more than 20 invites per faction"
-msgstr ""
+msgstr "Nuk mund të kesh më shumë se 20 ftesa të fraksionit"
 
 msgid "Can not modify user equal to you or above you"
-msgstr ""
+msgstr "Nuk mund të redaktosh një përdorues baraz ose mbi ty"
 
 #. when leaving a faction and you are the last owner
 msgid "Can not orphan a faction"
-msgstr ""
+msgstr "Nuk mund të dalësh nga një fraksion pa pjesëtar"
 
 #, javascript-format
 msgid ""
@@ -127,7 +129,7 @@ msgstr ""
 "{ amountOfFiles }"
 
 msgid "Can only have one Sovereign role"
-msgstr ""
+msgstr "Mund të ket vetëm një rol Sovran"
 
 msgid "Click here"
 msgstr "Kliko këtu"
@@ -154,8 +156,11 @@ msgstr "Autorizimi"
 msgid "Coronavirus"
 msgstr "Koronavirusi"
 
+msgid "Could not change the flag of this role"
+msgstr "Nuk bën të ndryshosh flamurin e ktij roli"
+
 msgid "Could not change this setting. Maybe try again later."
-msgstr ""
+msgstr "Nuk bën të ndryshosh kët cilësim. Ndoshta provo më von."
 
 msgid "Could not close this Session."
 msgstr "Nuk munda të mbyll këtë Seancë."
@@ -167,16 +172,13 @@ msgid "Could not leave this channel"
 msgstr "Nuk mund të largohej nga ky kanal"
 
 msgid "Could not set this factions avatar"
-msgstr ""
+msgstr "Nuk bën të vendosësh avatarin ktij fraksioni"
 
 msgid "Could not set your avatar"
-msgstr ""
+msgstr "Nuk bën të vendos avatarin tënd"
 
 msgid "Could not set your faction role"
-msgstr ""
-
-msgid "Could not this roles flag"
-msgstr ""
+msgstr "Nuk bën të vendosësh rolin e fraksionit tënd"
 
 msgid "Could not upload all files"
 msgstr "Nuk mund të ngarkohen të gjithë skedarët"
@@ -191,10 +193,10 @@ msgid "Delete Application"
 msgstr "Fshi aplikacionin"
 
 msgid "Description can't be empty"
-msgstr ""
+msgstr "Përshkrimi nuk mund të jetë bosh"
 
 msgid "Description must be shorter than 1000 characters"
-msgstr ""
+msgstr "Përshkrimi duhet të jetë më i shkurtër se 1000 karaktere"
 
 msgid "Display name for your OIDC client"
 msgstr "Emri që do të shfaqet për klientin tuaj OIDC"
@@ -372,7 +374,7 @@ msgid "Name already in use."
 msgstr "Emri është në përdorim."
 
 msgid "Name can only contain the characters: a-z . _ and -"
-msgstr ""
+msgstr "Emri mund të ket vetëm karakteret: a-z . _ dhe -"
 
 msgid "Name can't be empty."
 msgstr "Emri nuk mund të jetë bosh."
@@ -396,7 +398,7 @@ msgid "New Password"
 msgstr "Fjalëkalimi i Ri"
 
 msgid "No Avatar given"
-msgstr ""
+msgstr "Avatari nuk është japur"
 
 msgid "No Captcha given"
 msgstr "Nuk është dhënë asnjë Captcha"
@@ -520,10 +522,10 @@ msgid "Reset your password here"
 msgstr "Rivendosni fjalëkalimin tuaj këtu"
 
 msgid "Role flag can only be an image"
-msgstr ""
+msgstr "Flamuri i rolit mund të jetë vetëm imazh"
 
 msgid "Role flag needs to be 16x11"
-msgstr ""
+msgstr "Flamuri i rolit duhet të jetë 16x11"
 
 msgid "Server Error"
 msgstr "Gabim i serverit"
@@ -622,13 +624,13 @@ msgid "This email provider is not allowed"
 msgstr "Ky ofrues i emailit nuk lejohet"
 
 msgid "This faction does not exist"
-msgstr ""
+msgstr "Ky fraksion nuk ekziston"
 
 msgid "This faction is full"
-msgstr ""
+msgstr "Ky fraksion është plot"
 
 msgid "This faction is private"
-msgstr ""
+msgstr "Ky fraksion është privat"
 
 #, javascript-format
 msgid "This media is banned ${ reason }. Ban ID: ${ mbid }"
@@ -638,19 +640,19 @@ msgid "This password-reset link isn't valid anymore :("
 msgstr "Kjo lidhje e rivendosjes së fjalëkalimit nuk është më e vlefshme :("
 
 msgid "This user is private"
-msgstr ""
+msgstr "Ky përdorues është privat"
 
 msgid "Title can't be empty."
-msgstr ""
+msgstr "Titulli nuk mundë të jetë bosh."
 
 msgid "Title contains invalid character like @, /, \\ or #"
-msgstr ""
+msgstr "Titulli ka karaktere invalide përshembull @,/,\\ ose #"
 
 msgid "Title must be at least 2 characters long"
-msgstr ""
+msgstr "Titulli duhet të jetë të paktën 2 karaktere i gjat"
 
 msgid "Title must be shorter than 26 characters"
-msgstr ""
+msgstr "Titulli nuk mundë të jetë më i shkurtër se 26 karaktere"
 
 #. "redirect_uris" is a technical term and should not be translated
 msgid "Too many or too long redirect_uris"
@@ -723,13 +725,13 @@ msgid "You already have that name."
 msgstr "Tashmë e keni këtë emër."
 
 msgid "You are already part of this faction"
-msgstr ""
+msgstr "Ti tashmë je pjesëtar i ktij fraksioni"
 
 msgid "You are already verified."
 msgstr "Ju tashmë jeni verifikuar."
 
 msgid "You are banned from this faction"
-msgstr ""
+msgstr "Ti je dëbuar nga ky fraksion"
 
 #, javascript-format
 msgid "You are muted for another ${ timeMin } minutes"
@@ -743,7 +745,7 @@ msgid "You are not allowed to access this page"
 msgstr "Ju nuk lejohet të hyni në këtë faqe"
 
 msgid "You are not banned"
-msgstr "Ju nuk jeni të dënuar"
+msgstr "Ju nuk jeni të dëbuar"
 
 msgid "You are not logged in"
 msgstr "Ju nuk jeni të regjistruar"
@@ -784,10 +786,12 @@ msgstr ""
 msgid ""
 "You can only be owner of ${ MAX_OWNED_FACTIONS_PER_USER } factions in total"
 msgstr ""
+"Ti mund të jeshë vetëm pronar i ${ MAX_OWNED_FACTIONS_PER_USER } fraksioneve "
+"në total"
 
 #, javascript-format
 msgid "You can only have ${ MAX_FACTIONS_PER_USER } factions in total"
-msgstr ""
+msgstr "Ti mundë të keshë vetem ${ MAX_FACTIONS_PER_USER } fraksione në total"
 
 msgid ""
 "You can register your own application here to get the client_id and "
@@ -824,7 +828,7 @@ msgid "You must be logged in to access this page"
 msgstr "Ju duhet të jeni të kyçur për të aksesuar këtë faqe"
 
 msgid "You need an invite to join this faction"
-msgstr ""
+msgstr "Ti duhet të keshë ftesë për të hyrë në kët fraksion"
 
 #. "scope" is a technical term and should not be translated
 msgid "You need to define a valid scope"
@@ -862,6 +866,8 @@ msgstr "Shfletuesi juaj duket i dyshimtë"
 msgid ""
 "Your account must be at least two weeks old before you can create a faction"
 msgstr ""
+"Llogaria e juaj duhet të jetë të paktën 2 javë e vjetër para se të krijosh "
+"një fraksion"
 
 msgid "Your account needs to be verified to access this page"
 msgstr "Llogaria juaj duhet të jetë e verifikuar për të aksesuar këtë faqe"
@@ -896,7 +902,7 @@ msgstr "për degjenerim"
 
 #. This media is banned xyz
 msgid "for containing CSAM"
-msgstr ""
+msgstr "për përmbajtjen e CSAM-it"
 
 #. This media is banned xyz
 msgid "for containing graphic violence"
@@ -904,7 +910,7 @@ msgstr "për shkak se përmban dhunë grafike"
 
 #. This media is banned xyz
 msgid "for containing personal information"
-msgstr ""
+msgstr "për përmbajtjen e informacionit personal"
 
 #. This media is banned xyz
 msgid "for glorifying terrorism"

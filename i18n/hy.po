@@ -1497,6 +1497,9 @@ msgstr ""
 msgid "Select Language"
 msgstr "Ընտրեք լեզուն"
 
+msgid "Select a valid powerlevel"
+msgstr ""
+
 msgid "Select a valid pwerlevel"
 msgstr ""
 
@@ -2069,6 +2072,9 @@ msgstr ""
 "Կտավին սեղմելիս ավտոմատ խոշորացնել այն, պիքսել դրվելու փոխարեն այն դեպքում, "
 "երբ կտավը նայում եք հեռվից, որպեսզի լինի բավականաչափ հեռավորություն պիքսել "
 "դնելու համար:"
+
+msgid "a hidden faction"
+msgstr ""
 
 msgid "affects"
 msgstr ""

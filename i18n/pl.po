@@ -1496,6 +1496,9 @@ msgstr ""
 msgid "Select Language"
 msgstr "Wybierz język"
 
+msgid "Select a valid powerlevel"
+msgstr ""
+
 msgid "Select a valid pwerlevel"
 msgstr ""
 
@@ -2063,6 +2066,9 @@ msgid ""
 "Zoom in instead of placing a pixel when you tap the canvas and your zoom is "
 "small."
 msgstr "Kiedy masz oddalone płótno kliknij raz aby przybliżyć."
+
+msgid "a hidden faction"
+msgstr ""
 
 msgid "affects"
 msgstr ""

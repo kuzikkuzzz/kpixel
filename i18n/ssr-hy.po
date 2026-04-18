@@ -151,6 +151,9 @@ msgstr ""
 msgid "Coronavirus"
 msgstr "Կորոնավիրուս"
 
+msgid "Could not change the flag of this role"
+msgstr ""
+
 msgid "Could not change this setting. Maybe try again later."
 msgstr ""
 
@@ -170,9 +173,6 @@ msgid "Could not set your avatar"
 msgstr ""
 
 msgid "Could not set your faction role"
-msgstr ""
-
-msgid "Could not this roles flag"
 msgstr ""
 
 msgid "Could not upload all files"

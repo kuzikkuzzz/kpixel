@@ -1492,6 +1492,9 @@ msgstr ""
 msgid "Select Language"
 msgstr "Izaberite jezik"
 
+msgid "Select a valid powerlevel"
+msgstr ""
+
 msgid "Select a valid pwerlevel"
 msgstr ""
 
@@ -2058,6 +2061,9 @@ msgid ""
 "small."
 msgstr ""
 "Ubliži umesto postavljanja piksela kada pritisneš platno i tvoj zum je mali"
+
+msgid "a hidden faction"
+msgstr ""
 
 msgid "affects"
 msgstr ""

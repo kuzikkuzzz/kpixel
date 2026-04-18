@@ -1492,6 +1492,9 @@ msgstr ""
 msgid "Select Language"
 msgstr "Επιλογή γλώσσας"
 
+msgid "Select a valid powerlevel"
+msgstr ""
+
 msgid "Select a valid pwerlevel"
 msgstr ""
 
@@ -2057,6 +2060,9 @@ msgid ""
 "Zoom in instead of placing a pixel when you tap the canvas and your zoom is "
 "small."
 msgstr "Αντί να βάλλεις πίξελ, πρώτα κάμνει zoom αν είσαι πολλά μακριά."
+
+msgid "a hidden faction"
+msgstr ""
 
 msgid "affects"
 msgstr ""

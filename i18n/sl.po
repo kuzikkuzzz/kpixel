@@ -1517,6 +1517,9 @@ msgstr ""
 msgid "Select Language"
 msgstr "Izberite Jezik"
 
+msgid "Select a valid powerlevel"
+msgstr ""
+
 msgid "Select a valid pwerlevel"
 msgstr ""
 
@@ -2082,6 +2085,9 @@ msgid ""
 msgstr ""
 "Približaj se namesto da postaviš pixel, ko tapnete kanvas in je vaša "
 "oddaljenost velika"
+
+msgid "a hidden faction"
+msgstr ""
 
 msgid "affects"
 msgstr ""

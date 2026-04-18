@@ -1493,6 +1493,9 @@ msgstr ""
 msgid "Select Language"
 msgstr "Dili seçin"
 
+msgid "Select a valid powerlevel"
+msgstr ""
+
 msgid "Select a valid pwerlevel"
 msgstr ""
 
@@ -2062,6 +2065,9 @@ msgid ""
 "small."
 msgstr ""
 "Bir yerə kliklədiyiniz zaman kiçildilirsə pixel atmaq əvəzinə böyüdəcək."
+
+msgid "a hidden faction"
+msgstr ""
 
 msgid "affects"
 msgstr ""

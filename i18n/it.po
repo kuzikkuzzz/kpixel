@@ -1502,6 +1502,9 @@ msgstr ""
 msgid "Select Language"
 msgstr "Seleziona la lingua "
 
+msgid "Select a valid powerlevel"
+msgstr ""
+
 msgid "Select a valid pwerlevel"
 msgstr ""
 
@@ -2068,6 +2071,9 @@ msgid ""
 msgstr ""
 "Ingrandisci invece di piazzare un pixel quando clicchi sul canvas e lo zoom "
 "è troppo piccolo"
+
+msgid "a hidden faction"
+msgstr ""
 
 msgid "affects"
 msgstr ""
