@@ -474,7 +474,7 @@ export async function createFaction(
     const peasantFrid = bufferToUUID(generateUUID());
 
     const model = await sequelize.query(
-      'CALL CREATE_FACTION(?, ?, ?, ?, ?, ?, ?, ?, ?)', {
+      'CALL CREATE_FACTION(?, ?, ?, ?, ?, ?, ?, ?)', {
         replacements: [
           uid, name, title, description, flags, avatarId,
           sovereignFrid, peasantFrid,

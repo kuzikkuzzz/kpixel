@@ -21,7 +21,7 @@ const Modtools = React.lazy(() => import(/* webpackChunkName: "modtools" */ './M
 // eslint-disable-next-line max-len
 const Statistics = React.lazy(() => import(/* webpackChunkName: "stats" */ './Statistics.jsx'));
 // eslint-disable-next-line max-len
-const Converter = React.lazy(() => import(/* webpackChunkName: "stats" */ './Converter.jsx'));
+const Converter = React.lazy(() => import(/* webpackChunkName: "converter" */ './Converter.jsx'));
 // eslint-disable-next-line max-len
 const Invite = React.lazy(() => import(/* webpackChunkName: "invite" */ './Invite.jsx'));
 // eslint-disable-next-line max-len

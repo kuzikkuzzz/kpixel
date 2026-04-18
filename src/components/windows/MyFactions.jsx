@@ -364,42 +364,46 @@ const MyFactions = () => {
                   {item}
                   <div className="factionlist-edit">
                     <span className="factionlist-key">{t`Description`}: </span>{faction.description}<br />
-                    <span className="factionlist-key">{t`Your Roles`}: </span>
-                    {faction.roles.filter((role) => role.isMember).map((role) => {
-                      const [flagUrl] = getUrlsFromMediaIdAndName(role.customFlagId);
-                      let roleClassName = 'factionlist-role';
-                      if (role.frid === activeFactionRole) {
-                        roleClassName += ' active';
-                      }
-                      const { factionlvl } = role;
-                      if (factionlvl >= 100) {
-                        roleClassName += ' powerlvl-sovereign';
-                      } else if (factionlvl >= 80) {
-                        roleClassName += ' powerlvl-magistrate';
-                      } else if (factionlvl >= 50) {
-                        roleClassName += ' powerlvl-noble';
-                      } else {
-                        roleClassName += ' powerlvl-peasant';
-                      }
-                      return (
-                        <span
-                          key={role.frid}
-                          role="button"
-                          tabIndex={-1}
-                          className={roleClassName}
-                          onClick={() => setActiveRole(role.frid)}
-                        >
-                          {(flagUrl) && (
-                            <img
-                              className="chatflag"
-                              src={cdn`${flagUrl}`}
-                              alt=""
-                            />
-                          )} {role.name}
-                        </span>
-                      );
-                    })}<br />
-                    <span className="factionlist-key">{t`(click a role to activate it)`}</span><br />
+                    {(faction.roles.length > 0) && (
+                    <React.Fragment key="role-list">
+                      <span className="factionlist-key">{t`Your Roles`}: </span>
+                      {faction.roles.filter((role) => role.isMember).map((role) => {
+                        const [flagUrl] = getUrlsFromMediaIdAndName(role.customFlagId);
+                        let roleClassName = 'factionlist-role';
+                        if (role.frid === activeFactionRole) {
+                          roleClassName += ' active';
+                        }
+                        const { factionlvl } = role;
+                        if (factionlvl >= 100) {
+                          roleClassName += ' powerlvl-sovereign';
+                        } else if (factionlvl >= 80) {
+                          roleClassName += ' powerlvl-magistrate';
+                        } else if (factionlvl >= 50) {
+                          roleClassName += ' powerlvl-noble';
+                        } else {
+                          roleClassName += ' powerlvl-peasant';
+                        }
+                        return (
+                          <span
+                            key={role.frid}
+                            role="button"
+                            tabIndex={-1}
+                            className={roleClassName}
+                            onClick={() => setActiveRole(role.frid)}
+                          >
+                            {(flagUrl) && (
+                              <img
+                                className="chatflag"
+                                src={cdn`${flagUrl}`}
+                                alt=""
+                              />
+                            )} {role.name}
+                          </span>
+                        );
+                      })}<br />
+                      <span className="factionlist-key">{t`(click a role to activate it)`}</span><br />
+                    </React.Fragment>
+                    )}
                     <input
                       type="checkbox"
                       checked={faction.isHidden}
@@ -459,7 +463,12 @@ const MyFactions = () => {
       <div className="form-actions">
         <button
           type="button"
-          onClick={/* TODO */changePage('create')}
+          onClick={(evt) => {
+            evt.stopPropagation();
+            link('SEARCH', {
+              args: { activeTab: 'factions' },
+            });
+          }}
         >
           {t`Search Existing Faction`}
         </button>

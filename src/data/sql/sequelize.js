@@ -921,7 +921,7 @@ BEGIN
 END`,
   };
 
-  const funcVersion = 25;
+  const funcVersion = 26;
   const curVersion = Number((await sequelize.query('SELECT value FROM Configs WHERE `key`=\'functions_version\''))[0]?.[0]?.value);
   const doUpgrade = funcVersion !== curVersion;
   if (doUpgrade) {

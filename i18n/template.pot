@@ -7,14 +7,6 @@ msgstr ""
 msgid " which is in "
 msgstr ""
 
-#: src/components/windows/Statistics.jsx:229
-msgid "# Today"
-msgstr ""
-
-#: src/components/windows/Statistics.jsx:238
-msgid "# Total"
-msgstr ""
-
 #: src/components/windows/Help.jsx:120
 #, javascript-format
 msgid "${ mouseSymbol } Hold left mouse button and drag mouse to rotate"
@@ -45,19 +37,19 @@ msgid ""
 "button and drag to zoom"
 msgstr ""
 
-#: src/components/IIDTools.jsx:174
+#: src/components/IIDTools.jsx:232
 msgid "(0 = infinite)"
 msgstr ""
 
-#: src/components/windows/MyFactions.jsx:401
+#: src/components/windows/MyFactions.jsx:404
 msgid "(click a role to activate it)"
 msgstr ""
 
-#: src/components/windows/Faction.jsx:578
+#: src/components/windows/Faction.jsx:1030
 msgid "(click a role to assign or remove it)"
 msgstr ""
 
-#: src/components/windows/Statistics.jsx:255
+#: src/components/windows/Statistics.jsx:215
 msgid "+last hour"
 msgstr ""
 
@@ -69,8 +61,20 @@ msgstr ""
 msgid "A Phish!"
 msgstr ""
 
+#: src/components/windows/Faction.jsx:1172
+msgid ""
+"A flag representing the role, it should be 16x11 pixels. If left empty, "
+"users with this role selected will still show their own flags."
+msgstr ""
+
 #: src/components/UserMessages.jsx:44
 msgid "A new verification mail is getting sent to you."
+msgstr ""
+
+#: src/components/windows/Faction.jsx:1413
+msgid ""
+"A role has all the permissions of all levels below and equal to it. In "
+"example: Every role with a power level of >=50 can manage invites (50)."
 msgstr ""
 
 #: src/components/windows/OIDCConsent.jsx:71
@@ -85,9 +89,17 @@ msgstr ""
 msgid "Add Template"
 msgstr ""
 
-#: src/components/menus/mainMenu.js:161
+#: src/components/menus/mainMenu.js:166
 #. This if for moderation tools, it's not important to translate this
 msgid "Admintools"
+msgstr ""
+
+#: src/components/windows/User.jsx:179
+msgid "Age"
+msgstr ""
+
+#: src/components/windows/Faction.jsx:880
+msgid "All members of this faction are hidden"
 msgstr ""
 
 #: src/components/windows/Settings.jsx:99
@@ -102,7 +114,7 @@ msgstr ""
 msgid "Always show movement control buttons"
 msgstr ""
 
-#: src/components/windows/MyFactions.jsx:195
+#: src/components/windows/MyFactions.jsx:196
 msgid "An image representing your faction"
 msgstr ""
 
@@ -118,7 +130,7 @@ msgstr ""
 msgid "Archive"
 msgstr ""
 
-#: src/components/windows/Faction.jsx:536
+#: src/components/windows/Faction.jsx:988
 msgid "Assign Roles"
 msgstr ""
 
@@ -126,7 +138,23 @@ msgstr ""
 msgid "Assign new Mod"
 msgstr ""
 
-#: src/components/FileUpload.jsx:586
+#: src/components/windows/Faction.jsx:1197
+msgid "Assign role per default to new members"
+msgstr ""
+
+#: src/components/windows/Faction.jsx:1436
+msgid "Assign roles below their own"
+msgstr ""
+
+#: src/components/windows/Faction.jsx:1199
+msgid "Assign this role to every new member automatically on join."
+msgstr ""
+
+#: src/components/windows/Faction.jsx:1345
+msgid "Assigned role per default"
+msgstr ""
+
+#: src/components/FileUpload.jsx:558
 msgid "Attach File"
 msgstr ""
 
@@ -135,6 +163,8 @@ msgid "Auto Zoom In"
 msgstr ""
 
 #: src/components/SocialSettings.jsx:86
+#: src/components/Table.jsx:20
+#: src/components/windows/Faction.jsx:1482
 #: src/components/windows/MyFactions.jsx:188
 msgid "Avatar"
 msgstr ""
@@ -143,21 +173,25 @@ msgstr ""
 msgid "Back"
 msgstr ""
 
-#: src/components/windows/index.js:39
+#: src/components/windows/index.js:44
 msgid "Badge Display"
 msgstr ""
 
-#: src/components/BadgeList.jsx:22
+#: src/components/BadgeList.jsx:20
 msgid "Badges"
 msgstr ""
 
-#: src/components/windows/Faction.jsx:612
+#: src/components/windows/Faction.jsx:1064
 msgid "Ban"
 msgstr ""
 
 #: src/components/Mediatools.jsx:89
 #: src/components/embeds/LocalMedia.jsx:230
 msgid "Ban media"
+msgstr ""
+
+#: src/components/windows/Faction.jsx:1440
+msgid "Ban members"
 msgstr ""
 
 #: src/ui/PixelTransferController.js:155
@@ -168,23 +202,25 @@ msgstr ""
 msgid "Banned? Detected as Proxy?"
 msgstr ""
 
-#: src/components/windows/Faction.jsx:63
+#: src/components/windows/Faction.jsx:90
 msgid "Bans"
 msgstr ""
 
 #: src/components/menus/userContextMenu.js:48
+#: src/components/windows/User.jsx:237
+#: src/components/windows/User.jsx:243
 msgid "Block"
 msgstr ""
 
-#: src/components/SocialSettings.jsx:198
+#: src/components/SocialSettings.jsx:195
 msgid "Block DMs"
 msgstr ""
 
-#: src/components/SocialSettings.jsx:207
+#: src/components/SocialSettings.jsx:204
 msgid ""
-"Block all Private Messages. Enabling this will delete all your current DMs. "
-"You can still start new DMs with other users, but other users won't be able "
-"to start DMs with you."
+"Block all Private Messages. Enabling this will make it impossible for other "
+"users to start messaging you. You can still start new DMs with other users "
+"and already ongoing DMs will still be open."
 msgstr ""
 
 #: src/ui/PixelTransferController.js:172
@@ -194,7 +230,7 @@ msgstr ""
 #: src/components/Canvastools.jsx:374
 #: src/components/Canvastools.jsx:451
 #: src/components/Canvastools.jsx:547
-#: src/components/Watchtools.jsx:213
+#: src/components/Watchtools.jsx:197
 msgid "Bottom-right corner"
 msgstr ""
 
@@ -238,13 +274,18 @@ msgstr ""
 #: src/components/ChangeName.jsx:58
 #: src/components/ChangePassword.jsx:124
 #: src/components/ChangeUsername.jsx:72
-#: src/components/DeleteAccount.jsx:77
+#: src/components/DeleteAccount.jsx:81
 #: src/components/GlobalCaptcha.jsx:94
 #: src/components/LogInForm.jsx:307
-#: src/components/LogInForm.jsx:400
+#: src/components/LogInForm.jsx:412
 #: src/components/RefreshPrompt.jsx:16
 #: src/components/TemplateItemEdit.jsx:181
-#: src/components/windows/MyFactions.jsx:261
+#: src/components/windows/Faction.jsx:1217
+#: src/components/windows/Faction.jsx:1379
+#: src/components/windows/Faction.jsx:1612
+#: src/components/windows/Faction.jsx:1653
+#: src/components/windows/Invite.jsx:132
+#: src/components/windows/MyFactions.jsx:262
 msgid "Cancel"
 msgstr ""
 
@@ -254,11 +295,11 @@ msgstr ""
 
 #: src/components/TemplateItem.jsx:54
 #: src/components/TemplateItemEdit.jsx:122
-#: src/components/Watchtools.jsx:140
+#: src/components/Watchtools.jsx:124
 msgid "Canvas"
 msgstr ""
 
-#: src/components/windows/index.js:36
+#: src/components/windows/index.js:41
 msgid "Canvas Archive"
 msgstr ""
 
@@ -270,12 +311,12 @@ msgstr ""
 msgid "Canvas Error"
 msgstr ""
 
-#: src/components/menus/mainMenu.js:61
-#: src/components/windows/index.js:35
+#: src/components/menus/mainMenu.js:63
+#: src/components/windows/index.js:40
 msgid "Canvas Selection"
 msgstr ""
 
-#: src/components/LogInForm.jsx:379
+#: src/components/LogInForm.jsx:389
 msgid "Captcha"
 msgstr ""
 
@@ -283,15 +324,19 @@ msgstr ""
 msgid "Caught by"
 msgstr ""
 
+#: src/components/windows/Faction.jsx:1286
+msgid "Change Flag"
+msgstr ""
+
 #: src/store/actions/index.js:21
 msgid "Change Happened"
 msgstr ""
 
-#: src/components/windows/UserArea.jsx:125
+#: src/components/windows/UserArea.jsx:144
 msgid "Change Name"
 msgstr ""
 
-#: src/components/windows/UserArea.jsx:158
+#: src/components/windows/UserArea.jsx:177
 msgid "Change Password"
 msgstr ""
 
@@ -303,20 +348,19 @@ msgstr ""
 msgid "Channel"
 msgstr ""
 
-#: src/components/windows/Chat.jsx:374
+#: src/components/windows/Chat.jsx:386
 msgid "Channel settings"
 msgstr ""
 
-#: src/components/windows/Statistics.jsx:198
-#: src/components/windows/Statistics.jsx:215
+#: src/components/windows/Statistics.jsx:91
 msgid "Charts"
 msgstr ""
 
-#: src/components/windows/index.js:34
+#: src/components/windows/index.js:39
 msgid "Chat"
 msgstr ""
 
-#: src/components/windows/Chat.jsx:314
+#: src/components/windows/Chat.jsx:326
 msgid "Chat here"
 msgstr ""
 
@@ -324,11 +368,11 @@ msgstr ""
 msgid "Check out past versions of the canvas."
 msgstr ""
 
-#: src/components/windows/OIDCConsent.jsx:244
+#: src/components/windows/OIDCConsent.jsx:242
 msgid "Check to allow"
 msgstr ""
 
-#: src/components/Watchtools.jsx:139
+#: src/components/Watchtools.jsx:123
 msgid "Check who placed in an area"
 msgstr ""
 
@@ -345,7 +389,7 @@ msgstr ""
 msgid "Choose Strategy"
 msgstr ""
 
-#: src/components/windows/UserArea.jsx:138
+#: src/components/windows/UserArea.jsx:157
 msgid "Choose Username"
 msgstr ""
 
@@ -371,7 +415,9 @@ msgid "Cleaners can use 0cd blank colors."
 msgstr ""
 
 #: src/components/SocialSettings.jsx:103
-#: src/components/SocialSettings.jsx:160
+#: src/components/SocialSettings.jsx:157
+#: src/components/windows/Faction.jsx:1297
+#: src/components/windows/Faction.jsx:1501
 msgid "Clear"
 msgstr ""
 
@@ -387,7 +433,7 @@ msgstr ""
 msgid "Click a color in palette to select it"
 msgstr ""
 
-#: src/components/windows/MyFactions.jsx:294
+#: src/components/windows/MyFactions.jsx:295
 msgid "Click here to cease representation."
 msgstr ""
 
@@ -399,7 +445,7 @@ msgstr ""
 msgid "Click to Load Captcha"
 msgstr ""
 
-#: src/components/FileUpload.jsx:145
+#: src/components/FileUpload.jsx:90
 msgid "Click to remove"
 msgstr ""
 
@@ -409,11 +455,11 @@ msgstr ""
 
 #: src/components/Admintools.jsx:191
 #: src/components/Canvastools.jsx:234
-#: src/components/Watchtools.jsx:135
+#: src/components/Watchtools.jsx:119
 #: src/components/Window.jsx:260
 #: src/components/menus/channelContextMenu.js:31
-#: src/components/windows/Faction.jsx:624
-#: src/components/windows/MyFactions.jsx:445
+#: src/components/windows/Faction.jsx:1076
+#: src/components/windows/MyFactions.jsx:449
 msgid "Close"
 msgstr ""
 
@@ -433,21 +479,26 @@ msgstr ""
 msgid "Compact Palette"
 msgstr ""
 
-#: src/components/windows/Faction.jsx:532
-#: src/components/windows/Faction.jsx:574
+#: src/components/windows/Faction.jsx:984
+#: src/components/windows/Faction.jsx:1026
 msgid "Confirm"
 msgstr ""
 
-#: src/components/windows/Faction.jsx:612
+#: src/components/windows/Faction.jsx:1064
 msgid "Confirm Ban"
 msgstr ""
 
-#: src/components/windows/Faction.jsx:597
+#: src/components/windows/Faction.jsx:1368
+#: src/components/windows/Faction.jsx:1605
+msgid "Confirm Delete"
+msgstr ""
+
+#: src/components/windows/Faction.jsx:1049
 msgid "Confirm Kick"
 msgstr ""
 
-#: src/components/windows/Faction.jsx:424
-#: src/components/windows/MyFactions.jsx:422
+#: src/components/windows/Faction.jsx:869
+#: src/components/windows/MyFactions.jsx:427
 msgid "Confirm Leave"
 msgstr ""
 
@@ -456,9 +507,13 @@ msgid "Confirm New Password"
 msgstr ""
 
 #: src/components/ChangePassword.jsx:111
-#: src/components/LogInForm.jsx:357
-#: src/components/LogInForm.jsx:363
+#: src/components/LogInForm.jsx:364
+#: src/components/LogInForm.jsx:369
 msgid "Confirm Password"
+msgstr ""
+
+#: src/components/LogInForm.jsx:372
+msgid "Confirm your password."
 msgstr ""
 
 #: src/store/actions/fetch.js:55
@@ -466,7 +521,7 @@ msgstr ""
 msgid "Connection error ${ code } :("
 msgstr ""
 
-#: src/components/windows/OIDCConsent.jsx:232
+#: src/components/windows/OIDCConsent.jsx:230
 msgid "Consent"
 msgstr ""
 
@@ -479,9 +534,9 @@ msgstr ""
 msgid "Convert an image to canvas colors"
 msgstr ""
 
-#: src/components/menus/mainMenu.js:133
+#: src/components/menus/mainMenu.js:203
 #: src/components/windows/Converter.jsx:191
-#: src/components/windows/index.js:33
+#: src/components/windows/index.js:38
 msgid "Converter"
 msgstr ""
 
@@ -514,6 +569,7 @@ msgstr ""
 
 #: src/components/ClipboardCopyField.jsx:42
 #: src/components/GetIID.jsx:53
+#: src/components/windows/Faction.jsx:1674
 msgid "Copy"
 msgstr ""
 
@@ -521,7 +577,7 @@ msgstr ""
 msgid "Copy Link"
 msgstr ""
 
-#: src/components/Watchtools.jsx:503
+#: src/components/Watchtools.jsx:499
 msgid "Copy Selected to Clipboard"
 msgstr ""
 
@@ -530,19 +586,19 @@ msgstr ""
 msgid "Copy URL"
 msgstr ""
 
-#: src/components/Watchtools.jsx:474
+#: src/components/Watchtools.jsx:470
 msgid "Copy UserId to Clipboard"
 msgstr ""
 
 #: src/components/CoordinatesBox.jsx:46
-#: src/components/Watchtools.jsx:425
-#: src/components/Watchtools.jsx:448
+#: src/components/Watchtools.jsx:421
+#: src/components/Watchtools.jsx:444
 #: src/components/windows/Converter.jsx:567
 msgid "Copy to Clipboard"
 msgstr ""
 
-#: src/store/actions/fetch.js:646
-#: src/store/actions/fetch.js:740
+#: src/store/actions/fetch.js:722
+#: src/store/actions/fetch.js:816
 msgid "Could not connect to server"
 msgstr ""
 
@@ -555,8 +611,8 @@ msgstr ""
 msgid "Could not load captcha"
 msgstr ""
 
-#: src/store/actions/fetch.js:624
-#: src/store/actions/fetch.js:729
+#: src/store/actions/fetch.js:700
+#: src/store/actions/fetch.js:805
 msgid "Could not process files"
 msgstr ""
 
@@ -564,12 +620,12 @@ msgstr ""
 msgid "Couldn't set Pixel"
 msgstr ""
 
-#: src/components/windows/Statistics.jsx:189
+#: src/components/windows/Statistics.jsx:90
 msgid "Countries Today"
 msgstr ""
 
 #: src/components/CooldownChanges.jsx:26
-#: src/components/windows/Statistics.jsx:252
+#: src/components/windows/Statistics.jsx:212
 msgid "Country"
 msgstr ""
 
@@ -577,8 +633,28 @@ msgstr ""
 msgid "Create Faction"
 msgstr ""
 
-#: src/components/windows/MyFactions.jsx:470
+#: src/components/windows/Faction.jsx:1623
+msgid "Create Invite"
+msgstr ""
+
+#: src/components/windows/MyFactions.jsx:479
 msgid "Create New Faction"
+msgstr ""
+
+#: src/components/windows/Faction.jsx:1722
+msgid "Create New Invite"
+msgstr ""
+
+#: src/components/windows/Faction.jsx:1401
+msgid "Create New Role"
+msgstr ""
+
+#: src/components/windows/Faction.jsx:1148
+msgid "Create Role"
+msgstr ""
+
+#: src/components/windows/Faction.jsx:1452
+msgid "Create roles"
 msgstr ""
 
 #: src/components/windows/Help.jsx:140
@@ -604,24 +680,38 @@ msgstr ""
 msgid "Custom Cursor"
 msgstr ""
 
-#: src/components/SocialSettings.jsx:141
+#: src/components/SocialSettings.jsx:138
+#: src/components/windows/Faction.jsx:1162
 msgid "Custom Flag"
 msgstr ""
 
 #: src/components/ChannelDropDown.jsx:82
 #: src/components/menus/userContextMenu.js:41
+#: src/components/windows/User.jsx:247
+#: src/components/windows/User.jsx:279
 msgid "DM"
 msgstr ""
 
-#: src/components/windows/Statistics.jsx:209
-msgid "Daily Pixels per Country"
+#: src/components/Table.jsx:29
+msgid "Daily Pixel"
 msgstr ""
 
 #: src/components/windows/Statistics.jsx:204
+msgid "Daily Pixels per Country"
+msgstr ""
+
+#: src/components/windows/Statistics.jsx:183
+msgid "Daily Pixels per Faction"
+msgstr ""
+
+#: src/components/windows/Statistics.jsx:181
 msgid "Daily Pixels per Player"
 msgstr ""
 
-#: src/components/windows/UserArea.jsx:91
+#: src/components/Table.jsx:28
+#: src/components/windows/Faction.jsx:785
+#: src/components/windows/User.jsx:163
+#: src/components/windows/UserArea.jsx:110
 msgid "Daily Rank"
 msgstr ""
 
@@ -634,33 +724,46 @@ msgid "Date of catch"
 msgstr ""
 
 #: src/components/TemplateItemEdit.jsx:174
+#: src/components/windows/Faction.jsx:1368
+#: src/components/windows/Faction.jsx:1673
 msgid "Delete"
 msgstr ""
 
-#: src/components/windows/UserArea.jsx:165
+#: src/components/windows/UserArea.jsx:184
 msgid "Delete Account"
 msgstr ""
 
-#: src/components/windows/OIDCConsent.jsx:281
-#: src/components/windows/OIDCConsent.jsx:319
+#: src/components/windows/Faction.jsx:1605
+msgid "Delete Faction"
+msgstr ""
+
+#: src/components/windows/Faction.jsx:1464
+msgid "Delete the faction"
+msgstr ""
+
+#: src/components/windows/OIDCConsent.jsx:279
+#: src/components/windows/OIDCConsent.jsx:317
 msgid "Deny"
 msgstr ""
 
-#: src/components/windows/Faction.jsx:360
-#: src/components/windows/MyFactions.jsx:210
-#: src/components/windows/MyFactions.jsx:365
+#: src/components/Table.jsx:23
+#: src/components/windows/Faction.jsx:779
+#: src/components/windows/Faction.jsx:1543
+#: src/components/windows/MyFactions.jsx:211
+#: src/components/windows/MyFactions.jsx:366
 msgid "Description"
 msgstr ""
 
-#: src/utils/validation.js:91
+#: src/utils/validation.js:93
 msgid "Description can't be empty"
 msgstr ""
 
-#: src/utils/validation.js:94
+#: src/utils/validation.js:96
 msgid "Description must be shorter than 1000 characters"
 msgstr ""
 
-#: src/components/windows/MyFactions.jsx:217
+#: src/components/windows/Faction.jsx:1550
+#: src/components/windows/MyFactions.jsx:218
 msgid "Description of your faction"
 msgstr ""
 
@@ -701,19 +804,21 @@ msgstr ""
 msgid "Do stuff with IPs (one IP per line)"
 msgstr ""
 
-#: src/components/windows/MyFactions.jsx:230
+#: src/components/windows/Faction.jsx:1563
+#: src/components/windows/MyFactions.jsx:231
 msgid "Don't let people find this faction in public search or look at its profile."
 msgstr ""
 
-#: src/components/windows/OIDCConsent.jsx:268
+#: src/components/windows/OIDCConsent.jsx:266
 msgid "Don't remember"
 msgstr ""
 
-#: src/components/windows/MyFactions.jsx:228
+#: src/components/windows/Faction.jsx:1561
+#: src/components/windows/MyFactions.jsx:229
 msgid "Don't show faction in search"
 msgstr ""
 
-#: src/components/SocialSettings.jsx:218
+#: src/components/SocialSettings.jsx:215
 msgid "Don't show me in global stats"
 msgstr ""
 
@@ -731,7 +836,7 @@ msgid "Drag ${ mouseSymbol } mouse or ${ touchSymbol } pan to move"
 msgstr ""
 
 #: src/components/BanInfo.jsx:108
-#: src/components/IIDTools.jsx:161
+#: src/components/IIDTools.jsx:219
 msgid "Duration"
 msgstr ""
 
@@ -746,38 +851,51 @@ msgid "Easter Egg ON"
 msgstr ""
 
 #: src/components/TemplateItem.jsx:71
+#: src/components/windows/Faction.jsx:92
 msgid "Edit"
 msgstr ""
 
+#: src/components/windows/Faction.jsx:1456
+msgid "Edit faction"
+msgstr ""
+
+#: src/components/windows/Faction.jsx:1448
+msgid "Edit roles below their own"
+msgstr ""
+
+#: src/components/windows/Faction.jsx:1460
+msgid "Edit their own role and elevate users to their own level"
+msgstr ""
+
 #: src/components/LogInForm.jsx:300
-#: src/components/LogInForm.jsx:340
+#: src/components/LogInForm.jsx:342
 #: src/components/LogInForm.jsx:347
 msgid "Email"
 msgstr ""
 
-#: src/utils/validation.js:17
+#: src/utils/validation.js:19
 msgid "Email can't be empty."
 msgstr ""
 
-#: src/utils/validation.js:19
+#: src/utils/validation.js:21
 msgid "Email can't be longer than 40 characters."
 msgstr ""
 
-#: src/components/LogInForm.jsx:341
+#: src/components/LogInForm.jsx:350
 msgid ""
 "Email is used to verify your account. You might get a cofirmation mail "
 "after registering."
 msgstr ""
 
-#: src/utils/validation.js:20
+#: src/utils/validation.js:22
 msgid "Email should at least contain a dot"
 msgstr ""
 
-#: src/utils/validation.js:18
+#: src/utils/validation.js:20
 msgid "Email should be at least 5 characters long."
 msgstr ""
 
-#: src/utils/validation.js:23
+#: src/utils/validation.js:25
 msgid "Email should contain a @"
 msgstr ""
 
@@ -797,8 +915,8 @@ msgstr ""
 msgid "Enter Characters"
 msgstr ""
 
-#: src/components/IIDTools.jsx:157
-#: src/components/IIDTools.jsx:255
+#: src/components/IIDTools.jsx:158
+#: src/components/IIDTools.jsx:260
 msgid "Enter Reason"
 msgstr ""
 
@@ -806,8 +924,12 @@ msgstr ""
 msgid "Enter UserName of new Mod"
 msgstr ""
 
-#: src/components/windows/MyFactions.jsx:213
+#: src/components/windows/MyFactions.jsx:214
 msgid "Enter a little text that describes your faction"
+msgstr ""
+
+#: src/components/windows/Search.jsx:106
+msgid "Enter search term and press Search."
 msgstr ""
 
 #: src/components/LogInForm.jsx:288
@@ -820,19 +942,25 @@ msgstr ""
 #: src/components/ChangeName.jsx:46
 #: src/components/ChangePassword.jsx:79
 #: src/components/ChangeUsername.jsx:54
-#: src/components/DeleteAccount.jsx:59
+#: src/components/DeleteAccount.jsx:63
 #: src/components/GlobalCaptcha.jsx:80
 #: src/components/LogInForm.jsx:201
 #: src/components/LogInForm.jsx:292
-#: src/components/LogInForm.jsx:387
+#: src/components/LogInForm.jsx:397
 #: src/components/windows/BadgeDisplay.jsx:39
-#: src/components/windows/Faction.jsx:296
-#: src/components/windows/Faction.jsx:490
-#: src/components/windows/Faction.jsx:712
+#: src/components/windows/Faction.jsx:715
+#: src/components/windows/Faction.jsx:942
+#: src/components/windows/Faction.jsx:1283
+#: src/components/windows/Faction.jsx:1581
+#: src/components/windows/Faction.jsx:1752
 #: src/components/windows/FishDisplay.jsx:40
-#: src/components/windows/MyFactions.jsx:248
-#: src/components/windows/MyFactions.jsx:274
-#: src/components/windows/OIDCConsent.jsx:297
+#: src/components/windows/Invite.jsx:66
+#: src/components/windows/MyFactions.jsx:249
+#: src/components/windows/MyFactions.jsx:275
+#: src/components/windows/OIDCConsent.jsx:295
+#: src/components/windows/Search.jsx:79
+#: src/components/windows/User.jsx:92
+#: src/components/windows/User.jsx:218
 msgid "Error"
 msgstr ""
 
@@ -846,8 +974,8 @@ msgstr ""
 msgid "Error :("
 msgstr ""
 
-#: src/components/BadgeList.jsx:54
-#: src/components/FishList.jsx:64
+#: src/components/BadgeList.jsx:52
+#: src/components/FishList.jsx:62
 msgid "Expand"
 msgstr ""
 
@@ -855,11 +983,25 @@ msgstr ""
 msgid "Export enabled templates"
 msgstr ""
 
+#: src/components/windows/index.js:50
+msgid "Faction"
+msgstr ""
+
 #: src/components/ChannelDropDown.jsx:84
+#: src/components/windows/Search.jsx:27
+#: src/components/windows/User.jsx:189
 msgid "Factions"
 msgstr ""
 
-#: src/components/windows/MyFactions.jsx:458
+#: src/components/windows/Statistics.jsx:88
+msgid "Factions Today"
+msgstr ""
+
+#: src/components/windows/Statistics.jsx:87
+msgid "Factions Total"
+msgstr ""
+
+#: src/components/windows/MyFactions.jsx:462
 msgid ""
 "Factions allow you to coordinate better with other players. Search for "
 "existing factions, find friends or create your own faction."
@@ -873,7 +1015,7 @@ msgstr ""
 msgid "File"
 msgstr ""
 
-#: src/components/windows/index.js:38
+#: src/components/windows/index.js:43
 msgid "Fish Display"
 msgstr ""
 
@@ -893,25 +1035,25 @@ msgid ""
 "relevant traces. Your placed pixels will of course not be deleted."
 msgstr ""
 
-#: src/components/windows/OIDCConsent.jsx:269
+#: src/components/windows/OIDCConsent.jsx:267
 msgid "For one day"
 msgstr ""
 
 #: src/components/LogInForm.jsx:223
-#: src/components/LogInForm.jsx:374
-#: src/components/windows/OIDCConsent.jsx:271
+#: src/components/LogInForm.jsx:383
+#: src/components/windows/OIDCConsent.jsx:269
 msgid "For one month"
 msgstr ""
 
 #: src/components/LogInForm.jsx:222
-#: src/components/LogInForm.jsx:373
-#: src/components/windows/OIDCConsent.jsx:270
+#: src/components/LogInForm.jsx:382
+#: src/components/windows/OIDCConsent.jsx:268
 msgid "For one week"
 msgstr ""
 
 #: src/components/LogInForm.jsx:224
-#: src/components/LogInForm.jsx:375
-#: src/components/windows/OIDCConsent.jsx:272
+#: src/components/LogInForm.jsx:384
+#: src/components/windows/OIDCConsent.jsx:270
 msgid "For one year"
 msgstr ""
 
@@ -920,18 +1062,18 @@ msgid "For when you are playing on a potato."
 msgstr ""
 
 #: src/components/LogInForm.jsx:225
-#: src/components/LogInForm.jsx:376
-#: src/components/windows/OIDCConsent.jsx:273
+#: src/components/LogInForm.jsx:385
+#: src/components/windows/OIDCConsent.jsx:271
 msgid "Forever"
 msgstr ""
 
 #: src/components/windows/Settings.jsx:64
-#: src/store/actions/thunks.js:424
+#: src/store/actions/thunks.js:433
 msgid "From History"
 msgstr ""
 
 #: src/components/windows/Settings.jsx:63
-#: src/store/actions/thunks.js:421
+#: src/store/actions/thunks.js:430
 msgid "From Template"
 msgstr ""
 
@@ -939,11 +1081,11 @@ msgstr ""
 msgid "Get IID"
 msgstr ""
 
-#: src/components/Watchtools.jsx:264
+#: src/components/Watchtools.jsx:248
 msgid "Get Pixels"
 msgstr ""
 
-#: src/components/Watchtools.jsx:296
+#: src/components/Watchtools.jsx:280
 msgid "Get Users"
 msgstr ""
 
@@ -955,7 +1097,7 @@ msgstr ""
 msgid "Get the amount of Pixels placed and ranking"
 msgstr ""
 
-#: src/components/menus/mainMenu.js:79
+#: src/components/menus/mainMenu.js:81
 msgid "Globe View"
 msgstr ""
 
@@ -963,7 +1105,7 @@ msgstr ""
 msgid "Go to"
 msgstr ""
 
-#: src/components/windows/OIDCConsent.jsx:288
+#: src/components/windows/OIDCConsent.jsx:286
 msgid "Grant"
 msgstr ""
 
@@ -988,8 +1130,8 @@ msgid "Height"
 msgstr ""
 
 #: src/components/BanInfo.jsx:80
-#: src/components/menus/mainMenu.js:222
-#: src/components/windows/index.js:30
+#: src/components/menus/mainMenu.js:237
+#: src/components/windows/index.js:35
 msgid "Help"
 msgstr ""
 
@@ -1003,7 +1145,7 @@ msgstr ""
 msgid "Hide Embed"
 msgstr ""
 
-#: src/components/windows/MyFactions.jsx:408
+#: src/components/windows/MyFactions.jsx:413
 msgid "Hide from profile"
 msgstr ""
 
@@ -1013,7 +1155,7 @@ msgid ""
 "least once per day."
 msgstr ""
 
-#: src/components/menus/mainMenu.js:94
+#: src/components/menus/mainMenu.js:96
 #: src/components/windows/Settings.jsx:154
 msgid "Historical View"
 msgstr ""
@@ -1031,11 +1173,15 @@ msgstr ""
 msgid "I forgot my Password."
 msgstr ""
 
-#: src/components/Watchtools.jsx:174
+#: src/components/windows/Faction.jsx:1667
+msgid "ID"
+msgstr ""
+
+#: src/components/Watchtools.jsx:158
 msgid "IID (optional)"
 msgstr ""
 
-#: src/components/IIDTools.jsx:127
+#: src/components/IIDTools.jsx:128
 msgid "IID Actions"
 msgstr ""
 
@@ -1074,11 +1220,11 @@ msgstr ""
 msgid "Import templates"
 msgstr ""
 
-#: src/components/Watchtools.jsx:159
+#: src/components/Watchtools.jsx:143
 msgid "Interval"
 msgstr ""
 
-#: src/components/Watchtools.jsx:50
+#: src/components/Watchtools.jsx:34
 msgid "Interval is invalid"
 msgstr ""
 
@@ -1096,15 +1242,23 @@ msgstr ""
 msgid "Invalid color selected"
 msgstr ""
 
+#: src/components/windows/index.js:53
+msgid "Invite"
+msgstr ""
+
 #: src/components/windows/Help.jsx:77
 msgid "Invited to Chat"
 msgstr ""
 
-#: src/components/windows/Faction.jsx:66
+#: src/components/windows/Faction.jsx:93
 msgid "Invites"
 msgstr ""
 
-#: src/components/windows/OIDCConsent.jsx:228
+#: src/components/windows/Faction.jsx:1633
+msgid "Is One-Time-Invite"
+msgstr ""
+
+#: src/components/windows/OIDCConsent.jsx:226
 msgid "It requests the following permissions. Uncheck what you don't want to grant:"
 msgstr ""
 
@@ -1112,9 +1266,17 @@ msgstr ""
 msgid "Jannies can rollback and protect, but not watch or ban."
 msgstr ""
 
-#: src/components/windows/Faction.jsx:400
-#: src/components/windows/Faction.jsx:405
+#: src/components/windows/Invite.jsx:121
+msgid "Join"
+msgstr ""
+
+#: src/components/windows/Faction.jsx:845
+#: src/components/windows/Faction.jsx:850
 msgid "Join Faction"
+msgstr ""
+
+#: src/components/Table.jsx:27
+msgid "Joined"
 msgstr ""
 
 #: src/ui/PixelTransferController.js:122
@@ -1133,20 +1295,24 @@ msgstr ""
 msgid "Keep Ratio"
 msgstr ""
 
-#: src/components/windows/Faction.jsx:597
+#: src/components/windows/Faction.jsx:1049
 msgid "Kick"
+msgstr ""
+
+#: src/components/windows/Faction.jsx:1428
+msgid "Kick members"
 msgstr ""
 
 #: src/components/windows/OIDCConsent.jsx:77
 msgid "Know that an account exists"
 msgstr ""
 
-#: src/components/windows/MyFactions.jsx:422
+#: src/components/windows/MyFactions.jsx:427
 msgid "Leave"
 msgstr ""
 
-#: src/components/windows/Faction.jsx:414
-#: src/components/windows/Faction.jsx:424
+#: src/components/windows/Faction.jsx:859
+#: src/components/windows/Faction.jsx:869
 msgid "Leave Faction"
 msgstr ""
 
@@ -1154,12 +1320,18 @@ msgstr ""
 msgid "Legal Requests"
 msgstr ""
 
-#: src/components/windows/MyFactions.jsx:241
+#: src/components/windows/Faction.jsx:1574
+#: src/components/windows/MyFactions.jsx:242
 msgid "Let everyone join this faction"
 msgstr ""
 
-#: src/components/windows/MyFactions.jsx:243
+#: src/components/windows/Faction.jsx:1576
+#: src/components/windows/MyFactions.jsx:244
 msgid "Let people join this faction without needing an invite."
+msgstr ""
+
+#: src/components/windows/Faction.jsx:1419
+msgid "Level"
 msgstr ""
 
 #: src/components/windows/Converter.jsx:382
@@ -1171,23 +1343,25 @@ msgstr ""
 msgid "Load Captcha"
 msgstr ""
 
-#: src/components/HistorySelect.jsx:178
+#: src/components/HistorySelect.jsx:179
 msgid "Loading"
 msgstr ""
 
 #: src/components/UIPopUp.jsx:58
 #: src/components/UIPopUp.jsx:62
 #: src/components/Window.jsx:280
-#: src/components/windows/Faction.jsx:298
+#: src/components/windows/Faction.jsx:717
+#: src/components/windows/Invite.jsx:68
 #: src/components/windows/MyFactions.jsx:168
+#: src/components/windows/User.jsx:94
 msgid "Loading..."
 msgstr ""
 
-#: src/components/menus/mainMenu.js:142
+#: src/components/menus/mainMenu.js:138
 msgid "Log in or Register"
 msgstr ""
 
-#: src/components/windows/UserArea.jsx:118
+#: src/components/windows/UserArea.jsx:137
 msgid "Log out"
 msgstr ""
 
@@ -1199,11 +1373,11 @@ msgstr ""
 msgid "LogIn"
 msgstr ""
 
-#: src/components/windows/UserArea.jsx:147
+#: src/components/windows/UserArea.jsx:166
 msgid "Login Methods"
 msgstr ""
 
-#: src/components/windows/UserArea.jsx:77
+#: src/components/windows/UserArea.jsx:78
 msgid "Login to access more features and stats."
 msgstr ""
 
@@ -1211,7 +1385,11 @@ msgstr ""
 msgid "Login to grant access to other application."
 msgstr ""
 
-#: src/components/windows/OIDCConsent.jsx:210
+#: src/components/windows/Invite.jsx:137
+msgid "Login to join us."
+msgstr ""
+
+#: src/components/windows/OIDCConsent.jsx:208
 msgid "Login to other application"
 msgstr ""
 
@@ -1219,7 +1397,7 @@ msgstr ""
 msgid "Login with Name or Mail:"
 msgstr ""
 
-#: src/components/menus/mainMenu.js:103
+#: src/components/menus/mainMenu.js:105
 msgid "Make Screenshot"
 msgstr ""
 
@@ -1227,8 +1405,12 @@ msgstr ""
 msgid "Manage Moderators"
 msgstr ""
 
-#: src/components/menus/mainMenu.js:171
+#: src/components/menus/mainMenu.js:176
 msgid "Manage Templates"
+msgstr ""
+
+#: src/components/windows/Faction.jsx:1424
+msgid "Manage invites"
 msgstr ""
 
 #: src/components/windows/Help.jsx:83
@@ -1243,8 +1425,9 @@ msgstr ""
 msgid "Media Actions"
 msgstr ""
 
-#: src/components/windows/Faction.jsx:62
-#: src/components/windows/Faction.jsx:361
+#: src/components/Table.jsx:25
+#: src/components/windows/Faction.jsx:89
+#: src/components/windows/Faction.jsx:801
 msgid "Members"
 msgstr ""
 
@@ -1256,8 +1439,8 @@ msgstr ""
 msgid "Moderators can access all Canvas, Watch and IID tools."
 msgstr ""
 
-#: src/components/menus/mainMenu.js:161
-#: src/components/windows/index.js:42
+#: src/components/menus/mainMenu.js:166
+#: src/components/windows/index.js:47
 #. This if for moderation tools, it's not important to translate this
 msgid "Modtools"
 msgstr ""
@@ -1274,43 +1457,49 @@ msgstr ""
 msgid "Muted Sound"
 msgstr ""
 
-#: src/components/menus/mainMenu.js:126
-#: src/components/windows/index.js:44
-#: src/components/windows/index.js:45
+#: src/components/menus/mainMenu.js:128
+#: src/components/windows/index.js:49
 msgid "My Factions"
 msgstr ""
 
-#: src/components/LogInForm.jsx:322
-#: src/components/LogInForm.jsx:329
+#: src/components/LogInForm.jsx:320
+#: src/components/LogInForm.jsx:325
+#: src/components/Table.jsx:22
+#: src/components/windows/Faction.jsx:1151
+#: src/components/windows/Faction.jsx:1321
 #: src/components/windows/MyFactions.jsx:177
 msgid "Name"
 msgstr ""
 
-#: src/utils/validation.js:84
+#: src/utils/validation.js:86
 msgid "Name can only contain the characters: a-z . _ and -"
 msgstr ""
 
-#: src/utils/validation.js:30
-#: src/utils/validation.js:76
+#: src/utils/validation.js:32
+#: src/utils/validation.js:78
 msgid "Name can't be empty."
 msgstr ""
 
-#: src/utils/validation.js:40
+#: src/utils/validation.js:42
 msgid "Name contains invalid character like @, /, \\ or #"
 msgstr ""
 
-#: src/utils/validation.js:31
-#: src/utils/validation.js:78
+#: src/utils/validation.js:33
+#: src/utils/validation.js:80
 msgid "Name must be at least 2 characters long"
 msgstr ""
 
-#: src/utils/validation.js:32
-#: src/utils/validation.js:81
+#: src/utils/validation.js:34
+#: src/utils/validation.js:83
 msgid "Name must be shorter than 26 characters"
 msgstr ""
 
+#: src/components/windows/Faction.jsx:1158
+msgid "Name of this role"
+msgstr ""
+
 #: src/components/windows/MyFactions.jsx:184
-msgid "Name of your faction [a-z][A-Z][0-9].-_"
+msgid "Name of your faction (this can not be changed later)"
 msgstr ""
 
 #: src/components/LogInForm.jsx:209
@@ -1337,12 +1526,12 @@ msgstr ""
 msgid "No"
 msgstr ""
 
-#: src/store/actions/fetch.js:594
-#: src/store/actions/fetch.js:667
+#: src/store/actions/fetch.js:670
+#: src/store/actions/fetch.js:743
 msgid "No File selected to upload"
 msgstr ""
 
-#: src/store/actions/index.js:426
+#: src/store/actions/index.js:413
 msgid "No Phish!"
 msgstr ""
 
@@ -1350,7 +1539,7 @@ msgstr ""
 msgid "No captcha id given"
 msgstr ""
 
-#: src/components/SocialSettings.jsx:154
+#: src/components/SocialSettings.jsx:151
 msgid "No flag selected"
 msgstr ""
 
@@ -1358,20 +1547,24 @@ msgstr ""
 msgid "No or invalid captcha text"
 msgstr ""
 
-#: src/utils/validation.js:109
+#: src/utils/validation.js:111
 msgid "No password given."
 msgstr ""
 
-#: src/components/windows/Faction.jsx:641
+#: src/components/windows/Search.jsx:106
+msgid "No results."
+msgstr ""
+
+#: src/components/windows/Faction.jsx:1094
 msgid "Nobody is banned from this faction"
 msgstr ""
 
 #: src/components/Admintools.jsx:173
 #: src/components/Canvastools.jsx:211
-#: src/components/IIDTools.jsx:108
+#: src/components/IIDTools.jsx:109
 #: src/components/Mediatools.jsx:46
-#: src/components/Watchtools.jsx:111
-#: src/components/windows/Faction.jsx:336
+#: src/components/Watchtools.jsx:95
+#: src/components/windows/Faction.jsx:755
 msgid "Not Allowed"
 msgstr ""
 
@@ -1381,15 +1574,15 @@ msgstr ""
 msgid "Not allowed"
 msgstr ""
 
-#: src/components/windows/OIDCConsent.jsx:255
+#: src/components/windows/OIDCConsent.jsx:253
 msgid "Note"
 msgstr ""
 
-#: src/components/SocialSettings.jsx:193
+#: src/components/SocialSettings.jsx:190
 msgid "Note: Your active Faction may overwrite your flag settings."
 msgstr ""
 
-#: src/components/windows/index.js:58
+#: src/components/windows/index.js:66
 msgid "OIDC LogIn"
 msgstr ""
 
@@ -1403,12 +1596,16 @@ msgstr ""
 msgid "Offset"
 msgstr ""
 
-#: src/store/actions/index.js:427
+#: src/store/actions/index.js:414
 msgid "Oh no, the phish escaped. Better luck next time!"
 msgstr ""
 
 #: src/components/ChangePassword.jsx:89
 msgid "Old Password"
+msgstr ""
+
+#: src/components/windows/Faction.jsx:1669
+msgid "One-Time"
 msgstr ""
 
 #: src/components/CanvasItem.jsx:30
@@ -1427,7 +1624,7 @@ msgstr ""
 msgid "Opacity of Overlay in percent."
 msgstr ""
 
-#: src/components/windows/MyFactions.jsx:435
+#: src/components/windows/MyFactions.jsx:439
 msgid "Open"
 msgstr ""
 
@@ -1470,7 +1667,7 @@ msgstr ""
 msgid "Overlay Opacity"
 msgstr ""
 
-#: src/components/windows/Faction.jsx:61
+#: src/components/windows/Faction.jsx:88
 msgid "Overview"
 msgstr ""
 
@@ -1485,18 +1682,18 @@ msgstr ""
 
 #: src/components/ChangeMail.jsx:171
 #: src/components/ChangePassword.jsx:103
-#: src/components/DeleteAccount.jsx:69
+#: src/components/DeleteAccount.jsx:73
 #: src/components/LogInForm.jsx:216
-#: src/components/LogInForm.jsx:349
-#: src/components/LogInForm.jsx:355
+#: src/components/LogInForm.jsx:353
+#: src/components/LogInForm.jsx:358
 msgid "Password"
 msgstr ""
 
-#: src/utils/validation.js:112
+#: src/utils/validation.js:114
 msgid "Password must be at least 6 characters long."
 msgstr ""
 
-#: src/utils/validation.js:115
+#: src/utils/validation.js:117
 msgid "Password must be shorter than 60 characters."
 msgstr ""
 
@@ -1513,24 +1710,33 @@ msgstr ""
 msgid "Pencil Mode for ${ canvasName } canvas"
 msgstr ""
 
-#: src/store/actions/thunks.js:415
+#: src/store/actions/thunks.js:424
 msgid "Pencil picks: "
 msgstr ""
 
-#: src/components/windows/OIDCConsent.jsx:233
+#: src/components/windows/Faction.jsx:1417
+#: src/components/windows/OIDCConsent.jsx:231
 msgid "Permission"
 msgstr ""
 
-#: src/store/actions/index.js:419
+#: src/components/windows/Faction.jsx:1412
+msgid "Permissions of Powerlevels"
+msgstr ""
+
+#: src/store/actions/index.js:406
 msgid "Phish!"
 msgstr ""
 
-#: src/components/FishList.jsx:24
+#: src/components/FishList.jsx:22
 msgid "Phishes"
 msgstr ""
 
 #: src/components/menus/userContextMenu.js:21
 msgid "Ping"
+msgstr ""
+
+#: src/components/Table.jsx:31
+msgid "Pixel"
 msgstr ""
 
 #: src/controls/keypress.js:193
@@ -1549,22 +1755,14 @@ msgstr ""
 msgid "Pixel protected"
 msgstr ""
 
-#: src/components/windows/Statistics.jsx:228
-#: src/components/windows/Statistics.jsx:237
-#: src/components/windows/Statistics.jsx:246
-msgid "Pixels"
-msgstr ""
-
-#: src/components/windows/Statistics.jsx:230
-msgid "Pixels Today"
-msgstr ""
-
 #: src/components/windows/Help.jsx:72
 msgid "Place color pixels on a large canvas with other players online!"
 msgstr ""
 
 #: src/components/OnlineBox.jsx:84
-#: src/components/windows/UserArea.jsx:97
+#: src/components/windows/Faction.jsx:791
+#: src/components/windows/User.jsx:169
+#: src/components/windows/UserArea.jsx:116
 msgid "Placed Pixels"
 msgstr ""
 
@@ -1572,7 +1770,7 @@ msgstr ""
 msgid "Play a sound when new chat messages arrive"
 msgstr ""
 
-#: src/components/windows/index.js:37
+#: src/components/windows/index.js:42
 msgid "Player"
 msgstr ""
 
@@ -1600,6 +1798,15 @@ msgstr ""
 
 #: src/components/windows/Settings.jsx:132
 msgid "Potato Mode"
+msgstr ""
+
+#: src/components/windows/Faction.jsx:1176
+#: src/components/windows/Faction.jsx:1330
+msgid "Powerlevel"
+msgstr ""
+
+#: src/components/windows/Faction.jsx:1186
+msgid "Powerlevel of this role. See table below for explenation."
 msgstr ""
 
 #: src/components/windows/Help.jsx:108
@@ -1644,17 +1851,19 @@ msgstr ""
 msgid "Press ${ bindX } to toggle showing of pixel activity"
 msgstr ""
 
-#: src/components/SocialSettings.jsx:209
+#: src/components/SocialSettings.jsx:206
+#: src/components/Table.jsx:92
+#: src/components/Table.jsx:120
 msgid "Private"
 msgstr ""
 
-#: src/components/menus/mainMenu.js:119
-#: src/components/windows/Faction.jsx:65
-#: src/components/windows/UserArea.jsx:84
+#: src/components/menus/mainMenu.js:121
+#: src/components/windows/UserArea.jsx:87
 msgid "Profile"
 msgstr ""
 
 #: src/components/ChannelDropDown.jsx:80
+#: src/components/Table.jsx:24
 msgid "Public"
 msgstr ""
 
@@ -1666,11 +1875,15 @@ msgstr ""
 msgid "Range Banned"
 msgstr ""
 
+#: src/components/Table.jsx:30
+msgid "Rank"
+msgstr ""
+
 #: src/components/CanvasItem.jsx:43
 msgid "Ranked"
 msgstr ""
 
-#: src/components/windows/Statistics.jsx:326
+#: src/components/windows/Statistics.jsx:278
 msgid "Ranking updates every 5 min. Daily rankings get reset at midnight UTC."
 msgstr ""
 
@@ -1683,13 +1896,14 @@ msgid "Read name, username and account age"
 msgstr ""
 
 #: src/components/BanInfo.jsx:97
-#: src/components/IIDTools.jsx:150
+#: src/components/IIDTools.jsx:151
 #: src/components/Mediatools.jsx:106
 msgid "Reason"
 msgstr ""
 
 #: src/components/RefreshPrompt.jsx:14
-#: src/components/windows/Faction.jsx:388
+#: src/components/windows/Faction.jsx:831
+#: src/components/windows/User.jsx:227
 msgid "Refresh"
 msgstr ""
 
@@ -1697,7 +1911,7 @@ msgstr ""
 msgid "Register"
 msgstr ""
 
-#: src/components/LogInForm.jsx:321
+#: src/components/LogInForm.jsx:317
 msgid "Register new account here"
 msgstr ""
 
@@ -1709,7 +1923,7 @@ msgstr ""
 msgid "Reload"
 msgstr ""
 
-#: src/components/windows/OIDCConsent.jsx:260
+#: src/components/windows/OIDCConsent.jsx:258
 msgid "Remember this decision: "
 msgstr ""
 
@@ -1733,12 +1947,17 @@ msgstr ""
 msgid "Remove Moderator"
 msgstr ""
 
-#: src/components/windows/Faction.jsx:494
+#: src/components/windows/Faction.jsx:946
 msgid "Remove Roles"
 msgstr ""
 
 #: src/components/ChangeMail.jsx:188
 msgid "Remove a Login method:"
+msgstr ""
+
+#: src/components/windows/User.jsx:132
+#, javascript-format
+msgid "Represents ${ activeFactionTitle } as ${ activeFactionRoleName }"
 msgstr ""
 
 #: src/components/Admintools.jsx:280
@@ -1773,8 +1992,8 @@ msgstr ""
 msgid "Retired Canvases (history only)"
 msgstr ""
 
-#: src/components/BadgeList.jsx:54
-#: src/components/FishList.jsx:64
+#: src/components/BadgeList.jsx:52
+#: src/components/FishList.jsx:62
 msgid "Retract"
 msgstr ""
 
@@ -1782,11 +2001,15 @@ msgstr ""
 msgid "Revoke consent of third party applications:"
 msgstr ""
 
-#: src/components/windows/Faction.jsx:364
+#: src/components/Table.jsx:26
+msgid "Role"
+msgstr ""
+
+#: src/components/windows/Faction.jsx:806
 msgid "Role Flags"
 msgstr ""
 
-#: src/components/windows/Faction.jsx:64
+#: src/components/windows/Faction.jsx:91
 msgid "Roles"
 msgstr ""
 
@@ -1808,9 +2031,13 @@ msgstr ""
 #: src/components/ChangeUsername.jsx:70
 #: src/components/LanguageSelect.jsx:75
 #: src/components/SocialSettings.jsx:122
-#: src/components/SocialSettings.jsx:176
+#: src/components/SocialSettings.jsx:173
 #: src/components/TemplateItemEdit.jsx:209
-#: src/components/windows/OIDCConsent.jsx:324
+#: src/components/windows/Faction.jsx:1310
+#: src/components/windows/Faction.jsx:1352
+#: src/components/windows/Faction.jsx:1514
+#: src/components/windows/Faction.jsx:1588
+#: src/components/windows/OIDCConsent.jsx:322
 msgid "Save"
 msgstr ""
 
@@ -1823,11 +2050,30 @@ msgstr ""
 msgid "Scroll ${ mouseSymbol } mouse wheel or ${ touchSymbol } pinch to zoom"
 msgstr ""
 
-#: src/components/windows/MyFactions.jsx:464
+#: src/components/menus/mainMenu.js:148
+#: src/components/windows/Search.jsx:60
+#: src/components/windows/Search.jsx:93
+#: src/components/windows/index.js:52
+msgid "Search"
+msgstr ""
+
+#: src/components/windows/MyFactions.jsx:473
 msgid "Search Existing Faction"
 msgstr ""
 
-#: src/components/HistorySelect.jsx:179
+#: src/components/windows/Search.jsx:86
+msgid "Search Term"
+msgstr ""
+
+#: src/components/windows/Faction.jsx:1432
+msgid "See hidden users in member list"
+msgstr ""
+
+#: src/components/windows/Faction.jsx:1522
+msgid "Select Avatar of this Faction. Supported Formats: jpg, gif, png, webp"
+msgstr ""
+
+#: src/components/HistorySelect.jsx:180
 msgid "Select Date above"
 msgstr ""
 
@@ -1835,12 +2081,17 @@ msgstr ""
 msgid "Select File"
 msgstr ""
 
-#: src/components/SocialSettings.jsx:185
+#: src/components/SocialSettings.jsx:182
 msgid "Select Flag"
 msgstr ""
 
 #: src/components/windows/Settings.jsx:187
 msgid "Select Language"
+msgstr ""
+
+#: src/components/windows/Faction.jsx:427
+#: src/components/windows/Faction.jsx:561
+msgid "Select a valid pwerlevel"
 msgstr ""
 
 #: src/components/windows/CanvasSelect.jsx:32
@@ -1856,11 +2107,11 @@ msgid "Select your Avatar. Supported Formats: jpg, gif, png, webp"
 msgstr ""
 
 #: src/components/windows/Settings.jsx:63
-#: src/store/actions/thunks.js:418
+#: src/store/actions/thunks.js:427
 msgid "Selected Color"
 msgstr ""
 
-#: src/components/SocialSettings.jsx:145
+#: src/components/SocialSettings.jsx:142
 msgid "Selected Flag:"
 msgstr ""
 
@@ -1884,7 +2135,7 @@ msgstr ""
 msgid "Server got confused by your pixels. Are you playing on multiple devices?"
 msgstr ""
 
-#: src/components/windows/UserArea.jsx:158
+#: src/components/windows/UserArea.jsx:177
 msgid "Set Password"
 msgstr ""
 
@@ -1900,8 +2151,8 @@ msgid ""
 "only relying on 3rd party login."
 msgstr ""
 
-#: src/components/menus/mainMenu.js:214
-#: src/components/windows/index.js:31
+#: src/components/menus/mainMenu.js:229
+#: src/components/windows/index.js:36
 msgid "Settings"
 msgstr ""
 
@@ -1945,7 +2196,7 @@ msgstr ""
 msgid "Small Pixels When Zoomed"
 msgstr ""
 
-#: src/components/windows/UserArea.jsx:172
+#: src/components/windows/UserArea.jsx:191
 msgid "Social Settings"
 msgstr ""
 
@@ -1958,7 +2209,7 @@ msgstr ""
 msgid "Stacking till"
 msgstr ""
 
-#: src/components/windows/Chat.jsx:265
+#: src/components/windows/Chat.jsx:277
 msgid "Start chatting here"
 msgstr ""
 
@@ -1966,8 +2217,8 @@ msgstr ""
 msgid "Start checking for Malware"
 msgstr ""
 
-#: src/components/menus/mainMenu.js:206
-#: src/components/windows/index.js:43
+#: src/components/menus/mainMenu.js:221
+#: src/components/windows/index.js:48
 msgid "Statistics"
 msgstr ""
 
@@ -1976,7 +2227,7 @@ msgid "Status: Not running"
 msgstr ""
 
 #: src/components/LogInForm.jsx:219
-#: src/components/LogInForm.jsx:370
+#: src/components/LogInForm.jsx:379
 msgid "Stay logged in: "
 msgstr ""
 
@@ -1998,15 +2249,17 @@ msgstr ""
 #: src/components/Canvastools.jsx:414
 #: src/components/Canvastools.jsx:492
 #: src/components/Canvastools.jsx:595
-#: src/components/IIDTools.jsx:278
+#: src/components/IIDTools.jsx:283
 #: src/components/LogInForm.jsx:304
-#: src/components/LogInForm.jsx:394
+#: src/components/LogInForm.jsx:406
 #: src/components/Mediatools.jsx:153
-#: src/components/windows/MyFactions.jsx:255
+#: src/components/windows/Faction.jsx:1207
+#: src/components/windows/Faction.jsx:1643
+#: src/components/windows/MyFactions.jsx:256
 msgid "Submit"
 msgstr ""
 
-#: src/components/windows/OIDCConsent.jsx:221
+#: src/components/windows/OIDCConsent.jsx:219
 msgid "Switch Account"
 msgstr ""
 
@@ -2019,13 +2272,13 @@ msgstr ""
 msgid "Template Name"
 msgstr ""
 
-#: src/components/menus/mainMenu.js:195
+#: src/components/menus/mainMenu.js:210
 #: src/components/windows/Templates.jsx:52
-#: src/components/windows/index.js:40
+#: src/components/windows/index.js:45
 msgid "Templates"
 msgstr ""
 
-#: src/components/windows/OIDCConsent.jsx:212
+#: src/components/windows/OIDCConsent.jsx:210
 #, javascript-format
 msgid ""
 "The application ${ appName } at ${ appUrl } wants to login with your "
@@ -2038,10 +2291,14 @@ msgid ""
 "for orientation, can be downloaded from mega.nz here: "
 msgstr ""
 
-#: src/components/LogInForm.jsx:332
+#: src/components/LogInForm.jsx:339
 msgid ""
 "The name of your account, only a-z, A-Z, -, ., and - characters are "
 "allowed. It is permanent, you can not change it later."
+msgstr ""
+
+#: src/components/LogInForm.jsx:361
+msgid "The password for your account."
 msgstr ""
 
 #: src/components/windows/Settings.jsx:175
@@ -2064,17 +2321,21 @@ msgid ""
 "remained active for months till it got shut down on November 30th."
 msgstr ""
 
-#: src/components/LogInForm.jsx:323
+#: src/components/windows/Faction.jsx:1711
+msgid "This faction has no invites"
+msgstr ""
+
+#: src/components/LogInForm.jsx:328
 msgid ""
 "This is the name that other people see, e.g. in Chat. You can change it at "
 "any time. All characters except @, /, , >, < and # are allowed."
 msgstr ""
 
-#: src/components/windows/OIDCConsent.jsx:255
+#: src/components/windows/OIDCConsent.jsx:253
 msgid "This login may only work if your account is verified."
 msgstr ""
 
-#: src/components/windows/OIDCConsent.jsx:244
+#: src/components/windows/OIDCConsent.jsx:242
 msgid "This permission is required"
 msgstr ""
 
@@ -2095,27 +2356,30 @@ msgid ""
 "on the template, should be one pixel on the canvas."
 msgstr ""
 
-#: src/components/windows/MyFactions.jsx:199
+#: src/components/Table.jsx:21
+#: src/components/windows/Faction.jsx:1532
+#: src/components/windows/MyFactions.jsx:200
 msgid "Title"
 msgstr ""
 
-#: src/utils/validation.js:60
+#: src/utils/validation.js:62
 msgid "Title can't be empty."
 msgstr ""
 
-#: src/utils/validation.js:70
+#: src/utils/validation.js:72
 msgid "Title contains invalid character like @, /, \\ or #"
 msgstr ""
 
-#: src/utils/validation.js:61
+#: src/utils/validation.js:63
 msgid "Title must be at least 2 characters long"
 msgstr ""
 
-#: src/utils/validation.js:62
+#: src/utils/validation.js:64
 msgid "Title must be shorter than 26 characters"
 msgstr ""
 
-#: src/components/windows/MyFactions.jsx:206
+#: src/components/windows/Faction.jsx:1539
+#: src/components/windows/MyFactions.jsx:207
 msgid "Title of your faction"
 msgstr ""
 
@@ -2124,11 +2388,13 @@ msgid "To use this page, enter your Password:"
 msgstr ""
 
 #: src/components/OnlineBox.jsx:92
-#: src/components/windows/Statistics.jsx:171
+#: src/components/windows/Statistics.jsx:86
 msgid "Today"
 msgstr ""
 
-#: src/components/windows/UserArea.jsx:87
+#: src/components/windows/Faction.jsx:781
+#: src/components/windows/User.jsx:159
+#: src/components/windows/UserArea.jsx:106
 msgid "Today Placed Pixels"
 msgstr ""
 
@@ -2144,19 +2410,19 @@ msgstr ""
 msgid "Top 10 Players [pxls / day]"
 msgstr ""
 
-#: src/components/windows/Statistics.jsx:205
+#: src/components/windows/Statistics.jsx:184
 msgid "Top 10 Players from Yesterday"
 msgstr ""
 
 #: src/components/Canvastools.jsx:352
 #: src/components/Canvastools.jsx:429
 #: src/components/Canvastools.jsx:525
-#: src/components/Watchtools.jsx:191
+#: src/components/Watchtools.jsx:175
 msgid "Top-left corner"
 msgstr ""
 
 #: src/components/OnlineBox.jsx:92
-#: src/components/windows/Statistics.jsx:162
+#: src/components/windows/Statistics.jsx:85
 msgid "Total"
 msgstr ""
 
@@ -2164,11 +2430,11 @@ msgstr ""
 msgid "Total Online Users"
 msgstr ""
 
-#: src/components/windows/Statistics.jsx:239
-msgid "Total Pixels"
+#: src/components/windows/Statistics.jsx:182
+msgid "Total Pixels per Faction"
 msgstr ""
 
-#: src/components/windows/Statistics.jsx:203
+#: src/components/windows/Statistics.jsx:180
 msgid "Total Pixels per Player"
 msgstr ""
 
@@ -2176,7 +2442,9 @@ msgstr ""
 msgid "Total Pixels placed per day"
 msgstr ""
 
-#: src/components/windows/UserArea.jsx:101
+#: src/components/windows/Faction.jsx:795
+#: src/components/windows/User.jsx:173
+#: src/components/windows/UserArea.jsx:120
 msgid "Total Rank"
 msgstr ""
 
@@ -2202,7 +2470,16 @@ msgstr ""
 msgid "Unban media"
 msgstr ""
 
-#: src/components/SocialSettings.jsx:224
+#: src/components/windows/Faction.jsx:1444
+msgid "Unban members"
+msgstr ""
+
+#: src/components/windows/User.jsx:237
+#: src/components/windows/User.jsx:243
+msgid "Unblock"
+msgstr ""
+
+#: src/components/SocialSettings.jsx:221
 msgid "Unblock Users"
 msgstr ""
 
@@ -2227,7 +2504,7 @@ msgid "Unmuted Sound"
 msgstr ""
 
 #: src/components/LogInForm.jsx:221
-#: src/components/LogInForm.jsx:372
+#: src/components/LogInForm.jsx:381
 msgid "Until the browser closes"
 msgstr ""
 
@@ -2239,9 +2516,7 @@ msgstr ""
 msgid "Use our custom cursor"
 msgstr ""
 
-#: src/components/windows/Statistics.jsx:227
-#: src/components/windows/Statistics.jsx:236
-#: src/components/windows/Statistics.jsx:245
+#: src/components/windows/index.js:51
 msgid "User"
 msgstr ""
 
@@ -2249,8 +2524,8 @@ msgstr ""
 msgid "User Account"
 msgstr ""
 
-#: src/components/menus/mainMenu.js:113
-#: src/components/windows/index.js:32
+#: src/components/menus/mainMenu.js:115
+#: src/components/windows/index.js:37
 msgid "User Area"
 msgstr ""
 
@@ -2260,34 +2535,38 @@ msgstr ""
 
 #: src/components/Admintools.jsx:372
 #: src/components/LogInForm.jsx:331
-#: src/components/LogInForm.jsx:338
-#: src/components/windows/OIDCConsent.jsx:313
+#: src/components/LogInForm.jsx:336
+#: src/components/windows/OIDCConsent.jsx:311
 msgid "User Name"
 msgstr ""
 
-#: src/components/IIDTools.jsx:248
+#: src/components/IIDTools.jsx:253
 msgid "Username"
 msgstr ""
 
-#: src/utils/validation.js:54
+#: src/utils/validation.js:56
 msgid "Username can only contain the characters: a-z . _ and -"
 msgstr ""
 
 #: src/components/ChangeUsername.jsx:60
-#: src/components/windows/OIDCConsent.jsx:307
+#: src/components/windows/OIDCConsent.jsx:305
 msgid "Username can only contain the characters: a-z A-z . _ and -"
 msgstr ""
 
-#: src/utils/validation.js:46
+#: src/utils/validation.js:48
 msgid "Username can't be empty."
 msgstr ""
 
-#: src/utils/validation.js:48
+#: src/utils/validation.js:50
 msgid "Username must be at least 2 characters long"
 msgstr ""
 
-#: src/utils/validation.js:51
+#: src/utils/validation.js:53
 msgid "Username must be shorter than 26 characters"
+msgstr ""
+
+#: src/components/windows/Search.jsx:26
+msgid "Users"
 msgstr ""
 
 #: src/components/windows/Help.jsx:79
@@ -2316,6 +2595,10 @@ msgstr ""
 msgid "What the pencil should draw on the current canvas."
 msgstr ""
 
+#: src/components/windows/Faction.jsx:1635
+msgid "Whether or not this invite can only be used once."
+msgstr ""
+
 #: src/components/windows/Archive.jsx:9
 msgid ""
 "While we tend to not delete canvases, some canvases are started for fun or "
@@ -2337,7 +2620,7 @@ msgid "Wrong Color"
 msgstr ""
 
 #: src/components/ChangeUsername.jsx:59
-#: src/components/windows/OIDCConsent.jsx:306
+#: src/components/windows/OIDCConsent.jsx:304
 msgid "YOU CAN ONLY CHOOSE YOUR USERNAME ONCE!"
 msgstr ""
 
@@ -2345,11 +2628,11 @@ msgstr ""
 msgid "Yes"
 msgstr ""
 
-#: src/components/DeleteAccount.jsx:75
+#: src/components/DeleteAccount.jsx:79
 msgid "Yes, Delete My Account!"
 msgstr ""
 
-#: src/components/windows/Statistics.jsx:180
+#: src/components/windows/Statistics.jsx:89
 msgid "Yesterday"
 msgstr ""
 
@@ -2366,7 +2649,7 @@ msgid ""
 "on how to appeal. And don't forget to include the BID you can get below."
 msgstr ""
 
-#: src/components/windows/MyFactions.jsx:456
+#: src/components/windows/MyFactions.jsx:460
 msgid "You are currently not a member of any faction."
 msgstr ""
 
@@ -2374,17 +2657,22 @@ msgstr ""
 msgid "You are currently not allowed to access this game."
 msgstr ""
 
-#: src/components/windows/MyFactions.jsx:298
+#: src/components/windows/MyFactions.jsx:299
 msgid ""
 "You are currently not representing any faction. To represent one, activate "
 "a role in one of your factions below."
 msgstr ""
 
-#: src/components/windows/MyFactions.jsx:280
+#: src/components/windows/MyFactions.jsx:281
 #, javascript-format
 msgid ""
 "You are currently representing ${ activeFactionTitle } as ${ activeRoleName "
 "}"
+msgstr ""
+
+#: src/components/windows/Invite.jsx:100
+#, javascript-format
+msgid "You are logged in as ${ name } [${ username }]."
 msgstr ""
 
 #: src/components/ReplacementMessage.jsx:17
@@ -2413,14 +2701,14 @@ msgstr ""
 msgid "You can now place more on pixelplanet.fun :)"
 msgstr ""
 
-#: src/store/actions/index.js:421
+#: src/store/actions/index.js:408
 #, javascript-format
 msgid ""
 "You caught a Phish! It is a ${ FISH_TYPES[type].name } with ${ size }kg! As "
 "a bonus, your cooldown is reduced."
 msgstr ""
 
-#: src/components/windows/OIDCConsent.jsx:182
+#: src/components/windows/OIDCConsent.jsx:180
 msgid "You did not consent"
 msgstr ""
 
@@ -2428,7 +2716,14 @@ msgstr ""
 msgid "You failed your captcha"
 msgstr ""
 
-#: src/components/SocialSettings.jsx:239
+#: src/components/windows/Invite.jsx:97
+#, javascript-format
+msgid ""
+"You have been invited to join us on pixelplanet. We currently have ${ "
+"memberCount } members."
+msgstr ""
+
+#: src/components/SocialSettings.jsx:236
 msgid "You have no users blocked"
 msgstr ""
 
@@ -2437,32 +2732,28 @@ msgid "You have to be logged in to place on this canvas"
 msgstr ""
 
 #: src/store/actions/fetch.js:40
-#: src/store/actions/fetch.js:710
+#: src/store/actions/fetch.js:786
 msgid "You made too many requests"
 msgstr ""
 
-#: src/components/windows/Chat.jsx:347
+#: src/components/windows/Chat.jsx:359
 msgid "You must be logged in to chat"
 msgstr ""
 
-#: src/components/IIDTools.jsx:54
+#: src/components/IIDTools.jsx:58
 msgid "You must enter a UserId"
-msgstr ""
-
-#: src/components/IIDTools.jsx:66
-msgid "You must enter a duration"
 msgstr ""
 
 #: src/components/Mediatools.jsx:20
 msgid "You must enter a mediaId or media BID"
 msgstr ""
 
-#: src/components/IIDTools.jsx:69
+#: src/components/IIDTools.jsx:70
 #: src/components/Mediatools.jsx:25
 msgid "You must enter a reason"
 msgstr ""
 
-#: src/components/IIDTools.jsx:57
+#: src/components/IIDTools.jsx:61
 msgid "You must enter a username"
 msgstr ""
 
@@ -2474,11 +2765,11 @@ msgstr ""
 msgid "You must enter an IID"
 msgstr ""
 
-#: src/components/IIDTools.jsx:47
+#: src/components/IIDTools.jsx:51
 msgid "You must enter an IID or UserId"
 msgstr ""
 
-#: src/components/IIDTools.jsx:77
+#: src/components/IIDTools.jsx:78
 msgid "You must enter at least one IID, User Id or BID"
 msgstr ""
 
@@ -2500,7 +2791,7 @@ msgstr ""
 msgid "Your Browser looks shady"
 msgstr ""
 
-#: src/components/windows/MyFactions.jsx:271
+#: src/components/windows/MyFactions.jsx:272
 msgid "Your Factions"
 msgstr ""
 
@@ -2508,7 +2799,7 @@ msgstr ""
 msgid "Your Internet Provider is banned from this game"
 msgstr ""
 
-#: src/components/windows/MyFactions.jsx:366
+#: src/components/windows/MyFactions.jsx:369
 msgid "Your Roles"
 msgstr ""
 
@@ -2516,13 +2807,13 @@ msgstr ""
 msgid "Your ban expires at "
 msgstr ""
 
-#: src/components/windows/OIDCConsent.jsx:293
+#: src/components/windows/OIDCConsent.jsx:291
 msgid ""
 "Your did not set your username yet. A username is required to login to "
 "other applications. You can set it now:"
 msgstr ""
 
-#: src/components/windows/UserArea.jsx:110
+#: src/components/windows/UserArea.jsx:129
 msgid "Your name is:"
 msgstr ""
 
@@ -2536,7 +2827,7 @@ msgid ""
 "small."
 msgstr ""
 
-#: src/components/windows/Faction.jsx:651
+#: src/components/windows/Faction.jsx:1104
 msgid "affects"
 msgstr ""
 
@@ -2545,7 +2836,7 @@ msgstr ""
 msgid "and ${ canvas.req } Pixels set"
 msgstr ""
 
-#: src/components/windows/Faction.jsx:653
+#: src/components/windows/Faction.jsx:1106
 msgid "by"
 msgstr ""
 
@@ -2553,15 +2844,20 @@ msgstr ""
 msgid "check compliance here"
 msgstr ""
 
-#: src/components/windows/Faction.jsx:655
+#: src/components/windows/Faction.jsx:1108
+#: src/components/windows/Faction.jsx:1670
 msgid "created at"
+msgstr ""
+
+#: src/components/windows/User.jsx:181
+msgid "days"
 msgstr ""
 
 #: src/components/windows/Help.jsx:46
 msgid "download here"
 msgstr ""
 
-#: src/components/windows/Faction.jsx:657
+#: src/components/windows/Faction.jsx:1110
 msgid "lift"
 msgstr ""
 
@@ -2575,6 +2871,10 @@ msgstr ""
 
 #: src/components/windows/Help.jsx:77
 msgid "recommended"
+msgstr ""
+
+#: src/components/windows/Faction.jsx:1672
+msgid "times used"
 msgstr ""
 
 #: src/store/actions/fetch.js:44

@@ -152,11 +152,8 @@ export class User {
 
       const [newState, target, hasChanged] = patchState(this.#data, patch);
       if (!hasChanged) {
-        console.log('DID NOT PATCH USER STATE', newState, target, hasChanged);
         return;
       }
-      // TODO
-      console.log('PATCHED USER STATE', newState, '\nFROM:\n', target, patch);
       this.#data = newState;
       if (target === 'channels') {
         this.populateFromData(newState);

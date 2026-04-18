@@ -54,5 +54,6 @@ export default async function factioninfo(req, res) {
   res.json({
     powerlvl,
     faction,
+    myUid: user ? user.id : null,
   });
 }
