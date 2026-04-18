@@ -94,7 +94,7 @@ msgstr ""
 msgid "Admintools"
 msgstr ""
 
-#: src/components/windows/User.jsx:179
+#: src/components/windows/User.jsx:183
 msgid "Age"
 msgstr ""
 
@@ -207,8 +207,8 @@ msgid "Bans"
 msgstr ""
 
 #: src/components/menus/userContextMenu.js:58
-#: src/components/windows/User.jsx:239
-#: src/components/windows/User.jsx:245
+#: src/components/windows/User.jsx:243
+#: src/components/windows/User.jsx:249
 msgid "Block"
 msgstr ""
 
@@ -685,8 +685,8 @@ msgstr ""
 
 #: src/components/ChannelDropDown.jsx:82
 #: src/components/menus/userContextMenu.js:51
-#: src/components/windows/User.jsx:249
-#: src/components/windows/User.jsx:281
+#: src/components/windows/User.jsx:253
+#: src/components/windows/User.jsx:285
 msgid "DM"
 msgstr ""
 
@@ -708,7 +708,7 @@ msgstr ""
 
 #: src/components/Table.jsx:28
 #: src/components/windows/Faction.jsx:785
-#: src/components/windows/User.jsx:163
+#: src/components/windows/User.jsx:167
 #: src/components/windows/UserArea.jsx:112
 msgid "Daily Rank"
 msgstr ""
@@ -963,7 +963,7 @@ msgstr ""
 #: src/components/windows/OIDCConsent.jsx:295
 #: src/components/windows/Search.jsx:79
 #: src/components/windows/User.jsx:92
-#: src/components/windows/User.jsx:218
+#: src/components/windows/User.jsx:222
 msgid "Error"
 msgstr ""
 
@@ -992,15 +992,15 @@ msgstr ""
 
 #: src/components/ChannelDropDown.jsx:84
 #: src/components/windows/Search.jsx:27
-#: src/components/windows/User.jsx:189
+#: src/components/windows/User.jsx:193
 msgid "Factions"
 msgstr ""
 
-#: src/components/windows/Statistics.jsx:88
+#: src/components/windows/Statistics.jsx:89
 msgid "Factions Today"
 msgstr ""
 
-#: src/components/windows/Statistics.jsx:87
+#: src/components/windows/Statistics.jsx:88
 msgid "Factions Total"
 msgstr ""
 
@@ -1765,7 +1765,7 @@ msgstr ""
 
 #: src/components/OnlineBox.jsx:84
 #: src/components/windows/Faction.jsx:791
-#: src/components/windows/User.jsx:169
+#: src/components/windows/User.jsx:173
 #: src/components/windows/UserArea.jsx:118
 msgid "Placed Pixels"
 msgstr ""
@@ -1909,7 +1909,7 @@ msgstr ""
 
 #: src/components/RefreshPrompt.jsx:14
 #: src/components/windows/Faction.jsx:831
-#: src/components/windows/User.jsx:229
+#: src/components/windows/User.jsx:233
 msgid "Refresh"
 msgstr ""
 
@@ -1961,7 +1961,7 @@ msgstr ""
 msgid "Remove a Login method:"
 msgstr ""
 
-#: src/components/windows/User.jsx:132
+#: src/components/windows/User.jsx:136
 #, javascript-format
 msgid "Represents ${ activeFactionTitle } as ${ activeFactionRoleName }"
 msgstr ""
@@ -2399,7 +2399,7 @@ msgid "Today"
 msgstr ""
 
 #: src/components/windows/Faction.jsx:781
-#: src/components/windows/User.jsx:159
+#: src/components/windows/User.jsx:163
 #: src/components/windows/UserArea.jsx:108
 msgid "Today Placed Pixels"
 msgstr ""
@@ -2449,7 +2449,7 @@ msgid "Total Pixels placed per day"
 msgstr ""
 
 #: src/components/windows/Faction.jsx:795
-#: src/components/windows/User.jsx:173
+#: src/components/windows/User.jsx:177
 #: src/components/windows/UserArea.jsx:122
 msgid "Total Rank"
 msgstr ""
@@ -2480,8 +2480,8 @@ msgstr ""
 msgid "Unban members"
 msgstr ""
 
-#: src/components/windows/User.jsx:239
-#: src/components/windows/User.jsx:245
+#: src/components/windows/User.jsx:243
+#: src/components/windows/User.jsx:249
 msgid "Unblock"
 msgstr ""
 
@@ -2638,7 +2638,7 @@ msgstr ""
 msgid "Yes, Delete My Account!"
 msgstr ""
 
-#: src/components/windows/Statistics.jsx:89
+#: src/components/windows/Statistics.jsx:87
 msgid "Yesterday"
 msgstr ""
 
@@ -2833,6 +2833,10 @@ msgid ""
 "small."
 msgstr ""
 
+#: src/components/windows/User.jsx:111
+msgid "a hidden faction"
+msgstr ""
+
 #: src/components/windows/Faction.jsx:1104
 msgid "affects"
 msgstr ""
@@ -2855,7 +2859,7 @@ msgstr ""
 msgid "created at"
 msgstr ""
 
-#: src/components/windows/User.jsx:181
+#: src/components/windows/User.jsx:185
 msgid "days"
 msgstr ""
 

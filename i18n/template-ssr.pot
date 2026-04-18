@@ -824,7 +824,7 @@ msgstr ""
 msgid "This password-reset link isn't valid anymore :("
 msgstr ""
 
-#: src/routes/api/userinfo.js:25
+#: src/routes/api/userinfo.js:27
 msgid "This user is private"
 msgstr ""
 

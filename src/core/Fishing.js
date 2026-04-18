@@ -95,31 +95,38 @@ function runEventLoop() {
 
 async function registerCatchedFish(user, ip, type, size) {
   const duration = calculateFishBonusDuration(size);
-  logger.info(
-    // eslint-disable-next-line max-len
-    `FISHING: ${user.id} ${ip} caught a fish with ${size} kg, earning ${duration}ms of lower cd`,
-  );
-  if (!user.isPrivate) {
-    const userString = (user.id)
-      ? `@[${escapeMd(user.name)}](${user.id})` : 'A player';
-    if (chatProvider.enChannelId && chatProvider.eventUserId) {
-      chatProvider.broadcastChatMessage(
-        EVENT_USER_NAME,
-        // eslint-disable-next-line max-len
-        `${userString} caught a phish! It's a ${FISH_TYPES[type].name} with ${size}kg`,
-        chatProvider.enChannelId,
-        chatProvider.eventUserId,
-      ).catch(() => {});
+  if (user) {
+    logger.info(
+      // eslint-disable-next-line max-len
+      `FISHING: ${user.id} ${ip} caught a fish with ${size} kg, earning ${duration}ms of lower cd`,
+    );
+    if (!user.isPrivate) {
+      const userString = (user.id)
+        ? `@[${escapeMd(user.name)}](${user.id})` : 'A player';
+      if (chatProvider.enChannelId && chatProvider.eventUserId) {
+        chatProvider.broadcastChatMessage(
+          EVENT_USER_NAME,
+          // eslint-disable-next-line max-len
+          `${userString} caught a phish! It's a ${FISH_TYPES[type].name} with ${size}kg`,
+          chatProvider.enChannelId,
+          chatProvider.eventUserId,
+        ).catch(() => {});
+      }
     }
-  }
 
-  if (user.id) {
-    const id = await storeFish(user.id, type, size);
-    socketEvents.patchUserState(user.id, 'profile', {
-      op: 'push',
-      path: 'fishes',
-      value: { id, type, size, ts: Date.now() },
-    });
+    if (user.id) {
+      const id = await storeFish(user.id, type, size);
+      socketEvents.patchUserState(user.id, 'profile', {
+        op: 'push',
+        path: 'fishes',
+        value: { id, type, size, ts: Date.now() },
+      });
+    }
+  } else {
+    logger.info(
+      // eslint-disable-next-line max-len
+      `FISHING: Anonymous ${ip} caught a fish with ${size} kg, earning ${duration}ms of lower cd`,
+    );
   }
 
   socketEvents.broadcastIPCooldownModifier(

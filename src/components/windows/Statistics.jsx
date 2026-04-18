@@ -84,9 +84,9 @@ const Rankings = () => {
   const tabNames = {
     total: t`Total`,
     today: t`Today`,
+    yesterday: t`Yesterday`,
     factionsTotal: t`Factions Total`,
     factionsToday: t`Factions Today`,
-    yesterday: t`Yesterday`,
     countries: t`Countries Today`,
     charts: t`Charts`,
   };

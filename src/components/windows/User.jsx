@@ -105,7 +105,11 @@ const User = () => {
   let activeFactionTitle = null;
   let activeFactionRoleName = null;
   if (userData.activeFactionRoleName) {
-    activeFactionTitle = <strong>&quot;{userData.activeFactionTitle}&quot;</strong>;
+    if (userData.activeFactionTitle) {
+      activeFactionTitle = <strong>&quot;{userData.activeFactionTitle}&quot;</strong>;
+    } else {
+      activeFactionTitle = t`a hidden faction`;
+    }
     activeFactionRoleName = <strong>&quot;{userData.activeFactionRoleName}&quot;</strong>;
   }
 

@@ -246,7 +246,8 @@ FROM Users u
     LEFT JOIN Profiles p ON p.uid = u.id
     LEFT JOIN Media a ON a.id = p.avatar
     LEFT JOIN FactionRoles afr ON afr.id = p.activeRole
-    LEFT JOIN Factions af ON afr.fid = af.id
+    LEFT JOIN UserFactions auf ON auf.uid = u.id AND auf.fid = afr.fid AND (auf.flags & ${0x01 << USER_FACTION_FLAGS.HIDDEN}) = 0
+    LEFT JOIN Factions af ON auf.fid = af.id
     LEFT JOIN Media afrm ON afrm.id = afr.customFlag
     LEFT JOIN UserFactions uf ON uf.uid = u.id AND (uf.flags & ${0x01 << USER_FACTION_FLAGS.HIDDEN}) = 0
     LEFT JOIN Factions f ON f.id = uf.fid

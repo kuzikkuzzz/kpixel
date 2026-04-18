@@ -12,7 +12,9 @@ export default async function userinfo(req, res) {
   /* user can be undefined when not logged in */
   const { ttag: { t }, body: { uidOrUsername } } = req;
 
-  if (!uidOrUsername || typeof uidOrUsername !== 'string') {
+  if (!uidOrUsername || (
+    typeof uidOrUsername !== 'string' && typeof uidOrUsername !== 'number'
+  )) {
     throw new Error('No user given');
   }
 

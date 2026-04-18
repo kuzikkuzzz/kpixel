@@ -12,7 +12,7 @@ anymore, if you want to reset old users, that don't do that, run the following
 sql query:
 
 ```
-UPDATE User SET username = CONCAT('pp_', id) WHERE username NOT REGEXP '^[A-Za-z]';
+UPDATE Users SET username = CONCAT('pp_', id) WHERE username NOT REGEXP '^[A-Za-z]';
 ```
 
 # Pixelplanet <2.0 to 2.0
