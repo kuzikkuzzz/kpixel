@@ -236,7 +236,7 @@ const User = () => {
             setErrors([]);
           }}
         ><IoIosRefresh /></button>
-        {(ownUid && ownUid !== uid) && (
+        {(ownUid !== 0 && ownUid && ownUid !== uid) && (
         <React.Fragment key="user-actions">
           <button
             type="button"

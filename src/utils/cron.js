@@ -46,7 +46,7 @@ class Cron {
         try {
           await item();
         } catch (err) {
-          logger.error(`Error on cron job: ${err.message}`);
+          logger.error(`Error on cron job ${item?.name}: ${err.message}`);
         }
       });
     }
