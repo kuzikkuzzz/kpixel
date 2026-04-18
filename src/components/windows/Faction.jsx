@@ -558,7 +558,7 @@ const Faction = () => {
     if ((!factionlvl && factionlvl !== 0)
       || (factionlvl > 127 || factionlvl < -128)
     ) {
-      valErrors.push(t`Select a valid pwerlevel`);
+      valErrors.push(t`Select a valid powerlevel`);
     }
     if (valErrors.length) {
       setErrors(valErrors);

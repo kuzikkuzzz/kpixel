@@ -67,78 +67,48 @@ export async function storeMessage(message, cid, uid) {
     throw new Error('too_many_files');
   }
 
+  let models;
   try {
-    const transaction = await sequelize.transaction();
-
-    try {
-      const model = await sequelize.query(
-        'CALL STORE_CHAT_MESSAGE(?, ?, ?)', {
-          replacements: [cid, uid, message],
-          plain: true,
-          type: QueryTypes.SELECT,
-          transaction,
-        },
-      );
-      const id = model[0]?.id;
-      if (!id) {
-        throw new Error('no_such_channel');
-      }
-
-      const attachments = [];
-      if (media.length) {
-        const [, insertedRows] = await sequelize.query(
-          // eslint-disable-next-line max-len
-          `INSERT INTO MessageMedia (sid, mid) SELECT ?, m.id FROM Media m WHERE ${
-            media.map(
-              () => '( m.shortId = ? AND m.extension = ? )',
-            ).join(' OR ')
-          }`, {
-            replacements: [id, ...media.flat()],
-            raw: true,
-            type: QueryTypes.INSERT,
-            transaction,
-          },
-        );
-        if (insertedRows > 0) {
-          const models = await sequelize.query(
-            // eslint-disable-next-line max-len
-            `SELECT CONCAT(shortId, ':', b.extension) AS mediaId, b.type AS mediaType, b.size AS mediaSize, b.width AS mediaWidth, b.height AS mediaHeight, b.avgColor AS mediaAvgColor FROM Media b
-  INNER JOIN MessageMedia mm ON mm.mid = b.id
-WHERE mm.sid = ?`, {
-              replacements: [id],
-              raw: true,
-              type: QueryTypes.SELECT,
-              transaction,
-            },
-          );
-          for (let i = 0; i < models.length; i += 1) {
-            const {
-              mediaId, mediaType, mediaSize, mediaWidth, mediaHeight,
-              mediaAvgColor,
-            } = models[i];
-            attachments.push([
-              mediaId, mediaType, mediaSize, mediaWidth, mediaHeight,
-              mediaAvgColor,
-            ]);
-          }
-        }
-      }
-
-      await transaction.commit();
-      return [id, attachments];
-    } catch (error) {
-      if (transaction && !transaction.finished) {
-        await transaction.rollback();
-      }
-      throw error;
-    }
+    models = await sequelize.query(
+      'CALL STORE_CHAT_MESSAGE(?, ?, ?, ?)', {
+        replacements: [
+          cid, uid, message,
+          (media.length) ? JSON.stringify(media) : null,
+        ],
+        raw: true,
+        type: QueryTypes.SELECT,
+      },
+    );
   } catch (error) {
-    if (error.message === 'no_such_channel') {
-      throw error;
-    }
     console.error(`SQL Error on storeMessage: ${error.message}`);
     throw new Error('store_error');
   }
+
+  const returnCode = models?.[0]?.[0]?.result;
+  if (returnCode === 1) {
+    throw new Error('no_such_channel');
+  }
+  if (returnCode !== 0) {
+    throw new Error('store_error');
+  }
+  const [{ 0: { id } }] = models;
+  /*
+    * if second result set exists, media got attached
+    */
+  const attachments = [];
+  if (models[1]) {
+    models = Object.values(models[1]);
+    for (let i = 0; i < models.length; i += 1) {
+      const {
+        mediaId, mediaType, mediaSize, mediaWidth, mediaHeight, mediaAvgColor,
+      } = models[i];
+      attachments.push([
+        mediaId, mediaType, mediaSize, mediaWidth, mediaHeight, mediaAvgColor,
+      ]);
+    }
+  }
+
+  return [id, attachments];
 }
 
 /**

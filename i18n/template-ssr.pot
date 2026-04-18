@@ -963,7 +963,7 @@ msgstr ""
 msgid "You are not banned"
 msgstr ""
 
-#: src/middleware/session.js:253
+#: src/middleware/session.js:255
 #: src/routes/api/modtools.js:68
 msgid "You are not logged in"
 msgstr ""

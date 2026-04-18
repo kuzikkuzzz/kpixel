@@ -2095,8 +2095,11 @@ msgstr ""
 msgid "Select Language"
 msgstr ""
 
-#: src/components/windows/Faction.jsx:427
 #: src/components/windows/Faction.jsx:561
+msgid "Select a valid powerlevel"
+msgstr ""
+
+#: src/components/windows/Faction.jsx:427
 msgid "Select a valid pwerlevel"
 msgstr ""
 
