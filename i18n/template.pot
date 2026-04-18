@@ -206,9 +206,9 @@ msgstr ""
 msgid "Bans"
 msgstr ""
 
-#: src/components/menus/userContextMenu.js:48
-#: src/components/windows/User.jsx:237
-#: src/components/windows/User.jsx:243
+#: src/components/menus/userContextMenu.js:58
+#: src/components/windows/User.jsx:239
+#: src/components/windows/User.jsx:245
 msgid "Block"
 msgstr ""
 
@@ -271,9 +271,7 @@ msgid "Can't render 3D canvas, do you have WebGL2 disabled?"
 msgstr ""
 
 #: src/components/ChangeMail.jsx:243
-#: src/components/ChangeName.jsx:58
 #: src/components/ChangePassword.jsx:124
-#: src/components/ChangeUsername.jsx:72
 #: src/components/DeleteAccount.jsx:81
 #: src/components/GlobalCaptcha.jsx:94
 #: src/components/LogInForm.jsx:307
@@ -332,11 +330,11 @@ msgstr ""
 msgid "Change Happened"
 msgstr ""
 
-#: src/components/windows/UserArea.jsx:144
+#: src/components/windows/UserArea.jsx:146
 msgid "Change Name"
 msgstr ""
 
-#: src/components/windows/UserArea.jsx:177
+#: src/components/windows/UserArea.jsx:179
 msgid "Change Password"
 msgstr ""
 
@@ -389,7 +387,7 @@ msgstr ""
 msgid "Choose Strategy"
 msgstr ""
 
-#: src/components/windows/UserArea.jsx:157
+#: src/components/windows/UserArea.jsx:159
 msgid "Choose Username"
 msgstr ""
 
@@ -686,9 +684,9 @@ msgid "Custom Flag"
 msgstr ""
 
 #: src/components/ChannelDropDown.jsx:82
-#: src/components/menus/userContextMenu.js:41
-#: src/components/windows/User.jsx:247
-#: src/components/windows/User.jsx:279
+#: src/components/menus/userContextMenu.js:51
+#: src/components/windows/User.jsx:249
+#: src/components/windows/User.jsx:281
 msgid "DM"
 msgstr ""
 
@@ -711,7 +709,7 @@ msgstr ""
 #: src/components/Table.jsx:28
 #: src/components/windows/Faction.jsx:785
 #: src/components/windows/User.jsx:163
-#: src/components/windows/UserArea.jsx:110
+#: src/components/windows/UserArea.jsx:112
 msgid "Daily Rank"
 msgstr ""
 
@@ -729,7 +727,7 @@ msgstr ""
 msgid "Delete"
 msgstr ""
 
-#: src/components/windows/UserArea.jsx:184
+#: src/components/windows/UserArea.jsx:186
 msgid "Delete Account"
 msgstr ""
 
@@ -820,6 +818,11 @@ msgstr ""
 
 #: src/components/SocialSettings.jsx:215
 msgid "Don't show me in global stats"
+msgstr ""
+
+#: src/components/ChangeName.jsx:58
+#: src/components/ChangeUsername.jsx:72
+msgid "Done"
 msgstr ""
 
 #: src/components/embeds/LocalMedia.jsx:238
@@ -1361,7 +1364,7 @@ msgstr ""
 msgid "Log in or Register"
 msgstr ""
 
-#: src/components/windows/UserArea.jsx:137
+#: src/components/windows/UserArea.jsx:139
 msgid "Log out"
 msgstr ""
 
@@ -1373,11 +1376,11 @@ msgstr ""
 msgid "LogIn"
 msgstr ""
 
-#: src/components/windows/UserArea.jsx:166
+#: src/components/windows/UserArea.jsx:168
 msgid "Login Methods"
 msgstr ""
 
-#: src/components/windows/UserArea.jsx:78
+#: src/components/windows/UserArea.jsx:80
 msgid "Login to access more features and stats."
 msgstr ""
 
@@ -1736,6 +1739,7 @@ msgid "Ping"
 msgstr ""
 
 #: src/components/Table.jsx:31
+#: src/components/Table.jsx:33
 msgid "Pixel"
 msgstr ""
 
@@ -1762,7 +1766,7 @@ msgstr ""
 #: src/components/OnlineBox.jsx:84
 #: src/components/windows/Faction.jsx:791
 #: src/components/windows/User.jsx:169
-#: src/components/windows/UserArea.jsx:116
+#: src/components/windows/UserArea.jsx:118
 msgid "Placed Pixels"
 msgstr ""
 
@@ -1852,13 +1856,14 @@ msgid "Press ${ bindX } to toggle showing of pixel activity"
 msgstr ""
 
 #: src/components/SocialSettings.jsx:206
-#: src/components/Table.jsx:92
-#: src/components/Table.jsx:120
+#: src/components/Table.jsx:94
+#: src/components/Table.jsx:122
 msgid "Private"
 msgstr ""
 
 #: src/components/menus/mainMenu.js:121
-#: src/components/windows/UserArea.jsx:87
+#: src/components/menus/userContextMenu.js:30
+#: src/components/windows/UserArea.jsx:89
 msgid "Profile"
 msgstr ""
 
@@ -1876,6 +1881,7 @@ msgid "Range Banned"
 msgstr ""
 
 #: src/components/Table.jsx:30
+#: src/components/Table.jsx:32
 msgid "Rank"
 msgstr ""
 
@@ -1903,7 +1909,7 @@ msgstr ""
 
 #: src/components/RefreshPrompt.jsx:14
 #: src/components/windows/Faction.jsx:831
-#: src/components/windows/User.jsx:227
+#: src/components/windows/User.jsx:229
 msgid "Refresh"
 msgstr ""
 
@@ -2135,7 +2141,7 @@ msgstr ""
 msgid "Server got confused by your pixels. Are you playing on multiple devices?"
 msgstr ""
 
-#: src/components/windows/UserArea.jsx:177
+#: src/components/windows/UserArea.jsx:179
 msgid "Set Password"
 msgstr ""
 
@@ -2196,7 +2202,7 @@ msgstr ""
 msgid "Small Pixels When Zoomed"
 msgstr ""
 
-#: src/components/windows/UserArea.jsx:191
+#: src/components/windows/UserArea.jsx:193
 msgid "Social Settings"
 msgstr ""
 
@@ -2394,7 +2400,7 @@ msgstr ""
 
 #: src/components/windows/Faction.jsx:781
 #: src/components/windows/User.jsx:159
-#: src/components/windows/UserArea.jsx:106
+#: src/components/windows/UserArea.jsx:108
 msgid "Today Placed Pixels"
 msgstr ""
 
@@ -2444,7 +2450,7 @@ msgstr ""
 
 #: src/components/windows/Faction.jsx:795
 #: src/components/windows/User.jsx:173
-#: src/components/windows/UserArea.jsx:120
+#: src/components/windows/UserArea.jsx:122
 msgid "Total Rank"
 msgstr ""
 
@@ -2474,8 +2480,8 @@ msgstr ""
 msgid "Unban members"
 msgstr ""
 
-#: src/components/windows/User.jsx:237
-#: src/components/windows/User.jsx:243
+#: src/components/windows/User.jsx:239
+#: src/components/windows/User.jsx:245
 msgid "Unblock"
 msgstr ""
 
@@ -2813,7 +2819,7 @@ msgid ""
 "other applications. You can set it now:"
 msgstr ""
 
-#: src/components/windows/UserArea.jsx:129
+#: src/components/windows/UserArea.jsx:131
 msgid "Your name is:"
 msgstr ""
 

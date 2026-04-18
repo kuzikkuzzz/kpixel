@@ -33,7 +33,7 @@ const ChangeUsername = ({ done }) => {
       changeUser({ username }),
     );
     setSubmitting(false);
-    if (respErrors) {
+    if (respErrors.length) {
       setErrors(respErrors);
       return;
     }
@@ -69,7 +69,7 @@ const ChangeUsername = ({ done }) => {
         <button type="submit">
           {(submitting) ? '...' : t`Save`}
         </button>
-        <button type="button" onClick={done}>{t`Cancel`}</button>
+        <button type="button" onClick={done}>{t`Done`}</button>
       </form>
     </div>
   );

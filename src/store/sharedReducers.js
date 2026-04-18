@@ -36,7 +36,7 @@ const guiPersist = persistReducer({
 const ranksPersist = persistReducer({
   key: 'ranks',
   storage,
-  version: 20,
+  version: 21,
   migrate,
 }, ranks);
 

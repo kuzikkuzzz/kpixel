@@ -73,7 +73,7 @@ const MyFactions = () => {
       changeProfile({ activeFactionRole: gActiveFactionRole }),
     );
     setErrors((oErrors) => {
-      if (respErrors) {
+      if (respErrors.length) {
         return respErrors;
       }
       return oErrors.length ? [] : oErrors;
@@ -86,7 +86,7 @@ const MyFactions = () => {
       changeUserFaction({ factionName, isHidden }),
     );
     setErrors((oErrors) => {
-      if (respErrors) {
+      if (respErrors.length) {
         return respErrors;
       }
       return oErrors.length ? [] : oErrors;

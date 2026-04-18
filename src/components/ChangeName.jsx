@@ -31,7 +31,7 @@ const ChangeName = ({ done }) => {
     setSubmitting(true);
     const respErrors = await dispatch(changeUser({ name }));
     setSubmitting(false);
-    if (respErrors) {
+    if (respErrors.length) {
       setErrors(respErrors);
       return;
     }
@@ -55,7 +55,7 @@ const ChangeName = ({ done }) => {
         <button type="submit">
           {(submitting) ? '...' : t`Save`}
         </button>
-        <button type="button" onClick={done}>{t`Cancel`}</button>
+        <button type="button" onClick={done}>{t`Done`}</button>
       </form>
     </div>
   );

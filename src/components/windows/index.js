@@ -1,6 +1,7 @@
 import React from 'react';
 import { t } from 'ttag';
 
+import RefreshPrompt from '../RefreshPrompt.jsx';
 import Help from './Help.jsx';
 import Settings from './Settings.jsx';
 import UserArea from './UserArea.jsx';
@@ -16,16 +17,15 @@ import Faction from './Faction.jsx';
 import User from './User.jsx';
 import Search from './Search.jsx';
 
-// eslint-disable-next-line max-len
-const Modtools = React.lazy(() => import(/* webpackChunkName: "modtools" */ './Modtools.jsx'));
-// eslint-disable-next-line max-len
-const Statistics = React.lazy(() => import(/* webpackChunkName: "stats" */ './Statistics.jsx'));
-// eslint-disable-next-line max-len
-const Converter = React.lazy(() => import(/* webpackChunkName: "converter" */ './Converter.jsx'));
-// eslint-disable-next-line max-len
-const Invite = React.lazy(() => import(/* webpackChunkName: "invite" */ './Invite.jsx'));
-// eslint-disable-next-line max-len
-const OIDCConsent = React.lazy(() => import(/* webpackChunkName: "oidc" */ './OIDCConsent.jsx'));
+const reloadOnCatch = () => Promise.resolve({ default: RefreshPrompt });
+
+/* eslint-disable max-len */
+const Modtools = React.lazy(() => import(/* webpackChunkName: "modtools" */ './Modtools.jsx').catch(reloadOnCatch));
+const Statistics = React.lazy(() => import(/* webpackChunkName: "stats" */ './Statistics.jsx').catch(reloadOnCatch));
+const Converter = React.lazy(() => import(/* webpackChunkName: "converter" */ './Converter.jsx').catch(reloadOnCatch));
+const Invite = React.lazy(() => import(/* webpackChunkName: "invite" */ './Invite.jsx').catch(reloadOnCatch));
+const OIDCConsent = React.lazy(() => import(/* webpackChunkName: "oidc" */ './OIDCConsent.jsx').catch(reloadOnCatch));
+/* eslint-enable max-len */
 
 export default {
   /*

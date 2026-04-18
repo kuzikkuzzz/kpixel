@@ -20,6 +20,16 @@ export default function userContextMenu(store, args) {
     },
     text: t`Ping`,
   }, {
+    id: 'pr',
+    type: 'link',
+    link: 'USER',
+    /*
+     * this is currently supported since we expose uid and use it a lot
+     */
+    args: { username: uid },
+    text: t`Profile`,
+
+  }, {
     id: 'dm',
     type: 'func',
     func: () => {

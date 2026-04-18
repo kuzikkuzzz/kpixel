@@ -67,6 +67,8 @@ const UserArea = () => {
     state.ranks.dailyRanking,
   ], shallowEqual);
 
+  const done = useCallback(() => setArea('NONE'), []);
+
   const [
     badges, fishes, avatarId,
   ] = useProfile((profile) => [
@@ -190,7 +192,7 @@ const UserArea = () => {
           onClick={() => setArea('SOCIAL_SETTINGS')}
         > {t`Social Settings`}</span> )
       </div>
-      {(Area) && <Area key="area" done={() => setArea(null)} />}
+      {(Area) && <Area key="area" done={done} />}
     </div>
   );
 };

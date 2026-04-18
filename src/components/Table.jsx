@@ -27,6 +27,8 @@ const Table = ({
     joined: t`Joined`,
     today_rank: t`Daily Rank`,
     today_pixel: t`Daily Pixel`,
+    yesterday_rank: t`Rank`,
+    yesterday_pixel: t`Pixel`,
     rank: t`Rank`,
     pixel: t`Pixel`,
   };

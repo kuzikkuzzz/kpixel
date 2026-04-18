@@ -127,31 +127,31 @@ class Ranks {
       return;
     }
 
-    if (newRanks.ranking) {
+    if (Array.isArray(newRanks.ranking)) {
       newRanks.ranking = {
         ...this.ranks.ranking,
         rows: newRanks.ranking,
       };
     }
-    if (newRanks.dailyRanking) {
+    if (Array.isArray(newRanks.dailyRanking)) {
       newRanks.dailyRanking = {
         ...this.ranks.dailyRanking,
         rows: newRanks.dailyRanking,
       };
     }
-    if (newRanks.factionRanking) {
+    if (Array.isArray(newRanks.factionRanking)) {
       newRanks.factionRanking = {
         ...this.ranks.factionRanking,
         rows: newRanks.factionRanking,
       };
     }
-    if (newRanks.dailyFactionRanking) {
+    if (Array.isArray(newRanks.dailyFactionRanking)) {
       newRanks.dailyFactionRanking = {
         ...this.ranks.dailyFactionRanking,
         rows: newRanks.dailyFactionRanking,
       };
     }
-    if (newRanks.prevTop) {
+    if (Array.isArray(newRanks.prevTop)) {
       newRanks.prevTop = {
         ...this.ranks.prevTop,
         rows: newRanks.prevTop,

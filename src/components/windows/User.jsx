@@ -60,7 +60,7 @@ const User = () => {
   const [userData, setUserData] = useState(null);
   const [errors, setErrors] = useState([]);
 
-  const { args: { username } } = useContext(WindowContext);
+  const { args: { username: uidOrUsername } } = useContext(WindowContext);
 
   const link = useLink();
 
@@ -74,7 +74,7 @@ const User = () => {
       if (userData) {
         return;
       }
-      const reqUserData = await requestUserInfo(username);
+      const reqUserData = await requestUserInfo(uidOrUsername);
       if (reqUserData.errors) {
         setErrors(reqUserData.errors);
         return;
@@ -82,7 +82,7 @@ const User = () => {
       setErrors([]);
       setUserData(reqUserData);
     })();
-  }, [userData, username]);
+  }, [userData, uidOrUsername]);
 
   if (!userData) {
     return (
@@ -220,7 +220,9 @@ const User = () => {
       <div className="form-actions">
         <ClipboardCopyField
           hideField="true"
-          text={window.location.origin + buildPopUpUrl('USER', { username })}
+          text={window.location.origin + buildPopUpUrl('USER', {
+            username: userData.username,
+          })}
         />
         <button
           type="button"
