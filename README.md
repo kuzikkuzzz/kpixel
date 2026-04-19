@@ -25,6 +25,7 @@ A game changer in the world of browser games ✊🏿
 - [nodejs environment](https://nodejs.org/en/) (>=21)
 - [redis](https://redis.io/) or [redis-for-windows](https://github.com/redis-windows/redis-windows) in version **6.2.0 or above** as database for storìng the canvas
 - [mariadb](https://www.mariadbtutorial.com/getting-started/install-mariadb/)
+- `ffmpeg` and `perl-Image-ExifTool` (optional, used for media uploads)
 
 Make sure to set-up an own user with password and database for pixelplanet in SQL, i.e. in `mariadb` run as `root`:
 
@@ -45,11 +46,11 @@ Check out that config file for available options.
 
 Those are options you will most likely want to adjust:
 
-| Variable       | Description              |  Example                |
-|----------------|:-------------------------|------------------------:|
-| PORT           | Own Port                 | 5000                    |
-| HOST           | Own Host                 | "localhost"             |
-| REDIS_URL      | URL:PORT of redis server | "redis://localhost:6379"|
+| Variable         | Description                |  Example                |
+|------------------|:---------------------------|------------------------:|
+| PORT             | Own Port                   | 5000                    |
+| HOST             | Own Host                   | "localhost"             |
+| REDIS_URL        | URL:PORT of redis server   | "redis://localhost:6379"|
 | MARIADB_HOST     | MariaDB Host               | "localhost"             |
 | MARIADB_USER     | MariaDB User               | "pixelplanet"           |
 | MARIADB_PW       | MariaDB Password           | "sqlpassword"           |
