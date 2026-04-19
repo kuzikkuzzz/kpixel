@@ -1,16 +1,18 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: admin@pixelplanet.fun\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: \n"
-"Last-Translator: weblate <weblate@noreply.pixelplanet.fun>\n"
-"Language-Team: \n"
+"PO-Revision-Date: 2026-04-19 13:23+0000\n"
+"Last-Translator: lay <lay@noreply.pixelplanet.fun>\n"
+"Language-Team: Dutch <https://translate.gs-os.com/projects/ppfun/client/nl/>"
+"\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.3.2\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.15.2\n"
 
 msgid " which is in "
 msgstr " welke is in "
@@ -51,24 +53,27 @@ msgid "(0 = infinite)"
 msgstr "(0 = onbeperkt)"
 
 msgid "(click a role to activate it)"
-msgstr ""
+msgstr "(klik op een rol om deze te activeren)"
 
 msgid "(click a role to assign or remove it)"
-msgstr ""
+msgstr "(klik op een rol om deze toe te wijzen of te verwijderen)"
 
 msgid "+last hour"
-msgstr ""
+msgstr "+laatste uur"
 
 msgid "...loading Login methods and sessions..."
-msgstr ""
+msgstr "...Inlogmethoden en sessies worden geladen..."
 
 msgid "A Phish!"
-msgstr ""
+msgstr "Een Phish!"
 
 msgid ""
 "A flag representing the role, it should be 16x11 pixels. If left empty, "
 "users with this role selected will still show their own flags."
 msgstr ""
+"Een vlag die de rol vertegenwoordigt, deze moet 16x11 pixels groot zijn. Als "
+"dit veld leeg wordt gelaten, zullen gebruikers met deze rol nog steeds hun "
+"eigen vlaggen tonen."
 
 msgid "A new verification mail is getting sent to you."
 msgstr "Er wordt een nieuwe verificatiemail naar u verzonden."
@@ -77,38 +82,40 @@ msgid ""
 "A role has all the permissions of all levels below and equal to it. In "
 "example: Every role with a power level of >=50 can manage invites (50)."
 msgstr ""
+"Een rol heeft alle machtigingen van alle niveaus daaronder en gelijk aan dat "
+"niveau. Bijvoorbeeld: Elke rol met een machtsniveau van 50 of hoger kan "
+"uitnodigingen beheren (50)."
 
 msgid "ACCESS MODTOOLS"
-msgstr ""
+msgstr "TOEGANG TOT MODTOOLS"
 
 msgid "Add Grid (uncheck if you need a 1:1 template)"
 msgstr "Raster toevoegen (uitvinken als u een 1:1-sjabloon nodig heeft)"
 
-#, fuzzy
 msgid "Add Template"
-msgstr "Sjabloon downloaden"
+msgstr "Sjabloon toevoegen"
 
 #. This if for moderation tools, it's not important to translate this
 msgid "Admintools"
-msgstr ""
+msgstr "Beheertools"
 
 msgid "Age"
-msgstr ""
+msgstr "Leeftijd"
 
 msgid "All members of this faction are hidden"
-msgstr ""
+msgstr "Alle leden van deze factie zijn verborgen"
 
 msgid "All sound effects will be disabled."
 msgstr "Alle geluidseffecten worden uitgeschakeld."
 
 msgid "Always show Movement Controls"
-msgstr ""
+msgstr "Toon altijd de Bewegingsbesturing"
 
 msgid "Always show movement control buttons"
-msgstr ""
+msgstr "Toon altijd de bewegingsbesturingsknoppen"
 
 msgid "An image representing your faction"
-msgstr ""
+msgstr "Een afbeelding die jouw factie vertegenwoordigt"
 
 msgid "Anti Aliasing"
 msgstr "Anti-aliasing"
@@ -120,49 +127,49 @@ msgid "Archive"
 msgstr "Archief"
 
 msgid "Assign Roles"
-msgstr ""
+msgstr "Wijs rollen toe"
 
 msgid "Assign new Mod"
 msgstr "Wijs nieuwe mod"
 
 msgid "Assign role per default to new members"
-msgstr ""
+msgstr "Wijs standaard een rol toe aan nieuwe leden"
 
 msgid "Assign roles below their own"
-msgstr ""
+msgstr "Wijs rollen toe die lager zijn dan hun eigen rol"
 
 msgid "Assign this role to every new member automatically on join."
-msgstr ""
+msgstr "Wijs deze rol automatisch toe aan elk nieuw lid bij aanmelding."
 
 msgid "Assigned role per default"
-msgstr ""
+msgstr "Standaard toegewezen rol"
 
 msgid "Attach File"
-msgstr ""
+msgstr "Bestand bijvoegen"
 
 msgid "Auto Zoom In"
 msgstr "Automatisch inzoomen"
 
 msgid "Avatar"
-msgstr ""
+msgstr "Avatar"
 
 msgid "Back"
-msgstr ""
+msgstr "Terug"
 
 msgid "Badge Display"
-msgstr ""
+msgstr "Insigne Weergave"
 
 msgid "Badges"
-msgstr ""
+msgstr "Insignes"
 
 msgid "Ban"
-msgstr ""
+msgstr "Verbannen"
 
 msgid "Ban media"
-msgstr ""
+msgstr "Verboden media"
 
 msgid "Ban members"
-msgstr ""
+msgstr "Verban leden"
 
 msgid "Banned"
 msgstr "Gebanned"
@@ -184,9 +191,13 @@ msgid ""
 "users to start messaging you. You can still start new DMs with other users "
 "and already ongoing DMs will still be open."
 msgstr ""
+"Blokkeer alle privéberichten. Door dit in te schakelen, kunnen andere "
+"gebruikers je geen berichten meer sturen. Je kunt nog steeds nieuwe "
+"privéberichten met andere gebruikers starten en lopende privéberichten "
+"blijven gewoon zichtbaar."
 
 msgid "Blocked"
-msgstr ""
+msgstr "Geblokkeerd"
 
 msgid "Bottom-right corner"
 msgstr "Hoek rechtsonder"
@@ -207,10 +218,10 @@ msgid "Calculate like GIMP"
 msgstr "Bereken zoals GIMP"
 
 msgid "Can not export more than 20 or no template!"
-msgstr ""
+msgstr "Exporteren is niet mogelijk met meer dan 20 items of zonder sjabloon!"
 
 msgid "Can not import more than 20 or no template!"
-msgstr ""
+msgstr "Je kunt niet meer dan 20 sjablonen importeren, of geen sjablonen!"
 
 msgid "Can't read? Reload:"
 msgstr "Kan je niet lezen? Opnieuw laden:"
@@ -221,9 +232,8 @@ msgstr "Kan 3D-canvas niet weergeven, heeft u WebGL2 uitgeschakeld?"
 msgid "Cancel"
 msgstr "Annuleer"
 
-#, fuzzy
 msgid "Cancel adding Template"
-msgstr "Sjabloon downloaden"
+msgstr "Annuleer het toevoegen van sjabloon"
 
 msgid "Canvas"
 msgstr "Canvas"
@@ -244,26 +254,25 @@ msgid "Captcha"
 msgstr "Captcha"
 
 msgid "Caught by"
-msgstr ""
+msgstr "Gevangen door"
 
 msgid "Change Flag"
-msgstr ""
+msgstr "Vlag Veranderen"
 
-#, fuzzy
 msgid "Change Happened"
-msgstr "Gebruikersnaam wijzigen"
+msgstr "Een verandering is gebeurd"
 
 msgid "Change Name"
-msgstr ""
+msgstr "Naam veranderen"
 
 msgid "Change Password"
 msgstr "Verander wachtwoord"
 
 msgid "Change your Mail Adress here:"
-msgstr ""
+msgstr "Wijzig hier uw E-mailadres:"
 
 msgid "Channel"
-msgstr ""
+msgstr "Kanaal"
 
 msgid "Channel settings"
 msgstr "Kanaal instellingen"
@@ -281,7 +290,7 @@ msgid "Check out past versions of the canvas."
 msgstr "Bekijk eerdere versies van het canvas."
 
 msgid "Check to allow"
-msgstr ""
+msgstr "Vink aan om toe te staan"
 
 msgid "Check who placed in an area"
 msgstr "Controleer wie in een gebied heeft geplaatst"
@@ -296,7 +305,7 @@ msgid "Choose Strategy"
 msgstr "Kies strategie"
 
 msgid "Choose Username"
-msgstr ""
+msgstr "Kies Gebruikersnaam"
 
 msgid ""
 "Clean spare pixels that are surrounded by a single other color or unset "
@@ -318,10 +327,10 @@ msgstr ""
 "maximaal 1 andere ingestelde pixels"
 
 msgid "Cleaners can use 0cd blank colors."
-msgstr ""
+msgstr "Cleaners kunnen 0cd-kleuren gebruiken."
 
 msgid "Clear"
-msgstr ""
+msgstr "Duidelijk"
 
 #, javascript-format
 msgid ""
@@ -335,7 +344,7 @@ msgid "Click a color in palette to select it"
 msgstr "Klik op een kleur in het palet om deze te selecteren"
 
 msgid "Click here to cease representation."
-msgstr ""
+msgstr "Klik hier om de vertegenwoordiging te beëindigen."
 
 msgid "Click here to request a new verification mail."
 msgstr "Klik hier om een nieuwe verificatiemail aan te vragen."
@@ -344,7 +353,7 @@ msgid "Click to Load Captcha"
 msgstr "Klik om Captcha te laden"
 
 msgid "Click to remove"
-msgstr ""
+msgstr "Klik om te verwijderen"
 
 msgid "Clone"
 msgstr "Kloon"
@@ -359,25 +368,25 @@ msgid "Close Palette"
 msgstr "Palet sluiten"
 
 msgid "Compact Chat"
-msgstr ""
+msgstr "Compacte Chat"
 
 msgid "Compact Palette"
 msgstr "Compact palet"
 
 msgid "Confirm"
-msgstr ""
+msgstr "Bevestigen"
 
 msgid "Confirm Ban"
 msgstr ""
 
 msgid "Confirm Delete"
-msgstr ""
+msgstr "Verwijderen Bevestigen"
 
 msgid "Confirm Kick"
-msgstr ""
+msgstr "Kick Bevestigen"
 
 msgid "Confirm Leave"
-msgstr ""
+msgstr "Verlaten bevestigen"
 
 msgid "Confirm New Password"
 msgstr "Bevestig nieuw wachtwoord"
@@ -386,14 +395,14 @@ msgid "Confirm Password"
 msgstr "Bevestig wachtwoord"
 
 msgid "Confirm your password."
-msgstr ""
+msgstr "Bevestig uw wachtwoord."
 
 #, javascript-format
 msgid "Connection error ${ code } :("
 msgstr "Verbindingsfout ${ code } :("
 
 msgid "Consent"
-msgstr ""
+msgstr "Toestemming"
 
 msgid "Controls"
 msgstr "Bedieningen"
@@ -411,24 +420,23 @@ msgid ""
 "Cooldown is usually automatically changed for a country that is dominating. "
 "In example in the case of a streamer raid."
 msgstr ""
+"De cooldown wordt meestal automatisch aangepast voor een land dat domineert. "
+"Bijvoorbeeld in het geval van een raid door een streamer."
 
-#, fuzzy
 msgid "Coordinates"
-msgstr "Ongeldige coördinaten"
+msgstr "Coördinaten"
 
-#, fuzzy
 msgid "Coordinates:"
-msgstr "Ongeldige coördinaten"
+msgstr "Coördinaten:"
 
-#, fuzzy
 msgid "Copied"
-msgstr "Gekopiëerd!"
+msgstr "Gekopiëerd"
 
 msgid "Copy"
 msgstr "Kopiëren"
 
 msgid "Copy Link"
-msgstr ""
+msgstr "Link kopiëren"
 
 msgid "Copy Selected to Clipboard"
 msgstr ""

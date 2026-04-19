@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: admin@pixelplanet.fun\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2025-11-02 09:40+0000\n"
-"Last-Translator: Batyo <batyo@noreply.pixelplanet.fun>\n"
+"PO-Revision-Date: 2026-04-19 13:23+0000\n"
+"Last-Translator: SzegenY <szegeny@noreply.pixelplanet.fun>\n"
 "Language-Team: Hungarian <https://translate.gs-os.com/projects/ppfun/server/"
 "hu/>\n"
 "Language: hu\n"
@@ -12,7 +12,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.14\n"
+"X-Generator: Weblate 5.15.2\n"
 
 msgid "1bit"
 msgstr "1bit"
@@ -34,7 +34,7 @@ msgstr ""
 "00:00-kor frissül."
 
 msgid "A file was too large"
-msgstr ""
+msgstr "A fájl túl nagy volt"
 
 msgid "Access modtools"
 msgstr "Hozzáférés a Moderátori eszközökhöz"
@@ -43,40 +43,40 @@ msgid "Add Application"
 msgstr "Applikáció hozzáadása"
 
 msgid "Add an Application (OIDC Client)"
-msgstr ""
+msgstr "Alkalmazás Hozzáadása (OIDC Kliens)"
 
 msgid "Add new application"
-msgstr ""
+msgstr "Új alkalmazás hozzáadása"
 
 msgid "An error occured. Please try again later."
 msgstr "Egy hiba történt. Kérlek próbáld újra később."
 
 msgid "Application changed successfully"
-msgstr ""
+msgstr "Alkalmazás sikeresen megváltoztatva"
 
 msgid "Application deleted"
-msgstr ""
+msgstr "Alkalmazás törölve"
 
 msgid "Application successfully added"
-msgstr ""
+msgstr "Alkalmazás sikeresen hozzáadva"
 
 msgid "Avatar can only be an image"
-msgstr ""
+msgstr "Az avatar csak kép lehet"
 
 msgid "Avatar not given or not an image"
-msgstr ""
+msgstr "Avatar nincs megadva vagy nem kép"
 
 msgid "Black and White canvas"
 msgstr "Fekete-fehér vászon"
 
 msgid "Can not change a role above your own"
-msgstr ""
+msgstr "Nem változtathatsz a saját rangod feletti rangot"
 
 msgid "Can not change a role that is equal to your own"
-msgstr ""
+msgstr "Nem módosíthatsz veled egy rangban levő rangot"
 
 msgid "Can not change the default setting of this role"
-msgstr ""
+msgstr "A rang alapbeállítását nem lehet módosítani"
 
 msgid "Can not change the powerlevel of a role equal or above you"
 msgstr ""
@@ -85,19 +85,19 @@ msgid "Can not change the powerlevel of the Sovereign"
 msgstr ""
 
 msgid "Can not chat while being banned"
-msgstr ""
+msgstr "Nem chatelhetsz, miközben tiltva vagy"
 
 msgid "Can not create a role on the same level as yours"
-msgstr ""
+msgstr "Veled egy szinten levő rangot nem hozhatsz létre"
 
 msgid "Can not create a role with a powerlevel beyond yours"
 msgstr ""
 
 msgid "Can not delete a role on the same level as yours"
-msgstr ""
+msgstr "Nem törölhetsz veled egy szinten levő rangot"
 
 msgid "Can not delete this role"
-msgstr ""
+msgstr "A rang nem törölhető"
 
 msgid "Can not elevate the powerlevel of a role beyond yours"
 msgstr ""
@@ -109,23 +109,25 @@ msgid "Can not have more than 20 faction roles"
 msgstr ""
 
 msgid "Can not have more than 20 invites per faction"
-msgstr ""
+msgstr "Nem lehet 20-nál több meghívója a frakciónak"
 
 msgid "Can not modify user equal to you or above you"
-msgstr ""
+msgstr "Nem módosíthatsz felhasználót veled vagy feletted levő szinten"
 
 #. when leaving a faction and you are the last owner
 msgid "Can not orphan a faction"
-msgstr ""
+msgstr "Nem hagyhatod magára a frakciót"
 
 #, javascript-format
 msgid ""
 "Can not upload this many files at once, only 5 are allowed, you have $"
 "{ amountOfFiles }"
 msgstr ""
+"Nem tölthetsz fel ennyi fájlt egyszerre (maximum 5, jelenleg ${ "
+"amountOfFiles })"
 
 msgid "Can only have one Sovereign role"
-msgstr ""
+msgstr "Csak egy Szuverén rangod lehet"
 
 msgid "Click here"
 msgstr "Kattints ide"
@@ -134,7 +136,7 @@ msgid "Click to Verify"
 msgstr "Kattints ide a hitelesítéshez"
 
 msgid "Client Name"
-msgstr ""
+msgstr "Kliens Neve"
 
 msgid "Confirm New Password"
 msgstr "Új jelszó megerősítése"
@@ -147,55 +149,55 @@ msgstr ""
 "idővel rendelkezik a földvászonnal!"
 
 msgid "Consent"
-msgstr ""
+msgstr "Elfogadás"
 
 msgid "Coronavirus"
 msgstr "Koronavírus"
 
 msgid "Could not change the flag of this role"
-msgstr ""
+msgstr "Nem módosíthatod a rang zászlóját"
 
 msgid "Could not change this setting. Maybe try again later."
-msgstr ""
+msgstr "A beállítás nem módosítható, próbáld újra később."
 
 msgid "Could not close this Session."
 msgstr ""
 
 msgid "Could not find this login method"
-msgstr ""
+msgstr "A bejelentkezési módszer nem található"
 
 msgid "Could not leave this channel"
-msgstr ""
+msgstr "Nem sikerült elhagyni a csatornát"
 
 msgid "Could not set this factions avatar"
-msgstr ""
+msgstr "Nem sikerült a frakció avatarját beállítani"
 
 msgid "Could not set your avatar"
-msgstr ""
+msgstr "Nem sikerült az avatarodat beállítani"
 
 msgid "Could not set your faction role"
-msgstr ""
+msgstr "Nem sikerült a frakcióbeli rangodat beállítani"
 
 msgid "Could not upload all files"
-msgstr ""
+msgstr "Nem sikerült az összes fájlt feltölteni"
 
 msgid "Couldn't find this mail in our database"
 msgstr "Az adatbázisunkban nem találtuk meg ezt az e-mailt"
 
 msgid "Default"
-msgstr ""
+msgstr "Alapértelmezett"
 
 msgid "Delete Application"
-msgstr ""
+msgstr "Alkalmazás törlése"
 
 msgid "Description can't be empty"
-msgstr ""
+msgstr "A leírás nem lehet üres"
 
 msgid "Description must be shorter than 1000 characters"
-msgstr ""
+msgstr "A leírásnak 1000 karakternél rövidebbnek kell lennie"
 
 msgid "Display name for your OIDC client"
-msgstr ""
+msgstr "Az OIDC kliensed megjelenített neve"
 
 msgid "Double click on globe to go back."
 msgstr "Kattints duplán a földgömbre a visszatéréshez."
@@ -207,7 +209,7 @@ msgid "Earth"
 msgstr "Föld"
 
 msgid "Edit existing applications"
-msgstr ""
+msgstr "Meglévő alkalmazások szerkesztése"
 
 msgid "Email can't be empty."
 msgstr "Az e-mail cím nem lehet üres."
@@ -225,31 +227,34 @@ msgid "Email should contain a @"
 msgstr "Az e-mail címnek tartalmaznia kell egy @-t"
 
 msgid "Error"
-msgstr ""
+msgstr "Hiba"
 
 msgid "Failed to create a new user :("
-msgstr ""
+msgstr "Nem sikerült új felhasználót létrehozni :c"
 
 #, javascript-format
 msgid ""
 "File ${ filename } has ${ sizeMB } MB and is too large. It may only be $"
 "{ MAX_FILE_SIZE_MB } MB"
 msgstr ""
+"A fájl ${ filename } túl nagy (${ sizeMB } MB). A maximális méret ${ "
+"MAX_FILE_SIZE_MB } MB"
 
 #, javascript-format
 msgid "File ${ filename } has an invalid extension"
 msgstr ""
 
 msgid "File is broken"
-msgstr ""
+msgstr "A fájl sérült"
 
 #. 'client_secret' is a technical term and should not be translated
 msgid ""
 "Generate a new client_secret. The old secret will become invalid immediately."
 msgstr ""
+"Generálj egy új client_secret-et. A régi secret azonnal érvénytelenné válik."
 
 msgid "Get email address"
-msgstr ""
+msgstr "E-mail cím megszerzése"
 
 msgid "Get the amount of Pixels placed and ranking"
 msgstr ""
