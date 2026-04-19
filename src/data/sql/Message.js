@@ -80,7 +80,7 @@ export async function storeMessage(message, cid, uid) {
       },
     );
   } catch (error) {
-    console.error(`SQL Error on storeMessage: ${error.message}`);
+    console.error(`SQL Error ${error.code} on storeMessage: ${error.message}`);
     throw new Error('store_error');
   }
 

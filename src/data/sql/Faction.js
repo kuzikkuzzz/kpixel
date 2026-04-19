@@ -287,7 +287,7 @@ export async function getFactionLvlOfUser(uid, factionName) {
   INNER JOIN UserFactions uf ON uf.fid = f.id
   LEFT JOIN UserFactionRoles ufr ON ufr.uid = uf.uid
   LEFT JOIN FactionRoles fr ON fr.id = ufr.frid AND fr.fid = f.id
-WHERE uf.uid = ? AND f.name = ? ORDER BY fr.factionlvl DESC LIMIT 1`, {
+WHERE uf.uid = ? AND f.name = CONVERT(? USING ascii) ORDER BY fr.factionlvl DESC LIMIT 1`, {
       /* eslint-enable max-len */
         replacements: [uid, factionName],
         plain: true,
@@ -641,7 +641,7 @@ fr.factionlvl AS 'roles.factionlvl' FROM Factions f
   LEFT JOIN Media a ON a.id = f.avatar
   LEFT JOIN FactionRoles fr ON fr.fid = f.id
   LEFT JOIN Media frm ON frm.id = fr.customFlag
-WHERE f.name = ?`, {
+WHERE f.name = CONVERT(? USING ascii)`, {
         replacements: [name],
         raw: true,
         type: QueryTypes.SELECT,

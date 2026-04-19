@@ -285,7 +285,7 @@ function uploadRouteFactory(restrictType, resize) {
         } else {
           switch (error) {
             case 'no_info':
-              error = t`No file metadata given`;
+              error = 'No file metadata given';
               break;
             case 'unknown_type':
               error = t`MimeType or extension not known or supported`;

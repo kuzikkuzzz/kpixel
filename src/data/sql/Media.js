@@ -640,9 +640,11 @@ export async function cleanMedia() {
             fs.rmSync(screencapFilePath);
           }
         } catch (error) {
-          console.error(
-            `Error on cleanMedia for ${filePath}: ${error.message}`,
-          );
+          if (error.code !== 'ENOENT') {
+            console.error(
+              `Error on cleanMedia for ${filePath}: ${error.message}`,
+            );
+          }
         }
       }
       await sequelize.query(
