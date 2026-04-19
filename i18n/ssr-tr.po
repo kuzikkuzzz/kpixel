@@ -397,9 +397,6 @@ msgstr "Herhangi bir Avatar verilmedi"
 msgid "No Captcha given"
 msgstr "Captcha girilmedi"
 
-msgid "No file metadata given"
-msgstr "Dosya üstverisi verilmedi"
-
 msgid "No or invalid fish id."
 msgstr "Balık id'si boş veya geçersiz."
 
@@ -907,6 +904,9 @@ msgid ""
 msgstr ""
 "piksel atanlardan oluşan bu küçük topluluğumuza hoş geldiniz, hesabınızı "
 "kullanabilmek için e-posta adresini doğrulayın. Bunu buradan yapabilirsiniz: "
+
+#~ msgid "No file metadata given"
+#~ msgstr "Dosya üstverisi verilmedi"
 
 #~ msgid "You are banned"
 #~ msgstr "Yasaklısınız"

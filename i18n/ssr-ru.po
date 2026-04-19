@@ -401,9 +401,6 @@ msgstr ""
 msgid "No Captcha given"
 msgstr "Капча не введена"
 
-msgid "No file metadata given"
-msgstr "Метаданные файла отсутствуют"
-
 msgid "No or invalid fish id."
 msgstr "Не найден или указан некорректный ID рыбы."
 
@@ -916,6 +913,9 @@ msgstr ""
 "добро пожаловать в наше маленькое сообщество тех, кто ставит пиксели, чтобы "
 "использовать свою учетную запись, вы должны подтвердить свою почту. Вы "
 "можете сделать это здесь: "
+
+#~ msgid "No file metadata given"
+#~ msgstr "Метаданные файла отсутствуют"
 
 #~ msgid "Could not set your avtar"
 #~ msgstr "Не удалось установить аватар"

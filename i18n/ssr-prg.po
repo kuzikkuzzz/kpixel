@@ -390,9 +390,6 @@ msgstr ""
 msgid "No Captcha given"
 msgstr "Ni kāptča dāts"
 
-msgid "No file metadata given"
-msgstr ""
-
 msgid "No or invalid fish id."
 msgstr "Nēīgnaī aba nēistājgs pūwis id."
 

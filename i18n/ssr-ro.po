@@ -398,9 +398,6 @@ msgstr ""
 msgid "No Captcha given"
 msgstr "Niciun captcha dat"
 
-msgid "No file metadata given"
-msgstr "Nu sunt date metadate ale fișierului"
-
 msgid "No or invalid fish id."
 msgstr "Nu este sau id-ul de pește este invalid."
 
@@ -908,6 +905,9 @@ msgid ""
 msgstr ""
 "Bine ai venit în mica noastră comunitate de pixelplacers, pentru a-ți folosi "
 "contul, trebuie să-ți verifici e-mailul. Poți face asta aici: "
+
+#~ msgid "No file metadata given"
+#~ msgstr "Nu sunt date metadate ale fișierului"
 
 #~ msgid "Could not set your avtar"
 #~ msgstr "Nu ți-am putut seta avtarul"

@@ -387,9 +387,6 @@ msgstr ""
 msgid "No Captcha given"
 msgstr "ʻIkai ha Captcha ʻe foaki"
 
-msgid "No file metadata given"
-msgstr ""
-
 msgid "No or invalid fish id."
 msgstr ""
 

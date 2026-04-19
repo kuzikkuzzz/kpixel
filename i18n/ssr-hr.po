@@ -238,8 +238,8 @@ msgid ""
 "File ${ filename } has ${ sizeMB } MB and is too large. It may only be $"
 "{ MAX_FILE_SIZE_MB } MB"
 msgstr ""
-"Datoteka ${ filename } ima ${ sizeMB } MB i prevelika je. Može imati samo ${ "
-"MAX_FILE_SIZE_MB } MB"
+"Datoteka ${ filename } ima ${ sizeMB } MB i prevelika je. Može imati samo $"
+"{ MAX_FILE_SIZE_MB } MB"
 
 #, javascript-format
 msgid "File ${ filename } has an invalid extension"
@@ -282,9 +282,10 @@ msgid ""
 "your password."
 msgstr ""
 "Ako ste to bili vi, molimo vas da zanemarite ovu e-poruku. Ako niste bili "
-"vi, molimo vas da posjetite <a href=\"https://pixelplanet.fun\">"
-"pixelplanet.fun</a> i odjavite se sa svake sesije za koju niste svjesni pod "
-"\"Načini prijave\" u korisničkom području i promijenite lozinku."
+"vi, molimo vas da posjetite <a href=\"https://"
+"pixelplanet.fun\">pixelplanet.fun</a> i odjavite se sa svake sesije za koju "
+"niste svjesni pod \"Načini prijave\" u korisničkom području i promijenite "
+"lozinku."
 
 #, javascript-format
 msgid ""
@@ -396,9 +397,6 @@ msgstr "Nije dodijeljen avatar"
 
 msgid "No Captcha given"
 msgstr "Nije data Captcha"
-
-msgid "No file metadata given"
-msgstr "Nisu navedeni metapodaci datoteke"
 
 msgid "No or invalid fish id."
 msgstr "Nema ili je nevažeći identifikacijski broj ribe."
@@ -560,7 +558,8 @@ msgstr "Hvala"
 
 #, javascript-format
 msgid "The file ${ filename } is banned ${ reason }. Ban ID: ${ mbid }"
-msgstr "Datoteka ${ filename } je zabranjena ${ reason }. ID zabrane: ${ mbid }"
+msgstr ""
+"Datoteka ${ filename } je zabranjena ${ reason }. ID zabrane: ${ mbid }"
 
 msgid "The user owning this badge is private"
 msgstr "Korisnik koji posjeduje ovu značku je privatni"
@@ -907,6 +906,9 @@ msgid ""
 msgstr ""
 "dobrodošli u našu malu zajednicu postavljača pixela (pičkovca), da biste "
 "koristili svoj račun, morate potvrditi svoju poštu. To možete učiniti ovdje: "
+
+#~ msgid "No file metadata given"
+#~ msgstr "Nisu navedeni metapodaci datoteke"
 
 #~ msgid "You are banned"
 #~ msgstr "Banani ste"

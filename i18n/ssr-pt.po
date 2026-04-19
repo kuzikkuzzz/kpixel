@@ -392,9 +392,6 @@ msgstr ""
 msgid "No Captcha given"
 msgstr "Nenhum Captcha fornecido"
 
-msgid "No file metadata given"
-msgstr ""
-
 msgid "No or invalid fish id."
 msgstr "Não ou id de peixe inválido."
 

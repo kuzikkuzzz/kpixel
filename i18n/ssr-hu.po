@@ -389,9 +389,6 @@ msgstr ""
 msgid "No Captcha given"
 msgstr "Nincs Captcha megadva"
 
-msgid "No file metadata given"
-msgstr ""
-
 msgid "No or invalid fish id."
 msgstr "Nem vagy érvénytelen hal id."
 

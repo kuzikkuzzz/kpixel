@@ -382,9 +382,6 @@ msgstr "无头像"
 msgid "No Captcha given"
 msgstr "无可用验证码"
 
-msgid "No file metadata given"
-msgstr "未提供文件元数据"
-
 msgid "No or invalid fish id."
 msgstr "不存在或无效Fish ID。"
 
@@ -871,6 +868,9 @@ msgid ""
 msgstr ""
 "欢迎来到我们的像素画爱好者小社区！要使用您的账号，您需要验证邮箱。您可以在这"
 "里进行验证： "
+
+#~ msgid "No file metadata given"
+#~ msgstr "未提供文件元数据"
 
 #~ msgid "Could not this roles flag"
 #~ msgstr "无法标记此身份"

@@ -393,9 +393,6 @@ msgstr ""
 msgid "No Captcha given"
 msgstr "Pasvorton ne donita."
 
-msgid "No file metadata given"
-msgstr ""
-
 msgid "No or invalid fish id."
 msgstr "Neniu aŭ malvalida fiŝidentigilo."
 

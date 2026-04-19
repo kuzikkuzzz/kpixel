@@ -403,9 +403,6 @@ msgstr "Avatari nuk është japur"
 msgid "No Captcha given"
 msgstr "Nuk është dhënë asnjë Captcha"
 
-msgid "No file metadata given"
-msgstr "Nuk janë dhënë informacione shtesë për skedarin"
-
 msgid "No or invalid fish id."
 msgstr "Asnjë ID ose ID e pavlefshme peshku."
 
@@ -929,6 +926,9 @@ msgid ""
 msgstr ""
 "mirësevini në komunitetin tonë të vogël të pixelplacers, për të përdorur "
 "llogarinë tuaj, duhet të verifikoni emailin tuaj. Këtë mund ta bëni këtu: "
+
+#~ msgid "No file metadata given"
+#~ msgstr "Nuk janë dhënë informacione shtesë për skedarin"
 
 #~ msgid "Could not set your avtar"
 #~ msgstr "Nuk mund të vendosej avatari juaj"
