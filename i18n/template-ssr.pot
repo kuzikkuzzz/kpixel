@@ -505,10 +505,6 @@ msgstr ""
 msgid "No Captcha given"
 msgstr ""
 
-#: src/routes/api/media.js:288
-msgid "No file metadata given"
-msgstr ""
-
 #: src/routes/api/badge.js:16
 #: src/routes/api/fish.js:16
 msgid "No or invalid fish id."
