@@ -68,20 +68,34 @@ export async function storeMessage(message, cid, uid) {
   }
 
   let models;
-  try {
-    models = await sequelize.query(
-      'CALL STORE_CHAT_MESSAGE(?, ?, ?, ?)', {
-        replacements: [
-          cid, uid, message,
-          (media.length) ? JSON.stringify(media) : null,
-        ],
-        raw: true,
-        type: QueryTypes.SELECT,
-      },
-    );
-  } catch (error) {
-    console.error(`SQL Error ${error.code} on storeMessage: ${error.message}`);
-    throw new Error('store_error');
+  let retries = 3;
+  while (!models && retries) {
+    retries -= 1;
+    try {
+      // eslint-disable-next-line no-await-in-loop
+      models = await sequelize.query(
+        'CALL STORE_CHAT_MESSAGE(?, ?, ?, ?)', {
+          replacements: [
+            cid, uid, message,
+            (media.length) ? JSON.stringify(media) : null,
+          ],
+          raw: true,
+          type: QueryTypes.SELECT,
+        },
+      );
+    } catch (error) {
+      /*
+       * message storing can deadlock
+       */
+      console.error(
+        `SQL Error on storeMessage ${cid} | ${uid}: ${error.message}`,
+      );
+      if (!error.message.startsWith('Deadlock')) {
+        throw new Error('store_error');
+      }
+      // eslint-disable-next-line no-await-in-loop
+      await new Promise((resolve) => { setTimeout(resolve, 200); });
+    }
   }
 
   const returnCode = models?.[0]?.[0]?.result;

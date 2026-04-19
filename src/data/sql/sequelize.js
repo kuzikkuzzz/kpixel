@@ -295,7 +295,6 @@ BEGIN
     SELECT 1 AS result;
   ELSE
     SELECT LAST_INSERT_ID() INTO v_mid;
-    UPDATE Channels SET lastMessage = NOW() WHERE id = p_cid;
 
     SELECT 0 AS result, v_mid AS id;
     IF p_media_json IS NOT NULL THEN
@@ -315,6 +314,8 @@ BEGIN
         WHERE mm.sid = v_mid;
     END IF;
     COMMIT;
+
+    UPDATE Channels SET lastMessage = NOW() WHERE id = p_cid;
   END IF;
 END`,
     STORE_FISH: `CREATE PROCEDURE IF NOT EXISTS STORE_FISH(IN p_uid INT UNSIGNED, IN p_type TINYINT UNSIGNED, IN p_size FLOAT) NOT DETERMINISTIC MODIFIES SQL DATA
@@ -966,7 +967,7 @@ BEGIN
 END`,
   };
 
-  const funcVersion = 31;
+  const funcVersion = 32;
   const curVersion = Number((await sequelize.query('SELECT value FROM Configs WHERE `key`=\'functions_version\''))[0]?.[0]?.value);
   const doUpgrade = funcVersion !== curVersion;
   if (doUpgrade) {

@@ -124,7 +124,7 @@ const User = () => {
       <h3>
         {(userData.customFlag) && (
           <img
-            className="chatflag presentation"
+            className="chatflag presentation illegit"
             src={cdn`/cf/${userData.customFlag}.gif`}
             alt=""
           />
