@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: admin@pixelplanet.fun\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2026-03-09 08:30+0000\n"
-"Last-Translator: Extreme Motorsex <em@noreply.pixelplanet.fun>\n"
+"PO-Revision-Date: 2026-04-19 10:59+0000\n"
+"Last-Translator: kurac <kurac@noreply.pixelplanet.fun>\n"
 "Language-Team: Croatian <https://translate.gs-os.com/projects/ppfun/client/"
 "hr/>\n"
 "Language: hr\n"
@@ -51,24 +51,26 @@ msgid "(0 = infinite)"
 msgstr "(0 = beskonačno)"
 
 msgid "(click a role to activate it)"
-msgstr ""
+msgstr "(aktivirajte ulogu klikom na istu)"
 
 msgid "(click a role to assign or remove it)"
-msgstr ""
+msgstr "(kliknite na ulogu za dodavanje ili uklanjanje)"
 
 msgid "+last hour"
 msgstr "+zadnji sat"
 
 msgid "...loading Login methods and sessions..."
-msgstr ""
+msgstr "...učitavanje login metoda i sesija..."
 
 msgid "A Phish!"
-msgstr ""
+msgstr "Riba!"
 
 msgid ""
 "A flag representing the role, it should be 16x11 pixels. If left empty, "
 "users with this role selected will still show their own flags."
 msgstr ""
+"Zastava koja predstavlja ulogu mora biti 16x11 pixela. Ukoliko nije "
+"dodijeljena igrači s ovom ulogom će biti prikazani sa svojoj osobnom."
 
 msgid "A new verification mail is getting sent to you."
 msgstr "Dobivate novu e-poruku za potvrdu."
@@ -77,9 +79,11 @@ msgid ""
 "A role has all the permissions of all levels below and equal to it. In "
 "example: Every role with a power level of >=50 can manage invites (50)."
 msgstr ""
+"Uloga ima sve permisije svih levela ispod i jednakima istoj. Primjer: Svaki "
+"role s powerlevelom >=50 može upravljati pozivnicama (50)."
 
 msgid "ACCESS MODTOOLS"
-msgstr ""
+msgstr "PRISTUPI MOD SUČELJU"
 
 msgid "Add Grid (uncheck if you need a 1:1 template)"
 msgstr "Dodaj rešetku (poništite ako vam je potreban predložak 1:1)"
@@ -89,13 +93,13 @@ msgstr "Dodaj šablon"
 
 #. This if for moderation tools, it's not important to translate this
 msgid "Admintools"
-msgstr ""
+msgstr "Administratorsko sučelje"
 
 msgid "Age"
-msgstr ""
+msgstr "Starost"
 
 msgid "All members of this faction are hidden"
-msgstr ""
+msgstr "Svi članovi ove fakcije su skriveni"
 
 msgid "All sound effects will be disabled."
 msgstr "Svi zvučni efekti bit će onemogućeni."
@@ -107,7 +111,7 @@ msgid "Always show movement control buttons"
 msgstr "Uvijek prikaži gumbe za kontrolu kretanja"
 
 msgid "An image representing your faction"
-msgstr ""
+msgstr "Slika koja predstavlja vašu fakciju"
 
 msgid "Anti Aliasing"
 msgstr "Anti-Aliasing"
@@ -119,49 +123,49 @@ msgid "Archive"
 msgstr "Arhiva"
 
 msgid "Assign Roles"
-msgstr ""
+msgstr "Dodaj uloge"
 
 msgid "Assign new Mod"
 msgstr "Dodijeli novi Mod"
 
 msgid "Assign role per default to new members"
-msgstr ""
+msgstr "Dodaj ulogu kao zadanu za nove članove"
 
 msgid "Assign roles below their own"
-msgstr ""
+msgstr "Dodaj uloge ispod svoje vlastite"
 
 msgid "Assign this role to every new member automatically on join."
-msgstr ""
+msgstr "Automatski dodijeli ovaj role svim novim članovima."
 
 msgid "Assigned role per default"
-msgstr ""
+msgstr "Zadano dodijeljena uloga"
 
 msgid "Attach File"
-msgstr ""
+msgstr "Dodaj datoteku"
 
 msgid "Auto Zoom In"
 msgstr "Automatsko povećanje"
 
 msgid "Avatar"
-msgstr ""
+msgstr "Avatar"
 
 msgid "Back"
-msgstr ""
+msgstr "Nazad"
 
 msgid "Badge Display"
-msgstr ""
+msgstr "Prikaz bedževa"
 
 msgid "Badges"
-msgstr ""
+msgstr "Bedževi"
 
 msgid "Ban"
-msgstr ""
+msgstr "Ban"
 
 msgid "Ban media"
-msgstr ""
+msgstr "Ban medij"
 
 msgid "Ban members"
-msgstr ""
+msgstr "Ban članova"
 
 msgid "Banned"
 msgstr "Zabranjeni ste"
@@ -170,7 +174,7 @@ msgid "Banned? Detected as Proxy?"
 msgstr "Zabranjen? Otkriven kao proxy?"
 
 msgid "Bans"
-msgstr ""
+msgstr "Zabrane"
 
 msgid "Block"
 msgstr "Blokiraj"
@@ -183,9 +187,12 @@ msgid ""
 "users to start messaging you. You can still start new DMs with other users "
 "and already ongoing DMs will still be open."
 msgstr ""
+"Blokiraj osobne poruke. Omogućavanjem ove opcije bit će nemoguće započeti "
+"razgovor s vama. Možete započinjati nove DMove s ostalim igračima i već "
+"otvoreni razgovori ustaju."
 
 msgid "Blocked"
-msgstr ""
+msgstr "Blokiran"
 
 msgid "Bottom-right corner"
 msgstr "Donji desni kut"
@@ -242,25 +249,25 @@ msgid "Captcha"
 msgstr "Captcha"
 
 msgid "Caught by"
-msgstr ""
+msgstr "Uhvaćena od"
 
 msgid "Change Flag"
-msgstr ""
+msgstr "Promijeni zastavu"
 
 msgid "Change Happened"
 msgstr "Dogodila se promjena"
 
 msgid "Change Name"
-msgstr ""
+msgstr "Promijeni ime"
 
 msgid "Change Password"
 msgstr "Promjena lozinkе"
 
 msgid "Change your Mail Adress here:"
-msgstr ""
+msgstr "Promijenite email adresu ovdje:"
 
 msgid "Channel"
-msgstr ""
+msgstr "Kanal"
 
 msgid "Channel settings"
 msgstr "Postavke kanala"
@@ -278,7 +285,7 @@ msgid "Check out past versions of the canvas."
 msgstr "Pogledajte prethodne verzije platna."
 
 msgid "Check to allow"
-msgstr ""
+msgstr "Potvrdi za pristanak"
 
 msgid "Check who placed in an area"
 msgstr "Provjerite tko je postavljao u neko područje"
@@ -293,7 +300,7 @@ msgid "Choose Strategy"
 msgstr "Odaberite strategiju"
 
 msgid "Choose Username"
-msgstr ""
+msgstr "Izaberi username"
 
 msgid ""
 "Clean spare pixels that are surrounded by a single other color or unset "
@@ -315,10 +322,10 @@ msgstr ""
 "drugim postavljenim pikselima"
 
 msgid "Cleaners can use 0cd blank colors."
-msgstr ""
+msgstr "Cleaneri mogu koristiti zadane 0cd boje"
 
 msgid "Clear"
-msgstr ""
+msgstr "Očisti"
 
 #, javascript-format
 msgid ""
@@ -332,7 +339,7 @@ msgid "Click a color in palette to select it"
 msgstr "Pritisnite boju u paleti da biste je odabrali"
 
 msgid "Click here to cease representation."
-msgstr ""
+msgstr "Klindi ovdje za prestanak predstavljanja."
 
 msgid "Click here to request a new verification mail."
 msgstr "Kliknite ovdje da zatražite novu e-poštu za potvrdu."
@@ -341,7 +348,7 @@ msgid "Click to Load Captcha"
 msgstr "Kliknite za učitavanje Captcha"
 
 msgid "Click to remove"
-msgstr ""
+msgstr "Klikni za brisanje"
 
 msgid "Clone"
 msgstr "Kloniraj"
@@ -356,25 +363,25 @@ msgid "Close Palette"
 msgstr "Zatvori paletu"
 
 msgid "Compact Chat"
-msgstr ""
+msgstr "Kompaktni razgovor"
 
 msgid "Compact Palette"
 msgstr "Kompaktna paleta"
 
 msgid "Confirm"
-msgstr ""
+msgstr "Potvrdi"
 
 msgid "Confirm Ban"
-msgstr ""
+msgstr "Potvrdi ban"
 
 msgid "Confirm Delete"
-msgstr ""
+msgstr "Potvrdi brisanje"
 
 msgid "Confirm Kick"
-msgstr ""
+msgstr "Potvrdi izbacivanje"
 
 msgid "Confirm Leave"
-msgstr ""
+msgstr "Potvrdi izlazak"
 
 msgid "Confirm New Password"
 msgstr "Potvrdi novu lozinku"
@@ -383,14 +390,14 @@ msgid "Confirm Password"
 msgstr "Potvrdite lozinku"
 
 msgid "Confirm your password."
-msgstr ""
+msgstr "Potvrdite vašu lozinku."
 
 #, javascript-format
 msgid "Connection error ${ code } :("
 msgstr "Pogreška veze ${ code } :("
 
 msgid "Consent"
-msgstr ""
+msgstr "Pristani"
 
 msgid "Controls"
 msgstr "Kontrole"
@@ -424,22 +431,22 @@ msgid "Copy"
 msgstr "Kopiraj"
 
 msgid "Copy Link"
-msgstr ""
+msgstr "Kopiraj vezu"
 
 msgid "Copy Selected to Clipboard"
-msgstr ""
+msgstr "Kopiraj izabrano u međuspremnik"
 
 msgid "Copy URL"
-msgstr ""
+msgstr "Kopiraj URL vezu"
 
 msgid "Copy UserId to Clipboard"
-msgstr ""
+msgstr "Kopiraj UserId u međuspremnik"
 
 msgid "Copy to Clipboard"
 msgstr "Kopirati u međuspremnik"
 
 msgid "Could not connect to server"
-msgstr ""
+msgstr "Nije moguće povezivanje na server"
 
 msgid "Could not connect to server, please try again later :("
 msgstr "Ne mogu se spojiti na poslužitelj, pokušajte ponovno kasnije :("
@@ -448,7 +455,7 @@ msgid "Could not load captcha"
 msgstr "Nije moguće učitati captcha"
 
 msgid "Could not process files"
-msgstr ""
+msgstr "Nije moguće procesuiranje datoteke"
 
 msgid "Couldn't set Pixel"
 msgstr "Nije moguće postaviti Pixel"
@@ -460,25 +467,25 @@ msgid "Country"
 msgstr "Država"
 
 msgid "Create Faction"
-msgstr ""
+msgstr "Napravi fakciju"
 
 msgid "Create Invite"
-msgstr ""
+msgstr "Napravi pozivnicu"
 
 msgid "Create New Faction"
-msgstr ""
+msgstr "Napravi novu fakciju"
 
 msgid "Create New Invite"
-msgstr ""
+msgstr "Napravi novu pozivnicu"
 
 msgid "Create New Role"
-msgstr ""
+msgstr "Napravi novu ulogu"
 
 msgid "Create Role"
-msgstr ""
+msgstr "Napravi ulogu"
 
 msgid "Create roles"
-msgstr ""
+msgstr "Napravi uloge"
 
 #, javascript-format
 msgid "Credit for the Palette of the 2bit canvas goes to ${ donendoLink }."
@@ -499,19 +506,19 @@ msgid "Custom Cursor"
 msgstr "Prilagođeni kursor"
 
 msgid "Custom Flag"
-msgstr ""
+msgstr "Prilagođena zastava"
 
 msgid "DM"
 msgstr "DM"
 
 msgid "Daily Pixel"
-msgstr ""
+msgstr "Dnevni pixeli"
 
 msgid "Daily Pixels per Country"
 msgstr "Dnevni pikseli po zemlji"
 
 msgid "Daily Pixels per Faction"
-msgstr ""
+msgstr "Dnevni pixeli po fakciji"
 
 msgid "Daily Pixels per Player"
 msgstr "Dnevni pikseli po igraču"
@@ -520,10 +527,10 @@ msgid "Daily Rank"
 msgstr "Dnevni rank"
 
 msgid "Date of Award"
-msgstr ""
+msgstr "Datum primitka nagrade"
 
 msgid "Date of catch"
-msgstr ""
+msgstr "Datum ulova"
 
 msgid "Delete"
 msgstr "Izbriši"
@@ -532,25 +539,25 @@ msgid "Delete Account"
 msgstr "Izbriši račun"
 
 msgid "Delete Faction"
-msgstr ""
+msgstr "Izbriši fakciju"
 
 msgid "Delete the faction"
-msgstr ""
+msgstr "Izbriši ovu fakciju"
 
 msgid "Deny"
-msgstr ""
+msgstr "Odbij"
 
 msgid "Description"
-msgstr ""
+msgstr "Opis"
 
 msgid "Description can't be empty"
-msgstr ""
+msgstr "Opis ne može biti prazan"
 
 msgid "Description must be shorter than 1000 characters"
-msgstr ""
+msgstr "Opis mora biti kraći od 1000 znakova"
 
 msgid "Description of your faction"
-msgstr ""
+msgstr "Opis vaše fakcije"
 
 msgid ""
 "Didn't get an answer from pixelplanet. Try to refresh if this problem "
@@ -584,21 +591,22 @@ msgstr "Radite stvari s IP-ovima (jedan IP po retku)"
 msgid ""
 "Don't let people find this faction in public search or look at its profile."
 msgstr ""
+"Onemogući pronalazak ove fakcije u javnoj pretrazi ili pregledom profila."
 
 msgid "Don't remember"
-msgstr ""
+msgstr "Ne pamti"
 
 msgid "Don't show faction in search"
-msgstr ""
+msgstr "Ne prikaži fakciju u pretrazi"
 
 msgid "Don't show me in global stats"
 msgstr "Ne prikazuj me u globalnoj statistici"
 
 msgid "Done"
-msgstr ""
+msgstr "Gotovo"
 
 msgid "Download"
-msgstr ""
+msgstr "Preuzmi"
 
 msgid "Download Template"
 msgstr "Preuzmite šablon"
@@ -620,13 +628,13 @@ msgid "Edit"
 msgstr "Uredi"
 
 msgid "Edit faction"
-msgstr ""
+msgstr "Uredi fakciju"
 
 msgid "Edit roles below their own"
-msgstr ""
+msgstr "Uredi uloge ispod vlastite"
 
 msgid "Edit their own role and elevate users to their own level"
-msgstr ""
+msgstr "Uredi osobnu ulogu i promoviraj igrače na svoj level"
 
 msgid "Email"
 msgstr "Email"
@@ -641,6 +649,8 @@ msgid ""
 "Email is used to verify your account. You might get a cofirmation mail after "
 "registering."
 msgstr ""
+"Email se koristi za verifikaciju računa. Provjerite svoj email nakon "
+"registracije."
 
 msgid "Email should at least contain a dot"
 msgstr "Email treba sadržavati barem točku"
@@ -670,10 +680,10 @@ msgid "Enter UserName of new Mod"
 msgstr "Unesite korisničko ime novog Mod"
 
 msgid "Enter a little text that describes your faction"
-msgstr ""
+msgstr "Unesi manji tekst koji opisuje vašu fakciju"
 
 msgid "Enter search term and press Search."
-msgstr ""
+msgstr "Unesi pojam za pretraživanje i klikni Pretraga."
 
 msgid "Enter your mail address and we will send you a new password:"
 msgstr "Unesite svoju mail adresu i mi ćemo vam poslati novu lozinku:"
@@ -689,27 +699,29 @@ msgid "Error :("
 msgstr "Greška :("
 
 msgid "Expand"
-msgstr ""
+msgstr "Proširi"
 
 msgid "Export enabled templates"
 msgstr "Izvoz omogućenih šablona"
 
 msgid "Faction"
-msgstr ""
+msgstr "Fakcija"
 
 msgid "Factions"
-msgstr ""
+msgstr "Fakcije"
 
 msgid "Factions Today"
-msgstr ""
+msgstr "Fakcije danas"
 
 msgid "Factions Total"
-msgstr ""
+msgstr "Fakcije ukupno"
 
 msgid ""
 "Factions allow you to coordinate better with other players. Search for "
 "existing factions, find friends or create your own faction."
 msgstr ""
+"Fakcije vam omogućavaju bolju koordinaciju s ostalim igračima. Pretraži "
+"postojeće fakcije, pronađi prijatelje ili napravi svoju vlastitu fakciju."
 
 msgid "Factor"
 msgstr "Faktor"
@@ -718,13 +730,13 @@ msgid "File"
 msgstr "Datoteka"
 
 msgid "Fish Display"
-msgstr ""
+msgstr "Prikaz ribetine"
 
 msgid "For"
-msgstr ""
+msgstr "Za"
 
 msgid "For Developers"
-msgstr ""
+msgstr "Za developere"
 
 #, javascript-format
 msgid ""
@@ -732,24 +744,28 @@ msgid ""
 "your data, simply delete your account, this in fact wipes all privacy "
 "relevant traces. Your placed pixels will of course not be deleted."
 msgstr ""
+"Za sva pravna pitanja obratite se ${ mailLink }. Ako želite izbrisati svoje "
+"podatke, jednostavno izbrišite svoj račun, čime se zapravo brišu svi tragovi "
+"relevantni za privatnost. Vaši postavljeni pikseli naravno neće biti "
+"izbrisani."
 
 msgid "For one day"
-msgstr ""
+msgstr "Na jedan dan"
 
 msgid "For one month"
-msgstr ""
+msgstr "Na jedan mjesec"
 
 msgid "For one week"
-msgstr ""
+msgstr "Na jedan tjedan"
 
 msgid "For one year"
-msgstr ""
+msgstr "Na godinu dana"
 
 msgid "For when you are playing on a potato."
 msgstr "Jer kad igraš na krumpir."
 
 msgid "Forever"
-msgstr ""
+msgstr "Zauvijek"
 
 msgid "From History"
 msgstr "Iz History mode-a"
@@ -767,10 +783,10 @@ msgid "Get Users"
 msgstr "Dobiti korisnike"
 
 msgid "Get email address"
-msgstr ""
+msgstr "Dobij adresu e-pošte"
 
 msgid "Get the amount of Pixels placed and ranking"
-msgstr ""
+msgstr "Dostigni broj pixela i rangiranje"
 
 msgid "Globe View"
 msgstr "Pogled na globus"
@@ -779,7 +795,7 @@ msgid "Go to"
 msgstr "Idi do"
 
 msgid "Grant"
-msgstr ""
+msgstr "Dopusti"
 
 msgid "Grid OFF"
 msgstr "Rešetka OFF"
@@ -788,7 +804,7 @@ msgid "Grid ON"
 msgstr "Rešetka ON"
 
 msgid "Groups"
-msgstr ""
+msgstr "Grupe"
 
 msgid "Have fun!"
 msgstr "Zabavite se!"
@@ -810,7 +826,7 @@ msgid "Hide Embed"
 msgstr "Sakrij Embed"
 
 msgid "Hide from profile"
-msgstr ""
+msgstr "Sakrij s profila"
 
 msgid ""
 "Higher zoomlevels take some time to update, the 3D globe gets updated at "
@@ -833,7 +849,7 @@ msgid "I forgot my Password."
 msgstr "Zaboravio sam lozinku."
 
 msgid "ID"
-msgstr ""
+msgstr "ID"
 
 msgid "IID (optional)"
 msgstr "IID (izborno)"
@@ -845,7 +861,7 @@ msgid "IP Actions"
 msgstr "IP radnje"
 
 msgid "Identifiers"
-msgstr ""
+msgstr "Identifikatori"
 
 #, javascript-format
 msgid ""
@@ -854,11 +870,17 @@ msgid ""
 "mail to ${ mailLink } and, in case of a ban, include the BID you got in the "
 "ban message."
 msgstr ""
+"Ako ste otkriveni kao proxy, ali ga ne koristite ili mislite da ste "
+"nepravedno banirani, posjetite našu ${ guildedLink } ili nam pošaljite e-"
+"poštu na ${ mailLink } i, u slučaju bana, u poruci o banu navedite BID koji "
+"ste dobili."
 
 msgid ""
 "If you talk to moderators or administrators, you might get asked for one of "
 "the following identifiers:"
 msgstr ""
+"Ako razgovarate s moderatorima ili administratorima, mogli biste biti "
+"upitani za jedan od sljedećih identifikatora:"
 
 msgid "Image Converter"
 msgstr "Konverter slika"
@@ -885,38 +907,40 @@ msgid "Invalid color selected"
 msgstr "Odabrana je nevažeća boja"
 
 msgid "Invite"
-msgstr ""
+msgstr "Pozivnica"
 
 msgid "Invited to Chat"
-msgstr ""
+msgstr "Pozivnica za razgovor"
 
 msgid "Invites"
-msgstr ""
+msgstr "Pozivnice"
 
 msgid "Is One-Time-Invite"
-msgstr ""
+msgstr "Jednokratna pozivnica"
 
 msgid ""
 "It requests the following permissions. Uncheck what you don't want to grant:"
 msgstr ""
+"Zahtijeva sljedeća dopuštenja. Poništite odabir onoga što ne želite odobriti:"
 
 msgid "Jannies can rollback and protect, but not watch or ban."
 msgstr ""
+"Janny ima mogućnost \"rollback\" i \"protect\" ali ne i pregled i banove."
 
 msgid "Join"
-msgstr ""
+msgstr "Pridruži se"
 
 msgid "Join Faction"
-msgstr ""
+msgstr "Pridruži se fakciji"
 
 msgid "Joined"
-msgstr ""
+msgstr "Pridružen"
 
 msgid "Just for registered Users"
 msgstr "Samo za registrirane korisnike"
 
 msgid "Just for verified Users"
-msgstr ""
+msgstr "Samo za provjerene korisnike"
 
 msgid "Just the Top10 of yesterday can place here"
 msgstr "Ovdje može postavljati samo Top10 igrača od jučer"
@@ -925,31 +949,31 @@ msgid "Keep Ratio"
 msgstr "Zadrži omjer"
 
 msgid "Kick"
-msgstr ""
+msgstr "Izbaci"
 
 msgid "Kick members"
-msgstr ""
+msgstr "Izbaci članove"
 
 msgid "Know that an account exists"
-msgstr ""
+msgstr "Znajte da račun postoji"
 
 msgid "Leave"
-msgstr ""
+msgstr "Napusti"
 
 msgid "Leave Faction"
-msgstr ""
+msgstr "Napusti fakciju"
 
 msgid "Legal Requests"
-msgstr ""
+msgstr "Pravni zahtjevi"
 
 msgid "Let everyone join this faction"
-msgstr ""
+msgstr "Dopusti svima ulazak u fakciju"
 
 msgid "Let people join this faction without needing an invite."
-msgstr ""
+msgstr "Dopusti igračima pridruživanje u fakciju bez pozivnica."
 
 msgid "Level"
-msgstr ""
+msgstr "Level"
 
 msgid "Light Grid"
 msgstr "Svijetla rešetka"
@@ -964,31 +988,31 @@ msgid "Loading..."
 msgstr "Učitavam..."
 
 msgid "Log in or Register"
-msgstr ""
+msgstr "Prijava ili Registracija"
 
 msgid "Log out"
 msgstr "Odjavite se"
 
 msgid "Log out a Session:"
-msgstr ""
+msgstr "Odjava iz sesije:"
 
 msgid "LogIn"
 msgstr "Prijava"
 
 msgid "Login Methods"
-msgstr ""
+msgstr "Metode prijave"
 
 msgid "Login to access more features and stats."
 msgstr "Prijavite se za pristup dodatnim značajkama i statistikama."
 
 msgid "Login to grant access to other application."
-msgstr ""
+msgstr "Prijavite se kako biste omogućili pristup drugoj aplikaciji."
 
 msgid "Login to join us."
-msgstr ""
+msgstr "Prijavite se da biste nam se pridružili."
 
 msgid "Login to other application"
-msgstr ""
+msgstr "Prijava u drugu aplikaciju"
 
 msgid "Login with Name or Mail:"
 msgstr "Prijavite se imenom ili e-poštom:"
@@ -1000,10 +1024,10 @@ msgid "Manage Moderators"
 msgstr "Upravljanje moderatorima"
 
 msgid "Manage Templates"
-msgstr ""
+msgstr "Upravljanje šablonima"
 
 msgid "Manage invites"
-msgstr ""
+msgstr "Upravljaj pozivnicama"
 
 msgid "Map Data"
 msgstr "Podaci karte"
@@ -1012,16 +1036,16 @@ msgid "Maximize"
 msgstr "Maksimiziraj"
 
 msgid "Media Actions"
-msgstr ""
+msgstr "Medijski alati"
 
 msgid "Members"
-msgstr ""
+msgstr "Članovi"
 
 msgid "Minimum Color Distance"
 msgstr "Minimalna udaljenost boja"
 
 msgid "Moderators can access all Canvas, Watch and IID tools."
-msgstr ""
+msgstr "Moderatori imaju pristup cijelom platnu, pregledu i IID alatima."
 
 #. This if for moderation tools, it's not important to translate this
 msgid "Modtools"
@@ -1031,19 +1055,19 @@ msgid "Move"
 msgstr "Premjesti"
 
 msgid "Mute Channel"
-msgstr ""
+msgstr "Utišaj kanal"
 
 msgid "Muted Sound"
 msgstr "Ugašen zvuk"
 
 msgid "My Factions"
-msgstr ""
+msgstr "Moje fakcije"
 
 msgid "Name"
 msgstr "Ime"
 
 msgid "Name can only contain the characters: a-z . _ and -"
-msgstr ""
+msgstr "Ime može sadržavati znakove : a-z . _ and -"
 
 msgid "Name can't be empty."
 msgstr "Ime ne može biti prazno."
@@ -1058,10 +1082,10 @@ msgid "Name must be shorter than 26 characters"
 msgstr "Ime mora biti kraće od 26 znakova"
 
 msgid "Name of this role"
-msgstr ""
+msgstr "Ime ove uloge"
 
 msgid "Name of your faction (this can not be changed later)"
-msgstr ""
+msgstr "Ime vaše fakcije (ne može se uređivati kasnije)"
 
 msgid "Name or Email"
 msgstr "Ime ili email"
@@ -1070,7 +1094,7 @@ msgid "New Mail"
 msgstr "Nova pošta"
 
 msgid "New Name"
-msgstr ""
+msgstr "Novo ime"
 
 msgid "New Password"
 msgstr "Nova lozinka"
@@ -1082,16 +1106,16 @@ msgid "No"
 msgstr "Ne"
 
 msgid "No File selected to upload"
-msgstr ""
+msgstr "Nije izabrana datoteka za prijenos"
 
 msgid "No Phish!"
-msgstr ""
+msgstr "Riba je pobjegla!"
 
 msgid "No captcha id given"
 msgstr "Nije naveden captcha ID"
 
 msgid "No flag selected"
-msgstr ""
+msgstr "Nije izabrana zastava"
 
 msgid "No or invalid captcha text"
 msgstr "Nema ili nije valjan captcha tekst"
@@ -1100,25 +1124,25 @@ msgid "No password given."
 msgstr "Lozinka nije navedena."
 
 msgid "No results."
-msgstr ""
+msgstr "Bez rezultata."
 
 msgid "Nobody is banned from this faction"
-msgstr ""
+msgstr "Nitko nije banan iz ove fakcije"
 
 msgid "Not Allowed"
-msgstr ""
+msgstr "Nije dopušteno"
 
 msgid "Not allowed"
 msgstr "Nije dozvoljeno"
 
 msgid "Note"
-msgstr ""
+msgstr "Bilješka"
 
 msgid "Note: Your active Faction may overwrite your flag settings."
-msgstr ""
+msgstr "Napomena: Vaša aktivna frakcija može prebrisati vaše postavke zastave."
 
 msgid "OIDC LogIn"
-msgstr ""
+msgstr "OIDC Login"
 
 msgid "OK"
 msgstr "U redu"
@@ -1127,13 +1151,13 @@ msgid "Offset"
 msgstr "Pomak"
 
 msgid "Oh no, the phish escaped. Better luck next time!"
-msgstr ""
+msgstr "Oh ne, riba je pobjegla. Više sreće drugi put!"
 
 msgid "Old Password"
 msgstr "Nova lozinka"
 
 msgid "One-Time"
-msgstr ""
+msgstr "Jednokratno"
 
 msgid "Online Users"
 msgstr "Online korisnici"
@@ -1142,13 +1166,13 @@ msgid "Online Users on Canvas"
 msgstr "Online korisnici na platnu"
 
 msgid "Only verified Users are currently allowed to play."
-msgstr ""
+msgstr "Samo verificiranim korisnicima dozvoljeno postavljanje."
 
 msgid "Opacity of Overlay in percent."
 msgstr "Neprozirnost sloja u postocima."
 
 msgid "Open"
-msgstr ""
+msgstr "Otvori"
 
 msgid "Open Chat"
 msgstr "Otvorite Chat"
@@ -1160,7 +1184,7 @@ msgid "Open in PopUp"
 msgstr "Otvori u skočnom prozoru"
 
 msgid "OpenID Connect Client registration"
-msgstr ""
+msgstr "OpenID Poveži klijent registraciju"
 
 msgid ""
 "Our main canvas is a huge worldmap, you can place wherever you like, but you "
@@ -1187,7 +1211,7 @@ msgid "Overlay Opacity"
 msgstr "Prozirnost sloja"
 
 msgid "Overview"
-msgstr ""
+msgstr "Pregled"
 
 msgid "Palette Download"
 msgstr "Preuzimanje palete"
@@ -1219,22 +1243,22 @@ msgid "Pencil picks: "
 msgstr "Odabir olovke: "
 
 msgid "Permission"
-msgstr ""
+msgstr "Dozvola"
 
 msgid "Permissions of Powerlevels"
-msgstr ""
+msgstr "Dozvole powerlevela"
 
 msgid "Phish!"
-msgstr ""
+msgstr "To je riba!"
 
 msgid "Phishes"
-msgstr ""
+msgstr "Ribe"
 
 msgid "Ping"
 msgstr "Ping"
 
 msgid "Pixel"
-msgstr ""
+msgstr "Pixel"
 
 msgid "Pixel Notify OFF"
 msgstr "Notifikacija za pixele OFF"
@@ -1273,6 +1297,8 @@ msgid ""
 "Please verify your mail address or add a new one, otherwise your account "
 "could get deleted in the future."
 msgstr ""
+"Molimo vas da potvrdite svoju adresu e-pošte ili dodate novu, inače bi vaš "
+"račun u budućnosti mogao biti izbrisan."
 
 msgid "Political Compass Canvas"
 msgstr "Platno političkog kompasa"
@@ -1281,10 +1307,10 @@ msgid "Potato Mode"
 msgstr "Način krumpira"
 
 msgid "Powerlevel"
-msgstr ""
+msgstr "powerlevel"
 
 msgid "Powerlevel of this role. See table below for explenation."
-msgstr ""
+msgstr "Powerlevel ove uloge. Pogledaj tabelu za objašnjenje."
 
 #, javascript-format
 msgid ""
@@ -1330,16 +1356,16 @@ msgid "Profile"
 msgstr "Profil"
 
 msgid "Public"
-msgstr ""
+msgstr "Javno"
 
 msgid "Quick Actions"
-msgstr ""
+msgstr "Brze radnje"
 
 msgid "Range Banned"
 msgstr "Rasponski banani"
 
 msgid "Rank"
-msgstr ""
+msgstr "Rank"
 
 msgid "Ranked"
 msgstr "Rangirano"
@@ -1349,10 +1375,10 @@ msgstr ""
 "Poredak se ažurira svakih 5 minuta. Dnevni poredak se resetira u ponoć UTC."
 
 msgid "Read Badges and fishes"
-msgstr ""
+msgstr "Pregled bedževa i riba"
 
 msgid "Read name, username and account age"
-msgstr ""
+msgstr "Pročitajte ime, korisničko ime i starost računa"
 
 msgid "Reason"
 msgstr "Razlog"
@@ -1367,41 +1393,41 @@ msgid "Register new account here"
 msgstr "Registrirajte novi račun ovdje"
 
 msgid "Regularly update this data"
-msgstr ""
+msgstr "Redovito ažurirajte ove podatke"
 
 msgid "Reload"
 msgstr "Ponovno učitati"
 
 msgid "Remember this decision: "
-msgstr ""
+msgstr "Zapamtite ovu odluku: "
 
 msgid "Remove"
-msgstr ""
+msgstr "Ukloni"
 
 msgid "Remove Chatmod"
-msgstr ""
+msgstr "Ukloni Chatmod"
 
 msgid "Remove Cleaner"
-msgstr ""
+msgstr "Ukloni cleanera"
 
 msgid "Remove Janny"
-msgstr ""
+msgstr "Ukloni Janny"
 
 msgid "Remove Moderator"
 msgstr "Ukloni moderatora"
 
 msgid "Remove Roles"
-msgstr ""
+msgstr "Ukloni uloge"
 
 msgid "Remove a Login method:"
-msgstr ""
+msgstr "Uklonite metodu prijave:"
 
 #, javascript-format
 msgid "Represents ${ activeFactionTitle } as ${ activeFactionRoleName }"
-msgstr ""
+msgstr "Predstavlja ${ activeFactionTitle } kao ${ activeFactionRoleName }"
 
 msgid "Require Verification to Place"
-msgstr ""
+msgstr "Zahtijevaj verifikaciju za postavljanje"
 
 msgid "Requirements"
 msgstr "Zahtjevi"
@@ -1410,10 +1436,10 @@ msgid "Reset"
 msgstr "Resetiraj"
 
 msgid "Reset Captchas of ALL Users"
-msgstr ""
+msgstr "Resetiraj Captche SVIH korisnika"
 
 msgid "Reset your password"
-msgstr ""
+msgstr "Resetirajte lozinku"
 
 msgid "Resize"
 msgstr "Promjena veličine"
@@ -1425,22 +1451,22 @@ msgid "Retired Canvases (history only)"
 msgstr "Povučena platna (samo povijest)"
 
 msgid "Retract"
-msgstr ""
+msgstr "Povuci"
 
 msgid "Revoke consent of third party applications:"
-msgstr ""
+msgstr "Poništi privolu za aplikacije trećih strana:"
 
 msgid "Role"
-msgstr ""
+msgstr "Uloga"
 
 msgid "Role Flags"
-msgstr ""
+msgstr "Zastave uloga"
 
 msgid "Roles"
-msgstr ""
+msgstr "Uloge"
 
 msgid "Roll different Captcha Fonts"
-msgstr ""
+msgstr "Ubacite različite Captcha fontove"
 
 msgid "Rollback an area of the canvas to a set date and time"
 msgstr "Rollback područje platna na postavljeni datum (00:00 UTC)"
@@ -1461,19 +1487,19 @@ msgstr ""
 "zumiranje"
 
 msgid "Search"
-msgstr ""
+msgstr "Pretraži"
 
 msgid "Search Existing Faction"
-msgstr ""
+msgstr "Pretraži postojeće fakcije"
 
 msgid "Search Term"
-msgstr ""
+msgstr "Pojam za pretraživanje"
 
 msgid "See hidden users in member list"
-msgstr ""
+msgstr "Pogledajte skrivene korisnike na popisu članova"
 
 msgid "Select Avatar of this Faction. Supported Formats: jpg, gif, png, webp"
-msgstr ""
+msgstr "Odaberite avatar ove fakcije. Podržani formati: jpg, gif, png, webp"
 
 msgid "Select Date above"
 msgstr "Označite datum iznad"
@@ -1482,16 +1508,16 @@ msgid "Select File"
 msgstr "Odaberi datoteku"
 
 msgid "Select Flag"
-msgstr ""
+msgstr "Izaberi zastavu"
 
 msgid "Select Language"
 msgstr "Izaberi jezik"
 
 msgid "Select a valid powerlevel"
-msgstr ""
+msgstr "Izaberi validan powerlevel"
 
 msgid "Select a valid pwerlevel"
-msgstr ""
+msgstr "Izaberi validan pwerlevel"
 
 msgid ""
 "Select the canvas you want to use.\n"
@@ -1505,13 +1531,13 @@ msgstr ""
 " Arhivi zatvorenih platna možete pristupiti ovdje:"
 
 msgid "Select your Avatar. Supported Formats: jpg, gif, png, webp"
-msgstr ""
+msgstr "Odaberite svoj avatar. Podržani formati: jpg, gif, png, webp"
 
 msgid "Selected Color"
 msgstr "Odabrana boja"
 
 msgid "Selected Flag:"
-msgstr ""
+msgstr "Odabrana zastava:"
 
 msgid "Send"
 msgstr "Pošalji"
@@ -1530,7 +1556,7 @@ msgid ""
 msgstr "Vaši pikseli su zbunili poslužitelja. Igrate li na više uređaja?"
 
 msgid "Set Password"
-msgstr ""
+msgstr "Postavi lozinku"
 
 msgid ""
 "Set protection of areas (if you need finer grained control, use protect with "
@@ -1543,6 +1569,8 @@ msgid ""
 "Setting a password allows you to login by username or email, rather than "
 "only relying on 3rd party login."
 msgstr ""
+"Postavljanje lozinke omogućuje vam prijavu korisničkim imenom ili e-poštom, "
+"umjesto da se oslanjate samo na prijavu treće strane."
 
 msgid "Settings"
 msgstr "Postavke"
@@ -1570,10 +1598,10 @@ msgid "Show templates as overlays ingame."
 msgstr "Prikaži šablone kao slojeve u igri."
 
 msgid "Shrink"
-msgstr ""
+msgstr "Smanji"
 
 msgid "Size"
-msgstr ""
+msgstr "Veličina"
 
 msgid "Small Pixels When Zoomed"
 msgstr "Zumiranje malih pixela"
@@ -1583,7 +1611,7 @@ msgstr "Društvene postavke"
 
 #, javascript-format
 msgid "Source for pixelplanet on ${ gitLink } or ${ downloadHereLink }."
-msgstr ""
+msgstr "Izvor za pixelplanet na ${ gitLink } ili ${ downloadHereLink }."
 
 msgid "Stacking till"
 msgstr "Postavljanje do"
@@ -1592,7 +1620,7 @@ msgid "Start chatting here"
 msgstr "Počnite razgovarati ovdje"
 
 msgid "Start checking for Malware"
-msgstr ""
+msgstr "Provjera zlonamjernog softvera"
 
 msgid "Statistics"
 msgstr "Statistika"
@@ -1601,22 +1629,22 @@ msgid "Status: Not running"
 msgstr "Status: Ne radi"
 
 msgid "Stay logged in: "
-msgstr ""
+msgstr "Ostanite prijavljeni: "
 
 msgid "Stop Cleaner"
 msgstr "Zaustavi čistača"
 
 msgid "Stop checking for Malware"
-msgstr ""
+msgstr "Zaustavite provjeru zlonamjernog softvera"
 
 msgid "Stop requiring Verification to Place"
-msgstr ""
+msgstr "Prestanite zahtijevati verifikaciju za postavljanje"
 
 msgid "Submit"
 msgstr "Podnesi"
 
 msgid "Switch Account"
-msgstr ""
+msgstr "Promijeni račun"
 
 #, javascript-format
 msgid "Switched to ${ canvasName }"
@@ -1633,6 +1661,8 @@ msgid ""
 "The application ${ appName } at ${ appUrl } wants to login with your "
 "pixelplanet account ${ accountName }"
 msgstr ""
+"Aplikacija ${ appName } na adresi ${ appUrl } želi se prijaviti s vašim "
+"pixelplanet računom ${ accountName }"
 
 msgid ""
 "The bare map data that we use, together with converted OpenStreetMap tiles "
@@ -1645,9 +1675,11 @@ msgid ""
 "The name of your account, only a-z, A-Z, -, ., and - characters are allowed. "
 "It is permanent, you can not change it later."
 msgstr ""
+"Naziv vašeg računa, dopušteni su samo znakovi a-z, A-Z, -, . i -. Trajan je "
+"i ne možete ga kasnije promijeniti."
 
 msgid "The password for your account."
-msgstr ""
+msgstr "Lozinka za vaš račun."
 
 msgid "Themes"
 msgstr "Teme"
@@ -1670,18 +1702,20 @@ msgstr ""
 "se nije ugasio 30. studenog."
 
 msgid "This faction has no invites"
-msgstr ""
+msgstr "Ova fakcija nema pozivnica"
 
 msgid ""
 "This is the name that other people see, e.g. in Chat. You can change it at "
 "any time. All characters except @, /, , >, < and # are allowed."
 msgstr ""
+"Ovo je ime koje vide drugi ljudi, npr. u Chatu. Možete ga promijeniti u bilo "
+"kojem trenutku. Dopušteni su svi znakovi osim @, /, , >, < i #."
 
 msgid "This login may only work if your account is verified."
-msgstr ""
+msgstr "Ova prijava može funkcionirati samo ako je vaš račun verificiran."
 
 msgid "This permission is required"
-msgstr ""
+msgstr "Ovo dopuštenje je potrebno"
 
 msgid "Timeout"
 msgstr "Pauza"
@@ -1701,25 +1735,25 @@ msgstr ""
 "njih. Jedan pixel na predlošku trebao bi biti jedan pixel na platnu."
 
 msgid "Title"
-msgstr ""
+msgstr "Naziv"
 
 msgid "Title can't be empty."
-msgstr ""
+msgstr "Naslov ne može biti prazan."
 
 msgid "Title contains invalid character like @, /, \\ or #"
-msgstr ""
+msgstr "Naslov sadrži nevažeći znak poput @, /, \\ ili #"
 
 msgid "Title must be at least 2 characters long"
-msgstr ""
+msgstr "Naslov mora biti dug najmanje 2 znaka"
 
 msgid "Title must be shorter than 26 characters"
-msgstr ""
+msgstr "Naslov mora biti kraći od 26 znakova"
 
 msgid "Title of your faction"
-msgstr ""
+msgstr "Naziv vaše fakcije"
 
 msgid "To use this page, enter your Password:"
-msgstr ""
+msgstr "Za korištenje ove stranice unesite svoju lozinku:"
 
 msgid "Today"
 msgstr "Danas"
@@ -1749,7 +1783,7 @@ msgid "Total Online Users"
 msgstr "Ukupno online korisnika"
 
 msgid "Total Pixels per Faction"
-msgstr ""
+msgstr "Ukupan broj piksela po fakciji"
 
 msgid "Total Pixels per Player"
 msgstr "Ukupni broj piksela po igraču"
@@ -1771,19 +1805,19 @@ msgid "Turn on grid to highlight pixel borders."
 msgstr "Uključite rešetku za označavanje granica piksela."
 
 msgid "Type of Mod"
-msgstr ""
+msgstr "Vrsta moda"
 
 msgid "Type the characters from the following image:"
 msgstr "Upišite znakove sa sljedeće slike:"
 
 msgid "Unban media"
-msgstr ""
+msgstr "Unban medij"
 
 msgid "Unban members"
-msgstr ""
+msgstr "Unban članova"
 
 msgid "Unblock"
-msgstr ""
+msgstr "Odblokiraj"
 
 msgid "Unblock Users"
 msgstr "Odblokiraj korisnike"
@@ -1798,7 +1832,7 @@ msgid "Unmuted Sound"
 msgstr "Upaljen zvuk"
 
 msgid "Until the browser closes"
-msgstr ""
+msgstr "Dok se preglednik ne zatvori"
 
 msgid "Upload images to canvas"
 msgstr "Prenesite slike na platno"
@@ -1816,35 +1850,35 @@ msgid "User Area"
 msgstr "Korisničko područje"
 
 msgid "User ID and verification level"
-msgstr ""
+msgstr "ID korisnika i razina provjere"
 
 msgid "User Name"
 msgstr "Korisničko ime"
 
 msgid "Username"
-msgstr ""
+msgstr "Korisničko ime"
 
 msgid "Username can only contain the characters: a-z . _ and -"
-msgstr ""
+msgstr "Korisničko ime može sadržavati samo znakove: a-z, _ i -"
 
 msgid "Username can only contain the characters: a-z A-z . _ and -"
-msgstr ""
+msgstr "Korisničko ime može sadržavati samo znakove: a-z A-z , _ i -"
 
 msgid "Username can't be empty."
-msgstr ""
+msgstr "Korisničko ime ne može biti prazno."
 
 msgid "Username must be at least 2 characters long"
-msgstr ""
+msgstr "Korisničko ime mora biti dugo najmanje 2 znaka"
 
 msgid "Username must be shorter than 26 characters"
-msgstr ""
+msgstr "Korisničko ime mora biti kraće od 26 znakova"
 
 msgid "Users"
-msgstr ""
+msgstr "Korisnici"
 
 #, javascript-format
 msgid "We are Libre Software under the ${ agplLink }, "
-msgstr ""
+msgstr "Mi smo Libre Software pod ${ agplLink }, "
 
 msgid ""
 "We decided to archive it as a timelapse with lossless encoded webm. Taking a "
@@ -1867,7 +1901,7 @@ msgid "What the pencil should draw on the current canvas."
 msgstr "Što bi olovka trebala nacrtati na trenutnom platnu."
 
 msgid "Whether or not this invite can only be used once."
-msgstr ""
+msgstr "Može li se ova pozivnica koristiti samo jednom ili ne."
 
 msgid ""
 "While we tend to not delete canvases, some canvases are started for fun or "
@@ -1890,7 +1924,7 @@ msgid "Wrong Color"
 msgstr "Pogrešna boja"
 
 msgid "YOU CAN ONLY CHOOSE YOUR USERNAME ONCE!"
-msgstr ""
+msgstr "KORISNIČKO IME MOŽETE ODABRATI SAMO JEDNOM!"
 
 msgid "Yes"
 msgstr "Da"
@@ -1905,6 +1939,8 @@ msgid ""
 "You are a teacher and a pupil is playing this game, despite it not being "
 "suitable for them? Send us an email."
 msgstr ""
+"Vi ste učitelj i vaš učenik igra ovu igru, iako nije prikladna za njega? "
+"Pošaljite nam e-poštu."
 
 #, javascript-format
 msgid ""
@@ -1915,27 +1951,29 @@ msgstr ""
 "tome kako se žaliti. I ne zaboravite navesti BID koji možete dobiti ispod."
 
 msgid "You are currently not a member of any faction."
-msgstr ""
+msgstr "Trenutno niste član nijedne fakcije."
 
 msgid "You are currently not allowed to access this game."
-msgstr ""
+msgstr "Trenutno nemate dopušten pristup ovoj igri."
 
 msgid ""
 "You are currently not representing any faction. To represent one, activate a "
 "role in one of your factions below."
 msgstr ""
+"Trenutno ne predstavljate nijednu fakciju. Da biste predstavljali jednu, "
+"aktivirajte ulogu u jednoj od svojih fakcija ispod."
 
 #, javascript-format
 msgid ""
 "You are currently representing ${ activeFactionTitle } as ${ activeRoleName }"
-msgstr ""
+msgstr "Trenutno predstavljate ${ activeFactionTitle } kao ${ activeRoleName }"
 
 #, javascript-format
 msgid "You are logged in as ${ name } [${ username }]."
-msgstr ""
+msgstr "Prijavljeni ste kao ${ name } [${ username }]."
 
 msgid "You are not allowed to play this game right now :("
-msgstr ""
+msgstr "Trenutno nemaš dopuštenje igrati ovu igru :("
 
 msgid "You are using a Proxy."
 msgstr "Koristite proxy."
@@ -1947,6 +1985,8 @@ msgid ""
 "You can connect to pixelplanet and use pixelplanet accounts for oauth / oidc "
 "login. See here: "
 msgstr ""
+"Možete se povezati s pixelplanetom i koristiti pixelplanet račune za oauth / "
+"oidc prijavu. Pogledajte ovdje: "
 
 msgid "You can not access this canvas yet, because your pixel score is too low"
 msgstr "Još ne možete pristupiti ovom platnu. Morate postaviti više piksela"
@@ -1959,9 +1999,11 @@ msgid ""
 "You caught a Phish! It is a ${ FISH_TYPES[type].name } with ${ size }kg! As "
 "a bonus, your cooldown is reduced."
 msgstr ""
+"Uhvatili ste ribu! To je ${ FISH_TYPES[type].name } s ${ size }kg! Kao "
+"bonus, vaše vrijeme hlađenja je smanjeno."
 
 msgid "You did not consent"
-msgstr ""
+msgstr "Nisi dao/la pristanak"
 
 msgid "You failed your captcha"
 msgstr "Pogrešio si s captcha"
@@ -1971,6 +2013,8 @@ msgid ""
 "You have been invited to join us on pixelplanet. We currently have $"
 "{ memberCount } members."
 msgstr ""
+"Pozvani ste da nam se pridružite na pixelplanetu. Trenutno imamo ${ "
+"memberCount } članova."
 
 msgid "You have no users blocked"
 msgstr "Nemate blokiranih korisnika"
@@ -1985,31 +2029,31 @@ msgid "You must be logged in to chat"
 msgstr "Za chat morate biti prijavljeni"
 
 msgid "You must enter a UserId"
-msgstr ""
+msgstr "Morate unijeti korisnički ID"
 
 msgid "You must enter a mediaId or media BID"
-msgstr ""
+msgstr "Morate unijeti mediaId ili media BID"
 
 msgid "You must enter a reason"
-msgstr ""
+msgstr "Morate unijeti razlog"
 
 msgid "You must enter a username"
-msgstr ""
+msgstr "Morate unijeti korisničko ime"
 
 msgid "You must enter an BID"
-msgstr ""
+msgstr "Morate unijeti BID"
 
 msgid "You must enter an IID"
 msgstr "Morate unijeti IID"
 
 msgid "You must enter an IID or UserId"
-msgstr ""
+msgstr "Morate unijeti IID ili UserId"
 
 msgid "You must enter at least one IID, User Id or BID"
-msgstr ""
+msgstr "Morate unijeti barem jedan IID, korisnički ID ili BID"
 
 msgid "You must select an avatar for your faction"
-msgstr ""
+msgstr "Morate odabrati avatar za svoju fakciju"
 
 msgid "You took too long, try again."
 msgstr "Predugo vam je trebalo, pokušajte ponovno."
@@ -2022,16 +2066,16 @@ msgstr ""
 "zvukova. Imate li neku značajku privatnosti koja nas blokira?"
 
 msgid "Your Browser looks shady"
-msgstr ""
+msgstr "Vaš preglednik izgleda sumnjivo, osvježite karticu"
 
 msgid "Your Factions"
-msgstr ""
+msgstr "Vaše fakcije"
 
 msgid "Your Internet Provider is banned from this game"
 msgstr "Vašem internet davatelju zabranjeno je igrati ovu igricu"
 
 msgid "Your Roles"
-msgstr ""
+msgstr "Vaše uloge"
 
 msgid "Your ban expires at "
 msgstr "Vaš ban ističe "
@@ -2040,9 +2084,11 @@ msgid ""
 "Your did not set your username yet. A username is required to login to other "
 "applications. You can set it now:"
 msgstr ""
+"Još niste postavili korisničko ime. Korisničko ime je potrebno za prijavu u "
+"druge aplikacije. Možete ga postaviti sada:"
 
 msgid "Your name is:"
-msgstr ""
+msgstr "Tvoje ime je:"
 
 msgid "Your next pixels are ready"
 msgstr "Vaši sljedeći pikseli su spremni"
@@ -2055,32 +2101,32 @@ msgstr ""
 "zumiranje malo."
 
 msgid "a hidden faction"
-msgstr ""
+msgstr "skrivena fakcija"
 
 msgid "affects"
-msgstr ""
+msgstr "utječe na"
 
 #, javascript-format
 msgid "and ${ canvas.req } Pixels set"
 msgstr "i ${ canvas.req } postavljeni pikseli"
 
 msgid "by"
-msgstr ""
+msgstr "po"
 
 msgid "check compliance here"
-msgstr ""
+msgstr "provjerite usklađenost ovdje"
 
 msgid "created at"
-msgstr ""
+msgstr "stvoreno u"
 
 msgid "days"
-msgstr ""
+msgstr "dana"
 
 msgid "download here"
-msgstr ""
+msgstr "preuzmite ovdje"
 
 msgid "lift"
-msgstr ""
+msgstr "dignuti"
 
 msgid "or login with:"
 msgstr "ili se prijavite sa:"
@@ -2092,7 +2138,7 @@ msgid "recommended"
 msgstr "preporučeno"
 
 msgid "times used"
-msgstr ""
+msgstr "puta korišteno"
 
 #, javascript-format
 msgid "try again after ${ ti }min"

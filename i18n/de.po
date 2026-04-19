@@ -3,19 +3,19 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: admin@pixelplanet.fun\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2025-11-03 06:40+0000\n"
-"Last-Translator: Вlock <block@noreply.pixelplanet.fun>\n"
-"Language-Team: German <https://translate.gs-os.com/projects/ppfun/client/de/"
-">\n"
+"PO-Revision-Date: 2026-04-19 10:59+0000\n"
+"Last-Translator: hf <hf@noreply.pixelplanet.fun>\n"
+"Language-Team: German <https://translate.gs-os.com/projects/ppfun/client/de/>"
+"\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.14\n"
+"X-Generator: Weblate 5.15.2\n"
 
 msgid " which is in "
-msgstr " was dieser Dauer entspricht: "
+msgstr " was eintrifft in "
 
 #, javascript-format
 msgid "${ mouseSymbol } Hold left mouse button and drag mouse to rotate"
@@ -53,10 +53,10 @@ msgid "(0 = infinite)"
 msgstr "(0 = unbegrenzt)"
 
 msgid "(click a role to activate it)"
-msgstr ""
+msgstr "(klicke auf eine Rolle, um sie zu aktivieren)"
 
 msgid "(click a role to assign or remove it)"
-msgstr ""
+msgstr "(klicke auf eine Rolle, um sie zuzuweisen oder zu entfernen)"
 
 msgid "+last hour"
 msgstr "+letzte Stunde"
@@ -71,6 +71,9 @@ msgid ""
 "A flag representing the role, it should be 16x11 pixels. If left empty, "
 "users with this role selected will still show their own flags."
 msgstr ""
+"Eine Flagge, welche diese Rolle repräsentiert, es sollte 16x11 Pixel haben. "
+"Wenn leer gelassen, werden Mitglieder mit dieser aktivierten Rolle ihre "
+"eigene Flagge zeigen."
 
 msgid "A new verification mail is getting sent to you."
 msgstr "Eine neue Bestätigungsmail wurde gesendet."
@@ -79,6 +82,9 @@ msgid ""
 "A role has all the permissions of all levels below and equal to it. In "
 "example: Every role with a power level of >=50 can manage invites (50)."
 msgstr ""
+"Eine Rolle hat die Summe aller Befugnisse von Powerlevel gleich oder unter "
+"sie. Zum Beispiel: Jede Rolle mit einem Powerlevel von >= 50 kann "
+"Einladungen verwalten (50)."
 
 msgid "ACCESS MODTOOLS"
 msgstr "ZUGRIFF AUF MODERATIONSWERKZEUGE"
@@ -94,10 +100,10 @@ msgid "Admintools"
 msgstr "Admin Werkzeuge"
 
 msgid "Age"
-msgstr ""
+msgstr "Alter"
 
 msgid "All members of this faction are hidden"
-msgstr ""
+msgstr "Alle Mitglieder dieser Fraktion sind versteckt"
 
 msgid "All sound effects will be disabled."
 msgstr "Alle Toneffekte werden ausgeschaltet."
@@ -109,7 +115,7 @@ msgid "Always show movement control buttons"
 msgstr "Die Tasten zur Bewegungssteuerung immer anzeigen"
 
 msgid "An image representing your faction"
-msgstr ""
+msgstr "Ein Bild welches deine Fraktion repräsentiert"
 
 msgid "Anti Aliasing"
 msgstr "Kantenglättung"
@@ -121,31 +127,31 @@ msgid "Archive"
 msgstr "Archiv"
 
 msgid "Assign Roles"
-msgstr ""
+msgstr "Rolle zuweisen"
 
 msgid "Assign new Mod"
 msgstr "Moderator zuweisen"
 
 msgid "Assign role per default to new members"
-msgstr ""
+msgstr "Weise diese Rolle neuen Mitgliedern beim Beitritt zu"
 
 msgid "Assign roles below their own"
-msgstr ""
+msgstr "Weise Rollen unter deren eigenen zu"
 
 msgid "Assign this role to every new member automatically on join."
-msgstr ""
+msgstr "Weise diese Rolle jedem neuen Mitglied zu, wenn diese beitreten."
 
 msgid "Assigned role per default"
-msgstr ""
+msgstr "Rolle standardmäßig zuweisen"
 
 msgid "Attach File"
-msgstr ""
+msgstr "Datei anhängen"
 
 msgid "Auto Zoom In"
 msgstr "Automaticher Zoom"
 
 msgid "Avatar"
-msgstr ""
+msgstr "Avatar"
 
 msgid "Back"
 msgstr "Zurück"
@@ -157,13 +163,13 @@ msgid "Badges"
 msgstr "Abzeichen"
 
 msgid "Ban"
-msgstr ""
+msgstr "Bann"
 
 msgid "Ban media"
-msgstr ""
+msgstr "Banne Medium"
 
 msgid "Ban members"
-msgstr ""
+msgstr "Banne Mitglieder"
 
 msgid "Banned"
 msgstr "Gebannt"
@@ -172,7 +178,7 @@ msgid "Banned? Detected as Proxy?"
 msgstr "Gesperrt? Als Proxy erkannt?"
 
 msgid "Bans"
-msgstr ""
+msgstr "Banns"
 
 msgid "Block"
 msgstr "Blocke"
@@ -185,6 +191,10 @@ msgid ""
 "users to start messaging you. You can still start new DMs with other users "
 "and already ongoing DMs will still be open."
 msgstr ""
+"Alle privaten Nachrichten blockieren. Wenn diese Option aktiviert ist, "
+"können andere Nutzer dir keine Nachrichten mehr senden. Du kannst weiterhin "
+"neue Direktnachrichten an andere Nutzer senden, und bereits laufende "
+"Direktnachrichten bleiben weiterhin geöffnet."
 
 msgid "Blocked"
 msgstr "Blockiert"
@@ -247,7 +257,7 @@ msgid "Caught by"
 msgstr "Gefangen von"
 
 msgid "Change Flag"
-msgstr ""
+msgstr "Ändere Flagge"
 
 msgid "Change Happened"
 msgstr "Eine Veränderung passierte"
@@ -262,7 +272,7 @@ msgid "Change your Mail Adress here:"
 msgstr "Hier können Sie Ihre E-Mail-Adresse ändern:"
 
 msgid "Channel"
-msgstr ""
+msgstr "Kanal"
 
 msgid "Channel settings"
 msgstr "Kanal Einstellungen"
@@ -321,7 +331,7 @@ msgid "Cleaners can use 0cd blank colors."
 msgstr "Putzfrauen können 0cd-Farben (ungesetzte Pixel) verwenden."
 
 msgid "Clear"
-msgstr ""
+msgstr "Leeren"
 
 #, javascript-format
 msgid ""
@@ -335,7 +345,7 @@ msgid "Click a color in palette to select it"
 msgstr "Klicke auf eine Farbe in der Palette um sie auszuwählen"
 
 msgid "Click here to cease representation."
-msgstr ""
+msgstr "Hier klicken, um die Vertretung zu beenden."
 
 msgid "Click here to request a new verification mail."
 msgstr "Klicke hier um eine neue Bestätigungsmail zu beantragen."
@@ -344,7 +354,7 @@ msgid "Click to Load Captcha"
 msgstr "Klicke um Captcha zu laden"
 
 msgid "Click to remove"
-msgstr ""
+msgstr "Klicke um zu entfernen"
 
 msgid "Clone"
 msgstr "Klonen"
@@ -359,25 +369,25 @@ msgid "Close Palette"
 msgstr "Schließe Palette"
 
 msgid "Compact Chat"
-msgstr ""
+msgstr "Kompakter Chat"
 
 msgid "Compact Palette"
 msgstr "Kompakte Palette"
 
 msgid "Confirm"
-msgstr ""
+msgstr "Bestätigen"
 
 msgid "Confirm Ban"
-msgstr ""
+msgstr "Bann bestätigen"
 
 msgid "Confirm Delete"
-msgstr ""
+msgstr "Löschung bestätigen"
 
 msgid "Confirm Kick"
-msgstr ""
+msgstr "Rauswurf bestätigen"
 
 msgid "Confirm Leave"
-msgstr ""
+msgstr "Verlassen bestätigen"
 
 msgid "Confirm New Password"
 msgstr "Neues Passwort bestätigen"
@@ -386,7 +396,7 @@ msgid "Confirm Password"
 msgstr "Passwort bestätigen"
 
 msgid "Confirm your password."
-msgstr ""
+msgstr "Passwort bestätigen."
 
 #, javascript-format
 msgid "Connection error ${ code } :("
@@ -442,7 +452,7 @@ msgid "Copy to Clipboard"
 msgstr "In die Zwischenablage kopiert"
 
 msgid "Could not connect to server"
-msgstr ""
+msgstr "Konnte nicht zum Server verbinden"
 
 msgid "Could not connect to server, please try again later :("
 msgstr ""
@@ -452,7 +462,7 @@ msgid "Could not load captcha"
 msgstr "Konnte Captcha nicht laden"
 
 msgid "Could not process files"
-msgstr ""
+msgstr "Konnte Dateien nicht verarbeiten"
 
 msgid "Couldn't set Pixel"
 msgstr "Konnte keinen Pixel setzen"
@@ -464,25 +474,25 @@ msgid "Country"
 msgstr "Land"
 
 msgid "Create Faction"
-msgstr ""
+msgstr "Fraktion erstellen"
 
 msgid "Create Invite"
-msgstr ""
+msgstr "Einladung erstellen"
 
 msgid "Create New Faction"
-msgstr ""
+msgstr "Erstelle neue Fraktion"
 
 msgid "Create New Invite"
-msgstr ""
+msgstr "Erstelle neue Einladung"
 
 msgid "Create New Role"
-msgstr ""
+msgstr "Erstelle neue Rolle"
 
 msgid "Create Role"
-msgstr ""
+msgstr "Rolle erstellen"
 
 msgid "Create roles"
-msgstr ""
+msgstr "Rollen erstellen"
 
 #, javascript-format
 msgid "Credit for the Palette of the 2bit canvas goes to ${ donendoLink }."
@@ -503,19 +513,19 @@ msgid "Custom Cursor"
 msgstr "Spezieller Zeiger"
 
 msgid "Custom Flag"
-msgstr ""
+msgstr "Individuelle Flagge"
 
 msgid "DM"
 msgstr "DM"
 
 msgid "Daily Pixel"
-msgstr ""
+msgstr "Tägliche Pixel"
 
 msgid "Daily Pixels per Country"
 msgstr "Tägliche Pixel pro Land"
 
 msgid "Daily Pixels per Faction"
-msgstr ""
+msgstr "Tägliche Pixel pro Fraktion"
 
 msgid "Daily Pixels per Player"
 msgstr "Tägliche Pixel pro Spieler"
@@ -536,25 +546,25 @@ msgid "Delete Account"
 msgstr "Konto löschen"
 
 msgid "Delete Faction"
-msgstr ""
+msgstr "Fraktion Löschen"
 
 msgid "Delete the faction"
-msgstr ""
+msgstr "Lösche diese Fraktion"
 
 msgid "Deny"
 msgstr "Ablehnen"
 
 msgid "Description"
-msgstr ""
+msgstr "Beschreibung"
 
 msgid "Description can't be empty"
-msgstr ""
+msgstr "Beschreibung kann nicht leer sein"
 
 msgid "Description must be shorter than 1000 characters"
-msgstr ""
+msgstr "Beschreibung darf nicht länger als 1000 Zeichen sein"
 
 msgid "Description of your faction"
-msgstr ""
+msgstr "Beschreibung einer Fraktion"
 
 msgid ""
 "Didn't get an answer from pixelplanet. Try to refresh if this problem "
@@ -588,21 +598,23 @@ msgstr "Mache etwas mit IPs (eine IP pro Zeile)"
 msgid ""
 "Don't let people find this faction in public search or look at its profile."
 msgstr ""
+"Andere Benutzer können diese Fraktion in der Suche nicht finden und das "
+"Profil dieser nicht aufrufen."
 
 msgid "Don't remember"
 msgstr "nicht merken"
 
 msgid "Don't show faction in search"
-msgstr ""
+msgstr "Zeige Fraktion nicht in der Suche"
 
 msgid "Don't show me in global stats"
 msgstr "Zeige mich nicht in globalen Statistiken"
 
 msgid "Done"
-msgstr ""
+msgstr "Fertig"
 
 msgid "Download"
-msgstr ""
+msgstr "Herunterladen"
 
 msgid "Download Template"
 msgstr "Bild herunterladen"
@@ -626,13 +638,14 @@ msgid "Edit"
 msgstr "Bearbeiten"
 
 msgid "Edit faction"
-msgstr ""
+msgstr "Bearbeite Fraktion"
 
 msgid "Edit roles below their own"
-msgstr ""
+msgstr "Bearbeite Rollen unter deiner eigenen"
 
 msgid "Edit their own role and elevate users to their own level"
 msgstr ""
+"Bearbeite die eigene Roller und erhebe andere Mitglieder auf eigenes Level"
 
 msgid "Email"
 msgstr "E-Mail"
@@ -678,10 +691,10 @@ msgid "Enter UserName of new Mod"
 msgstr "Gebe Name des neuen Moderators ein"
 
 msgid "Enter a little text that describes your faction"
-msgstr ""
+msgstr "Gebe einen kurzen Text ein, der deine Fraktion beschreibt"
 
 msgid "Enter search term and press Search."
-msgstr ""
+msgstr "Gebe einen Suchbegriff ein und klicke auf Suchen."
 
 msgid "Enter your mail address and we will send you a new password:"
 msgstr "Gib deine Mail Adresse an und wir senden dir ein neues Passwort:"
@@ -703,21 +716,23 @@ msgid "Export enabled templates"
 msgstr "Exportiere eingeschaltete Vorlagen"
 
 msgid "Faction"
-msgstr ""
+msgstr "Fraktion"
 
 msgid "Factions"
-msgstr ""
+msgstr "Fraktionen"
 
 msgid "Factions Today"
-msgstr ""
+msgstr "Fraktionen Heute"
 
 msgid "Factions Total"
-msgstr ""
+msgstr "Fraktionen Gesamt"
 
 msgid ""
 "Factions allow you to coordinate better with other players. Search for "
 "existing factions, find friends or create your own faction."
 msgstr ""
+"Fraktionen ermöglichen es, sich besser mit anderen Spieler zu koordinieren. "
+"Suche existierende Fraktionen, finde Freunde oder erstelle deine Eigene."
 
 msgid "Factor"
 msgstr "Faktor"
@@ -800,7 +815,7 @@ msgid "Grid ON"
 msgstr "Raster Ein"
 
 msgid "Groups"
-msgstr ""
+msgstr "Gruppen"
 
 msgid "Have fun!"
 msgstr "Viel Spaß!"
@@ -822,7 +837,7 @@ msgid "Hide Embed"
 msgstr "Verstecke Einbettung"
 
 msgid "Hide from profile"
-msgstr ""
+msgstr "Von Profil verstecken"
 
 msgid ""
 "Higher zoomlevels take some time to update, the 3D globe gets updated at "
@@ -847,7 +862,7 @@ msgid "I forgot my Password."
 msgstr "Ich habe mein Passwort vergessen."
 
 msgid "ID"
-msgstr ""
+msgstr "ID"
 
 msgid "IID (optional)"
 msgstr "IID (optional)"
@@ -905,16 +920,16 @@ msgid "Invalid color selected"
 msgstr "Ungültige Farbe ausgewählt"
 
 msgid "Invite"
-msgstr ""
+msgstr "Einladung"
 
 msgid "Invited to Chat"
 msgstr "Einladung zur Kommentarsektion"
 
 msgid "Invites"
-msgstr ""
+msgstr "Einladungen"
 
 msgid "Is One-Time-Invite"
-msgstr ""
+msgstr "Ist einmalige Einladung"
 
 msgid ""
 "It requests the following permissions. Uncheck what you don't want to grant:"
@@ -928,13 +943,13 @@ msgstr ""
 "oder bannen."
 
 msgid "Join"
-msgstr ""
+msgstr "Beitreten"
 
 msgid "Join Faction"
-msgstr ""
+msgstr "Fraktion beitreten"
 
 msgid "Joined"
-msgstr ""
+msgstr "Beigetreten"
 
 msgid "Just for registered Users"
 msgstr "Nur für registrierte Benutzer"
@@ -949,31 +964,31 @@ msgid "Keep Ratio"
 msgstr "Seitenverhältniss beibehalten"
 
 msgid "Kick"
-msgstr ""
+msgstr "Rauswerfen"
 
 msgid "Kick members"
-msgstr ""
+msgstr "Mitglied rauswerfen"
 
 msgid "Know that an account exists"
 msgstr "Erfahren, dass ein pixelplanet Konto existiert"
 
 msgid "Leave"
-msgstr ""
+msgstr "Verlassen"
 
 msgid "Leave Faction"
-msgstr ""
+msgstr "Fraktion verlassen"
 
 msgid "Legal Requests"
 msgstr "Rechtliche Anfragen"
 
 msgid "Let everyone join this faction"
-msgstr ""
+msgstr "Erlaube es jedem, dieser Fraktion beizutreten"
 
 msgid "Let people join this faction without needing an invite."
-msgstr ""
+msgstr "Jeder kann die Fraktion auch ohne Einladung betreten."
 
 msgid "Level"
-msgstr ""
+msgstr "Level"
 
 msgid "Light Grid"
 msgstr "Helles Raster"
@@ -988,7 +1003,7 @@ msgid "Loading..."
 msgstr "Lade..."
 
 msgid "Log in or Register"
-msgstr ""
+msgstr "Einloggen oder Registrieren"
 
 msgid "Log out"
 msgstr "Abmelden"
@@ -1009,7 +1024,7 @@ msgid "Login to grant access to other application."
 msgstr "Anmelden um dieser Anwendung Zugriff zu gewähren."
 
 msgid "Login to join us."
-msgstr ""
+msgstr "Einloggen um beizutreten."
 
 msgid "Login to other application"
 msgstr "Mit anderer Anwendung anmelden"
@@ -1024,10 +1039,10 @@ msgid "Manage Moderators"
 msgstr "Verwalte Moderatoren"
 
 msgid "Manage Templates"
-msgstr ""
+msgstr "Vorlagen bearbeiten"
 
 msgid "Manage invites"
-msgstr ""
+msgstr "Einladungen bearbeiten"
 
 msgid "Map Data"
 msgstr "Karten Dateien"
@@ -1036,10 +1051,10 @@ msgid "Maximize"
 msgstr "Maximieren"
 
 msgid "Media Actions"
-msgstr ""
+msgstr "Media Aktionen"
 
 msgid "Members"
-msgstr ""
+msgstr "Mitglieder"
 
 msgid "Minimum Color Distance"
 msgstr "Minimum Farb Distanz"
@@ -1057,19 +1072,19 @@ msgid "Move"
 msgstr "Verschieben"
 
 msgid "Mute Channel"
-msgstr ""
+msgstr "Kanal stummschalten"
 
 msgid "Muted Sound"
 msgstr "Ton stummgeschaltet"
 
 msgid "My Factions"
-msgstr ""
+msgstr "Meine Fraktionen"
 
 msgid "Name"
 msgstr "Name"
 
 msgid "Name can only contain the characters: a-z . _ and -"
-msgstr ""
+msgstr "Name kann nur die folgenden Zeichen beinhalten: a-z._ und -"
 
 msgid "Name can't be empty."
 msgstr "Name kann nicht leer sein."
@@ -1084,10 +1099,10 @@ msgid "Name must be shorter than 26 characters"
 msgstr "Name muss kürzer als 26 Zeichen sein"
 
 msgid "Name of this role"
-msgstr ""
+msgstr "Name dieser Rolle"
 
 msgid "Name of your faction (this can not be changed later)"
-msgstr ""
+msgstr "Name der Fraktion (diese kann später nicht mehr geändert werden)"
 
 msgid "Name or Email"
 msgstr "Name oder Email"
@@ -1108,7 +1123,7 @@ msgid "No"
 msgstr "Nein"
 
 msgid "No File selected to upload"
-msgstr ""
+msgstr "Keine Datei zum Hochladen ausgewählt"
 
 msgid "No Phish!"
 msgstr "Kein Fisch!"
@@ -1117,7 +1132,7 @@ msgid "No captcha id given"
 msgstr "Keine Captcha-ID angegeben"
 
 msgid "No flag selected"
-msgstr ""
+msgstr "Keine Flagge ausgewählt"
 
 msgid "No or invalid captcha text"
 msgstr "Kein oder falscher Captcha Text"
@@ -1126,22 +1141,24 @@ msgid "No password given."
 msgstr "Kein Passwort eingegeben."
 
 msgid "No results."
-msgstr ""
+msgstr "Keine Ergebnisse."
 
 msgid "Nobody is banned from this faction"
-msgstr ""
+msgstr "Niemand ist aus dieser Fraktion verbannt"
 
 msgid "Not Allowed"
-msgstr ""
+msgstr "Nicht erlaubt"
 
 msgid "Not allowed"
 msgstr "Nicht erlaubt"
 
 msgid "Note"
-msgstr ""
+msgstr "Hinweis"
 
 msgid "Note: Your active Faction may overwrite your flag settings."
 msgstr ""
+"Hinweis: Deine aktive Fraktion kann deine Flaggen-Einstellungen "
+"überschreiben."
 
 msgid "OIDC LogIn"
 msgstr "OIDC Anmeldung"
@@ -1159,7 +1176,7 @@ msgid "Old Password"
 msgstr "Altes Passwort"
 
 msgid "One-Time"
-msgstr ""
+msgstr "Einmalig"
 
 msgid "Online Users"
 msgstr "Spieler online"
@@ -1174,7 +1191,7 @@ msgid "Opacity of Overlay in percent."
 msgstr "Deckkraft der Vorlage in Prozent."
 
 msgid "Open"
-msgstr ""
+msgstr "Öffnen"
 
 msgid "Open Chat"
 msgstr "Öffne Kommentarsektion"
@@ -1215,7 +1232,7 @@ msgid "Overlay Opacity"
 msgstr "Vorlagen Deckkraft"
 
 msgid "Overview"
-msgstr ""
+msgstr "Übersicht"
 
 msgid "Palette Download"
 msgstr "Palette herunterladen"
@@ -1250,7 +1267,7 @@ msgid "Permission"
 msgstr "Berechtigung"
 
 msgid "Permissions of Powerlevels"
-msgstr ""
+msgstr "Berechtigungen von Powerlevels"
 
 msgid "Phish!"
 msgstr "Fisch!"
@@ -1262,7 +1279,7 @@ msgid "Ping"
 msgstr "Erwähnen"
 
 msgid "Pixel"
-msgstr ""
+msgstr "Pixel"
 
 msgid "Pixel Notify OFF"
 msgstr "Pixelaktivität Aus"
@@ -1312,10 +1329,10 @@ msgid "Potato Mode"
 msgstr "Erdapfel Modus"
 
 msgid "Powerlevel"
-msgstr ""
+msgstr "Powerlevel"
 
 msgid "Powerlevel of this role. See table below for explenation."
-msgstr ""
+msgstr "Powerlevel dieser Rolle. Siehe die Tabelle unten für eine Erklärung."
 
 #, javascript-format
 msgid ""
@@ -1359,7 +1376,7 @@ msgid "Profile"
 msgstr "Profil"
 
 msgid "Public"
-msgstr ""
+msgstr "Öffentlich"
 
 msgid "Quick Actions"
 msgstr "Schnellzugriff"
@@ -1368,7 +1385,7 @@ msgid "Range Banned"
 msgstr "IP Bereich Gebannt"
 
 msgid "Rank"
-msgstr ""
+msgstr "Rang"
 
 msgid "Ranked"
 msgstr "Gewertet"
@@ -1409,7 +1426,7 @@ msgid "Remove"
 msgstr "Entfernen"
 
 msgid "Remove Chatmod"
-msgstr ""
+msgstr "Chatmod entfernen"
 
 msgid "Remove Cleaner"
 msgstr "Entferne Putzfrau"
@@ -1421,14 +1438,14 @@ msgid "Remove Moderator"
 msgstr "Entferne Moderator"
 
 msgid "Remove Roles"
-msgstr ""
+msgstr "Rollen entfernen"
 
 msgid "Remove a Login method:"
 msgstr "Entferne eine Anmeldungsmethode:"
 
 #, javascript-format
 msgid "Represents ${ activeFactionTitle } as ${ activeFactionRoleName }"
-msgstr ""
+msgstr "Vertritt ${ activeFactionTitle } als ${ activeFactionRoleName }"
 
 msgid "Require Verification to Place"
 msgstr "Benötige Verifikation um zu spielen"
@@ -1461,13 +1478,13 @@ msgid "Revoke consent of third party applications:"
 msgstr "Drittanwendungen Berechtigungen entziehen:"
 
 msgid "Role"
-msgstr ""
+msgstr "Rolle"
 
 msgid "Role Flags"
-msgstr ""
+msgstr "Rollen-Flaggen"
 
 msgid "Roles"
-msgstr ""
+msgstr "Rollen"
 
 msgid "Roll different Captcha Fonts"
 msgstr "Rolle eine andere Schriftart für Captchas"
@@ -1491,19 +1508,20 @@ msgstr ""
 "Finger-Zoom zum zoomen"
 
 msgid "Search"
-msgstr ""
+msgstr "Suche"
 
 msgid "Search Existing Faction"
-msgstr ""
+msgstr "Suche existierende Fraktion"
 
 msgid "Search Term"
-msgstr ""
+msgstr "Suchbegriff"
 
 msgid "See hidden users in member list"
-msgstr ""
+msgstr "Sehe versteckte Mitglieder in der Mitgliederliste"
 
 msgid "Select Avatar of this Faction. Supported Formats: jpg, gif, png, webp"
 msgstr ""
+"Wähle ein Avatar dieser Fraktion. Unterstützte Formate: jpg, gif, png, webp"
 
 msgid "Select Date above"
 msgstr "Datum auswählen"
@@ -1512,16 +1530,16 @@ msgid "Select File"
 msgstr "Datei auswählen"
 
 msgid "Select Flag"
-msgstr ""
+msgstr "Flagge auswählen"
 
 msgid "Select Language"
 msgstr "Sprache Auswählen"
 
 msgid "Select a valid powerlevel"
-msgstr ""
+msgstr "Wähle ein gültiges Powerlevel"
 
 msgid "Select a valid pwerlevel"
-msgstr ""
+msgstr "Wähle ein gültiges Powerlevel"
 
 msgid ""
 "Select the canvas you want to use.\n"
@@ -1535,13 +1553,13 @@ msgstr ""
 "Das Archiv vergangenen Leinwänden kann hier eingesehen werden:"
 
 msgid "Select your Avatar. Supported Formats: jpg, gif, png, webp"
-msgstr ""
+msgstr "Wähle dein Avatar. Unterstützte Formate: jpg, gif, png, webp"
 
 msgid "Selected Color"
 msgstr "Ausgewählte Farbe"
 
 msgid "Selected Flag:"
-msgstr ""
+msgstr "Wähle Flagge:"
 
 msgid "Send"
 msgstr "Senden"
@@ -1602,7 +1620,7 @@ msgid "Show templates as overlays ingame."
 msgstr "Zeige Vorlagen als Bild über der Leinwand."
 
 msgid "Shrink"
-msgstr ""
+msgstr "Verkleinern"
 
 msgid "Size"
 msgstr "Größe"
@@ -1615,7 +1633,7 @@ msgstr "Soziale Einstellungen"
 
 #, javascript-format
 msgid "Source for pixelplanet on ${ gitLink } or ${ downloadHereLink }."
-msgstr ""
+msgstr "Quelltext für pixelplanet auf ${ gitLink } oder ${ downloadHereLink }."
 
 msgid "Stacking till"
 msgstr "Gesamtzeit"
@@ -1683,7 +1701,7 @@ msgstr ""
 "permanent, es kann später nicht mehr geändert werden."
 
 msgid "The password for your account."
-msgstr ""
+msgstr "Das Passwort für deinen Benutzer."
 
 msgid "Themes"
 msgstr "Stile"
@@ -1706,7 +1724,7 @@ msgstr ""
 "und war für Monate aktiv bis es am 30. November geschlossen wurde."
 
 msgid "This faction has no invites"
-msgstr ""
+msgstr "Diese Fraktion hat keine Einladungen"
 
 msgid ""
 "This is the name that other people see, e.g. in Chat. You can change it at "
@@ -1717,6 +1735,7 @@ msgstr ""
 
 msgid "This login may only work if your account is verified."
 msgstr ""
+"Einloggen funktioniert womöglich nur, wenn dein Benutzer verifiziert ist."
 
 msgid "This permission is required"
 msgstr "Diese Berechtigung ist erforderlich"
@@ -1742,22 +1761,22 @@ msgstr ""
 "Pixel auf der Leinwand repräsentieren."
 
 msgid "Title"
-msgstr ""
+msgstr "Titel"
 
 msgid "Title can't be empty."
-msgstr ""
+msgstr "Titel darf nicht leer sein."
 
 msgid "Title contains invalid character like @, /, \\ or #"
-msgstr ""
+msgstr "Titel enthält unerlaubte Zeichen wie @,/,\\ oder #"
 
 msgid "Title must be at least 2 characters long"
-msgstr ""
+msgstr "Title muss mindestens zwei Zeichen lang sein"
 
 msgid "Title must be shorter than 26 characters"
-msgstr ""
+msgstr "Titel darf nicht länger als 26 Zeichen sein"
 
 msgid "Title of your faction"
-msgstr ""
+msgstr "Titel der Fraktion"
 
 msgid "To use this page, enter your Password:"
 msgstr "Bitte Passwort eingeben, um diese Seite zu verwenden:"
@@ -1790,7 +1809,7 @@ msgid "Total Online Users"
 msgstr "Spieler insgesamt"
 
 msgid "Total Pixels per Faction"
-msgstr ""
+msgstr "Gesamte Pixel pro Fraktion"
 
 msgid "Total Pixels per Player"
 msgstr "Pixel pro Tag und Spieler"
@@ -1818,13 +1837,13 @@ msgid "Type the characters from the following image:"
 msgstr "Gebe die Zeichen aus dem folgenden Bild ein:"
 
 msgid "Unban media"
-msgstr ""
+msgstr "Media-Bann aufheben"
 
 msgid "Unban members"
-msgstr ""
+msgstr "Mitglieder-Bann aufheben"
 
 msgid "Unblock"
-msgstr ""
+msgstr "Stummschaltung aufheben"
 
 msgid "Unblock Users"
 msgstr "Entblocke Spieler"
@@ -1881,7 +1900,7 @@ msgid "Username must be shorter than 26 characters"
 msgstr "Benutzername muss kürzer als 26 Zeichen sein"
 
 msgid "Users"
-msgstr ""
+msgstr "Benutzer"
 
 #, javascript-format
 msgid "We are Libre Software under the ${ agplLink }, "
@@ -1910,7 +1929,7 @@ msgid "What the pencil should draw on the current canvas."
 msgstr "Was der Pinsel auf der aktuellen Leinwand zeichnen soll."
 
 msgid "Whether or not this invite can only be used once."
-msgstr ""
+msgstr "Ob die Einladung nur ein einziges mal verwendet werden kann."
 
 msgid ""
 "While we tend to not delete canvases, some canvases are started for fun or "
@@ -1961,7 +1980,7 @@ msgstr ""
 "die BID anzugeben, welche unten steht."
 
 msgid "You are currently not a member of any faction."
-msgstr ""
+msgstr "Du bist zur Zeit kein Mitglied dieser Fraktion."
 
 msgid "You are currently not allowed to access this game."
 msgstr "Du bist zur Zeit nicht erlaubt dieses Spiel zu spielen."
@@ -1970,15 +1989,17 @@ msgid ""
 "You are currently not representing any faction. To represent one, activate a "
 "role in one of your factions below."
 msgstr ""
+"Du vertrittst zur Zeit keine Fraktion. Um eine zu vertreten, aktiviere eine "
+"Rolle in einer der Fraktionen unten."
 
 #, javascript-format
 msgid ""
 "You are currently representing ${ activeFactionTitle } as ${ activeRoleName }"
-msgstr ""
+msgstr "Du vertrittst zur Zeit ${ activeFactionTitle } als ${ activeRoleName }"
 
 #, javascript-format
 msgid "You are logged in as ${ name } [${ username }]."
-msgstr ""
+msgstr "Angemeldet als ${ name } [${ username }]."
 
 msgid "You are not allowed to play this game right now :("
 msgstr "Du bist zur Zeit nicht erlaubt zu spielen :("
@@ -1993,6 +2014,8 @@ msgid ""
 "You can connect to pixelplanet and use pixelplanet accounts for oauth / oidc "
 "login. See here: "
 msgstr ""
+"Du kannst dich zu pixelplaent verbinden und pixelplanet Benutzer für oauth / "
+"oidc Login verden. Siehe hier: "
 
 msgid "You can not access this canvas yet, because your pixel score is too low"
 msgstr ""
@@ -2021,6 +2044,8 @@ msgid ""
 "You have been invited to join us on pixelplanet. We currently have $"
 "{ memberCount } members."
 msgstr ""
+"Einladung, uns auf pixelplanet beizutreten. Wir haben zur Zeit ${ "
+"memberCount } Mitglieder."
 
 msgid "You have no users blocked"
 msgstr "Du hast keine Benutzer blockiert"
@@ -2038,7 +2063,7 @@ msgid "You must enter a UserId"
 msgstr "Eine Benutzer ID muss angegeben werden"
 
 msgid "You must enter a mediaId or media BID"
-msgstr ""
+msgstr "Du musst eine mediaId oder media BID eingeben"
 
 msgid "You must enter a reason"
 msgstr "Keinen Grund angegeben"
@@ -2059,7 +2084,7 @@ msgid "You must enter at least one IID, User Id or BID"
 msgstr "Mindestens eine IID, Benutzer ID oder BID muss angegeben werden"
 
 msgid "You must select an avatar for your faction"
-msgstr ""
+msgstr "Du musst ein Avatar für deine Fraktion auswählen"
 
 msgid "You took too long, try again."
 msgstr "Du hast zu lange gebraucht, versuche es noch einmal."
@@ -2075,13 +2100,13 @@ msgid "Your Browser looks shady"
 msgstr "Dein Browser sieht verdächtig aus"
 
 msgid "Your Factions"
-msgstr ""
+msgstr "Deine Fraktionen"
 
 msgid "Your Internet Provider is banned from this game"
 msgstr "Dein Internet Anbieter ist von diesem Spiel verbannt"
 
 msgid "Your Roles"
-msgstr ""
+msgstr "Deine Rollen"
 
 msgid "Your ban expires at "
 msgstr "Du bist gesperrt bis "
@@ -2107,32 +2132,32 @@ msgstr ""
 "geklickt wird."
 
 msgid "a hidden faction"
-msgstr ""
+msgstr "eine versteckte Fraktion"
 
 msgid "affects"
-msgstr ""
+msgstr "beeinflusst"
 
 #, javascript-format
 msgid "and ${ canvas.req } Pixels set"
 msgstr "und ${ canvas.req } gesetzte Pixel"
 
 msgid "by"
-msgstr ""
+msgstr "von"
 
 msgid "check compliance here"
 msgstr "hier auf Konformität prüfen"
 
 msgid "created at"
-msgstr ""
+msgstr "erstellt am"
 
 msgid "days"
-msgstr ""
+msgstr "Tage"
 
 msgid "download here"
-msgstr ""
+msgstr "hier herunterladen"
 
 msgid "lift"
-msgstr ""
+msgstr "aufheben"
 
 msgid "or login with:"
 msgstr "oder melde dich an mit:"
@@ -2144,7 +2169,7 @@ msgid "recommended"
 msgstr "empfohlen"
 
 msgid "times used"
-msgstr ""
+msgstr "verwendet"
 
 #, javascript-format
 msgid "try again after ${ ti }min"

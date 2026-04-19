@@ -3,10 +3,10 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: admin@pixelplanet.fun\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2026-02-16 15:30+0000\n"
-"Last-Translator: Extreme Motorsex <em@noreply.pixelplanet.fun>\n"
-"Language-Team: German <https://translate.gs-os.com/projects/ppfun/server/de/"
-">\n"
+"PO-Revision-Date: 2026-04-19 10:59+0000\n"
+"Last-Translator: hf <hf@noreply.pixelplanet.fun>\n"
+"Language-Team: German <https://translate.gs-os.com/projects/ppfun/server/de/>"
+"\n"
 "Language: de\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -34,7 +34,7 @@ msgstr ""
 "wird um 00:00 UTC aktualisiert."
 
 msgid "A file was too large"
-msgstr ""
+msgstr "Eine Datei ist zu groß"
 
 msgid "Access modtools"
 msgstr "Auf Moderationshilfen zugreifen"
@@ -61,71 +61,73 @@ msgid "Application successfully added"
 msgstr "Anwendung erfolgreich hinzugefügt"
 
 msgid "Avatar can only be an image"
-msgstr ""
+msgstr "Ein Avatar kann nur ein Bild sein"
 
 msgid "Avatar not given or not an image"
-msgstr ""
+msgstr "Kein Avatar angegeben oder der Avatar ist kein Bild"
 
 msgid "Black and White canvas"
 msgstr "Schwarz/Weiß Leinwand"
 
 msgid "Can not change a role above your own"
-msgstr ""
+msgstr "Kann keine Rolle ändern, welche gleich oder über dir liegt"
 
 msgid "Can not change a role that is equal to your own"
-msgstr ""
+msgstr "Kann keine Rolle ändern, welche gleich zu deiner ist"
 
 msgid "Can not change the default setting of this role"
-msgstr ""
+msgstr "Kann die Standard Einstellung dieser Rolle nicht ändern"
 
 msgid "Can not change the powerlevel of a role equal or above you"
-msgstr ""
+msgstr "Kann das Powerlevel einer Rolle gleich oder über dir nicht ändern"
 
 msgid "Can not change the powerlevel of the Sovereign"
-msgstr ""
+msgstr "Kann das Powerlevel des Souverän nicht ändern"
 
 msgid "Can not chat while being banned"
 msgstr "Du kannst nicht schreiben, während du gesperrt bist"
 
 msgid "Can not create a role on the same level as yours"
-msgstr ""
+msgstr "Kann keine Rolle erstellen, welche gleich stark ist wie du"
 
 msgid "Can not create a role with a powerlevel beyond yours"
-msgstr ""
+msgstr "Kann keine Rolle erstellen, welche stärker ist als du"
 
 msgid "Can not delete a role on the same level as yours"
-msgstr ""
+msgstr "Kann keine Rolle löschen, welche gleich stark ist wie du"
 
 msgid "Can not delete this role"
-msgstr ""
+msgstr "Kann diese Rolle nicht löschen"
 
 msgid "Can not elevate the powerlevel of a role beyond yours"
-msgstr ""
+msgstr "Kann das Powerlevel nicht über dein eigenes anheben"
 
 msgid "Can not elevate the powerlevel of a role to yours"
-msgstr ""
+msgstr "Kann das Powerlevel einer Rolle nicht auf dein eigenes anheben"
 
 msgid "Can not have more than 20 faction roles"
-msgstr ""
+msgstr "Kann nicht mehr als 20 Fraktionen haben"
 
 msgid "Can not have more than 20 invites per faction"
-msgstr ""
+msgstr "Kann nicht mehr als 20 Einladungen in einer Fraktion haben"
 
 msgid "Can not modify user equal to you or above you"
-msgstr ""
+msgstr "Kann kein Mitglied gleich oder über dir bearbeiten"
 
 #. when leaving a faction and you are the last owner
 msgid "Can not orphan a faction"
-msgstr ""
+msgstr "Kann eine Fraktion nicht verweisen"
 
 #, javascript-format
 msgid ""
 "Can not upload this many files at once, only 5 are allowed, you have $"
 "{ amountOfFiles }"
 msgstr ""
+"Kann nicht so viele Dateien auf einmal hochladen, nur 5 sind erlaubt, du "
+"hast ${ amountOfFiles }"
 
 msgid "Can only have one Sovereign role"
-msgstr ""
+msgstr "Kann nur eine souveräne Rolle haben"
 
 msgid "Click here"
 msgstr "Klicke hier"
@@ -153,10 +155,12 @@ msgid "Coronavirus"
 msgstr "Coronavirus"
 
 msgid "Could not change the flag of this role"
-msgstr ""
+msgstr "Konnte die Flagge dieser Rolle nicht ändern"
 
 msgid "Could not change this setting. Maybe try again later."
 msgstr ""
+"Konnte diese Einstellung nicht ändern. Vielleicht versuche es später noch "
+"einmal."
 
 msgid "Could not close this Session."
 msgstr "Die Sitzung konnte nicht beendet werden."
@@ -165,19 +169,19 @@ msgid "Could not find this login method"
 msgstr "Anmeldungsmethode nicht gefunden"
 
 msgid "Could not leave this channel"
-msgstr ""
+msgstr "Konnte diesen Kanal nicht verlassen"
 
 msgid "Could not set this factions avatar"
-msgstr ""
+msgstr "Konnte das Avatar dieser Fraktion nicht setzen"
 
 msgid "Could not set your avatar"
-msgstr ""
+msgstr "Konnte das Avatar nicht setzen"
 
 msgid "Could not set your faction role"
-msgstr ""
+msgstr "Konnte deine Rolle nicht setzen"
 
 msgid "Could not upload all files"
-msgstr ""
+msgstr "Konnte nicht alle Dateien hochladen"
 
 msgid "Couldn't find this mail in our database"
 msgstr "Konnten diese E-Mail nicht in unserer Datenbank finden"
@@ -189,10 +193,10 @@ msgid "Delete Application"
 msgstr "Anwendung löschen"
 
 msgid "Description can't be empty"
-msgstr ""
+msgstr "Beschreibung kann nicht leer sein"
 
 msgid "Description must be shorter than 1000 characters"
-msgstr ""
+msgstr "Beschreibung darf nicht länger als 1000 Zeichen sein"
 
 msgid "Display name for your OIDC client"
 msgstr "Namen des OIDIC client anzeigen"
@@ -235,13 +239,15 @@ msgid ""
 "File ${ filename } has ${ sizeMB } MB and is too large. It may only be $"
 "{ MAX_FILE_SIZE_MB } MB"
 msgstr ""
+"Datei ${ filename } hat ${ sizeMB } MB und ist zu groß. Sie darf maximal nur "
+"${ MAX_FILE_SIZE_MB} MB haben"
 
 #, javascript-format
 msgid "File ${ filename } has an invalid extension"
-msgstr ""
+msgstr "Datei ${ filename } hat eine ungültige Erweiterung"
 
 msgid "File is broken"
-msgstr ""
+msgstr "Datei ist beschädigt"
 
 #. 'client_secret' is a technical term and should not be translated
 msgid ""
@@ -295,7 +301,7 @@ msgid "Incorrect password!"
 msgstr "Falsches Passwort!"
 
 msgid "Invalid type of media"
-msgstr ""
+msgstr "Ungültiger Medientyp"
 
 msgid "Invalid url :( Please check your mail again."
 msgstr "Ungültige Adresse :( Bitte kontrolliere die Mail nochmal."
@@ -304,10 +310,10 @@ msgid "Just admins can do that"
 msgstr "Nur Administratoren können dies tun"
 
 msgid "Just janny, mod or admin can do that"
-msgstr ""
+msgstr "Nur ein Hausmeister, Moderator oder Administrator kann dies machen"
 
 msgid "Just mods and admins can do that"
-msgstr ""
+msgstr "Nur ein Moderator oder Administrator kann dies machen"
 
 msgid "Know that an account exists"
 msgstr "Erfahren, dass ein pixelplanet Konto existiert"
@@ -335,11 +341,13 @@ msgid "Mail verification"
 msgstr "E-Mail verifizieren"
 
 msgid "MimeType or extension not known or supported"
-msgstr ""
+msgstr "MimeType oder Erweiterung nicht bekannt oder unterstützt"
 
 #, javascript-format
 msgid "Mimetype ${ mimeType } of file ${ filename } is invalid or not allowed"
 msgstr ""
+"MimeType ${ mimeType } von der Datei ${ filename } ist ungültig oder nicht "
+"erlaubt"
 
 msgid "Minimap"
 msgstr "Kleine Karte"
@@ -364,7 +372,7 @@ msgid "Name already in use."
 msgstr "Name bereits in Verwendung."
 
 msgid "Name can only contain the characters: a-z . _ and -"
-msgstr ""
+msgstr "Name kann nur die folgenden Zeichen beinhalten: a-z._ und -"
 
 msgid "Name can't be empty."
 msgstr "Name kann nicht leer sein."
@@ -388,13 +396,13 @@ msgid "New Password"
 msgstr "Neues Passwort"
 
 msgid "No Avatar given"
-msgstr ""
+msgstr "Kein Avatar angegeben"
 
 msgid "No Captcha given"
 msgstr "Kein Captcha angegeben"
 
 msgid "No file metadata given"
-msgstr ""
+msgstr "Keine Metadaten angegeben"
 
 msgid "No or invalid fish id."
 msgstr "Keine oder ungültige Fisch-ID ."
@@ -496,7 +504,7 @@ msgid "Regularly update this data"
 msgstr "Aktualisiere diese Daten regelmäßig"
 
 msgid "Request stalled"
-msgstr ""
+msgstr "Anfrage ins Stocken geraten"
 
 #. 'client_secret' is a technical term and should not be translated
 msgid "Reroll client_secret"
@@ -509,16 +517,16 @@ msgid "Reset your password here"
 msgstr "Setze hier dein Passwort zurück"
 
 msgid "Role flag can only be an image"
-msgstr ""
+msgstr "Flagge einer Rolle darf nur ein Bild sein"
 
 msgid "Role flag needs to be 16x11"
-msgstr ""
+msgstr "Flagge einer Rolle muss die Dimensionen 16x11 haben"
 
 msgid "Server Error"
-msgstr ""
+msgstr "Server Fehler"
 
 msgid "Server error while deleting user."
-msgstr ""
+msgstr "Server Fehler während der Löschung des Benutzers."
 
 msgid "Someone logged into your account from a new location, with the IP:"
 msgstr ""
@@ -562,7 +570,7 @@ msgstr "Danke"
 
 #, javascript-format
 msgid "The file ${ filename } is banned ${ reason }. Ban ID: ${ mbid }"
-msgstr ""
+msgstr "Die Datei ${ filename } ist verbannt ${ reason }. Bann ID: ${ mbid }"
 
 msgid "The user owning this badge is private"
 msgstr "Der Nutzer, dem diese Auszeichnung gehöhrt, hat ein privates Profil"
@@ -615,35 +623,35 @@ msgid "This email provider is not allowed"
 msgstr "Dieser E-Mail Anbieter ist nicht erlaubt"
 
 msgid "This faction does not exist"
-msgstr ""
+msgstr "Diese Fraktion existiert nicht"
 
 msgid "This faction is full"
-msgstr ""
+msgstr "Diese Fraktion ist voll"
 
 msgid "This faction is private"
-msgstr ""
+msgstr "Diese Fraktion ist privat"
 
 #, javascript-format
 msgid "This media is banned ${ reason }. Ban ID: ${ mbid }"
-msgstr ""
+msgstr "Dieses Medium ist verbannt ${ reason }. Ban ID: ${ mbid }"
 
 msgid "This password-reset link isn't valid anymore :("
 msgstr "Dieser Passwort-Wiederherstellungslink ist nichtmehr gültig :("
 
 msgid "This user is private"
-msgstr ""
+msgstr "Dieser Benutzer ist privat"
 
 msgid "Title can't be empty."
-msgstr ""
+msgstr "Titel darf nicht leer sein."
 
 msgid "Title contains invalid character like @, /, \\ or #"
-msgstr ""
+msgstr "Titel enthält unerlaubte Zeichen wie @,/,\\ oder #"
 
 msgid "Title must be at least 2 characters long"
-msgstr ""
+msgstr "Title muss mindestens zwei Zeichen lang sein"
 
 msgid "Title must be shorter than 26 characters"
-msgstr ""
+msgstr "Titel darf nicht länger als 26 Zeichen sein"
 
 #. "redirect_uris" is a technical term and should not be translated
 msgid "Too many or too long redirect_uris"
@@ -657,7 +665,7 @@ msgstr "Unbekannter Captcha-Fehler"
 
 #, javascript-format
 msgid "Unknown field ${ name } in request"
-msgstr ""
+msgstr "Unbekanntes Feld ${ name } in Anfrage"
 
 msgid "Update Application"
 msgstr "Aktualisiere Anwendung"
@@ -702,7 +710,7 @@ msgstr ""
 "in ${ minLeft } minuten anfordern."
 
 msgid "We currently do not allow file uploads"
-msgstr ""
+msgstr "Zur Zeit ist das hochladen von Dateien nicht erlaubt"
 
 #, javascript-format
 msgid "Welcome ${ name } to PixelPlanet, please verify your mail"
@@ -716,13 +724,13 @@ msgid "You already have that name."
 msgstr "Du hast bereits diesen Namen."
 
 msgid "You are already part of this faction"
-msgstr ""
+msgstr "Du bist bereits ein Teil dieser Fraktion"
 
 msgid "You are already verified."
 msgstr "Du bist bereits verifiziert."
 
 msgid "You are banned from this faction"
-msgstr ""
+msgstr "Du bist aus dieser Fraktion verbannt"
 
 #, javascript-format
 msgid "You are muted for another ${ timeMin } minutes"
@@ -754,7 +762,7 @@ msgid "You are sending messages too fast, you have to wait ${ waitTime }s :("
 msgstr "Du sendest zu viele Nachrichten, du musst ${ waitTime }s warten :("
 
 msgid "You attached too many files"
-msgstr ""
+msgstr "Du hast zu viele Dateien angehängt"
 
 msgid ""
 "You can not delete this login method, because you have nothing else left."
@@ -775,10 +783,12 @@ msgstr "Du kannst keine Nachrichten senden während du ein Proxy benutzt"
 msgid ""
 "You can only be owner of ${ MAX_OWNED_FACTIONS_PER_USER } factions in total"
 msgstr ""
+"Du kannst nur teil von maximal ${ MAX_OWNED_FACTIONS_PER_USER } Fraktionen "
+"sein"
 
 #, javascript-format
 msgid "You can only have ${ MAX_FACTIONS_PER_USER } factions in total"
-msgstr ""
+msgstr "Du kannst nur ${ MAX_FACTIONS_PER_USER } Fraktionen insgesamt haben"
 
 msgid ""
 "You can register your own application here to get the client_id and "
@@ -791,7 +801,7 @@ msgid "You can't send a message this long :("
 msgstr "Do kannst keine so langen Nachrichten senden"
 
 msgid "You did not provide all necessary information"
-msgstr ""
+msgstr "Nicht alle notwendigen Informationen angegeben"
 
 msgid ""
 "You do not have any email adress set. Please add one under \"Login Methods\"."
@@ -816,7 +826,7 @@ msgid "You must be logged in to access this page"
 msgstr "Diese Seite ist nur für angemeldete Benutzer verfügbar"
 
 msgid "You need an invite to join this faction"
-msgstr ""
+msgstr "Dieser Fraktion kann nur mit einer Einladung beigetreten werden"
 
 #. "scope" is a technical term and should not be translated
 msgid "You need to define a valid scope"
@@ -828,6 +838,8 @@ msgstr "Diese Seite ist nur direkt in einem Browser verfügbar :("
 #, javascript-format
 msgid "You reached your maximum upload quota of ${ MAX_USER_MEDIA_SIZE_MB } MB"
 msgstr ""
+"Maximales Limit an hochgeladenen Dateien von ${ MAX_USER_MEDIA_SIZE_MB } MB "
+"erreicht"
 
 msgid ""
 "You requested to get a new password. You can change your password within the "
@@ -851,6 +863,8 @@ msgstr "Dein Browser sieht verdächtig aus"
 msgid ""
 "Your account must be at least two weeks old before you can create a faction"
 msgstr ""
+"Der Benutzer muss mindestens zwei Wochen alt sein, bevor dieser eine "
+"Fraktion erstellen kann"
 
 msgid "Your account needs to be verified to access this page"
 msgstr "Dein Konto muss verifiziert sein, um auf diese Seite zuzugreifen"
@@ -873,31 +887,31 @@ msgstr "Passwörter stimmen nicht überein :("
 
 #. This media is banned xyz
 msgid "because it is propaganda"
-msgstr ""
+msgstr "weil es Propaganda ist"
 
 #. This media is banned xyz
 msgid "for being an attempt to scam people"
-msgstr ""
+msgstr "weil es ein Versuch ist, Leute zu betrügen"
 
 #. This media is banned xyz
 msgid "for being degenerate"
-msgstr ""
+msgstr "weil es degeneriert ist"
 
 #. This media is banned xyz
 msgid "for containing CSAM"
-msgstr ""
+msgstr "weil es CSAM beinhaltet"
 
 #. This media is banned xyz
 msgid "for containing graphic violence"
-msgstr ""
+msgstr "wegen der Darstellung expliziter Gewalt"
 
 #. This media is banned xyz
 msgid "for containing personal information"
-msgstr ""
+msgstr "weil es persönliche Informationen enthält"
 
 #. This media is banned xyz
 msgid "for glorifying terrorism"
-msgstr ""
+msgstr "wegen der Verherrlichung von Terrorismus"
 
 #. "redirect_uris" is a technical term and should not be translated
 msgid "redirect_uris does not look legit"
