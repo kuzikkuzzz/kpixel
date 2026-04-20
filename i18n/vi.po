@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: admin@pixelplanet.fun\n"
-"PO-Revision-Date: 2026-04-20 13:30+0000\n"
-"Last-Translator: itxv <itxv@noreply.pixelplanet.fun>\n"
+"PO-Revision-Date: 2026-04-20 15:36+0000\n"
+"Last-Translator: Ngvn <ngvn@noreply.pixelplanet.fun>\n"
 "Language-Team: Vietnamese <https://translate.gs-os.com/projects/ppfun/client/"
 "vi/>\n"
 "Language: vi\n"
@@ -39,6 +39,8 @@ msgid ""
 "${ mouseSymbol } Right click or ${ touchSymbol } double-tap to remove a "
 "pixel"
 msgstr ""
+"${ mouseSymbol } Nhấp chuột phải hoặc ${ touchSymbol } chạm vào màn hình hai "
+"lần để xoá một pixel"
 
 #: src/components/windows/Help.jsx:121
 #, javascript-format
@@ -46,6 +48,8 @@ msgid ""
 "${ mouseSymbol } Scroll mouse wheel or hold ${ mouseSymbol } middle mouse "
 "button and drag to zoom"
 msgstr ""
+"${ mouseSymbol } Sử dụng con lăn của chuột hoặc nhấn giữ ${ mouseSymbol } "
+"nút giữa của chuột và kéo để phóng to"
 
 #: src/components/IIDTools.jsx:232
 msgid "(0 = infinite)"
@@ -61,7 +65,7 @@ msgstr "(chọn một vai trò để giao hoặc xóa nó)"
 
 #: src/components/windows/Statistics.jsx:215
 msgid "+last hour"
-msgstr "+một tiếng trước"
+msgstr "+tiếng trước"
 
 #: src/components/ChangeMail.jsx:180
 msgid "...loading Login methods and sessions..."
@@ -1380,7 +1384,7 @@ msgstr ""
 #: src/components/windows/MyFactions.jsx:168
 #: src/components/windows/User.jsx:94
 msgid "Loading..."
-msgstr ""
+msgstr "Đang tải xuống…"
 
 #: src/components/menus/mainMenu.js:138
 msgid "Log in or Register"

@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: admin@pixelplanet.fun\n"
-"PO-Revision-Date: 2026-04-20 13:30+0000\n"
+"PO-Revision-Date: 2026-04-20 15:36+0000\n"
 "Last-Translator: Ngvn <ngvn@noreply.pixelplanet.fun>\n"
 "Language-Team: Vietnamese <https://translate.gs-os.com/projects/ppfun/server/"
 "vi/>\n"
@@ -41,7 +41,7 @@ msgstr "Tập tin quá lớn"
 
 #: src/routes/oidc/register.js:161
 msgid "Access modtools"
-msgstr ""
+msgstr "Truy cập công cụ mod"
 
 #: src/routes/oidc/register.js:231
 msgid "Add Application"
@@ -109,7 +109,7 @@ msgstr ""
 
 #: src/core/ChatProvider.js:355
 msgid "Can not chat while being banned"
-msgstr ""
+msgstr "Không thể trò chuyện khi bị cấm"
 
 #: src/routes/api/factionrolecreate.js:53
 msgid "Can not create a role on the same level as yours"
@@ -125,7 +125,7 @@ msgstr ""
 
 #: src/routes/api/factionroledelete.js:27
 msgid "Can not delete this role"
-msgstr ""
+msgstr "Không thể xoá vai trò này"
 
 #: src/routes/api/factionrolechange.js:90
 msgid "Can not elevate the powerlevel of a role beyond yours"
@@ -137,11 +137,11 @@ msgstr ""
 
 #: src/routes/api/factionrolecreate.js:73
 msgid "Can not have more than 20 faction roles"
-msgstr ""
+msgstr "Không thể có hơn 20 vai trò của nhóm"
 
 #: src/routes/api/factioninvitecreate.js:32
 msgid "Can not have more than 20 invites per faction"
-msgstr ""
+msgstr "Không thể có hơn 20 lời mời mỗi nhóm"
 
 #: src/routes/api/factionkickban.js:49
 #: src/routes/api/factionrolejoin.js:50
@@ -162,6 +162,8 @@ msgid ""
 "Can not upload this many files at once, only 5 are allowed, you have ${ "
 "amountOfFiles }"
 msgstr ""
+"Không thể tải lên quá nhiều tệp cùng một lúc, chỉ cho phép tối đa là 5, bạn "
+"hiện cố tải ${ amountOfFiles } tệp"
 
 #: src/routes/api/factionrolechange.js:95
 #: src/routes/api/factionrolecreate.js:50
@@ -175,7 +177,7 @@ msgstr "Nhấn vào đây"
 
 #: src/core/MailProvider.js:72
 msgid "Click to Verify"
-msgstr "Nhấn vào đây để xác minh"
+msgstr "Nhấn vào đây để xác thực"
 
 #: src/routes/oidc/register.js:186
 #: src/routes/oidc/register.js:247
@@ -382,15 +384,17 @@ msgid ""
 "If you did not request this mail, please just ignore it (the ip that "
 "requested this mail was ${ ip })."
 msgstr ""
+"Nếu bạn không yêu cầu thư này, vui lòng bỏ qua (ip đã yêu cầu thư này là ${ "
+"ip })."
 
 #: src/utils/hash.js:36
 msgid "Incorrect password!"
-msgstr ""
+msgstr "Mật khẩu sai!"
 
 #: src/routes/api/media.js:145
 #: src/routes/api/media.js:294
 msgid "Invalid type of media"
-msgstr ""
+msgstr "Loại đa phương tiện không hợp lệ"
 
 #: src/routes/reset_password.js:95
 msgid "Invalid url :( Please check your mail again."
@@ -398,7 +402,7 @@ msgstr ""
 
 #: src/routes/api/modtools.js:341
 msgid "Just admins can do that"
-msgstr ""
+msgstr "Chỉ những quảng trị viên có thể làm vậy"
 
 #: src/routes/api/modtools.js:120
 msgid "Just janny, mod or admin can do that"
@@ -419,20 +423,20 @@ msgstr ""
 
 #: src/ssr/Globe.jsx:47
 msgid "Loading..."
-msgstr ""
+msgstr "Đang tải xuống…"
 
 #: src/core/MailProvider.js:106
 msgid "Login from new location on PixelPlanet"
-msgstr ""
+msgstr "Đăng nhập từ vị trí mới trên PixelPlanet"
 
 #: src/routes/oidc/auth.js:76
 #: src/routes/oidc/consent.js:48
 msgid "Login is required"
-msgstr ""
+msgstr "Yêu cầu đăng nhập"
 
 #: src/routes/api/auth/change_mail.js:53
 msgid "Mail is already in use!"
-msgstr ""
+msgstr "Thư điện tử này đã được sử dụng!"
 
 #: src/core/MailProvider.js:147
 msgid "Mail is not configured on the server"
@@ -442,7 +446,7 @@ msgstr ""
 #: src/routes/api/auth/verify.js:23
 #: src/routes/api/auth/verify.js:33
 msgid "Mail verification"
-msgstr ""
+msgstr "Xác thực thư điện tử"
 
 #: src/routes/api/media.js:291
 msgid "MimeType or extension not known or supported"
@@ -467,7 +471,7 @@ msgstr ""
 
 #: src/canvasesDesc.js:22
 msgid "Moon"
-msgstr ""
+msgstr "Mặt trăng"
 
 #: src/canvasesDesc.js:34
 msgid ""
@@ -937,6 +941,8 @@ msgstr ""
 #, javascript-format
 msgid "Welcome ${ name } to PixelPlanet, please verify your mail"
 msgstr ""
+"Chào mừng ${ name } đã đến với PixelPlanet, vui lòng xác thực thư điện tử "
+"của bạn"
 
 #: src/routes/api/userchange.js:64
 msgid "You already chose your username"
@@ -1014,7 +1020,7 @@ msgstr ""
 
 #: src/core/ChatProvider.js:352
 msgid "You can not send chat messages while using a proxy"
-msgstr ""
+msgstr "Bạn không thể gửi các tin nhắn trò chuyện khi đang sử dụng proxy"
 
 #: src/routes/api/factioncreate.js:60
 #, javascript-format
@@ -1121,10 +1127,12 @@ msgstr ""
 #: src/core/ChatProvider.js:340
 msgid "Your country is temporary muted from this chat channel"
 msgstr ""
+"Đất nước của bạn hiện đang tạm thời bị cấm trò chuyện trong kênh trò chuyện "
+"này"
 
 #: src/core/ChatProvider.js:378
 msgid "Your mail has to be verified in order to chat"
-msgstr ""
+msgstr "Thư điện tử của bạn phải được xát thực để có thể trò chuyện"
 
 #: src/routes/api/auth/verify.js:33
 msgid ""
@@ -1186,3 +1194,6 @@ msgid ""
 "welcome to our little community of pixelplacers, to use your account, you "
 "have to verify your mail. You can do that here: "
 msgstr ""
+"chào mừng đã đến với cộng đồng nhỏ của chúng tôi cho những người hay đặt "
+"pixel ở đây, để sử dụng tài khoản của bạn, bạn cần phải xác thực thư điện tử "
+"của bạn. Bạn có thể làm thế ở đây: "
