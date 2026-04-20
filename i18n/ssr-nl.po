@@ -1,22 +1,24 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: admin@pixelplanet.fun\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: \n"
-"Last-Translator: weblate <weblate@noreply.pixelplanet.fun>\n"
-"Language-Team: \n"
+"PO-Revision-Date: 2026-04-20 13:30+0000\n"
+"Last-Translator: lay <lay@noreply.pixelplanet.fun>\n"
+"Language-Team: Dutch <https://translate.gs-os.com/projects/ppfun/server/nl/>"
+"\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 3.3.2\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 5.15.2\n"
 
 msgid "1bit"
 msgstr "1bit"
 
 msgid "2bit"
-msgstr ""
+msgstr "2bit"
 
 msgid "3D Canvas"
 msgstr "3D-canvas"
@@ -32,98 +34,110 @@ msgstr ""
 "ranking-updates om 00:00 UTC."
 
 msgid "A file was too large"
-msgstr ""
+msgstr "Een bestand was te groot"
 
 msgid "Access modtools"
-msgstr ""
+msgstr "Toegang tot modtools"
 
 msgid "Add Application"
-msgstr ""
+msgstr "Toepassing toevoegen"
 
 msgid "Add an Application (OIDC Client)"
-msgstr ""
+msgstr "Een applicatie toevoegen (OIDC Client)"
 
 msgid "Add new application"
-msgstr ""
+msgstr "Nieuwe applicatie toevoegen"
 
 msgid "An error occured. Please try again later."
-msgstr ""
+msgstr "Er is een fout opgetreden. Probeer het later opnieuw."
 
 msgid "Application changed successfully"
-msgstr ""
+msgstr "Applicatie succesvol gewijzigd"
 
 msgid "Application deleted"
-msgstr ""
+msgstr "Applicatie verwijderd"
 
 msgid "Application successfully added"
-msgstr ""
+msgstr "Applicatie succesvol toegevoegd"
 
 msgid "Avatar can only be an image"
-msgstr ""
+msgstr "Een avatar kan slechts een afbeelding zijn"
 
 msgid "Avatar not given or not an image"
-msgstr ""
+msgstr "Avatar niet opgegeven of geen afbeelding"
 
 msgid "Black and White canvas"
 msgstr "Zwart-wit canvas"
 
 msgid "Can not change a role above your own"
-msgstr ""
+msgstr "Je kunt geen rol boven je eigen rol veranderen"
 
 msgid "Can not change a role that is equal to your own"
-msgstr ""
+msgstr "Je kunt een rol die gelijkwaardig is aan die van jezelf niet veranderen"
 
 msgid "Can not change the default setting of this role"
-msgstr ""
+msgstr "De standaardinstelling van deze rol kan niet worden gewijzigd"
 
 msgid "Can not change the powerlevel of a role equal or above you"
 msgstr ""
+"Je kunt het machtsniveau van een rol die gelijk is aan of hoger is dan jij "
+"niet veranderen"
 
 msgid "Can not change the powerlevel of the Sovereign"
-msgstr ""
+msgstr "Het is niet mogelijk om het machtsniveau van de Soeverein te veranderen"
 
 msgid "Can not chat while being banned"
-msgstr ""
+msgstr "Chatten is niet mogelijk zolang je verbannen bent"
 
 msgid "Can not create a role on the same level as yours"
 msgstr ""
+"Het is niet mogelijk om een rol op hetzelfde niveau als die van jou aan te "
+"maken"
 
 msgid "Can not create a role with a powerlevel beyond yours"
 msgstr ""
+"Je kunt geen rol aanmaken met een machtsniveau dat hoger is dan dat van "
+"jezelf"
 
 msgid "Can not delete a role on the same level as yours"
 msgstr ""
+"Je kunt geen rol verwijderen die zich op hetzelfde niveau bevindt als jouw "
+"rol"
 
 msgid "Can not delete this role"
-msgstr ""
+msgstr "Deze rol kan niet worden verwijderd"
 
 msgid "Can not elevate the powerlevel of a role beyond yours"
-msgstr ""
+msgstr "Je kunt het machtsniveau van een rol niet boven dat van jezelf verhogen"
 
 msgid "Can not elevate the powerlevel of a role to yours"
-msgstr ""
+msgstr "Je kunt het machtsniveau van een rol niet verhogen tot dat van jezelf"
 
 msgid "Can not have more than 20 faction roles"
-msgstr ""
+msgstr "Je kunt niet meer dan 20 factierollen hebben"
 
 msgid "Can not have more than 20 invites per faction"
-msgstr ""
+msgstr "Je mag niet meer dan 20 uitnodigingen per factie"
 
 msgid "Can not modify user equal to you or above you"
 msgstr ""
+"Je kunt geen gebruikers wijzigen die gelijk zijn aan of hoger in rang staan "
+"dan jij"
 
 #. when leaving a faction and you are the last owner
 msgid "Can not orphan a faction"
-msgstr ""
+msgstr "Een factie kan niet als wees worden beschouwd"
 
 #, javascript-format
 msgid ""
 "Can not upload this many files at once, only 5 are allowed, you have $"
 "{ amountOfFiles }"
 msgstr ""
+"Je kunt niet zoveel bestanden tegelijk uploaden, er zijn er maar 5 "
+"toegestaan, jij hebt ${ amountOfFiles }"
 
 msgid "Can only have one Sovereign role"
-msgstr ""
+msgstr "Kan slechts één soevereine rol hebben"
 
 msgid "Click here"
 msgstr "Klik hier"
@@ -132,7 +146,7 @@ msgid "Click to Verify"
 msgstr "Klik om te verifiëren"
 
 msgid "Client Name"
-msgstr ""
+msgstr "Client Naam"
 
 msgid "Confirm New Password"
 msgstr "Bevestig nieuw wachtwoord"
@@ -141,57 +155,59 @@ msgid ""
 "Conquer land on a smaller earth with protected ocean. Shares cooldown with "
 "earth canvas!"
 msgstr ""
+"Verover land op een kleinere aarde met een beschermde oceaan. Deelt de "
+"cooldown met het aarde canvas!"
 
 msgid "Consent"
-msgstr ""
+msgstr "Toestemming"
 
 msgid "Coronavirus"
 msgstr "Coronavirus"
 
 msgid "Could not change the flag of this role"
-msgstr ""
+msgstr "Het was niet mogelijk om de vlag van deze rol te wijzigen"
 
 msgid "Could not change this setting. Maybe try again later."
-msgstr ""
+msgstr "Deze instelling kon niet worden gewijzigd. Probeer het later nog eens."
 
 msgid "Could not close this Session."
-msgstr ""
+msgstr "Deze Sessie kon niet worden afgesloten."
 
 msgid "Could not find this login method"
-msgstr ""
+msgstr "Deze inlogmethode kon niet worden gevonden"
 
 msgid "Could not leave this channel"
-msgstr ""
+msgstr "Kon dit kanaal niet verlaten"
 
 msgid "Could not set this factions avatar"
-msgstr ""
+msgstr "Kon de avatar van deze factie niet instellen"
 
 msgid "Could not set your avatar"
-msgstr ""
+msgstr "Je avatar kon niet worden ingesteld"
 
 msgid "Could not set your faction role"
-msgstr ""
+msgstr "Je factierol kon niet worden ingesteld"
 
 msgid "Could not upload all files"
-msgstr ""
+msgstr "Kon niet alle bestanden uploaden"
 
 msgid "Couldn't find this mail in our database"
 msgstr "Kon deze mail niet vinden in onze database"
 
 msgid "Default"
-msgstr ""
+msgstr "Standaard"
 
 msgid "Delete Application"
-msgstr ""
+msgstr "Applicatie Verwijderen"
 
 msgid "Description can't be empty"
-msgstr ""
+msgstr "De beschrijving mag niet leeg zijn"
 
 msgid "Description must be shorter than 1000 characters"
-msgstr ""
+msgstr "De beschrijving mag niet langer zijn dan 1000 tekens"
 
 msgid "Display name for your OIDC client"
-msgstr ""
+msgstr "Weergavenaam voor je OIDC client"
 
 msgid "Double click on globe to go back."
 msgstr "Dubbelklik op wereldbol om terug te gaan."
@@ -203,7 +219,7 @@ msgid "Earth"
 msgstr "Aarde"
 
 msgid "Edit existing applications"
-msgstr ""
+msgstr "Bewerk bestaande applicaties"
 
 msgid "Email can't be empty."
 msgstr "E-mail mag niet leeg zijn."
@@ -221,40 +237,43 @@ msgid "Email should contain a @"
 msgstr "E-mail moet een @ bevatten"
 
 msgid "Error"
-msgstr ""
+msgstr "Fout"
 
 msgid "Failed to create a new user :("
-msgstr ""
+msgstr "Het aanmaken van een nieuwe gebruiker is mislukt :("
 
 #, javascript-format
 msgid ""
 "File ${ filename } has ${ sizeMB } MB and is too large. It may only be $"
 "{ MAX_FILE_SIZE_MB } MB"
 msgstr ""
+"Het bestand ${ filename } heeft ${ sizeMB } MB en is te groot. Het mag "
+"maximaal ${ MAX_FILE_SIZE_MB } MB groot zijn"
 
 #, javascript-format
 msgid "File ${ filename } has an invalid extension"
-msgstr ""
+msgstr "Het bestand ${ filename } heeft een ongeldige extensie"
 
 msgid "File is broken"
-msgstr ""
+msgstr "Bestand is kapot"
 
 #. 'client_secret' is a technical term and should not be translated
 msgid ""
 "Generate a new client_secret. The old secret will become invalid immediately."
 msgstr ""
+"Genereer een nieuw client_secret. Het oude secret wordt onmiddellijk "
+"ongeldig."
 
 msgid "Get email address"
-msgstr ""
+msgstr "E-mailadres ophalen"
 
 msgid "Get the amount of Pixels placed and ranking"
-msgstr ""
+msgstr "Krijg het aantal geplaatste Pixels en de bijbehorende rangschikking"
 
-#, fuzzy
 msgid ""
 "Have fun and don't hesitate to contact us if you encounter any problems :)"
 msgstr ""
-"Veel plezier en aarzel niet om contact met ons op te nemen als u problemen "
+"Veel plezier en aarzel niet om contact met ons op te nemen als je problemen "
 "ondervindt :)"
 
 msgid "Hello"
@@ -262,7 +281,7 @@ msgstr "Hallo"
 
 #, javascript-format
 msgid "Hello ${ email }, you can set your new password here:"
-msgstr ""
+msgstr "Hallo ${ email }, je kunt hier je nieuwe wachtwoord instellen:"
 
 #, javascript-format
 msgid "Hello ${ name }"
@@ -274,6 +293,11 @@ msgid ""
 "that you are unaware of under \"Login Methods\" in the User Area and change "
 "your password."
 msgstr ""
+"Als dit op jou van toepassing was, negeer deze e-mail dan. Als dit niet op "
+"jou van toepassing was, ga dan naar <a href=\"https://pixelplanet.fun\">"
+"pixelplanet.fun</a> en log uit bij alle sessies waarvan je niet op de hoogte "
+"bent onder \"Inlogmethoden\" in het gebruikersgedeelte en wijzig je "
+"wachtwoord."
 
 #, javascript-format
 msgid ""
@@ -287,7 +311,7 @@ msgid "Incorrect password!"
 msgstr "Onjuist wachtwoord!"
 
 msgid "Invalid type of media"
-msgstr ""
+msgstr "Ongeldig mediatype"
 
 msgid "Invalid url :( Please check your mail again."
 msgstr "Ongeldige url :( Controleer a.u.b. nogmaals uw mail."
@@ -296,29 +320,29 @@ msgid "Just admins can do that"
 msgstr "Alleen beheerders kunnen dat doen"
 
 msgid "Just janny, mod or admin can do that"
-msgstr ""
+msgstr "Alleen janny, een moderator of een admin kan dat doen"
 
 msgid "Just mods and admins can do that"
-msgstr ""
+msgstr "Alleen moderators en admins kunnen dat doen"
 
 msgid "Know that an account exists"
-msgstr ""
+msgstr "Weet dat er een account bestaat"
 
 #. "scopes" is a technical term and should not be translated
 msgid "List of available scopes"
-msgstr ""
+msgstr "Lijst met beschikbare scopes"
 
 msgid "Loading..."
 msgstr "Laden…"
 
 msgid "Login from new location on PixelPlanet"
-msgstr ""
+msgstr "Inloggen vanaf een nieuwe locatie op PixelPlanet"
 
 msgid "Login is required"
-msgstr ""
+msgstr "Inloggen is vereist"
 
 msgid "Mail is already in use!"
-msgstr ""
+msgstr "E-mail is al in gebruik!"
 
 msgid "Mail is not configured on the server"
 msgstr "Mail is niet geconfigureerd op de server"
@@ -327,14 +351,16 @@ msgid "Mail verification"
 msgstr "E-mail verificatie"
 
 msgid "MimeType or extension not known or supported"
-msgstr ""
+msgstr "MimeType of extensie niet bekend of niet ondersteund"
 
 #, javascript-format
 msgid "Mimetype ${ mimeType } of file ${ filename } is invalid or not allowed"
 msgstr ""
+"Het mimetype ${ mimeType } van het bestand ${ filename } is ongeldig of niet "
+"toegestaan"
 
 msgid "Minimap"
-msgstr ""
+msgstr "Minikaart"
 
 msgid "Mirror of PixelCanvas"
 msgstr "Mirror van PixelCanvas"
@@ -353,10 +379,10 @@ msgstr ""
 "onderdeel van kunst) of kunst groter dan 1,5k x 1,5k pixels."
 
 msgid "Name already in use."
-msgstr ""
+msgstr "Naam is al in gebruik."
 
 msgid "Name can only contain the characters: a-z . _ and -"
-msgstr ""
+msgstr "De naam mag alleen de tekens: a-z . _ en - bevatten"
 
 msgid "Name can't be empty."
 msgstr "Naam mag niet leeg zijn."
@@ -365,7 +391,7 @@ msgid "Name contains invalid character like @, /, \\ or #"
 msgstr "Naam bevat ongeldige tekens zoals @, /, \\ of #"
 
 msgid "Name is too long"
-msgstr ""
+msgstr "Naam is te lang"
 
 msgid "Name must be at least 2 characters long"
 msgstr "De naam moet minimaal 2 tekens lang zijn"
@@ -374,57 +400,56 @@ msgid "Name must be shorter than 26 characters"
 msgstr "De naam moet korter zijn dan 26 tekens"
 
 msgid "Name or Email does not exist!"
-msgstr ""
+msgstr "Naam of E-mailadres bestaat niet!"
 
 msgid "New Password"
 msgstr "Nieuw wachtwoord"
 
 msgid "No Avatar given"
-msgstr ""
+msgstr "Geen Avatar gegeven"
 
 msgid "No Captcha given"
 msgstr "Geen Captcha gegeven"
 
 msgid "No or invalid fish id."
-msgstr ""
+msgstr "Geen of ongeldige vis-ID."
 
 msgid "No password given."
 msgstr "Geen wachtwoord gegeven."
 
 #. "redirect_uris" is a technical term and should not be translated
 msgid "No redirect_uris given."
-msgstr ""
+msgstr "Geen redirect_uris opgegeven."
 
 msgid "No such badge found"
-msgstr ""
+msgstr "Er is geen dergelijke badge gevonden"
 
 msgid "No such fish found"
-msgstr ""
+msgstr "Dergelijke vissen zijn niet gevonden"
 
 msgid "One redirect URIs per line"
-msgstr ""
+msgstr "Eén omleidings URI per regel"
 
 msgid "One redirect_uri per line"
-msgstr ""
+msgstr "Eén redirect_uri per regel"
 
 #. "redirect_uris" is a technical term and should not be translated
 msgid "Only five redirect_uris are allowed per client"
-msgstr ""
+msgstr "Per client zijn maximaal vijf redirect_uris toegestaan"
 
 msgid "Only four colors. Same rules as moon!"
-msgstr ""
+msgstr "Slechts vier kleuren. Dezelfde regels als voor de maan!"
 
 msgid "OpenID Connect specs"
-msgstr ""
+msgstr "Specificaties van OpenID Connect"
 
 msgid "Or by copying following url:"
 msgstr "Of door volgende url te kopiëren:"
 
-#, fuzzy
 msgid "Our main canvas, a huge map of the world. Place anywhere you like!"
 msgstr ""
 "Ons belangrijkste canvas, een enorme kaart van de wereld. Plaats waar je "
-"maar wilt"
+"maar wilt!"
 
 msgid "Password must be at least 6 characters long."
 msgstr "Het wachtwoord moet op zijn minst 6 tekens lang zijn."
@@ -432,12 +457,11 @@ msgstr "Het wachtwoord moet op zijn minst 6 tekens lang zijn."
 msgid "Password must be shorter than 60 characters."
 msgstr "Wachtwoord moet korter zijn dan 60 tekens."
 
-#, fuzzy
 msgid "Password successfully changed."
 msgstr "Wachtwoord succesvol veranderd."
 
 msgid "Permission"
-msgstr ""
+msgstr "Permissie"
 
 msgid "PixelCanvas"
 msgstr "PixelCanvas"
@@ -455,10 +479,13 @@ msgid ""
 "pixelplanet accounts. The required endpoints can be auto-discovered via the $"
 "{ wellKnownUrl } URL."
 msgstr ""
+"Pixelplanet voldoet aan de OpenID Connect (OIDC) specificaties. Een "
+"applicatie die OIDC ondersteunt, kan dus toestemming vragen en inloggen met "
+"behulp van Pixelplanet-accounts. De benodigde eindpunten kunnen automatisch "
+"worden gevonden via de URL ${ wellKnownUrl }."
 
-#, fuzzy
 msgid "Place Voxels on a 3D canvas with others."
-msgstr "Plaats Voxels samen met anderen op een 3D-canvas"
+msgstr "Plaats Voxels samen met anderen op een 3D canvas."
 
 msgid "Place color pixels on an map styled canvas with other players online"
 msgstr ""
@@ -466,32 +493,32 @@ msgstr ""
 "online"
 
 msgid "Please refresh the website"
-msgstr ""
+msgstr "Vernieuw de website"
 
 msgid "Please try again."
-msgstr ""
+msgstr "Probeer het opnieuw."
 
 msgid "Please use int channel"
 msgstr "Gebruik alstublieft het int-kanaal"
 
 msgid "Read Badges and fishes"
-msgstr ""
+msgstr "Lees Badges en vissen"
 
 msgid "Read name, username and account age"
-msgstr ""
+msgstr "Lees naam, gebruikersnaam en accountleeftijd"
 
 msgid "Redirect URIs"
-msgstr ""
+msgstr "Leid URIs om"
 
 msgid "Regularly update this data"
-msgstr ""
+msgstr "Werk deze gegevens regelmatig bij"
 
 msgid "Request stalled"
-msgstr ""
+msgstr "Verzoek vastgelopen"
 
 #. 'client_secret' is a technical term and should not be translated
 msgid "Reroll client_secret"
-msgstr ""
+msgstr "client_secret opnieuw rollen"
 
 msgid "Reset Password"
 msgstr "Wachtwoord opnieuw instellen"
@@ -500,40 +527,47 @@ msgid "Reset your password here"
 msgstr "Stel hier uw wachtwoord opnieuw in"
 
 msgid "Role flag can only be an image"
-msgstr ""
+msgstr "Een rolvlag kan alleen een afbeelding zijn"
 
 msgid "Role flag needs to be 16x11"
-msgstr ""
+msgstr "De rolvlag moet 16x11 zijn"
 
 msgid "Server Error"
-msgstr ""
+msgstr "Serverfout"
 
 msgid "Server error while deleting user."
-msgstr ""
+msgstr "Serverfout tijdens het verwijderen van gebruiker."
 
 msgid "Someone logged into your account from a new location, with the IP:"
 msgstr ""
+"Iemand heeft vanaf een nieuwe locatie ingelogd op uw account met het "
+"volgende IP-adres:"
 
 msgid "Space-separated list of available scopes"
-msgstr ""
+msgstr "Door spaties gescheiden lijst van beschikbare scopes"
 
 msgid ""
 "Space-separated list of default scopes, they will be used on requests if no "
 "other scope is given."
 msgstr ""
+"Een lijst met standaard scopes, gescheiden door spaties, deze worden "
+"gebruikt bij verzoeken als er geen andere scope is opgegeven."
 
 #. 'scope' is used as a technical term here, do not translate that word
 msgid ""
 "Space-separated list of default scopes, they will be used on requests where "
 "no other scope is given."
 msgstr ""
+"Een lijst met standaard scopes, gescheiden door spaties. Deze worden "
+"gebruikt bij verzoeken als er geen andere scope is opgegeven."
 
 msgid "Space-separated list of scopes that should be available"
-msgstr ""
+msgstr "Door spaties gescheiden lijst van scopes die beschikbaar moeten zijn"
 
-#, fuzzy
 msgid "Special canvas to spread awareness of SARS-CoV2 (take the vax)."
-msgstr "Speciaal canvas om het bewustzijn van SARS-CoV2 te vergroten"
+msgstr ""
+"Een speciale canvas om het bewustzijn van SARS-CoV2 te vergroten (neem de "
+"vax)."
 
 msgid "Stop flooding."
 msgstr "Stop met spammen."
@@ -546,28 +580,31 @@ msgstr "Bedankt"
 
 #, javascript-format
 msgid "The file ${ filename } is banned ${ reason }. Ban ID: ${ mbid }"
-msgstr ""
+msgstr "Het bestand ${ filename } is verbannen ${ reason }. Ban ID: ${ mbid }"
 
 msgid "The user owning this badge is private"
-msgstr ""
+msgstr "De gebruiker die eigenaar is van deze badge is privé"
 
 msgid "The user owning this fish is private"
-msgstr ""
+msgstr "De gebruiker die eigenaar is van deze vis is privé"
 
 msgid "This application is not allowed to login"
-msgstr ""
+msgstr "Inloggen met deze applicatie is niet toegestaan"
 
 msgid "This application redirects to an unallowed page"
-msgstr ""
+msgstr "Deze applicatie leidt je door naar een niet-toegestane pagina"
 
 msgid "This application sent a faulty login request with no redirection"
 msgstr ""
+"Deze applicatie heeft een foutief inlogverzoek verzonden zonder omleiding"
 
 msgid "This application uses a PKCE method we do not support"
 msgstr ""
+"Deze applicatie maakt gebruik van een PKCE-methode die wij niet ondersteunen"
 
 msgid "This application uses a login method we do not support"
 msgstr ""
+"Deze applicatie maakt gebruik van een inlogmethode die wij niet ondersteunen"
 
 msgid ""
 "This email / password combination got hacked and leaked. To protect this "
@@ -575,6 +612,10 @@ msgid ""
 "function below to set a new password. In the future, consider not installing "
 "malware, Thank You."
 msgstr ""
+"Deze e-mail/wachtwoordcombinatie is gehackt en gelekt. Om dit account te "
+"beschermen, is het wachtwoord gereset. Gebruik de functie 'Wachtwoord "
+"vergeten' hieronder om een nieuw wachtwoord in te stellen. Installeer in de "
+"toekomst geen malware. Bedankt."
 
 msgid ""
 "This email / password combination got hacked and leaked. To protect this "
@@ -582,22 +623,26 @@ msgid ""
 "function on the LogIn page to set a new password. In the future, consider "
 "not installing malware, Thank You."
 msgstr ""
+"Deze e-mail/wachtwoordcombinatie is gehackt en gelekt. Om dit account te "
+"beschermen, is het wachtwoord gereset. Gebruik de functie 'Wachtwoord "
+"vergeten' op de inlogpagina om een nieuw wachtwoord in te stellen. "
+"Installeer in de toekomst geen malware. Bedankt."
 
 msgid "This email provider is not allowed"
 msgstr "Deze e-mailprovider is niet toegestaan"
 
 msgid "This faction does not exist"
-msgstr ""
+msgstr "Deze factie bestaat niet"
 
 msgid "This faction is full"
-msgstr ""
+msgstr "Deze factie is vol"
 
 msgid "This faction is private"
-msgstr ""
+msgstr "Deze factie is privé"
 
 #, javascript-format
 msgid "This media is banned ${ reason }. Ban ID: ${ mbid }"
-msgstr ""
+msgstr "Deze media is verbannen ${ reason }. Ban ID: ${ mbid }"
 
 msgid "This password-reset link isn't valid anymore :("
 msgstr ""
@@ -605,23 +650,23 @@ msgstr ""
 "("
 
 msgid "This user is private"
-msgstr ""
+msgstr "Deze gebruiker is privé"
 
 msgid "Title can't be empty."
-msgstr ""
+msgstr "De titel mag niet leeg zijn."
 
 msgid "Title contains invalid character like @, /, \\ or #"
-msgstr ""
+msgstr "De titel bevat ongeldige tekens zoals @, /, \\ of #"
 
 msgid "Title must be at least 2 characters long"
-msgstr ""
+msgstr "De titel moet minimaal 2 tekens lang zijn"
 
 msgid "Title must be shorter than 26 characters"
-msgstr ""
+msgstr "De titel mag niet langer zijn dan 26 tekens"
 
 #. "redirect_uris" is a technical term and should not be translated
 msgid "Too many or too long redirect_uris"
-msgstr ""
+msgstr "Te veel of te lang redirect_uris"
 
 msgid "Top10"
 msgstr "Top10"
@@ -631,13 +676,13 @@ msgstr "Onbekende Captcha-fout"
 
 #, javascript-format
 msgid "Unknown field ${ name } in request"
-msgstr ""
+msgstr "Onbekend veld ${ name } in verzoek"
 
 msgid "Update Application"
-msgstr ""
+msgstr "Applicatie Bijwerken"
 
 msgid "User ID and verification level"
-msgstr ""
+msgstr "Gebruikers ID en verificatie level"
 
 msgid "User doesn't exist in our database :("
 msgstr "Gebruiker bestaat niet in onze database :("
@@ -646,19 +691,19 @@ msgid "Username already in use."
 msgstr "Gebruikersnaam al in gebruik."
 
 msgid "Username can not start with pp_"
-msgstr ""
+msgstr "Gebruikersnamen mogen niet met pp_ beginnen"
 
 msgid "Username can only contain the characters: a-z . _ and -"
-msgstr ""
+msgstr "De gebruikersnaam mag alleen de tekens: a-z . _ en - bevatten"
 
 msgid "Username can't be empty."
-msgstr ""
+msgstr "De gebruikersnaam mag niet leeg zijn."
 
 msgid "Username must be at least 2 characters long"
-msgstr ""
+msgstr "De gebruikersnaam moet minimaal 2 tekens lang zijn"
 
 msgid "Username must be shorter than 26 characters"
-msgstr ""
+msgstr "De gebruikersnaam mag niet langer zijn dan 26 tekens"
 
 msgid ""
 "We already sent you a mail with instructions. Please wait before requesting "
@@ -676,26 +721,26 @@ msgstr ""
 "minuten een nieuwe aanvragen."
 
 msgid "We currently do not allow file uploads"
-msgstr ""
+msgstr "Het uploaden van bestanden is momenteel niet mogelijk"
 
-#, fuzzy, javascript-format
+#, javascript-format
 msgid "Welcome ${ name } to PixelPlanet, please verify your mail"
 msgstr "Welkom ${ name } bij PixelPlanet, verifieer a.u.b. uw e-mail"
 
 msgid "You already chose your username"
-msgstr ""
+msgstr "Je hebt je gebruikersnaam al gekozen"
 
 msgid "You already have that name."
-msgstr ""
+msgstr "Die naam heb je al."
 
 msgid "You are already part of this faction"
-msgstr ""
+msgstr "Je behoort al tot deze factie"
 
 msgid "You are already verified."
-msgstr ""
+msgstr "Je bent al geverifieerd."
 
 msgid "You are banned from this faction"
-msgstr ""
+msgstr "Je bent verbannen van deze factie"
 
 #, javascript-format
 msgid "You are muted for another ${ timeMin } minutes"
@@ -717,56 +762,60 @@ msgstr "Je bent niet ingelogd"
 msgid "You are now verified :)"
 msgstr "Je bent nu geverifieerd :)"
 
-#, fuzzy
 msgid "You are permanently muted, join our guilded to appeal the mute"
 msgstr ""
-"Je bent permanent gedempt, sluit je aan bij onze gilde om in beroep te gaan "
-"tegen de demper"
+"Je bent permanent gedempt, sluit je aan bij onze guilded om in beroep te "
+"gaan tegen deze demping"
 
 #, javascript-format
 msgid "You are sending messages too fast, you have to wait ${ waitTime }s :("
 msgstr "Je verzendt berichten te snel, je moet ${ waitTime }s wachten :("
 
 msgid "You attached too many files"
-msgstr ""
+msgstr "Je hebt te veel bestanden bijgevoegd"
 
 msgid ""
 "You can not delete this login method, because you have nothing else left."
 msgstr ""
+"Je kunt deze inlogmethode niet verwijderen, omdat je geen andere opties meer "
+"hebt."
 
 msgid "You can not register an account while you are banned"
-msgstr ""
+msgstr "Je kunt geen account registreren zolang je verbannen bent"
 
 msgid "You can not register an account with a proxy"
-msgstr ""
+msgstr "Je kunt geen account registreren met een proxy"
 
-#, fuzzy
 msgid "You can not send chat messages while using a proxy"
-msgstr "Je kunt geen chatberichten versturen met proxy"
+msgstr "Je kunt geen chatberichten verzenden als je een proxy gebruikt"
 
 #, javascript-format
 msgid ""
 "You can only be owner of ${ MAX_OWNED_FACTIONS_PER_USER } factions in total"
 msgstr ""
+"Je kunt in totaal maximaal ${ MAX_OWNED_FACTIONS_PER_USER } facties bezitten"
 
 #, javascript-format
 msgid "You can only have ${ MAX_FACTIONS_PER_USER } factions in total"
-msgstr ""
+msgstr "Je kunt in totaal maximaal ${ MAX_FACTIONS_PER_USER } facties hebben"
 
 msgid ""
 "You can register your own application here to get the client_id and "
 "client_secret needed to make use of this."
 msgstr ""
+"Je kunt hier je eigen applicatie registreren om de client_id en "
+"client_secret te verkrijgen die je nodig hebt om hiervan gebruik te maken."
 
 msgid "You can't send a message this long :("
 msgstr "Je kunt niet zo lang een bericht sturen :("
 
 msgid "You did not provide all necessary information"
-msgstr ""
+msgstr "U heeft niet alle benodigde informatie verstrekt"
 
 msgid ""
 "You do not have any email adress set. Please add one under \"Login Methods\"."
 msgstr ""
+"U heeft geen e-mailadres ingesteld. Voeg er een toe onder \"Inlogmethoden\"."
 
 msgid "You don't have access to this channel"
 msgstr "Je hebt geen toegang tot dit kanaal"
@@ -778,24 +827,25 @@ msgid "You forgot your password for PixelPlanet? Get a new one here"
 msgstr "Je bent je wachtwoord voor PixelPlanet vergeten? Koop hier een nieuwe"
 
 msgid "You have to fill out all fields"
-msgstr ""
+msgstr "Je moet alle velden invullen"
 
 msgid "You must be logged in to access this page"
-msgstr ""
+msgstr "Je moet ingelogd zijn om deze pagina te kunnen bekijken"
 
 msgid "You need an invite to join this faction"
-msgstr ""
+msgstr "Je hebt een uitnodiging nodig om lid te worden van deze factie"
 
 #. "scope" is a technical term and should not be translated
 msgid "You need to define a valid scope"
-msgstr ""
+msgstr "Je moet een geldig scope definiëren"
 
 msgid "You need to directly access this page in the browser :("
-msgstr ""
+msgstr "Je moet deze pagina rechtstreeks in de browser openen :("
 
 #, javascript-format
 msgid "You reached your maximum upload quota of ${ MAX_USER_MEDIA_SIZE_MB } MB"
 msgstr ""
+"Je hebt je maximale uploadquotum van ${ MAX_USER_MEDIA_SIZE_MB } MB bereikt"
 
 msgid ""
 "You requested to get a new password. You can change your password within the "
@@ -808,20 +858,22 @@ msgid "You sent an empty password or invalid data :("
 msgstr "Je hebt een leeg wachtwoord of ongeldige gegevens verzonden :("
 
 msgid "You took too long, try again"
-msgstr ""
+msgstr "Je hebt er te lang over gedaan, probeer het opnieuw"
 
 msgid "You will be automatically redirected after 15s"
 msgstr "Na 15 seconden wordt u automatisch doorgestuurd"
 
 msgid "Your Browser looks shady"
-msgstr ""
+msgstr "Je browser ziet er verdacht uit"
 
 msgid ""
 "Your account must be at least two weeks old before you can create a faction"
 msgstr ""
+"Je account moet minstens twee weken oud zijn voordat je een factie kunt "
+"aanmaken"
 
 msgid "Your account needs to be verified to access this page"
-msgstr ""
+msgstr "Je account moet geverifieerd zijn om toegang te krijgen tot deze pagina"
 
 msgid "Your country is temporary muted from this chat channel"
 msgstr "Je land is tijdelijk gedempt op dit chatkanaal"
@@ -840,35 +892,35 @@ msgstr "De wachtwoorden komen niet overeen :("
 
 #. This media is banned xyz
 msgid "because it is propaganda"
-msgstr ""
+msgstr "omdat het propaganda is"
 
 #. This media is banned xyz
 msgid "for being an attempt to scam people"
-msgstr ""
+msgstr "omdat het een poging was om mensen op te lichten"
 
 #. This media is banned xyz
 msgid "for being degenerate"
-msgstr ""
+msgstr "omdat het gedegenereerd is"
 
 #. This media is banned xyz
 msgid "for containing CSAM"
-msgstr ""
+msgstr "wegens het bevatten van CSAM"
 
 #. This media is banned xyz
 msgid "for containing graphic violence"
-msgstr ""
+msgstr "wegens het bevatten van expliciet geweld"
 
 #. This media is banned xyz
 msgid "for containing personal information"
-msgstr ""
+msgstr "voor het bevatten van persoonlijke informatie"
 
 #. This media is banned xyz
 msgid "for glorifying terrorism"
-msgstr ""
+msgstr "voor het verheerlijken van terrorisme"
 
 #. "redirect_uris" is a technical term and should not be translated
 msgid "redirect_uris does not look legit"
-msgstr ""
+msgstr "redirect_uris lijkt niet legitiem"
 
 msgid "to go back to pixelplanet"
 msgstr "om terug te gaan naar pixelplanet"

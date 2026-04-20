@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: admin@pixelplanet.fun\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2026-04-18 20:25+0000\n"
-"Last-Translator: Coldi <coldi@noreply.pixelplanet.fun>\n"
+"PO-Revision-Date: 2026-04-20 13:30+0000\n"
+"Last-Translator: Extreme Motorsex <em@noreply.pixelplanet.fun>\n"
 "Language-Team: Albanian <https://translate.gs-os.com/projects/ppfun/server/"
 "sq/>\n"
 "Language: sq\n"
@@ -175,10 +175,10 @@ msgid "Could not set this factions avatar"
 msgstr "Nuk bën të vendosësh avatarin ktij fraksioni"
 
 msgid "Could not set your avatar"
-msgstr "Nuk bën të vendos avatarin tënd"
+msgstr "Nuk m të vendos avatarin tënd"
 
 msgid "Could not set your faction role"
-msgstr "Nuk bën të vendosësh rolin e fraksionit tënd"
+msgstr "Nuk mund të vendosej roli i fraksionit tënd"
 
 msgid "Could not upload all files"
 msgstr "Nuk mund të ngarkohen të gjithë skedarët"
@@ -548,7 +548,7 @@ msgid ""
 "Space-separated list of default scopes, they will be used on requests where "
 "no other scope is given."
 msgstr ""
-"Listë e ndarë me hapësira të scopes të paracaktuara. Do të përdoren në "
+"Listë e ndarë me hapësira të scopes të paracaktuara, do të përdoren në "
 "kërkesa aty ku nuk është dhënë scope tjetër."
 
 msgid "Space-separated list of scopes that should be available"
@@ -577,7 +577,7 @@ msgid "The user owning this badge is private"
 msgstr "Përdoruesi i cili zotëron këtë stemë është privat"
 
 msgid "The user owning this fish is private"
-msgstr "Përdoruesi që e ka këtë peshk është privat"
+msgstr "Përdoruesi i cili zotëron këtë peshk është privat"
 
 msgid "This application is not allowed to login"
 msgstr "Ky aplikacion nuk është i lejuar të kyçet"
@@ -640,16 +640,16 @@ msgid "This user is private"
 msgstr "Ky përdorues është privat"
 
 msgid "Title can't be empty."
-msgstr "Titulli nuk mundë të jetë bosh."
+msgstr "Titulli nuk mund të jetë bosh."
 
 msgid "Title contains invalid character like @, /, \\ or #"
-msgstr "Titulli ka karaktere invalide përshembull @,/,\\ ose #"
+msgstr "Titulli ka karaktere të pavlefshme si për shembull @, /, \\ ose #"
 
 msgid "Title must be at least 2 characters long"
-msgstr "Titulli duhet të jetë të paktën 2 karaktere i gjat"
+msgstr "Titulli duhet të jetë të paktën 2 karaktere i gjatë"
 
 msgid "Title must be shorter than 26 characters"
-msgstr "Titulli nuk mundë të jetë më i shkurtër se 26 karaktere"
+msgstr "Titulli duhet të jetë më i shkurtër se 26 karaktere"
 
 #. "redirect_uris" is a technical term and should not be translated
 msgid "Too many or too long redirect_uris"
@@ -783,12 +783,12 @@ msgstr ""
 msgid ""
 "You can only be owner of ${ MAX_OWNED_FACTIONS_PER_USER } factions in total"
 msgstr ""
-"Ti mund të jeshë vetëm pronar i ${ MAX_OWNED_FACTIONS_PER_USER } fraksioneve "
+"Ti mund të jesh pronar i vetëm ${ MAX_OWNED_FACTIONS_PER_USER } fraksioneve "
 "në total"
 
 #, javascript-format
 msgid "You can only have ${ MAX_FACTIONS_PER_USER } factions in total"
-msgstr "Ti mundë të keshë vetem ${ MAX_FACTIONS_PER_USER } fraksione në total"
+msgstr "Ti mund të kesh vetëm ${ MAX_FACTIONS_PER_USER } fraksione në total"
 
 msgid ""
 "You can register your own application here to get the client_id and "
@@ -807,7 +807,7 @@ msgid ""
 "You do not have any email adress set. Please add one under \"Login Methods\"."
 msgstr ""
 "Ju nuk keni asnjë adresë emaili të caktuar. Ju lutemi shtoni një nën "
-"\"Metodat e hyrjes\"."
+"\"Metodat e Kyçjes\"."
 
 msgid "You don't have access to this channel"
 msgstr "Ju nuk keni qasje në këtë kanal"
@@ -825,7 +825,7 @@ msgid "You must be logged in to access this page"
 msgstr "Ju duhet të jeni të kyçur për të aksesuar këtë faqe"
 
 msgid "You need an invite to join this faction"
-msgstr "Ti duhet të keshë ftesë për të hyrë në kët fraksion"
+msgstr "Ti duhet të kesh një ftesë për të hyrë në këtë fraksion"
 
 #. "scope" is a technical term and should not be translated
 msgid "You need to define a valid scope"

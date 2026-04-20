@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: admin@pixelplanet.fun\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2026-04-18 20:25+0000\n"
-"Last-Translator: Coldi <coldi@noreply.pixelplanet.fun>\n"
+"PO-Revision-Date: 2026-04-20 13:30+0000\n"
+"Last-Translator: Extreme Motorsex <em@noreply.pixelplanet.fun>\n"
 "Language-Team: Albanian <https://translate.gs-os.com/projects/ppfun/client/"
 "sq/>\n"
 "Language: sq\n"
@@ -1095,7 +1095,7 @@ msgid "Name of this role"
 msgstr "Emri i ktij rolit"
 
 msgid "Name of your faction (this can not be changed later)"
-msgstr "Emri i fraksionit tuaj(nuk mund të ndryshohet më von)"
+msgstr "Emri i fraksionit tuaj (nuk mund të ndryshohet më vonë)"
 
 msgid "Name or Email"
 msgstr "Emri ose Email"
@@ -1140,7 +1140,7 @@ msgid "Nobody is banned from this faction"
 msgstr "Askush nuk ësht i dëbuar nga ky fraksion"
 
 msgid "Not Allowed"
-msgstr "Nuk lejohet"
+msgstr "Nuk Lejohet"
 
 msgid "Not allowed"
 msgstr "Nuk lejohet"
@@ -1150,7 +1150,7 @@ msgstr "Shënim"
 
 msgid "Note: Your active Faction may overwrite your flag settings."
 msgstr ""
-"Shënim: Fraksioni i juaj aktiv mund të anashkaloj cilësimet e flamurit tuaj."
+"Shënim: Fraksioni i juaj aktiv mund të mbivendosë cilësimet e flamurit tuaj."
 
 msgid "OIDC LogIn"
 msgstr "Kyçje OIDC"
@@ -1529,7 +1529,7 @@ msgid "Select Language"
 msgstr "Zgjidhni Gjuhën"
 
 msgid "Select a valid powerlevel"
-msgstr ""
+msgstr "Zgjidh një nivel fuqie të vlefshëm"
 
 msgid "Select a valid pwerlevel"
 msgstr "Zgjidh një nivel të vlefshëm fuqie"
@@ -1758,16 +1758,16 @@ msgid "Title"
 msgstr "Titull"
 
 msgid "Title can't be empty."
-msgstr "Titulli nuk mundë të jetë bosh."
+msgstr "Titulli nuk mund të jetë bosh."
 
 msgid "Title contains invalid character like @, /, \\ or #"
-msgstr "Titulli ka karaktere invalide përshembull @,/,\\ ose #"
+msgstr "Titulli ka karaktere të pavlefshme si për shembull @, /, \\ ose #"
 
 msgid "Title must be at least 2 characters long"
-msgstr "Titulli duhet të jetë të paktën 2 karaktere i gjat"
+msgstr "Titulli duhet të jetë të paktën 2 karaktere i gjatë"
 
 msgid "Title must be shorter than 26 characters"
-msgstr "Titulli nuk mundë të jetë më i shkurtër se 26 karaktere"
+msgstr "Titulli duhet të jetë më i shkurtër se 26 karaktere"
 
 msgid "Title of your faction"
 msgstr "Titulli i fraksionit juaj"
@@ -1996,7 +1996,7 @@ msgstr ""
 
 #, javascript-format
 msgid "You are logged in as ${ name } [${ username }]."
-msgstr "Ti je kyçur si ${ name }${ username }."
+msgstr "Ti je kyçur si ${ name } [${ username }]."
 
 msgid "You are not allowed to play this game right now :("
 msgstr "Ju nuk mund të luani këtë lojë tani :("
@@ -2041,8 +2041,8 @@ msgid ""
 "You have been invited to join us on pixelplanet. We currently have $"
 "{ memberCount } members."
 msgstr ""
-"Ti je ftuar të hysh të ne në pixelplanet. Ne aktualisht kemi $"
-"{ memberCount } pjesëtar."
+"Ti je ftuar të hysh te ne në pixelplanet. Ne aktualisht kemi ${ "
+"memberCount } pjesëtarë."
 
 msgid "You have no users blocked"
 msgstr "Ju nuk keni përdorues të bllokuar"
@@ -2054,7 +2054,7 @@ msgid "You made too many requests"
 msgstr "Ju keni bërë shumë kërkesa"
 
 msgid "You must be logged in to chat"
-msgstr "Ju duhet të jeni të kyçeni për të biseduar"
+msgstr "Ju duhet të jeni të kyçur për të biseduar"
 
 msgid "You must enter a UserId"
 msgstr "Ju duhet të futni një UserId"
@@ -2158,7 +2158,7 @@ msgid "lift"
 msgstr "ngrit"
 
 msgid "or login with:"
-msgstr "ose kyçunj me:"
+msgstr "ose kyçuni me:"
 
 msgid "or register here:"
 msgstr "ose regjistrohuni këtu:"
@@ -2171,7 +2171,7 @@ msgstr "herë të përdorura"
 
 #, javascript-format
 msgid "try again after ${ ti }min"
-msgstr "provo përsëri pas ${ ti } min"
+msgstr "provo përsëri pas ${ ti } minutash"
 
 msgid "x out of bounds"
 msgstr "x jashtë kufijve"

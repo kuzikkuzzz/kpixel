@@ -1,37 +1,43 @@
 msgid ""
 msgstr ""
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"Report-Msgid-Bugs-To: admin@pixelplanet.fun\n"
+"PO-Revision-Date: 2026-04-20 13:30+0000\n"
+"Last-Translator: Ngvn <ngvn@noreply.pixelplanet.fun>\n"
+"Language-Team: Vietnamese <https://translate.gs-os.com/projects/ppfun/server/"
+"vi/>\n"
 "Language: vi\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 5.15.2\n"
 
 #: src/canvasesDesc.js:27
 msgid "1bit"
-msgstr ""
+msgstr "1bit"
 
 #: src/canvasesDesc.js:29
 msgid "2bit"
-msgstr ""
+msgstr "2bit"
 
 #: src/canvasesDesc.js:23
 msgid "3D Canvas"
-msgstr ""
+msgstr "Khu vẽ 3D"
 
 #: src/ssr/Globe.jsx:33
 msgid "A 3D globe of our whole map"
-msgstr ""
+msgstr "Một quả địa cầu 3D cho cả bản đồ của chúng ta"
 
 #: src/canvasesDesc.js:40
 msgid ""
 "A canvas for the most active players from the the previous day. Daily "
 "ranking updates at 00:00 UTC."
 msgstr ""
+"Một khung vẽ cho những người chơi tích cực nhất vào ngày hôm trước. Xếp hạng "
+"hàng ngày được cập nhật mỗi 00:00 UTC."
 
 #: src/routes/api/media.js:314
 msgid "A file was too large"
-msgstr ""
+msgstr "Tập tin quá lớn"
 
 #: src/routes/oidc/register.js:161
 msgid "Access modtools"
@@ -51,7 +57,7 @@ msgstr ""
 
 #: src/routes/api/auth/resend_verify.js:25
 msgid "An error occured. Please try again later."
-msgstr ""
+msgstr "Một lỗi đã xuất hiện. Vui lòng thử lại sau giây lát."
 
 #: src/routes/oidc/register.js:110
 msgid "Application changed successfully"
@@ -68,30 +74,30 @@ msgstr ""
 #: src/routes/api/factionchange.js:112
 #: src/routes/api/profilechange.js:34
 msgid "Avatar can only be an image"
-msgstr ""
+msgstr "Ảnh đại diện chỉ có thể là ảnh"
 
 #: src/routes/api/factioncreate.js:68
 msgid "Avatar not given or not an image"
-msgstr ""
+msgstr "Ảnh đại diện không được đưa vào hoặc không phải một ảnh"
 
 #: src/canvasesDesc.js:39
 msgid "Black and White canvas"
-msgstr ""
+msgstr "Khung vẽ Đen - Trắng"
 
 #: src/routes/api/factionrolechange.js:45
 #: src/routes/api/factionroledelete.js:33
 #: src/routes/api/factionrolejoin.js:53
 msgid "Can not change a role above your own"
-msgstr ""
+msgstr "Không thể đổi vai trò cao hơn vai trò của bạn"
 
 #: src/routes/api/factionrolechange.js:50
 #: src/routes/api/factionrolejoin.js:58
 msgid "Can not change a role that is equal to your own"
-msgstr ""
+msgstr "Không thể đổi vai trò bằng vai trò của bạn"
 
 #: src/routes/api/factionrolechange.js:62
 msgid "Can not change the default setting of this role"
-msgstr ""
+msgstr "Không thể đổi cài đặt mặc định của vai trò này"
 
 #: src/routes/api/factionrolechange.js:84
 msgid "Can not change the powerlevel of a role equal or above you"
@@ -165,11 +171,11 @@ msgstr ""
 #: src/ssr/modalShell.js:30
 #: src/ssr/shell.js:26
 msgid "Click here"
-msgstr ""
+msgstr "Nhấn vào đây"
 
 #: src/core/MailProvider.js:72
 msgid "Click to Verify"
-msgstr ""
+msgstr "Nhấn vào đây để xác minh"
 
 #: src/routes/oidc/register.js:186
 #: src/routes/oidc/register.js:247
@@ -178,13 +184,15 @@ msgstr ""
 
 #: src/routes/reset_password.js:123
 msgid "Confirm New Password"
-msgstr ""
+msgstr "Xác nhận mật khẩu mới"
 
 #: src/canvasesDesc.js:42
 msgid ""
 "Conquer land on a smaller earth with protected ocean. Shares cooldown with "
 "earth canvas!"
 msgstr ""
+"Chinh phục những vùng đất trên một trái đất nhỏ hơn với đại đương được bảo "
+"vệ. Thời gian hồi chiêu được chia sẻ với khung vẽ Trái đất!"
 
 #: src/routes/oidc/register.js:133
 msgid "Consent"
@@ -196,12 +204,12 @@ msgstr ""
 
 #: src/routes/api/factionrolechange.js:150
 msgid "Could not change the flag of this role"
-msgstr ""
+msgstr "Không thể đổi cờ của vai trò này"
 
 #: src/routes/api/userchange.js:45
 #: src/routes/api/userchange.js:55
 msgid "Could not change this setting. Maybe try again later."
-msgstr ""
+msgstr "Không thể thay đổi cài đặt này. Vui lòng thử lại sau."
 
 #: src/routes/api/auth/close_session.js:22
 #: src/routes/api/auth/revoke_consent.js:12
@@ -210,36 +218,36 @@ msgstr ""
 
 #: src/routes/api/auth/remove_tpid.js:25
 msgid "Could not find this login method"
-msgstr ""
+msgstr "Không thể tìm thấy phương pháp đăng nhập này"
 
 #: src/routes/api/leavechan.js:29
 msgid "Could not leave this channel"
-msgstr ""
+msgstr "Không thể rời kênh này"
 
 #: src/routes/api/factionchange.js:117
 msgid "Could not set this factions avatar"
-msgstr ""
+msgstr "Không thể đặt ảnh đại diện cho nhóm này"
 
 #: src/routes/api/profilechange.js:39
 msgid "Could not set your avatar"
-msgstr ""
+msgstr "Không thể đặt ảnh đại diện của bạn"
 
 #: src/routes/api/profilechange.js:76
 msgid "Could not set your faction role"
-msgstr ""
+msgstr "Không thể đặt vai trò của bạn"
 
 #: src/routes/api/media.js:318
 msgid "Could not upload all files"
-msgstr ""
+msgstr "Không thể tải lên mọi tệp tin"
 
 #: src/core/MailProvider.js:163
 msgid "Couldn't find this mail in our database"
-msgstr ""
+msgstr "Không thể tìm thấy mail này trong cơ sở dữ liệu của chúng tôi"
 
 #: src/routes/oidc/register.js:219
 #: src/routes/oidc/register.js:321
 msgid "Default"
-msgstr ""
+msgstr "Mặc định"
 
 #: src/routes/oidc/register.js:333
 msgid "Delete Application"
@@ -247,11 +255,11 @@ msgstr ""
 
 #: src/utils/validation.js:93
 msgid "Description can't be empty"
-msgstr ""
+msgstr "Phần mô tả không thể để trống"
 
 #: src/utils/validation.js:96
 msgid "Description must be shorter than 1000 characters"
-msgstr ""
+msgstr "Miêu tả phải ngắn hơn 1000 chữ"
 
 #: src/routes/oidc/register.js:193
 #: src/routes/oidc/register.js:255
@@ -260,15 +268,15 @@ msgstr ""
 
 #: src/ssr/Globe.jsx:46
 msgid "Double click on globe to go back."
-msgstr ""
+msgstr "Nhấn đúp lên quả địa cầu để quay lại."
 
 #: src/routes/api/auth/register.js:83
 msgid "E-Mail already in use."
-msgstr ""
+msgstr "Email đã được sử dụng."
 
 #: src/canvasesDesc.js:21
 msgid "Earth"
-msgstr ""
+msgstr "Trái đất"
 
 #: src/routes/oidc/register.js:238
 msgid "Edit existing applications"
@@ -276,32 +284,32 @@ msgstr ""
 
 #: src/utils/validation.js:19
 msgid "Email can't be empty."
-msgstr ""
+msgstr "Thư mục điện tử không thể để trống."
 
 #: src/utils/validation.js:21
 msgid "Email can't be longer than 40 characters."
-msgstr ""
+msgstr "Thư mục điện tử không thể dài hơn 40 ký tự."
 
 #: src/utils/validation.js:22
 msgid "Email should at least contain a dot"
-msgstr ""
+msgstr "Thư mục điện tử phải chứa ít nhất một dấu chấm"
 
 #: src/utils/validation.js:20
 msgid "Email should be at least 5 characters long."
-msgstr ""
+msgstr "Thư mục điện tử phải chứa ít nhất 5 kí tự."
 
 #: src/utils/validation.js:25
 msgid "Email should contain a @"
-msgstr ""
+msgstr "Thư mục điện tử phải chứa một kí tự @"
 
 #: src/middleware/errorPage.js:19
 #: src/routes/oidc/register.js:118
 msgid "Error"
-msgstr ""
+msgstr "Lỗi"
 
 #: src/routes/api/auth/register.js:121
 msgid "Failed to create a new user :("
-msgstr ""
+msgstr "Thất bại khi tạo người dùng mới :("
 
 #: src/routes/api/media.js:126
 #, javascript-format
@@ -309,49 +317,52 @@ msgid ""
 "File ${ filename } has ${ sizeMB } MB and is too large. It may only be ${ "
 "MAX_FILE_SIZE_MB } MB"
 msgstr ""
+"Tệp tin ${ filename } chứa ${ sizeMB } MB và trở nên quá lớn. Nó chỉ có thể "
+"chứa ${ MAX_FILE_SIZE_MB } MB"
 
 #: src/routes/api/media.js:138
 #, javascript-format
 msgid "File ${ filename } has an invalid extension"
-msgstr ""
+msgstr "Tệp tin ${ filename } chứa phần mở rộng không hợp lệ"
 
 #: src/routes/api/media.js:304
 msgid "File is broken"
-msgstr ""
+msgstr "Tệp tin đã bị hỏng"
 
 #. 'client_secret' is a technical term and should not be translated
 #: src/routes/oidc/register.js:294
 msgid ""
 "Generate a new client_secret. The old secret will become invalid "
 "immediately."
-msgstr ""
+msgstr "Tạo một client_secret mới. Cái cũ sẽ trở nên không hợp lệ."
 
 #: src/routes/oidc/register.js:156
 msgid "Get email address"
-msgstr ""
+msgstr "Nhận địa chỉ thư mục điện tử"
 
 #: src/routes/oidc/register.js:176
 msgid "Get the amount of Pixels placed and ranking"
-msgstr ""
+msgstr "Nhận số lượng Điểm Ảnh đã được vẽ và xếp hạng"
 
 #: src/core/MailProvider.js:73
 msgid "Have fun and don't hesitate to contact us if you encounter any problems :)"
 msgstr ""
+"Chúc vui vẻ và đừng ngại liên hệ chúng tôi nếu bạn gặp phải bất cứ vấn đề :)"
 
 #: src/core/MailProvider.js:137
 msgid "Hello"
-msgstr ""
+msgstr "Xin chào"
 
 #: src/routes/reset_password.js:113
 #, javascript-format
 msgid "Hello ${ email }, you can set your new password here:"
-msgstr ""
+msgstr "Xin chào ${ email }, bạn có thể đặt mật khẩu mới ở đây:"
 
 #: src/core/MailProvider.js:71
 #: src/core/MailProvider.js:107
 #, javascript-format
 msgid "Hello ${ name }"
-msgstr ""
+msgstr "Xin chào ${ name }"
 
 #: src/core/MailProvider.js:109
 msgid ""
@@ -360,6 +371,10 @@ msgid ""
 "session that you are unaware of under \"Login Methods\" in the User Area "
 "and change your password."
 msgstr ""
+"Nếu đây là bạn, vui lòng bỏ qua tin nhắn này. Nếu không, hãy truy cập<a "
+"href=\"https://pixelplanet.fun\">pixelplanet.fun</a> và đăng xuất mọi phiên "
+"đăng nhập mà bạn không biết ở phần \"Các phương pháp đăng nhập\"ở phần Khu "
+"vực Người dùng và đổi lại mật khẩu của bạn."
 
 #: src/core/MailProvider.js:139
 #, javascript-format
@@ -1039,7 +1054,7 @@ msgstr ""
 
 #: src/routes/api/auth/register.js:63
 msgid "You failed your captcha"
-msgstr ""
+msgstr "Bạn đã thất bại trong việc giải quyết captcha"
 
 #: src/core/MailProvider.js:136
 msgid "You forgot your password for PixelPlanet? Get a new one here"
@@ -1093,7 +1108,7 @@ msgstr ""
 
 #: src/routes/api/auth/register.js:69
 msgid "Your Browser looks shady"
-msgstr ""
+msgstr "Trình duyệt của bạn trông đáng ngờ"
 
 #: src/routes/api/factioncreate.js:65
 msgid "Your account must be at least two weeks old before you can create a faction"

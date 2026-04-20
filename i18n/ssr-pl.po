@@ -1,15 +1,16 @@
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2024-03-12 19:57+0000\n"
-"Last-Translator: weblate <weblate@noreply.pixelplanet.fun>\n"
-"Language-Team: Polish <https://hosted.weblate.org/projects/pixelplanet/"
-"server/pl/>\n"
+"Report-Msgid-Bugs-To: admin@pixelplanet.fun\n"
+"PO-Revision-Date: 2026-04-20 13:30+0000\n"
+"Last-Translator: \"[☭]FalangaMan[Z]\" <falangaman@noreply.pixelplanet.fun>\n"
+"Language-Team: Polish <https://translate.gs-os.com/projects/ppfun/server/pl/>"
+"\n"
 "Language: pl\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
-"|| n%100>=20) ? 1 : 2);\n"
-"X-Generator: Weblate 5.5-dev\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
+"|| n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 5.15.2\n"
 
 msgid "1bit"
 msgstr "1bit"
@@ -31,13 +32,13 @@ msgstr ""
 "aktualizacje rankingów o godzinie 00:00 UTC."
 
 msgid "A file was too large"
-msgstr ""
+msgstr "Plik był za duży"
 
 msgid "Access modtools"
 msgstr ""
 
 msgid "Add Application"
-msgstr ""
+msgstr "Dodaj Aplikacje"
 
 msgid "Add an Application (OIDC Client)"
 msgstr ""
@@ -52,13 +53,13 @@ msgid "Application changed successfully"
 msgstr ""
 
 msgid "Application deleted"
-msgstr ""
+msgstr "Aplikacja Usunięta"
 
 msgid "Application successfully added"
 msgstr ""
 
 msgid "Avatar can only be an image"
-msgstr ""
+msgstr "Awatar może być tylko zdjęciem"
 
 msgid "Avatar not given or not an image"
 msgstr ""
@@ -131,7 +132,7 @@ msgid "Click to Verify"
 msgstr "Kliknij aby Zweryfikować"
 
 msgid "Client Name"
-msgstr ""
+msgstr "Nazwa Klientu"
 
 msgid "Confirm New Password"
 msgstr "Potwierdź nowe hasło"
@@ -180,7 +181,7 @@ msgid "Couldn't find this mail in our database"
 msgstr "Nie udało się znaleźć tego maila w naszej bazie danych"
 
 msgid "Default"
-msgstr ""
+msgstr "Zwyczajny"
 
 msgid "Delete Application"
 msgstr ""
@@ -189,7 +190,7 @@ msgid "Description can't be empty"
 msgstr ""
 
 msgid "Description must be shorter than 1000 characters"
-msgstr ""
+msgstr "Opis musi być krotszy niż 1000 liter"
 
 msgid "Display name for your OIDC client"
 msgstr ""
@@ -238,7 +239,7 @@ msgid "File ${ filename } has an invalid extension"
 msgstr ""
 
 msgid "File is broken"
-msgstr ""
+msgstr "Plik jest zjebany"
 
 #. 'client_secret' is a technical term and should not be translated
 msgid ""
@@ -287,7 +288,7 @@ msgid "Incorrect password!"
 msgstr "Niepoprawne hasło!"
 
 msgid "Invalid type of media"
-msgstr ""
+msgstr "Nieprawidłowy Typ Medii"
 
 msgid "Invalid url :( Please check your mail again."
 msgstr "Nieprawidłowy adres URL :( Sprawdź maila ponownie."
@@ -354,7 +355,7 @@ msgstr ""
 "niż 1,5 tys. x 1,5 tys. pikseli."
 
 msgid "Name already in use."
-msgstr ""
+msgstr "Nazwa jest zajęta."
 
 msgid "Name can only contain the characters: a-z . _ and -"
 msgstr ""
@@ -366,7 +367,7 @@ msgid "Name contains invalid character like @, /, \\ or #"
 msgstr "Nazwa zawiera nieprawidłowy znak, taki jak @, /, \\ lub #"
 
 msgid "Name is too long"
-msgstr ""
+msgstr "Nazwa jest za długa"
 
 msgid "Name must be at least 2 characters long"
 msgstr "Nazwa musi mieć co najmniej 2 znaki"
@@ -381,7 +382,7 @@ msgid "New Password"
 msgstr "Nowe hasło"
 
 msgid "No Avatar given"
-msgstr ""
+msgstr "Brak Podanego Awataru"
 
 msgid "No Captcha given"
 msgstr "Nie podano Captcha"
@@ -462,10 +463,10 @@ msgstr ""
 "online"
 
 msgid "Please refresh the website"
-msgstr ""
+msgstr "Prosze odśwież strone"
 
 msgid "Please try again."
-msgstr ""
+msgstr "Spróbuj Ponownie."
 
 msgid "Please use int channel"
 msgstr "Proszę użyj kanału int"
@@ -499,10 +500,10 @@ msgid "Role flag can only be an image"
 msgstr ""
 
 msgid "Role flag needs to be 16x11"
-msgstr ""
+msgstr "Flaga Roli musi być 16x11"
 
 msgid "Server Error"
-msgstr ""
+msgstr "Błąd Serwera"
 
 msgid "Server error while deleting user."
 msgstr ""
@@ -542,7 +543,7 @@ msgstr "Dzięki"
 
 #, javascript-format
 msgid "The file ${ filename } is banned ${ reason }. Ban ID: ${ mbid }"
-msgstr ""
+msgstr "Plik ${ filename } Jest zbanowany ${ reason }. ID Bana:${ mbid }"
 
 msgid "The user owning this badge is private"
 msgstr ""
@@ -586,10 +587,10 @@ msgid "This faction does not exist"
 msgstr ""
 
 msgid "This faction is full"
-msgstr ""
+msgstr "Ta frakcja jest pełna"
 
 msgid "This faction is private"
-msgstr ""
+msgstr "Ta frakcja jest prywatna"
 
 #, javascript-format
 msgid "This media is banned ${ reason }. Ban ID: ${ mbid }"
@@ -599,7 +600,7 @@ msgid "This password-reset link isn't valid anymore :("
 msgstr "Ten link do resetowania hasła jest już nieważny :("
 
 msgid "This user is private"
-msgstr ""
+msgstr "Ten użytkownik ma prywatny profil"
 
 msgid "Title can't be empty."
 msgstr ""
@@ -611,7 +612,7 @@ msgid "Title must be at least 2 characters long"
 msgstr ""
 
 msgid "Title must be shorter than 26 characters"
-msgstr ""
+msgstr "Opis musi być krótszy niz 26"
 
 #. "redirect_uris" is a technical term and should not be translated
 msgid "Too many or too long redirect_uris"
@@ -643,13 +644,13 @@ msgid "Username can not start with pp_"
 msgstr ""
 
 msgid "Username can only contain the characters: a-z . _ and -"
-msgstr ""
+msgstr "Nazwa może tylko zawierać litery a-z . _ i -"
 
 msgid "Username can't be empty."
-msgstr ""
+msgstr "Nazwa nie może być pusta."
 
 msgid "Username must be at least 2 characters long"
-msgstr ""
+msgstr "Nazwa musi być przynajmniej 2 literowa"
 
 msgid "Username must be shorter than 26 characters"
 msgstr ""
@@ -677,19 +678,19 @@ msgid "Welcome ${ name } to PixelPlanet, please verify your mail"
 msgstr "Witamy ${ name } w PixelPlanet. Zweryfikuj swojego maila"
 
 msgid "You already chose your username"
-msgstr ""
+msgstr "Wybrałeś już swoja nazwe"
 
 msgid "You already have that name."
-msgstr ""
+msgstr "Już masz tą nazwe."
 
 msgid "You are already part of this faction"
-msgstr ""
+msgstr "Już jestes w tej frakcji"
 
 msgid "You are already verified."
-msgstr ""
+msgstr "Już jesteś zweryfikowany."
 
 msgid "You are banned from this faction"
-msgstr ""
+msgstr "Jesteś zbanowany z tej frakcji"
 
 #, javascript-format
 msgid "You are muted for another ${ timeMin } minutes"
@@ -721,7 +722,7 @@ msgid "You are sending messages too fast, you have to wait ${ waitTime }s :("
 msgstr "Wysyłasz wiadomości za szybko, musisz poczekać ${waitTime } s :("
 
 msgid "You attached too many files"
-msgstr ""
+msgstr "Załączyłeś zbyt wiele plików"
 
 msgid ""
 "You can not delete this login method, because you have nothing else left."
@@ -806,7 +807,7 @@ msgid "You will be automatically redirected after 15s"
 msgstr "Po 15 sekundach nastąpi automatyczne przekierowanie"
 
 msgid "Your Browser looks shady"
-msgstr ""
+msgstr "Twoja przeglądarka wygląda dziwnie"
 
 msgid ""
 "Your account must be at least two weeks old before you can create a faction"
