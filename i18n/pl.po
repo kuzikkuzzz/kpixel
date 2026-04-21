@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: admin@pixelplanet.fun\n"
-"PO-Revision-Date: 2026-04-20 13:30+0000\n"
+"PO-Revision-Date: 2026-04-21 16:30+0000\n"
 "Last-Translator: \"[☭]FalangaMan[Z]\" <falangaman@noreply.pixelplanet.fun>\n"
 "Language-Team: Polish <https://translate.gs-os.com/projects/ppfun/client/pl/>"
 "\n"
@@ -2068,7 +2068,7 @@ msgid ""
 msgstr "Kiedy masz oddalone płótno kliknij raz aby przybliżyć."
 
 msgid "a hidden faction"
-msgstr ""
+msgstr "niewidoczna frakcja"
 
 msgid "affects"
 msgstr ""
@@ -2078,13 +2078,13 @@ msgid "and ${ canvas.req } Pixels set"
 msgstr "oraz ${ canvas.req }Postawionych pixeli"
 
 msgid "by"
-msgstr ""
+msgstr "przez"
 
 msgid "check compliance here"
 msgstr ""
 
 msgid "created at"
-msgstr ""
+msgstr "stworzony w"
 
 msgid "days"
 msgstr "dni"
