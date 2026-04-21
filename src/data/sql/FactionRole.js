@@ -2,78 +2,9 @@
  * Custom Roles of factions, those are like roles that the user can choose
  * from
  */
-
-import { DataTypes, QueryTypes } from 'sequelize';
-
-import sequelize from './sequelize.js';
+import pool from './mariadb.js';
 import { generateUUID, bufferToUUID } from '../../utils/hash.js';
-import {
-  FACTION_ROLE_FLAGS, FACTION_PERMISSIONS,
-} from '../../core/constants.js';
-
-const FactionRole = sequelize.define('FactionRole', {
-  id: {
-    type: DataTypes.BIGINT.UNSIGNED,
-    autoIncrement: true,
-    primaryKey: true,
-  },
-
-  uuid: {
-    type: 'BINARY(16)',
-    allowNull: false,
-    unique: 'uuid',
-  },
-
-  fid: {
-    type: DataTypes.BIGINT.UNSIGNED,
-    allowNull: false,
-  },
-
-  /*
-   * if null, users with this action role will show their geo flags or
-   * choose their own
-   */
-  customFlag: {
-    type: DataTypes.BIGINT.UNSIGNED,
-    allowNull: true,
-  },
-
-  name: {
-    // eslint-disable-next-line max-len
-    type: 'VARCHAR(32) CHARACTER SET ascii COLLATE ascii_bin',
-    allowNull: false,
-  },
-
-  /*
-   * from lowest to highest bit
-   * 0: assign per default
-   */
-  flags: {
-    type: DataTypes.TINYINT.UNSIGNED,
-    allowNull: false,
-    defaultValue: 0,
-  },
-
-  /*
-   * what user with role is allowed to do
-   */
-  factionlvl: {
-    type: DataTypes.TINYINT,
-    allowNull: false,
-    defaultValue: FACTION_PERMISSIONS.PEASANT,
-  },
-
-  memberCount: {
-    type: DataTypes.INTEGER.UNSIGNED,
-    allowNull: false,
-    defaultValue: 0,
-  },
-}, {
-  indexes: [{
-    name: 'role_fid',
-    fields: ['fid'],
-  }],
-});
+import { FACTION_ROLE_FLAGS } from '../../core/constants.js';
 
 
 /**
@@ -87,15 +18,12 @@ export async function getFactionRole(frid) {
   let factionlvl = 0;
   let isProtected = true;
   try {
-    const model = await sequelize.query(
+    const [model] = await pool.query(
       // eslint-disable-next-line max-len
       `SELECT f.name AS factionName, fr.id AS sqlFrid, fr.flags, fr.factionlvl FROM FactionRoles fr
   INNER JOIN Factions f ON fr.fid = f.id
-WHERE fr.uuid = UUID_TO_BIN(?)`, {
-        replacements: [frid],
-        plain: true,
-        type: QueryTypes.SELECT,
-      },
+WHERE fr.uuid = UUID_TO_BIN(?)`,
+      [frid],
     );
     if (model) {
       ({ factionName, sqlFrid, factionlvl } = model);
@@ -114,14 +42,13 @@ WHERE fr.uuid = UUID_TO_BIN(?)`, {
  * @param mediaId shortId:extension of media
  */
 export async function setFactionRoleFlag(sqlFrid, mediaId = null) {
+  let conn;
   try {
+    conn = await pool.getConnection();
+
     if (!mediaId) {
-      await sequelize.query(
-        'UPDATE FactionRoles SET customFlag = NULL WHERE id = ?', {
-          replacements: [sqlFrid],
-          raw: true,
-          type: QueryTypes.UPDATE,
-        },
+      await conn.query(
+        'UPDATE FactionRoles SET customFlag = NULL WHERE id = ?', [sqlFrid],
       );
       return true;
     }
@@ -130,18 +57,17 @@ export async function setFactionRoleFlag(sqlFrid, mediaId = null) {
     if (!shortId || !extension) {
       return false;
     }
-    await sequelize.query(
+    await conn.query(
       // eslint-disable-next-line max-len
-      'UPDATE FactionRoles SET customFlag = (SELECT id FROM Media WHERE shortId = ? AND extension = ?) WHERE id = ?', {
-        replacements: [shortId, extension, sqlFrid],
-        raw: true,
-        type: QueryTypes.UPDATE,
-      },
+      'UPDATE FactionRoles SET customFlag = (SELECT id FROM Media WHERE shortId = ? AND extension = ?) WHERE id = ?',
+      [shortId, extension, sqlFrid],
     );
     return true;
   } catch (err) {
-    console.error('SQL Error on setUserAvatar:', err.message);
+    console.error('SQL Error on setFactionRoleFlag:', err.message);
     return false;
+  } finally {
+    if (conn) conn.release();
   }
 }
 
@@ -154,12 +80,8 @@ export async function setFactionRoleFlag(sqlFrid, mediaId = null) {
  */
 export async function setFactionRoleProperty(sqlFrid, property, value) {
   try {
-    await sequelize.query(
-      `UPDATE FactionRoles SET ${property} = ? WHERE id = ?`, {
-        replacements: [value, sqlFrid],
-        raw: true,
-        type: QueryTypes.UPDATE,
-      },
+    await pool.query(
+      `UPDATE FactionRoles SET ${property} = ? WHERE id = ?`, [value, sqlFrid],
     );
     return true;
   } catch (error) {
@@ -189,18 +111,13 @@ export async function createFactionRole(
   try {
     const frid = bufferToUUID(generateUUID());
 
-    const model = await sequelize.query(
-      'CALL CREATE_FACTION_ROLE(?, ?, ?, ?, ?, ?)', {
-        replacements: [
-          factionName, frid, name, factionlvl, customFlagId, flags,
-        ],
-        plain: true,
-        type: QueryTypes.SELECT,
-      },
+    const [[{ result }]] = await pool.query(
+      'CALL CREATE_FACTION_ROLE(?, ?, ?, ?, ?, ?)', [
+        factionName, frid, name, factionlvl, customFlagId, flags,
+      ],
     );
-    const ret = model?.[0]?.result;
-    if (ret || ret === 0) {
-      return [ret, ret === 0 ? frid : null];
+    if (result || result === 0) {
+      return [result, result === 0 ? frid : null];
     }
   } catch (error) {
     console.error('SQL Error on createFactionRole:', error.message);
@@ -228,17 +145,13 @@ export async function deleteFactionRole(uid, frid) {
   const affectedActiveRoleUsers = [];
   let factionName = null;
   try {
-    let models = await sequelize.query(
-      'CALL DELETE_FACTION_ROLE(?, ?)', {
-        replacements: [uid, frid],
-        raw: true,
-        type: QueryTypes.SELECT,
-      },
+    let models = await pool.query(
+      'CALL DELETE_FACTION_ROLE(?, ?)', [uid, frid],
     );
-    const returnCode = models?.[0]?.[0]?.result;
-    if (returnCode || returnCode === 0) {
-      if (returnCode === 0) {
-        [{ 0: { factionName } }] = models;
+    const [[{ result }]] = models;
+    if (result || result === 0) {
+      if (result === 0) {
+        [[{ factionName }]] = models;
         models = Object.values(models[1]);
         for (let i = 0; i < models.length; i += 1) {
           const { uid: memberUid, hadRoleActive } = models[i];
@@ -248,7 +161,7 @@ export async function deleteFactionRole(uid, frid) {
           affectedUsers.push(memberUid);
         }
       }
-      return [returnCode, factionName, affectedUsers, affectedActiveRoleUsers];
+      return [result, factionName, affectedUsers, affectedActiveRoleUsers];
     }
   } catch (error) {
     console.error('SQL Error on deleteFactionRole:', error.message);
@@ -268,20 +181,14 @@ export async function setFlagOfFactionRole(sqlFrid, index, value) {
     const mask = 0x01 << index;
     /* eslint-disable max-len */
     if (value) {
-      await sequelize.query(
-        'UPDATE FactionRoles SET flags = flags | ? WHERE id = ?', {
-          replacements: [mask, sqlFrid],
-          raw: true,
-          type: QueryTypes.UPDATE,
-        },
+      await pool.query(
+        'UPDATE FactionRoles SET flags = flags | ? WHERE id = ?',
+        [mask, sqlFrid],
       );
     } else {
-      await sequelize.query(
-        'UPDATE FactionRoles SET flags = flags & ~(?) WHERE id = ?', {
-          replacements: [mask, sqlFrid],
-          raw: true,
-          type: QueryTypes.UPDATE,
-        },
+      await pool.query(
+        'UPDATE FactionRoles SET flags = flags & ~(?) WHERE id = ?',
+        [mask, sqlFrid],
       );
     }
     /* eslint-enable max-len */
@@ -299,32 +206,31 @@ export async function setFlagOfFactionRole(sqlFrid, index, value) {
  * @return success
  */
 export async function joinFactionRole(sqlFrid, uid) {
+  let conn;
   try {
-    const [[, insertedRows]] = await Promise.all([
-      sequelize.query(
+    conn = await pool.getConnection();
+
+    const [[{ affectedRows }]] = await Promise.all([
+      conn.query(
         `INSERT INTO UserFactionRoles (uid, frid)
     SELECT ?, ? WHERE EXISTS (
       SELECT 1 FROM UserFactions uf
         INNER JOIN Factions f ON uf.fid = f.id
         INNER JOIN FactionRoles fr ON fr.fid = f.id
       WHERE uf.uid = ? AND fr.id = ?
-    )`, {
-          replacements: [uid, sqlFrid, uid, sqlFrid],
-          raw: true,
-          type: QueryTypes.INSERT,
-        },
+    )`,
+        [uid, sqlFrid, uid, sqlFrid],
       ),
-      sequelize.query(
-        'UPDATE FactionRoles SET memberCount = memberCount + 1 WHERE id = ?', {
-          replacements: [sqlFrid],
-          raw: true,
-          type: QueryTypes.UPDATE,
-        },
+      conn.query(
+        'UPDATE FactionRoles SET memberCount = memberCount + 1 WHERE id = ?',
+        [sqlFrid],
       ),
     ]);
-    return insertedRows > 0;
+    return affectedRows > 0;
   } catch (error) {
     console.error(`SQL Error on setFactionRoleProperty: ${error.message}`);
+  } finally {
+    if (conn) conn.release();
   }
   return false;
 }
@@ -346,25 +252,17 @@ export async function joinFactionRole(sqlFrid, uid) {
  */
 export async function leaveFactionRole(initiatorUid, subjectUid, frid) {
   try {
-    const model = await sequelize.query(
-      'CALL LEAVE_FACTION_ROLE(?, ?, ?)', {
-        replacements: [initiatorUid, subjectUid, frid],
-        plain: true,
-        type: QueryTypes.SELECT,
-      },
+    const [[{ result, hadRoleActive, factionName }]] = await pool.query(
+      'CALL LEAVE_FACTION_ROLE(?, ?, ?)', [initiatorUid, subjectUid, frid],
     );
-    const returnCode = model?.[0]?.result;
-    if (returnCode || returnCode === 0) {
-      if (returnCode === 0) {
-        const { 0: { hadRoleActive, factionName } } = model;
-        return [returnCode, !!hadRoleActive, factionName];
+    if (result || result === 0) {
+      if (result === 0) {
+        return [result, hadRoleActive > 0, factionName];
       }
-      return [returnCode, false, null];
+      return [result, false, null];
     }
   } catch (error) {
     console.error('SQL Error on leaveFactionRole:', error.message);
   }
   return [-1, false, null];
 }
-
-export default FactionRole;

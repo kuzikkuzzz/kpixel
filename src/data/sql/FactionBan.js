@@ -1,60 +1,8 @@
 /*
  * bans for factions
  */
-import { DataTypes, QueryTypes } from 'sequelize';
-
-import sequelize from './sequelize.js';
+import pool from './mariadb.js';
 import { generateUUID, bufferToUUID } from '../../utils/hash.js';
-
-const FactionBan = sequelize.define('FactionBan', {
-  id: {
-    type: DataTypes.BIGINT.UNSIGNED,
-    autoIncrement: true,
-    primaryKey: true,
-  },
-
-  uuid: {
-    type: 'BINARY(16)',
-    allowNull: false,
-    unique: 'uuid',
-  },
-
-  fid: {
-    type: DataTypes.BIGINT.UNSIGNED,
-    allowNull: false,
-  },
-
-  muid: {
-    type: DataTypes.INTEGER.UNSIGNED,
-    allowNull: true,
-  },
-
-  reason: {
-    type: 'VARCHAR(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci',
-    allowNull: false,
-    set(value) {
-      this.setDataValue('reason', value.slice(0, 200));
-    },
-  },
-
-  /*
-   * NULL if infinite
-   */
-  expires: {
-    type: DataTypes.DATE,
-  },
-
-  createdAt: {
-    type: DataTypes.DATE,
-    defaultValue: DataTypes.NOW,
-    allowNull: false,
-  },
-}, {
-  indexes: [{
-    name: 'ban_fid',
-    fields: ['fid'],
-  }],
-});
 
 /**
  * ban user
@@ -66,27 +14,23 @@ const FactionBan = sequelize.define('FactionBan', {
 export async function banUserFromFaction(
   sqlFid, uid, ipString, reason, duration, muid = null,
 ) {
+  let conn;
   try {
+    conn = await pool.getConnection();
+
     const fbid = bufferToUUID(generateUUID());
 
-    await sequelize.query(
+    await conn.query(
       // eslint-disable-next-line max-len
-      'INSERT INTO FactionBans (uuid, fid, reason, expires, muid, createdAt) VALUES (UUID_TO_BIN(?), ?, ?, ?, ?, NOW())', {
-        replacements: [
-          fbid, sqlFid, reason,
-          (duration) ? new Date(Date.now() + duration * 1000) : null,
-          muid,
-        ],
-        raw: true,
-        type: QueryTypes.INSERT,
-      },
+      'INSERT INTO FactionBans (uuid, fid, reason, expires, muid, createdAt) VALUES (UUID_TO_BIN(?), ?, ?, ?, ?, NOW())',
+      [
+        fbid, sqlFid, reason,
+        (duration) ? new Date(Date.now() + duration * 1000) : null,
+        muid,
+      ],
     );
-    const model = await sequelize.query(
-      'SELECT id FROM FactionBans WHERE uuid = UUID_TO_BIN(?)', {
-        replacements: [fbid],
-        plain: true,
-        type: QueryTypes.SELECT,
-      },
+    const [model] = await conn.query(
+      'SELECT id FROM FactionBans WHERE uuid = UUID_TO_BIN(?)', [fbid],
     );
     if (!model) {
       return false;
@@ -94,24 +38,19 @@ export async function banUserFromFaction(
     const bid = model.id;
 
     await Promise.all([
-      sequelize.query(
-        'INSERT INTO UserFactionBans (bid, uid) VALUES (?, ?)', {
-          replacements: [bid, uid],
-          raw: true,
-          type: QueryTypes.INSERT,
-        },
+      conn.query(
+        'INSERT INTO UserFactionBans (bid, uid) VALUES (?, ?)', [bid, uid],
       ),
-      ipString && sequelize.query(
-        'INSERT INTO IPFactionBans (bid, ip) VALUES (?, IP_TO_BIN(?))', {
-          replacements: [bid, ipString],
-          raw: true,
-          type: QueryTypes.INSERT,
-        },
+      ipString && conn.query(
+        'INSERT INTO IPFactionBans (bid, ip) VALUES (?, IP_TO_BIN(?))',
+        [bid, ipString],
       ),
     ]);
     return true;
   } catch (error) {
     console.error('SQL Error on banUserFromFaction:', error.message);
+  } finally {
+    if (conn) conn.release();
   }
   return false;
 }
@@ -124,16 +63,13 @@ export async function banUserFromFaction(
  */
 export async function unbanFromFaction(factionName, fbid) {
   try {
-    await sequelize.query(
+    await pool.query(
       /* eslint-disable max-len */
       `DELETE FROM FactionBans WHERE uuid = UUID_TO_BIN(?) AND EXISTS(
   SELECT id FROM Factions f WHERE f.id = FactionBans.fid AND f.name = ?
-)`, {
-        /* eslint-enable max-len */
-        replacements: [fbid, factionName],
-        raw: true,
-        type: QueryTypes.DELETE,
-      },
+)`,
+      /* eslint-enable max-len */
+      [fbid, factionName],
     );
     return true;
   } catch (error) {
@@ -141,5 +77,3 @@ export async function unbanFromFaction(factionName, fbid) {
   }
   return false;
 }
-
-export default FactionBan;

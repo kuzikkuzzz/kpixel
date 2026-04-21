@@ -1,12 +1,8 @@
 /*
  * get ThreePIDs
  */
-import {
-  getTPIDsOfUser, removeTpidFromUser,
-} from '../../../data/sql/ThreePID.js';
+import { removeTpidFromUser } from '../../../data/sql/ThreePID.js';
 import { comparePasswordToHash } from '../../../utils/hash.js';
-import { USERLVL, THREEPID_PROVIDERS } from '../../../core/constants.js';
-import { setUserProperty } from '../../../data/sql/User.js';
 import socketEvents from '../../../socket/socketEvents.js';
 
 export default async (req, res) => {
@@ -20,35 +16,27 @@ export default async (req, res) => {
     }
   }
 
-  let tpids = await getTPIDsOfUser(req.user.id);
-  if (!tpids.some(({ id: tid }) => tid === id)) {
-    throw new Error(t`Could not find this login method`);
-  }
-  tpids = tpids.filter(({ id: tid }) => tid !== id);
+  const [
+    remReturn, newUserlvl,
+  ] = removeTpidFromUser(user.id, id, !!currentPassword);
 
-  if (!currentPassword && !(tpids.length
-    && tpids.some(({ provider }) => provider !== THREEPID_PROVIDERS.EMAIL)
-  )) {
-    throw new Error(
-      // eslint-disable-next-line max-len
-      t`You can not delete this login method, because you have nothing else left.`,
-    );
+  switch (remReturn) {
+    case 0:
+      break;
+    case 2:
+      throw new Error(t`Could not find this login method`);
+    case 3:
+      throw new Error(
+        // eslint-disable-next-line max-len
+        t`You can not delete this login method, because you have nothing else left.`,
+      );
+    default:
+      throw new Error(t`Server Error`);
   }
 
-  const { userlvl } = user;
-  const hasVerified = tpids.some(({ verified }) => verified);
-  /* make sure userlvl matches tpids */
-  if (!hasVerified && userlvl <= USERLVL.VERIFIED
-    && userlvl > USERLVL.REGISTERED
-  ) {
-    await setUserProperty(user.id, 'userlvl', USERLVL.REGISTERED);
-    socketEvents.reloadUser(user.id);
-  } else if (hasVerified && userlvl === USERLVL.REGISTERED) {
-    await setUserProperty(user.id, 'userlvl', USERLVL.VERIFIED);
+  if ((newUserlvl || newUserlvl === 0) && newUserlvl !== user.userlvl) {
     socketEvents.reloadUser(user.id);
   }
-
-  await removeTpidFromUser(user.id, id);
 
   res.status(200).json({ success: true });
 };

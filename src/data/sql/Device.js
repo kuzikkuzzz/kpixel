@@ -1,61 +1,4 @@
-import { QueryTypes, DataTypes } from 'sequelize';
-
-import sequelize from './sequelize.js';
-
-const Device = sequelize.define('Device', {
-  id: {
-    type: DataTypes.INTEGER.UNSIGNED,
-    autoIncrement: true,
-    primaryKey: true,
-  },
-
-  hash: {
-    type: 'CHAR(15) CHARACTER SET ascii COLLATE ascii_bin',
-    allowNull: false,
-    unique: 'hash',
-  },
-
-  os: {
-    type: 'VARCHAR(20) CHARACTER SET ascii COLLATE ascii_general_ci',
-  },
-
-  browser: {
-    type: 'VARCHAR(20) CHARACTER SET ascii COLLATE ascii_general_ci',
-  },
-
-  device: {
-    type: 'VARCHAR(20) CHARACTER SET ascii COLLATE ascii_general_ci',
-  },
-
-  headerSig: {
-    type: 'CHAR(12) CHARACTER SET ascii COLLATE ascii_bin',
-    allowNull: false,
-  },
-
-  lastSeen: {
-    type: DataTypes.DATE,
-    defaultValue: DataTypes.NOW,
-    allowNull: false,
-  },
-});
-
-/**
- * get device id to hash
- * @param hash
- * @return { id, lastSeen } | null
- */
-export async function getDeviceIdByHash(hash) {
-  try {
-    const result = await sequelize.query(
-      'SELECT id, lastSeen FROM Devices WHERE hash = $1',
-      { bind: [hash], type: QueryTypes.SELECT, plain: true },
-    );
-    return result;
-  } catch (error) {
-    console.error(`SQL Error on getDeviceIdByHash: ${error.message}`);
-  }
-  return null;
-}
+import pool from './mariadb.js';
 
 /**
  * get existing device id or create new one
@@ -65,23 +8,28 @@ export async function getDeviceIdByHash(hash) {
 export async function upsertDevice({
   hash, device, browser, os, headerSignature,
 }) {
+  let conn;
   try {
-    let result = await getDeviceIdByHash(hash);
+    conn = await conn.getConnection();
+    const [result] = await pool.query(
+      'SELECT id, lastSeen FROM Devices WHERE hash = ?',
+      [hash],
+    );
     if (result) {
       return result;
     }
-    await sequelize.query(
+    const { insertId } = await conn.query(
       // eslint-disable-next-line max-len
-      'INSERT INTO Devices (hash, os, browser, device, headerSig, lastSeen) VALUES (?, ?, ?, ?, ?, NOW())', {
-        replacements: [hash, os, browser, device, headerSignature],
-        raw: true,
-        type: QueryTypes.INSERT,
-      },
+      'INSERT INTO Devices (hash, os, browser, device, headerSig, lastSeen) VALUES (?, ?, ?, ?, ?, NOW())',
+      [hash, os, browser, device, headerSignature],
     );
-    result = await getDeviceIdByHash(hash);
-    return result;
+    if (insertId) {
+      return { id: insertId, lastSeen: new Date() };
+    }
   } catch (error) {
     console.error(`SQL Error on getDeviceIdByHash: ${error.message}`);
+  } finally {
+    if (conn) conn.release();
   }
   return null;
 }
@@ -93,12 +41,9 @@ export async function upsertDevice({
  */
 export async function touchDevice(deviceId) {
   try {
-    await sequelize.query(
-      'UPDATE Devices SET lastSeen = NOW() WHERE id = $1', {
-        bind: [deviceId],
-        raw: true,
-        type: QueryTypes.UPDATE,
-      },
+    await pool.query(
+      'UPDATE Devices SET lastSeen = NOW() WHERE id = ?',
+      [deviceId],
     );
     return true;
   } catch (error) {
@@ -106,5 +51,3 @@ export async function touchDevice(deviceId) {
   }
   return false;
 }
-
-export default Device;

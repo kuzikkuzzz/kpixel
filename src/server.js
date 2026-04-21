@@ -10,7 +10,8 @@ import http from 'http';
 import forceGC from './core/forceGC.js';
 import logger from './core/logger.js';
 import rankings from './core/Ranks.js';
-import { sync as syncSql } from './data/sql/index.js';
+import { sync as syncSql, cleanUp as cleanUpSql} from './data/sql/index.js';
+import { sync as syncAssets } from './core/assets.js';
 import { connect as connectRedis } from './data/redis/client.js';
 import routes from './routes/index.js';
 import chatProvider from './core/ChatProvider.js';
@@ -20,6 +21,7 @@ import { initialize as initializeFishing } from './core/Fishing.js';
 import canvasCleaner from './core/CanvasCleaner.js';
 import mailProvider from './core/MailProvider.js';
 import { User } from './middleware/session.js';
+import { HourlyCron } from './utils/cron.js';
 
 import socketEvents from './socket/socketEvents.js';
 import SocketServer from './socket/SocketServer.js';
@@ -101,6 +103,7 @@ app.use(routes);
 syncSql()
   // connect to redis
   .then(connectRedis)
+  .then(syncAssets)
   .then(async () => {
     User.setMailProvider(mailProvider);
     chatProvider.initialize();
@@ -109,6 +112,7 @@ syncSql()
     usersocket.initialize();
     apisocket.initialize();
     canvasCleaner.initialize();
+    HourlyCron.hook(cleanUpSql);
     // start http server
     const startServer = () => {
       server.listen(PORT, HOST, () => {

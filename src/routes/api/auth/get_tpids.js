@@ -5,7 +5,7 @@ import { getTPIDsOfUser } from '../../../data/sql/ThreePID.js';
 import { censorIdentifier } from '../../../core/utils.js';
 import { generateTokenHash } from '../../../utils/hash.js';
 import { getAllSessionsOfUser } from '../../../data/sql/Session.js';
-import { getAllConsentsOfUser } from '../../../data/sql/OIDCConsent.js';
+import { getAllConsentsOfUser } from '../../../data/sql/OIDC.js';
 
 export default async (req, res) => {
   const { id: userId } = req.user;

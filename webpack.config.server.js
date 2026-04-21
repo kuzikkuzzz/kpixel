@@ -31,7 +31,6 @@ const basePackageValues = {
     'install-pm2': 'npm install -g pm2'
   },
   dependencies: {
-    mysql2: '',
     'utf-8-validate': '',
     bufferutil: '',
   },
@@ -133,8 +132,7 @@ export default ({
         'bcrypt': 'commonjs bcrypt',
         'utf-8-validate': 'commonjs utf-8-validate',
         'bufferutil': 'commonjs bufferutil',
-        'sequelize': 'commonjs sequelize',
-        'mysql2': 'commonjs mysql2',
+        'mariadb': 'commonjs mariadb',
         'express': 'commonjs express',
         'ppfun-captcha': 'commonjs ppfun-captcha',
         'ws': 'commonjs ws',
@@ -165,6 +163,7 @@ export default ({
         'process.env.BROWSER': false,
         'process.env.PKG_NAME': `"${pkg.name}"`,
         'process.env.PKG_VERSION': `"${pkg.version}"`,
+        'import.meta.dirname': '__dirname',
       }),
       // create package.json for deployment
       new GeneratePackageJsonPlugin(basePackageValues, {

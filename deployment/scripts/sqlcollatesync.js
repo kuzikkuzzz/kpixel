@@ -1,44 +1,24 @@
 /*
  * This script fixes character sets and collates of sql tables
  */
-import { sequelize, sync as syncSql } from '../../src/data/sql/index.js';
-import { DailyCron, HourlyCron } from '../../src/utils/cron.js';
+import { createConnection } from 'mariadb';
 
-const LOG_QUERY = true;
+import {
+  MARIADB_HOST, MARIADB_DATABASE, MARIADB_USER, MARIADB_PW, LOG_MARIADB,
+} from '../../src/core/config.js';
 
-const fetchQuery = `SELECT CONCAT(
-  'ALTER TABLE ', TABLE_NAME, ' MODIFY ', COLUMN_NAME, ' ', COLUMN_TYPE,
-  ' CHARACTER SET ascii COLLATE ascii_bin',
-  IF(IS_NULLABLE = 'NO', ' NOT NULL', ''),
-       IF(COLUMN_DEFAULT IS NOT NULL, CONCAT(' DEFAULT ''', COLUMN_DEFAULT, ''''), ''),
-       IF(COLUMN_COMMENT != '', CONCAT(' COMMENT ''', COLUMN_COMMENT, ''''), ''),
-       ';'
-) AS alter_statement
-FROM INFORMATION_SCHEMA.COLUMNS
-WHERE TABLE_SCHEMA = 'pixelplanet'
-AND DATA_TYPE IN ('varchar', 'char', 'text')`
-
-async function initialize() {
-  await syncSql();
-}
-
-async function destruct() {
-  await sequelize.close();
-  DailyCron.destructor();
-  HourlyCron.destructor();
-}
+const batchConnection = await createConnection({
+  host: MARIADB_HOST,
+  user: MARIADB_USER,
+  password: MARIADB_PW,
+  database: MARIADB_DATABASE,
+  logger: {
+    query: console.info,
+  },
+});
 
 (async () => {
-  sequelize.options.logging = (sql) => {
-    if (LOG_QUERY) {
-      console.log(sql);
-    }
-  };
-
-  await initialize();
-
-  await sequelize.query(
-    `ALTER TABLE Badges MODIFY name varchar(32) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL;
+  const query =  `ALTER TABLE Badges MODIFY name varchar(32) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL;
 ALTER TABLE Badges MODIFY description varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL;
 
 ALTER TABLE Bans MODIFY reason varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL;
@@ -124,10 +104,12 @@ ALTER TABLE Users MODIFY password char(60) CHARACTER SET ascii COLLATE ascii_bin
 ALTER TABLE WhoisReferrals MODIFY host varchar(60) CHARACTER SET latin1 COLLATE latin1_swedish_ci NOT NULL;
 
 ALTER TABLE UserBadges MODIFY note varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
-`,{
-    type: sequelize.QueryTypes.RAW,
-    multipleStatements: true,
-  });
+`;
+  for (const q of query.split(';').map((q) => q.trim()).filter((q) => q)) {
+    if (q) {
+      await batchConnection.query(q);
+    }
+  }
 
-  await destruct();
+  batchConnection.end();
 })();

@@ -3,12 +3,13 @@
  * client authorization only client_secret_basic or client_secret_post
  * grant_type only authorization_code or refresh_token
  */
-import { getOIDCClient } from '../../data/sql/OIDCClient.js';
 import {
-  consumeRefreshToken, createRefreshToken,
-} from '../../data/sql/OIDCRefreshToken.js';
-import { consumeAuthCode } from '../../data/sql/OIDCAuthCode.js';
-import { createAccessToken } from '../../data/sql/OIDCAccessToken.js';
+  getOIDCClient,
+  consumeAuthCode,
+  createAccessToken,
+  consumeRefreshToken,
+  createRefreshToken,
+} from '../../data/sql/OIDC.js';
 import { validatePkceChallenge } from '../../utils/hash.js';
 import { generateIdToken } from '../../middleware/oidc.js';
 

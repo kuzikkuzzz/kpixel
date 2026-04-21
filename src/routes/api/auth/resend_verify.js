@@ -3,8 +3,8 @@
  */
 
 import mailProvider from '../../../core/MailProvider.js';
-import { USERLVL } from '../../../data/sql/index.js';
 import { getEmailOfUser } from '../../../data/sql/ThreePID.js';
+import { USERLVL } from '../../../core/constants.js';
 
 export default async (req, res) => {
   const { user, lang, ttag: { t } } = req;

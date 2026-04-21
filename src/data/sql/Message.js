@@ -3,53 +3,12 @@
  * Database layout for Chat Messages
  *
  */
-
-import { DataTypes, QueryTypes } from 'sequelize';
-import sequelize from './sequelize.js';
+import pool from './mariadb.js';
 import { CHANNEL_TYPES } from '../../core/constants.js';
 import mapFlag from '../../utils/flagMapping.js';
 import parseAttachmentsFromMd from '../../utils/markdown/attachmentParser.js';
 import { getMediaFromLinks } from '../../utils/media/serverUtils.js';
 
-const Message = sequelize.define('Message', {
-  id: {
-    type: DataTypes.BIGINT.UNSIGNED,
-    autoIncrement: true,
-    primaryKey: true,
-  },
-
-  cid: {
-    type: DataTypes.INTEGER.UNSIGNED,
-    allowNull: false,
-  },
-
-  uid: {
-    type: DataTypes.INTEGER.UNSIGNED,
-    allowNull: false,
-  },
-
-  message: {
-    type: 'VARCHAR(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci',
-    allowNull: false,
-    set(value) {
-      this.setDataValue('message', value.slice(0, 200));
-    },
-  },
-
-  createdAt: {
-    type: DataTypes.DATE,
-    defaultValue: DataTypes.NOW,
-    allowNull: false,
-  },
-}, {
-  indexes: [
-    {
-      name: 'messages_cid_id_desc',
-      fields: ['cid', 'id'],
-      order: { id: 'DESC' },
-    },
-  ],
-});
 
 /**
  * store message, may throw an Error
@@ -73,15 +32,11 @@ export async function storeMessage(message, cid, uid) {
     retries -= 1;
     try {
       // eslint-disable-next-line no-await-in-loop
-      models = await sequelize.query(
-        'CALL STORE_CHAT_MESSAGE(?, ?, ?, ?)', {
-          replacements: [
-            cid, uid, message,
-            (media.length) ? JSON.stringify(media) : null,
-          ],
-          raw: true,
-          type: QueryTypes.SELECT,
-        },
+      models = await pool.query(
+        'CALL STORE_CHAT_MESSAGE(?, ?, ?, ?)', [
+          cid, uid, message,
+          (media.length) ? JSON.stringify(media) : null,
+        ],
       );
     } catch (error) {
       /*
@@ -94,24 +49,23 @@ export async function storeMessage(message, cid, uid) {
         throw new Error('store_error');
       }
       // eslint-disable-next-line no-await-in-loop
-      await new Promise((resolve) => { setTimeout(resolve, 200); });
+      await new Promise((resolve) => { setTimeout(resolve, 500); });
     }
   }
 
-  const returnCode = models?.[0]?.[0]?.result;
-  if (returnCode === 1) {
+  const [[{ result, id }]] = models;
+  if (result === 1) {
     throw new Error('no_such_channel');
   }
-  if (returnCode !== 0) {
+  if (result !== 0) {
     throw new Error('store_error');
   }
-  const [{ 0: { id } }] = models;
   /*
     * if second result set exists, media got attached
     */
   const attachments = [];
   if (models[1]) {
-    models = Object.values(models[1]);
+    [, models] = models;
     for (let i = 0; i < models.length; i += 1) {
       const {
         mediaId, mediaType, mediaSize, mediaWidth, mediaHeight, mediaAvgColor,
@@ -135,14 +89,11 @@ export async function deletePublicUserMessages(uid) {
     return false;
   }
   try {
-    await sequelize.query(
+    await pool.query(
       `DELETE m FROM Messages m
   INNER JOIN Channels c ON m.cid = c.id
-WHERE m.uid = ? AND c.type = ?`, {
-        replacements: [uid, CHANNEL_TYPES.PUBLIC],
-        raw: true,
-        type: QueryTypes.DELETE,
-      },
+WHERE m.uid = ? AND c.type = ?`,
+      [uid, CHANNEL_TYPES.PUBLIC],
     );
     return true;
   } catch (error) {
@@ -158,12 +109,8 @@ WHERE m.uid = ? AND c.type = ?`, {
  */
 export async function deleteUserChannelMessages(uid, cid) {
   try {
-    await sequelize.query(
-      'DELETE FROM Messages WHERE uid = ? AND cid = ?', {
-        replacements: [uid, cid],
-        raw: true,
-        type: QueryTypes.DELETE,
-      },
+    await pool.query(
+      'DELETE FROM Messages WHERE uid = ? AND cid = ?', [uid, cid],
     );
     return true;
   } catch (error) {
@@ -188,14 +135,11 @@ export async function deleteMessagesByIds(ids) {
     return false;
   }
   try {
-    await sequelize.query(
+    await pool.query(
       `DELETE m FROM Messages m WHERE id in (${
         ids.map(() => '?').join(', ')
-      })`, {
-        replacements: ids,
-        raw: true,
-        type: QueryTypes.DELETE,
-      },
+      })`,
+      ids,
     );
     return true;
   } catch (error) {
@@ -214,13 +158,7 @@ export async function deleteMessage(mid) {
     return false;
   }
   try {
-    await sequelize.query(
-      'DELETE FROM Messages WHERE id = ?', {
-        replacements: [mid],
-        raw: true,
-        type: QueryTypes.DELETE,
-      },
-    );
+    await pool.query('DELETE FROM Messages WHERE id = ?', [mid]);
     return true;
   } catch (error) {
     console.error(`SQL Error on deleteUserMessages: ${error.message}`);
@@ -236,7 +174,7 @@ export async function deleteMessage(mid) {
  */
 export async function getMessagesForChannel(cid, limit) {
   try {
-    const models = await sequelize.query(
+    const models = await pool.query(
       /* eslint-disable max-len */
       `SELECT DISTINCT m.createdAt, m.id AS msgId, m.message, m.uid AS userId,
 UNIX_TIMESTAMP(m.createdAt) AS 'ts',
@@ -252,12 +190,9 @@ CONCAT(frm.shortId, ':', frm.extension) AS customRoleFlagId FROM Messages m
   LEFT JOIN Media frm ON frm.id = fr.customFlag
   LEFT JOIN MessageMedia mm ON mm.sid = m.id
   LEFT JOIN Media b ON b.id = mm.mid
-WHERE m.cid = ? ORDER BY m.createdAt DESC LIMIT ?`, {
+WHERE m.cid = ? ORDER BY m.id DESC LIMIT ?`,
       /* eslint-enable max-len */
-        replacements: [cid, limit],
-        raw: true,
-        type: QueryTypes.SELECT,
-      },
+      [cid, limit],
     );
     const rows = [];
     const mediaReferences = new Map();
@@ -300,5 +235,3 @@ WHERE m.cid = ? ORDER BY m.createdAt DESC LIMIT ?`, {
   }
   return [];
 }
-
-export default Message;

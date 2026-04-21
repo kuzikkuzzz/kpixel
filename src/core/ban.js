@@ -21,7 +21,7 @@ import {
 } from '../data/sql/Message.js';
 import {
   whitelist as whitelistQuery, unwhitelist as unwhitelistQuery,
-} from '../data/sql/ProxyWhitelist.js';
+} from '../data/sql/IP.js';
 import socketEvents from '../socket/socketEvents.js';
 import { MEDIA_BAN_REASONS } from './constants.js';
 

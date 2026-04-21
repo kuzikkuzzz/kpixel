@@ -4,10 +4,9 @@
  * This should be the most basic data in order to run the game.
  *
  */
-import { USERLVL } from '../data/sql/index.js';
 import { getUserRanks } from '../data/redis/ranks.js';
 import { USE_MAILER, TIMEBLOCK_USERS, TIMEBLOCK_IPS } from './config.js';
-import { USER_FLAGS, CHANNEL_TYPES } from './constants.js';
+import { USER_FLAGS, CHANNEL_TYPES, USERLVL } from './constants.js';
 import chatProvider from './ChatProvider.js';
 
 export default async function getMe(user, ip, lang) {

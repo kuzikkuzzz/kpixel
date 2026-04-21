@@ -3,11 +3,10 @@
  */
 
 import { resolveSessionUidAndAgeOfRequest } from './session.js';
-import { getOIDCClient } from '../data/sql/OIDCClient.js';
+import { getOIDCClient, getAccessToken } from '../data/sql/OIDC.js';
 import { createJWT, hashValue } from '../core/jwt.js';
 import { generatePPID } from '../utils/hash.js';
 import { getUserOIDCProfile } from '../data/sql/User.js';
-import { getAccessToken } from '../data/sql/OIDCAccessToken.js';
 
 import { OIDC_URL } from '../core/config.js';
 import { USERLVL } from '../core/constants.js';

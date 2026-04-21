@@ -4,8 +4,11 @@
  * response_type only 'code'
  */
 
-import { hasUserConsent, consentUser } from '../../data/sql/OIDCConsent.js';
-import { createAuthCode } from '../../data/sql/OIDCAuthCode.js';
+import {
+  hasUserConsent,
+  consentUser,
+  createAuthCode,
+} from '../../data/sql/OIDC.js';
 import generatePopUpPage from '../../ssr/PopUp.jsx';
 
 export default async (req, res) => {

@@ -2,9 +2,7 @@ import logger from '../../../core/logger.js';
 import {
   createNewUser, getUsersByNameOrEmail,
 } from '../../../data/sql/User.js';
-import {
-  addOrReplaceTpid, THREEPID_PROVIDERS,
-} from '../../../data/sql/ThreePID.js';
+import { addOrReplaceTpid } from '../../../data/sql/ThreePID.js';
 import mailProvider from '../../../core/MailProvider.js';
 import getMe from '../../../core/me.js';
 import { openSession } from '../../../middleware/session.js';
@@ -16,6 +14,7 @@ import {
   validateUsername,
 } from '../../../utils/validation.js';
 import { checkCaptchaSolution } from '../../../data/redis/captcha.js';
+import { THREEPID_PROVIDERS } from '../../../core/constants.js';
 
 async function validate(
   email, name, username, password, captcha, captchaid, t, gettext,

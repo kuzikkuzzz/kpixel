@@ -1,43 +1,7 @@
-import { QueryTypes, DataTypes } from 'sequelize';
-
-import sequelize, { nestQuery } from './sequelize.js';
+import pool from './mariadb.js';
+import { nestQuery } from './utils.js';
 import { generateToken, generateTokenHash } from '../../utils/hash.js';
 import { HOUR, CHANNEL_TYPES } from '../../core/constants.js';
-
-const Session = sequelize.define('Session', {
-  id: {
-    type: DataTypes.BIGINT.UNSIGNED,
-    autoIncrement: true,
-    primaryKey: true,
-  },
-
-  uid: {
-    type: DataTypes.INTEGER.UNSIGNED,
-    allowNull: false,
-  },
-
-  token: {
-    type: 'CHAR(38) CHARACTER SET ascii COLLATE ascii_bin',
-    allowNull: false,
-    unique: 'token',
-  },
-
-  country: {
-    type: 'CHAR(2) CHARACTER SET ascii COLLATE ascii_general_ci',
-    defaultValue: 'xx',
-    allowNull: false,
-  },
-
-  expires: {
-    type: DataTypes.DATE,
-  },
-
-  createdAt: {
-    type: DataTypes.DATE,
-    defaultValue: DataTypes.NOW,
-    allowNull: false,
-  },
-});
 
 /**
  * create session for a user
@@ -61,7 +25,10 @@ export async function createSession(
     durationHours = 48;
   }
 
+  let conn;
   try {
+    conn = await pool.getConnection();
+
     /*
      * make sure ip and device are parsed
      */
@@ -73,19 +40,19 @@ export async function createSession(
      * limit the amount of open sessions a user can have, and check if new
      * location
      */
-    const openSessions = await sequelize.query(
+    const openSessions = await conn.query(
       // eslint-disable-next-line max-len
-      'SELECT country FROM Sessions WHERE uid = $1 AND (expires > NOW() OR expires IS NULL)',
-      { bind: [uid], type: QueryTypes.SELECT, raw: true },
+      'SELECT country FROM Sessions WHERE uid = ? AND (expires > NOW() OR expires IS NULL)',
+      [uid],
     );
     let newLocation = false;
     if (openSessions.length > 0) {
       if (openSessions.length > 50) {
-        await sequelize.query(
+        await conn.query(
           `DELETE t FROM Sessions t JOIN (
-    SELECT id FROM Sessions WHERE uid = :uid ORDER BY id ASC LIMIT 5
+    SELECT id FROM Sessions WHERE uid = ? ORDER BY id ASC LIMIT 5
   ) AS oldest ON t.id = oldest.id`,
-          { replacements: { uid }, raw: true, type: QueryTypes.DELETE },
+          [uid],
         );
       }
       newLocation = !openSessions.some(({ country }) => country === ip.country);
@@ -95,20 +62,18 @@ export async function createSession(
     // eslint-disable-next-line max-len
     const expires = durationHours && new Date(Date.now() + durationHours * HOUR);
 
-    await sequelize.query(
+    await conn.query(
       // eslint-disable-next-line max-len
-      'INSERT INTO Sessions (uid, token, expires, ip, country, did, createdAt) VALUES (?,?,?,IP_TO_BIN(?),?,?, NOW())', {
-        replacements: [
-          uid, generateTokenHash(token), expires,
-          ip?.ipString, ip?.country || 'xx', deviceId,
-        ],
-        raw: true,
-        type: QueryTypes.INSERT,
-      },
+      'INSERT INTO Sessions (uid, token, expires, ip, country, did, createdAt) VALUES (?,?,?,IP_TO_BIN(?),?,?, NOW())', [
+        uid, generateTokenHash(token), expires,
+        ip?.ipString, ip?.country || 'xx', deviceId,
+      ],
     );
     return [token, newLocation];
   } catch (error) {
     console.error(`SQL Error on createSession: ${error.message}`);
+  } finally {
+    if (conn) conn.release();
   }
   return [null, false];
 }
@@ -123,10 +88,10 @@ export async function removeSession(token) {
     return false;
   }
   try {
-    const count = await Session.destroy({
-      where: { token: generateTokenHash(token) },
-    });
-    return count !== 0;
+    const { affectedRows } = await pool.query(
+      'DELETE FROM Sessions WHERE token = ?', [generateTokenHash(token)],
+    );
+    return affectedRows !== 0;
   } catch (error) {
     console.error(`SQL Error on removeSession: ${error.message}`);
   }
@@ -144,10 +109,10 @@ export async function removeSessionById(id, uid) {
     return false;
   }
   try {
-    const count = await Session.destroy({
-      where: { id, uid },
-    });
-    return count !== 0;
+    const { affectedRows } = await pool.query(
+      'DELETE FROM Sessions WHERE id = ? AND uid = ?', [id, uid],
+    );
+    return affectedRows !== 0;
   } catch (error) {
     console.error(`SQL Error on removeSessionById: ${error.message}`);
   }
@@ -164,13 +129,10 @@ export async function resolveSessionUid(token) {
     return null;
   }
   try {
-    const session = await sequelize.query(
+    const [session] = await pool.query(
       // eslint-disable-next-line max-len
-      'SELECT uid FROM Sessions WHERE token = ? AND (expires > NOW() OR expires IS NULL)', {
-        replacements: [generateTokenHash(token)],
-        type: QueryTypes.SELECT,
-        plain: true,
-      },
+      'SELECT uid FROM Sessions WHERE token = ? AND (expires > NOW() OR expires IS NULL)',
+      [generateTokenHash(token)],
     );
     if (session) {
       return session.uid;
@@ -193,15 +155,12 @@ export async function resolveSessionUidAndAge(token) {
     return [null, null];
   }
   try {
-    const session = await sequelize.query(
+    const [session] = await pool.query(
       // eslint-disable-next-line max-len
       `SELECT s.uid, s.createdAt, u.username NOT LIKE 'pp\\_%' AS isValid FROM Sessions s
   INNER JOIN Users u ON u.id = s.uid
-WHERE token = ? AND (expires > NOW() OR expires IS NULL)`, {
-        replacements: [generateTokenHash(token)],
-        type: QueryTypes.SELECT,
-        plain: true,
-      },
+WHERE token = ? AND (expires > NOW() OR expires IS NULL)`,
+      [generateTokenHash(token)],
     );
     if (session) {
       return [
@@ -242,7 +201,10 @@ export async function resolveSession(token) {
   if (!token) {
     return null;
   }
+
+  let conn;
   try {
+    conn = await pool.getConnection();
     /*
      * CURRENT STATUS:
      * Resolving a session takes two round-trip-times of:
@@ -258,7 +220,7 @@ export async function resolveSession(token) {
 
     /* eslint-disable max-len */
 
-    let user = await sequelize.query(
+    let user = await conn.query(
       `SELECT u.id, u.name, u.username, u.password, u.userlvl, u.flags, u.lastSeen, u.createdAt,
 p.customFlag,
 CONCAT(a.shortId, ':', a.extension) AS avatarId,
@@ -272,11 +234,9 @@ c.id AS 'channels.cid', c.name AS 'channels.name', c.\`type\` AS 'channels.type'
   LEFT JOIN Media frm ON frm.id = fr.customFlag
   LEFT JOIN UserChannels ucm ON ucm.uid = u.id
   LEFT JOIN Channels c ON c.id = ucm.cid
-WHERE s.token = $1 AND (s.expires > NOW() OR s.expires IS NULL)`, {
-        bind: [generateTokenHash(token)],
-        raw: true,
-        type: QueryTypes.SELECT,
-      });
+WHERE s.token = ? AND (s.expires > NOW() OR s.expires IS NULL)`,
+      [generateTokenHash(token)],
+    );
     /*
      * {
      *   id, name, password, userlvl, flags, lastSeen, createdAt, customFlag,
@@ -298,60 +258,52 @@ WHERE s.token = $1 AND (s.expires > NOW() OR s.expires IS NULL)`, {
       ({ type }) => type === CHANNEL_TYPES.DM,
     ).map(({ cid }) => cid);
     if (dmChannelIds.length) {
-      promises.push(sequelize.query(
+      promises.push(conn.query(
         // eslint-disable-next-line max-len
         `SELECT uc.cid, dmu.name AS 'dmname', CONCAT(a.shortId, ':', a.extension) AS avatarId FROM UserChannels uc
     INNER JOIN Users dmu ON dmu.id = uc.uid
     LEFT JOIN Profiles p ON p.uid = dmu.id
     LEFT JOIN Media a ON a.id = p.avatar
-  WHERE dmu.id != ? AND uc.cid IN (?)`, {
-          replacements: [userId, dmChannelIds],
-          raw: true,
-          type: QueryTypes.SELECT,
-        }));
+  WHERE dmu.id != ? AND uc.cid IN (?)`,
+        [userId, dmChannelIds],
+      ));
     } else {
       promises.push([]);
     }
 
     /* get info to factions */
     if (user.channels.some(({ type }) => type === CHANNEL_TYPES.FACTION)) {
-      promises.push(sequelize.query(
+      promises.push(conn.query(
         // eslint-disable-next-line max-len
         `SELECT CONCAT(a.shortId, ':', a.extension) AS avatarId, f.cid FROM UserFactions uf
     INNER JOIN Factions f ON f.id = uf.fid
     INNER JOIN Media a ON a.id = f.avatar
-  WHERE uf.uid = ?`, {
-          replacements: [userId],
-          raw: true,
-          type: QueryTypes.SELECT,
-        }));
+  WHERE uf.uid = ?`,
+        [userId],
+      ));
     } else {
       promises.push([]);
     }
 
     /* get blocked users */
-    promises.push(sequelize.query(
+    promises.push(conn.query(
       `SELECT bu.id, bu.name FROM UserBlocks ub
   INNER JOIN Users bu ON bu.id = ub.buid
-WHERE ub.uid = ?`, {
-        replacements: [userId],
-        raw: true,
-        type: QueryTypes.SELECT,
-      }));
+WHERE ub.uid = ?`,
+      [userId],
+    ));
 
     /* get bans applying on user id or tpid */
-    promises.push(sequelize.query(
+    promises.push(conn.query(
       `SELECT b.expires, b.flags FROM Bans b WHERE b.id IN (
   SELECT DISTINCT b.id FROM (
     SELECT ub.bid AS id FROM UserBans ub WHERE ub.uid = ?
     UNION ALL
     SELECT tb.bid AS id FROM ThreePIDBans tb INNER JOIN ThreePIDs t ON tb.tid = t.id WHERE t.uid = ?
   ) AS b
-) AND (b.expires > NOW() OR b.expires IS NULL)`, {
-        replacements: [userId, userId],
-        raw: true,
-        type: QueryTypes.SELECT,
-      }));
+) AND (b.expires > NOW() OR b.expires IS NULL)`,
+      [userId, userId],
+    ));
 
     /* eslint-enable max-len */
 
@@ -426,6 +378,8 @@ WHERE ub.uid = ?`, {
     return user;
   } catch (error) {
     console.error(`SQL Error on resolveSession: ${error.message}`);
+  } finally {
+    if (conn) conn.release();
   }
   return null;
 }
@@ -444,11 +398,11 @@ WHERE ub.uid = ?`, {
 export async function getAllSessionsOfUser(userId) {
   if (userId) {
     try {
-      return await sequelize.query(
+      return await pool.query(
         `SELECT s.id, s.token, s.country, d.os, d.browser FROM Sessions s
     LEFT JOIN Devices d ON d.id = s.did
   WHERE s.uid = ? AND (s.expires > NOW() OR s.expires IS NULL)`,
-        { replacements: [userId], type: QueryTypes.SELECT, raw: true },
+        [userId],
       );
     } catch (error) {
       console.error(`SQL Error on getAllSessionsOfUser: ${error.message}`);
@@ -456,5 +410,3 @@ export async function getAllSessionsOfUser(userId) {
   }
   return [];
 }
-
-export default Session;

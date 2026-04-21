@@ -1,46 +1,12 @@
-import { DataTypes, QueryTypes } from 'sequelize';
-import sequelize from './sequelize.js';
+import pool from './mariadb.js';
 import { USER_FLAGS } from '../../core/constants.js';
-
-const Fish = sequelize.define('Fish', {
-  id: {
-    type: DataTypes.INTEGER.UNSIGNED,
-    autoIncrement: true,
-    primaryKey: true,
-  },
-
-  uid: {
-    type: DataTypes.INTEGER.UNSIGNED,
-    allowNull: false,
-  },
-
-  type: {
-    type: DataTypes.TINYINT.UNSIGNED,
-    allowNull: false,
-  },
-
-  size: {
-    type: DataTypes.FLOAT,
-    allowNull: false,
-  },
-
-  createdAt: {
-    type: DataTypes.DATE,
-    defaultValue: DataTypes.NOW,
-    allowNull: false,
-  },
-});
 
 export async function storeFish(uid, type, size) {
   try {
-    const model = await sequelize.query(
-      'CALL STORE_FISH(?, ?, ?)', {
-        replacements: [uid, type, size],
-        plain: true,
-        type: QueryTypes.SELECT,
-      },
+    const [[{ id }]] = await pool.query(
+      'CALL STORE_FISH(?, ?, ?)', [uid, type, size],
     );
-    return model?.[0]?.id;
+    return id;
   } catch (error) {
     console.error(`SQL Error on storeFish: ${error.message}`);
   }
@@ -54,16 +20,13 @@ export async function storeFish(uid, type, size) {
  */
 export async function getFishById(id) {
   try {
-    const fish = await sequelize.query(
+    const [fish] = await pool.query(
       `SELECT f.type, f.size, f.createdAt,
 f.uid AS caughtByUid, u.name AS caughtByName, u.username AS caughtByUsername,
 (u.flags & ?) != 0 AS isPrivate FROM Fishes f
   LEFT JOIN Users u ON u.id = f.uid
-WHERE f.id = ?`, {
-        replacements: [0x01 << USER_FLAGS.PRIV, id],
-        type: QueryTypes.SELECT,
-        plain: true,
-      },
+WHERE f.id = ?`,
+      [0x01 << USER_FLAGS.PRIV, id],
     );
     if (fish) {
       fish.ts = fish.createdAt.getTime();
@@ -79,13 +42,10 @@ WHERE f.id = ?`, {
 export async function getFishesOfUser(uid) {
   const fishes = [];
   try {
-    const fishModels = await sequelize.query(
+    const fishModels = await pool.query(
       // eslint-disable-next-line max-len
-      'SELECT id, type, size, createdAt FROM Fishes WHERE uid = ? ORDER BY createdAt DESC', {
-        replacements: [uid],
-        raw: true,
-        type: QueryTypes.SELECT,
-      },
+      'SELECT id, type, size, createdAt FROM Fishes WHERE uid = ? ORDER BY createdAt DESC',
+      [uid],
     );
     let i = fishModels.length;
     while (i > 0) {
@@ -98,5 +58,3 @@ export async function getFishesOfUser(uid) {
   }
   return fishes;
 }
-
-export default Fish;

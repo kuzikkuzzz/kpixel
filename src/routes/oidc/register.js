@@ -8,7 +8,7 @@ import { verifySession } from '../../middleware/session.js';
 import errorPage from '../../middleware/errorPage.js';
 import {
   createOIDCClient, getAllClientsOfUser, deleteClient,
-} from '../../data/sql/OIDCClient.js';
+} from '../../data/sql/OIDC.js';
 import putHtmlIntoShell from '../../ssr/shell.js';
 import { USERLVL } from '../../core/constants.js';
 

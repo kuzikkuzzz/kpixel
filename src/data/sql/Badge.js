@@ -1,25 +1,5 @@
-import { DataTypes, QueryTypes } from 'sequelize';
-import sequelize from './sequelize.js';
+import pool from './mariadb.js';
 import { USER_FLAGS } from '../../core/constants.js';
-
-const Badge = sequelize.define('Badge', {
-  id: {
-    type: DataTypes.INTEGER.UNSIGNED,
-    autoIncrement: true,
-    primaryKey: true,
-  },
-
-  name: {
-    type: 'VARCHAR(32) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci',
-    allowNull: false,
-    unique: 'name',
-  },
-
-  description: {
-    type: 'VARCHAR(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci',
-    allowNull: false,
-  },
-});
 
 /**
  * get information of a speciic badge
@@ -27,18 +7,15 @@ const Badge = sequelize.define('Badge', {
  */
 export async function getBadgeById(id) {
   try {
-    const badge = await sequelize.query(
+    const [badge] = await pool.query(
       // eslint-disable-next-line max-len
       `SELECT b.name, b.description, ub.note,
 ub.createdAt, u.id AS userId, u.name AS userDisplayName, u.username AS userName,
 (u.flags & ?) != 0 AS isPrivate FROM Badges b
   INNER JOIN UserBadges ub ON ub.bid = b.id
   INNER JOIN Users u ON u.id = ub.uid
-WHERE ub.id = ?`, {
-        replacements: [0x01 << USER_FLAGS.PRIV, id],
-        type: QueryTypes.SELECT,
-        plain: true,
-      },
+WHERE ub.id = ?`,
+      [0x01 << USER_FLAGS.PRIV, id],
     );
     if (badge) {
       badge.ts = badge.createdAt.getTime();
@@ -63,15 +40,12 @@ WHERE ub.id = ?`, {
 export async function getBadgesOfUser(uid) {
   const badges = [];
   try {
-    const results = await sequelize.query(
+    const results = await pool.query(
       `SELECT ub.id, b.name, b.description, ub.createdAt FROM Badges b
   INNER JOIN UserBadges ub ON ub.bid = b.id
   INNER JOIN Users u ON u.id = ub.uid
-WHERE u.id = ?`, {
-        replacements: [uid],
-        raw: true,
-        type: QueryTypes.SELECT,
-      },
+WHERE u.id = ?`,
+      [uid],
     );
     let i = results.length;
     while (i > 0) {
@@ -89,40 +63,33 @@ WHERE u.id = ?`, {
  * ensure that a badge exists
  */
 export async function ensureBadgeExistence(name, description) {
+  let conn;
   try {
-    const found = await sequelize.query(
+    conn = await pool.getConnection();
+
+    const found = await conn.query(
       // eslint-disable-next-line max-len
-      'SELECT description FROM Badges WHERE name = ?', {
-        replacements: [name],
-        plain: true,
-        type: QueryTypes.SELECT,
-      },
+      'SELECT description FROM Badges WHERE name = ?', [name],
     );
     if (found) {
       if (found.description !== description) {
-        await sequelize.query(
-          'UPDATE Badges SET description = ? WHERE name = ?', {
-            replacements: [description, name],
-            raw: true,
-            type: QueryTypes.UPDATE,
-          },
+        await conn.query(
+          'UPDATE Badges SET description = ? WHERE name = ?',
+          [description, name],
         );
       }
       return true;
     }
-    await sequelize.query(
+    await conn.query(
       // eslint-disable-next-line max-len
-      'INSERT INTO Badges (name, description) VALUES (?, ?)', {
-        replacements: [name, description],
-        raw: true,
-        type: QueryTypes.INSERT,
-      },
+      'INSERT INTO Badges (name, description) VALUES (?, ?)',
+      [name, description],
     );
     return true;
   } catch (error) {
     console.error(`SQL Error on ensureBadgeExistence: ${error.message}`);
+  } finally {
+    if (conn) conn.release();
   }
   return false;
 }
-
-export default Badge;

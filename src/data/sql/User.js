@@ -1,15 +1,8 @@
-/**
- *
- * This is the database of the data for registered Users
- *
- */
-
 import { randomUUID } from 'crypto';
-import Sequelize, { DataTypes, QueryTypes, Op } from 'sequelize';
 
-import sequelize, { nestQuery } from './sequelize.js';
+import pool from './mariadb.js';
+import { nestQuery } from './utils.js';
 import { generateHash } from '../../utils/hash.js';
-import { setEmail } from './ThreePID.js';
 import {
   USERLVL, THREEPID_PROVIDERS, USER_FLAGS, USER_FACTION_FLAGS,
 } from '../../core/constants.js';
@@ -18,113 +11,31 @@ import { ADMIN_IDS } from '../../core/config.js';
 export { USERLVL, THREEPID_PROVIDERS, USER_FLAGS };
 
 
-const User = sequelize.define('User', {
-  id: {
-    type: DataTypes.INTEGER.UNSIGNED,
-    autoIncrement: true,
-    primaryKey: true,
-  },
-
-  /* [a-zA-Z0-9._-] */
-  username: {
-    type: 'VARCHAR(32) CHARACTER SET ascii COLLATE ascii_bin',
-    allowNull: false,
-    unique: 'username',
-  },
-
-  // STRING is VARCHAR
-  name: {
-    type: 'VARCHAR(32) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci',
-    allowNull: false,
-    unique: 'name',
-  },
-
-  // null if only ever used external oauth
-  password: {
-    type: 'CHAR(60) CHARACTER SET ascii COLLATE ascii_bin',
-    set(value) {
-      if (value) this.setDataValue('password', generateHash(value));
-    },
-  },
-
-  userlvl: {
-    type: DataTypes.TINYINT,
-    allowNull: false,
-    defaultValue: USERLVL.REGISTERED,
-  },
-
-  /*
-   * from lowest to highest bit, see USER_FLAGS:
-   * 0: blockDm (if account blocks all DMs)
-   * 1: priv (if account is private)
-   */
-  flags: {
-    type: DataTypes.TINYINT.UNSIGNED,
-    allowNull: false,
-    defaultValue: 0,
-  },
-
-  lastSeen: {
-    type: DataTypes.DATE,
-    defaultValue: DataTypes.NOW,
-    allowNull: false,
-  },
-
-  createdAt: {
-    type: DataTypes.DATE,
-    defaultValue: DataTypes.NOW,
-    allowNull: false,
-  },
-});
-
-/*
- * Set default username to pp_[id],
- * since we allow third party login, we can not ensure to have good names
- * available.
- * We will allow the user to change it ONCE at a later point, if his name
- * starts with pp_.
- * NOTE: This trigger doesn't like bulk inserts!
- */
-User.afterSync(async () => {
-  await sequelize.query(
-    `CREATE TRIGGER IF NOT EXISTS set_username
-BEFORE INSERT ON Users FOR EACH ROW
-BEGIN
-  IF NEW.username IS NULL OR NEW.username = '=' THEN
-    SET NEW.username = CONCAT('pp_', (
-      SELECT AUTO_INCREMENT FROM INFORMATION_SCHEMA.TABLES
-      WHERE TABLE_NAME = 'Users' AND TABLE_SCHEMA = DATABASE()
-    ));
-  ELSE
-    SET NEW.username = REGEXP_REPLACE(NEW.username, '[^a-zA-Z0-9._-]', '');
-  END IF;
-END`);
-});
-
 /**
  * update lastSeen timestamps of User
  * @param id user id
  * @param ipString ip as string
  */
 export async function touchUser(id, ipString) {
+  let conn;
   try {
-    await User.update({ lastSeen: Sequelize.fn('NOW') }, {
-      where: { id },
-    });
-    if (ipString) {
-      await sequelize.query(
+    conn = await pool.getConnection();
+
+    /* TODO maybe use prepared statements? */
+    await Promise.all([
+      conn.query('UPDATE Users SET lastSeen = NOW() WHERE id = ?', [id]),
+      (ipString) && conn.query(
         // eslint-disable-next-line max-len
-        'INSERT INTO UserIPs (lastSeen, ip, uid) VALUES (NOW(), IP_TO_BIN($1), $2) ON DUPLICATE KEY UPDATE lastSeen = VALUES(lastSeen)', {
-          bind: [ipString, id],
-          raw: true,
-          type: QueryTypes.INSERT,
-        },
-      );
-    }
+        'INSERT INTO UserIPs (lastSeen, ip, uid) VALUES (NOW(), IP_TO_BIN(?), ?) ON DUPLICATE KEY UPDATE lastSeen = VALUES(lastSeen)',
+        [ipString, id],
+      ),
+    ]);
   } catch (error) {
     console.error(
       `SQL Error on touchUser ${id}, ${ipString}: ${error.message}`,
     );
+  } finally {
+    if (conn) conn.release();
   }
 }
 
@@ -135,38 +46,44 @@ export async function touchUser(id, ipString) {
  */
 export async function getLastIPOfUser(id) {
   try {
-    const model = await sequelize.query(
+    const [model] = await pool.query(
       // eslint-disable-next-line max-len
-      'SELECT BIN_TO_IP(ip) AS ipString FROM UserIPs WHERE lastSeen > NOW() - INTERVAL 1 DAY AND uid = ? ORDER BY lastSeen DESC LIMIT 1', {
-        replacements: [id],
-        plain: true,
-        type: QueryTypes.INSERT,
-      },
+      'SELECT BIN_TO_IP(ip) AS ipString FROM UserIPs WHERE lastSeen > NOW() - INTERVAL 1 DAY AND uid = ? ORDER BY lastSeen DESC LIMIT 1',
+      [id],
     );
-    return model?.ipString;
+    if (model) {
+      return model.ipString;
+    }
   } catch (error) {
     console.error(`SQL Error on getLastIPOfUser: ${error.message}`);
   }
   return null;
 }
 
-
 /**
  * find or create a dummmy user. This is used for bot users.
  * @param name name of user
  */
 export async function getDummyUser(name) {
-  const dummy = await User.findOrCreate({
-    attributes: ['id'],
-    where: { name },
-    defaults: {
-      name,
-      username: '=',
-      userlvl: USERLVL.VERIFIED,
-    },
-    raw: true,
-  });
-  return dummy[0].id;
+  let conn;
+  try {
+    conn = await pool.getConnection();
+
+    let result = await conn.query(
+      'INSERT IGNORE INTO Users (name, username, userlvl) VALUES (?, ?, ?)',
+      [name, '=', USERLVL.VERIFIED],
+    );
+    if (result.insertId) {
+      return result.insertId;
+    }
+
+    [result] = await conn.query(
+      'SELECT id FROM Users WHERE name = ?', [name],
+    );
+    return result.id;
+  } finally {
+    if (conn) conn.release();
+  }
 }
 
 /**
@@ -181,7 +98,7 @@ export async function getBasicUserInfo(uidOrUsername) {
     return null;
   }
   try {
-    return await sequelize.query(
+    const [model] = await pool.query(
       /* eslint-disable max-len */
       `SELECT u.id AS uid, u.name, u.username, s.country, u.userlvl, p.customFlag,
 CONCAT(a.shortId, ':', a.extension) AS avatarId,
@@ -193,13 +110,13 @@ FROM Users u
     LEFT JOIN FactionRoles fr ON fr.id = p.activeRole
     LEFT JOIN Media frm ON frm.id = fr.customFlag
     LEFT JOIN Sessions s ON s.uid = u.id AND s.country != 'xx'
-WHERE ${Number(uidOrUsername) ? 'u.id = ?' : 'u.username = ?'}`, {
+WHERE ${Number(uidOrUsername) ? 'u.id = ?' : 'u.username = ?'}`,
       /* eslint-enable max-len */
-        replacements: [uidOrUsername],
-        plain: true,
-        type: QueryTypes.SELECT,
-      },
+      [uidOrUsername],
     );
+    if (model) {
+      return model;
+    }
   } catch (error) {
     console.error(`SQL Error on getBasicUserInfo: ${error.message}`);
   }
@@ -231,7 +148,7 @@ export async function getUserInfo(uidOrUsername) {
     return null;
   }
   try {
-    let model = await sequelize.query(
+    let model = await pool.query(
       /* eslint-disable max-len */
       `SELECT u.id AS uid, u.name, u.username, u.flags,
 DATEDIFF(CURRENT_TIMESTAMP(), u.createdAt) AS age,
@@ -251,21 +168,15 @@ FROM Users u
     LEFT JOIN Media afrm ON afrm.id = afr.customFlag
     LEFT JOIN UserFactions uf ON uf.uid = u.id AND (uf.flags & ${0x01 << USER_FACTION_FLAGS.HIDDEN}) = 0
     LEFT JOIN Factions f ON f.id = uf.fid
-WHERE ${Number(uidOrUsername) ? 'u.id = ?' : 'u.username = ?'}`, {
+WHERE ${Number(uidOrUsername) ? 'u.id = ?' : 'u.username = ?'}`,
       /* eslint-enable max-len */
-        replacements: [uidOrUsername],
-        raw: true,
-        type: QueryTypes.SELECT,
-      },
+      [uidOrUsername],
     );
-    if (model) {
-      model = nestQuery(model);
 
-      model.isPrivate = (model.flags & (0x01 << USER_FLAGS.PRIV)) !== 0;
-      delete model.flags;
-
-      return model;
-    }
+    model = nestQuery(model);
+    model.isPrivate = (model.flags & (0x01 << USER_FLAGS.PRIV)) !== 0;
+    delete model.flags;
+    return model;
   } catch (error) {
     console.error(`SQL Error on getUserInfo: ${error.message}`);
   }
@@ -274,12 +185,11 @@ WHERE ${Number(uidOrUsername) ? 'u.id = ?' : 'u.username = ?'}`, {
 
 export async function name2Id(name) {
   try {
-    const userq = await sequelize.query(
-      'SELECT id FROM Users WHERE name = ?',
-      { replacements: [name], type: QueryTypes.SELECT, plain: true },
+    const [user] = await pool.query(
+      'SELECT id FROM Users WHERE name = ?', [name],
     );
-    if (userq) {
-      return userq.id;
+    if (user) {
+      return user.id;
     }
   } catch {
     // nothing
@@ -289,10 +199,9 @@ export async function name2Id(name) {
 
 export async function id2Name(id) {
   try {
-    const user = await User.findByPk(id, {
-      attributes: ['name'],
-      raw: true,
-    });
+    const [user] = await pool.query(
+      'SELECT name FROM Users WHERE id = ?', [id],
+    );
     if (user) {
       return user.name;
     }
@@ -327,14 +236,13 @@ export async function getNamesToIds(ids) {
     return idToNameMap;
   }
   try {
-    const result = await User.findAll({
-      attributes: ['id', 'name'],
-      where: {
-        id: ids,
-      },
-      raw: true,
-    });
-    result.forEach((obj) => {
+    const models = await pool.query(
+      `SELECT id, name FROM Users WHERE id IN (${
+        ids.map(() => '?').join(', ')
+      })`,
+      ids,
+    );
+    models.forEach((obj) => {
       idToNameMap.set(obj.id, obj.name);
     });
   } catch {
@@ -353,10 +261,14 @@ export async function findUserById(id) {
     return null;
   }
   try {
-    return await User.findByPk(id, {
-      attributes: ['id', 'name', 'username', 'password', 'flags', 'userlvl'],
-      raw: true,
-    });
+    const [model] = pool.query(
+      // eslint-disable-next-line max-len
+      'SELECT id, name, username, password, flags, userlvl FROM Users WHERE id = ?',
+      [id],
+    );
+    if (model) {
+      return model;
+    }
   } catch (error) {
     console.error(`SQL Error on findUserById: ${error.message}`);
   }
@@ -405,12 +317,8 @@ export async function getUserIdsByNamesOrEmails(nameIdsOrEmails) {
 
     let users = [];
     if (where.length) {
-      users = await sequelize.query(
-        `SELECT u.id FROM Users u WHERE ${where.join(' OR ')}`, {
-          replacements,
-          raw: true,
-          type: QueryTypes.SELECT,
-        },
+      users = await pool.query(
+        `SELECT u.id FROM Users u WHERE ${where.join(' OR ')}`, replacements,
       );
     }
     /* eslint-enable max-len */
@@ -436,50 +344,30 @@ export async function markUserAccountsAsHacked(nameIdsOrEmails) {
   if (!affectedIds.length) {
     return [emailSet, mailExists];
   }
-  /* eslint-disable no-await-in-loop */
-  for (let i = 0; i < affectedIds.length; i += 1) {
-    const id = affectedIds[i];
-    const oldestEmail = await sequelize.query(
-      // eslint-disable-next-line max-len
-      'SELECT tpid, verified FROM ThreePIDHistories WHERE provider = 1 AND uid = ? ORDER BY createdAt ASC LIMIT 1', {
-        replacements: [id],
-        raw: true,
-        type: QueryTypes.SELECT,
-      },
-    );
-    let couldSetMail;
-    if (oldestEmail.length) {
-      /* set user to oldest email */
-      couldSetMail = await setEmail(
-        id, oldestEmail[0].tpid, oldestEmail[0].verified,
-      );
-    }
-    const promises = [];
-    /* set password to 'hacked' */
-    promises.push(sequelize.query(
-      // eslint-disable-next-line max-len
-      'UPDATE Users SET password = \'hacked\' WHERE id = ? AND password IS NOT NULL', {
-        replacements: [id],
-        raw: true,
-        type: QueryTypes.UPDATE,
-      }));
-    /* clear all user sessions */
-    promises.push(sequelize.query(
-      'DELETE t FROM Sessions t WHERE uid = ?', {
-        replacements: [id],
-        raw: true,
-        type: QueryTypes.DELETE,
-      }));
 
-    await Promise.all(promises);
-    if (couldSetMail) {
-      emailSet.push(id);
-    } else {
-      mailExists.push(id);
+  let conn;
+  try {
+    conn = await pool.getConnection();
+
+    for (let i = 0; i < affectedIds.length; i += 1) {
+      const id = affectedIds[i];
+      if (id) {
+        // eslint-disable-next-line no-await-in-loop
+        const [result] = await conn.query(
+          'CALL MARK_USER_AS_HACKED(?)', [id],
+        );
+        if (result[0].result !== 0) {
+          emailSet.push(id);
+        } else {
+          mailExists.push(id);
+        }
+      }
     }
+    /* eslint-enable no-await-in-loop */
+    return [emailSet, mailExists];
+  } finally {
+    if (conn) conn.release();
   }
-  /* eslint-enable no-await-in-loop */
-  return [emailSet, mailExists];
 }
 
 /**
@@ -509,15 +397,12 @@ export async function findUserByIdOrName(id, name) {
       where.push('u.name = ?');
       replacements.push(name, name);
     }
-    const userdata = await sequelize.query(
+    const userdata = await pool.query(
       // eslint-disable-next-line max-len
       `SELECT u.id, u.name, u.username, u.password, u.flags, u.userlvl FROM Users u WHERE ${
         where.join(' OR ')
-      }`, {
-        replacements,
-        raw: true,
-        type: QueryTypes.SELECT,
-      },
+      }`,
+      replacements,
     );
     if (!userdata.length) {
       return null;
@@ -552,14 +437,11 @@ export async function findUserByIdOrName(id, name) {
  */
 export async function getMailAndNameOfUserId(id) {
   try {
-    const result = await sequelize.query(
+    const [result] = await pool.query(
       `SELECT u.name, t.tpid FROM Users u
   INNER JOIN ThreePIDs t ON t.uid = u.id
-WHERE u.id = ? AND t.provider = 1 AND t.verified = ? LIMIT 1`, {
-        replacements: [id, true],
-        plain: true,
-        type: QueryTypes.SELECT,
-      },
+WHERE u.id = ? AND t.provider = 1 AND t.verified = ? LIMIT 1`,
+      [id, true],
     );
     if (result) {
       return [result.name, result.tpid];
@@ -577,17 +459,16 @@ WHERE u.id = ? AND t.provider = 1 AND t.verified = ? LIMIT 1`, {
  */
 export async function getUserOIDCProfile(id) {
   try {
-    const result = await sequelize.query(
+    const [model] = await pool.query(
       // eslint-disable-next-line max-len
       `SELECT u.name, u.userlvl, u.username, u.createdAt, t.tpid AS email, t.verified FROM Users u
   LEFT JOIN ThreePIDs t ON t.uid = u.id AND t.provider = 1
-WHERE u.id = ? ORDER BY t.verified DESC LIMIT 1`, {
-        replacements: [id],
-        plain: true,
-        type: QueryTypes.SELECT,
-      },
+WHERE u.id = ? ORDER BY t.verified DESC LIMIT 1`,
+      [id],
     );
-    return result;
+    if (model) {
+      return model;
+    }
   } catch (error) {
     console.error(`SQL Error on getUserOIDCProfile: ${error.message}`);
   }
@@ -605,20 +486,14 @@ export async function setFlagOfUser(id, index, value) {
   try {
     const mask = 0x01 << index;
     if (value) {
-      await sequelize.query(
-        'UPDATE Users SET flags = flags | ? WHERE id = ?', {
-          replacements: [mask, id],
-          raw: true,
-          type: QueryTypes.UPDATE,
-        },
+      await pool.query(
+        'UPDATE Users SET flags = flags | ? WHERE id = ?',
+        [mask, id],
       );
     } else {
-      await sequelize.query(
-        'UPDATE Users SET flags = flags & ~(?) WHERE id = ?', {
-          replacements: [mask, id],
-          raw: true,
-          type: QueryTypes.UPDATE,
-        },
+      await pool.query(
+        'UPDATE Users SET flags = flags & ~(?) WHERE id = ?',
+        [mask, id],
       );
     }
     return true;
@@ -639,25 +514,18 @@ export async function getUserByTpid(provider, tpid) {
     return null;
   }
   try {
-    return await User.findOne({
-      attributes: ['id', 'name', 'username', 'password', 'flags', 'userlvl'],
-      include: {
-        association: 'tpids',
-        where: {
-          provider,
-          [Op.or]: [
-            { tpid },
-            {
-              [Op.not]: { normalizedTpid: null },
-              normalizedTpid: Sequelize.fn('NORMALIZE_TPID', provider, tpid),
-            },
-          ],
-        },
-        required: true,
-      },
-      raw: true,
-      nested: true,
-    });
+    const [model] = pool.query(
+      // eslint-disable-next-line max-len
+      `SELECT u.id, u.name, u.username, u.password, u.flags, u.userlvl FROM Users u
+  INNER JOIN ThreePIDs t ON t.uid = u.id
+WHERE provider = ? AND (
+  tpid = ? OR (
+    normalizedTpid IS NOT NULL AND normalizedTpid = NORMALIZE_TPID(?, ?)
+  )
+)`,
+      [provider, tpid, provider, tpid],
+    );
+    return model || null;
   } catch (error) {
     console.error(`SQL Error on getUserByTpid: ${error.message}`);
     throw error;
@@ -681,11 +549,7 @@ export function getUserByEmail(email) {
  */
 export async function getNameThatIsNotTaken(name) {
   let limit = 5;
-  let user = await User.findOne({
-    attributes: ['id'],
-    where: { name },
-    raw: true,
-  });
+  let [user] = await pool.query('SELECT id FROM Users WHERE name = ?', [name]);
   while (user) {
     limit -= 1;
     if (!limit) {
@@ -694,11 +558,9 @@ export async function getNameThatIsNotTaken(name) {
     // eslint-disable-next-line max-len
     name = `${name.substring(0, 15)}-${Math.random().toString(36).substring(2, 10)}`;
     // eslint-disable-next-line no-await-in-loop
-    user = await User.findOne({
-      attributes: ['id'],
-      where: { name },
-      raw: true,
-    });
+    [user] = await pool.query(
+      'SELECT id FROM Users WHERE name = ?', [name],
+    );
   }
   return name;
 }
@@ -706,38 +568,49 @@ export async function getNameThatIsNotTaken(name) {
 /**
  * verify a users email
  * @param email
- * @return name if successful, otherwise false
+ * @return id if successful, otherwise false
  */
 export async function verifyEmail(email) {
   if (!email) {
     return false;
   }
+
+  let conn;
   try {
-    const user = await User.findOne({
-      include: {
-        association: 'tpids',
-        required: true,
-        where: {
-          provider: THREEPID_PROVIDERS.EMAIL,
-          tpid: email,
-        },
-      },
-    });
-    if (!user) {
+    conn = await pool.getConnection();
+
+    const result = await conn.query(
+      `UPDATE Users u
+  INNER JOIN ThreePIDs t ON t.uid = u.id
+SET t.verified = 1, u.userlvl =
+  CASE
+    WHEN u.userlvl = ? THEN ?
+    ELSE u.userlvl
+  END
+WHERE t.provider = ? AND t.tpid = ?`,
+      [USERLVL.REGISTERED, USERLVL.VERIFIED, THREEPID_PROVIDERS.EMAIL, email],
+    );
+
+    if (result.affectedRows === 0) {
       return false;
     }
-    const promises = [
-      user.tpids[0].update({ verified: true }),
-    ];
-    if (user.userlvl === USERLVL.REGISTERED) {
-      promises.push(user.update({ userlvl: USERLVL.VERIFIED }));
+
+    const [user] = await conn.query(
+      `SELECT u.id FROM Users u
+  INNER JOIN ThreePIDs t ON t.uid = u.id
+WHERE t.provider = ? AND t.tpid = ?`,
+      [THREEPID_PROVIDERS.EMAIL, email],
+    );
+
+    if (user) {
+      return user.id;
     }
-    await Promise.all(promises);
-    return user.id;
-  } catch (err) {
-    console.error(`SQL Error on verifyEmail: ${err.message}`);
-    return false;
+  } catch (error) {
+    console.error(`SQL Error on verifyEmail: ${error.message}`);
+  } finally {
+    if (conn) conn.release();
   }
+  return false;
 }
 
 /**
@@ -760,18 +633,24 @@ export async function getUsersByNameOrEmail(name, email, username) {
     username = name;
   }
   try {
-    return await sequelize.query(
+    const emailProvider = THREEPID_PROVIDERS.EMAIL;
+
+    return await pool.query(
       /* eslint-disable max-len */
       `SELECT u.id, u.name, u.username, u.password, u.flags, u.userlvl,
-EXISTS (SELECT 1 FROM ThreePIDs WHERE uid = u.id AND provider = 1 AND normalizedTpid = NORMALIZE_TPID(1, ?)) AS 'byEMail'
+EXISTS (
+  SELECT 1 FROM ThreePIDs WHERE uid = u.id AND provider = ? AND normalizedTpid = NORMALIZE_TPID(?, ?)
+) AS 'byEMail'
 FROM Users u
-WHERE u.name = ? OR u.username = CONVERT(? USING ascii) OR
-EXISTS (SELECT 1 FROM ThreePIDs WHERE uid = u.id AND provider = 1 AND normalizedTpid = NORMALIZE_TPID(1, ?))`, {
-        /* eslint-enable max-len */
-        replacements: [email, name, username, email],
-        raw: true,
-        type: QueryTypes.SELECT,
-      },
+WHERE u.name = ? OR u.username = CONVERT(? USING ascii) OR EXISTS (
+  SELECT 1 FROM ThreePIDs WHERE uid = u.id AND provider = ? AND normalizedTpid = NORMALIZE_TPID(?, ?)
+)`,
+      /* eslint-enable max-len */
+      [
+        emailProvider, emailProvider, email,
+        name, username,
+        emailProvider, emailProvider, email,
+      ],
     );
   } catch (err) {
     console.error(`SQL Error on getUsersByNameOrEmail: ${err.message}`);
@@ -791,10 +670,29 @@ export async function createNewUser(
   if (!username) {
     username = '=';
   }
-  const query = { name, userlvl, username };
-  if (password) query.password = password;
+  const hashedPassword = (password) ? generateHash(password) : null;
   try {
-    return await User.create(query);
+    const { insertId } = await pool.query(
+      // eslint-disable-next-line max-len
+      'INSERT INTO Users (name, userlvl, username, password) VALUES (?, ?, ?, ?)',
+      [name, userlvl, username, hashedPassword],
+    );
+    if (!insertId) {
+      throw new Error('Could not insert User');
+    }
+    /*
+     * return dummy user object
+     */
+    return {
+      id: insertId,
+      name,
+      username: (username === '=') ? `pp_${insertId}` : username,
+      password: hashedPassword,
+      userlvl,
+      flags: 0,
+      lastSeen: new Date(),
+      createdAt: new Date(),
+    };
   } catch (error) {
     console.error(`SQL Error on createNewUser: ${error.message}`);
     return null;
@@ -810,12 +708,9 @@ export async function createNewUser(
  */
 export async function setUserProperty(id, property, value) {
   try {
-    await sequelize.query(
-      `UPDATE Users SET ${property} = ? WHERE id = ?`, {
-        replacements: [value, id],
-        raw: true,
-        type: QueryTypes.UPDATE,
-      },
+    await pool.query(
+      `UPDATE Users SET ${property} = ? WHERE id = ?`,
+      [value, id],
     );
     return true;
   } catch (error) {
@@ -840,13 +735,7 @@ export function setPassword(id, password) {
  */
 export async function deleteUser(id) {
   try {
-    const models = await sequelize.query(
-      'CALL DELETE_USER(?)', {
-        replacements: [id],
-        plain: true,
-        type: QueryTypes.SELECT,
-      },
-    );
+    const [models] = await pool.query('CALL DELETE_USER(?)', [id]);
     return Object.values(models);
   } catch (error) {
     console.error(`SQL Error on deleteUser: ${error.message}`);
@@ -861,14 +750,12 @@ export async function deleteUser(id) {
  */
 export async function getHighUserLvlUsers() {
   try {
-    const userModels = await User.findAll({
-      where: { userlvl: { [Op.gte]: USERLVL.CHATMOD } },
-      attributes: ['name', 'id', 'userlvl'],
-      raw: true,
-    });
+    const models = await pool(
+      'SELECT name, id, userlvl FROM Users WHERE userlvl >= USERLVL.CHATMOD',
+    );
     const usersByLvl = {};
-    for (let i = 0; i < userModels.length; i += 1) {
-      const { name, id, userlvl } = userModels[i];
+    for (let i = 0; i < models.length; i += 1) {
+      const { name, id, userlvl } = models[i];
       if (!usersByLvl[userlvl]) {
         usersByLvl[userlvl] = [];
       }
@@ -885,13 +772,12 @@ export async function getHighUserLvlUsers() {
  * ensure correct admins based on ADMIN_IDS configuration
  */
 export async function ensureAdminPowers() {
+  let conn;
   try {
-    const existingAdmins = await sequelize.query(
-      'SELECT id FROM Users WHERE userlvl = ?', {
-        replacements: [USERLVL.ADMIN],
-        raw: true,
-        type: QueryTypes.SELECT,
-      },
+    conn = await pool.getConnection();
+
+    const existingAdmins = await conn.query(
+      'SELECT id FROM Users WHERE userlvl = ?', [USERLVL.ADMIN],
     );
     const adminsToDemoteIds = [];
     const adminsToPromoteIds = [];
@@ -910,26 +796,20 @@ export async function ensureAdminPowers() {
     const promises = [];
     if (adminsToDemoteIds.length) {
       console.log('Demote Admins', adminsToDemoteIds);
-      promises.push(sequelize.query(
+      promises.push(conn.query(
         `UPDATE Users SET userlvl = ? WHERE id IN (${
           adminsToDemoteIds.map(() => '?').join(', ')
-        })`, {
-          replacements: [USERLVL.VERIFIED, ...adminsToDemoteIds],
-          raw: true,
-          type: QueryTypes.UPDATE,
-        },
+        })`,
+        [USERLVL.VERIFIED, ...adminsToDemoteIds],
       ));
     }
     if (adminsToPromoteIds.length) {
       console.log('Promote to Admin', adminsToPromoteIds);
-      promises.push(sequelize.query(
+      promises.push(conn.query(
         `UPDATE Users SET userlvl = ? WHERE id IN (${
           adminsToPromoteIds.map(() => '?').join(', ')
-        })`, {
-          replacements: [USERLVL.ADMIN, ...adminsToPromoteIds],
-          raw: true,
-          type: QueryTypes.UPDATE,
-        },
+        })`,
+        [USERLVL.ADMIN, ...adminsToPromoteIds],
       ));
     }
     if (promises.length) {
@@ -937,6 +817,8 @@ export async function ensureAdminPowers() {
     }
   } catch (error) {
     console.error(`SQL Error on ensureAdminPowers: ${error.message}`);
+  } finally {
+    if (conn) conn.release();
   }
 }
 
@@ -945,21 +827,19 @@ export async function ensureAdminPowers() {
  * @return [ [username, isAdmin], ... ]
  */
 export async function getChatStaff() {
+  let conn;
   try {
+    conn = await pool.getConnection();
     const [adminModels, modModels] = await Promise.all([
-      sequelize.query(`SELECT id, username FROM Users WHERE id IN (${
-        ADMIN_IDS.map(() => '?').join(', ')
-      })`, {
-        replacements: [...ADMIN_IDS],
-        raw: true,
-        type: QueryTypes.SELECT,
-      }),
-      // eslint-disable-next-line max-len
-      sequelize.query('SELECT id, username FROM Users WHERE userlvl >= ?', {
-        replacements: [USERLVL.CHATMOD],
-        raw: true,
-        type: QueryTypes.SELECT,
-      }),
+      conn.query(
+        `SELECT id, username FROM Users WHERE id IN (${
+          ADMIN_IDS.map(() => '?').join(', ')
+        })`,
+        [...ADMIN_IDS],
+      ),
+      conn.query(
+        'SELECT id, username FROM Users WHERE userlvl >= ?', [USERLVL.CHATMOD],
+      ),
     ]);
     const staff = [];
     for (const { id, username } of adminModels) {
@@ -973,6 +853,8 @@ export async function getChatStaff() {
     return staff;
   } catch (error) {
     console.error(`SQL Error on getChatStaff: ${error.message}`);
+  } finally {
+    if (conn) conn.release();
   }
   return [];
 }
@@ -987,27 +869,27 @@ export async function populateUserIdObj(rawRanks) {
   if (!rawRanks.length) {
     return rawRanks;
   }
-  const uids = rawRanks.map((r) => r.id);
-  const userData = await sequelize.query(
-    // eslint-disable-next-line max-len
-    `SELECT u.id, u.name, u.username,
-CONCAT(a.shortId, ':', a.extension) AS avatarId
-FROM Users u
-  LEFT JOIN Profiles p ON p.uid = u.id
-  LEFT JOIN Media a ON a.id = p.avatar
-WHERE (u.flags & ?) = 0 AND u.id IN (?)`, {
-      replacements: [0x01 << USER_FLAGS.PRIV, uids],
-      raw: true,
-      type: QueryTypes.SELECT,
-    },
-  );
-  for (const { id, name, username, avatarId } of userData) {
-    const rank = rawRanks.find((r) => r.id === id);
-    if (rank) {
-      rank.name = name;
-      rank.username = username;
-      rank.avatarId = avatarId;
+  try {
+    const uids = rawRanks.map((r) => r.id);
+    const userData = await pool.query(
+      `SELECT u.id, u.name, u.username,
+  CONCAT(a.shortId, ':', a.extension) AS avatarId
+  FROM Users u
+    LEFT JOIN Profiles p ON p.uid = u.id
+    LEFT JOIN Media a ON a.id = p.avatar
+  WHERE (u.flags & ?) = 0 AND u.id IN (?)`,
+      [0x01 << USER_FLAGS.PRIV, uids],
+    );
+    for (const { id, name, username, avatarId } of userData) {
+      const rank = rawRanks.find((r) => r.id === id);
+      if (rank) {
+        rank.name = name;
+        rank.username = username;
+        rank.avatarId = avatarId;
+      }
     }
+  } catch (error) {
+    console.error('SQL Error on populateUserIdObj:', error.message);
   }
   return rawRanks;
 }
@@ -1027,7 +909,7 @@ WHERE (u.flags & ?) = 0 AND u.id IN (?)`, {
 export async function searchUser(term) {
   try {
     const sqlTerm = `%${term}%`;
-    const model = await sequelize.query(
+    const model = await pool.query(
       `SELECT u.id AS uid, u.name, u.username,
 UNIX_TIMESTAMP(createdAt) * 1000 AS ts,
 CONCAT(frm.shortId, ':', frm.extension) AS 'customFlagId',
@@ -1038,11 +920,8 @@ CONCAT(a.shortId, ':', a.extension) AS avatarId FROM Users u
   LEFT JOIN Media frm ON fr.customFlag = frm.id
 WHERE (u.flags & ?) = 0 AND (
   u.name LIKE ? OR u.username LIKE CONVERT(? USING ascii)
-) LIMIT 50`, {
-        replacements: [0x01 << USER_FLAGS.PRIV, sqlTerm, sqlTerm.toLowerCase()],
-        raw: true,
-        type: QueryTypes.SELECT,
-      },
+) LIMIT 50`,
+      [0x01 << USER_FLAGS.PRIV, sqlTerm, sqlTerm.toLowerCase()],
     );
     if (model) {
       return model;
@@ -1052,5 +931,3 @@ WHERE (u.flags & ?) = 0 AND (
   }
   return [];
 }
-
-export default User;

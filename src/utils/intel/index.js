@@ -5,10 +5,13 @@ import ProxyCheck from './ProxyCheck.js';
 import whois from './whois.js';
 import socketEvents from '../../socket/socketEvents.js';
 import { getLowHexSubnetOfIP } from './ip.js';
-import { getRangeOfIP } from '../../data/sql/Range.js';
-import { getWhoisHostOfIP } from '../../data/sql/WhoisReferral.js';
-import { saveIPIntel, getProviderOfIP } from '../../data/sql/IP.js';
-import { getProxCheckHistory } from '../../data/sql/Proxy.js';
+import {
+  saveIPIntel,
+  getProviderOfIP,
+  getRangeOfIP,
+  getWhoisHostOfIP,
+  getProxCheckHistory,
+} from '../../data/sql/IP.js';
 import { queue } from './queue.js';
 import {
   USE_PROXYCHECK, PROXYCHECK_KEY, WHOIS_DURATION,

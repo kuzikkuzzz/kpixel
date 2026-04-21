@@ -1,120 +1,11 @@
 import fs from 'fs';
-import { QueryTypes, DataTypes } from 'sequelize';
 
-import sequelize from './sequelize.js';
-import { addImageHash } from './ImageHash.js';
+import pool from './mariadb.js';
 import { getRandomShortId } from '../../core/utils.js';
 import {
   constructMediaPath, getThumbnailPaths,
 } from '../../utils/media/serverUtils.js';
 
-const Media = sequelize.define('Media', {
-  id: {
-    type: DataTypes.BIGINT.UNSIGNED,
-    autoIncrement: true,
-    primaryKey: true,
-  },
-
-  hash: {
-    type: 'BINARY(32)',
-    unique: 'hash',
-    allowNull: false,
-  },
-
-  /*
-   * short identifier for file, will be 6 chars usually, but can be more
-   */
-  shortId: {
-    type: 'VARCHAR(16) CHARACTER SET ascii COLLATE ascii_bin',
-    allowNull: false,
-  },
-
-  extension: {
-    type: 'VARCHAR(12) CHARACTER SET ascii COLLATE ascii_bin',
-    allowNull: false,
-  },
-
-  mimeType: {
-    type: 'VARCHAR(255) CHARACTER SET ascii COLLATE ascii_bin',
-    allowNull: false,
-  },
-
-  /*
-   * 'image', 'audio', 'video', etc.
-   */
-  type: {
-    // eslint-disable-next-line max-len
-    type: 'VARCHAR(128) CHARACTER SET ascii COLLATE ascii_bin GENERATED ALWAYS AS (SUBSTR(mimeType, 1, INSTR(mimeType, \'/\') - 1)) VIRTUAL',
-  },
-
-  /*
-   * file size in bytes
-   */
-  size: {
-    type: DataTypes.INTEGER.UNSIGNED,
-  },
-
-  /*
-   * dimensions
-   */
-  width: {
-    type: DataTypes.INTEGER.UNSIGNED,
-  },
-
-  height: {
-    type: DataTypes.INTEGER.UNSIGNED,
-  },
-
-  /*
-   * average color as a 32bit RGB
-   */
-  avgColor: {
-    type: DataTypes.INTEGER.UNSIGNED,
-  },
-
-  /*
-   * from lowest to highest bit:
-   * 0: registeredUsersOnly (if only registered users can view it)
-   * 1: allowCORS (if allowing cors)
-   * 2: needsApproval
-   */
-  flags: {
-    type: DataTypes.TINYINT.UNSIGNED,
-    allowNull: false,
-    defaultValue: 0,
-  },
-
-  /*
-   * count active references, may or may not be used
-   */
-  refCounter: {
-    type: DataTypes.INTEGER.UNSIGNED,
-    defaultValue: 0,
-    allowNull: false,
-  },
-
-  /*
-   * time to expire, NULL if infinite
-   */
-  expires: {
-    type: DataTypes.DATE,
-  },
-
-  /*
-   * time a file has been uploaded, may be updated on reupload or check
-   */
-  lastUpload: {
-    type: DataTypes.DATE,
-    defaultValue: DataTypes.NOW,
-    allowNull: false,
-  },
-}, {
-  indexes: [{
-    unique: true,
-    name: 'filename',
-    fields: ['shortId', 'extension'],
-  }],
-});
 
 /**
  * deregister media either by shortId and extension
@@ -123,12 +14,10 @@ const Media = sequelize.define('Media', {
  */
 export async function deregisterMedia(shortId, extension) {
   try {
-    await sequelize.query(
-      'DELETE FROM Media WHERE shortId = ? AND extension = ?', {
-        replacements: [shortId, extension],
-        type: QueryTypes.DELETE,
-        raw: true,
-      });
+    await pool.query(
+      'DELETE FROM Media WHERE shortId = ? AND extension = ?',
+      [shortId, extension],
+    );
     const filePath = constructMediaPath(shortId, extension);
     if (fs.existsSync(filePath)) {
       fs.rmSync(filePath);
@@ -174,7 +63,10 @@ export async function hasMedia(hashes) {
     return true;
   }
 
+  let conn;
   try {
+    conn = await pool.getConnection();
+
     const replacements = [];
     for (let i = 0; i < hashes.length; i += 1) {
       const { hash } = hashes[i];
@@ -183,33 +75,14 @@ export async function hasMedia(hashes) {
       }
     }
 
-    const mediaModels = await sequelize.query(
+    const mediaModels = await conn.query(
       // eslint-disable-next-line max-len
       `SELECT id, LOWER(HEX(hash)) AS hash, extension, shortId, type, width, height, avgColor FROM Media WHERE ${
         replacements.map(() => 'hash = UNHEX(?)').join(' OR ')
-      }`, {
-        replacements,
-        type: QueryTypes.SELECT,
-        raw: true,
-      },
+      }`, replacements,
     );
 
     if (mediaModels.length) {
-      /*
-       * upldate lastUpload timestamp, if we would be on MariaDB only, we could
-       * use RETURNING and merge it together with the SELECT query
-       */
-      sequelize.query(
-        `UPDATE Media SET lastUpload = NOW() WHERE id IN (${
-          mediaModels.map(() => '?').join(', ')
-        })`, {
-          replacements: mediaModels.map((model) => model.id),
-          type: QueryTypes.UPDATE,
-        },
-      ).catch((error) => {
-        console.error(`SQL Error on hasMedia: ${error.message}`);
-      });
-
       for (let i = 0; i < mediaModels.length; i += 1) {
         const model = mediaModels[i];
         const hash = hashes.find((h) => h.hash === model.hash);
@@ -232,9 +105,24 @@ export async function hasMedia(hashes) {
           }
         }
       }
+
+      /*
+       * could use RETURNING and merge it together with the SELECT query
+       */
+      conn.query(
+        `UPDATE Media SET lastUpload = NOW() WHERE id IN (${
+          mediaModels.map(() => '?').join(', ')
+        })`,
+        mediaModels.map((model) => model.id),
+      ).catch((error) => {
+        console.error(`SQL Error on hasMedia: ${error.message}`);
+      }).finally(() => {
+        conn.release();
+      });
     }
   } catch (error) {
     console.error(`SQL Error on hasMedia: ${error.message}`);
+    if (conn) conn.release();
     return false;
   }
   return true;
@@ -259,13 +147,7 @@ export async function hasSimilarMedia(model, pHash) {
   }
 
   try {
-    const models = await sequelize.query(
-      'CALL GET_CLOSE_IMAGE(?)', {
-        replacements: [pHash],
-        raw: true,
-        types: QueryTypes.SELECT,
-      },
-    );
+    const models = await pool.query('CALL GET_CLOSE_IMAGE(?)', [pHash]);
     if (models?.length) {
       const similarModel = models[0];
       /*
@@ -324,29 +206,29 @@ export async function linkMedia(models, userId, ip) {
     return;
   }
 
+  let conn;
   try {
+    conn = await pool.getConnection();
     const promises = [];
     if (userId) {
-      promises.push(sequelize.query(
+      promises.push(conn.query(
       // eslint-disable-next-line max-len
-        `INSERT IGNORE INTO UserMedia (uid, mid) SELECT ?, m.id FROM Media m WHERE ${where}`, {
-          replacements: [userId, ...flattenedModels],
-          raw: true,
-          type: QueryTypes.INSERT,
-        }));
+        `INSERT IGNORE INTO UserMedia (uid, mid) SELECT ?, m.id FROM Media m WHERE ${where}`,
+        [userId, ...flattenedModels],
+      ));
     }
     if (ip) {
-      promises.push(sequelize.query(
+      promises.push(conn.query(
       // eslint-disable-next-line max-len
-        `INSERT IGNORE INTO IPMedia (ip, mid) SELECT IP_TO_BIN(?), m.id FROM Media m WHERE ${where}`, {
-          replacements: [ip, ...flattenedModels],
-          raw: true,
-          type: QueryTypes.INSERT,
-        }));
+        `INSERT IGNORE INTO IPMedia (ip, mid) SELECT IP_TO_BIN(?), m.id FROM Media m WHERE ${where}`,
+        [ip, ...flattenedModels],
+      ));
     }
     await Promise.all(promises);
   } catch (error) {
     console.error(`SQL Error on linkMedia: ${error.message}`);
+  } finally {
+    if (conn) conn.release();
   }
 }
 
@@ -359,7 +241,10 @@ export async function registerMedia(
   model, size, width = null, height = null, avgColor = null, pHash = null,
 ) {
   const { hash, mimeType, extension } = model;
+
+  let conn;
   try {
+    conn = await pool.getConnection();
     /*
      * shortId is a random 6 character string of a-z
      */
@@ -368,26 +253,24 @@ export async function registerMedia(
     do {
       shortId = getRandomShortId();
       // eslint-disable-next-line no-await-in-loop
-      exists = await sequelize.query(
-        'SELECT 1 FROM Media WHERE shortId = ? AND extension = ?', {
-          replacements: [shortId, extension],
-          plain: true,
-          type: QueryTypes.SELECT,
-        },
+      exists = await conn.query(
+        'SELECT 1 FROM Media WHERE shortId = ? AND extension = ?',
+        [shortId, extension],
       );
     } while (exists);
-    await sequelize.query(
+
+    const result = await conn.query(
       // eslint-disable-next-line max-len
-      'INSERT INTO Media (hash, shortId, extension, mimeType, size, width, height, avgColor, lastUpload) VALUES (UNHEX(?), ?, ?, ?, ?, ?, ?, ?, NOW())', {
-        replacements: [
-          hash, shortId, extension, mimeType, size, width, height, avgColor,
-        ],
-        raw: true,
-        type: QueryTypes.INSERT,
-      },
+      'INSERT INTO Media (hash, shortId, extension, mimeType, size, width, height, avgColor, lastUpload) VALUES (UNHEX(?), ?, ?, ?, ?, ?, ?, ?, NOW())',
+      [hash, shortId, extension, mimeType, size, width, height, avgColor],
     );
+
     if (pHash) {
-      await addImageHash(shortId, extension, pHash);
+      await conn.query(
+        // eslint-disable-next-line max-len
+        'INSERT INTO ImageHashes (mid, pHash) VALUES (?, CONV(?, 16, 10))',
+        [result.insertId, pHash],
+      );
     }
     model.shortId = shortId;
     model.existed = false;
@@ -395,6 +278,8 @@ export async function registerMedia(
     return true;
   } catch (error) {
     console.error(`SQL Error on registerMedia: ${error.message}`);
+  } finally {
+    if (conn) conn.release();
   }
   return false;
 }
@@ -410,12 +295,9 @@ export async function getMediaType(mediaId) {
     if (!shortId || !extension) {
       return null;
     }
-    const model = await sequelize.query(
-      'SELECT type FROM Media WHERE shortId = ? AND extension = ?', {
-        replacements: [shortId, extension],
-        type: QueryTypes.SELECT,
-        plain: true,
-      },
+    const [model] = await pool.query(
+      'SELECT type FROM Media WHERE shortId = ? AND extension = ?',
+      [shortId, extension],
     );
     return model?.type;
   } catch (error) {
@@ -435,13 +317,10 @@ export async function getMediaDimensions(mediaId) {
     if (!shortId || !extension) {
       return null;
     }
-    const model = await sequelize.query(
+    const [model] = await pool.query(
       // eslint-disable-next-line max-len
-      'SELECT type, width, height FROM Media WHERE shortId = ? AND extension = ?', {
-        replacements: [shortId, extension],
-        type: QueryTypes.SELECT,
-        plain: true,
-      },
+      'SELECT type, width, height FROM Media WHERE shortId = ? AND extension = ?',
+      [shortId, extension],
     );
     return model;
   } catch (error) {
@@ -458,15 +337,12 @@ export async function getMediaDimensions(mediaId) {
 export async function getUsersOfMedia(mediaSqlId) {
   const userIds = [];
   try {
-    const models = await sequelize.query(
+    const models = await pool.query(
       `SELECT DISTINCT u.id AS uid FROM Users u
   LEFT JOIN Profiles p ON p.uid = u.id
   LEFT JOIN UserMedia um ON um.uid = u.id
-WHERE p.avatar = ? OR um.mid = ?`, {
-        replacements: [mediaSqlId, mediaSqlId],
-        raw: true,
-        type: QueryTypes.SELECT,
-      },
+WHERE p.avatar = ? OR um.mid = ?`,
+      [mediaSqlId, mediaSqlId],
     );
     for (let i = 0; i < models.length; i += 1) {
       userIds.push(models[i].uid);
@@ -485,14 +361,11 @@ WHERE p.avatar = ? OR um.mid = ?`, {
 export async function getMessagesOfMedia(mediaSqlId) {
   const messagesByChannel = new Map();
   try {
-    const models = await sequelize.query(
+    const models = await pool.query(
       `SELECT s.cid, s.id AS sid FROM Messages s
   LEFT JOIN MessageMedia mm ON mm.sid = s.id
-WHERE mm.mid = ?`, {
-        replacements: [mediaSqlId],
-        raw: true,
-        type: QueryTypes.SELECT,
-      },
+WHERE mm.mid = ?`,
+      [mediaSqlId],
     );
     for (let i = 0; i < models.length; i += 1) {
       const { cid, sid } = models[i];
@@ -517,12 +390,9 @@ WHERE mm.mid = ?`, {
 export async function getIpsOfMedia(mediaSqlId) {
   const ipStrings = [];
   try {
-    const models = await sequelize.query(
-      'SELECT BIN_TO_IP(ip) AS ip FROM IPMedia WHERE mid = ?', {
-        replacements: [mediaSqlId],
-        raw: true,
-        type: QueryTypes.SELECT,
-      },
+    const models = await pool.query(
+      'SELECT BIN_TO_IP(ip) AS ip FROM IPMedia WHERE mid = ?',
+      [mediaSqlId],
     );
     for (let i = 0; i < models.length; i += 1) {
       ipStrings.push(models[i].ip);
@@ -539,12 +409,9 @@ export async function getIpsOfMedia(mediaSqlId) {
  */
 export async function getTotalUsedSpace() {
   try {
-    const model = await sequelize.query(
+    const [model] = await pool.query(
       // eslint-disable-next-line max-len
-      'SELECT COALESCE(CAST(SUM(size) / (1024 * 1024) AS UNSIGNED), 0) AS sizeMb FROM Media', {
-        plain: true,
-        type: QueryTypes.SELECT,
-      },
+      'SELECT COALESCE(CAST(SUM(size) / (1024 * 1024) AS UNSIGNED), 0) AS sizeMb FROM Media',
     );
     if (model) {
       return Number(model.sizeMb);
@@ -581,15 +448,12 @@ export async function getUserUsedSpace(userId, ipString) {
   }
 
   try {
-    const model = await sequelize.query(
+    const model = await pool.query(
       // eslint-disable-next-line max-len
       `SELECT COALESCE(CAST(SUM(m.size) / (1024 * 1024) AS UNSIGNED), 0) AS sizeMb FROM Media m WHERE m.id IN (SELECT l.id FROM (\n ${
         unions.join('\n  UNION\n  ')
-      }\n) AS l)`, {
-        replacements,
-        plain: true,
-        type: QueryTypes.SELECT,
-      },
+      }\n) AS l)`,
+      replacements,
     );
     if (model) {
       return Number(model.sizeMb);
@@ -604,13 +468,13 @@ export async function getUserUsedSpace(userId, ipString) {
  * clean up unused and expired files
  */
 export async function cleanMedia() {
+  let conn;
   try {
-    const expiredModels = await sequelize.query(
+    conn = await pool.getConnection();
+
+    const expiredModels = await conn.query(
       // eslint-disable-next-line max-len
-      'SELECT Media.id, shortId, extension FROM Media WHERE (expires IS NOT NULL AND expires < NOW()) OR (lastUpload < NOW() - INTERVAL 1 HOUR AND refCounter = 0 AND NOT EXISTS (SELECT 1 FROM Profiles WHERE avatar = Media.id) AND NOT EXISTS (SELECT 1 FROM Factions WHERE avatar = Media.id) AND NOT EXISTS (SELECT 1 FROM FactionRoles WHERE customFlag = Media.id) AND NOT EXISTS (SELECT 1 FROM MessageMedia WHERE mid = Media.id))', {
-        raw: true,
-        type: QueryTypes.SELECT,
-      },
+      'SELECT Media.id, shortId, extension FROM Media WHERE (expires IS NOT NULL AND expires < NOW()) OR (lastUpload < NOW() - INTERVAL 1 HOUR AND refCounter = 0 AND NOT EXISTS (SELECT 1 FROM Profiles WHERE avatar = Media.id) AND NOT EXISTS (SELECT 1 FROM Factions WHERE avatar = Media.id) AND NOT EXISTS (SELECT 1 FROM FactionRoles WHERE customFlag = Media.id) AND NOT EXISTS (SELECT 1 FROM MessageMedia WHERE mid = Media.id))',
     );
     if (expiredModels?.length) {
       for (let i = 0; i < expiredModels.length; i += 1) {
@@ -647,19 +511,16 @@ export async function cleanMedia() {
           }
         }
       }
-      await sequelize.query(
+      await conn.query(
         `DELETE FROM Media where id IN (${
           expiredModels.map(() => '?').join(', ')
-        })`, {
-          replacements: expiredModels.map(({ id }) => id),
-          raw: true,
-          type: QueryTypes.DELETE,
-        },
+        })`,
+        expiredModels.map(({ id }) => id),
       );
     }
   } catch (error) {
     console.error(`SQL Error on cleanMedia: ${error.message}`);
+  } finally {
+    if (conn) conn.release();
   }
 }
-
-export default Media;

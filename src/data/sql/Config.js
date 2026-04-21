@@ -1,34 +1,4 @@
-/*
- * table for shared states and config, that are not updated frequently, but
- * needed often (so cached in memory)
- */
-import { QueryTypes } from 'sequelize';
-
-import sequelize from './sequelize.js';
-
-const Config = sequelize.define('Config', {
-  key: {
-    type: 'VARCHAR(32) CHARACTER SET ascii COLLATE ascii_bin',
-    primaryKey: true,
-  },
-
-  // JSON string
-  value: {
-    type: 'VARCHAR(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin',
-  },
-});
-
-/*
- * schema_version to track for future manual database migrations, when we
- * eventually drop sequelizejs
- */
-Config.afterSync(() => sequelize.query(
-  'INSERT IGNORE INTO Configs (`key`, value) VALUES (?,?)', {
-    replacements: ['schema_version', JSON.stringify(1)],
-    plain: true,
-    type: QueryTypes.INSERT,
-  },
-));
+import pool from './mariadb.js';
 
 /**
  * get config
@@ -40,12 +10,8 @@ export async function getState(key) {
     return null;
   }
   try {
-    const model = await sequelize.query(
-      'SELECT value FROM Configs WHERE `key` = ?', {
-        replacements: [key],
-        plain: true,
-        type: QueryTypes.SELECT,
-      },
+    const [model] = await pool.query(
+      'SELECT value FROM Configs WHERE `key` = ?', [key],
     );
     const value = model?.value;
     if (value) {
@@ -70,22 +36,13 @@ export async function setState(key, value) {
   try {
     if (value) {
       value = JSON.stringify(value);
-      await sequelize.query(
+      await pool.query(
         // eslint-disable-next-line
-        'INSERT INTO Configs (`key`, value) VALUES (?, ?) ON DUPLICATE KEY UPDATE value = VALUES(value)', {
-          replacements: [key, value],
-          plain: true,
-          type: QueryTypes.INSERT,
-        },
+        'INSERT INTO Configs (`key`, value) VALUES (?, ?) ON DUPLICATE KEY UPDATE value = VALUES(value)',
+        [key, value],
       );
     } else {
-      await sequelize.query(
-        'DELETE FROM Configs WHERE `key` = ?', {
-          replacements: [key],
-          plain: true,
-          type: QueryTypes.DELETE,
-        },
-      );
+      await pool.query('DELETE FROM Configs WHERE `key` = ?', [key]);
     }
     return true;
   } catch (error) {
@@ -93,5 +50,3 @@ export async function setState(key, value) {
   }
   return false;
 }
-
-export default Config;
