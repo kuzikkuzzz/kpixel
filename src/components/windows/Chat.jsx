@@ -6,13 +6,13 @@ import React, {
   useRef, useLayoutEffect, useState, useEffect, useCallback, useContext,
   useMemo,
 } from 'react';
-import useStayScrolled from 'react-stay-scrolled';
 import { useSelector, useDispatch } from 'react-redux';
 import { t } from 'ttag';
 
 import WindowContext from '../context/window.js';
 import MenuContext from '../context/menu.js';
 import useLink from '../hooks/link.js';
+import useStayScrolled from '../hooks/stayScrolled.js';
 import ChatMessage from '../ChatMessage.jsx';
 import FileUpload from '../FileUpload.jsx';
 import ChannelDropDown from '../ChannelDropDown.jsx';

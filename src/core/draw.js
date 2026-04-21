@@ -7,7 +7,6 @@ import {
 } from './utils.js';
 import logger, { pixelLogger } from './logger.js';
 import allowPlace from '../data/redis/cooldown.js';
-import { USERLVL } from '../data/sql/index.js';
 import socketEvents from '../socket/socketEvents.js';
 import { getCooldownFactor } from './CooldownModifiers.js';
 import { setPixelByOffset } from './setPixel.js';
@@ -15,7 +14,7 @@ import { getState } from './SharedState.js';
 import canvases from './canvases.js';
 
 import {
-  THREE_CANVAS_HEIGHT, THREE_TILE_SIZE, TILE_SIZE,
+  THREE_CANVAS_HEIGHT, THREE_TILE_SIZE, TILE_SIZE, USERLVL,
 } from './constants.js';
 
 let coolDownFactor = 1;

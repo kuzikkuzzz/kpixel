@@ -3,9 +3,11 @@
  * page
  */
 
-import { touchOIDCClient } from '../../data/sql/OIDCClient.js';
-import { consentUser } from '../../data/sql/OIDCConsent.js';
-import { createAuthCode } from '../../data/sql/OIDCAuthCode.js';
+import {
+  touchOIDCClient,
+  consentUser,
+  createAuthCode,
+} from '../../data/sql/OIDC.js';
 import { resolveSessionUidAndAge } from '../../data/sql/Session.js';
 
 export default async (req, res) => {

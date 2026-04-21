@@ -5,9 +5,7 @@
  */
 import logger from '../../core/logger.js';
 import socketEvents from '../../socket/socketEvents.js';
-import {
-  isUserBlockedBy,
-} from '../../data/sql/association_models/UserBlock.js';
+import { isUserBlockedBy } from '../../data/sql/UserBlock.js';
 import { findUserByIdOrName } from '../../data/sql/User.js';
 import { createDMChannel } from '../../data/sql/Channel.js';
 import { getAvatarById } from '../../data/sql/Profile.js';

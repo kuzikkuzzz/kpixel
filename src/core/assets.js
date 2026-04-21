@@ -157,7 +157,7 @@ export function getThemeCssAssets() {
  * idk why i put that here, it felt like it would fit here, since we process
  * a file in the public directory...
  */
-(async () => {
+export async function sync() {
   const file = path.join(__dirname, 'public', 'badges', 'badges.txt');
   if (!fs.existsSync(file)) {
     return;
@@ -182,4 +182,4 @@ export function getThemeCssAssets() {
       await ensureBadgeExistence(name, description);
     }
   }
-})();
+}

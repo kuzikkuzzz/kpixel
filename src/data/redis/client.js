@@ -42,24 +42,17 @@ const scripts = {
 };
 
 (() => {
-  let dirname;
-  if (process.env.NODE_ENV) {
-    dirname = __dirname;
-  } else {
-    dirname = import.meta.dirname;
-  }
-
   const scriptIdent = Object.keys(scripts);
   let i = scriptIdent.length;
   while (i > 0) {
     i -= 1;
     const name = scriptIdent[i];
     let filepath = path.resolve(
-      dirname, 'workers', 'lua', `${name}.lua`,
+      import.meta.dirname, 'workers', 'lua', `${name}.lua`,
     );
     if (!fs.existsSync(filepath)) {
       filepath = path.resolve(
-        dirname, 'lua', `${name}.lua`,
+        import.meta.dirname, 'lua', `${name}.lua`,
       );
     }
     scripts[name] = defineScript({

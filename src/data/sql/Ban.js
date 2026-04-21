@@ -1,64 +1,9 @@
-import Sequelize, { DataTypes, Op, QueryTypes } from 'sequelize';
+import pool from './mariadb.js';
 
-import sequelize, { nestQuery } from './sequelize.js';
-import BanHistory from './BanHistory.js';
-import { getIPsOfIIDs } from './IP.js';
-import IPBan from './association_models/IPBan.js';
-import UserBan from './association_models/UserBan.js';
-import ThreePID from './ThreePID.js';
-import ThreePIDBan from './association_models/ThreePIDBan.js';
-import IPBanHistory from './association_models/IPBanHistory.js';
-import UserBanHistory from './association_models/UserBanHistory.js';
-import ThreePIDBanHistory from './association_models/ThreePIDBanHistory.js';
-import { generateUUID } from '../../utils/hash.js';
+import { nestQuery } from './utils.js';
+import { generateUUID, bufferToUUID } from '../../utils/hash.js';
 import { sanitizeIPString } from '../../utils/intel/ip.js';
 
-const Ban = sequelize.define('Ban', {
-  id: {
-    type: DataTypes.BIGINT.UNSIGNED,
-    autoIncrement: true,
-    primaryKey: true,
-  },
-
-  uuid: {
-    type: 'BINARY(16)',
-    allowNull: false,
-    unique: 'uuid',
-    defaultValue: generateUUID,
-  },
-
-  reason: {
-    type: 'VARCHAR(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci',
-    allowNull: false,
-    set(value) {
-      this.setDataValue('reason', value.slice(0, 200));
-    },
-  },
-
-  /*
-   * from lowest to highest bit:
-   * 0: banned from placing in game
-   * 1: banned from chat
-   */
-  flags: {
-    type: DataTypes.TINYINT.UNSIGNED,
-    allowNull: false,
-    defaultValue: 0,
-  },
-
-  /*
-   * NULL if infinite
-   */
-  expires: {
-    type: DataTypes.DATE,
-  },
-
-  createdAt: {
-    type: DataTypes.DATE,
-    defaultValue: DataTypes.NOW,
-    allowNull: false,
-  },
-});
 
 /**
  * Given a list of bans, determine if we are banned or muted or both,
@@ -136,117 +81,14 @@ export function parseListOfBans(bans) {
 async function removeBans(bans, modUid) {
   if (!Array.isArray(bans)) bans = [bans];
   const banIds = bans.map((b) => b.id);
-
-  const transaction = await sequelize.transaction();
-
-  try {
-    if (modUid) {
-      await BanHistory.bulkCreate(bans.map((b) => ({
-        id: b.id,
-        uuid: b.uuid,
-        reason: b.reason,
-        flags: b.flags,
-        started: b.createdAt,
-        ended: b.expires || Date.now(),
-        muid: b.muid,
-        lmuid: modUid,
-      })), {
-        transaction,
-      });
-    } else {
-      await BanHistory.bulkCreate(bans.map((b) => ({
-        id: b.id,
-        uuid: b.uuid,
-        reason: b.reason,
-        flags: b.flags,
-        started: b.createdAt,
-        ended: b.expires || Date.now(),
-        muid: b.muid,
-        liftedAt: null,
-      })), {
-        transaction,
-      });
-    }
-
-    /* ips */
-    let rows = await IPBan.findAll({
-      attributes: ['bid', 'ip'],
-      where: { bid: banIds },
-      raw: true,
-      transaction,
-    });
-
-    if (rows.length) {
-      await IPBanHistory.bulkCreate(rows.map((row) => ({
-        bid: row.bid, ip: row.ip,
-      })), { transaction });
-    }
-    /* users */
-    rows = await UserBan.findAll({
-      attributes: ['bid', 'uid'],
-      where: { bid: banIds },
-      raw: true,
-      transaction,
-    });
-
-    if (rows.length) {
-      await UserBanHistory.bulkCreate(rows.map((row) => ({
-        bid: row.bid, uid: row.uid,
-      })), { transaction });
-    }
-    /* ThreePIDs */
-    rows = await ThreePIDBan.findAll({
-      attributes: ['bid', 'tid'],
-      where: { bid: banIds },
-      raw: true,
-      transaction,
-    });
-
-    if (rows.length) {
-      await ThreePIDBanHistory.bulkCreate(rows.map((row) => ({
-        bid: row.bid, tid: row.tid,
-      })), { transaction });
-    }
-
-    /* ban destruction will cascade to junction tables */
-    await Ban.destroy({
-      where: { id: banIds },
-      transaction,
-    });
-
-    await transaction.commit();
-  } catch (error) {
-    if (transaction && !transaction.finished) {
-      await transaction.rollback();
-    }
-    throw error;
+  if (!banIds.length) {
+    return;
   }
-}
 
-/*
- * clean expired bans
- */
-export async function cleanBans() {
-  try {
-    const expiredBans = await Ban.findAll({
-      attributes: [
-        'id', 'uuid', 'reason', 'flags', 'expires', 'createdAt', 'muid',
-      ],
-      where: {
-        expires: { [Op.lte]: new Date() },
-      },
-      raw: true,
-    });
-
-    if (!expiredBans.length) {
-      return 0;
-    }
-    await removeBans(expiredBans);
-    return expiredBans.length;
-  } catch (error) {
-    console.error(`SQL Error on cleanBans: ${error.message}`);
+  for (const bid of bans) {
+    // eslint-disable-next-line no-await-in-loop
+    await pool.query('CALL REMOVE_BAN(?, ?)', [bid, modUid]);
   }
-  return null;
 }
 
 /**
@@ -257,19 +99,13 @@ export async function cleanBans() {
  */
 export async function unbanByUuid(uuid, modUid) {
   try {
-    const banModel = await Ban.findOne({
-      attributes: [
-        'id', 'uuid', 'reason', 'flags', 'expires', 'createdAt', 'muid',
-      ],
-      where: {
-        uuid: Sequelize.fn('UUID_TO_BIN', uuid),
-      },
-      raw: true,
-    });
-    if (!banModel) {
+    const models = await pool.query(
+      'SELECT id FROM Bans WHERE uuid = UUID_TO_BIN(?)', [uuid],
+    );
+    if (!models.length) {
       return false;
     }
-    await removeBans(banModel, modUid);
+    await removeBans(models, modUid);
     return true;
   } catch (error) {
     console.error(`SQL Error on unban: ${error.message}`);
@@ -299,7 +135,9 @@ export async function getBanInfos(
     return [];
   }
 
+  let conn;
   try {
+    conn = await pool.getConnection();
     const unions = [];
     let replacements = [];
 
@@ -396,11 +234,7 @@ export async function getBanInfos(
       [query] = unions;
     }
 
-    let affectedBanIds = await sequelize.query(query, {
-      replacements,
-      raw: true,
-      type: QueryTypes.SELECT,
-    });
+    let affectedBanIds = await conn.query(query, replacements);
     affectedBanIds = affectedBanIds.map((b) => b.id);
 
     if (!affectedBanIds.length) {
@@ -419,27 +253,22 @@ export async function getBanInfos(
     const bidFilterMask = (affectedBanIds.length === 1) ? '= ?' : 'IN (?)';
     replacements = [(affectedBanIds.length === 1)
       ? affectedBanIds[0] : affectedBanIds];
-    promises.push(sequelize.query(
+    promises.push(conn.query(
       `SELECT b.*, md.name as mname, BIN_TO_UUID(b.uuid) AS buuid, BIN_TO_IP(ib.ip) AS 'ips.ipString' FROM Bans b
   LEFT JOIN Users md ON md.id = b.muid
   LEFT JOIN IPBans ib ON ib.bid = b.id
-WHERE (b.flags & ?) != 0 AND (b.expires > NOW() OR b.expires IS NULL) AND b.id ${bidFilterMask}`, {
-        replacements: [flagMask].concat(replacements),
-        raw: true,
-        type: QueryTypes.SELECT,
-      }));
+WHERE (b.flags & ?) != 0 AND (b.expires > NOW() OR b.expires IS NULL) AND b.id ${bidFilterMask}`,
+      [flagMask].concat(replacements),
+    ));
 
-    promises.push(sequelize.query(
+    promises.push(conn.query(
       `SELECT DISTINCT u.id, u.uid AS 'users.id' FROM (
   SELECT ub.bid AS id, ub.uid FROM UserBans ub WHERE ub.bid ${bidFilterMask}
   UNION ALL
   SELECT tb.bid AS id, t.uid FROM ThreePIDBans tb INNER JOIN ThreePIDs t ON tb.tid = t.id WHERE t.uid IS NOT NULL AND tb.bid ${bidFilterMask}
-) AS u;`, {
-      /* eslint-enable max-len */
-        replacements: replacements.concat(replacements),
-        raw: true,
-        type: QueryTypes.SELECT,
-      }));
+) AS u;`,
+      replacements.concat(replacements),
+    ));
 
     /*
      * bans is populated with ips already
@@ -458,6 +287,8 @@ WHERE (b.flags & ?) != 0 AND (b.expires > NOW() OR b.expires IS NULL) AND b.id $
     return bans;
   } catch (error) {
     console.error(`SQL Error on getBanInfos: ${error.message}`);
+  } finally {
+    if (conn) conn.release();
   }
   return [];
 }
@@ -495,29 +326,34 @@ export async function prolongExistingBan(ipString, userId, duration, reason) {
   if (duration) {
     newDuration = new Date(banData.expires.getTime() + duration * 1000);
   }
+
+  let conn;
   try {
-    await sequelize.query(
-      'UPDATE Bans SET expires = ? WHERE id = ?', {
-        replacements: [newDuration, banData.id],
-        raw: true,
-        type: QueryTypes.UPDATE,
-      },
+    conn = await pool.getConnection();
+    await conn.query(
+      'UPDATE Bans SET expires = ? WHERE id = ?', [newDuration, banData.id],
     );
+
     if (!banData.ips.some(({ ipString: i }) => i === ipString)) {
       console.log(`BAN add ip ${ipString} to ban that doesn't have it yet`);
-      await IPBan.create({
-        bid: banData.id, ip: Sequelize.fn('IP_TO_BIN', ipString),
-      }, { returning: false });
+      await conn.query(
+        'INSERT INTO IPBans (bid, ip) VALUES (?, IP_TO_BIN(?))',
+        [banData.id, ipString],
+      );
     }
+
     if (userId && !banData.users.some(({ id: u }) => u === userId)) {
       console.log(`BAN add user ${userId} to ban that doesn't have it yet`);
-      await UserBan.create({
-        bid: banData.id, uid: userId,
-      }, { returning: false });
+      await conn.query(
+        'INSERT INTO UserBans (bid, uid) VALUES (?, ?)',
+        [banData.id, userId],
+      );
     }
     return true;
   } catch (error) {
     console.error(`SQL Error on prolongExistingBan: ${error.message}`);
+  } finally {
+    if (conn) conn.release();
   }
   return false;
 }
@@ -538,83 +374,60 @@ export async function ban(
   // eslint-disable-next-line no-shadow
   ipStrings, userIds, ipUuids, mute, ban, reason, duration, muid = null,
 ) {
+  let flags = 0;
+  if (ban) {
+    flags |= 0x01;
+  }
+  if (mute) {
+    flags |= 0x02;
+  }
+
+  if (Array.isArray(ipStrings)) {
+    if (!ipStrings.length) {
+      ipStrings = null;
+    }
+  } else if (ipStrings) {
+    ipStrings = [ipStrings];
+  }
+  if (Array.isArray(userIds)) {
+    if (!userIds.length) {
+      userIds = null;
+    }
+  } else if (userIds) {
+    userIds = [userIds];
+  }
+  if (Array.isArray(ipUuids)) {
+    if (!ipUuids.length) {
+      ipUuids = null;
+    }
+  } else if (ipUuids) {
+    ipUuids = [ipUuids];
+  }
+  if (!ipStrings && !userIds && !ipUuids) {
+    return [[], []];
+  }
+
+  const bid = bufferToUUID(generateUUID());
+
   try {
-    const transaction = await sequelize.transaction();
-
-    try {
-      let flags = 0;
-      if (ban) {
-        flags |= 0x01;
-      }
-      if (mute) {
-        flags |= 0x02;
-      }
-
-      const banModel = await Ban.create({
-        reason, muid, flags,
-        expires: (duration) ? new Date(Date.now() + duration * 1000) : null,
-      }, { transaction });
-      const bid = banModel.id;
-
-      const promises = [];
-      if (userIds && userIds.length !== 0) {
-        const threePIDs = await ThreePID.findAll({
-          where: { uid: userIds },
-          raw: true,
-        });
-        if (threePIDs.length) {
-          promises.push(ThreePIDBan.bulkCreate(threePIDs.map(
-            (tpid) => ({ bid, tid: tpid.id }),
-          ), { returning: false, transaction }));
-        }
-        if (Array.isArray(userIds)) {
-          promises.push(UserBan.bulkCreate(userIds.map(
-            (uid) => ({ bid, uid }),
-          ), { returning: false, transaction }));
-        } else {
-          promises.push(UserBan.create({ uid: userIds, bid },
-            { returning: false, transaction }));
-        }
-      }
-
-      if (ipUuids?.length) {
-        /* returns a Map */
-        let mappedIPStrings = await getIPsOfIIDs(ipUuids);
-        mappedIPStrings = Array.from(mappedIPStrings.values()).map(
-          (ipString) => sanitizeIPString(ipString),
-        );
-        if (Array.isArray(ipStrings)) {
-          ipStrings = ipStrings.concat(mappedIPStrings);
-        } else if (ipStrings) {
-          mappedIPStrings.push(ipStrings);
-          ipStrings = mappedIPStrings;
-        } else {
-          ipStrings = mappedIPStrings;
-        }
-      }
-
-      if (ipStrings) {
-        if (Array.isArray(ipStrings)) {
-          if (ipStrings.length) {
-            promises.push(IPBan.bulkCreate(ipStrings.map(
-              (ip) => ({ bid, ip: Sequelize.fn('IP_TO_BIN', ip) }),
-            ), { returning: false, transaction }));
-          }
-        } else {
-          promises.push(IPBan.create({
-            bid, ip: Sequelize.fn('IP_TO_BIN', ipStrings),
-          }, { returning: false, transaction }));
-        }
-      }
-
-      await Promise.all(promises);
-      await transaction.commit();
-      return [ipStrings || [], userIds || []];
-    } catch (error) {
-      if (transaction && !transaction.finished) {
-        await transaction.rollback();
-      }
-      throw error;
+    const [[{ result }], outIpStrings, outUids] = await pool.query(
+      'CALL BAN(?, ?, ?, ?, ?, ?, ?, ?)',
+      [
+        bid,
+        JSON.stringify(ipStrings),
+        JSON.stringify(userIds),
+        JSON.stringify(ipUuids),
+        flags,
+        reason,
+        (duration) ? new Date(Date.now() + duration * 1000) : null,
+        muid,
+      ],
+    );
+    if (result === 0) {
+      return [
+        outIpStrings.map(({ ip }) => ip),
+        outUids.map(({ uid }) => uid),
+      ];
     }
   } catch (error) {
     console.error(`SQL Error on ban: ${error.message}`);
@@ -668,4 +481,23 @@ export async function unban(
   return [unbannedIpStrings, unbannedUserIds];
 }
 
-export default Ban;
+/* ================================== range ban ===============================
+ */
+
+/**
+ * Lift multiple IP Range Bans
+ * @param bans Array of Ban model instances
+ * @param [modUid] user id of mod that lifted the bans
+ */
+export async function removeRangeBans(bans, modUid) {
+  if (!Array.isArray(bans)) bans = [bans];
+  const banIds = bans.map((b) => b.id);
+  if (!banIds.length) {
+    return;
+  }
+
+  for (const bid of bans) {
+    // eslint-disable-next-line no-await-in-loop
+    await pool.query('CALL REMOVE_RANGE_BAN(?, ?)', [bid, modUid]);
+  }
+}

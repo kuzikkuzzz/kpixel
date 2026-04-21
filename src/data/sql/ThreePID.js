@@ -3,72 +3,9 @@
  * Storing third party IDs for oauth login
  */
 
-import Sequelize, { DataTypes, QueryTypes } from 'sequelize';
-
-import sequelize from './sequelize.js';
-import ThreePIDHistory from './ThreePIDHistory.js';
-import ThreePIDBan from './association_models/ThreePIDBan.js';
+import pool from './mariadb.js';
 
 import { THREEPID_PROVIDERS } from '../../core/constants.js';
-
-export { THREEPID_PROVIDERS };
-
-const ThreePID = sequelize.define('ThreePID', {
-  id: {
-    type: DataTypes.INTEGER.UNSIGNED,
-    autoIncrement: true,
-    primaryKey: true,
-  },
-
-  provider: {
-    type: DataTypes.TINYINT.UNSIGNED,
-    allowNull: false,
-  },
-
-  tpid: {
-    type: 'VARCHAR(80) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci',
-    allowNull: false,
-  },
-
-  normalizedTpid: {
-    /*
-     * this is NORMALIZE_TPID function inlined, which removes . and +string
-     * from emails.
-     * We can't use the function itself, cause generated columns do not allow
-     * that.
-     */
-    // eslint-disable-next-line max-len
-    type: 'VARCHAR(80) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci GENERATED ALWAYS AS (CASE WHEN provider != 1 THEN NULL WHEN LOCATE(\'@\', tpid) = 0 THEN NULL ELSE LOWER(CONCAT(REPLACE(SUBSTRING_INDEX(SUBSTRING_INDEX(tpid, \'@\', 1), \'+\', 1), \'.\', \'\'),\'@\',(SUBSTRING_INDEX(tpid, \'@\', -1)))) END) STORED',
-  },
-
-  verified: {
-    type: DataTypes.BOOLEAN,
-    defaultValue: false,
-    allowNull: false,
-  },
-
-  lastSeen: {
-    type: DataTypes.DATE,
-    defaultValue: DataTypes.NOW,
-    allowNull: false,
-  },
-
-  createdAt: {
-    type: DataTypes.DATE,
-    defaultValue: DataTypes.NOW,
-    allowNull: false,
-  },
-}, {
-  indexes: [{
-    unique: true,
-    name: 'ptpid',
-    fields: ['provider', 'tpid'],
-  }, {
-    unique: true,
-    name: 'pntpid',
-    fields: ['provider', 'normalizedTpid'],
-  }],
-});
 
 /**
  * upsert a tpid
@@ -78,12 +15,16 @@ const ThreePID = sequelize.define('ThreePID', {
  * @param verified whether or not verified
  * @return boolean success
  */
-export async function addOrReplaceTpid(uid, provider, tpid, verified = null) {
+export async function addOrReplaceTpid(uid, provider, tpid, verified) {
   try {
-    const query = { uid, provider, tpid, lastSeen: Date.now() };
-    if (verified) query.verified = true;
-
-    await ThreePID.upsert(query, { returning: false });
+    await pool.query(
+      `INSERT INTO ThreePIDs (uid, provider, tpid, verified) VALUES (?, ?, ?, ?)
+ON DUPLICATE KEY UPDATE
+  uid = VALUES(uid),
+  verified = VALUES(verified),
+  lastSeen = VALUES(lastSeen)`,
+      [uid, provider, tpid, verified ? 1 : 0],
+    );
   } catch (error) {
     console.error(`SQL Error on addOrReplaceTpid: ${error.message}`);
     return false;
@@ -95,73 +36,50 @@ export async function addOrReplaceTpid(uid, provider, tpid, verified = null) {
  * remove a tpid from a user
  * @param uid user id
  * @param id tpid id
- * @return boolean success
+ * @param hasPassword if the user has a password set
+ * @return [returnCode, newUserlvl]
+ *   0: success
+ *   1: user doesn't exist
+ *   2: no such tpid
+ *   3: would make user incapable of logging in
+ *   -1: error
  */
-export async function removeTpidFromUser(uid, id) {
-  const transaction = await sequelize.transaction();
-
+export async function removeTpidFromUser(uid, id, hasPassword) {
   try {
-    const [tpid, isBanned] = await Promise.all([
-      ThreePID.findByPk(id, { raw: true, transaction }),
-      ThreePIDBan.count({ where: { tid: id }, transaction }),
-    ]);
-
-    const promises = [];
-    if (isBanned === 0) {
-      promises.push(ThreePID.destroy({
-        where: { id },
-        transaction,
-      }));
-    } else {
-      /* keep around if banned */
-      promises.push(
-        ThreePID.update({ uid: null }, { where: { id }, transaction }),
-      );
+    const [model] = await pool.query(
+      'CALL REMOVE_THREEPID_FROM_USER(?, ?, ?)',
+      [uid, id, hasPassword ? 1 : 0],
+    );
+    if (model?.length) {
+      const { result, userlvl = null } = model[0];
+      return [result, userlvl];
     }
-
-    /* store in history */
-    promises.push(ThreePIDHistory.create({
-      uid: tpid.uid,
-      provider: tpid.provider,
-      tpid: tpid.tpid,
-      normalizedTpid: tpid.normalizedTpid,
-      verified: tpid.verified,
-      lastSeen: new Date(),
-      createdAt: tpid.createdAt,
-    }, { transaction }));
-
-    await Promise.all(promises);
-    await transaction.commit();
   } catch (error) {
     console.error(`SQL Error on removeTpidFromUser: ${error.message}`);
-    if (transaction && !transaction.finished) {
-      await transaction.rollback();
-    }
-    throw error;
   }
+  return [-1, null];
 }
 
 /**
  * get email of a user, it will only return one, even if there could
  * be multiple
  * @param uid
- * @return null if none exists | false if error | email otherwise
+ * @return false if none exists | null if error | email otherwise
  */
 export async function getEmailOfUser(uid) {
   try {
-    const tpid = await ThreePID.findOne({
-      attributes: ['tpid'],
-      where: {
-        uid,
-        provider: THREEPID_PROVIDERS.EMAIL,
-      },
-      raw: true,
-    });
-    return tpid?.tpid || false;
+    const [model] = await pool.query(
+      'SELECT tpid FROM ThreePIDs WHERE uid = h AND provider = ?',
+      [uid, THREEPID_PROVIDERS.EMAIL],
+    );
+    if (model) {
+      return model.tpid;
+    }
+    return false;
   } catch (error) {
     console.error(`SQL Error on getEmailOfUser: ${error.message}`);
+    return null;
   }
-  return null;
 }
 
 /**
@@ -173,12 +91,8 @@ export async function getEmailOfUser(uid) {
  * ]>
  */
 export function getTPIDsOfUser(uid) {
-  return sequelize.query(
-    'SELECT id, tpid, provider, verified FROM ThreePIDs WHERE uid = ?', {
-      replacements: [uid],
-      raw: true,
-      type: QueryTypes.SELECT,
-    },
+  return pool.query(
+    'SELECT id, tpid, provider, verified FROM ThreePIDs WHERE uid = ?', [uid],
   );
 }
 
@@ -191,76 +105,38 @@ export function getTPIDsOfUser(uid) {
  * ]>
  */
 export function getTPIDHistoryOfUser(uid) {
-  return sequelize.query(
+  return pool.query(
     // eslint-disable-next-line max-len
-    'SELECT id, tpid, provider, verified, lastSeen FROM ThreePIDHistories WHERE uid = ?', {
-      replacements: [uid],
-      raw: true,
-      type: QueryTypes.SELECT,
-    },
+    'SELECT id, tpid, provider, verified, lastSeen FROM ThreePIDHistories WHERE uid = ?',
+    [uid],
   );
 }
 
 /**
- * set email of user
+ * add email to user
  * @param uid user id
  * @param email email string
  * @param verified whether or not the email got verified
- * @param return boolean if email got set, null if email already exists for
- *   different user
+ * @param return boolean if email got set, false if email already exists for
+ *   different user, null if error
  */
-export async function setEmail(uid, email, verified = false) {
-  try {
-    const [existingEmail, existingUserEmail] = await Promise.all([
-      ThreePID.findOne({
-        attributes: ['id', 'uid'],
-        where: {
-          provider: THREEPID_PROVIDERS.EMAIL,
-          normalizedTpid: Sequelize.fn(
-            'NORMALIZE_TPID', THREEPID_PROVIDERS.EMAIL, email,
-          ),
-        },
-        raw: true,
-      }),
-      ThreePID.findOne({
-        where: {
-          uid,
-          provider: THREEPID_PROVIDERS.EMAIL,
-        },
-        raw: true,
-      }),
-    ]);
+export async function setEmail(uid, email, verified) {
+  if (!uid || !email) {
+    return null;
+  }
 
-    if (existingEmail) {
-      if (existingEmail.uid === uid) {
-        /* user already has that mail */
-        return true;
-      } if (existingEmail.uid === null) {
-        /* threepid exists, but without user */
-        await ThreePID.update({ uid, verified: false },
-          { where: { id: existingEmail.id } },
-        );
-      } else {
-        return false;
-      }
-    } else {
-      /* fresh tpid */
-      await ThreePID.create({
-        uid,
-        verified,
-        provider: THREEPID_PROVIDERS.EMAIL,
-        tpid: email,
-      });
-    }
-    /* remove previous email */
-    if (existingUserEmail) {
-      await removeTpidFromUser(uid, existingUserEmail.id);
+  try {
+    const [model] = await pool.query(
+      'CALL ADD_THREEPID_TO_USER(?, ?, ?, ?)',
+      [uid, email, THREEPID_PROVIDERS.EMAIL, verified ? 1 : 0],
+    );
+    if (model?.length) {
+      const { result } = model[0];
+      return !!((result === 0 || result === 1));
     }
   } catch (error) {
     console.error(`SQL Error on setEmail: ${error.message}`);
     throw error;
   }
-  return true;
+  return null;
 }
-
-export default ThreePID;

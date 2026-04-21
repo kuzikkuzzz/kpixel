@@ -60,8 +60,8 @@ export const GC_INTERVAL = 300000;
 // TINYINT (-128 - 127)
 export const USERLVL = {
   ANONYM: 0,
-  REGISTERED: 10,
-  VERIFIED: 20,
+  REGISTERED: 10, // sql hardcoded
+  VERIFIED: 20, // sql hardcoded
   CHATMOD: 45,
   CLEANER: 50,
   JANNY: 65,
@@ -87,7 +87,7 @@ export const THREEPID_ABBR = {
 };
 
 export const THREEPID_PROVIDERS = {
-  EMAIL: 1,
+  EMAIL: 1, // sql hardcoded
   DISCORD: 2,
   REDDIT: 3,
   FACEBOOK: 4,
@@ -107,9 +107,9 @@ export const MEDIA_BAN_REASONS = {
 
 export const CHANNEL_TYPES = {
   PUBLIC: 0,
-  DM: 1,
-  GROUP: 2,
-  FACTION: 3,
+  DM: 1, // sql hardcoded
+  GROUP: 2, // sql hardcoded
+  FACTION: 3, // sql hardcoded
 };
 
 export const CANVAS_TYPES = {
@@ -130,14 +130,14 @@ export const RANGEBAN_REASONS = {
 
 export const USER_FLAGS = {
   BLOCK_DM: 0,
-  PRIV: 1,
+  PRIV: 1, // sql hardcoded
 };
 
 export const FACTION_FLAGS = {
   // whether it is searchable
   PRIV: 0,
   // whether everybody can join withhout invite
-  PUBLIC: 1,
+  PUBLIC: 1, // sql hardcoded
 };
 
 export const INVITE_FLAGS = {
@@ -145,44 +145,42 @@ export const INVITE_FLAGS = {
 };
 
 export const USER_FACTION_FLAGS = {
-  HIDDEN: 0,
+  HIDDEN: 0, // sql hardcoded
 };
 
 export const FACTION_ROLE_FLAGS = {
   // can not be deleted, can not have his default flag changed
-  PROTECTED: 0,
+  PROTECTED: 0, // sql hardcoded
   // new members join this role per default
-  DEFAULT: 1,
+  DEFAULT: 1, // sql hardcoded
 };
 
 /*
  * factionlvl at which a user can do certain tasks
  */
 export const FACTION_PERMISSIONS = {
-  PEASANT: 0,
-  MANAGE_INVITES: 49,
+  PEASANT: 0, // sql hardcoded
+  MANAGE_INVITES: 49, // sql hardcoded
   KICK: 50,
   SEE_HIDDEN_USERS: 59,
-  ASSIGN_ROLES: 60,
+  ASSIGN_ROLES: 60, // sql hardcoded
   BAN: 65,
   UNBAN: 70,
   EDIT_ROLES: 74,
-  CREATE_ROLES: 75,
+  CREATE_ROLES: 75, // sql hardcoded
   EDIT_FACTION: 80,
-  MANAGE_YOURSELF: 99,
-  DELETE_FACTION: 100,
-  SOVEREIGN: 100,
+  MANAGE_YOURSELF: 99, // sql hardcoded
+  DELETE_FACTION: 100, // sql hardcoded
+  SOVEREIGN: 100, // sql hardcoded
 };
 
-export const MAX_FACTIONS_PER_USER = 20;
+export const MAX_FACTIONS_PER_USER = 20; // sql hardcoded
 
-export const MAX_INVITES_PER_FACTION = 20;
+export const MAX_INVITES_PER_FACTION = 20; // sql hardcoded
 
-export const MAX_OWNED_FACTIONS_PER_USER = 10;
+export const MAX_OWNED_FACTIONS_PER_USER = 10; // sql hardcoded
 
-export const MAX_FLAGS_PER_FACTION = 10;
-
-export const MAX_ROLES_PER_FACTION = 20;
+export const MAX_ROLES_PER_FACTION = 20; // sql hardcoded
 
 // Mode for shift-painting or phone pencil, HISTORY has to be last
 export const PENCIL_MODE = {

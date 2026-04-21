@@ -3,7 +3,6 @@
  */
 import logger from './logger.js';
 import RateLimiter from '../utils/RateLimiter.js';
-import { USERLVL, CHANNEL_TYPES } from '../data/sql/index.js';
 import {
   findIdByNameOrId, getDummyUser, getLastIPOfUser,
 } from '../data/sql/User.js';
@@ -26,6 +25,8 @@ import {
   EVENT_USER_NAME,
   INFO_USER_NAME,
   APISOCKET_USER_NAME,
+  USERLVL,
+  CHANNEL_TYPES,
 } from './constants.js';
 
 function getUserFromMd(mdUserLink) {
@@ -104,7 +105,7 @@ export class ChatProvider {
       const { name } = CHAT_CHANNELS[i];
       // eslint-disable-next-line no-await-in-loop
       const channel = await getDefaultChannel(name);
-      const { id, lastTs } = channel[0];
+      const { id, lastTs } = channel;
       if (name === 'en') {
         this.enChannelId = id;
       }
@@ -122,7 +123,7 @@ export class ChatProvider {
       }
       // eslint-disable-next-line no-await-in-loop
       const channel = await getDefaultChannel(name);
-      const { id, lastTs } = channel[0];
+      const { id, lastTs } = channel;
       const channelArray = [id, name, lastTs, null, true, null];
       this.langChannels.set(name, channelArray);
       this.publicChannels.set(id, channelArray);

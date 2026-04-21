@@ -28,7 +28,7 @@ import {
 } from '../../core/adminfunctions.js';
 import { getMultipleStates } from '../../core/SharedState.js';
 import { getHighUserLvlUsers, findUserById } from '../../data/sql/User.js';
-import { USERLVL } from '../../data/sql/index.js';
+import { USERLVL } from '../../core/constants.js';
 
 
 const router = express.Router();

@@ -8,9 +8,7 @@ import logger from '../../core/logger.js';
 import socketEvents from '../../socket/socketEvents.js';
 import { findUserByIdOrName } from '../../data/sql/User.js';
 import { deleteDMChannel } from '../../data/sql/Channel.js';
-import {
-  blockUser, unblockUser,
-} from '../../data/sql/association_models/UserBlock.js';
+import { blockUser, unblockUser } from '../../data/sql/UserBlock.js';
 
 async function block(req, res) {
   req.tickRateLimiter(4000);

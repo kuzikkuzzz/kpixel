@@ -227,6 +227,15 @@ function cleanUpBeforeBuild(doBuildServer, doBuildClient) {
       path.join(distDir, 'workers', 'lua'),
       { recursive: true },
     );
+    [
+      'scheme', 'procedures', 'functions', 'migrations', 'cleanup',
+    ].forEach((sqlDir) => {
+      fs.cpSync(
+        path.join(parentDir, 'src', 'data', 'sql', sqlDir),
+        path.join(distDir, 'workers', 'sql', sqlDir),
+        { recursive: true },
+      );
+    });
     // ./src/funcs get shipped seperately to allow overriding
     fs.cpSync(
       path.join(parentDir, 'src', 'funcs'),

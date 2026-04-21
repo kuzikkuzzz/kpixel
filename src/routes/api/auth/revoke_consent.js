@@ -1,7 +1,7 @@
 /*
  * close a session
  */
-import { removeConsentById } from '../../../data/sql/OIDCConsent.js';
+import { removeConsentById } from '../../../data/sql/OIDC.js';
 
 export default async (req, res) => {
   const { user: { id: uid }, body: { id }, ttag: { t } } = req;

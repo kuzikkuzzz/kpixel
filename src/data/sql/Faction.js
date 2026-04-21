@@ -2,83 +2,14 @@
  * factions
  */
 
-import { DataTypes, QueryTypes } from 'sequelize';
+import pool from './mariadb.js';
+import { nestQuery } from './utils.js';
 
-import sequelize, { nestQuery } from './sequelize.js';
 import { generateUUID, bufferToUUID } from '../../utils/hash.js';
 import {
   FACTION_FLAGS, USER_FACTION_FLAGS, FACTION_ROLE_FLAGS, FACTION_PERMISSIONS,
 } from '../../core/constants.js';
 
-const Faction = sequelize.define('Faction', {
-  id: {
-    type: DataTypes.BIGINT.UNSIGNED,
-    autoIncrement: true,
-    primaryKey: true,
-  },
-
-  /* [a-zA-Z0-9._-] */
-  name: {
-    type: 'VARCHAR(32) CHARACTER SET ascii COLLATE ascii_bin',
-    allowNull: false,
-    unique: 'name',
-  },
-
-  title: {
-    type: 'VARCHAR(32) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci',
-    allowNull: false,
-  },
-
-  description: {
-    type: 'VARCHAR(1000) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci',
-    defaultValue: '',
-    allowNull: false,
-  },
-
-  /*
-   * faction chat channel,
-   * user membership of those channels is still managed in UserChannels
-   * seperately.
-   * Factions are an addition to channels, not backed in.
-   */
-  cid: {
-    type: DataTypes.INTEGER.UNSIGNED,
-    allowNull: false,
-  },
-
-  avatar: {
-    type: DataTypes.BIGINT.UNSIGNED,
-    allowNull: true,
-  },
-
-  memberCount: {
-    type: DataTypes.INTEGER.UNSIGNED,
-    allowNull: false,
-    defaultValue: 0,
-  },
-
-  /*
-   * from lowest to highest bit, see FACTION_FLAGS:
-   * 0: priv (if faction is unfindable)
-   * 1: public (if everybody can join without invite)
-   */
-  flags: {
-    type: DataTypes.TINYINT.UNSIGNED,
-    allowNull: false,
-    defaultValue: 0,
-  },
-
-  createdAt: {
-    type: DataTypes.DATE,
-    defaultValue: DataTypes.NOW,
-    allowNull: false,
-  },
-}, {
-  indexes: [{
-    name: 'faction_title',
-    fields: ['title'],
-  }],
-});
 
 /**
  * get factions of a user
@@ -111,13 +42,15 @@ const Faction = sequelize.define('Faction', {
 export async function getFactionsOfUser(uid, isOwnProfile) {
   let factions = [];
   let activeFactionRole = null;
+  let conn;
   try {
-    const [factionModels, activeFactionModel] = await Promise.all([
+    conn = await pool.getConnection();
+    const [factionModels, [activeFactionModel]] = await Promise.all([
       /*
        * a user could be member of a faction without having a role, but we
        * disallow that case in routes to avoid confusion
        */
-      sequelize.query(
+      conn.query(
         /* eslint-disable max-len */
         `SELECT f.name, f.title, f.description, f.memberCount, f.flags,
 CONCAT(a.shortId, ':', a.extension) AS avatarId,
@@ -131,25 +64,19 @@ fr.factionlvl AS 'roles.factionlvl' FROM Factions f
   LEFT JOIN FactionRoles fr ON fr.fid = f.id
   LEFT JOIN Media a ON a.id = f.avatar
   LEFT JOIN Media frm ON frm.id = fr.customFlag
-WHERE uf.uid = ?`, {
-          replacements: [uid],
-          raw: true,
-          type: QueryTypes.SELECT,
-        },
+WHERE uf.uid = ?`,
+        [uid],
       ),
-      sequelize.query(
+      conn.query(
         `SELECT f.name, BIN_TO_UUID(fr.uuid) AS frid FROM Factions f
   INNER JOIN FactionRoles fr ON fr.fid = f.id
   INNER JOIN Profiles p ON fr.id = p.activeRole
-WHERE p.uid = ?`, {
+WHERE p.uid = ?`,
         /* eslint-enable max-len */
-          replacements: [uid],
-          plain: true,
-          type: QueryTypes.SELECT,
-        },
+        [uid],
       ),
     ]);
-    if (factionModels) {
+    if (factionModels.length) {
       let activeFactionName;
       if (activeFactionModel) {
         activeFactionName = activeFactionModel.name;
@@ -209,20 +136,14 @@ export async function setFlagOfUserFaction(uid, factionName, index, value) {
     const mask = 0x01 << index;
     /* eslint-disable max-len */
     if (value) {
-      await sequelize.query(
-        'UPDATE UserFactions SET flags = flags | ? WHERE uid = ? AND fid = (SELECT id FROM Factions WHERE name = ?)', {
-          replacements: [mask, uid, factionName],
-          raw: true,
-          type: QueryTypes.UPDATE,
-        },
+      await pool.query(
+        'UPDATE UserFactions SET flags = flags | ? WHERE uid = ? AND fid = (SELECT id FROM Factions WHERE name = ?)',
+        [mask, uid, factionName],
       );
     } else {
-      await sequelize.query(
-        'UPDATE UserFactions SET flags = flags & ~(?) WHERE uid = ? AND fid = (SELECT id FROM Factions WHERE name = ?)', {
-          replacements: [mask, uid, factionName],
-          raw: true,
-          type: QueryTypes.UPDATE,
-        },
+      await pool.query(
+        'UPDATE UserFactions SET flags = flags & ~(?) WHERE uid = ? AND fid = (SELECT id FROM Factions WHERE name = ?)',
+        [mask, uid, factionName],
       );
     }
     /* eslint-enable max-len */
@@ -244,21 +165,15 @@ export async function setFlagOfFaction(name, index, value) {
   try {
     const mask = 0x01 << index;
     if (value) {
-      await sequelize.query(
-        'UPDATE Factions SET flags = flags | ? WHERE name = ?', {
-          replacements: [mask, name],
-          raw: true,
-          type: QueryTypes.UPDATE,
-        },
+      await pool.query(
+        'UPDATE Factions SET flags = flags | ? WHERE name = ?',
+        [mask, name],
       );
     } else {
-      await sequelize.query(
+      await pool.query(
         // eslint-disable-next-line max-len
-        'UPDATE Factions SET flags = flags & ~(?) WHERE name = ?', {
-          replacements: [mask, name],
-          raw: true,
-          type: QueryTypes.UPDATE,
-        },
+        'UPDATE Factions SET flags = flags & ~(?) WHERE name = ?',
+        [mask, name],
       );
     }
     return true;
@@ -281,18 +196,15 @@ export async function getFactionLvlOfUser(uid, factionName) {
   let sqlFid = null;
   let powerlvl = null;
   try {
-    const model = await sequelize.query(
+    const [model] = await pool.query(
       /* eslint-disable max-len */
       `SELECT f.id AS sqlFid, fr.factionlvl AS powerlvl FROM Factions f
   INNER JOIN UserFactions uf ON uf.fid = f.id
   LEFT JOIN UserFactionRoles ufr ON ufr.uid = uf.uid
   LEFT JOIN FactionRoles fr ON fr.id = ufr.frid AND fr.fid = f.id
-WHERE uf.uid = ? AND f.name = CONVERT(? USING ascii) ORDER BY fr.factionlvl DESC LIMIT 1`, {
+WHERE uf.uid = ? AND f.name = CONVERT(? USING ascii) ORDER BY fr.factionlvl DESC LIMIT 1`,
       /* eslint-enable max-len */
-        replacements: [uid, factionName],
-        plain: true,
-        type: QueryTypes.SELECT,
-      },
+      [uid, factionName],
     );
     if (model) {
       sqlFid = model.sqlFid;
@@ -312,14 +224,11 @@ WHERE uf.uid = ? AND f.name = CONVERT(? USING ascii) ORDER BY fr.factionlvl DESC
  */
 export async function getAmountOfFactionOwners(sqlFid) {
   try {
-    const model = await sequelize.query(
+    const [model] = await pool.query(
       `SELECT COUNT(DISTINCT ufr.uid) AS count FROM UserFactionRoles ufr
   INNER JOIN FactionRoles fr ON ufr.frid = fr.id
-WHERE fr.fid = ? AND fr.factionlvl >= ?`, {
-        replacements: [sqlFid, FACTION_PERMISSIONS.SOVEREIGN],
-        plain: true,
-        type: QueryTypes.SELECT,
-      },
+WHERE fr.fid = ? AND fr.factionlvl >= ?`,
+      [sqlFid, FACTION_PERMISSIONS.SOVEREIGN],
     );
     if (model) {
       return model.count;
@@ -337,12 +246,9 @@ WHERE fr.fid = ? AND fr.factionlvl >= ?`, {
  */
 export async function getAllMembersOfFaction(sqlFid) {
   try {
-    const models = await sequelize.query(
-      'SELECT uid FROM UserFactions WHERE fid = ?', {
-        replacements: [sqlFid],
-        raw: true,
-        type: QueryTypes.SELECT,
-      },
+    const models = await pool.query(
+      'SELECT uid FROM UserFactions WHERE fid = ?',
+      [sqlFid],
     );
     if (models) {
       return models.map(({ uid }) => uid);
@@ -360,16 +266,10 @@ export async function getAllMembersOfFaction(sqlFid) {
  */
 export async function checkIfFactionExists(name) {
   try {
-    const model = await sequelize.query(
-      'SELECT 1 FROM Factions WHERE name = ?', {
-        replacements: [name],
-        plain: true,
-        type: QueryTypes.SELECT,
-      },
+    const models = await pool.query(
+      'SELECT 1 FROM Factions WHERE name = ?', [name],
     );
-    if (!model) {
-      return false;
-    }
+    return models.length > 0;
   } catch (error) {
     console.error(`SQL Error on checkIfFactionExists: ${error.message}`);
   }
@@ -386,17 +286,14 @@ export async function populateFactionIdObj(rawRanks) {
     return rawRanks;
   }
   const fids = rawRanks.map((r) => r.id);
-  const userData = await sequelize.query(
+  const userData = await pool.query(
     // eslint-disable-next-line max-len
     `SELECT f.id, f.title, f.name,
 CONCAT(a.shortId, ':', a.extension) AS avatarId
 FROM Factions f
   LEFT JOIN Media a ON a.id = f.avatar
-WHERE (f.flags & ?) = 0 AND f.id IN (?)`, {
-      replacements: [0x01 << FACTION_FLAGS.PRIV, fids],
-      raw: true,
-      type: QueryTypes.SELECT,
-    },
+WHERE (f.flags & ?) = 0 AND f.id IN (?)`,
+    [0x01 << FACTION_FLAGS.PRIV, fids],
   );
   for (const { id, name, title, avatarId } of userData) {
     const rank = rawRanks.find((r) => r.id === id);
@@ -417,26 +314,20 @@ WHERE (f.flags & ?) = 0 AND f.id IN (?)`, {
 export async function setFactionAvatar(sqlFid, mediaId = null) {
   try {
     if (!mediaId) {
-      await sequelize.query(
+      await pool.query(
         // eslint-disable-next-line max-len
-        'UPDATE Factions SET avatar = NULL WHERE id = ?', {
-          replacements: [sqlFid],
-          raw: true,
-          type: QueryTypes.UPDATE,
-        },
+        'UPDATE Factions SET avatar = NULL WHERE id = ?',
+        [sqlFid],
       );
     } else {
       const [shortId, extension] = mediaId.split(':');
       if (!shortId || !extension) {
         return false;
       }
-      await sequelize.query(
+      await pool.query(
         // eslint-disable-next-line max-len
-        'UPDATE Factions SET avatar = (SELECT id FROM Media WHERE shortId = ? AND extension = ?) WHERE id = ?', {
-          replacements: [shortId, extension, sqlFid],
-          raw: true,
-          type: QueryTypes.UPDATE,
-        },
+        'UPDATE Factions SET avatar = (SELECT id FROM Media WHERE shortId = ? AND extension = ?) WHERE id = ?',
+        [shortId, extension, sqlFid],
       );
     }
     return true;
@@ -473,19 +364,14 @@ export async function createFaction(
     const sovereignFrid = bufferToUUID(generateUUID());
     const peasantFrid = bufferToUUID(generateUUID());
 
-    const model = await sequelize.query(
-      'CALL CREATE_FACTION(?, ?, ?, ?, ?, ?, ?, ?)', {
-        replacements: [
-          uid, name, title, description, flags, avatarId,
-          sovereignFrid, peasantFrid,
-        ],
-        plain: true,
-        type: QueryTypes.SELECT,
-      },
+    const [[{ result }]] = await pool.query(
+      'CALL CREATE_FACTION(?, ?, ?, ?, ?, ?, ?, ?)', [
+        uid, name, title, description, flags, avatarId,
+        sovereignFrid, peasantFrid,
+      ],
     );
-    const ret = model?.[0]?.result;
-    if (ret || ret === 0) {
-      return ret;
+    if (result || result === 0) {
+      return result;
     }
   } catch (error) {
     console.error('SQL Error on createFaction:', error.message);
@@ -509,20 +395,16 @@ export async function deleteFaction(initiatorUid, factionName) {
   const affectedActiveRoleUsers = [];
   let factionChannelId = null;
   try {
-    let models = await sequelize.query(
-      'CALL DELETE_FACTION(?, ?)', {
-        replacements: [initiatorUid, factionName],
-        raw: true,
-        type: QueryTypes.SELECT,
-      },
+    const models = await pool.query(
+      'CALL DELETE_FACTION(?, ?)', [initiatorUid, factionName],
     );
-    const returnCode = models?.[0]?.[0]?.result;
-    if (returnCode || returnCode === 0) {
-      if (returnCode === 0) {
-        [{ 0: { factionChannelId } }] = models;
-        models = Object.values(models[1]);
-        for (let i = 0; i < models.length; i += 1) {
-          const { uid: memberUid, hadFactionActive } = models[i];
+    const [[{ result }]] = models;
+    if (result || result === 0) {
+      if (result === 0) {
+        [[{ factionChannelId }]] = models;
+        const affectedUserModels = models[1];
+        for (let i = 0; i < affectedUserModels.length; i += 1) {
+          const { uid: memberUid, hadFactionActive } = affectedUserModels[i];
           if (hadFactionActive) {
             affectedActiveRoleUsers.push(memberUid);
           }
@@ -530,7 +412,7 @@ export async function deleteFaction(initiatorUid, factionName) {
         }
       }
       return [
-        returnCode, factionChannelId, affectedUsers, affectedActiveRoleUsers,
+        result, factionChannelId, affectedUsers, affectedActiveRoleUsers,
       ];
     }
   } catch (error) {
@@ -551,20 +433,15 @@ export async function deleteFaction(initiatorUid, factionName) {
  */
 export async function leaveFaction(uid, factionName) {
   try {
-    const model = await sequelize.query(
-      'CALL LEAVE_FACTION(?, ?)', {
-        replacements: [uid, factionName],
-        plain: true,
-        type: QueryTypes.SELECT,
-      },
+    const model = await pool.query(
+      'CALL LEAVE_FACTION(?, ?)', [uid, factionName],
     );
-    const returnCode = model?.[0]?.result;
-    if (returnCode || returnCode === 0) {
-      if (returnCode === 0) {
-        const { 0: { hadRoleActive } } = model;
-        return [returnCode, !!hadRoleActive];
+    const [[{ result, hadRoleActive }]] = model;
+    if (result || result === 0) {
+      if (result === 0) {
+        return [result, !!hadRoleActive];
       }
-      return [returnCode, false];
+      return [result, false];
     }
   } catch (error) {
     console.error('SQL Error on leaveFaction:', error.message);
@@ -588,16 +465,11 @@ export async function leaveFaction(uid, factionName) {
  */
 export async function joinFactionPublic(uid, ipString, factionName) {
   try {
-    const model = await sequelize.query(
-      'CALL JOIN_FACTION_PUBLIC(?, ?, ?)', {
-        replacements: [uid, ipString, factionName],
-        plain: true,
-        type: QueryTypes.SELECT,
-      },
+    const [[{ result }]] = await pool.query(
+      'CALL JOIN_FACTION_PUBLIC(?, ?, ?)', [uid, ipString, factionName],
     );
-    const ret = model?.[0]?.result;
-    if (ret || ret === 0) {
-      return ret;
+    if (result || result === 0) {
+      return result;
     }
   } catch (error) {
     console.error('SQL Error on joinFaction:', error.message);
@@ -630,7 +502,7 @@ export async function joinFactionPublic(uid, ipString, factionName) {
  */
 export async function getFactionInfo(name) {
   try {
-    let model = await sequelize.query(
+    let model = await pool.query(
       // eslint-disable-next-line max-len
       `SELECT f.id AS sqlFid, f.name, f.title, f.description, f.memberCount, f.flags, f.cid AS channelId,
 CONCAT(a.shortId, ':', a.extension) AS avatarId,
@@ -641,13 +513,10 @@ fr.factionlvl AS 'roles.factionlvl' FROM Factions f
   LEFT JOIN Media a ON a.id = f.avatar
   LEFT JOIN FactionRoles fr ON fr.fid = f.id
   LEFT JOIN Media frm ON frm.id = fr.customFlag
-WHERE f.name = CONVERT(? USING ascii)`, {
-        replacements: [name],
-        raw: true,
-        type: QueryTypes.SELECT,
-      },
+WHERE f.name = CONVERT(? USING ascii)`,
+      [name],
     );
-    if (model?.length) {
+    if (model.length) {
       model = nestQuery(model);
       // whether or not searchable
       model.isPrivate = (model.flags & (0x01 << FACTION_FLAGS.PRIV)) !== 0;
@@ -683,7 +552,7 @@ WHERE f.name = CONVERT(? USING ascii)`, {
  */
 export async function getFactionMemberInfo(sqlFid, showHiddenUsers) {
   try {
-    let model = await sequelize.query(
+    let model = await pool.query(
       `SELECT u.id AS uid, u.name, u.username,
 CONCAT(a.shortId, ':', a.extension) AS avatarId,
 (uf.flags & ?) != 0 AS isHidden,
@@ -693,11 +562,8 @@ BIN_TO_UUID(fr.uuid) AS 'roles.frid' FROM Users u
   LEFT JOIN Media a ON a.id = p.avatar
   LEFT JOIN UserFactionRoles ufr ON ufr.uid = u.id
   LEFT JOIN FactionRoles fr ON fr.id = ufr.frid AND fr.fid = uf.fid
-WHERE uf.fid = ?`, {
-        replacements: [0x01 << USER_FACTION_FLAGS.HIDDEN, sqlFid],
-        raw: true,
-        type: QueryTypes.SELECT,
-      },
+WHERE uf.fid = ?`,
+      [0x01 << USER_FACTION_FLAGS.HIDDEN, sqlFid],
     );
     if (model) {
       model = nestQuery(model, 'uid');
@@ -731,7 +597,7 @@ WHERE uf.fid = ?`, {
  */
 export async function getFactionBanInfo(sqlFid) {
   try {
-    let model = await sequelize.query(
+    let model = await pool.query(
       // eslint-disable-next-line max-len
       `SELECT BIN_TO_UUID(fb.uuid) AS fbid, fb.reason, fb.expires, fb.createdAt,
 u.id AS 'users.id', u.name AS 'users.name', u.username AS 'users.username',
@@ -742,11 +608,8 @@ BIN_TO_UUID(i.uuid) AS 'ips.iid' FROM FactionBans fb
   LEFT JOIN IPFactionBans ifb ON ifb.bid = fb.id
   LEFT JOIN IPs i ON ifb.ip = i.ip
   LEFT JOIN Users mu ON mu.id = fb.muid
-WHERE fb.fid = ?`, {
-        replacements: [sqlFid],
-        raw: true,
-        type: QueryTypes.SELECT,
-      },
+WHERE fb.fid = ?`,
+      [sqlFid],
     );
     if (model) {
       model = nestQuery(model, 'fbid');
@@ -793,7 +656,7 @@ WHERE fb.fid = ?`, {
 export async function searchFaction(term) {
   try {
     const sqlTerm = `%${term}%`;
-    const models = await sequelize.query(
+    const models = await pool.query(
       `SELECT f.name, f.title, f.description,
 f.memberCount,
 (f.flags & ?) != 0 AS isPublic,
@@ -801,16 +664,12 @@ CONCAT(a.shortId, ':', a.extension) AS avatarId FROM Factions f
   LEFT JOIN Media a ON a.id = f.avatar
 WHERE (f.flags & ?) = 0 AND (
   f.name LIKE CONVERT(? USING ascii) OR f.title LIKE ? OR f.description LIKE ?
-) LIMIT 50`, {
-        replacements: [
-          0x01 << FACTION_FLAGS.PUBLIC, 0x01 << FACTION_FLAGS.PRIV,
-          sqlTerm.toLowerCase(), sqlTerm, sqlTerm,
-        ],
-        raw: true,
-        type: QueryTypes.SELECT,
-      },
+) LIMIT 50`, [
+        0x01 << FACTION_FLAGS.PUBLIC, 0x01 << FACTION_FLAGS.PRIV,
+        sqlTerm.toLowerCase(), sqlTerm, sqlTerm,
+      ],
     );
-    if (models) {
+    if (models.length) {
       for (let i = 0; i < models.length; i += 1) {
         const faction = models[i];
         faction.isPublic = faction.isPublic === 1;
@@ -832,12 +691,8 @@ WHERE (f.flags & ?) = 0 AND (
  */
 export async function setFactionProperty(sqlFid, property, value) {
   try {
-    await sequelize.query(
-      `UPDATE Factions SET ${property} = ? WHERE id = ?`, {
-        replacements: [value, sqlFid],
-        raw: true,
-        type: QueryTypes.UPDATE,
-      },
+    await pool.query(
+      `UPDATE Factions SET ${property} = ? WHERE id = ?`, [value, sqlFid],
     );
     return true;
   } catch (error) {
@@ -845,5 +700,3 @@ export async function setFactionProperty(sqlFid, property, value) {
   }
   return false;
 }
-
-export default Faction;

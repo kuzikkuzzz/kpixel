@@ -4,47 +4,9 @@
  *
  */
 
-import { DataTypes, QueryTypes } from 'sequelize';
-
-import sequelize from './sequelize.js';
-import UserChannel from './association_models/UserChannel.js';
+import pool from './mariadb.js';
 
 import { CHANNEL_TYPES } from '../../core/constants.js';
-
-export { CHANNEL_TYPES };
-
-const Channel = sequelize.define('Channel', {
-  id: {
-    type: DataTypes.INTEGER.UNSIGNED,
-    autoIncrement: true,
-    primaryKey: true,
-  },
-
-  name: {
-    type: 'VARCHAR(32) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci',
-    allowNull: true,
-    set(value) {
-      this.setDataValue('name', value.slice(0, 32));
-    },
-  },
-
-  type: {
-    type: DataTypes.TINYINT.UNSIGNED,
-    allowNull: false,
-  },
-
-  lastMessage: {
-    type: DataTypes.DATE,
-    defaultValue: DataTypes.NOW,
-    allowNull: false,
-  },
-
-  createdAt: {
-    type: DataTypes.DATE,
-    defaultValue: DataTypes.NOW,
-    allowNull: false,
-  },
-});
 
 /**
  * add a user to a channel
@@ -54,13 +16,14 @@ const Channel = sequelize.define('Channel', {
  */
 export async function addUserToChannel(uid, cid) {
   try {
-    const [, created] = await UserChannel.findOrCreate({
-      where: { uid, cid },
-      raw: true,
-    });
-    return created;
+    const { affectedRows } = await pool.query(
+      `INSERT INTO UserChannels (uid, cid) VALUES (?, ?, NOW())
+  ON DUPLICATE KEY UPDATE uid = VALUES(uid), cid = VALUES(cid))`,
+      [uid, cid],
+    );
+    return affectedRows === 1;
   } catch (error) {
-    console.error(`SQL Error on addUserToChannel: ${error.message}`);
+    console.error(`SQL Error on :wqaddUserToChannel: ${error.message}`);
   }
   return false;
 }
@@ -76,18 +39,17 @@ export async function findDMChannel(uidA, uidB) {
     return null;
   }
   try {
-    const channel = await sequelize.query(
+    const [channel] = await pool.query(
       /* eslint-disable max-len */
       `SELECT c.id FROM Channels c
   INNER JOIN UserChannels uc ON c.id = uc.cid
-WHERE c.type = ? AND uc.uid IN (?, ?) GROUP BY c.id HAVING COUNT(DISTINCT uc.uid) = 2`, {
-        /* eslint-disable max-len */
-        replacements: [CHANNEL_TYPES.DM, uidA, uidB],
-        raw: true,
-        type: QueryTypes.SELECT,
-      },
+WHERE c.type = ? AND uc.uid IN (?, ?) GROUP BY c.id HAVING COUNT(DISTINCT uc.uid) = 2`,
+      /* eslint-disable max-len */
+      [CHANNEL_TYPES.DM, uidA, uidB],
     );
-    return channel[0]?.id;
+    if (channel) {
+      return channel.id;
+    }
   } catch (error) {
     console.error(`SQL Error on findDMChannel: ${error.message}`);
   }
@@ -102,27 +64,12 @@ WHERE c.type = ? AND uc.uid IN (?, ?) GROUP BY c.id HAVING COUNT(DISTINCT uc.uid
  *   already exists
  */
 export async function createDMChannel(uidA, uidB) {
-  let cid = await findDMChannel(uidA, uidB);
-  if (cid) {
-    return [cid, false];
-  }
-  const transaction = await sequelize.transaction();
-
   try {
-    const channel = await Channel.create({
-      type: CHANNEL_TYPES.DM,
-    }, { transaction });
-    cid = channel.id;
-    await UserChannel.bulkCreate([
-      { uid: uidA, cid }, { uid: uidB, cid },
-    ], { transaction });
-
-    await transaction.commit();
-    return [cid, true];
+    const [[{ cid, created }]] = await pool.query(
+      'CALL CREATE_DM_CHANNEL(?, ?)', [uidA, uidB],
+    );
+    return [cid, created !== 0];
   } catch (error) {
-    if (transaction && !transaction.finished) {
-      await transaction.rollback();
-    }
     console.error(`SQL Error on createDMChannel: ${error.message}`);
     throw error;
   }
@@ -136,17 +83,10 @@ export async function createDMChannel(uidA, uidB) {
  */
 export async function deleteDMChannel(uidA, uidB) {
   try {
-    const channelId = await findDMChannel(uidA, uidB);
-    if (channelId) {
-      await sequelize.query(
-        'DELETE FROM Channels WHERE id = ?', {
-          replacements: [channelId],
-          raw: true,
-          type: QueryTypes.DELETE,
-        },
-      );
-      return channelId;
-    }
+    const [[{ cid }]] = await pool.query(
+      'CALL DELETE_DM_CHANNEL(?, ?)', [uidA, uidB],
+    );
+    return cid;
   } catch (error) {
     console.error(`SQL Error on deleteDMChannel: ${error.message}`);
   }
@@ -161,62 +101,12 @@ export async function deleteDMChannel(uidA, uidB) {
  */
 export async function leaveChannel(uid, cid) {
   try {
-    const model = await sequelize.query(
-      `SELECT type, (SELECT COUNT(*) FROM UserChannels WHERE cid = ?) AS memberAmount FROM Channels c
-  INNER JOIN UserChannels uc ON uc.cid = c.id
-WHERE c.id = ? AND uc.uid = ?`, {
-        replacements: [cid, cid, uid],
-        plain: true,
-        type: QueryTypes.SELECT,
-      },
+    const [[{ result }], affectedUsers] = await pool.query(
+      'CALL LEAVE_CHANNEL(?, ?)', [uid, cid],
     );
-    const affectedUsers = [uid];
-    if (!model) {
-      /*
-       * if channel doesnt exist, pretend that we left it
-       */
-      return affectedUsers;
+    if (result === 0) {
+      return affectedUsers.map(({ uid: id }) => id);
     }
-    const { type, memberAmount } = model;
-    /*
-     * only dm and group channels can be left
-     */
-    if (type !== CHANNEL_TYPES.DM && type !== CHANNEL_TYPES.GROUP) {
-      return null;
-    }
-    /*
-     * delete whole channel if only one person or nobody would be left
-     */
-    if (memberAmount === 2) {
-      const partnerModel = await sequelize.query(
-        'SELECT uid FROM UserChannels WHERE cid = ? and uid != ?', {
-          replacements: [cid, uid],
-          plain: true,
-          type: QueryTypes.SELECT,
-        },
-      );
-      if (partnerModel) {
-        affectedUsers.push(partnerModel.uid);
-      }
-    }
-    if (memberAmount <= 2) {
-      await sequelize.query(
-        'DELETE FROM Channels WHERE id = ?', {
-          replacements: [cid],
-          raw: true,
-          type: QueryTypes.DELETE,
-        },
-      );
-    } else {
-      await sequelize.query(
-        'DELETE FROM UserChannels WHERE cid = ? AND uid = ?', {
-          replacements: [cid, uid],
-          raw: true,
-          type: QueryTypes.DELETE,
-        },
-      );
-    }
-    return affectedUsers;
   } catch (error) {
     console.error(`SQL Error on leaveChannel: ${error.message}`);
   }
@@ -226,23 +116,39 @@ WHERE c.id = ? AND uc.uid = ?`, {
 /**
  * find or create a default channel
  * @param name name of channel
+ * @return { id, lastTs }
  */
-export function getDefaultChannel(name) {
-  return Channel.findOrCreate({
-    where: { name, type: CHANNEL_TYPES.PUBLIC },
-    raw: true,
-  });
+export async function getDefaultChannel(name) {
+  let conn;
+  try {
+    conn = await pool.getConnection();
+
+    const [model] = await conn.query(
+      'SELECT id, UNIX_TIMESTAMP(lastMessage) AS lastTs FROM Channels WHERE name = ? AND type = ?',
+      [name, CHANNEL_TYPES.PUBLIC],
+    );
+    if (model) {
+      return model;
+    }
+    const { insertId } = await conn.query(
+      'INSERT INTO Channels (name, type) VALUES (?, ?)',
+      [name, CHANNEL_TYPES.PUBLIC],
+    );
+    if (!insertId) {
+      throw new Error('Could not create new channel');
+    }
+    return { id: insertId, lastTs: Math.floor(Date.now() / 1000) };
+  } finally {
+    if (conn) conn.release();
+  }
 }
 
 export async function setUserChannelMute(channelId, userId, mute) {
   try {
-    await sequelize.query(
+    await pool.query(
       // eslint-disable-next-line max-len
-      'UPDATE UserChannels SET muted = ? WHERE cid = ? AND uid = ?', {
-        replacements: [(mute) ? 1 : 0, channelId, userId],
-        raw: true,
-        type: QueryTypes.UPDATE,
-      },
+      'UPDATE UserChannels SET muted = ? WHERE cid = ? AND uid = ?',
+      [(mute) ? 1 : 0, channelId, userId],
     );
     return true;
   } catch (error) {
@@ -289,13 +195,10 @@ export async function markChannelsRead(channelIds, userIds) {
   }
 
   try {
-    await sequelize.query(
+    await pool.query(
       // eslint-disable-next-line max-len
-      `UPDATE UserChannels SET lastRead = NOW() WHERE ${channelWhere} AND ${userWhere}`, {
-        replacements,
-        raw: true,
-        type: QueryTypes.UPDATE,
-      },
+      `UPDATE UserChannels SET lastRead = NOW() WHERE ${channelWhere} AND ${userWhere}`,
+      replacements,
     );
     return true;
   } catch (error) {
@@ -303,5 +206,3 @@ export async function markChannelsRead(channelIds, userIds) {
   }
   return false;
 }
-
-export default Channel;

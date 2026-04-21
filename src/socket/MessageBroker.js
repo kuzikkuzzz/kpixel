@@ -82,6 +82,7 @@ class MessageBroker extends SocketEvents {
     this.checkHealth = this.checkHealth.bind(this);
     this.onShardBCMessage = this.onShardBCMessage.bind(this);
     this.onShardListenMessage = this.onShardListenMessage.bind(this);
+    this.initialize = this.initialize.bind(this);
 
     setInterval(this.checkHealth, 10000);
   }

@@ -1,60 +1,9 @@
 /*
  * bans of mdia
  */
-import { DataTypes, QueryTypes } from 'sequelize';
-
-import sequelize from './sequelize.js';
+import pool from './mariadb.js';
 import { generateUUID } from '../../utils/hash.js';
 
-const MediaBan = sequelize.define('MediaBan', {
-  id: {
-    type: DataTypes.BIGINT.UNSIGNED,
-    autoIncrement: true,
-    primaryKey: true,
-  },
-
-  uuid: {
-    type: 'BINARY(16)',
-    allowNull: false,
-    unique: 'uuid',
-    defaultValue: generateUUID,
-  },
-
-  muid: {
-    type: DataTypes.INTEGER.UNSIGNED,
-  },
-
-  /*
-   * according to MEDIA_BAN_REASONS
-   * 1: gore,
-   * 2: csam,
-   * 3: degeneracy,
-   * 4: scam,
-   * 5: terrorism,
-   * 6: propaganda,
-   * 7: doxing,
-   */
-  reason: {
-    type: DataTypes.TINYINT.UNSIGNED,
-    allowNull: false,
-  },
-
-  pHash: {
-    type: DataTypes.BIGINT.UNSIGNED,
-    unique: 'phash',
-  },
-
-  hash: {
-    type: 'BINARY(32)',
-    unique: 'hash',
-  },
-
-  createdAt: {
-    type: DataTypes.DATE,
-    defaultValue: DataTypes.NOW,
-    allowNull: false,
-  },
-});
 
 /**
  * check if media is banned
@@ -80,17 +29,17 @@ export async function hasMediaBan(hashes, pHashes) {
     }
   }
 
+  let conn;
   try {
+    conn = await pool.getConnection();
+
     if (where.length) {
-      const models = await sequelize.query(
+      const models = await conn.query(
         // eslint-disable-next-line max-len
         `SELECT BIN_TO_UUID(uuid) AS mbid, LOWER(HEX(hash)) AS hash, reason FROM MediaBans WHERE ${
           where.join(' OR ')
-        }`, {
-          replacements,
-          type: QueryTypes.SELECT,
-          raw: true,
-        },
+        }`,
+        replacements,
       );
       if (models?.length) {
         return models;
@@ -103,33 +52,27 @@ export async function hasMediaBan(hashes, pHashes) {
           for (let i = 0; i < pHashes.length; i += 1) {
             const pHash = pHashes[i];
             // eslint-disable-next-line no-await-in-loop
-            const models = await sequelize.query(
-              'CALL GET_CLOSE_BANNED_IMAGE(?)', {
-                replacements: [pHash],
-                raw: true,
-                types: QueryTypes.SELECT,
-              },
+            const [models] = await conn.query(
+              'CALL GET_CLOSE_BANNED_IMAGE(?)', [pHash],
             );
-            if (models?.length) {
+            if (models.length) {
               return models;
             }
           }
         }
       } else {
-        const models = await sequelize.query(
-          'CALL GET_CLOSE_BANNED_IMAGE(?)', {
-            replacements: [pHashes],
-            raw: true,
-            types: QueryTypes.SELECT,
-          },
+        const [models] = await conn.query(
+          'CALL GET_CLOSE_BANNED_IMAGE(?)', [pHashes],
         );
-        if (models?.length) {
+        if (models.length) {
           return models;
         }
       }
     }
   } catch (error) {
     console.error(`SQL Error on hasMediaBan: ${error.message}`);
+  } finally {
+    if (conn) conn.release();
   }
   return [];
 }
@@ -142,7 +85,10 @@ export async function hasMediaBan(hashes, pHashes) {
  * @return mediaSqlIdif success, null otherwise
  */
 export async function banMedia(mediaId, reason, muid = null) {
+  let conn;
   try {
+    conn = await pool.getConnection();
+
     if (!mediaId || !reason) {
       return null;
     }
@@ -150,31 +96,27 @@ export async function banMedia(mediaId, reason, muid = null) {
     if (!shortId || !extension) {
       return null;
     }
-    const model = await sequelize.query(
-      'SELECT id FROM Media WHERE shortId = ? AND extension = ?', {
-        replacements: [shortId, extension],
-        plain: true,
-        type: QueryTypes.SELECT,
-      },
+    const [model] = await conn.query(
+      'SELECT id FROM Media WHERE shortId = ? AND extension = ?',
+      [shortId, extension],
     );
     if (!model) {
       return null;
     }
     const mediaSqlId = model.id;
-    await sequelize.query(
+    await conn.query(
       // eslint-disable-next-line max-len
       `INSERT IGNORE INTO MediaBans (uuid, muid, reason, hash, pHash, createdAt) SELECT ?, ?, ?, m.hash, i.pHash, NOW() FROM Media m
   LEFT JOIN ImageHashes i ON i.mid = m.id
-WHERE m.id = ?`, {
-        replacements: [generateUUID(), muid, reason, mediaSqlId],
-        raw: true,
-        type: QueryTypes.INSERT,
-      },
+WHERE m.id = ?`,
+      [generateUUID(), muid, reason, mediaSqlId],
     );
     return mediaSqlId;
   } catch (error) {
     console.error('SQL Error on banMedia:', error.message);
     return null;
+  } finally {
+    if (conn) conn.release();
   }
 }
 
@@ -188,12 +130,8 @@ export async function unbanMedia(mediaBanUuid) {
     if (!mediaBanUuid) {
       return false;
     }
-    await sequelize.query(
-      'DELETE FROM MediaBans WHERE uuid = UUID_TO_BIN(?)', {
-        replacements: [mediaBanUuid],
-        raw: true,
-        type: QueryTypes.DELETE,
-      },
+    await pool.query(
+      'DELETE FROM MediaBans WHERE uuid = UUID_TO_BIN(?)', [mediaBanUuid],
     );
     return true;
   } catch (error) {
@@ -201,5 +139,3 @@ export async function unbanMedia(mediaBanUuid) {
     return false;
   }
 }
-
-export default MediaBan;
