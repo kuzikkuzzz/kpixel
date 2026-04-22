@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: admin@pixelplanet.fun\n"
-"PO-Revision-Date: 2026-04-22 05:54+0000\n"
+"PO-Revision-Date: 2026-04-22 08:05+0000\n"
 "Last-Translator: Ngvn <ngvn@noreply.pixelplanet.fun>\n"
 "Language-Team: Vietnamese <https://translate.gs-os.com/projects/ppfun/server/"
 "vi/>\n"
@@ -154,7 +154,7 @@ msgstr ""
 #: src/routes/api/factionleave.js:28
 #: src/routes/api/factionroleleave.js:36
 msgid "Can not orphan a faction"
-msgstr ""
+msgstr "Không thể bỏ rơi một nhóm"
 
 #: src/routes/api/media.js:92
 #, javascript-format
