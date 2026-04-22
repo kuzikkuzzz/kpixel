@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: admin@pixelplanet.fun\n"
-"PO-Revision-Date: 2026-04-21 16:30+0000\n"
+"PO-Revision-Date: 2026-04-22 05:54+0000\n"
 "Last-Translator: Ngvn <ngvn@noreply.pixelplanet.fun>\n"
 "Language-Team: Vietnamese <https://translate.gs-os.com/projects/ppfun/client/"
 "vi/>\n"
@@ -13,7 +13,7 @@ msgstr ""
 
 #: src/components/BanInfo.jsx:111
 msgid " which is in "
-msgstr ""
+msgstr " tức là sau "
 
 #: src/components/windows/Help.jsx:120
 #, javascript-format
@@ -31,7 +31,7 @@ msgstr ""
 #: src/components/windows/Help.jsx:122
 #, javascript-format
 msgid "${ mouseSymbol } Right click and drag mouse to pan"
-msgstr ""
+msgstr "${ mouseSymbol } Nhấp chuột phải và kéo chuột để di chuyển"
 
 #: src/components/windows/Help.jsx:124
 #, javascript-format
@@ -493,11 +493,11 @@ msgstr "Đóng bảng màu"
 
 #: src/components/menus/channelContextMenu.js:42
 msgid "Compact Chat"
-msgstr ""
+msgstr "Cuộc trò chuyện nhỏ gọn"
 
 #: src/components/windows/Settings.jsx:124
 msgid "Compact Palette"
-msgstr ""
+msgstr "Bảng màu nhỏ gọn"
 
 #: src/components/windows/Faction.jsx:995
 #: src/components/windows/Faction.jsx:1037
@@ -749,24 +749,24 @@ msgstr ""
 #: src/components/windows/Faction.jsx:1379
 #: src/components/windows/Faction.jsx:1684
 msgid "Delete"
-msgstr ""
+msgstr "Xoá"
 
 #: src/components/windows/UserArea.jsx:186
 msgid "Delete Account"
-msgstr ""
+msgstr "Xoá tài khoản"
 
 #: src/components/windows/Faction.jsx:1616
 msgid "Delete Faction"
-msgstr ""
+msgstr "Xoá nhóm"
 
 #: src/components/windows/Faction.jsx:1475
 msgid "Delete the faction"
-msgstr ""
+msgstr "Xoá nhóm"
 
 #: src/components/windows/OIDCConsent.jsx:279
 #: src/components/windows/OIDCConsent.jsx:317
 msgid "Deny"
-msgstr ""
+msgstr "Từ chối"
 
 #: src/components/Table.jsx:23
 #: src/components/windows/Faction.jsx:777
@@ -774,7 +774,7 @@ msgstr ""
 #: src/components/windows/MyFactions.jsx:211
 #: src/components/windows/MyFactions.jsx:366
 msgid "Description"
-msgstr ""
+msgstr "Phần mô tả"
 
 #: src/utils/validation.js:93
 msgid "Description can't be empty"
@@ -812,7 +812,7 @@ msgstr "Ngừng tô theo lịch sử"
 
 #: src/components/buttons/PencilButton.jsx:54
 msgid "Disable Overlay Pencil"
-msgstr "Ngừng tô theo ảnh mẫu"
+msgstr "Ngừng tô theo lớp phủ"
 
 #: src/components/buttons/PencilButton.jsx:46
 msgid "Disable Pencil"
@@ -820,7 +820,7 @@ msgstr ""
 
 #: src/components/windows/Settings.jsx:129
 msgid "Display Palette in a compact form that takes less screen space."
-msgstr ""
+msgstr "Hiện thị bảng màu ở dạng nhỏ gọn và tốn ít không gian hơn."
 
 #: src/components/Admintools.jsx:199
 msgid "Do stuff with IPs (one IP per line)"
@@ -930,7 +930,7 @@ msgstr "Email phải chứa một kí tự @"
 
 #: src/components/windows/Templates.jsx:60
 msgid "Enable Overlay"
-msgstr "Bật ảnh mẫu"
+msgstr "Bật lớp phủ"
 
 #: src/components/buttons/PencilButton.jsx:41
 msgid "Enable Pencil"
@@ -938,7 +938,7 @@ msgstr ""
 
 #: src/components/windows/Settings.jsx:109
 msgid "Enable chat notifications"
-msgstr ""
+msgstr "Bật thông báo về cuộc trò chuyện"
 
 #: src/components/Captcha.jsx:277
 msgid "Enter Characters"
@@ -1249,7 +1249,7 @@ msgstr ""
 
 #: src/components/windows/Templates.jsx:165
 msgid "Import templates"
-msgstr "Nhập vào (những) ảnh mẫu"
+msgstr "Nhập (những) ảnh mẫu"
 
 #: src/components/Watchtools.jsx:143
 msgid "Interval"
@@ -1438,7 +1438,7 @@ msgstr ""
 
 #: src/components/menus/mainMenu.js:176
 msgid "Manage Templates"
-msgstr "Quản lí (những) ảnh mẫu"
+msgstr "Quản lí (các) ảnh mẫu"
 
 #: src/components/windows/Faction.jsx:1435
 msgid "Manage invites"
@@ -1474,7 +1474,7 @@ msgstr ""
 #: src/components/menus/mainMenu.js:166
 #: src/components/windows/index.js:47
 msgid "Modtools"
-msgstr ""
+msgstr "Công cụ mod"
 
 #: src/components/Window.jsx:227
 msgid "Move"
@@ -1576,7 +1576,7 @@ msgstr ""
 
 #: src/components/GlobalCaptcha.jsx:56
 msgid "No or invalid captcha text"
-msgstr ""
+msgstr "Không có hoặc mã captcha không hợp lệ"
 
 #: src/utils/validation.js:111
 msgid "No password given."
@@ -1584,11 +1584,11 @@ msgstr "Không mật khẩu nào được cung cấp."
 
 #: src/components/windows/Search.jsx:106
 msgid "No results."
-msgstr ""
+msgstr "Không có kết quả."
 
 #: src/components/windows/Faction.jsx:1105
 msgid "Nobody is banned from this faction"
-msgstr ""
+msgstr "Không ai bị cấm trong nhóm này"
 
 #: src/components/Admintools.jsx:173
 #: src/components/Canvastools.jsx:211
@@ -1620,7 +1620,7 @@ msgstr ""
 #: src/components/BanInfo.jsx:144
 #: src/store/actions/index.js:9
 msgid "OK"
-msgstr ""
+msgstr "OK"
 
 #: src/components/windows/Converter.jsx:384
 #: src/components/windows/Converter.jsx:400
@@ -1641,19 +1641,19 @@ msgstr ""
 
 #: src/components/CanvasItem.jsx:30
 msgid "Online Users"
-msgstr ""
+msgstr "Người dùng trực tuyến"
 
 #: src/components/OnlineBox.jsx:56
 msgid "Online Users on Canvas"
-msgstr ""
+msgstr "Người dùng trực tuyến trên khung vẽ"
 
 #: src/ui/PixelTransferController.js:169
 msgid "Only verified Users are currently allowed to play."
-msgstr ""
+msgstr "Hiện chỉ những người dùng đã xác thực được phép chơi."
 
 #: src/components/windows/Templates.jsx:94
 msgid "Opacity of Overlay in percent."
-msgstr ""
+msgstr "Độ đục của lớp phủ theo tỉ lệ phần trăm."
 
 #: src/components/windows/MyFactions.jsx:439
 msgid "Open"
@@ -1661,7 +1661,7 @@ msgstr ""
 
 #: src/components/buttons/ChatButton.jsx:41
 msgid "Open Chat"
-msgstr ""
+msgstr "Mở cuộc trò chuyện"
 
 #: src/components/buttons/PalselButton.jsx:30
 msgid "Open Palette"
@@ -1695,15 +1695,15 @@ msgstr ""
 
 #: src/controls/keypress.js:215
 msgid "Overlay OFF"
-msgstr ""
+msgstr "TẮT lớp phủ"
 
 #: src/controls/keypress.js:214
 msgid "Overlay ON"
-msgstr ""
+msgstr "BẬT lớp phủ"
 
 #: src/components/windows/Templates.jsx:80
 msgid "Overlay Opacity"
-msgstr ""
+msgstr "Độ mờ lớp phủ"
 
 #: src/components/windows/Faction.jsx:88
 msgid "Overview"
@@ -1981,7 +1981,7 @@ msgstr ""
 
 #: src/components/Admintools.jsx:349
 msgid "Remove Chatmod"
-msgstr ""
+msgstr "Xoá cuộc trò chuyện mod"
 
 #: src/components/Admintools.jsx:337
 msgid "Remove Cleaner"
@@ -2231,11 +2231,11 @@ msgstr ""
 
 #: src/components/windows/Templates.jsx:73
 msgid "Show overlay as small individual pixels on high zoomlevels."
-msgstr ""
+msgstr "Hiện lớp phủ như các điểm ảnh nhỏ riêng lẻ khi độ thu phóng lớn."
 
 #: src/components/windows/Templates.jsx:65
 msgid "Show templates as overlays ingame."
-msgstr ""
+msgstr "Hiện thị các ảnh mẫu như lớp phủ trong game."
 
 #: src/components/embeds/LocalMedia.jsx:266
 msgid "Shrink"
@@ -2264,7 +2264,7 @@ msgstr ""
 
 #: src/components/windows/Chat.jsx:277
 msgid "Start chatting here"
-msgstr ""
+msgstr "Bắt đầu trò chuyện ở đây"
 
 #: src/components/Admintools.jsx:304
 msgid "Start checking for Malware"
@@ -2323,13 +2323,13 @@ msgstr ""
 
 #: src/components/TemplateItemEdit.jsx:120
 msgid "Template Name"
-msgstr ""
+msgstr "Tên ảnh mẫu"
 
 #: src/components/menus/mainMenu.js:210
 #: src/components/windows/Templates.jsx:52
 #: src/components/windows/index.js:45
 msgid "Templates"
-msgstr ""
+msgstr "Các ảnh mẩu"
 
 #: src/components/windows/OIDCConsent.jsx:210
 #, javascript-format
@@ -2383,6 +2383,8 @@ msgid ""
 "This is the name that other people see, e.g. in Chat. You can change it at "
 "any time. All characters except @, /, , >, < and # are allowed."
 msgstr ""
+"Đây là tên mà người khác thấy, ví dụ trong cuộc trò chuyện. Bạn có thể đổi "
+"nó bất cứ lúc nào. Tất cả kí tự trừ @, /, , >, < và # đều được cho phép."
 
 #: src/components/windows/OIDCConsent.jsx:253
 msgid "This login may only work if your account is verified."
@@ -2408,6 +2410,10 @@ msgid ""
 "that! Templates can show as overlay and you can draw over them. One pixel "
 "on the template, should be one pixel on the canvas."
 msgstr ""
+"Cảm thấy chán với việc vẽ đúng một màu từ ngày này qua ngày khác? Cảm thấy "
+"muốn vẽ các tác phẩm nghệ thuật, nhưng bạn lại phải tính toán từng điểm ảnh "
+"từ bức ảnh khác? Ảnh mẫu có thể được hiện thị dưới dạng lớp phủ và bạn có "
+"thể vẽ lên đó. Một điểm ảnh ở ảnh mẫu sẽ là một điểm ảnh ở khung vẽ."
 
 #: src/components/Table.jsx:21
 #: src/components/windows/Faction.jsx:1543
@@ -2421,7 +2427,7 @@ msgstr "Tiêu đề không thể để trống."
 
 #: src/utils/validation.js:72
 msgid "Title contains invalid character like @, /, \\ or #"
-msgstr ""
+msgstr "Tiêu đề chứa các kí tự không hợp lệ như @, /, / hoặc #"
 
 #: src/utils/validation.js:63
 msgid "Title must be at least 2 characters long"
@@ -2538,7 +2544,7 @@ msgstr ""
 
 #: src/components/GlobalCaptcha.jsx:68
 msgid "Unknown Captcha Error"
-msgstr ""
+msgstr "Lỗi Chaptra không xác định"
 
 #: src/store/actions/fetch.js:136
 #: src/store/actions/fetch.js:156
@@ -2866,7 +2872,7 @@ msgstr "(Những) vai trò của bạn"
 
 #: src/components/BanInfo.jsx:109
 msgid "Your ban expires at "
-msgstr "Lệnh cấm sẽ hết hiệu lực vào "
+msgstr "Lệnh cấm của bạn sẽ hết hiệu lực vào "
 
 #: src/components/windows/OIDCConsent.jsx:291
 msgid ""

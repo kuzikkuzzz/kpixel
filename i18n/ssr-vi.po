@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: admin@pixelplanet.fun\n"
-"PO-Revision-Date: 2026-04-21 16:30+0000\n"
-"Last-Translator: Yuki_ <yuki@noreply.pixelplanet.fun>\n"
+"PO-Revision-Date: 2026-04-22 05:54+0000\n"
+"Last-Translator: Ngvn <ngvn@noreply.pixelplanet.fun>\n"
 "Language-Team: Vietnamese <https://translate.gs-os.com/projects/ppfun/server/"
 "vi/>\n"
 "Language: vi\n"
@@ -478,6 +478,9 @@ msgid ""
 "Moon canvas. Safe space for art. No flags or large text (unless part of "
 "art) or art larger than 1.5k x 1.5k pixels."
 msgstr ""
+"Khung vẽ Mặt trăng. Nơi an toàn của các tác phẩm. Không cho phép cờ hoặc văn "
+"bản quá lớn (phần vô dụng của tác phẩm) hoặc tác phẩm lớn hơn 1500 x 1500 "
+"điểm ảnh."
 
 #: src/routes/api/auth/register.js:86
 #: src/routes/api/factioncreate.js:70
@@ -754,7 +757,7 @@ msgstr ""
 #: src/core/MailProvider.js:110
 #: src/core/MailProvider.js:140
 msgid "Thanks"
-msgstr ""
+msgstr "Cảm ơn"
 
 #: src/utils/media/serverUtils.js:160
 #, javascript-format
@@ -817,7 +820,7 @@ msgstr ""
 #: src/routes/api/auth/change_mail.js:23
 #: src/routes/api/auth/register.js:99
 msgid "This email provider is not allowed"
-msgstr ""
+msgstr "Nhà cung cấp dịch vụ Email này không được cho phép"
 
 #: src/routes/api/factionbans.js:22
 #: src/routes/api/factioninfo.js:25
@@ -862,7 +865,7 @@ msgstr "Tiêu đề không thể để trống."
 
 #: src/utils/validation.js:72
 msgid "Title contains invalid character like @, /, \\ or #"
-msgstr ""
+msgstr "Tiêu đề chứa các kí tự không hợp lệ như @, /, / hoặc #"
 
 #: src/utils/validation.js:63
 msgid "Title must be at least 2 characters long"
@@ -879,11 +882,11 @@ msgstr ""
 
 #: src/canvasesDesc.js:28
 msgid "Top10"
-msgstr ""
+msgstr "Top10"
 
 #: src/routes/api/auth/register.js:72
 msgid "Unknown Captcha Error"
-msgstr ""
+msgstr "Lỗi Chaptra không xác định"
 
 #: src/routes/api/media.js:355
 #: src/routes/api/media.js:397
@@ -933,6 +936,8 @@ msgid ""
 "We already sent you a mail with instructions. Please wait before requesting "
 "another mail."
 msgstr ""
+"Chúng tôi đã gửi cho bạn một thư điện tử với hướng dẫn. Vui lòng đợi trước "
+"khi yêu cầu thêm một thư điện tử khác."
 
 #: src/core/MailProvider.js:91
 #, javascript-format
@@ -940,11 +945,13 @@ msgid ""
 "We already sent you a verification mail, you can request another one in ${ "
 "minLeft } minutes."
 msgstr ""
+"Chúng tôi đã gửi cho bạn một thư xác thực, bạn có thể yêu cầu thư khác sau $"
+"{ minLeft } phút."
 
 #: src/routes/api/media.js:99
 #: src/routes/api/media.js:297
 msgid "We currently do not allow file uploads"
-msgstr ""
+msgstr "Chúng tôi hiện không cho phép tải lên tệp"
 
 #: src/core/MailProvider.js:70
 #, javascript-format
