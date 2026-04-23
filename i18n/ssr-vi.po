@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: admin@pixelplanet.fun\n"
-"PO-Revision-Date: 2026-04-22 08:05+0000\n"
+"PO-Revision-Date: 2026-04-23 08:30+0000\n"
 "Last-Translator: Ngvn <ngvn@noreply.pixelplanet.fun>\n"
 "Language-Team: Vietnamese <https://translate.gs-os.com/projects/ppfun/server/"
 "vi/>\n"
@@ -336,7 +336,7 @@ msgstr "Tệp tin đã bị hỏng"
 msgid ""
 "Generate a new client_secret. The old secret will become invalid "
 "immediately."
-msgstr "Tạo một client_secret mới. Cái cũ sẽ trở nên không hợp lệ."
+msgstr "Tạo một client_secret mới. Cái cũ sẽ ngay lập tức trở nên không hợp lệ."
 
 #: src/routes/oidc/register.js:156
 msgid "Get email address"
@@ -414,12 +414,12 @@ msgstr ""
 
 #: src/routes/oidc/register.js:141
 msgid "Know that an account exists"
-msgstr ""
+msgstr "Biết rằng một tài khoản có tồn tại"
 
 #. "scopes" is a technical term and should not be translated
 #: src/routes/oidc/register.js:129
 msgid "List of available scopes"
-msgstr ""
+msgstr "Danh sách scopes (các scope) có sẵn"
 
 #: src/ssr/Globe.jsx:47
 msgid "Loading..."
@@ -555,16 +555,16 @@ msgstr ""
 
 #: src/routes/oidc/register.js:204
 msgid "One redirect URIs per line"
-msgstr ""
+msgstr "Một URI chuyển hướng mỗi dòng"
 
 #: src/routes/oidc/register.js:305
 msgid "One redirect_uri per line"
-msgstr ""
+msgstr "Một redirect_uri mỗi dòng"
 
 #. "redirect_uris" is a technical term and should not be translated
 #: src/routes/oidc/register.js:73
 msgid "Only five redirect_uris are allowed per client"
-msgstr ""
+msgstr "Chỉ cho phép 5 redirect_uris mỗi máy khách"
 
 #: src/canvasesDesc.js:41
 msgid "Only four colors. Same rules as moon!"
@@ -653,7 +653,7 @@ msgstr "Đọc tên, Tên người dùng và tuổi tài khoản"
 #: src/routes/oidc/register.js:197
 #: src/routes/oidc/register.js:298
 msgid "Redirect URIs"
-msgstr ""
+msgstr "URI chuyển hướng"
 
 #: src/routes/oidc/register.js:171
 msgid "Regularly update this data"
@@ -666,7 +666,7 @@ msgstr ""
 #. 'client_secret' is a technical term and should not be translated
 #: src/routes/oidc/register.js:290
 msgid "Reroll client_secret"
-msgstr ""
+msgstr "Tạo mới client_secret"
 
 #: src/core/MailProvider.js:138
 #: src/routes/reset_password.js:110
@@ -721,13 +721,15 @@ msgstr ""
 
 #: src/routes/oidc/register.js:215
 msgid "Space-separated list of available scopes"
-msgstr ""
+msgstr "Danh sách scopes (các scope) có sẵn được ngăn cách bằng dấu cách"
 
 #: src/routes/oidc/register.js:328
 msgid ""
 "Space-separated list of default scopes, they will be used on requests if no "
 "other scope is given."
 msgstr ""
+"Danh sách scopes (các scope) mặc địch được ngăn cách bằng dấu cách, chúng sẽ "
+"được sử dụng khi không có scope nào được đưa ra."
 
 #. 'scope' is used as a technical term here, do not translate that word
 #: src/routes/oidc/register.js:227
@@ -735,10 +737,14 @@ msgid ""
 "Space-separated list of default scopes, they will be used on requests where "
 "no other scope is given."
 msgstr ""
+"Danh sách scopes (các scope) có sẵn được ngăn cách bằng dấu cách, chúng sẽ "
+"được sữ dụng khi không có scope nào được cung cấp."
 
 #: src/routes/oidc/register.js:317
 msgid "Space-separated list of scopes that should be available"
 msgstr ""
+"Danh sách scopes (các scope) có sẵn được ngăn cách bằng dấu cách và nên có "
+"sẵn"
 
 #: src/canvasesDesc.js:36
 msgid "Special canvas to spread awareness of SARS-CoV2 (take the vax)."
@@ -784,6 +790,7 @@ msgstr "Chương trình này đang chuyển hướng đến một trang không �
 #: src/middleware/oidc.js:263
 msgid "This application sent a faulty login request with no redirection"
 msgstr ""
+"Chương trình này đã gửi một yêu cầu đăng nhập lỗi với không có chuyển hướng"
 
 #: src/middleware/oidc.js:236
 msgid "This application uses a PKCE method we do not support"
@@ -878,7 +885,7 @@ msgstr "Tiêu đề phải ngắn hơn 26 kí tự"
 #. "redirect_uris" is a technical term and should not be translated
 #: src/routes/oidc/register.js:67
 msgid "Too many or too long redirect_uris"
-msgstr ""
+msgstr "redirect_uris quá nhiều hoặc quá dài"
 
 #: src/canvasesDesc.js:28
 msgid "Top10"
@@ -1055,6 +1062,8 @@ msgid ""
 "You can register your own application here to get the client_id and "
 "client_secret needed to make use of this."
 msgstr ""
+"Bạn có thể đăng kí chương trình riêng của bạn ở đây để nhận client_id và "
+"client_secret cần thiết để sử dụng cái này."
 
 #: src/core/ChatProvider.js:418
 msgid "You can't send a message this long :("
@@ -1126,7 +1135,7 @@ msgstr ""
 
 #: src/ssr/redirectionModal.js:16
 msgid "You will be automatically redirected after 15s"
-msgstr ""
+msgstr "Bạn sẽ được tự động chuyển hướng sau 15 giây"
 
 #: src/routes/api/auth/register.js:69
 msgid "Your Browser looks shady"
@@ -1155,55 +1164,56 @@ msgid ""
 "Your mail verification code is invalid or already expired :(, please "
 "request a new one."
 msgstr ""
+"Mã xác thực của bạn không hợp lệ hoặc đã hết hạn :(, vui lòng tạo cái mới."
 
 #: src/routes/reset_password.js:57
 msgid "Your passwords do not match :("
-msgstr ""
+msgstr "Mật khẩu của bạn không khớp :("
 
 #. This media is banned xyz
 #: src/utils/media/serverUtils.js:150
 msgid "because it is propaganda"
-msgstr ""
+msgstr "vì đây là tuyên truyền"
 
 #. This media is banned xyz
 #: src/utils/media/serverUtils.js:142
 msgid "for being an attempt to scam people"
-msgstr ""
+msgstr "vì đây là nỗ lực để lừa đảo người khác"
 
 #. This media is banned xyz
 #: src/utils/media/serverUtils.js:138
 msgid "for being degenerate"
-msgstr ""
+msgstr "vì là nội dung suy đồi"
 
 #. This media is banned xyz
 #: src/utils/media/serverUtils.js:134
 msgid "for containing CSAM"
-msgstr ""
+msgstr "vì chứa CSAM"
 
 #. This media is banned xyz
 #: src/utils/media/serverUtils.js:130
 msgid "for containing graphic violence"
-msgstr ""
+msgstr "vì chứa nội dung bạo lực ghê rợn"
 
 #. This media is banned xyz
 #: src/utils/media/serverUtils.js:154
 msgid "for containing personal information"
-msgstr ""
+msgstr "vì chứa thông tin cá nhân"
 
 #. This media is banned xyz
 #: src/utils/media/serverUtils.js:146
 msgid "for glorifying terrorism"
-msgstr ""
+msgstr "vì cổ suý khủng bố"
 
 #. "redirect_uris" is a technical term and should not be translated
 #: src/routes/oidc/register.js:83
 msgid "redirect_uris does not look legit"
-msgstr ""
+msgstr "redirect_uris trông không hợp lệ"
 
 #: src/ssr/modalShell.js:30
 #: src/ssr/shell.js:26
 msgid "to go back to pixelplanet"
-msgstr ""
+msgstr "quay lại pixelplanet"
 
 #: src/core/MailProvider.js:72
 msgid ""

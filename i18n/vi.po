@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: admin@pixelplanet.fun\n"
-"PO-Revision-Date: 2026-04-22 05:54+0000\n"
+"PO-Revision-Date: 2026-04-23 08:30+0000\n"
 "Last-Translator: Ngvn <ngvn@noreply.pixelplanet.fun>\n"
 "Language-Team: Vietnamese <https://translate.gs-os.com/projects/ppfun/client/"
 "vi/>\n"
@@ -110,7 +110,7 @@ msgstr "Thêm ảnh mẫu"
 #. This if for moderation tools, it's not important to translate this
 #: src/components/menus/mainMenu.js:166
 msgid "Admintools"
-msgstr "Công cụ Admin"
+msgstr "Công cụ Quản trị viên"
 
 #: src/components/windows/User.jsx:183
 msgid "Age"
@@ -716,26 +716,26 @@ msgstr ""
 
 #: src/components/Table.jsx:29
 msgid "Daily Pixel"
-msgstr ""
+msgstr "Điểm ảnh hàng ngày"
 
 #: src/components/windows/Statistics.jsx:204
 msgid "Daily Pixels per Country"
-msgstr ""
+msgstr "Điểm ảnh hàng này mỗi quốc gia"
 
 #: src/components/windows/Statistics.jsx:183
 msgid "Daily Pixels per Faction"
-msgstr ""
+msgstr "Điểm ảnh hàng ngày mỗi nhóm"
 
 #: src/components/windows/Statistics.jsx:181
 msgid "Daily Pixels per Player"
-msgstr ""
+msgstr "Điểm ành hàng ngày mỗi người chơi"
 
 #: src/components/Table.jsx:28
 #: src/components/windows/Faction.jsx:783
 #: src/components/windows/User.jsx:167
 #: src/components/windows/UserArea.jsx:112
 msgid "Daily Rank"
-msgstr ""
+msgstr "Thứ hạng hàng ngày"
 
 #: src/components/windows/BadgeDisplay.jsx:60
 msgid "Date of Award"
@@ -743,7 +743,7 @@ msgstr ""
 
 #: src/components/windows/FishDisplay.jsx:74
 msgid "Date of catch"
-msgstr ""
+msgstr "Ngày bắt được"
 
 #: src/components/TemplateItemEdit.jsx:174
 #: src/components/windows/Faction.jsx:1379
@@ -787,7 +787,7 @@ msgstr "Miêu tả phải ngắn hơn 1000 chữ"
 #: src/components/windows/Faction.jsx:1561
 #: src/components/windows/MyFactions.jsx:218
 msgid "Description of your faction"
-msgstr ""
+msgstr "Miêu tả của nhóm của bạn"
 
 #: src/ui/PixelTransferController.js:70
 #: src/ui/PixelTransferController.js:165
@@ -795,6 +795,8 @@ msgid ""
 "Didn't get an answer from pixelplanet. Try to refresh if this problem "
 "persists."
 msgstr ""
+"Không nhận được phản hồi thừ pixelplanet. Hãy thử làm mới trang nếu vấn đề "
+"này vẫn tiếp diễn."
 
 #: src/components/CanvasItem.jsx:65
 #: src/components/TemplateItem.jsx:60
@@ -996,17 +998,17 @@ msgstr "Lỗi"
 #: src/ui/PixelTransferController.js:182
 #, javascript-format
 msgid "Error ${ retCode }"
-msgstr ""
+msgstr "Lỗi ${ retCode }"
 
 #: src/ui/templateLoader.js:230
 #: src/ui/templateLoader.js:256
 msgid "Error :("
-msgstr ""
+msgstr "Lỗi :("
 
 #: src/components/BadgeList.jsx:52
 #: src/components/FishList.jsx:62
 msgid "Expand"
-msgstr ""
+msgstr "Mở rộng"
 
 #: src/components/windows/Templates.jsx:156
 msgid "Export enabled templates"
@@ -1336,7 +1338,7 @@ msgstr "Khai trừ (những) thành viên"
 
 #: src/components/windows/OIDCConsent.jsx:77
 msgid "Know that an account exists"
-msgstr ""
+msgstr "Biết rằng một tài khoản có tồn tại"
 
 #: src/components/windows/MyFactions.jsx:427
 msgid "Leave"
