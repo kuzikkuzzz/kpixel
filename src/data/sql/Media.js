@@ -124,6 +124,8 @@ export async function hasMedia(hashes) {
     console.error(`SQL Error on hasMedia: ${error.message}`);
     if (conn) conn.release();
     return false;
+  } finally {
+    if (conn) conn.release();
   }
   return true;
 }

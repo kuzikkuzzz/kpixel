@@ -67,7 +67,7 @@ export async function ensureBadgeExistence(name, description) {
   try {
     conn = await pool.getConnection();
 
-    const found = await conn.query(
+    const [found] = await conn.query(
       // eslint-disable-next-line max-len
       'SELECT description FROM Badges WHERE name = ?', [name],
     );

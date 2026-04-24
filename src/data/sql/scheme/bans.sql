@@ -74,7 +74,7 @@ CREATE TABLE IF NOT EXISTS BanHistories (
   reason varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
   flags tinyint unsigned NOT NULL DEFAULT 0,
   started datetime NOT NULL,
-  ended datetime NOT NULL,
+  ended datetime,
   liftedAt datetime,
   muid int unsigned,
   lmuid int unsigned,

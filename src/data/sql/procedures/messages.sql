@@ -41,7 +41,7 @@ BEGIN
 
     SELECT 0 AS result, v_mid AS id;
     IF p_media_json IS NOT NULL THEN
-      INSERT INTO MessageMedia (sid, mid) SELECT v_mid, m.id FROM Media m
+      INSERT INTO MessageMedia (sid, mid) SELECT DISTINCT v_mid, m.id FROM Media m
         INNER JOIN JSON_TABLE(
           p_media_json,
           '$[*]' COLUMNS(

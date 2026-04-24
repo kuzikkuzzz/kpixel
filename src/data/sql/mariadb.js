@@ -16,6 +16,9 @@ const pool = createPool({
   collation: 'utf8mb4_unicode_ci',
   logger: {
     query: (LOG_MARIADB) ? console.info : undefined,
+    warning: (msg) => {
+      console.warn(`SQL Error: ${msg}`);
+    },
   },
   /*
    * return large integers as Number rather than BigInt
