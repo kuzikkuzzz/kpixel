@@ -253,7 +253,7 @@ export async function registerMedia(
     do {
       shortId = getRandomShortId();
       // eslint-disable-next-line no-await-in-loop
-      exists = await conn.query(
+      [exists] = await conn.query(
         'SELECT 1 FROM Media WHERE shortId = ? AND extension = ?',
         [shortId, extension],
       );
