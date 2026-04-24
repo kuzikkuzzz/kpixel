@@ -89,6 +89,9 @@ msgstr "Дадаць сетку (зняміце галачку, калі вам 
 msgid "Add Template"
 msgstr "Спампаваць Шаблон"
 
+msgid "Add an Mail Adress here:"
+msgstr ""
+
 #. This if for moderation tools, it's not important to translate this
 msgid "Admintools"
 msgstr "Інструменты адміністратара"
@@ -260,9 +263,6 @@ msgstr "Змяніць імя"
 
 msgid "Change Password"
 msgstr "Змяніць Пароль"
-
-msgid "Change your Mail Adress here:"
-msgstr "Змяніце свой адрас электроннай пошты тут:"
 
 msgid "Channel"
 msgstr ""
@@ -2195,6 +2195,9 @@ msgstr "W"
 msgctxt "keybinds"
 msgid "X"
 msgstr "X"
+
+#~ msgid "Change your Mail Adress here:"
+#~ msgstr "Змяніце свой адрас электроннай пошты тут:"
 
 #~ msgid ""
 #~ "Block all Private Messages. Enabling this will delete all your current "

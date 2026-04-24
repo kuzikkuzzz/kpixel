@@ -87,6 +87,9 @@ msgstr ""
 msgid "Add Template"
 msgstr "Tilføj skabelon"
 
+msgid "Add an Mail Adress here:"
+msgstr ""
+
 #. This if for moderation tools, it's not important to translate this
 msgid "Admintools"
 msgstr "Adminværktøjer"
@@ -255,9 +258,6 @@ msgstr "Skift navn"
 
 msgid "Change Password"
 msgstr "Skift Adgangskode"
-
-msgid "Change your Mail Adress here:"
-msgstr "Skift din Mail adresse her:"
 
 msgid "Channel"
 msgstr ""
@@ -2200,6 +2200,9 @@ msgstr "W"
 msgctxt "keybinds"
 msgid "X"
 msgstr "X"
+
+#~ msgid "Change your Mail Adress here:"
+#~ msgstr "Skift din Mail adresse her:"
 
 #~ msgid ""
 #~ "Block all Private Messages. Enabling this will delete all your current "

@@ -89,6 +89,9 @@ msgstr "Adaugă o Grilă (debifează dacă ai nevoie de template 1:1)"
 msgid "Add Template"
 msgstr "Încarcă Templateul"
 
+msgid "Add an Mail Adress here:"
+msgstr ""
+
 #. This if for moderation tools, it's not important to translate this
 msgid "Admintools"
 msgstr "Unelte Administrator"
@@ -258,9 +261,6 @@ msgstr "Schimba-ți Numele"
 
 msgid "Change Password"
 msgstr "Schimbă Parola"
-
-msgid "Change your Mail Adress here:"
-msgstr "Schimbă-ți adresa de Mail aici:"
 
 msgid "Channel"
 msgstr "Canal"
@@ -2205,6 +2205,9 @@ msgstr "W"
 msgctxt "keybinds"
 msgid "X"
 msgstr "X"
+
+#~ msgid "Change your Mail Adress here:"
+#~ msgstr "Schimbă-ți adresa de Mail aici:"
 
 #~ msgid "# Today"
 #~ msgstr "# azi"

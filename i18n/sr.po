@@ -90,6 +90,9 @@ msgstr "Stavi rešetku (nemoj čekirati ako ti treba 1:1 templejt)"
 msgid "Add Template"
 msgstr "Dodaj šablon"
 
+msgid "Add an Mail Adress here:"
+msgstr ""
+
 #. This if for moderation tools, it's not important to translate this
 msgid "Admintools"
 msgstr "Adminalati"
@@ -259,9 +262,6 @@ msgstr ""
 
 msgid "Change Password"
 msgstr "Promeni lozinku"
-
-msgid "Change your Mail Adress here:"
-msgstr ""
 
 msgid "Channel"
 msgstr ""

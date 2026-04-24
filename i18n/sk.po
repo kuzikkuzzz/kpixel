@@ -79,6 +79,9 @@ msgstr "Pridaj mriežku (odčiakni pokial potrebuješ 1:1 šablonu)"
 msgid "Add Template"
 msgstr "Pridaj šablonu"
 
+msgid "Add an Mail Adress here:"
+msgstr ""
+
 #. This if for moderation tools, it's not important to translate this
 msgid "Admintools"
 msgstr ""
@@ -247,9 +250,6 @@ msgstr ""
 
 msgid "Change Password"
 msgstr "Zmeniť heslo"
-
-msgid "Change your Mail Adress here:"
-msgstr ""
 
 msgid "Channel"
 msgstr ""

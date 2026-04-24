@@ -91,6 +91,9 @@ msgstr "Добавить сетку (снимите флажок, если ва�
 msgid "Add Template"
 msgstr "Добавить шаблон"
 
+msgid "Add an Mail Adress here:"
+msgstr ""
+
 #. This if for moderation tools, it's not important to translate this
 msgid "Admintools"
 msgstr "Инструменты администратора"
@@ -261,9 +264,6 @@ msgstr "Изменить ник"
 
 msgid "Change Password"
 msgstr "Изменить пароль"
-
-msgid "Change your Mail Adress here:"
-msgstr "Измените ваш адрес почты здесь:"
 
 msgid "Channel"
 msgstr "Канал"
@@ -2224,6 +2224,9 @@ msgstr "W"
 msgctxt "keybinds"
 msgid "X"
 msgstr "X"
+
+#~ msgid "Change your Mail Adress here:"
+#~ msgstr "Измените ваш адрес почты здесь:"
 
 #~ msgid "# Today"
 #~ msgstr "# Сегодня"

@@ -94,6 +94,9 @@ msgstr "Izgara ekle (eğer 1:1 bir şablon istiyorsanız bu seçeneği kapatın)
 msgid "Add Template"
 msgstr "Şablon Ekle"
 
+msgid "Add an Mail Adress here:"
+msgstr ""
+
 #. This if for moderation tools, it's not important to translate this
 msgid "Admintools"
 msgstr "Yönetici araçları"
@@ -267,9 +270,6 @@ msgstr "Adı Değiştir"
 
 msgid "Change Password"
 msgstr "Parola Değiştir"
-
-msgid "Change your Mail Adress here:"
-msgstr "E-posta adresinizi buradan değiştirin:"
 
 msgid "Channel"
 msgstr "Kanal"
@@ -2244,6 +2244,9 @@ msgstr "W"
 msgctxt "keybinds"
 msgid "X"
 msgstr "X"
+
+#~ msgid "Change your Mail Adress here:"
+#~ msgstr "E-posta adresinizi buradan değiştirin:"
 
 #~ msgid "You must enter a duration"
 #~ msgstr "Bir zaman girmelisin"

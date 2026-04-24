@@ -94,6 +94,9 @@ msgstr "Agregar Cuadrícula (desactivar si necesitas una plantilla 1:1)"
 msgid "Add Template"
 msgstr "Añadir plantilla"
 
+msgid "Add an Mail Adress here:"
+msgstr ""
+
 #. This if for moderation tools, it's not important to translate this
 msgid "Admintools"
 msgstr "Herramientas de Administración"
@@ -263,9 +266,6 @@ msgstr ""
 
 msgid "Change Password"
 msgstr "Cambiar Contraseña"
-
-msgid "Change your Mail Adress here:"
-msgstr ""
 
 msgid "Channel"
 msgstr ""

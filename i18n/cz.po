@@ -90,6 +90,9 @@ msgstr "Přidat mřížku (zrušte zaškrtnutí jestli chcete 1:1 šablonu)"
 msgid "Add Template"
 msgstr "Přidat Šablonu"
 
+msgid "Add an Mail Adress here:"
+msgstr ""
+
 #. This if for moderation tools, it's not important to translate this
 msgid "Admintools"
 msgstr ""
@@ -259,9 +262,6 @@ msgstr ""
 
 msgid "Change Password"
 msgstr "Změnit Heslo"
-
-msgid "Change your Mail Adress here:"
-msgstr ""
 
 msgid "Channel"
 msgstr ""

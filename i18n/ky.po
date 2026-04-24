@@ -86,6 +86,9 @@ msgstr "Торчо кошуу (эгер сизге 1:1 шаблон керек �
 msgid "Add Template"
 msgstr "Шаблон кошуу"
 
+msgid "Add an Mail Adress here:"
+msgstr ""
+
 #. This if for moderation tools, it's not important to translate this
 msgid "Admintools"
 msgstr "Администратор куралдары"
@@ -255,9 +258,6 @@ msgstr "Атын өзгөртүү"
 
 msgid "Change Password"
 msgstr "Сырсөздү өзгөртүү"
-
-msgid "Change your Mail Adress here:"
-msgstr "Почта дарегиңизди бул жерден өзгөртүңүз:"
 
 msgid "Channel"
 msgstr ""
@@ -2150,6 +2150,9 @@ msgstr ""
 msgctxt "keybinds"
 msgid "X"
 msgstr ""
+
+#~ msgid "Change your Mail Adress here:"
+#~ msgstr "Почта дарегиңизди бул жерден өзгөртүңүз:"
 
 #~ msgid "# Today"
 #~ msgstr "# Бүгүн"

@@ -84,6 +84,9 @@ msgstr "Lisää Ruudukko (Jätä rastittamatta jos tarvitset 1:1 mallikkeen)"
 msgid "Add Template"
 msgstr "Lisää malline"
 
+msgid "Add an Mail Adress here:"
+msgstr ""
+
 #. This if for moderation tools, it's not important to translate this
 msgid "Admintools"
 msgstr ""
@@ -254,9 +257,6 @@ msgstr ""
 
 msgid "Change Password"
 msgstr "Vaihda salasana"
-
-msgid "Change your Mail Adress here:"
-msgstr ""
 
 msgid "Channel"
 msgstr ""

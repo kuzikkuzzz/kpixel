@@ -88,6 +88,9 @@ msgstr "Tanaki atu ʻa e grid (uncheck kapau ʻoku ke fie maʻu ha template 1:1)
 msgid "Add Template"
 msgstr "Download Template"
 
+msgid "Add an Mail Adress here:"
+msgstr ""
+
 #. This if for moderation tools, it's not important to translate this
 msgid "Admintools"
 msgstr ""
@@ -261,9 +264,6 @@ msgstr ""
 
 msgid "Change Password"
 msgstr "Liliu ʻa e Lea Fufuú"
-
-msgid "Change your Mail Adress here:"
-msgstr ""
 
 msgid "Channel"
 msgstr ""

@@ -91,6 +91,9 @@ msgstr "Dodaj rešetku (poništite ako vam je potreban predložak 1:1)"
 msgid "Add Template"
 msgstr "Dodaj šablon"
 
+msgid "Add an Mail Adress here:"
+msgstr ""
+
 #. This if for moderation tools, it's not important to translate this
 msgid "Admintools"
 msgstr "Administratorsko sučelje"
@@ -262,9 +265,6 @@ msgstr "Promijeni ime"
 
 msgid "Change Password"
 msgstr "Promjena lozinkе"
-
-msgid "Change your Mail Adress here:"
-msgstr "Promijenite email adresu ovdje:"
 
 msgid "Channel"
 msgstr "Kanal"
@@ -2212,6 +2212,9 @@ msgstr "W"
 msgctxt "keybinds"
 msgid "X"
 msgstr "X"
+
+#~ msgid "Change your Mail Adress here:"
+#~ msgstr "Promijenite email adresu ovdje:"
 
 #~ msgid "You must enter a duration"
 #~ msgstr "Morate unijeti trajanje"

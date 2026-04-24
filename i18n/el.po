@@ -88,6 +88,9 @@ msgstr "Βάλε κάτζελο (βκάλε το αν θέλεις ακριβέ�
 msgid "Add Template"
 msgstr "Πρόσθεσε πρότυπο"
 
+msgid "Add an Mail Adress here:"
+msgstr ""
+
 #. This if for moderation tools, it's not important to translate this
 msgid "Admintools"
 msgstr ""
@@ -259,9 +262,6 @@ msgstr ""
 
 msgid "Change Password"
 msgstr "Άλλαξε τον κωδικό σου"
-
-msgid "Change your Mail Adress here:"
-msgstr ""
 
 msgid "Channel"
 msgstr ""

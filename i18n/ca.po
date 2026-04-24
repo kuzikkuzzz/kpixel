@@ -87,6 +87,9 @@ msgstr "Afegeix Quadrícula (desactiva-ho si necessites una plantilla 1:1)"
 msgid "Add Template"
 msgstr "Afegeix una Plantilla"
 
+msgid "Add an Mail Adress here:"
+msgstr ""
+
 #. This if for moderation tools, it's not important to translate this
 msgid "Admintools"
 msgstr "Eines d'administrador"
@@ -256,9 +259,6 @@ msgstr "Canvia el Nom"
 
 msgid "Change Password"
 msgstr "Canvia la Contrasenya"
-
-msgid "Change your Mail Adress here:"
-msgstr "Canvia la teva Adreça de Correu aquí:"
 
 msgid "Channel"
 msgstr ""
@@ -2221,6 +2221,9 @@ msgstr "W"
 msgctxt "keybinds"
 msgid "X"
 msgstr "X"
+
+#~ msgid "Change your Mail Adress here:"
+#~ msgstr "Canvia la teva Adreça de Correu aquí:"
 
 #~ msgid ""
 #~ "Block all Private Messages. Enabling this will delete all your current "

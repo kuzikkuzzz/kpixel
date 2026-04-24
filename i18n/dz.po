@@ -86,6 +86,9 @@ msgstr ""
 msgid "Add Template"
 msgstr ""
 
+msgid "Add an Mail Adress here:"
+msgstr ""
+
 #. This if for moderation tools, it's not important to translate this
 msgid "Admintools"
 msgstr ""
@@ -255,9 +258,6 @@ msgid "Change Name"
 msgstr ""
 
 msgid "Change Password"
-msgstr ""
-
-msgid "Change your Mail Adress here:"
 msgstr ""
 
 msgid "Channel"

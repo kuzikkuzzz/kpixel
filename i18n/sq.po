@@ -94,6 +94,9 @@ msgstr "Shto Rrjetën (hiqni shenjën nëse keni nevojë për një shabllon 1:1)
 msgid "Add Template"
 msgstr "Shto Shabllon"
 
+msgid "Add an Mail Adress here:"
+msgstr ""
+
 #. This if for moderation tools, it's not important to translate this
 msgid "Admintools"
 msgstr "Veglat e administratorit"
@@ -268,9 +271,6 @@ msgstr "Ndrysho Emrin"
 
 msgid "Change Password"
 msgstr "Ndrysho Fjalëkalimin"
-
-msgid "Change your Mail Adress here:"
-msgstr "Ndrysho Adresën tënde të Postës këtu:"
 
 msgid "Channel"
 msgstr "Kanal"
@@ -2042,8 +2042,8 @@ msgid ""
 "You have been invited to join us on pixelplanet. We currently have $"
 "{ memberCount } members."
 msgstr ""
-"Ti je ftuar të hysh të na bashkohesh në pixelplanet. Ne aktualisht kemi ${ "
-"memberCount } pjesëtarë."
+"Ti je ftuar të hysh të na bashkohesh në pixelplanet. Ne aktualisht kemi $"
+"{ memberCount } pjesëtarë."
 
 msgid "You have no users blocked"
 msgstr "Ju nuk keni përdorues të bllokuar"
@@ -2242,6 +2242,9 @@ msgstr "W"
 msgctxt "keybinds"
 msgid "X"
 msgstr "X"
+
+#~ msgid "Change your Mail Adress here:"
+#~ msgstr "Ndrysho Adresën tënde të Postës këtu:"
 
 #~ msgid "# Today"
 #~ msgstr "# Sot"

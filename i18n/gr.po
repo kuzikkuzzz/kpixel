@@ -88,6 +88,9 @@ msgstr "Προσθήκη πλέγματος (αποεπιλέξτε εάν χρ�
 msgid "Add Template"
 msgstr "Προσθήκη πρωτοτύπου"
 
+msgid "Add an Mail Adress here:"
+msgstr ""
+
 #. This if for moderation tools, it's not important to translate this
 msgid "Admintools"
 msgstr "Εργαλεία του admin"
@@ -260,9 +263,6 @@ msgstr "Άλλαξε ονομασία"
 
 msgid "Change Password"
 msgstr "Άλλαξτε κωδικό"
-
-msgid "Change your Mail Adress here:"
-msgstr "Άλλαξε το mail address σου εδώ:"
 
 msgid "Channel"
 msgstr ""
@@ -2217,6 +2217,9 @@ msgstr ""
 msgctxt "keybinds"
 msgid "X"
 msgstr "x εκτός ορίων"
+
+#~ msgid "Change your Mail Adress here:"
+#~ msgstr "Άλλαξε το mail address σου εδώ:"
 
 #~ msgid ""
 #~ "Block all Private Messages. Enabling this will delete all your current "

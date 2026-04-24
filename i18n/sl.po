@@ -88,6 +88,9 @@ msgstr "Dodaj Mrežo (počistite če potrebujete 1:1 predlogo)"
 msgid "Add Template"
 msgstr "Prenesi Predlogo"
 
+msgid "Add an Mail Adress here:"
+msgstr ""
+
 #. This if for moderation tools, it's not important to translate this
 msgid "Admintools"
 msgstr "Administratorska orodja"
@@ -264,9 +267,6 @@ msgstr ""
 
 msgid "Change Password"
 msgstr "Spremeni Geslo"
-
-msgid "Change your Mail Adress here:"
-msgstr ""
 
 msgid "Channel"
 msgstr ""

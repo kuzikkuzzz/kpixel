@@ -88,6 +88,9 @@ msgstr "Grid-ის დამატება (არ მონიშნოთ, �
 msgid "Add Template"
 msgstr "თემფლეითის დამატება"
 
+msgid "Add an Mail Adress here:"
+msgstr ""
+
 #. This if for moderation tools, it's not important to translate this
 msgid "Admintools"
 msgstr ""
@@ -257,9 +260,6 @@ msgstr ""
 
 msgid "Change Password"
 msgstr "Პაროლის შეცვლა"
-
-msgid "Change your Mail Adress here:"
-msgstr ""
 
 msgid "Channel"
 msgstr ""

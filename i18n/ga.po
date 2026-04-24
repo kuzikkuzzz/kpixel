@@ -86,6 +86,9 @@ msgstr "Cuir Eangach leis (díthiceáil más gá teimpléad 1:1 duit)"
 msgid "Add Template"
 msgstr "Cuir Teimpléad leis"
 
+msgid "Add an Mail Adress here:"
+msgstr ""
+
 #. This if for moderation tools, it's not important to translate this
 msgid "Admintools"
 msgstr "Uirlisí riaracháin"
@@ -256,9 +259,6 @@ msgstr "Athraigh Ainm"
 
 msgid "Change Password"
 msgstr "Athraigh Pasfhocal"
-
-msgid "Change your Mail Adress here:"
-msgstr "Athraigh do Sheoladh Poist anseo:"
 
 msgid "Channel"
 msgstr ""
@@ -2206,6 +2206,9 @@ msgstr "W"
 msgctxt "keybinds"
 msgid "X"
 msgstr "X"
+
+#~ msgid "Change your Mail Adress here:"
+#~ msgstr "Athraigh do Sheoladh Poist anseo:"
 
 #~ msgid ""
 #~ "Block all Private Messages. Enabling this will delete all your current "

@@ -3,8 +3,8 @@ msgstr ""
 "Report-Msgid-Bugs-To: admin@pixelplanet.fun\n"
 "PO-Revision-Date: 2026-04-21 16:30+0000\n"
 "Last-Translator: \"[☭]FalangaMan[Z]\" <falangaman@noreply.pixelplanet.fun>\n"
-"Language-Team: Polish <https://translate.gs-os.com/projects/ppfun/client/pl/>"
-"\n"
+"Language-Team: Polish <https://translate.gs-os.com/projects/ppfun/client/pl/"
+">\n"
 "Language: pl\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -87,6 +87,9 @@ msgstr "Dodaj Siatkę (odznacz jeśli potrzebujesz szablonu 1:1)"
 
 msgid "Add Template"
 msgstr "dodaj szablon"
+
+msgid "Add an Mail Adress here:"
+msgstr ""
 
 #. This if for moderation tools, it's not important to translate this
 msgid "Admintools"
@@ -258,9 +261,6 @@ msgstr "Zmień Nazwe"
 
 msgid "Change Password"
 msgstr "zmień hasło"
-
-msgid "Change your Mail Adress here:"
-msgstr "Zmień Swój Adres Mail Tutaj:"
 
 msgid "Channel"
 msgstr "Kanał"
@@ -2179,6 +2179,9 @@ msgstr "W"
 msgctxt "keybinds"
 msgid "X"
 msgstr "X"
+
+#~ msgid "Change your Mail Adress here:"
+#~ msgstr "Zmień Swój Adres Mail Tutaj:"
 
 #~ msgid "You must enter a duration"
 #~ msgstr "Musisz wprowadzić czas trwania"

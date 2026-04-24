@@ -84,6 +84,9 @@ msgstr "Tor lê zêde bikin (heke we pêdivî bi şablonek 1:1 heye, hilnebijêr
 msgid "Add Template"
 msgstr "Şablon lê zêde bike"
 
+msgid "Add an Mail Adress here:"
+msgstr ""
+
 #. This if for moderation tools, it's not important to translate this
 msgid "Admintools"
 msgstr ""
@@ -254,9 +257,6 @@ msgstr ""
 
 msgid "Change Password"
 msgstr "Şîfre biguherînin"
-
-msgid "Change your Mail Adress here:"
-msgstr ""
 
 msgid "Channel"
 msgstr ""

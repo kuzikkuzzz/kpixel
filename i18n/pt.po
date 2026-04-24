@@ -88,6 +88,9 @@ msgstr "Adicionar grade (desmarque se você precisa de um modelo 1:1)"
 msgid "Add Template"
 msgstr "Adicionar Template"
 
+msgid "Add an Mail Adress here:"
+msgstr ""
+
 #. This if for moderation tools, it's not important to translate this
 msgid "Admintools"
 msgstr "Ferramentas de Administrador"
@@ -260,9 +263,6 @@ msgstr "Alterar Nome"
 
 msgid "Change Password"
 msgstr "Mudar a senha"
-
-msgid "Change your Mail Adress here:"
-msgstr "Altere seu endereço de e-mail aqui:"
 
 msgid "Channel"
 msgstr ""
@@ -2203,6 +2203,9 @@ msgstr "W"
 msgctxt "keybinds"
 msgid "X"
 msgstr "X"
+
+#~ msgid "Change your Mail Adress here:"
+#~ msgstr "Altere seu endereço de e-mail aqui:"
 
 #~ msgid ""
 #~ "Block all Private Messages. Enabling this will delete all your current "

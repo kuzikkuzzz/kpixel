@@ -78,6 +78,9 @@ msgstr "添加网格（若您需要1比1模板则取消选中）"
 msgid "Add Template"
 msgstr "添加模板"
 
+msgid "Add an Mail Adress here:"
+msgstr ""
+
 #. This if for moderation tools, it's not important to translate this
 msgid "Admintools"
 msgstr "管理员工具"
@@ -246,9 +249,6 @@ msgstr "更改名称"
 
 msgid "Change Password"
 msgstr "更改密码"
-
-msgid "Change your Mail Adress here:"
-msgstr "此处更改你的邮箱地址："
 
 msgid "Channel"
 msgstr "渠道"
@@ -2108,6 +2108,9 @@ msgstr ""
 msgctxt "keybinds"
 msgid "X"
 msgstr ""
+
+#~ msgid "Change your Mail Adress here:"
+#~ msgstr "此处更改你的邮箱地址："
 
 #~ msgid "# Today"
 #~ msgstr "＃今天"

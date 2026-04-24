@@ -1,48 +1,40 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: admin@pixelplanet.fun\n"
-"PO-Revision-Date: 2026-04-23 08:30+0000\n"
+"PO-Revision-Date: 2026-04-24 13:25+0000\n"
 "Last-Translator: Ngvn <ngvn@noreply.pixelplanet.fun>\n"
 "Language-Team: Vietnamese <https://translate.gs-os.com/projects/ppfun/client/"
 "vi/>\n"
 "Language: vi\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
 "X-Generator: Weblate 5.15.2\n"
 
-#: src/components/BanInfo.jsx:111
 msgid " which is in "
 msgstr " tức là sau "
 
-#: src/components/windows/Help.jsx:120
 #, javascript-format
 msgid "${ mouseSymbol } Hold left mouse button and drag mouse to rotate"
 msgstr "${ mouseSymbol } Nhấn giữ chuột trái và di chuyển chuột để xoay"
 
-#: src/components/windows/Help.jsx:112
-#: src/components/windows/Help.jsx:123
 #, javascript-format
 msgid "${ mouseSymbol } Left click or ${ touchSymbol } tap to place a pixel"
 msgstr ""
 "${ mouseSymbol } Nhấp chuột trái hoặc ${ touchSymbol } chạm vào màn hình để "
 "đặt một pixel"
 
-#: src/components/windows/Help.jsx:122
 #, javascript-format
 msgid "${ mouseSymbol } Right click and drag mouse to pan"
 msgstr "${ mouseSymbol } Nhấp chuột phải và kéo chuột để di chuyển"
 
-#: src/components/windows/Help.jsx:124
 #, javascript-format
 msgid ""
-"${ mouseSymbol } Right click or ${ touchSymbol } double-tap to remove a "
-"pixel"
+"${ mouseSymbol } Right click or ${ touchSymbol } double-tap to remove a pixel"
 msgstr ""
 "${ mouseSymbol } Nhấp chuột phải hoặc ${ touchSymbol } chạm vào màn hình hai "
 "lần để xoá một pixel"
 
-#: src/components/windows/Help.jsx:121
 #, javascript-format
 msgid ""
 "${ mouseSymbol } Scroll mouse wheel or hold ${ mouseSymbol } middle mouse "
@@ -51,31 +43,24 @@ msgstr ""
 "${ mouseSymbol } Sử dụng con lăn của chuột hoặc nhấn giữ ${ mouseSymbol } "
 "nút giữa của chuột và kéo để phóng to"
 
-#: src/components/IIDTools.jsx:232
 msgid "(0 = infinite)"
 msgstr "(0 = tô vô hạn)"
 
-#: src/components/windows/MyFactions.jsx:404
 msgid "(click a role to activate it)"
 msgstr "(chọn một vai trò để kích hoạt nó)"
 
-#: src/components/windows/Faction.jsx:1041
 msgid "(click a role to assign or remove it)"
 msgstr "(chọn một vai trò để giao hoặc xóa nó)"
 
-#: src/components/windows/Statistics.jsx:215
 msgid "+last hour"
 msgstr "+một tiếng trước"
 
-#: src/components/ChangeMail.jsx:180
 msgid "...loading Login methods and sessions..."
 msgstr "...đang tải các phương pháp và phiên đăng nhập..."
 
-#: src/components/Fish.jsx:39
 msgid "A Phish!"
 msgstr "Là Ká kìa!"
 
-#: src/components/windows/Faction.jsx:1183
 msgid ""
 "A flag representing the role, it should be 16x11 pixels. If left empty, "
 "users with this role selected will still show their own flags."
@@ -83,11 +68,9 @@ msgstr ""
 "Một lá cờ đại diện cho vai trò, nên dùng kích thước 16x11 pixel. Nếu để "
 "trống, người dùng có vai trò trên sẽ hiện thị cờ của người dùng."
 
-#: src/components/UserMessages.jsx:44
 msgid "A new verification mail is getting sent to you."
 msgstr "Một email xác thực đã được gửi cho bạn."
 
-#: src/components/windows/Faction.jsx:1424
 msgid ""
 "A role has all the permissions of all levels below and equal to it. In "
 "example: Every role with a power level of >=50 can manage invites (50)."
@@ -95,146 +78,109 @@ msgstr ""
 "Một vai trò sẽ có tất cả quyền hạn của cấp quyền hạn thấp hơn hoặc bằng nó. "
 "Ví dụ: Tất cả vai trò với cấp quyền hạn >= 50 có thể quản lí lời mời (50)."
 
-#: src/components/windows/OIDCConsent.jsx:71
 msgid "ACCESS MODTOOLS"
 msgstr "TRUY CẬP CÔNG CỤ MOD"
 
-#: src/components/windows/Converter.jsx:362
 msgid "Add Grid (uncheck if you need a 1:1 template)"
 msgstr "Thêm lưới (không chọn nếu cần ảnh mẫu 1:1)"
 
-#: src/components/windows/Templates.jsx:139
 msgid "Add Template"
 msgstr "Thêm ảnh mẫu"
 
+msgid "Add an Mail Adress here:"
+msgstr ""
+
 #. This if for moderation tools, it's not important to translate this
-#: src/components/menus/mainMenu.js:166
 msgid "Admintools"
 msgstr "Công cụ Quản trị viên"
 
-#: src/components/windows/User.jsx:183
 msgid "Age"
 msgstr "Tuổi"
 
-#: src/components/windows/Faction.jsx:878
 msgid "All members of this faction are hidden"
 msgstr "Tất cả thành viên trong nhóm đều đã bị ẩn"
 
-#: src/components/windows/Settings.jsx:99
 msgid "All sound effects will be disabled."
 msgstr "Tất cả hiệu ứng âm thanh đều bị vô hiệu hoá."
 
-#: src/components/windows/Settings.jsx:85
 msgid "Always show Movement Controls"
 msgstr "Luôn luôn hiện bảng phím điều hướng"
 
-#: src/components/windows/Settings.jsx:90
 msgid "Always show movement control buttons"
 msgstr "Luôn luôn hiện bảng gồm các phím để điều hướng"
 
-#: src/components/windows/MyFactions.jsx:196
 msgid "An image representing your faction"
 msgstr "Một hình ảnh đại diện cho nhóm của bạn"
 
-#: src/components/windows/Converter.jsx:523
 msgid "Anti Aliasing"
 msgstr "Khử răng cưa"
 
-#: src/components/Canvastools.jsx:502
 msgid "Apply a filter to clean trash in large canvas areas."
 msgstr ""
 
-#: src/components/windows/CanvasSelect.jsx:40
 msgid "Archive"
 msgstr "Lưu trữ"
 
-#: src/components/windows/Faction.jsx:999
 msgid "Assign Roles"
 msgstr "Giao Vai trò"
 
-#: src/components/Admintools.jsx:360
 msgid "Assign new Mod"
 msgstr "Chọn một Mod mới"
 
-#: src/components/windows/Faction.jsx:1208
 msgid "Assign role per default to new members"
 msgstr ""
 
-#: src/components/windows/Faction.jsx:1447
 msgid "Assign roles below their own"
 msgstr ""
 
-#: src/components/windows/Faction.jsx:1210
 msgid "Assign this role to every new member automatically on join."
 msgstr ""
 
-#: src/components/windows/Faction.jsx:1356
 msgid "Assigned role per default"
 msgstr ""
 
-#: src/components/FileUpload.jsx:558
 msgid "Attach File"
 msgstr "Đính kèm tệp tin"
 
-#: src/components/windows/Settings.jsx:116
 msgid "Auto Zoom In"
 msgstr "Tự động phóng to"
 
-#: src/components/SocialSettings.jsx:86
-#: src/components/Table.jsx:20
-#: src/components/windows/Faction.jsx:1493
-#: src/components/windows/MyFactions.jsx:188
 msgid "Avatar"
 msgstr "Ảnh đại diện"
 
-#: src/components/LogInForm.jsx:282
 msgid "Back"
 msgstr "Quay lại"
 
-#: src/components/windows/index.js:44
 msgid "Badge Display"
 msgstr ""
 
-#: src/components/BadgeList.jsx:20
 msgid "Badges"
 msgstr ""
 
-#: src/components/windows/Faction.jsx:1075
 msgid "Ban"
 msgstr "Cấm"
 
-#: src/components/Mediatools.jsx:89
-#: src/components/embeds/LocalMedia.jsx:230
 msgid "Ban media"
 msgstr "Cấm đa phương tiện"
 
-#: src/components/windows/Faction.jsx:1451
 msgid "Ban members"
 msgstr "Cấm (các) thành viên"
 
-#: src/ui/PixelTransferController.js:155
 msgid "Banned"
 msgstr "Bị cấm"
 
-#: src/components/windows/Help.jsx:85
 msgid "Banned? Detected as Proxy?"
 msgstr "Bị cấm? Bị nhận diện là Proxy?"
 
-#: src/components/windows/Faction.jsx:90
 msgid "Bans"
 msgstr "(Những) lệnh cấm"
 
-#: src/components/menus/userContextMenu.js:58
-#: src/components/windows/User.jsx:243
-#: src/components/windows/User.jsx:249
 msgid "Block"
 msgstr "Chặn"
 
-#: src/components/SocialSettings.jsx:195
 msgid "Block DMs"
 msgstr "Chặn (những) tin nhắn trực tiếp"
 
-#: src/components/SocialSettings.jsx:204
 msgid ""
 "Block all Private Messages. Enabling this will make it impossible for other "
 "users to start messaging you. You can still start new DMs with other users "
@@ -245,326 +191,216 @@ msgstr ""
 "trực tiếp mới với người dùng khác và mọi những tin nhắn trực tiếp đang có "
 "vẫn sẽ mở."
 
-#: src/ui/PixelTransferController.js:172
 msgid "Blocked"
 msgstr "Đã bị chặn"
 
-#: src/components/Canvastools.jsx:374
-#: src/components/Canvastools.jsx:451
-#: src/components/Canvastools.jsx:547
-#: src/components/Watchtools.jsx:197
 msgid "Bottom-right corner"
 msgstr "Góc dưới bên phải"
 
-#: src/components/Canvastools.jsx:175
 msgid "Build image and set it to protected."
 msgstr ""
 
-#: src/components/Canvastools.jsx:172
 msgid "Build image on canvas."
 msgstr ""
 
-#: src/components/Canvastools.jsx:178
 msgid "Build image, but reset cooldown to unset-pixel cd."
 msgstr ""
 
-#: src/components/BanInfo.jsx:102
 msgid "By Mod"
 msgstr ""
 
-#: src/components/windows/Converter.jsx:329
 msgid "Calculate like GIMP"
 msgstr ""
 
-#: src/ui/templateLoader.js:231
 msgid "Can not export more than 20 or no template!"
 msgstr "Không thể xuất ra nhiều hơn 20 hoặc không có ảnh mẫu!"
 
-#: src/ui/templateLoader.js:257
 msgid "Can not import more than 20 or no template!"
 msgstr "Không thể nhập vào nhiều hơn 20 hoặc không có ảnh mẫu!"
 
-#: src/components/Captcha.jsx:263
 msgid "Can't read? Reload:"
 msgstr "Không thể đọc? Tải lại:"
 
-#: src/ui/rendererFactory.js:38
 msgid "Can't render 3D canvas, do you have WebGL2 disabled?"
 msgstr "Không thể kết xuất đồ họa 3D từ khung vẽ, bạn có đang tắt WebGL2?"
 
-#: src/components/ChangeMail.jsx:243
-#: src/components/ChangePassword.jsx:124
-#: src/components/DeleteAccount.jsx:81
-#: src/components/GlobalCaptcha.jsx:94
-#: src/components/LogInForm.jsx:307
-#: src/components/LogInForm.jsx:412
-#: src/components/RefreshPrompt.jsx:16
-#: src/components/TemplateItemEdit.jsx:181
-#: src/components/windows/Faction.jsx:1228
-#: src/components/windows/Faction.jsx:1390
-#: src/components/windows/Faction.jsx:1623
-#: src/components/windows/Faction.jsx:1664
-#: src/components/windows/Invite.jsx:132
-#: src/components/windows/MyFactions.jsx:262
 msgid "Cancel"
 msgstr "Hủy"
 
-#: src/components/windows/Templates.jsx:132
 msgid "Cancel adding Template"
 msgstr "Huỷ thêm ảnh mẫu"
 
-#: src/components/TemplateItem.jsx:54
-#: src/components/TemplateItemEdit.jsx:122
-#: src/components/Watchtools.jsx:124
 msgid "Canvas"
 msgstr "Khung vẽ"
 
-#: src/components/windows/index.js:41
 msgid "Canvas Archive"
 msgstr "Lưu trữ khung vẽ"
 
-#: src/components/Canvastools.jsx:500
 msgid "Canvas Cleaner"
 msgstr ""
 
-#: src/ui/rendererFactory.js:37
 msgid "Canvas Error"
 msgstr "Lỗi khung vẽ"
 
-#: src/components/menus/mainMenu.js:63
-#: src/components/windows/index.js:40
 msgid "Canvas Selection"
 msgstr "Lựa chọn khung vẽ"
 
-#: src/components/LogInForm.jsx:389
 msgid "Captcha"
 msgstr "Captcha"
 
-#: src/components/windows/FishDisplay.jsx:78
 msgid "Caught by"
 msgstr "Câu bởi"
 
-#: src/components/windows/Faction.jsx:1297
 msgid "Change Flag"
 msgstr "Đổi cờ"
 
-#: src/store/actions/index.js:21
 msgid "Change Happened"
 msgstr "Đã ghi nhận thay đổi"
 
-#: src/components/windows/UserArea.jsx:146
 msgid "Change Name"
 msgstr "Đổi tên"
 
-#: src/components/windows/UserArea.jsx:179
 msgid "Change Password"
 msgstr "Đổi mật khẩu"
 
-#: src/components/ChangeMail.jsx:230
-msgid "Change your Mail Adress here:"
-msgstr "Đổi thư mục điện tử của bạn ở đây:"
-
-#: src/components/windows/Chat.jsx:110
 msgid "Channel"
 msgstr "Kênh"
 
-#: src/components/windows/Chat.jsx:386
 msgid "Channel settings"
 msgstr "Cài đặt kênh"
 
-#: src/components/windows/Statistics.jsx:91
 msgid "Charts"
 msgstr "Biểu đồ"
 
-#: src/components/windows/index.js:39
 msgid "Chat"
 msgstr "Cuộc trò chuyện"
 
-#: src/components/windows/Chat.jsx:326
 msgid "Chat here"
 msgstr "Nhắn tin ở đây"
 
-#: src/components/windows/Settings.jsx:159
 msgid "Check out past versions of the canvas."
 msgstr "Xem phiên bản cũ của các khung vẽ."
 
-#: src/components/windows/OIDCConsent.jsx:242
 msgid "Check to allow"
 msgstr "Nhấn để cho phép"
 
-#: src/components/Watchtools.jsx:123
 msgid "Check who placed in an area"
 msgstr ""
 
-#: src/components/Canvastools.jsx:238
-#: src/components/windows/Converter.jsx:192
 msgid "Choose Canvas"
 msgstr "Chọn khung vẽ"
 
-#: src/components/windows/Converter.jsx:333
 msgid "Choose Color Mode"
 msgstr ""
 
-#: src/components/windows/Converter.jsx:262
 msgid "Choose Strategy"
 msgstr ""
 
-#: src/components/windows/UserArea.jsx:159
 msgid "Choose Username"
 msgstr "Chọn tên người dùng"
 
-#: src/components/Canvastools.jsx:196
 msgid ""
 "Clean spare pixels that are surrounded by a single other color or unset "
-"pixels (VERY AGGRESSIVE ON CANVASES THAT ALLOW UNSET PIXELS (where there "
-"are two cooldowns)!)"
+"pixels (VERY AGGRESSIVE ON CANVASES THAT ALLOW UNSET PIXELS (where there are "
+"two cooldowns)!)"
 msgstr ""
 
-#: src/components/Canvastools.jsx:188
 msgid "Clean spare pixels that are surrounded by unset pixels"
 msgstr ""
 
-#: src/components/Canvastools.jsx:192
 msgid ""
-"Clean spare pixels that are surrounded by unset pixels and up to 1 other "
-"set pixels"
+"Clean spare pixels that are surrounded by unset pixels and up to 1 other set "
+"pixels"
 msgstr ""
 
-#: src/components/Admintools.jsx:405
 msgid "Cleaners can use 0cd blank colors."
 msgstr ""
 
-#: src/components/SocialSettings.jsx:103
-#: src/components/SocialSettings.jsx:157
-#: src/components/windows/Faction.jsx:1308
-#: src/components/windows/Faction.jsx:1512
 msgid "Clear"
 msgstr ""
 
-#: src/components/windows/Help.jsx:113
-#: src/components/windows/Help.jsx:125
 #, javascript-format
 msgid ""
 "Click ${ mouseSymbol } middle mouse button or ${ touchSymbol } long-tap to "
 "select current hovering color"
 msgstr ""
 
-#: src/components/windows/Help.jsx:101
 msgid "Click a color in palette to select it"
 msgstr "Nhấn vào một màu ở bảng màu để chọn"
 
-#: src/components/windows/MyFactions.jsx:295
 msgid "Click here to cease representation."
 msgstr ""
 
-#: src/components/UserMessages.jsx:48
 msgid "Click here to request a new verification mail."
 msgstr "Nhấn vào đây để yêu cầu một email xác thực mới."
 
-#: src/components/Captcha.jsx:234
 msgid "Click to Load Captcha"
 msgstr "Nhấn vào để tải Captcha"
 
-#: src/components/FileUpload.jsx:90
 msgid "Click to remove"
 msgstr ""
 
-#: src/components/Window.jsx:218
 msgid "Clone"
 msgstr ""
 
-#: src/components/Admintools.jsx:191
-#: src/components/Canvastools.jsx:234
-#: src/components/Watchtools.jsx:119
-#: src/components/Window.jsx:260
-#: src/components/menus/channelContextMenu.js:31
-#: src/components/windows/Faction.jsx:1087
-#: src/components/windows/MyFactions.jsx:449
 msgid "Close"
 msgstr "Đóng"
 
-#: src/components/buttons/ChatButton.jsx:41
 msgid "Close Chat"
 msgstr "Đóng cuộc trò chuyện"
 
-#: src/components/buttons/PalselButton.jsx:30
 msgid "Close Palette"
 msgstr "Đóng bảng màu"
 
-#: src/components/menus/channelContextMenu.js:42
 msgid "Compact Chat"
 msgstr "Cuộc trò chuyện nhỏ gọn"
 
-#: src/components/windows/Settings.jsx:124
 msgid "Compact Palette"
 msgstr "Bảng màu nhỏ gọn"
 
-#: src/components/windows/Faction.jsx:995
-#: src/components/windows/Faction.jsx:1037
 msgid "Confirm"
 msgstr "Xác nhận"
 
-#: src/components/windows/Faction.jsx:1075
 msgid "Confirm Ban"
 msgstr "Xác nhận cấm"
 
-#: src/components/windows/Faction.jsx:1379
-#: src/components/windows/Faction.jsx:1616
 msgid "Confirm Delete"
 msgstr "Xác nhận xoá"
 
-#: src/components/windows/Faction.jsx:1060
 msgid "Confirm Kick"
 msgstr "Xác nhận khai trừ"
 
-#: src/components/windows/Faction.jsx:867
-#: src/components/windows/MyFactions.jsx:427
 msgid "Confirm Leave"
 msgstr "Xác nhận rời đi"
 
-#: src/components/ChangePassword.jsx:111
 msgid "Confirm New Password"
 msgstr "Xác nhận mật khẩu mới"
 
-#: src/components/ChangePassword.jsx:111
-#: src/components/LogInForm.jsx:364
-#: src/components/LogInForm.jsx:369
 msgid "Confirm Password"
 msgstr "Xác nhận mật khẩu"
 
-#: src/components/LogInForm.jsx:372
 msgid "Confirm your password."
 msgstr "Xác nhận mật khẩu của bạn."
 
-#: src/store/actions/fetch.js:55
 #, javascript-format
 msgid "Connection error ${ code } :("
-msgstr ""
+msgstr "Lỗi kết nối ${ code } :("
 
-#: src/components/windows/OIDCConsent.jsx:230
 msgid "Consent"
 msgstr ""
 
-#: src/components/windows/Help.jsx:99
-#: src/components/windows/Help.jsx:115
 msgid "Controls"
 msgstr ""
 
-#: src/components/windows/Converter.jsx:243
 msgid "Convert an image to canvas colors"
 msgstr ""
 
-#: src/components/menus/mainMenu.js:203
-#: src/components/windows/Converter.jsx:191
-#: src/components/windows/index.js:38
 msgid "Converter"
 msgstr ""
 
-#: src/components/CanvasItem.jsx:35
 msgid "Cooldown"
 msgstr "Thời gian hồi chiêu"
 
-#: src/components/CooldownChanges.jsx:48
 msgid ""
 "Cooldown is usually automatically changed for a country that is dominating. "
 "In example in the case of a streamer raid."
@@ -572,225 +408,147 @@ msgstr ""
 "Thời gian hồi chiêu thường tự động thay đổi trong một quốc gia chiếm ưu thế. "
 "Ví dụ như một cuộc tấn công của một streamer."
 
-#: src/components/TemplateItem.jsx:57
-#: src/components/TemplateItemEdit.jsx:141
 msgid "Coordinates"
 msgstr "Toạ độ"
 
-#: src/components/Canvastools.jsx:283
 msgid "Coordinates:"
 msgstr "Toạ độ:"
 
-#: src/components/ClipboardCopyField.jsx:19
-#: src/components/ClipboardCopyField.jsx:40
-#: src/components/CoordinatesBox.jsx:43
-#: src/components/GetIID.jsx:51
-#: src/controls/keypress.js:208
 msgid "Copied"
 msgstr "Đã sao chép"
 
-#: src/components/ClipboardCopyField.jsx:42
-#: src/components/GetIID.jsx:53
-#: src/components/windows/Faction.jsx:1685
 msgid "Copy"
 msgstr "Sao chép"
 
-#: src/components/ClipboardCopyField.jsx:16
 msgid "Copy Link"
 msgstr "Sao chép liên lết"
 
-#: src/components/Watchtools.jsx:499
 msgid "Copy Selected to Clipboard"
 msgstr "Sao chép vào bảng nhớ tạm"
 
-#: src/components/windows/BadgeDisplay.jsx:73
-#: src/components/windows/FishDisplay.jsx:87
 msgid "Copy URL"
 msgstr "Sao chép URL"
 
-#: src/components/Watchtools.jsx:470
 msgid "Copy UserId to Clipboard"
 msgstr "Sao chép mã số người dùng vào bảng nhớ tạm"
 
-#: src/components/CoordinatesBox.jsx:46
-#: src/components/Watchtools.jsx:421
-#: src/components/Watchtools.jsx:444
-#: src/components/windows/Converter.jsx:567
 msgid "Copy to Clipboard"
 msgstr "Sao chép vào bảng nhớ tạm"
 
-#: src/store/actions/fetch.js:722
-#: src/store/actions/fetch.js:816
 msgid "Could not connect to server"
 msgstr "Không thể kết nối vào máy chủ"
 
-#: src/store/actions/fetch.js:88
-#: src/store/actions/fetch.js:114
 msgid "Could not connect to server, please try again later :("
 msgstr "Không thể kết nối vào máy chủ, vui lòng thử lại sau :("
 
-#: src/components/Captcha.jsx:66
 msgid "Could not load captcha"
 msgstr "Không thể tải captcha"
 
-#: src/store/actions/fetch.js:700
-#: src/store/actions/fetch.js:805
 msgid "Could not process files"
 msgstr ""
 
-#: src/ui/PixelTransferController.js:177
 msgid "Couldn't set Pixel"
 msgstr ""
 
-#: src/components/windows/Statistics.jsx:90
 msgid "Countries Today"
 msgstr "Các quốc gia hôm nay"
 
-#: src/components/CooldownChanges.jsx:26
-#: src/components/windows/Statistics.jsx:212
 msgid "Country"
 msgstr "Quốc gia"
 
-#: src/components/windows/MyFactions.jsx:174
 msgid "Create Faction"
 msgstr "Tạo nhóm"
 
-#: src/components/windows/Faction.jsx:1634
 msgid "Create Invite"
 msgstr "Tạo lời mời"
 
-#: src/components/windows/MyFactions.jsx:479
 msgid "Create New Faction"
 msgstr "Tạo nhóm mới"
 
-#: src/components/windows/Faction.jsx:1733
 msgid "Create New Invite"
 msgstr "Tạo lời mời mới"
 
-#: src/components/windows/Faction.jsx:1412
 msgid "Create New Role"
 msgstr "Tạo vai trò mới"
 
-#: src/components/windows/Faction.jsx:1159
 msgid "Create Role"
 msgstr "Tạo vai trò"
 
-#: src/components/windows/Faction.jsx:1463
 msgid "Create roles"
 msgstr "Tạo các vai trò"
 
-#: src/components/windows/Help.jsx:140
 #, javascript-format
 msgid "Credit for the Palette of the 2bit canvas goes to ${ donendoLink }."
 msgstr "Bảng màu cho khung vẽ 2bit được lấy từ ${ donendoLink }."
 
-#: src/components/windows/Help.jsx:134
 #, javascript-format
 msgid "Credit for the Palette of the Moon goes to ${ starhouseLink }."
 msgstr "Bảng màu cho khung vẽ Mặt Trăng được lấy từ ${ starhouseLink }."
 
-#: src/components/windows/Help.jsx:137
 #, javascript-format
 msgid "Credit for the Palette of the Top10 canvas goes to ${ vinikLink }."
 msgstr ""
 
-#: src/components/CooldownChanges.jsx:22
 msgid "Current Cooldown Changes per Country"
 msgstr ""
 
-#: src/components/windows/Settings.jsx:146
 msgid "Custom Cursor"
 msgstr ""
 
-#: src/components/SocialSettings.jsx:138
-#: src/components/windows/Faction.jsx:1173
 msgid "Custom Flag"
 msgstr ""
 
-#: src/components/ChannelDropDown.jsx:82
-#: src/components/menus/userContextMenu.js:51
-#: src/components/windows/User.jsx:253
-#: src/components/windows/User.jsx:285
 msgid "DM"
-msgstr ""
+msgstr "Nhắn tin trực tiếp"
 
-#: src/components/Table.jsx:29
 msgid "Daily Pixel"
 msgstr "Điểm ảnh hàng ngày"
 
-#: src/components/windows/Statistics.jsx:204
 msgid "Daily Pixels per Country"
 msgstr "Điểm ảnh hàng này mỗi quốc gia"
 
-#: src/components/windows/Statistics.jsx:183
 msgid "Daily Pixels per Faction"
 msgstr "Điểm ảnh hàng ngày mỗi nhóm"
 
-#: src/components/windows/Statistics.jsx:181
 msgid "Daily Pixels per Player"
 msgstr "Điểm ành hàng ngày mỗi người chơi"
 
-#: src/components/Table.jsx:28
-#: src/components/windows/Faction.jsx:783
-#: src/components/windows/User.jsx:167
-#: src/components/windows/UserArea.jsx:112
 msgid "Daily Rank"
 msgstr "Thứ hạng hàng ngày"
 
-#: src/components/windows/BadgeDisplay.jsx:60
 msgid "Date of Award"
 msgstr ""
 
-#: src/components/windows/FishDisplay.jsx:74
 msgid "Date of catch"
 msgstr "Ngày bắt được"
 
-#: src/components/TemplateItemEdit.jsx:174
-#: src/components/windows/Faction.jsx:1379
-#: src/components/windows/Faction.jsx:1684
 msgid "Delete"
 msgstr "Xoá"
 
-#: src/components/windows/UserArea.jsx:186
 msgid "Delete Account"
 msgstr "Xoá tài khoản"
 
-#: src/components/windows/Faction.jsx:1616
 msgid "Delete Faction"
 msgstr "Xoá nhóm"
 
-#: src/components/windows/Faction.jsx:1475
 msgid "Delete the faction"
 msgstr "Xoá nhóm"
 
-#: src/components/windows/OIDCConsent.jsx:279
-#: src/components/windows/OIDCConsent.jsx:317
 msgid "Deny"
 msgstr "Từ chối"
 
-#: src/components/Table.jsx:23
-#: src/components/windows/Faction.jsx:777
-#: src/components/windows/Faction.jsx:1554
-#: src/components/windows/MyFactions.jsx:211
-#: src/components/windows/MyFactions.jsx:366
 msgid "Description"
 msgstr "Phần mô tả"
 
-#: src/utils/validation.js:93
 msgid "Description can't be empty"
 msgstr "Phần mô tả không thể để trống"
 
-#: src/utils/validation.js:96
 msgid "Description must be shorter than 1000 characters"
 msgstr "Miêu tả phải ngắn hơn 1000 chữ"
 
-#: src/components/windows/Faction.jsx:1561
-#: src/components/windows/MyFactions.jsx:218
 msgid "Description of your faction"
 msgstr "Miêu tả của nhóm của bạn"
 
-#: src/ui/PixelTransferController.js:70
-#: src/ui/PixelTransferController.js:165
 msgid ""
 "Didn't get an answer from pixelplanet. Try to refresh if this problem "
 "persists."
@@ -798,241 +556,155 @@ msgstr ""
 "Không nhận được phản hồi thừ pixelplanet. Hãy thử làm mới trang nếu vấn đề "
 "này vẫn tiếp diễn."
 
-#: src/components/CanvasItem.jsx:65
-#: src/components/TemplateItem.jsx:60
-#: src/components/TemplateItemEdit.jsx:160
 msgid "Dimensions"
 msgstr ""
 
-#: src/components/windows/Settings.jsx:93
 msgid "Disable Game Sounds"
 msgstr "Tắt âm thanh"
 
-#: src/components/buttons/PencilButton.jsx:50
 msgid "Disable History Pencil"
 msgstr "Ngừng tô theo lịch sử"
 
-#: src/components/buttons/PencilButton.jsx:54
 msgid "Disable Overlay Pencil"
 msgstr "Ngừng tô theo lớp phủ"
 
-#: src/components/buttons/PencilButton.jsx:46
 msgid "Disable Pencil"
 msgstr ""
 
-#: src/components/windows/Settings.jsx:129
 msgid "Display Palette in a compact form that takes less screen space."
 msgstr "Hiện thị bảng màu ở dạng nhỏ gọn và tốn ít không gian hơn."
 
-#: src/components/Admintools.jsx:199
 msgid "Do stuff with IPs (one IP per line)"
 msgstr ""
 
-#: src/components/windows/Faction.jsx:1574
-#: src/components/windows/MyFactions.jsx:231
-msgid "Don't let people find this faction in public search or look at its profile."
+msgid ""
+"Don't let people find this faction in public search or look at its profile."
 msgstr ""
+"Không để mọi người tìm nhóm này trong tìm kiếm công khai hoặc xem hồ sơ nhóm."
 
-#: src/components/windows/OIDCConsent.jsx:266
 msgid "Don't remember"
-msgstr ""
+msgstr "Không nhớ"
 
-#: src/components/windows/Faction.jsx:1572
-#: src/components/windows/MyFactions.jsx:229
 msgid "Don't show faction in search"
-msgstr ""
+msgstr "Không hiện thị nhóm trong phần tìm kiếm"
 
-#: src/components/SocialSettings.jsx:215
 msgid "Don't show me in global stats"
 msgstr "Đừng hiện thị tôi ở bảng xếp hạng toàn cầu"
 
-#: src/components/ChangeName.jsx:58
-#: src/components/ChangeUsername.jsx:72
 msgid "Done"
 msgstr "Hoàn thành"
 
-#: src/components/embeds/LocalMedia.jsx:238
 msgid "Download"
 msgstr "Tải xuống"
 
-#: src/components/windows/Converter.jsx:555
 msgid "Download Template"
 msgstr "Tải xuống ảnh mẫu"
 
-#: src/components/windows/Help.jsx:109
 #, javascript-format
 msgid "Drag ${ mouseSymbol } mouse or ${ touchSymbol } pan to move"
 msgstr ""
 
-#: src/components/BanInfo.jsx:108
-#: src/components/IIDTools.jsx:219
 msgid "Duration"
 msgstr ""
 
-#: src/components/windows/Help.jsx:56
-#: src/controls/keypress.js:222
 msgid "Easter Egg OFF"
 msgstr "TẮT trứng phục sinh"
 
-#: src/components/windows/Help.jsx:57
-#: src/controls/keypress.js:221
 msgid "Easter Egg ON"
 msgstr "BẬT trứng phục sinh"
 
-#: src/components/TemplateItem.jsx:71
-#: src/components/windows/Faction.jsx:92
 msgid "Edit"
 msgstr "Chỉnh sửa"
 
-#: src/components/windows/Faction.jsx:1467
 msgid "Edit faction"
 msgstr "Chỉnh sửa nhóm"
 
-#: src/components/windows/Faction.jsx:1459
 msgid "Edit roles below their own"
 msgstr ""
 
-#: src/components/windows/Faction.jsx:1471
 msgid "Edit their own role and elevate users to their own level"
 msgstr ""
 
-#: src/components/LogInForm.jsx:300
-#: src/components/LogInForm.jsx:342
-#: src/components/LogInForm.jsx:347
 msgid "Email"
 msgstr "Email"
 
-#: src/utils/validation.js:19
 msgid "Email can't be empty."
 msgstr "Không thể để trống phần Email."
 
-#: src/utils/validation.js:21
 msgid "Email can't be longer than 40 characters."
 msgstr "Email nhập vào không được quá 40 ký tự."
 
-#: src/components/LogInForm.jsx:350
 msgid ""
-"Email is used to verify your account. You might get a cofirmation mail "
-"after registering."
+"Email is used to verify your account. You might get a cofirmation mail after "
+"registering."
 msgstr ""
 "Email sẽ được dùng để xác minh tài khoản của bạn. Bạn có thể nhận một mail "
 "xác thực sau khi đăng kí."
 
-#: src/utils/validation.js:22
 msgid "Email should at least contain a dot"
 msgstr "Email phải chứa ít nhất một dấu chấm"
 
-#: src/utils/validation.js:20
 msgid "Email should be at least 5 characters long."
 msgstr "Email phải chứa ít nhất 5 kí tự."
 
-#: src/utils/validation.js:25
 msgid "Email should contain a @"
 msgstr "Email phải chứa một kí tự @"
 
-#: src/components/windows/Templates.jsx:60
 msgid "Enable Overlay"
 msgstr "Bật lớp phủ"
 
-#: src/components/buttons/PencilButton.jsx:41
 msgid "Enable Pencil"
 msgstr ""
 
-#: src/components/windows/Settings.jsx:109
 msgid "Enable chat notifications"
 msgstr "Bật thông báo về cuộc trò chuyện"
 
-#: src/components/Captcha.jsx:277
 msgid "Enter Characters"
 msgstr ""
 
-#: src/components/IIDTools.jsx:158
-#: src/components/IIDTools.jsx:260
 msgid "Enter Reason"
-msgstr ""
+msgstr "Nhập lí do"
 
-#: src/components/Admintools.jsx:363
 msgid "Enter UserName of new Mod"
 msgstr ""
 
-#: src/components/windows/MyFactions.jsx:214
 msgid "Enter a little text that describes your faction"
 msgstr ""
 
-#: src/components/windows/Search.jsx:106
 msgid "Enter search term and press Search."
 msgstr ""
 
-#: src/components/LogInForm.jsx:288
 msgid "Enter your mail address and we will send you a new password:"
 msgstr ""
 
-#: src/components/BanInfo.jsx:91
-#: src/components/Captcha.jsx:189
-#: src/components/ChangeMail.jsx:158
-#: src/components/ChangeName.jsx:46
-#: src/components/ChangePassword.jsx:79
-#: src/components/ChangeUsername.jsx:54
-#: src/components/DeleteAccount.jsx:63
-#: src/components/GlobalCaptcha.jsx:80
-#: src/components/LogInForm.jsx:201
-#: src/components/LogInForm.jsx:292
-#: src/components/LogInForm.jsx:397
-#: src/components/windows/BadgeDisplay.jsx:39
-#: src/components/windows/Faction.jsx:713
-#: src/components/windows/Faction.jsx:953
-#: src/components/windows/Faction.jsx:1294
-#: src/components/windows/Faction.jsx:1592
-#: src/components/windows/Faction.jsx:1763
-#: src/components/windows/FishDisplay.jsx:40
-#: src/components/windows/Invite.jsx:66
-#: src/components/windows/MyFactions.jsx:249
-#: src/components/windows/MyFactions.jsx:275
-#: src/components/windows/OIDCConsent.jsx:295
-#: src/components/windows/Search.jsx:79
-#: src/components/windows/User.jsx:92
-#: src/components/windows/User.jsx:222
 msgid "Error"
 msgstr "Lỗi"
 
-#: src/ui/PixelTransferController.js:182
 #, javascript-format
 msgid "Error ${ retCode }"
 msgstr "Lỗi ${ retCode }"
 
-#: src/ui/templateLoader.js:230
-#: src/ui/templateLoader.js:256
 msgid "Error :("
 msgstr "Lỗi :("
 
-#: src/components/BadgeList.jsx:52
-#: src/components/FishList.jsx:62
 msgid "Expand"
 msgstr "Mở rộng"
 
-#: src/components/windows/Templates.jsx:156
 msgid "Export enabled templates"
 msgstr "Xuất ra (những) bản mẫu đã được kích hoạt"
 
-#: src/components/windows/index.js:50
 msgid "Faction"
-msgstr ""
+msgstr "Nhóm"
 
-#: src/components/ChannelDropDown.jsx:84
-#: src/components/windows/Search.jsx:27
-#: src/components/windows/User.jsx:193
 msgid "Factions"
-msgstr ""
+msgstr "Các nhóm"
 
-#: src/components/windows/Statistics.jsx:89
 msgid "Factions Today"
-msgstr ""
+msgstr "Các nhóm hôm nay"
 
-#: src/components/windows/Statistics.jsx:88
 msgid "Factions Total"
-msgstr ""
+msgstr "Tổng toàn nhóm"
 
-#: src/components/windows/MyFactions.jsx:462
 msgid ""
 "Factions allow you to coordinate better with other players. Search for "
 "existing factions, find friends or create your own faction."
@@ -1040,27 +712,21 @@ msgstr ""
 "Nhóm cho phép bạn phối hợp với những người khác tốt hơn. Tìm kiếm những nhóm "
 "có sẵn, tìm bạn bè hoặc tạo một nhóm cho riêng mình."
 
-#: src/components/CooldownChanges.jsx:27
 msgid "Factor"
 msgstr ""
 
-#: src/components/Canvastools.jsx:262
 msgid "File"
-msgstr ""
+msgstr "Tệp"
 
-#: src/components/windows/index.js:43
 msgid "Fish Display"
 msgstr ""
 
-#: src/components/windows/BadgeDisplay.jsx:64
 msgid "For"
-msgstr ""
+msgstr "Cho"
 
-#: src/components/windows/Help.jsx:127
 msgid "For Developers"
 msgstr ""
 
-#: src/components/windows/Help.jsx:81
 #, javascript-format
 msgid ""
 "For any legal issues, please contact ${ mailLink }. If you want to delete "
@@ -1068,621 +734,435 @@ msgid ""
 "relevant traces. Your placed pixels will of course not be deleted."
 msgstr ""
 
-#: src/components/windows/OIDCConsent.jsx:267
 msgid "For one day"
-msgstr ""
+msgstr "Trong một ngày"
 
-#: src/components/LogInForm.jsx:223
-#: src/components/LogInForm.jsx:383
-#: src/components/windows/OIDCConsent.jsx:269
 msgid "For one month"
-msgstr ""
+msgstr "Trong một tháng"
 
-#: src/components/LogInForm.jsx:222
-#: src/components/LogInForm.jsx:382
-#: src/components/windows/OIDCConsent.jsx:268
 msgid "For one week"
-msgstr ""
+msgstr "Trong một tuần"
 
-#: src/components/LogInForm.jsx:224
-#: src/components/LogInForm.jsx:384
-#: src/components/windows/OIDCConsent.jsx:270
 msgid "For one year"
-msgstr ""
+msgstr "Trong một năm"
 
-#: src/components/windows/Settings.jsx:136
 msgid "For when you are playing on a potato."
-msgstr ""
+msgstr "Khi nếu bạn chơi trên một củ khoai tây."
 
-#: src/components/LogInForm.jsx:225
-#: src/components/LogInForm.jsx:385
-#: src/components/windows/OIDCConsent.jsx:271
 msgid "Forever"
-msgstr ""
+msgstr "Mãi mãi"
 
-#: src/components/windows/Settings.jsx:64
-#: src/store/actions/thunks.js:433
 msgid "From History"
-msgstr ""
+msgstr "Từ lịch sử"
 
-#: src/components/windows/Settings.jsx:63
-#: src/store/actions/thunks.js:430
 msgid "From Template"
 msgstr "Từ ảnh mẫu"
 
-#: src/components/GetIID.jsx:44
 msgid "Get IID"
 msgstr ""
 
-#: src/components/Watchtools.jsx:248
 msgid "Get Pixels"
 msgstr ""
 
-#: src/components/Watchtools.jsx:280
 msgid "Get Users"
 msgstr ""
 
-#: src/components/windows/OIDCConsent.jsx:65
 msgid "Get email address"
 msgstr "Nhận địa chỉ thư mục điện tử"
 
-#: src/components/windows/OIDCConsent.jsx:67
 msgid "Get the amount of Pixels placed and ranking"
 msgstr "Nhận số lượng Điểm Ảnh đã được vẽ và xếp hạng"
 
-#: src/components/menus/mainMenu.js:81
 msgid "Globe View"
 msgstr ""
 
-#: src/components/TemplateItem.jsx:81
 msgid "Go to"
 msgstr ""
 
-#: src/components/windows/OIDCConsent.jsx:286
 msgid "Grant"
 msgstr ""
 
-#: src/controls/keypress.js:182
 msgid "Grid OFF"
 msgstr "Chế độ lưới TẮT"
 
-#: src/controls/keypress.js:181
 msgid "Grid ON"
 msgstr "Chế độ lưới BẬT"
 
-#: src/components/ChannelDropDown.jsx:83
 msgid "Groups"
 msgstr ""
 
-#: src/components/windows/Help.jsx:75
 msgid "Have fun!"
 msgstr ""
 
-#: src/components/windows/Converter.jsx:471
 msgid "Height"
 msgstr ""
 
-#: src/components/BanInfo.jsx:80
-#: src/components/menus/mainMenu.js:237
-#: src/components/windows/index.js:35
 msgid "Help"
 msgstr ""
 
-#: src/components/windows/Archive.jsx:10
 msgid ""
 "Here we collect removed canvases to archive them properly. Which is "
 "currently only one."
 msgstr ""
 
-#: src/components/markdown/MdLink.jsx:136
 msgid "Hide Embed"
 msgstr ""
 
-#: src/components/windows/MyFactions.jsx:413
 msgid "Hide from profile"
 msgstr ""
 
-#: src/components/windows/Help.jsx:74
 msgid ""
 "Higher zoomlevels take some time to update, the 3D globe gets updated at "
 "least once per day."
 msgstr ""
 
-#: src/components/menus/mainMenu.js:96
-#: src/components/windows/Settings.jsx:154
 msgid "Historical View"
 msgstr "Chế độ xem lịch sử"
 
-#: src/components/windows/Help.jsx:111
 #, javascript-format
 msgid "Hold left ${ bindShift } for pencil (to place while moving mouse)"
 msgstr ""
 
-#: src/components/windows/Settings.jsx:180
 msgid "How pixelplanet should look like."
 msgstr ""
 
-#: src/components/LogInForm.jsx:241
 msgid "I forgot my Password."
 msgstr "Tôi đã quên mật khẩu của tôi."
 
-#: src/components/windows/Faction.jsx:1678
 msgid "ID"
 msgstr ""
 
-#: src/components/Watchtools.jsx:158
 msgid "IID (optional)"
 msgstr ""
 
-#: src/components/IIDTools.jsx:128
 msgid "IID Actions"
 msgstr ""
 
-#: src/components/Admintools.jsx:197
 msgid "IP Actions"
 msgstr ""
 
-#: src/components/windows/Help.jsx:89
 msgid "Identifiers"
 msgstr ""
 
-#: src/components/windows/Help.jsx:87
 #, javascript-format
 msgid ""
 "If you got detected as proxy, but you aren't using one, or think that you "
-"got wrongfully banned, please go to our ${ guildedLink } or send us an "
-"e-mail to ${ mailLink } and, in case of a ban, include the BID you got in "
-"the ban message."
+"got wrongfully banned, please go to our ${ guildedLink } or send us an e-"
+"mail to ${ mailLink } and, in case of a ban, include the BID you got in the "
+"ban message."
 msgstr ""
 
-#: src/components/windows/Help.jsx:90
 msgid ""
 "If you talk to moderators or administrators, you might get asked for one of "
 "the following identifiers:"
 msgstr ""
 
-#: src/components/windows/Converter.jsx:242
 msgid "Image Converter"
 msgstr ""
 
-#: src/components/Canvastools.jsx:259
 msgid "Image Upload"
 msgstr ""
 
-#: src/components/windows/Templates.jsx:165
 msgid "Import templates"
 msgstr "Nhập (những) ảnh mẫu"
 
-#: src/components/Watchtools.jsx:143
 msgid "Interval"
 msgstr ""
 
-#: src/components/Watchtools.jsx:34
 msgid "Interval is invalid"
 msgstr ""
 
-#: src/ui/PixelTransferController.js:102
 msgid "Invalid Canvas"
 msgstr ""
 
-#: src/ui/PixelTransferController.js:106
-#: src/ui/PixelTransferController.js:110
-#: src/ui/PixelTransferController.js:114
 msgid "Invalid Coordinates"
 msgstr "(Những) toạ độ không hợp lệ đã được chọn"
 
-#: src/ui/PixelTransferController.js:119
 msgid "Invalid color selected"
 msgstr "Màu không hợp lệ đã được chọn"
 
-#: src/components/windows/index.js:53
 msgid "Invite"
 msgstr "Mời"
 
-#: src/components/windows/Help.jsx:77
 msgid "Invited to Chat"
 msgstr "Mời vào cuộc trò chuyện"
 
-#: src/components/windows/Faction.jsx:93
 msgid "Invites"
 msgstr "Những lời mời"
 
-#: src/components/windows/Faction.jsx:1644
 msgid "Is One-Time-Invite"
 msgstr ""
 
-#: src/components/windows/OIDCConsent.jsx:226
-msgid "It requests the following permissions. Uncheck what you don't want to grant:"
+msgid ""
+"It requests the following permissions. Uncheck what you don't want to grant:"
 msgstr ""
 
-#: src/components/Admintools.jsx:403
 msgid "Jannies can rollback and protect, but not watch or ban."
 msgstr ""
 
-#: src/components/windows/Invite.jsx:121
 msgid "Join"
-msgstr ""
+msgstr "Tham gia"
 
-#: src/components/windows/Faction.jsx:843
-#: src/components/windows/Faction.jsx:848
 msgid "Join Faction"
-msgstr ""
+msgstr "Tham gia nhóm"
 
-#: src/components/Table.jsx:27
 msgid "Joined"
-msgstr ""
+msgstr "Đã tham gia"
 
-#: src/ui/PixelTransferController.js:122
 msgid "Just for registered Users"
-msgstr ""
+msgstr "Chỉ cho người dùng đã đăng kí"
 
-#: src/ui/PixelTransferController.js:168
 msgid "Just for verified Users"
-msgstr ""
+msgstr "Chỉ cho người dùng đã xác thực"
 
-#: src/ui/PixelTransferController.js:147
 msgid "Just the Top10 of yesterday can place here"
-msgstr ""
+msgstr "Chỉ Top10 hôm qua mới có thể đặt ở đây"
 
-#: src/components/windows/Converter.jsx:510
 msgid "Keep Ratio"
-msgstr ""
+msgstr "Giữ tỉ lệ"
 
-#: src/components/windows/Faction.jsx:1060
 msgid "Kick"
 msgstr "Khai trừ"
 
-#: src/components/windows/Faction.jsx:1439
 msgid "Kick members"
 msgstr "Khai trừ (những) thành viên"
 
-#: src/components/windows/OIDCConsent.jsx:77
 msgid "Know that an account exists"
 msgstr "Biết rằng một tài khoản có tồn tại"
 
-#: src/components/windows/MyFactions.jsx:427
 msgid "Leave"
-msgstr ""
+msgstr "Rời"
 
-#: src/components/windows/Faction.jsx:857
-#: src/components/windows/Faction.jsx:867
 msgid "Leave Faction"
-msgstr ""
+msgstr "Rời nhóm"
 
-#: src/components/windows/Help.jsx:80
 msgid "Legal Requests"
-msgstr ""
+msgstr "(Các) yêu cầu pháp lí"
 
-#: src/components/windows/Faction.jsx:1585
-#: src/components/windows/MyFactions.jsx:242
 msgid "Let everyone join this faction"
-msgstr ""
+msgstr "Cho phép mọi người tham gia nhóm này"
 
-#: src/components/windows/Faction.jsx:1587
-#: src/components/windows/MyFactions.jsx:244
 msgid "Let people join this faction without needing an invite."
-msgstr ""
+msgstr "Cho phép mọi người tham gia nhóm này không cần lời mời."
 
-#: src/components/windows/Faction.jsx:1430
 msgid "Level"
 msgstr ""
 
-#: src/components/windows/Converter.jsx:382
-#: src/components/windows/Settings.jsx:139
 msgid "Light Grid"
 msgstr "Lưới sáng"
 
-#: src/components/Captcha.jsx:228
 msgid "Load Captcha"
 msgstr ""
 
-#: src/components/HistorySelect.jsx:179
 msgid "Loading"
 msgstr ""
 
-#: src/components/UIPopUp.jsx:58
-#: src/components/UIPopUp.jsx:62
-#: src/components/Window.jsx:280
-#: src/components/windows/Faction.jsx:715
-#: src/components/windows/Invite.jsx:68
-#: src/components/windows/MyFactions.jsx:168
-#: src/components/windows/User.jsx:94
 msgid "Loading..."
 msgstr "Đang tải xuống…"
 
-#: src/components/menus/mainMenu.js:138
 msgid "Log in or Register"
-msgstr ""
+msgstr "Đăng nhập hoặc đăng kí"
 
-#: src/components/windows/UserArea.jsx:139
 msgid "Log out"
-msgstr ""
+msgstr "Đăng xuất"
 
-#: src/components/ChangeMail.jsx:204
 msgid "Log out a Session:"
 msgstr ""
 
-#: src/components/LogInForm.jsx:230
 msgid "LogIn"
-msgstr ""
+msgstr "Đăng nhập"
 
-#: src/components/windows/UserArea.jsx:168
 msgid "Login Methods"
-msgstr ""
+msgstr "Các phương thức đăng nhập"
 
-#: src/components/windows/UserArea.jsx:80
 msgid "Login to access more features and stats."
-msgstr ""
+msgstr "Đăng nhập để có thể truy cập thêm nhiều tính năng và số liệu."
 
-#: src/components/windows/OIDCConsent.jsx:88
 msgid "Login to grant access to other application."
-msgstr ""
+msgstr "Đăng nhập để có thể truy cập các chương trình khác."
 
-#: src/components/windows/Invite.jsx:137
 msgid "Login to join us."
-msgstr ""
+msgstr "Đăng nhập để tham gia cùng chúng tôi."
 
-#: src/components/windows/OIDCConsent.jsx:208
 msgid "Login to other application"
-msgstr ""
+msgstr "Đăng nhập vào các chương trình khác"
 
-#: src/components/LogInForm.jsx:197
 msgid "Login with Name or Mail:"
-msgstr ""
+msgstr "Đăng nhập bằng tên hoặc địa chỉ thư điện tử:"
 
-#: src/components/menus/mainMenu.js:105
 msgid "Make Screenshot"
-msgstr ""
+msgstr "Tạo ảnh chụp màn hình"
 
-#: src/components/Admintools.jsx:310
 msgid "Manage Moderators"
 msgstr ""
 
-#: src/components/menus/mainMenu.js:176
 msgid "Manage Templates"
 msgstr "Quản lí (các) ảnh mẫu"
 
-#: src/components/windows/Faction.jsx:1435
 msgid "Manage invites"
-msgstr ""
+msgstr "Quản lí các lời mời"
 
-#: src/components/windows/Help.jsx:83
 msgid "Map Data"
-msgstr ""
+msgstr "Dữ liệu bản đồ"
 
-#: src/components/Window.jsx:251
 msgid "Maximize"
-msgstr ""
+msgstr "Phóng to"
 
-#: src/components/Mediatools.jsx:64
 msgid "Media Actions"
-msgstr ""
+msgstr "Hành động về đa phương tiện"
 
-#: src/components/Table.jsx:25
-#: src/components/windows/Faction.jsx:89
-#: src/components/windows/Faction.jsx:799
 msgid "Members"
-msgstr ""
+msgstr "Những thành viên"
 
-#: src/components/windows/Converter.jsx:302
 msgid "Minimum Color Distance"
 msgstr ""
 
-#: src/components/Admintools.jsx:401
 msgid "Moderators can access all Canvas, Watch and IID tools."
 msgstr ""
 
 #. This if for moderation tools, it's not important to translate this
-#: src/components/menus/mainMenu.js:166
-#: src/components/windows/index.js:47
 msgid "Modtools"
 msgstr "Công cụ mod"
 
-#: src/components/Window.jsx:227
 msgid "Move"
-msgstr ""
+msgstr "Di chuyển"
 
-#: src/components/menus/channelContextMenu.js:22
 msgid "Mute Channel"
-msgstr ""
+msgstr "Tắt tiếng kênh"
 
-#: src/controls/keypress.js:198
 msgid "Muted Sound"
-msgstr ""
+msgstr "Âm thanh đã bị tắt tiếng"
 
-#: src/components/menus/mainMenu.js:128
-#: src/components/windows/index.js:49
 msgid "My Factions"
-msgstr ""
+msgstr "Nhóm của tôi"
 
-#: src/components/LogInForm.jsx:320
-#: src/components/LogInForm.jsx:325
-#: src/components/Table.jsx:22
-#: src/components/windows/Faction.jsx:1162
-#: src/components/windows/Faction.jsx:1332
-#: src/components/windows/MyFactions.jsx:177
 msgid "Name"
-msgstr ""
+msgstr "Tên"
 
-#: src/utils/validation.js:86
 msgid "Name can only contain the characters: a-z . _ and -"
 msgstr "Tên chỉ có thể chứa các kí tự sau: a-z . _ và -"
 
-#: src/utils/validation.js:32
-#: src/utils/validation.js:78
 msgid "Name can't be empty."
 msgstr "Tên không thể để trống."
 
-#: src/utils/validation.js:42
 msgid "Name contains invalid character like @, /, \\ or #"
 msgstr "Tên chứa các kí tự không hợp lệ như @, /, / hoặc #"
 
-#: src/utils/validation.js:33
-#: src/utils/validation.js:80
 msgid "Name must be at least 2 characters long"
 msgstr "Tên phải chứa ít nhất hai kí tự"
 
-#: src/utils/validation.js:34
-#: src/utils/validation.js:83
 msgid "Name must be shorter than 26 characters"
 msgstr "Tên phải ngắn hơn 26 kí tự"
 
-#: src/components/windows/Faction.jsx:1169
 msgid "Name of this role"
-msgstr ""
+msgstr "Tên của vai trò này"
 
-#: src/components/windows/MyFactions.jsx:184
 msgid "Name of your faction (this can not be changed later)"
-msgstr ""
+msgstr "Tên của nhóm bạn (thứ không thể thay đổi sau)"
 
-#: src/components/LogInForm.jsx:209
 msgid "Name or Email"
 msgstr "Tên hoặc thư mục điện tử"
 
-#: src/components/ChangeMail.jsx:236
 msgid "New Mail"
-msgstr ""
+msgstr "Thư điện tử mới"
 
-#: src/components/ChangeName.jsx:52
 msgid "New Name"
-msgstr ""
+msgstr "Tên mới"
 
-#: src/components/ChangePassword.jsx:103
 msgid "New Password"
 msgstr "Mật khẩu mới"
 
-#: src/components/ChangeUsername.jsx:66
 msgid "New Username"
 msgstr "Tên người dùng mới"
 
-#: src/components/CanvasItem.jsx:45
 msgid "No"
-msgstr ""
+msgstr "Không"
 
-#: src/store/actions/fetch.js:670
-#: src/store/actions/fetch.js:743
 msgid "No File selected to upload"
-msgstr ""
+msgstr "Không có tệp nào được chọn để đăng tải"
 
-#: src/store/actions/index.js:413
 msgid "No Phish!"
 msgstr "Không có Ká!"
 
-#: src/components/GlobalCaptcha.jsx:59
 msgid "No captcha id given"
 msgstr ""
 
-#: src/components/SocialSettings.jsx:151
 msgid "No flag selected"
-msgstr ""
+msgstr "Không cờ nào được chọn"
 
-#: src/components/GlobalCaptcha.jsx:56
 msgid "No or invalid captcha text"
 msgstr "Không có hoặc mã captcha không hợp lệ"
 
-#: src/utils/validation.js:111
 msgid "No password given."
 msgstr "Không mật khẩu nào được cung cấp."
 
-#: src/components/windows/Search.jsx:106
 msgid "No results."
 msgstr "Không có kết quả."
 
-#: src/components/windows/Faction.jsx:1105
 msgid "Nobody is banned from this faction"
 msgstr "Không ai bị cấm trong nhóm này"
 
-#: src/components/Admintools.jsx:173
-#: src/components/Canvastools.jsx:211
-#: src/components/IIDTools.jsx:109
-#: src/components/Mediatools.jsx:46
-#: src/components/Watchtools.jsx:95
-#: src/components/windows/Faction.jsx:753
 msgid "Not Allowed"
 msgstr "Không được cho phép"
 
-#: src/ui/PixelTransferController.js:126
-#: src/ui/PixelTransferController.js:142
-#: src/ui/PixelTransferController.js:146
 msgid "Not allowed"
 msgstr "Không được cho phép"
 
-#: src/components/windows/OIDCConsent.jsx:253
 msgid "Note"
 msgstr "Ghi chú"
 
-#: src/components/SocialSettings.jsx:190
 msgid "Note: Your active Faction may overwrite your flag settings."
 msgstr ""
 
-#: src/components/windows/index.js:66
 msgid "OIDC LogIn"
 msgstr ""
 
-#: src/components/BanInfo.jsx:144
-#: src/store/actions/index.js:9
 msgid "OK"
 msgstr "OK"
 
-#: src/components/windows/Converter.jsx:384
-#: src/components/windows/Converter.jsx:400
 msgid "Offset"
 msgstr ""
 
-#: src/store/actions/index.js:414
 msgid "Oh no, the phish escaped. Better luck next time!"
 msgstr "Ôi không, Ká đã chạy thoát. Chúc may mắn lần sau!"
 
-#: src/components/ChangePassword.jsx:89
 msgid "Old Password"
 msgstr "Mật khẩu cũ"
 
-#: src/components/windows/Faction.jsx:1680
 msgid "One-Time"
 msgstr ""
 
-#: src/components/CanvasItem.jsx:30
 msgid "Online Users"
 msgstr "Người dùng trực tuyến"
 
-#: src/components/OnlineBox.jsx:56
 msgid "Online Users on Canvas"
 msgstr "Người dùng trực tuyến trên khung vẽ"
 
-#: src/ui/PixelTransferController.js:169
 msgid "Only verified Users are currently allowed to play."
 msgstr "Hiện chỉ những người dùng đã xác thực được phép chơi."
 
-#: src/components/windows/Templates.jsx:94
 msgid "Opacity of Overlay in percent."
 msgstr "Độ đục của lớp phủ theo tỉ lệ phần trăm."
 
-#: src/components/windows/MyFactions.jsx:439
 msgid "Open"
-msgstr ""
+msgstr "Mở"
 
-#: src/components/buttons/ChatButton.jsx:41
 msgid "Open Chat"
 msgstr "Mở cuộc trò chuyện"
 
-#: src/components/buttons/PalselButton.jsx:30
 msgid "Open Palette"
-msgstr ""
+msgstr "Mở bảng màu"
 
-#: src/components/embeds/LocalMedia.jsx:258
-#: src/components/markdown/MdLink.jsx:119
 msgid "Open in PopUp"
 msgstr ""
 
-#: src/components/windows/Help.jsx:128
 msgid "OpenID Connect Client registration"
 msgstr ""
 
-#: src/components/windows/Help.jsx:73
 msgid ""
-"Our main canvas is a huge worldmap, you can place wherever you like, but "
-"you will have to wait a specific Cooldown between pixels. You can check out "
-"the cooldown and requirements on the Canvas Selection menu (globe button on "
+"Our main canvas is a huge worldmap, you can place wherever you like, but you "
+"will have to wait a specific Cooldown between pixels. You can check out the "
+"cooldown and requirements on the Canvas Selection menu (globe button on "
 "top). Some canvases have a different cooldown for replacing a user-set "
 "pixels than placing on a unset pixel. i.e. 4s/7s means 4s on fresh pixels "
 "and 7s on already set pixels."
@@ -1695,141 +1175,100 @@ msgstr ""
 "người dùng hoặc đặt một điểm ảnh chưa đặt. Ví dụ như 4s/7s nghĩa là 4 giây "
 "trên những điểm ảnh mới và 7 giây cho những điểm ảnh đã đặt."
 
-#: src/controls/keypress.js:215
 msgid "Overlay OFF"
 msgstr "TẮT lớp phủ"
 
-#: src/controls/keypress.js:214
 msgid "Overlay ON"
 msgstr "BẬT lớp phủ"
 
-#: src/components/windows/Templates.jsx:80
 msgid "Overlay Opacity"
 msgstr "Độ mờ lớp phủ"
 
-#: src/components/windows/Faction.jsx:88
 msgid "Overview"
-msgstr ""
+msgstr "Xem trước"
 
-#: src/components/windows/Converter.jsx:219
 msgid "Palette Download"
 msgstr "Tải xuống bảng màu"
 
-#: src/components/windows/Converter.jsx:221
 #, javascript-format
 msgid "Palette for ${ gimpLink }"
 msgstr "Bảng màu cho ${ gimpLink }"
 
-#: src/components/ChangeMail.jsx:171
-#: src/components/ChangePassword.jsx:103
-#: src/components/DeleteAccount.jsx:73
-#: src/components/LogInForm.jsx:216
-#: src/components/LogInForm.jsx:353
-#: src/components/LogInForm.jsx:358
 msgid "Password"
 msgstr "Mật khẩu"
 
-#: src/utils/validation.js:114
 msgid "Password must be at least 6 characters long."
 msgstr "Mật khẩu phải chứa ít nhất 6 kí tự."
 
-#: src/utils/validation.js:117
 msgid "Password must be shorter than 60 characters."
 msgstr "Mật khẩu phải ngắn hơn 60 kí tự."
 
-#: src/components/ChangePassword.jsx:44
 msgid "Password successfully changed."
 msgstr "Mật khẩu đã thay đổi thành công."
 
-#: src/components/ChangePassword.jsx:21
 msgid "Passwords do not match."
 msgstr "Mật khẩu không khớp."
 
-#: src/components/windows/Settings.jsx:163
 #, javascript-format
 msgid "Pencil Mode for ${ canvasName } canvas"
 msgstr ""
 
-#: src/store/actions/thunks.js:424
 msgid "Pencil picks: "
 msgstr ""
 
-#: src/components/windows/Faction.jsx:1428
-#: src/components/windows/OIDCConsent.jsx:231
 msgid "Permission"
-msgstr ""
+msgstr "Quyền hạn"
 
-#: src/components/windows/Faction.jsx:1423
 msgid "Permissions of Powerlevels"
 msgstr ""
 
-#: src/store/actions/index.js:406
 msgid "Phish!"
 msgstr "Ká!"
 
-#: src/components/FishList.jsx:22
 msgid "Phishes"
 msgstr "Những con Ká"
 
-#: src/components/menus/userContextMenu.js:21
 msgid "Ping"
-msgstr ""
+msgstr "Ping"
 
-#: src/components/Table.jsx:31
-#: src/components/Table.jsx:33
 msgid "Pixel"
 msgstr ""
 
-#: src/controls/keypress.js:193
 msgid "Pixel Notify OFF"
 msgstr ""
 
-#: src/controls/keypress.js:192
 msgid "Pixel Notify ON"
 msgstr ""
 
-#: src/components/Canvastools.jsx:328
 msgid "Pixel Protection"
 msgstr "Bảo vệ điểm ảnh"
 
-#: src/ui/PixelTransferController.js:131
 msgid "Pixel protected"
 msgstr "Điểm ảnh đã được bảo vệ"
 
-#: src/components/windows/Help.jsx:72
 msgid "Place color pixels on a large canvas with other players online!"
 msgstr ""
 "Đặt các điểm ảnh đầy màu sắc trong một khung vẽ rộng lớn với những ngưởi "
 "chơi trực tuyến khác!"
 
-#: src/components/OnlineBox.jsx:84
-#: src/components/windows/Faction.jsx:789
-#: src/components/windows/User.jsx:173
-#: src/components/windows/UserArea.jsx:118
 msgid "Placed Pixels"
 msgstr "Đã đặt (những) điểm ảnh"
 
-#: src/components/windows/Settings.jsx:113
 msgid "Play a sound when new chat messages arrive"
 msgstr "Phát một đoạn âm thanh khi một tin nhắn trò chuyện mới xuất hiện"
 
-#: src/components/windows/index.js:42
 msgid "Player"
 msgstr "Người chơi"
 
-#: src/core/chartSettings.js:127
 msgid "Players and Pixels per hour"
 msgstr "Những người chơi và số điểm ảnh mỗi giờ"
 
-#: src/ui/PixelTransferController.js:138
 msgid "Please prove that you are human"
 msgstr "Vui lòng chứng minh bạn là con người"
 
-#: src/store/actions/index.js:21
 msgid "Please refresh the website"
 msgstr "Vui lòng tải lại trang"
 
-#: src/components/UserMessages.jsx:32
 msgid ""
 "Please verify your mail address or add a new one, otherwise your account "
 "could get deleted in the future."
@@ -1837,317 +1276,221 @@ msgstr ""
 "Vui lòng xác thực thư điện tử của bạn hoặc thêm một cái mới, nếu không tài "
 "khoản của bạn có thể bị xoá trong tương lai."
 
-#: src/components/windows/Archive.jsx:12
 msgid "Political Compass Canvas"
 msgstr ""
 
-#: src/components/windows/Settings.jsx:132
 msgid "Potato Mode"
 msgstr "Chế độ khoai tây"
 
-#: src/components/windows/Faction.jsx:1187
-#: src/components/windows/Faction.jsx:1341
 msgid "Powerlevel"
 msgstr ""
 
-#: src/components/windows/Faction.jsx:1197
 msgid "Powerlevel of this role. See table below for explenation."
 msgstr ""
 
-#: src/components/windows/Help.jsx:108
-#: src/components/windows/Help.jsx:118
 #, javascript-format
-msgid "Press ${ bindAUp }, ${ bindALeft }, ${ bindADown }, ${ bindARight } to move"
+msgid ""
+"Press ${ bindAUp }, ${ bindALeft }, ${ bindADown }, ${ bindARight } to move"
 msgstr ""
 "Nhấn ${ bindAUp }, ${ bindALeft }, ${ bindADown }, ${ bindARight } để di "
 "chuyển"
 
-#: src/components/windows/Help.jsx:102
 #, javascript-format
 msgid "Press ${ bindG } to toggle grid"
 msgstr "Nhấn ${ bindG } để bật/tắt chế dộ lưới"
 
-#: src/components/windows/Help.jsx:104
 #, javascript-format
 msgid "Press ${ bindH } to toggle historical view"
 msgstr "Nhấn ${ bindH } để bật/tắt chế độ xem lịch sử"
 
-#: src/components/windows/Help.jsx:119
 #, javascript-format
 msgid "Press ${ bindQ } and ${ bindE } to fly up and down"
 msgstr "Nhấn ${ bindQ } và ${ bindE } để đi chuyển lên và xuống"
 
-#: src/components/windows/Help.jsx:106
 #, javascript-format
 msgid "Press ${ bindQ } or ${ bindE } to zoom"
 msgstr "Nhấn ${ bindQ } hoặc ${ bindE } để thu phóng"
 
-#: src/components/windows/Help.jsx:105
 #, javascript-format
 msgid "Press ${ bindR } to copy coordinates"
 msgstr "Nhấn ${ bindR } để sao chép toạ độ"
 
-#: src/components/windows/Help.jsx:107
-#: src/components/windows/Help.jsx:117
 #, javascript-format
 msgid "Press ${ bindW }, ${ bindA }, ${ bindS }, ${ bindD } to move"
 msgstr "Nhấn ${ bindW }, ${ bindA }, ${ bindS }, ${ bindD } để di chuyển"
 
-#: src/components/windows/Help.jsx:103
 #, javascript-format
 msgid "Press ${ bindX } to toggle showing of pixel activity"
 msgstr ""
 "Nhấn ${ bindX } để bật tắt chế độ xem các hoạt động liên quan đến điểm ảnh"
 
-#: src/components/SocialSettings.jsx:206
-#: src/components/Table.jsx:94
-#: src/components/Table.jsx:122
 msgid "Private"
 msgstr "Riêng tư"
 
-#: src/components/menus/mainMenu.js:121
-#: src/components/menus/userContextMenu.js:30
-#: src/components/windows/UserArea.jsx:89
 msgid "Profile"
 msgstr "Hồ sơ"
 
-#: src/components/ChannelDropDown.jsx:80
-#: src/components/Table.jsx:24
 msgid "Public"
-msgstr ""
+msgstr "Công cộng"
 
-#: src/components/Admintools.jsx:245
 msgid "Quick Actions"
 msgstr "Những hành động nhanh"
 
-#: src/ui/PixelTransferController.js:159
 msgid "Range Banned"
 msgstr ""
 
-#: src/components/Table.jsx:30
-#: src/components/Table.jsx:32
 msgid "Rank"
-msgstr ""
+msgstr "Xếp hạng"
 
-#: src/components/CanvasItem.jsx:43
 msgid "Ranked"
-msgstr ""
+msgstr "Đã xếp hạng"
 
-#: src/components/windows/Statistics.jsx:278
 msgid "Ranking updates every 5 min. Daily rankings get reset at midnight UTC."
 msgstr ""
 
-#: src/components/windows/OIDCConsent.jsx:69
 msgid "Read Badges and fishes"
 msgstr ""
 
-#: src/components/windows/OIDCConsent.jsx:63
 msgid "Read name, username and account age"
 msgstr "Đọc tên, Tên người dùng và tuổi tài khoản"
 
-#: src/components/BanInfo.jsx:97
-#: src/components/IIDTools.jsx:151
-#: src/components/Mediatools.jsx:106
 msgid "Reason"
 msgstr ""
 
-#: src/components/RefreshPrompt.jsx:14
-#: src/components/windows/Faction.jsx:829
-#: src/components/windows/User.jsx:233
 msgid "Refresh"
 msgstr ""
 
-#: src/components/LogInForm.jsx:268
 msgid "Register"
 msgstr ""
 
-#: src/components/LogInForm.jsx:317
 msgid "Register new account here"
 msgstr ""
 
-#: src/components/windows/OIDCConsent.jsx:73
 msgid "Regularly update this data"
 msgstr ""
 
-#: src/components/Captcha.jsx:267
 msgid "Reload"
 msgstr ""
 
-#: src/components/windows/OIDCConsent.jsx:258
 msgid "Remember this decision: "
 msgstr ""
 
-#: src/components/DeleteList.jsx:30
 msgid "Remove"
 msgstr ""
 
-#: src/components/Admintools.jsx:349
 msgid "Remove Chatmod"
 msgstr "Xoá cuộc trò chuyện mod"
 
-#: src/components/Admintools.jsx:337
 msgid "Remove Cleaner"
 msgstr ""
 
-#: src/components/Admintools.jsx:325
 msgid "Remove Janny"
 msgstr ""
 
-#: src/components/Admintools.jsx:313
 msgid "Remove Moderator"
 msgstr ""
 
-#: src/components/windows/Faction.jsx:957
 msgid "Remove Roles"
 msgstr ""
 
-#: src/components/ChangeMail.jsx:188
 msgid "Remove a Login method:"
 msgstr ""
 
-#: src/components/windows/User.jsx:136
 #, javascript-format
 msgid "Represents ${ activeFactionTitle } as ${ activeFactionRoleName }"
 msgstr ""
 
-#: src/components/Admintools.jsx:280
 msgid "Require Verification to Place"
 msgstr ""
 
-#: src/components/CanvasItem.jsx:51
 msgid "Requirements"
 msgstr ""
 
-#: src/components/windows/Converter.jsx:537
 msgid "Reset"
 msgstr ""
 
-#: src/components/Admintools.jsx:250
 msgid "Reset Captchas of ALL Users"
 msgstr ""
 
-#: src/components/LogInForm.jsx:275
 msgid "Reset your password"
 msgstr ""
 
-#: src/components/Window.jsx:269
 msgid "Resize"
 msgstr ""
 
-#: src/components/Window.jsx:251
 msgid "Restore"
 msgstr ""
 
-#: src/components/windows/CanvasSelect.jsx:73
 msgid "Retired Canvases (history only)"
 msgstr ""
 
-#: src/components/BadgeList.jsx:52
-#: src/components/FishList.jsx:62
 msgid "Retract"
 msgstr ""
 
-#: src/components/ChangeMail.jsx:219
 msgid "Revoke consent of third party applications:"
 msgstr ""
 
-#: src/components/Table.jsx:26
 msgid "Role"
 msgstr ""
 
-#: src/components/windows/Faction.jsx:804
 msgid "Role Flags"
 msgstr ""
 
-#: src/components/windows/Faction.jsx:91
 msgid "Roles"
 msgstr ""
 
-#: src/components/Admintools.jsx:257
 msgid "Roll different Captcha Fonts"
 msgstr ""
 
-#: src/components/Canvastools.jsx:424
 msgid "Rollback an area of the canvas to a set date and time"
 msgstr ""
 
-#: src/components/Canvastools.jsx:420
 msgid "Rollback to Date"
 msgstr ""
 
-#: src/components/ChangeMail.jsx:239
-#: src/components/ChangeName.jsx:56
-#: src/components/ChangePassword.jsx:118
-#: src/components/ChangeUsername.jsx:70
-#: src/components/LanguageSelect.jsx:75
-#: src/components/SocialSettings.jsx:122
-#: src/components/SocialSettings.jsx:173
-#: src/components/TemplateItemEdit.jsx:209
-#: src/components/windows/Faction.jsx:1321
-#: src/components/windows/Faction.jsx:1363
-#: src/components/windows/Faction.jsx:1525
-#: src/components/windows/Faction.jsx:1599
-#: src/components/windows/OIDCConsent.jsx:322
 msgid "Save"
 msgstr ""
 
-#: src/components/windows/Converter.jsx:429
 msgid "Scale Image"
 msgstr ""
 
-#: src/components/windows/Help.jsx:110
 #, javascript-format
 msgid "Scroll ${ mouseSymbol } mouse wheel or ${ touchSymbol } pinch to zoom"
 msgstr ""
 
-#: src/components/menus/mainMenu.js:148
-#: src/components/windows/Search.jsx:60
-#: src/components/windows/Search.jsx:93
-#: src/components/windows/index.js:52
 msgid "Search"
 msgstr ""
 
-#: src/components/windows/MyFactions.jsx:473
 msgid "Search Existing Faction"
 msgstr ""
 
-#: src/components/windows/Search.jsx:86
 msgid "Search Term"
 msgstr ""
 
-#: src/components/windows/Faction.jsx:1443
 msgid "See hidden users in member list"
 msgstr ""
 
-#: src/components/windows/Faction.jsx:1533
 msgid "Select Avatar of this Faction. Supported Formats: jpg, gif, png, webp"
 msgstr ""
 
-#: src/components/HistorySelect.jsx:180
 msgid "Select Date above"
 msgstr ""
 
-#: src/components/TemplateItemEdit.jsx:97
 msgid "Select File"
 msgstr ""
 
-#: src/components/SocialSettings.jsx:182
 msgid "Select Flag"
 msgstr ""
 
-#: src/components/windows/Settings.jsx:187
 msgid "Select Language"
 msgstr ""
 
-#: src/components/windows/Faction.jsx:560
 msgid "Select a valid powerlevel"
 msgstr ""
 
-#: src/components/windows/Faction.jsx:426
 msgid "Select a valid pwerlevel"
 msgstr ""
 
-#: src/components/windows/CanvasSelect.jsx:32
 msgid ""
 "Select the canvas you want to use.\n"
 "Every canvas is unique and has different palettes, cooldown and "
@@ -2155,50 +1498,39 @@ msgid ""
 "Archived canvases can be accessed here:"
 msgstr ""
 
-#: src/components/SocialSettings.jsx:130
 msgid "Select your Avatar. Supported Formats: jpg, gif, png, webp"
 msgstr ""
 
-#: src/components/windows/Settings.jsx:63
-#: src/store/actions/thunks.js:427
 msgid "Selected Color"
 msgstr ""
 
-#: src/components/SocialSettings.jsx:142
 msgid "Selected Flag:"
 msgstr ""
 
-#: src/components/GlobalCaptcha.jsx:100
 msgid "Send"
 msgstr ""
 
-#: src/components/LogInForm.jsx:279
 msgid "Sent you a mail with instructions to reset your password."
 msgstr ""
 
-#: src/components/windows/Converter.jsx:300
 msgid "Serpentine"
 msgstr ""
 
-#: src/store/actions/fetch.js:323
 msgid "Server answered with gibberish :("
 msgstr ""
 
-#: src/ui/PixelTransferController.js:152
-msgid "Server got confused by your pixels. Are you playing on multiple devices?"
+msgid ""
+"Server got confused by your pixels. Are you playing on multiple devices?"
 msgstr ""
 
-#: src/components/windows/UserArea.jsx:179
 msgid "Set Password"
 msgstr ""
 
-#: src/components/Canvastools.jsx:332
 msgid ""
-"Set protection of areas (if you need finer grained control, use protect "
-"with image upload and alpha layers)"
+"Set protection of areas (if you need finer grained control, use protect with "
+"image upload and alpha layers)"
 msgstr ""
 
-#: src/components/ChangePassword.jsx:96
 msgid ""
 "Setting a password allows you to login by username or email, rather than "
 "only relying on 3rd party login."
@@ -2206,169 +1538,117 @@ msgstr ""
 "Đặt một mật khẩu cho phép bạn đăng nhập bằng tên người dùng hoặc thư mục "
 "điện tử, thay vì chỉ phụ thuộc vào bẹn thứ ba để đăng nhập."
 
-#: src/components/menus/mainMenu.js:229
-#: src/components/windows/index.js:36
 msgid "Settings"
 msgstr ""
 
-#: src/components/markdown/MdLink.jsx:142
 msgid "Show Embedded"
 msgstr ""
 
-#: src/components/windows/Settings.jsx:69
 msgid "Show Grid"
 msgstr "Hiện thị lưới"
 
-#: src/components/windows/Settings.jsx:143
 msgid "Show Grid in white instead of black."
 msgstr "Hiện thị lưới trắng thay vì đen."
 
-#: src/components/windows/Settings.jsx:77
 msgid "Show Pixel Activity"
 msgstr ""
 
-#: src/components/windows/Settings.jsx:82
 msgid "Show circles where pixels are placed."
 msgstr ""
 
-#: src/components/windows/Templates.jsx:73
 msgid "Show overlay as small individual pixels on high zoomlevels."
 msgstr "Hiện lớp phủ như các điểm ảnh nhỏ riêng lẻ khi độ thu phóng lớn."
 
-#: src/components/windows/Templates.jsx:65
 msgid "Show templates as overlays ingame."
 msgstr "Hiện thị các ảnh mẫu như lớp phủ trong game."
 
-#: src/components/embeds/LocalMedia.jsx:266
 msgid "Shrink"
 msgstr ""
 
-#: src/components/windows/FishDisplay.jsx:69
 msgid "Size"
 msgstr ""
 
-#: src/components/windows/Templates.jsx:68
 msgid "Small Pixels When Zoomed"
 msgstr ""
 
-#: src/components/windows/UserArea.jsx:193
 msgid "Social Settings"
 msgstr ""
 
-#: src/components/windows/Help.jsx:78
 #, javascript-format
 msgid "Source for pixelplanet on ${ gitLink } or ${ downloadHereLink }."
 msgstr ""
 
-#: src/components/CanvasItem.jsx:41
 msgid "Stacking till"
 msgstr ""
 
-#: src/components/windows/Chat.jsx:277
 msgid "Start chatting here"
 msgstr "Bắt đầu trò chuyện ở đây"
 
-#: src/components/Admintools.jsx:304
 msgid "Start checking for Malware"
 msgstr ""
 
-#: src/components/menus/mainMenu.js:221
-#: src/components/windows/index.js:48
 msgid "Statistics"
 msgstr ""
 
-#: src/components/Canvastools.jsx:215
 msgid "Status: Not running"
 msgstr ""
 
-#: src/components/LogInForm.jsx:219
-#: src/components/LogInForm.jsx:379
 msgid "Stay logged in: "
 msgstr ""
 
-#: src/components/Canvastools.jsx:613
 msgid "Stop Cleaner"
 msgstr ""
 
-#: src/components/Admintools.jsx:293
 msgid "Stop checking for Malware"
 msgstr ""
 
-#: src/components/Admintools.jsx:269
 msgid "Stop requiring Verification to Place"
 msgstr ""
 
-#: src/components/Admintools.jsx:240
-#: src/components/Admintools.jsx:414
-#: src/components/Canvastools.jsx:322
-#: src/components/Canvastools.jsx:414
-#: src/components/Canvastools.jsx:492
-#: src/components/Canvastools.jsx:595
-#: src/components/IIDTools.jsx:283
-#: src/components/LogInForm.jsx:304
-#: src/components/LogInForm.jsx:406
-#: src/components/Mediatools.jsx:153
-#: src/components/windows/Faction.jsx:1218
-#: src/components/windows/Faction.jsx:1654
-#: src/components/windows/MyFactions.jsx:256
 msgid "Submit"
-msgstr ""
+msgstr "Đăng"
 
-#: src/components/windows/OIDCConsent.jsx:219
 msgid "Switch Account"
 msgstr ""
 
-#: src/controls/keypress.js:107
 #, javascript-format
 msgid "Switched to ${ canvasName }"
 msgstr ""
 
-#: src/components/TemplateItemEdit.jsx:120
 msgid "Template Name"
 msgstr "Tên ảnh mẫu"
 
-#: src/components/menus/mainMenu.js:210
-#: src/components/windows/Templates.jsx:52
-#: src/components/windows/index.js:45
 msgid "Templates"
 msgstr "Các ảnh mẩu"
 
-#: src/components/windows/OIDCConsent.jsx:210
 #, javascript-format
 msgid ""
 "The application ${ appName } at ${ appUrl } wants to login with your "
 "pixelplanet account ${ accountName }"
 msgstr ""
 
-#: src/components/windows/Help.jsx:84
 msgid ""
 "The bare map data that we use, together with converted OpenStreetMap tiles "
 "for orientation, can be downloaded from mega.nz here: "
 msgstr ""
 
-#: src/components/LogInForm.jsx:339
 msgid ""
-"The name of your account, only a-z, A-Z, -, ., and - characters are "
-"allowed. It is permanent, you can not change it later."
+"The name of your account, only a-z, A-Z, -, ., and - characters are allowed. "
+"It is permanent, you can not change it later."
 msgstr ""
 
-#: src/components/LogInForm.jsx:361
 msgid "The password for your account."
 msgstr ""
 
-#: src/components/windows/Settings.jsx:175
 msgid "Themes"
 msgstr ""
 
-#: src/components/windows/Player.jsx:15
 msgid "This URL is not supported by our Media Player"
 msgstr ""
 
-#: src/ui/PixelTransferController.js:103
 msgid "This canvas doesn't exist"
 msgstr ""
 
-#: src/components/windows/Archive.jsx:21
 msgid ""
 "This canvas got requested during a time of political conflicts on the main "
 "Earth canvas. It was a 1024x1024 representation of the political compass "
@@ -2376,11 +1656,9 @@ msgid ""
 "remained active for months till it got shut down on November 30th."
 msgstr ""
 
-#: src/components/windows/Faction.jsx:1722
 msgid "This faction has no invites"
 msgstr ""
 
-#: src/components/LogInForm.jsx:328
 msgid ""
 "This is the name that other people see, e.g. in Chat. You can change it at "
 "any time. All characters except @, /, , >, < and # are allowed."
@@ -2388,261 +1666,179 @@ msgstr ""
 "Đây là tên mà người khác thấy, ví dụ trong cuộc trò chuyện. Bạn có thể đổi "
 "nó bất cứ lúc nào. Tất cả kí tự trừ @, /, , >, < và # đều được cho phép."
 
-#: src/components/windows/OIDCConsent.jsx:253
 msgid "This login may only work if your account is verified."
 msgstr ""
 
-#: src/components/windows/OIDCConsent.jsx:242
 msgid "This permission is required"
 msgstr ""
 
-#: src/ui/PixelTransferController.js:68
-#: src/ui/PixelTransferController.js:163
 msgid "Timeout"
 msgstr ""
 
-#: src/components/Captcha.jsx:184
 msgid "Tip: Not case-sensitive; I and l are the same"
 msgstr ""
 
-#: src/components/windows/Templates.jsx:56
 msgid ""
 "Tired of always spaming one single color? Want to create art instead, but "
 "you have to count pixels from some other image? Templates can help you with "
-"that! Templates can show as overlay and you can draw over them. One pixel "
-"on the template, should be one pixel on the canvas."
+"that! Templates can show as overlay and you can draw over them. One pixel on "
+"the template, should be one pixel on the canvas."
 msgstr ""
 "Cảm thấy chán với việc vẽ đúng một màu từ ngày này qua ngày khác? Cảm thấy "
 "muốn vẽ các tác phẩm nghệ thuật, nhưng bạn lại phải tính toán từng điểm ảnh "
 "từ bức ảnh khác? Ảnh mẫu có thể được hiện thị dưới dạng lớp phủ và bạn có "
 "thể vẽ lên đó. Một điểm ảnh ở ảnh mẫu sẽ là một điểm ảnh ở khung vẽ."
 
-#: src/components/Table.jsx:21
-#: src/components/windows/Faction.jsx:1543
-#: src/components/windows/MyFactions.jsx:200
 msgid "Title"
 msgstr ""
 
-#: src/utils/validation.js:62
 msgid "Title can't be empty."
 msgstr "Tiêu đề không thể để trống."
 
-#: src/utils/validation.js:72
 msgid "Title contains invalid character like @, /, \\ or #"
 msgstr "Tiêu đề chứa các kí tự không hợp lệ như @, /, / hoặc #"
 
-#: src/utils/validation.js:63
 msgid "Title must be at least 2 characters long"
 msgstr "Tiêu đề phải dài ít nhất hai kí tự"
 
-#: src/utils/validation.js:64
 msgid "Title must be shorter than 26 characters"
 msgstr "Tiêu đề phải ngắn hơn 26 kí tự"
 
-#: src/components/windows/Faction.jsx:1550
-#: src/components/windows/MyFactions.jsx:207
 msgid "Title of your faction"
 msgstr ""
 
-#: src/components/ChangeMail.jsx:165
 msgid "To use this page, enter your Password:"
 msgstr ""
 
-#: src/components/OnlineBox.jsx:92
-#: src/components/windows/Statistics.jsx:86
 msgid "Today"
 msgstr ""
 
-#: src/components/windows/Faction.jsx:779
-#: src/components/windows/User.jsx:163
-#: src/components/windows/UserArea.jsx:108
 msgid "Today Placed Pixels"
 msgstr ""
 
-#: src/core/chartSettings.js:30
 msgid "Top 10 Countries [pxls / day]"
 msgstr ""
 
-#: src/components/CanvasItem.jsx:59
 msgid "Top 10 Daily Ranking"
 msgstr ""
 
-#: src/core/chartSettings.js:221
 msgid "Top 10 Players [pxls / day]"
 msgstr ""
 
-#: src/components/windows/Statistics.jsx:184
 msgid "Top 10 Players from Yesterday"
 msgstr ""
 
-#: src/components/Canvastools.jsx:352
-#: src/components/Canvastools.jsx:429
-#: src/components/Canvastools.jsx:525
-#: src/components/Watchtools.jsx:175
 msgid "Top-left corner"
 msgstr ""
 
-#: src/components/OnlineBox.jsx:92
-#: src/components/windows/Statistics.jsx:85
 msgid "Total"
 msgstr ""
 
-#: src/components/OnlineBox.jsx:71
 msgid "Total Online Users"
 msgstr ""
 
-#: src/components/windows/Statistics.jsx:182
 msgid "Total Pixels per Faction"
 msgstr ""
 
-#: src/components/windows/Statistics.jsx:180
 msgid "Total Pixels per Player"
 msgstr ""
 
-#: src/core/chartSettings.js:347
 msgid "Total Pixels placed per day"
 msgstr ""
 
-#: src/components/windows/Faction.jsx:793
-#: src/components/windows/User.jsx:177
-#: src/components/windows/UserArea.jsx:122
 msgid "Total Rank"
 msgstr ""
 
-#: src/components/Canvastools.jsx:200
 msgid ""
-"Turn every pixel in area to 0 (YOU REALLY SHOULDN'T DO THAT ON ANY AREA "
-"THAT ISN'T ALREADY MOSTLY 0)"
+"Turn every pixel in area to 0 (YOU REALLY SHOULDN'T DO THAT ON ANY AREA THAT "
+"ISN'T ALREADY MOSTLY 0)"
 msgstr ""
 
-#: src/components/windows/Settings.jsx:74
 msgid "Turn on grid to highlight pixel borders."
 msgstr "Bật chế độ lưới để làm nổi bật biên giới các điểm ảnh."
 
-#: src/components/Admintools.jsx:380
 msgid "Type of Mod"
 msgstr ""
 
-#: src/components/Captcha.jsx:181
 msgid "Type the characters from the following image:"
 msgstr ""
 
-#: src/components/Mediatools.jsx:128
 msgid "Unban media"
 msgstr ""
 
-#: src/components/windows/Faction.jsx:1455
 msgid "Unban members"
 msgstr ""
 
-#: src/components/windows/User.jsx:243
-#: src/components/windows/User.jsx:249
 msgid "Unblock"
 msgstr ""
 
-#: src/components/SocialSettings.jsx:221
 msgid "Unblock Users"
 msgstr ""
 
-#: src/components/GlobalCaptcha.jsx:68
 msgid "Unknown Captcha Error"
 msgstr "Lỗi Chaptra không xác định"
 
-#: src/store/actions/fetch.js:136
-#: src/store/actions/fetch.js:156
-#: src/store/actions/fetch.js:175
-#: src/store/actions/fetch.js:197
-#: src/store/actions/fetch.js:220
-#: src/store/actions/fetch.js:242
-#: src/store/actions/fetch.js:270
-#: src/store/actions/fetch.js:294
-#: src/store/actions/fetch.js:313
 msgid "Unknown Error"
 msgstr ""
 
-#: src/controls/keypress.js:199
 msgid "Unmuted Sound"
 msgstr ""
 
-#: src/components/LogInForm.jsx:221
-#: src/components/LogInForm.jsx:381
 msgid "Until the browser closes"
 msgstr ""
 
-#: src/components/Canvastools.jsx:260
 msgid "Upload images to canvas"
 msgstr ""
 
-#: src/components/windows/Settings.jsx:150
 msgid "Use our custom cursor"
 msgstr ""
 
-#: src/components/windows/index.js:51
 msgid "User"
 msgstr "Người dùng"
 
-#: src/components/CanvasItem.jsx:54
 msgid "User Account"
 msgstr ""
 
-#: src/components/menus/mainMenu.js:115
-#: src/components/windows/index.js:37
 msgid "User Area"
 msgstr "Khu vực người dùng"
 
-#: src/components/windows/OIDCConsent.jsx:75
 msgid "User ID and verification level"
 msgstr ""
 
-#: src/components/Admintools.jsx:372
-#: src/components/LogInForm.jsx:331
-#: src/components/LogInForm.jsx:336
-#: src/components/windows/OIDCConsent.jsx:311
 msgid "User Name"
 msgstr "Tên người dùng"
 
-#: src/components/IIDTools.jsx:253
 msgid "Username"
 msgstr "Tên người dùng"
 
-#: src/utils/validation.js:56
 msgid "Username can only contain the characters: a-z . _ and -"
 msgstr "Tên người dùng chỉ có thể chứa các kí tự sau: a-z . _ và -"
 
-#: src/components/ChangeUsername.jsx:60
-#: src/components/windows/OIDCConsent.jsx:305
 msgid "Username can only contain the characters: a-z A-z . _ and -"
 msgstr "chỉ có thể chứa các kí tự sau: a-z A-Z . _ và -"
 
-#: src/utils/validation.js:48
 msgid "Username can't be empty."
 msgstr "Tên người dùng không thể để trống."
 
-#: src/utils/validation.js:50
 msgid "Username must be at least 2 characters long"
 msgstr "Tên người dùng phải chứa ít nhất hai kí tự"
 
-#: src/utils/validation.js:53
 msgid "Username must be shorter than 26 characters"
 msgstr "Tên người dùng phải ngắn hơn 26 kí tự"
 
-#: src/components/windows/Search.jsx:26
 msgid "Users"
 msgstr "Những người dùng"
 
-#: src/components/windows/Help.jsx:79
 #, javascript-format
 msgid "We are Libre Software under the ${ agplLink }, "
 msgstr ""
 
-#: src/components/windows/Archive.jsx:22
 msgid ""
-"We decided to archive it as a timelapse with lossless encoded webm. Taking "
-"a screenshot from the timelapse results in a perfect 1:1 representation of "
-"how the canvas was at that time."
+"We decided to archive it as a timelapse with lossless encoded webm. Taking a "
+"screenshot from the timelapse results in a perfect 1:1 representation of how "
+"the canvas was at that time."
 msgstr ""
 
-#: src/components/windows/Help.jsx:131
 msgid ""
 "We thank the following artists, who made their palettes available to the "
 "public on"
@@ -2650,56 +1846,43 @@ msgstr ""
 "Chúng tôi cảm ơn những hoạ sĩ sau, những người đã cho phép công chúng sử "
 "dụng bảng màu của họ tại"
 
-#: src/ui/PixelTransferController.js:176
 msgid "Weird"
 msgstr ""
 
-#: src/components/windows/Settings.jsx:171
 msgid "What the pencil should draw on the current canvas."
 msgstr ""
 
-#: src/components/windows/Faction.jsx:1646
 msgid "Whether or not this invite can only be used once."
 msgstr ""
 
-#: src/components/windows/Archive.jsx:9
 msgid ""
 "While we tend to not delete canvases, some canvases are started for fun or "
 "as a request by users who like a currently popular meme. Those canvases can "
-"become dull and inactive after a while, at which point there is no reason "
-"to keep them and we may decide to remove them."
+"become dull and inactive after a while, at which point there is no reason to "
+"keep them and we may decide to remove them."
 msgstr ""
 
-#: src/components/BanInfo.jsx:139
 msgid "Why?"
 msgstr "Tại sao?"
 
-#: src/components/windows/Converter.jsx:440
 msgid "Width"
 msgstr ""
 
-#: src/ui/PixelTransferController.js:118
 msgid "Wrong Color"
 msgstr ""
 
-#: src/components/ChangeUsername.jsx:59
-#: src/components/windows/OIDCConsent.jsx:304
 msgid "YOU CAN ONLY CHOOSE YOUR USERNAME ONCE!"
 msgstr "BẠN CHỈ CÓ THỂ CHỌN TÊN CỦA BẠN MỘT LẦN DUY NHẤT!"
 
-#: src/components/CanvasItem.jsx:45
 msgid "Yes"
 msgstr "Vâng"
 
-#: src/components/DeleteAccount.jsx:79
 msgid "Yes, Delete My Account!"
 msgstr "Ừ, xoá tài khoản của tôi!"
 
-#: src/components/windows/Statistics.jsx:87
 msgid "Yesterday"
 msgstr "Hôm qua"
 
-#: src/components/windows/Help.jsx:82
 msgid ""
 "You are a teacher and a pupil is playing this game, despite it not being "
 "suitable for them? Send us an email."
@@ -2707,190 +1890,147 @@ msgstr ""
 "Bạn là giáo viên và một học sinh đang chơi trò chơi này, dù nó không phù "
 "hợp? Hãy gửi cho chúng tôi một email."
 
-#: src/components/BanInfo.jsx:87
 #, javascript-format
 msgid ""
 "You are banned. You think it is unjustified? Check out the ${ helpButton } "
 "on how to appeal. And don't forget to include the BID you can get below."
 msgstr ""
 
-#: src/components/windows/MyFactions.jsx:460
 msgid "You are currently not a member of any faction."
 msgstr "Bạn hiện đang không trong bất cứ nhóm nào."
 
-#: src/ui/PixelTransferController.js:173
 msgid "You are currently not allowed to access this game."
 msgstr "Bạn hiện tại không được phép truy cập trò chơi này."
 
-#: src/components/windows/MyFactions.jsx:299
 msgid ""
-"You are currently not representing any faction. To represent one, activate "
-"a role in one of your factions below."
+"You are currently not representing any faction. To represent one, activate a "
+"role in one of your factions below."
 msgstr ""
 
-#: src/components/windows/MyFactions.jsx:281
 #, javascript-format
 msgid ""
-"You are currently representing ${ activeFactionTitle } as ${ activeRoleName "
-"}"
+"You are currently representing ${ activeFactionTitle } as ${ activeRoleName }"
 msgstr ""
 
-#: src/components/windows/Invite.jsx:100
 #, javascript-format
 msgid "You are logged in as ${ name } [${ username }]."
 msgstr "Bạn đã đăng nhập với tên ${ name } [${ username }]."
 
-#: src/components/ReplacementMessage.jsx:17
 msgid "You are not allowed to play this game right now :("
 msgstr "Bây giờ bạn không được phép chơi trò chơi này :("
 
-#: src/ui/PixelTransferController.js:143
 msgid "You are using a Proxy."
 msgstr "Bạng đang dùng Proxy."
 
-#: src/ui/PixelTransferController.js:150
 msgid "You are weird"
 msgstr ""
 
-#: src/components/windows/Help.jsx:128
 msgid ""
-"You can connect to pixelplanet and use pixelplanet accounts for oauth / "
-"oidc login. See here: "
+"You can connect to pixelplanet and use pixelplanet accounts for oauth / oidc "
+"login. See here: "
 msgstr ""
 
-#: src/ui/PixelTransferController.js:128
 msgid "You can not access this canvas yet, because your pixel score is too low"
 msgstr ""
 
-#: src/store/middleware/notifications.js:37
 msgid "You can now place more on pixelplanet.fun :)"
 msgstr ""
 
-#: src/store/actions/index.js:408
 #, javascript-format
 msgid ""
 "You caught a Phish! It is a ${ FISH_TYPES[type].name } with ${ size }kg! As "
 "a bonus, your cooldown is reduced."
 msgstr ""
-"Bạn đã bắt được một con Ká! Đây là một con ${ FISH_TYPES[type].name } với ${ "
-"size }kg! Như một phần thưởng, thời gian hồi chiêu của bạn sẽ được giảm."
+"Bạn đã bắt được một con Ká! Đây là một con ${ FISH_TYPES[type].name } với $"
+"{ size }kg! Như một phần thưởng, thời gian hồi chiêu của bạn sẽ được giảm."
 
-#: src/components/windows/OIDCConsent.jsx:180
 msgid "You did not consent"
 msgstr ""
 
-#: src/components/GlobalCaptcha.jsx:53
 msgid "You failed your captcha"
 msgstr "Bạn đã thất bại trong việc giải quyết captcha"
 
-#: src/components/windows/Invite.jsx:97
 #, javascript-format
 msgid ""
-"You have been invited to join us on pixelplanet. We currently have ${ "
-"memberCount } members."
+"You have been invited to join us on pixelplanet. We currently have $"
+"{ memberCount } members."
 msgstr ""
-"Bạn đã được mời tham gia chúng tôi ở pixelplanet. Hiện nay chúng tôi có ${ "
-"memberCount } thành viên."
+"Bạn đã được mời tham gia chúng tôi ở pixelplanet. Hiện nay chúng tôi có $"
+"{ memberCount } thành viên."
 
-#: src/components/SocialSettings.jsx:236
 msgid "You have no users blocked"
 msgstr "Bạn không có người dùng nào bị chặn"
 
-#: src/ui/PixelTransferController.js:123
 msgid "You have to be logged in to place on this canvas"
 msgstr "Bạn phải đăng nhập để vẽ ở khung ảnh này"
 
-#: src/store/actions/fetch.js:40
-#: src/store/actions/fetch.js:786
 msgid "You made too many requests"
 msgstr "Bạn đã tạo quá nhiều yêu cầu"
 
-#: src/components/windows/Chat.jsx:359
 msgid "You must be logged in to chat"
 msgstr "Bạn phải đăng nhập để trò chuyện"
 
-#: src/components/IIDTools.jsx:58
 msgid "You must enter a UserId"
 msgstr ""
 
-#: src/components/Mediatools.jsx:20
 msgid "You must enter a mediaId or media BID"
 msgstr ""
 
-#: src/components/IIDTools.jsx:70
-#: src/components/Mediatools.jsx:25
 msgid "You must enter a reason"
 msgstr "Bạn phải nhập một lí do"
 
-#: src/components/IIDTools.jsx:61
 msgid "You must enter a username"
 msgstr "Bạn phải nhập một tên người dùng"
 
-#: src/components/IIDTools.jsx:39
 msgid "You must enter an BID"
 msgstr ""
 
-#: src/components/IIDTools.jsx:32
 msgid "You must enter an IID"
 msgstr ""
 
-#: src/components/IIDTools.jsx:51
 msgid "You must enter an IID or UserId"
 msgstr ""
 
-#: src/components/IIDTools.jsx:78
 msgid "You must enter at least one IID, User Id or BID"
 msgstr ""
 
-#: src/components/windows/MyFactions.jsx:123
 msgid "You must select an avatar for your faction"
 msgstr "Bạn phải đặt một ảnh đại diện cho nhóm của bạn"
 
-#: src/components/GlobalCaptcha.jsx:50
 msgid "You took too long, try again."
 msgstr "Bạn đã mất quá nhiều thời gian, vui lòng thử lại."
 
-#: src/components/windows/Settings.jsx:103
 msgid ""
 "Your Browser doesn't allow us to use AudioContext to play sounds. Do you "
 "have some privacy feature blocking us?"
 msgstr ""
 
-#: src/components/GlobalCaptcha.jsx:62
 msgid "Your Browser looks shady"
 msgstr "Trình duyệt của bạn trông đáng ngờ"
 
-#: src/components/windows/MyFactions.jsx:272
 msgid "Your Factions"
 msgstr "(Các) nhóm của bạn"
 
-#: src/ui/PixelTransferController.js:160
 msgid "Your Internet Provider is banned from this game"
 msgstr "Nhà cung cấp dịch vụ Internet cuủa bạn đã cấm bạn vào trò chơi này"
 
-#: src/components/windows/MyFactions.jsx:369
 msgid "Your Roles"
 msgstr "(Những) vai trò của bạn"
 
-#: src/components/BanInfo.jsx:109
 msgid "Your ban expires at "
 msgstr "Lệnh cấm của bạn sẽ hết hiệu lực vào "
 
-#: src/components/windows/OIDCConsent.jsx:291
 msgid ""
-"Your did not set your username yet. A username is required to login to "
-"other applications. You can set it now:"
+"Your did not set your username yet. A username is required to login to other "
+"applications. You can set it now:"
 msgstr ""
 
-#: src/components/windows/UserArea.jsx:131
 msgid "Your name is:"
 msgstr "Tên bạn là:"
 
-#: src/store/middleware/notifications.js:33
 msgid "Your next pixels are ready"
 msgstr "Điểm ảnh tiếp theo cho bạn đã sẵn sàng"
 
-#: src/components/windows/Settings.jsx:121
 msgid ""
 "Zoom in instead of placing a pixel when you tap the canvas and your zoom is "
 "small."
@@ -2898,151 +2038,118 @@ msgstr ""
 "Phóng to thay vì đặt một điểm ảnh khi nhấn vào khung vẽ và mức thu phóng đủ "
 "nhỏ."
 
-#: src/components/windows/User.jsx:111
 msgid "a hidden faction"
 msgstr ""
 
-#: src/components/windows/Faction.jsx:1115
 msgid "affects"
 msgstr ""
 
-#: src/components/CanvasItem.jsx:56
 #, javascript-format
 msgid "and ${ canvas.req } Pixels set"
 msgstr ""
 
-#: src/components/windows/Faction.jsx:1117
 msgid "by"
 msgstr ""
 
-#: src/components/windows/Help.jsx:79
 msgid "check compliance here"
 msgstr ""
 
-#: src/components/windows/Faction.jsx:1119
-#: src/components/windows/Faction.jsx:1681
 msgid "created at"
 msgstr ""
 
-#: src/components/windows/User.jsx:185
 msgid "days"
 msgstr ""
 
-#: src/components/windows/Help.jsx:46
 msgid "download here"
 msgstr ""
 
-#: src/components/windows/Faction.jsx:1121
 msgid "lift"
 msgstr ""
 
-#: src/components/LogInForm.jsx:246
 msgid "or login with:"
 msgstr "hoặc đăng nhập với:"
 
-#: src/components/LogInForm.jsx:263
 msgid "or register here:"
 msgstr "hoặc đăng kí ở đây:"
 
-#: src/components/windows/Help.jsx:77
 msgid "recommended"
 msgstr "khuyến khích"
 
-#: src/components/windows/Faction.jsx:1683
 msgid "times used"
 msgstr ""
 
-#: src/store/actions/fetch.js:44
 #, javascript-format
 msgid "try again after ${ ti }min"
 msgstr "vui lòng thử lại sau ${ ti } phút"
 
-#: src/ui/PixelTransferController.js:107
 msgid "x out of bounds"
 msgstr "(Toạ độ) x vượt quá giới hạn"
 
-#: src/ui/PixelTransferController.js:111
 msgid "y out of bounds"
 msgstr "(Toạ độ) y vượt quá giới hạn"
 
-#: src/ui/PixelTransferController.js:115
 msgid "z out of bounds"
 msgstr "(Toạ độ) z vượt quá giới hạn"
 
-#: src/components/windows/Help.jsx:28
 msgctxt "keybinds"
 msgid "A"
 msgstr "A"
 
-#: src/components/windows/Settings.jsx:166
 msgctxt "keybinds"
 msgid "B"
 msgstr "B"
 
-#: src/components/windows/Help.jsx:30
 msgctxt "keybinds"
 msgid "D"
 msgstr "D"
 
-#: src/components/windows/Help.jsx:26
 msgctxt "keybinds"
 msgid "E"
 msgstr "E"
 
-#: src/components/windows/Help.jsx:21
-#: src/components/windows/Settings.jsx:70
 msgctxt "keybinds"
 msgid "G"
 msgstr "G"
 
-#: src/components/windows/Help.jsx:23
-#: src/components/windows/Settings.jsx:156
 msgctxt "keybinds"
 msgid "H"
 msgstr "H"
 
-#: src/components/windows/Settings.jsx:94
 msgctxt "keybinds"
 msgid "M"
 msgstr "M"
 
-#: src/components/windows/Settings.jsx:86
 msgctxt "keybinds"
 msgid "N"
 msgstr "N"
 
-#: src/components/windows/Help.jsx:25
 msgctxt "keybinds"
 msgid "Q"
 msgstr "Q"
 
-#: src/components/windows/Help.jsx:24
 msgctxt "keybinds"
 msgid "R"
 msgstr "R"
 
-#: src/components/windows/Help.jsx:29
 msgctxt "keybinds"
 msgid "S"
 msgstr "S"
 
-#: src/components/windows/Help.jsx:37
 msgctxt "keybinds"
 msgid "Shift"
 msgstr "Shift"
 
-#: src/components/windows/Templates.jsx:61
 msgctxt "keybinds"
 msgid "T"
 msgstr "T"
 
-#: src/components/windows/Help.jsx:27
 msgctxt "keybinds"
 msgid "W"
 msgstr "W"
 
-#: src/components/windows/Help.jsx:22
-#: src/components/windows/Settings.jsx:78
 msgctxt "keybinds"
 msgid "X"
 msgstr "X"
+
+#~ msgid "Change your Mail Adress here:"
+#~ msgstr "Đổi thư mục điện tử của bạn ở đây:"

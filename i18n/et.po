@@ -79,6 +79,9 @@ msgstr "Lisa Teljestik (eemalda märge, kui vajad 1:1 šablooni)"
 msgid "Add Template"
 msgstr "Lisa Šabloon"
 
+msgid "Add an Mail Adress here:"
+msgstr ""
+
 #. This if for moderation tools, it's not important to translate this
 msgid "Admintools"
 msgstr ""
@@ -252,9 +255,6 @@ msgstr ""
 
 msgid "Change Password"
 msgstr "Muuda Salasõna"
-
-msgid "Change your Mail Adress here:"
-msgstr ""
 
 msgid "Channel"
 msgstr ""

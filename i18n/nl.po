@@ -5,8 +5,8 @@ msgstr ""
 "POT-Creation-Date: \n"
 "PO-Revision-Date: 2026-04-20 13:30+0000\n"
 "Last-Translator: lay <lay@noreply.pixelplanet.fun>\n"
-"Language-Team: Dutch <https://translate.gs-os.com/projects/ppfun/client/nl/>"
-"\n"
+"Language-Team: Dutch <https://translate.gs-os.com/projects/ppfun/client/nl/"
+">\n"
 "Language: nl\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -94,6 +94,9 @@ msgstr "Raster toevoegen (uitvinken als u een 1:1-sjabloon nodig heeft)"
 
 msgid "Add Template"
 msgstr "Sjabloon toevoegen"
+
+msgid "Add an Mail Adress here:"
+msgstr ""
 
 #. This if for moderation tools, it's not important to translate this
 msgid "Admintools"
@@ -267,9 +270,6 @@ msgstr "Naam veranderen"
 
 msgid "Change Password"
 msgstr "Verander wachtwoord"
-
-msgid "Change your Mail Adress here:"
-msgstr "Wijzig hier uw E-mailadres:"
 
 msgid "Channel"
 msgstr "Kanaal"
@@ -1161,7 +1161,8 @@ msgid "Offset"
 msgstr "Offset"
 
 msgid "Oh no, the phish escaped. Better luck next time!"
-msgstr "Oh nee, de phish is ontsnapt. Hopelijk heb je volgende keer meer geluk!"
+msgstr ""
+"Oh nee, de phish is ontsnapt. Hopelijk heb je volgende keer meer geluk!"
 
 msgid "Old Password"
 msgstr "Oud wachtwoord"
@@ -1436,7 +1437,8 @@ msgstr "Een Inlogmethode verwijderen:"
 
 #, javascript-format
 msgid "Represents ${ activeFactionTitle } as ${ activeFactionRoleName }"
-msgstr "Vertegenwoordigt ${ activeFactionTitle } als ${ activeFactionRoleName }"
+msgstr ""
+"Vertegenwoordigt ${ activeFactionTitle } als ${ activeFactionRoleName }"
 
 msgid "Require Verification to Place"
 msgstr "Verificatie Vereist om te Plaatsen"
@@ -1629,8 +1631,8 @@ msgstr "Sociale instellingen"
 #, javascript-format
 msgid "Source for pixelplanet on ${ gitLink } or ${ downloadHereLink }."
 msgstr ""
-"De broncode voor PixelPlanet is te vinden op ${ gitLink } of ${ "
-"downloadHereLink }."
+"De broncode voor PixelPlanet is te vinden op ${ gitLink } of $"
+"{ downloadHereLink }."
 
 msgid "Stacking till"
 msgstr "Stapelen tot"
@@ -1733,7 +1735,8 @@ msgstr ""
 "elk moment wijzigen. Alle tekens behalve @, /, , >, < en # zijn toegestaan."
 
 msgid "This login may only work if your account is verified."
-msgstr "Deze inlogmethode werkt mogelijk alleen als uw account is geverifieerd."
+msgstr ""
+"Deze inlogmethode werkt mogelijk alleen als uw account is geverifieerd."
 
 msgid "This permission is required"
 msgstr "Deze toestemming is vereist"
@@ -2017,7 +2020,8 @@ msgstr ""
 "voor oauth/oidc aanmelding. Zie hier: "
 
 msgid "You can not access this canvas yet, because your pixel score is too low"
-msgstr "Je hebt nog geen toegang tot dit canvas, omdat je pixelscore te laag is"
+msgstr ""
+"Je hebt nog geen toegang tot dit canvas, omdat je pixelscore te laag is"
 
 msgid "You can now place more on pixelplanet.fun :)"
 msgstr "Je kunt nu meer plaatsen op pixelplanet.fun :)"
@@ -2027,8 +2031,8 @@ msgid ""
 "You caught a Phish! It is a ${ FISH_TYPES[type].name } with ${ size }kg! As "
 "a bonus, your cooldown is reduced."
 msgstr ""
-"Je hebt een Phish gevangen! Het is een ${ FISH_TYPES[type].name } met ${ "
-"size }kg! Als bonus wordt je cooldown verkort."
+"Je hebt een Phish gevangen! Het is een ${ FISH_TYPES[type].name } met $"
+"{ size }kg! Als bonus wordt je cooldown verkort."
 
 msgid "You did not consent"
 msgstr "Je hebt geen toestemming gegeven"
@@ -2240,6 +2244,9 @@ msgstr "W"
 msgctxt "keybinds"
 msgid "X"
 msgstr "X"
+
+#~ msgid "Change your Mail Adress here:"
+#~ msgstr "Wijzig hier uw E-mailadres:"
 
 #~ msgid "You must enter a duration"
 #~ msgstr "U moet een duur invoeren"

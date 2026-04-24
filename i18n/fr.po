@@ -87,6 +87,9 @@ msgstr "Ajouter grille (décochez-vous si vous avez besoin d'une modèle 1:1)"
 msgid "Add Template"
 msgstr "Ajouter un Template"
 
+msgid "Add an Mail Adress here:"
+msgstr ""
+
 #. This if for moderation tools, it's not important to translate this
 msgid "Admintools"
 msgstr "Outils d'admin"
@@ -263,9 +266,6 @@ msgstr ""
 
 msgid "Change Password"
 msgstr "Changer le mot de passe"
-
-msgid "Change your Mail Adress here:"
-msgstr ""
 
 msgid "Channel"
 msgstr ""

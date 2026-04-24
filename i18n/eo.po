@@ -88,6 +88,9 @@ msgstr "Aldonu Kradon (ne elektu se necesus 1:1 proporcion)"
 msgid "Add Template"
 msgstr "Elŝultu Modelon"
 
+msgid "Add an Mail Adress here:"
+msgstr ""
+
 #. This if for moderation tools, it's not important to translate this
 msgid "Admintools"
 msgstr "Administriloj"
@@ -263,9 +266,6 @@ msgstr "Ŝanĝi Nomon"
 
 msgid "Change Password"
 msgstr "Ŝanĝu Pasvorton"
-
-msgid "Change your Mail Adress here:"
-msgstr "Ŝanĝu vian retpoŝtadreson ĉi tie:"
 
 msgid "Channel"
 msgstr ""
@@ -2217,6 +2217,9 @@ msgstr "W"
 msgctxt "keybinds"
 msgid "X"
 msgstr "X"
+
+#~ msgid "Change your Mail Adress here:"
+#~ msgstr "Ŝanĝu vian retpoŝtadreson ĉi tie:"
 
 #~ msgid ""
 #~ "Block all Private Messages. Enabling this will delete all your current "
