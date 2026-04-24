@@ -147,8 +147,8 @@ export async function hasSimilarMedia(model, pHash) {
   }
 
   try {
-    const models = await pool.query('CALL GET_CLOSE_IMAGE(?)', [pHash]);
-    if (models?.length) {
+    const [models] = await pool.query('CALL GET_CLOSE_IMAGE(?)', [pHash]);
+    if (models.length) {
       const similarModel = models[0];
       /*
       * make sure that file actually exists

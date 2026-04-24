@@ -58,7 +58,7 @@ export async function cleanUp() {
  * @param force boolean, force a table sync (does not change columns, but runs
  * CREATE TABLE IF NOT EXISTS commands)
  */
-export async function sync(force = false, sqlRootDirectory) {
+export async function sync(force = false, sqlRootDirectory = null) {
   if (!sqlRootDirectory) {
     sqlRootDirectory = path.join(import.meta.dirname,
       // webpack will bundle with the workers directory

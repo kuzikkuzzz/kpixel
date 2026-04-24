@@ -221,7 +221,7 @@ export const checkMail = queue(async (email) => {
   if (cache) {
     return cache;
   }
-  if (disposableEmailDomainCache.size > 100) {
+  if (disposableEmailDomainCache.size > 10) {
     disposableEmailDomainCache.clear();
   }
   const isDisposable = await mailChecker(email);

@@ -514,7 +514,7 @@ export async function getUserByTpid(provider, tpid) {
     return null;
   }
   try {
-    const [model] = pool.query(
+    const [models] = await pool.query(
       // eslint-disable-next-line max-len
       `SELECT u.id, u.name, u.username, u.password, u.flags, u.userlvl FROM Users u
   INNER JOIN ThreePIDs t ON t.uid = u.id
@@ -525,7 +525,7 @@ WHERE provider = ? AND (
 )`,
       [provider, tpid, provider, tpid],
     );
-    return model || null;
+    return models || null;
   } catch (error) {
     console.error(`SQL Error on getUserByTpid: ${error.message}`);
     throw error;
@@ -579,6 +579,7 @@ export async function verifyEmail(email) {
   try {
     conn = await pool.getConnection();
 
+    /* eslint-disable max-len */
     const result = await conn.query(
       `UPDATE Users u
   INNER JOIN ThreePIDs t ON t.uid = u.id
@@ -587,8 +588,9 @@ SET t.verified = 1, u.userlvl =
     WHEN u.userlvl = ? THEN ?
     ELSE u.userlvl
   END
-WHERE t.provider = ? AND t.tpid = ?`,
-      [USERLVL.REGISTERED, USERLVL.VERIFIED, THREEPID_PROVIDERS.EMAIL, email],
+WHERE t.provider = ? AND normalizedTpid IS NOT NULL AND normalizedTpid = NORMALIZE_TPID(?, ?)`,
+      [USERLVL.REGISTERED, USERLVL.VERIFIED,
+        THREEPID_PROVIDERS.EMAIL, THREEPID_PROVIDERS.EMAIL, email],
     );
 
     if (result.affectedRows === 0) {
@@ -598,9 +600,10 @@ WHERE t.provider = ? AND t.tpid = ?`,
     const [user] = await conn.query(
       `SELECT u.id FROM Users u
   INNER JOIN ThreePIDs t ON t.uid = u.id
-WHERE t.provider = ? AND t.tpid = ?`,
-      [THREEPID_PROVIDERS.EMAIL, email],
+WHERE t.provider = ? AND normalizedTpid IS NOT NULL AND normalizedTpid = NORMALIZE_TPID(?, ?)`,
+      [THREEPID_PROVIDERS.EMAIL, THREEPID_PROVIDERS.EMAIL, email],
     );
+    /* eslint-enable max-len */
 
     if (user) {
       return user.id;
@@ -714,7 +717,9 @@ export async function setUserProperty(id, property, value) {
     );
     return true;
   } catch (error) {
-    console.error(`SQL Error on setUserProperty: ${error.message}`);
+    if (error.code !== 'ER_DUP_ENTRY') {
+      console.error(`SQL Error on setUserProperty: ${error.message}`);
+    }
   }
   return false;
 }
@@ -750,8 +755,9 @@ export async function deleteUser(id) {
  */
 export async function getHighUserLvlUsers() {
   try {
-    const models = await pool(
-      'SELECT name, id, userlvl FROM Users WHERE userlvl >= USERLVL.CHATMOD',
+    const models = await pool.query(
+      'SELECT name, id, userlvl FROM Users WHERE userlvl >= ?',
+      [USERLVL.CHATMOD],
     );
     const usersByLvl = {};
     for (let i = 0; i < models.length; i += 1) {

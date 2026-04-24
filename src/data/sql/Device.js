@@ -10,7 +10,7 @@ export async function upsertDevice({
 }) {
   let conn;
   try {
-    conn = await conn.getConnection();
+    conn = await pool.getConnection();
     const [result] = await pool.query(
       'SELECT id, lastSeen FROM Devices WHERE hash = ?',
       [hash],

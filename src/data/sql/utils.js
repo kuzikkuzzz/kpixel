@@ -9,9 +9,10 @@ import fs from 'fs';
 export async function executeSqlFile(filepath, pool, isTransactional) {
   const DELIMITER_STRING = 'DELIMITER';
   const script = fs.readFileSync(filepath, 'utf8');
-  const conn = await pool.getConnection();
 
+  let conn;
   try {
+    conn = await pool.getConnection();
     if (isTransactional) {
       await conn.beginTransaction();
     }
@@ -75,7 +76,7 @@ export async function executeSqlFile(filepath, pool, isTransactional) {
       await conn.commit();
     }
   } finally {
-    await conn.release();
+    if (conn) conn.release();
   }
 }
 

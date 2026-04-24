@@ -65,7 +65,7 @@ CREATE PROCEDURE IF NOT EXISTS BAN(
   IN p_uids_json JSON,
   IN p_iids_json JSON,
   IN p_flags TINYINT UNSIGNED,
-  IN p_reason varchar(200) CHARACTER SET utf8mb4,
+  IN p_reason varchar(200) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
   IN p_expires DATETIME,
   IN p_muid INT UNSIGNED
 ) NOT DETERMINISTIC MODIFIES SQL DATA
@@ -168,19 +168,19 @@ END;;
 -- clean up expired range bans
 CREATE PROCEDURE IF NOT EXISTS CLEAN_RANGE_BANS() NOT DETERMINISTIC MODIFIES SQL DATA
 BEGIN
-  DECLARE v_bid BIGINT UNSIGNED;
+  DECLARE v_rid INT UNSIGNED;
   DECLARE v_done INT DEFAULT FALSE;
 
   DECLARE v_cursor CURSOR FOR
-    SELECT id FROM RangeBans WHERE expires IS NOT NULL AND expires < NOW();
+    SELECT rid FROM RangeBans WHERE expires IS NOT NULL AND expires < NOW();
   DECLARE CONTINUE HANDLER FOR NOT FOUND
     SET v_done = TRUE;
 
   OPEN v_cursor;
   read_loop: LOOP
-    FETCH v_cursor INTO v_bid;
+    FETCH v_cursor INTO v_rid;
     IF v_done THEN LEAVE read_loop; END IF;
-    CALL REMOVE_RANGE_BAN(v_bid, NULL);
+    CALL REMOVE_RANGE_BAN(v_rid, NULL);
   END LOOP;
   CLOSE v_cursor;
 END;;

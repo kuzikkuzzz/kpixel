@@ -18,7 +18,7 @@ export default async (req, res) => {
 
   const [
     remReturn, newUserlvl,
-  ] = removeTpidFromUser(user.id, id, !!currentPassword);
+  ] = await removeTpidFromUser(user.id, id, !!currentPassword);
 
   switch (remReturn) {
     case 0:

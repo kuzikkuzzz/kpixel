@@ -89,6 +89,10 @@ msgstr ""
 msgid "Add Template"
 msgstr ""
 
+#: src/components/ChangeMail.jsx:230
+msgid "Add an Mail Adress here:"
+msgstr ""
+
 #: src/components/menus/mainMenu.js:166
 #. This if for moderation tools, it's not important to translate this
 msgid "Admintools"
@@ -336,10 +340,6 @@ msgstr ""
 
 #: src/components/windows/UserArea.jsx:179
 msgid "Change Password"
-msgstr ""
-
-#: src/components/ChangeMail.jsx:230
-msgid "Change your Mail Adress here:"
 msgstr ""
 
 #: src/components/windows/Chat.jsx:110

@@ -10,7 +10,7 @@ import http from 'http';
 import forceGC from './core/forceGC.js';
 import logger from './core/logger.js';
 import rankings from './core/Ranks.js';
-import { sync as syncSql, cleanUp as cleanUpSql} from './data/sql/index.js';
+import { sync as syncSql, cleanUp as cleanUpSql } from './data/sql/index.js';
 import { sync as syncAssets } from './core/assets.js';
 import { connect as connectRedis } from './data/redis/client.js';
 import routes from './routes/index.js';

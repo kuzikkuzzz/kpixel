@@ -50,7 +50,7 @@ export async function removeTpidFromUser(uid, id, hasPassword) {
       'CALL REMOVE_THREEPID_FROM_USER(?, ?, ?)',
       [uid, id, hasPassword ? 1 : 0],
     );
-    if (model?.length) {
+    if (model.length) {
       const { result, userlvl = null } = model[0];
       return [result, userlvl];
     }
@@ -69,7 +69,7 @@ export async function removeTpidFromUser(uid, id, hasPassword) {
 export async function getEmailOfUser(uid) {
   try {
     const [model] = await pool.query(
-      'SELECT tpid FROM ThreePIDs WHERE uid = h AND provider = ?',
+      'SELECT tpid FROM ThreePIDs WHERE uid = ? AND provider = ? LIMIT 1',
       [uid, THREEPID_PROVIDERS.EMAIL],
     );
     if (model) {

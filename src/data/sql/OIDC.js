@@ -376,7 +376,7 @@ export async function hasUserConsent(uid, cid) {
     return null;
   }
   try {
-    const consentModel = await pool.query(
+    const [consentModel] = await pool.query(
       // eslint-disable-next-line max-len
       'SELECT * FROM OIDCConsents WHERE cid = ? AND uid = ? AND (expires > NOW() OR expires IS NULL)',
       [cid, uid],

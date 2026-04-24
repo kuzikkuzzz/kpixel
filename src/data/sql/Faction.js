@@ -119,6 +119,8 @@ WHERE p.uid = ?`,
     }
   } catch (error) {
     console.error(`SQL Error on getFactionsOfUser: ${error.message}`);
+  } finally {
+    if (conn) conn.release();
   }
   return { factions, activeFactionRole };
 }

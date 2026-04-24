@@ -210,7 +210,7 @@ export async function joinFactionRole(sqlFrid, uid) {
   try {
     conn = await pool.getConnection();
 
-    const [[{ affectedRows }]] = await Promise.all([
+    const [{ affectedRows }] = await Promise.all([
       conn.query(
         `INSERT INTO UserFactionRoles (uid, frid)
     SELECT ?, ? WHERE EXISTS (
@@ -228,7 +228,7 @@ export async function joinFactionRole(sqlFrid, uid) {
     ]);
     return affectedRows > 0;
   } catch (error) {
-    console.error(`SQL Error on setFactionRoleProperty: ${error.message}`);
+    console.error(`SQL Error on joinFactionRole: ${error.message}`);
   } finally {
     if (conn) conn.release();
   }

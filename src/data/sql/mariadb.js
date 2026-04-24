@@ -13,6 +13,7 @@ const pool = createPool({
   user: MARIADB_USER,
   password: MARIADB_PW,
   database: MARIADB_DATABASE,
+  collation: 'utf8mb4_unicode_ci',
   logger: {
     query: (LOG_MARIADB) ? console.info : undefined,
   },
