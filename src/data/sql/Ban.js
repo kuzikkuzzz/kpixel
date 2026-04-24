@@ -85,7 +85,7 @@ async function removeBans(bans, modUid) {
     return;
   }
 
-  for (const bid of bans) {
+  for (const bid of banIds) {
     // eslint-disable-next-line no-await-in-loop
     await pool.query('CALL REMOVE_BAN(?, ?)', [bid, modUid]);
   }

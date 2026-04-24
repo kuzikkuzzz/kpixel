@@ -345,7 +345,7 @@ export async function getProviderOfIP(ipString) {
 export async function touchIP(ipString) {
   try {
     await pool.query(
-      'UPDATE IPs SET lastSeen = NOW() WHERE ip = IP_TO_BIN($1)', [ipString],
+      'UPDATE IPs SET lastSeen = NOW() WHERE ip = IP_TO_BIN(?)', [ipString],
     );
     return true;
   } catch (error) {
