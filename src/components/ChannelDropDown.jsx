@@ -11,7 +11,7 @@ import { FaUser } from 'react-icons/fa';
 import { MdGroups } from 'react-icons/md';
 import { PiAxeFill } from 'react-icons/pi';
 import { IoMdChatbubbles } from 'react-icons/io';
-import { t } from 'ttag';
+import { c, t } from 'ttag';
 
 import { useConditionalClickOutside } from './hooks/clickOutside.js';
 import { CHANNEL_TYPES } from '../core/constants.js';
@@ -77,7 +77,7 @@ const ChannelDropDown = ({
   );
 
   const [categoryNames, categorySymbols] = useMemo(() => [{
-    [CHANNEL_TYPES.PUBLIC]: t`Public`,
+    [CHANNEL_TYPES.PUBLIC]: c('channel-list').t`Public`,
     /* t: Abbrevation for Direct Messages in Chat Channel selection */
     [CHANNEL_TYPES.DM]: t`DM`,
     [CHANNEL_TYPES.GROUP]: t`Groups`,

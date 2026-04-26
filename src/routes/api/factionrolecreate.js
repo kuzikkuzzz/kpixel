@@ -8,7 +8,10 @@ import {
   getFactionLvlOfUser, getAllMembersOfFaction,
 } from '../../data/sql/Faction.js';
 import { createFactionRole } from '../../data/sql/FactionRole.js';
-import { FACTION_PERMISSIONS } from '../../core/constants.js';
+import {
+  FACTION_PERMISSIONS,
+  MAX_ROLES_PER_FACTION,
+} from '../../core/constants.js';
 
 export default async function factionrolecreate(req, res) {
   req.tickRateLimiter(7000);
@@ -70,7 +73,9 @@ export default async function factionrolecreate(req, res) {
     case 2:
       throw new Error('Invalid customFlagId');
     case 3:
-      throw new Error(t`Can not have more than 20 faction roles`);
+      throw new Error(
+        t`Can not have more than ${MAX_ROLES_PER_FACTION} faction roles`,
+      );
     default:
       throw new Error(t`Server Error`);
   }

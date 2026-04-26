@@ -1194,7 +1194,7 @@ const Faction = () => {
                   step="1"
                   required
                 /></label>
-              <small>{t`Powerlevel of this role. See table below for explenation.`}</small>
+              <small>{t`Powerlevel of this role. See table below for an explanation.`}</small>
             </div>
 
             <div className="form-group checkbox-group">

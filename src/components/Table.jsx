@@ -2,7 +2,7 @@
  * show some data as table
  */
 import React, { useState } from 'react';
-import { t } from 'ttag';
+import { c, t } from 'ttag';
 
 import useLink from './hooks/link.js';
 import { cdn } from '../utils/utag.js';
@@ -22,16 +22,18 @@ const Table = ({
     title: t`Title`,
     name: t`Name`,
     description: t`Description`,
-    ispublic: t`Public`,
+    // eslint-disable-next-line max-len
+    /* t: Column title of column indicating whether or not a faction is able to be joined in public */
+    ispublic: c('statistics-table').t`Public`,
     members: t`Members`,
     role: t`Role`,
     joined: t`Joined`,
     today_rank: t`Daily Rank`,
-    today_pixel: t`Daily Pixel`,
+    today_pixel: t`Daily Pixels`,
     yesterday_rank: t`Rank`,
-    yesterday_pixel: t`Pixel`,
+    yesterday_pixel: t`Pixels`,
     rank: t`Rank`,
-    pixel: t`Pixel`,
+    pixel: t`Pixels`,
   };
 
   if (!columnIds || !rows || !types) {
@@ -91,9 +93,11 @@ const Table = ({
                 case 'bool':
                   return (<td key={key}>{val && 'X'}</td>);
                 case 'number':
-                  return (<td key={key} className="number-cell">
-                    {numberToStringFull(val)}
-                  </td>);
+                  return (
+                    <td key={key} className="number-cell">
+                      {numberToStringFull(val)}
+                    </td>
+                  );
                 case 'faction': {
                   if (!val) {
                     return (<td key={key}>{t`Private`}</td>);

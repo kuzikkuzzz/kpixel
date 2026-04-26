@@ -95,7 +95,7 @@ export async function hasMedia(hashes) {
             hash.extension = model.extension;
             hash.shortId = model.shortId;
             hash.type = model.type;
-            hash.mimeType = model.mimeType,
+            hash.mimeType = model.mimeType;
             hash.width = model.width;
             hash.height = model.height;
             hash.avgColor = model.avgColor;
@@ -162,7 +162,7 @@ export async function hasSimilarMedia(model, pHash) {
         model.extension = similarModel.extension;
         model.shortId = similarModel.shortId;
         model.type = similarModel.type;
-        model.mimeType = similarModel.mimeType,
+        model.mimeType = similarModel.mimeType;
         model.width = similarModel.width;
         model.height = similarModel.height;
         model.avgColor = similarModel.avgColor;
