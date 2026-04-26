@@ -42,10 +42,10 @@ export async function storeMessage(message, cid, uid) {
       /*
        * message storing can deadlock
        */
-      console.error(
-        `SQL Error on storeMessage ${cid} | ${uid}: ${error.message}`,
-      );
-      if (!error.message.startsWith('Deadlock')) {
+      if (error.code !== 'ER_LOCK_DEADLOCK') {
+        console.error(
+          `SQL Error on storeMessage ${cid} | ${uid}: ${error.message}`,
+        );
         throw new Error('store_error');
       }
       // eslint-disable-next-line no-await-in-loop
@@ -53,6 +53,13 @@ export async function storeMessage(message, cid, uid) {
     }
   }
 
+  if (!models) {
+    console.error(
+      // eslint-disable-next-line max-len
+      `SQL Error on storeMessage ${cid} | ${uid}: Could not aquire lock within three tries`,
+    );
+    throw new Error('store_error');
+  }
   const [[{ result, id }]] = models;
   if (result === 1) {
     throw new Error('no_such_channel');

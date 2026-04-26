@@ -28,18 +28,18 @@ export function addIdToFilename(filename, id) {
 }
 
 /**
- * extract id from filename
+ * extract id from filename in the form of name:id.png or name:id
  * @param filename
  * @return [filename, id]
  */
 export function extractIdFromFilename(filename) {
-  let extSeperator = filename.lastIndexOf('.');
-  if (extSeperator === -1) {
-    extSeperator = filename.length;
-  }
-  const idSeperator = filename.lastIndexOf(':', extSeperator);
+  const idSeperator = filename.lastIndexOf(':');
   if (idSeperator === -1) {
     return [filename, null];
+  }
+  let extSeperator = filename.indexOf('.', idSeperator + 1);
+  if (extSeperator === -1) {
+    extSeperator = filename.length;
   }
   return [
     filename.substring(0, idSeperator) + filename.substring(extSeperator),

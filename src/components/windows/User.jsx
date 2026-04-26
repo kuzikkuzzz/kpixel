@@ -183,6 +183,7 @@ const User = () => {
         text={t`Age`}
         value={userData.age}
         unit={t`days`}
+        full
       />
       <BadgeList badges={userData.badges} />
       <FishList fishes={userData.fishes} />

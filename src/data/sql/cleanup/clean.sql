@@ -12,5 +12,5 @@ DELETE FROM OIDCRefreshTokens WHERE expires < NOW();
 -- delete DM channels with less than 2 members
 -- CHANNEL_TYPES.DM
 DELETE c FROM Channels c WHERE c.type = 1 AND (
-  SELECT COUNT(*) FROM UserChannels uc WHERE uc.cid =c.id
+  SELECT COUNT(*) FROM UserChannels uc WHERE uc.cid = c.id
 ) <= 1;

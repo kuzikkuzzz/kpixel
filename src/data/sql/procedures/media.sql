@@ -7,7 +7,7 @@ CREATE PROCEDURE IF NOT EXISTS GET_CLOSE_IMAGE(
 BEGIN
   DECLARE i_pHash BIGINT UNSIGNED;
   SET i_pHash = CONV(p_pHash, 16, 10);
-  SELECT extension, shortId, type, width, height, avgColor FROM ImageHashes ih
+  SELECT extension, shortId, mimeType, type, width, height, avgColor FROM ImageHashes ih
     INNER JOIN Media m ON m.id = ih.mid
   WHERE BIT_COUNT(pHash ^ i_pHash) < 2 LIMIT 1;
 END;;

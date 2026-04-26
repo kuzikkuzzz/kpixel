@@ -7,6 +7,7 @@ import { t } from 'ttag';
 import useLink from './hooks/link.js';
 import { cdn } from '../utils/utag.js';
 import { getUrlsFromMediaIdAndName } from '../utils/media/utils.js';
+import { numberToStringFull } from '../core/utils.js';
 
 const Table = ({
   rows, columnIds, types, uniqueColumnKey = 0, sortColumnKey = 0,
@@ -89,6 +90,8 @@ const Table = ({
               switch (type) {
                 case 'bool':
                   return (<td key={key}>{val && 'X'}</td>);
+                case 'number':
+                  return (<td key={key}>{numberToStringFull(val)}</td>);
                 case 'faction': {
                   if (!val) {
                     return (<td key={key}>{t`Private`}</td>);

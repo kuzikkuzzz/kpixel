@@ -151,7 +151,7 @@ export async function storeMediaStream(
   }
 
   const model = {
-    name, mimeType, extension,
+    name, mimeType, type, extension,
     originalFilename: filename,
   };
 
