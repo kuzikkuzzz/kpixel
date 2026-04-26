@@ -37,7 +37,7 @@ export default async function block(req, res) {
   if (!success) {
     logger.info(`User ${user.name} failed to (un)muted ${channelId}`);
     res.status(502).json({
-      errors: ['Could not (un)block user'],
+      errors: ['Could not (un)mute channel'],
     });
     return;
   }

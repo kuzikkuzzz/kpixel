@@ -50,7 +50,7 @@ export class User {
   /* null | boolean */
   isMuted = null;
   /*
-   * map of available channel Ids ans whether or not they are muted, populated
+   * map of available channel Ids and whether or not they are muted, populated
    * by session data for quick resolve
    */
   channelIds = new Map();

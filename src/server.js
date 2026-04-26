@@ -9,7 +9,7 @@ import http from 'http';
 
 import forceGC from './core/forceGC.js';
 import logger from './core/logger.js';
-import rankings from './core/Ranks.js';
+import rankings, { Ranks } from './core/Ranks.js';
 import { sync as syncSql, cleanUp as cleanUpSql } from './data/sql/index.js';
 import { sync as syncAssets } from './core/assets.js';
 import { connect as connectRedis } from './data/redis/client.js';
@@ -21,7 +21,7 @@ import { initialize as initializeFishing } from './core/Fishing.js';
 import canvasCleaner from './core/CanvasCleaner.js';
 import mailProvider from './core/MailProvider.js';
 import { User } from './middleware/session.js';
-import { HourlyCron } from './utils/cron.js';
+import { HourlyCron, DailyCron } from './utils/cron.js';
 
 import socketEvents from './socket/socketEvents.js';
 import SocketServer from './socket/SocketServer.js';
@@ -112,7 +112,7 @@ syncSql()
     usersocket.initialize();
     apisocket.initialize();
     canvasCleaner.initialize();
-    HourlyCron.hook(cleanUpSql);
+
     // start http server
     const startServer = () => {
       server.listen(PORT, HOST, () => {
@@ -133,11 +133,9 @@ syncSql()
         startServer();
       }, 5000);
     });
-  })
-  .then(async () => {
+
     await socketEvents.initialize();
-  })
-  .then(async () => {
+
     /*
      * initializers that rely on the cluster being fully established
      * i.e. to know if it is the shard that runs the event
@@ -145,7 +143,18 @@ syncSql()
     if (socketEvents.isCluster && socketEvents.important) {
       logger.info('I am the main shard');
     }
-    rankings.initialize();
+
+    await rankings.initialize();
+    HourlyCron.hook(Ranks.setHourlyRanking);
+    DailyCron.hook(Ranks.setDailyRanking);
+
+    HourlyCron.hook(async () => {
+      if (!socketEvents.important) {
+        return;
+      }
+      await cleanUpSql();
+    });
+
     if (HOURLY_EVENT) {
       /*
        * give us 10s extra of negotating shards,

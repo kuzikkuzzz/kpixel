@@ -1,5 +1,5 @@
 import React from 'react';
-import { t } from 'ttag';
+import { c, t } from 'ttag';
 
 import RefreshPrompt from '../RefreshPrompt.jsx';
 import Help from './Help.jsx';
@@ -39,7 +39,7 @@ export default {
   CHAT: [Chat, t`Chat`, false],
   CANVAS_SELECTION: [CanvasSelect, t`Canvas Selection`, true],
   ARCHIVE: [Archive, t`Canvas Archive`, true],
-  PLAYER: [Player, t`Player`, false],
+  PLAYER: [Player, c('media-player').t`Player`, false],
   FISH_DISPLAY: [FishDisplay, t`Fish Display`, true],
   BADGE_DISPLAY: [BadgeDisplay, t`Badge Display`, true],
   TEMPLATES: [Templates, t`Templates`, false],

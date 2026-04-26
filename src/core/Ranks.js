@@ -30,9 +30,8 @@ import logger from './logger.js';
 
 import { MINUTE } from './constants.js';
 import { PUNISH_DOMINATOR } from './config.js';
-import { DailyCron, HourlyCron } from '../utils/cron.js';
 
-class Ranks {
+export class Ranks {
   ranks = {
     // todays ranking of users by pixels
     dailyRanking: {
@@ -118,8 +117,6 @@ class Ranks {
       console.error(`Error initialize ranks: ${err.message}`);
     }
     setInterval(Ranks.updateRanking, 5 * MINUTE);
-    HourlyCron.hook(Ranks.setHourlyRanking);
-    DailyCron.hook(Ranks.setDailyRanking);
   }
 
   #mergeIntoRanks(newRanks) {
