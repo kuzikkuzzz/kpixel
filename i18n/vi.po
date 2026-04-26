@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: admin@pixelplanet.fun\n"
-"PO-Revision-Date: 2026-04-26 04:30+0000\n"
+"PO-Revision-Date: 2026-04-26 10:00+0000\n"
 "Last-Translator: Ngvn <ngvn@noreply.pixelplanet.fun>\n"
 "Language-Team: Vietnamese <https://translate.gs-os.com/projects/ppfun/client/"
 "vi/>\n"
@@ -861,7 +861,7 @@ msgid "Image Converter"
 msgstr ""
 
 msgid "Image Upload"
-msgstr ""
+msgstr "Tải hình ảnh"
 
 msgid "Import templates"
 msgstr "Nhập (những) ảnh mẫu"
