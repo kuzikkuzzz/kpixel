@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: admin@pixelplanet.fun\n"
-"PO-Revision-Date: 2026-04-24 13:25+0000\n"
+"PO-Revision-Date: 2026-04-26 04:30+0000\n"
 "Last-Translator: Ngvn <ngvn@noreply.pixelplanet.fun>\n"
 "Language-Team: Vietnamese <https://translate.gs-os.com/projects/ppfun/client/"
 "vi/>\n"
@@ -65,7 +65,7 @@ msgid ""
 "A flag representing the role, it should be 16x11 pixels. If left empty, "
 "users with this role selected will still show their own flags."
 msgstr ""
-"Một lá cờ đại diện cho vai trò, nên dùng kích thước 16x11 pixel. Nếu để "
+"Một lá cờ đại diện cho vai trò, nên dùng ảnh kích thước 16x11 pixel. Nếu để "
 "trống, người dùng có vai trò trên sẽ hiện thị cờ của người dùng."
 
 msgid "A new verification mail is getting sent to you."
@@ -76,7 +76,7 @@ msgid ""
 "example: Every role with a power level of >=50 can manage invites (50)."
 msgstr ""
 "Một vai trò sẽ có tất cả quyền hạn của cấp quyền hạn thấp hơn hoặc bằng nó. "
-"Ví dụ: Tất cả vai trò với cấp quyền hạn >= 50 có thể quản lí lời mời (50)."
+"Ví dụ: Tất cả vai trò với mức quyền hạn >= 50 có thể quản lí lời mời (50)."
 
 msgid "ACCESS MODTOOLS"
 msgstr "TRUY CẬP CÔNG CỤ MOD"
@@ -88,7 +88,7 @@ msgid "Add Template"
 msgstr "Thêm ảnh mẫu"
 
 msgid "Add an Mail Adress here:"
-msgstr ""
+msgstr "Thêm địa chỉ Email tại đây:"
 
 #. This if for moderation tools, it's not important to translate this
 msgid "Admintools"
@@ -122,13 +122,13 @@ msgid "Archive"
 msgstr "Lưu trữ"
 
 msgid "Assign Roles"
-msgstr "Giao Vai trò"
+msgstr "Cấp vai trò"
 
 msgid "Assign new Mod"
 msgstr "Chọn một Mod mới"
 
 msgid "Assign role per default to new members"
-msgstr ""
+msgstr "Tất cả thành viên mới đều được cấp cho vai trò này"
 
 msgid "Assign roles below their own"
 msgstr ""
@@ -399,7 +399,7 @@ msgid "Converter"
 msgstr ""
 
 msgid "Cooldown"
-msgstr "Thời gian hồi chiêu"
+msgstr "Thời gian hồi 1 pixel"
 
 msgid ""
 "Cooldown is usually automatically changed for a country that is dominating. "
@@ -448,7 +448,7 @@ msgid "Could not process files"
 msgstr ""
 
 msgid "Couldn't set Pixel"
-msgstr ""
+msgstr "Không thể đặt pixel"
 
 msgid "Countries Today"
 msgstr "Các quốc gia hôm nay"
@@ -502,13 +502,13 @@ msgid "DM"
 msgstr "Nhắn tin trực tiếp"
 
 msgid "Daily Pixel"
-msgstr "Điểm ảnh hàng ngày"
+msgstr "Pixel hàng ngày"
 
 msgid "Daily Pixels per Country"
-msgstr "Điểm ảnh hàng này mỗi quốc gia"
+msgstr "Pixel hằng ngày mỗi quốc gia"
 
 msgid "Daily Pixels per Faction"
-msgstr "Điểm ảnh hàng ngày mỗi nhóm"
+msgstr "Pixel hàng ngày mỗi nhóm"
 
 msgid "Daily Pixels per Player"
 msgstr "Điểm ành hàng ngày mỗi người chơi"
@@ -768,10 +768,10 @@ msgid "Get Users"
 msgstr ""
 
 msgid "Get email address"
-msgstr "Nhận địa chỉ thư mục điện tử"
+msgstr "Nhận địa chỉ email"
 
 msgid "Get the amount of Pixels placed and ranking"
-msgstr "Nhận số lượng Điểm Ảnh đã được vẽ và xếp hạng"
+msgstr "Nhận số lượng pixel đã được vẽ và xếp hạng"
 
 msgid "Globe View"
 msgstr ""
@@ -792,7 +792,7 @@ msgid "Groups"
 msgstr ""
 
 msgid "Have fun!"
-msgstr ""
+msgstr "Chúc vui vẻ!"
 
 msgid "Height"
 msgstr ""
@@ -988,7 +988,7 @@ msgid "Login to other application"
 msgstr "Đăng nhập vào các chương trình khác"
 
 msgid "Login with Name or Mail:"
-msgstr "Đăng nhập bằng tên hoặc địa chỉ thư điện tử:"
+msgstr "Đăng nhập bằng tên hoặc email:"
 
 msgid "Make Screenshot"
 msgstr "Tạo ảnh chụp màn hình"
@@ -1061,10 +1061,10 @@ msgid "Name of your faction (this can not be changed later)"
 msgstr "Tên của nhóm bạn (thứ không thể thay đổi sau)"
 
 msgid "Name or Email"
-msgstr "Tên hoặc thư mục điện tử"
+msgstr "Tên hoặc email"
 
 msgid "New Mail"
-msgstr "Thư điện tử mới"
+msgstr "Mail mới"
 
 msgid "New Name"
 msgstr "Tên mới"
@@ -1232,7 +1232,7 @@ msgid "Ping"
 msgstr "Ping"
 
 msgid "Pixel"
-msgstr ""
+msgstr "Pixel"
 
 msgid "Pixel Notify OFF"
 msgstr ""
@@ -1252,7 +1252,7 @@ msgstr ""
 "chơi trực tuyến khác!"
 
 msgid "Placed Pixels"
-msgstr "Đã đặt (những) điểm ảnh"
+msgstr "Số pixel đã đặt"
 
 msgid "Play a sound when new chat messages arrive"
 msgstr "Phát một đoạn âm thanh khi một tin nhắn trò chuyện mới xuất hiện"
@@ -1261,7 +1261,7 @@ msgid "Player"
 msgstr "Người chơi"
 
 msgid "Players and Pixels per hour"
-msgstr "Những người chơi và số điểm ảnh mỗi giờ"
+msgstr "Số người chơi và pixel mỗi giờ"
 
 msgid "Please prove that you are human"
 msgstr "Vui lòng chứng minh bạn là con người"
@@ -1273,7 +1273,7 @@ msgid ""
 "Please verify your mail address or add a new one, otherwise your account "
 "could get deleted in the future."
 msgstr ""
-"Vui lòng xác thực thư điện tử của bạn hoặc thêm một cái mới, nếu không tài "
+"Vui lòng xác thực địa chỉ email của bạn hoặc thêm một cái mới, nếu không tài "
 "khoản của bạn có thể bị xoá trong tương lai."
 
 msgid "Political Compass Canvas"
@@ -1355,28 +1355,28 @@ msgid "Read name, username and account age"
 msgstr "Đọc tên, Tên người dùng và tuổi tài khoản"
 
 msgid "Reason"
-msgstr ""
+msgstr "Lí do"
 
 msgid "Refresh"
-msgstr ""
+msgstr "Làm mới"
 
 msgid "Register"
-msgstr ""
+msgstr "Đăng kí"
 
 msgid "Register new account here"
-msgstr ""
+msgstr "Đăng kí tài khoản mới tại đây"
 
 msgid "Regularly update this data"
 msgstr ""
 
 msgid "Reload"
-msgstr ""
+msgstr "Tải lại"
 
 msgid "Remember this decision: "
-msgstr ""
+msgstr "Nhớ lựa chọn này "
 
 msgid "Remove"
-msgstr ""
+msgstr "Xoá"
 
 msgid "Remove Chatmod"
 msgstr "Xoá cuộc trò chuyện mod"
@@ -1391,32 +1391,32 @@ msgid "Remove Moderator"
 msgstr ""
 
 msgid "Remove Roles"
-msgstr ""
+msgstr "Xoá (các) vai trò"
 
 msgid "Remove a Login method:"
-msgstr ""
+msgstr "Xoá một phương thức đăng nhập:"
 
 #, javascript-format
 msgid "Represents ${ activeFactionTitle } as ${ activeFactionRoleName }"
-msgstr ""
+msgstr "Hiện thị ${ activeFactionTitle } bằng ${ activeFactionRoleName }"
 
 msgid "Require Verification to Place"
-msgstr ""
+msgstr "Yêu cầu xác thực để đặt"
 
 msgid "Requirements"
-msgstr ""
+msgstr "Những yêu cầu"
 
 msgid "Reset"
-msgstr ""
+msgstr "Đặt lại"
 
 msgid "Reset Captchas of ALL Users"
-msgstr ""
+msgstr "Đặt lại captcha cho MỌI người dùng"
 
 msgid "Reset your password"
-msgstr ""
+msgstr "Đặt lại mật khẩu của bạn"
 
 msgid "Resize"
-msgstr ""
+msgstr "Chỉnh kích thước"
 
 msgid "Restore"
 msgstr ""
@@ -1431,7 +1431,7 @@ msgid "Revoke consent of third party applications:"
 msgstr ""
 
 msgid "Role"
-msgstr ""
+msgstr "Vai trò"
 
 msgid "Role Flags"
 msgstr ""
@@ -1449,7 +1449,7 @@ msgid "Rollback to Date"
 msgstr ""
 
 msgid "Save"
-msgstr ""
+msgstr "Lưu"
 
 msgid "Scale Image"
 msgstr ""
@@ -1459,31 +1459,32 @@ msgid "Scroll ${ mouseSymbol } mouse wheel or ${ touchSymbol } pinch to zoom"
 msgstr ""
 
 msgid "Search"
-msgstr ""
+msgstr "Tìm kiếm"
 
 msgid "Search Existing Faction"
-msgstr ""
+msgstr "Tìm kiếm các nhóm tồn tại"
 
 msgid "Search Term"
-msgstr ""
+msgstr "Tìm kiếm thuật ngữ"
 
 msgid "See hidden users in member list"
-msgstr ""
+msgstr "Xem người dùng ẩn trong danh sách thành viên"
 
 msgid "Select Avatar of this Faction. Supported Formats: jpg, gif, png, webp"
 msgstr ""
+"Đặt ảnh đại diện cho nhóm này. Định dạng được hỗ trợ: jpg, gif, png, webp"
 
 msgid "Select Date above"
-msgstr ""
+msgstr "Đặt ngày ở trên"
 
 msgid "Select File"
-msgstr ""
+msgstr "Chọn tệp"
 
 msgid "Select Flag"
-msgstr ""
+msgstr "Chọn cờ"
 
 msgid "Select Language"
-msgstr ""
+msgstr "Chọn ngôn ngữ"
 
 msgid "Select a valid powerlevel"
 msgstr ""
@@ -1497,21 +1498,25 @@ msgid ""
 "requirements.\n"
 "Archived canvases can be accessed here:"
 msgstr ""
+"Chọn một khung vẽ bạn muốn chơi.\n"
+"Mỗi khung vẽ đều độc đáo và có những bảng màu, thời gian hồi điểm ảnh và yêu "
+"cầu khác nhau.\n"
+"Các khung vẽ được lưu trữ có thể được truy cập ở đây:"
 
 msgid "Select your Avatar. Supported Formats: jpg, gif, png, webp"
-msgstr ""
+msgstr "Đặt ảnh đại diện cho bạn. Định dạng được hỗ trợ: jpg, gif, png, webp"
 
 msgid "Selected Color"
 msgstr ""
 
 msgid "Selected Flag:"
-msgstr ""
+msgstr "Các cờ đã chọn:"
 
 msgid "Send"
-msgstr ""
+msgstr "Gửi"
 
 msgid "Sent you a mail with instructions to reset your password."
-msgstr ""
+msgstr "Gửi cho bạn một mail với hướng dẫn đặt lại mật khẩu của bạn."
 
 msgid "Serpentine"
 msgstr ""
@@ -1524,7 +1529,7 @@ msgid ""
 msgstr ""
 
 msgid "Set Password"
-msgstr ""
+msgstr "Đặt mật khẩu"
 
 msgid ""
 "Set protection of areas (if you need finer grained control, use protect with "
@@ -1535,11 +1540,11 @@ msgid ""
 "Setting a password allows you to login by username or email, rather than "
 "only relying on 3rd party login."
 msgstr ""
-"Đặt một mật khẩu cho phép bạn đăng nhập bằng tên người dùng hoặc thư mục "
-"điện tử, thay vì chỉ phụ thuộc vào bẹn thứ ba để đăng nhập."
+"Đặt một mật khẩu cho phép bạn đăng nhập bằng tên người dùng hoặc email, thay "
+"vì chỉ phụ thuộc vào bên thứ ba để đăng nhập."
 
 msgid "Settings"
-msgstr ""
+msgstr "Cài đặt"
 
 msgid "Show Embedded"
 msgstr ""
@@ -1576,7 +1581,7 @@ msgstr ""
 
 #, javascript-format
 msgid "Source for pixelplanet on ${ gitLink } or ${ downloadHereLink }."
-msgstr ""
+msgstr "Mã nguồn của pixelplanet tại ${ gitLink } hoặc ${ downloadHereLink }."
 
 msgid "Stacking till"
 msgstr ""
@@ -1714,7 +1719,7 @@ msgid "Today"
 msgstr ""
 
 msgid "Today Placed Pixels"
-msgstr ""
+msgstr "Số pixel đã đặt vào hôm nay"
 
 msgid "Top 10 Countries [pxls / day]"
 msgstr ""
@@ -1738,13 +1743,13 @@ msgid "Total Online Users"
 msgstr ""
 
 msgid "Total Pixels per Faction"
-msgstr ""
+msgstr "Tổng pixel được đặt mỗi nhóm"
 
 msgid "Total Pixels per Player"
-msgstr ""
+msgstr "Tổng pixel được đặt mỗi người chơi"
 
 msgid "Total Pixels placed per day"
-msgstr ""
+msgstr "Tổng pixel được đặt vào từng ngày"
 
 msgid "Total Rank"
 msgstr ""
@@ -2029,14 +2034,13 @@ msgid "Your name is:"
 msgstr "Tên bạn là:"
 
 msgid "Your next pixels are ready"
-msgstr "Điểm ảnh tiếp theo cho bạn đã sẵn sàng"
+msgstr "Pixel tiếp theo cho bạn đã sẵn sàng"
 
 msgid ""
 "Zoom in instead of placing a pixel when you tap the canvas and your zoom is "
 "small."
 msgstr ""
-"Phóng to thay vì đặt một điểm ảnh khi nhấn vào khung vẽ và mức thu phóng đủ "
-"nhỏ."
+"Phóng to thay vì đặt một pixel khi nhấn vào khung vẽ và mức thu phóng đủ nhỏ."
 
 msgid "a hidden faction"
 msgstr ""
