@@ -159,9 +159,7 @@ ON DUPLICATE KEY UPDATE min = VALUES(min), max = VALUES(max), mask = VALUES(mask
             * ignore unique violations, that can happen when a row with min and
             * a different row with max matches
             */
-          if (!error.errors
-            || error.errors.some(({ type }) => type !== 'unique violation')
-          ) {
+          if (error.code !== 'ER_DUP_ENTRY') {
             throw error;
           }
         }

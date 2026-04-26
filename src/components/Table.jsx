@@ -91,7 +91,9 @@ const Table = ({
                 case 'bool':
                   return (<td key={key}>{val && 'X'}</td>);
                 case 'number':
-                  return (<td key={key}>{numberToStringFull(val)}</td>);
+                  return (<td key={key} className="number-cell">
+                    {numberToStringFull(val)}
+                  </td>);
                 case 'faction': {
                   if (!val) {
                     return (<td key={key}>{t`Private`}</td>);

@@ -167,7 +167,7 @@ msgid "Auto Zoom In"
 msgstr ""
 
 #: src/components/SocialSettings.jsx:86
-#: src/components/Table.jsx:20
+#: src/components/Table.jsx:21
 #: src/components/windows/Faction.jsx:1493
 #: src/components/windows/MyFactions.jsx:188
 msgid "Avatar"
@@ -211,8 +211,8 @@ msgid "Bans"
 msgstr ""
 
 #: src/components/menus/userContextMenu.js:58
-#: src/components/windows/User.jsx:243
-#: src/components/windows/User.jsx:249
+#: src/components/windows/User.jsx:244
+#: src/components/windows/User.jsx:250
 msgid "Block"
 msgstr ""
 
@@ -685,12 +685,12 @@ msgstr ""
 
 #: src/components/ChannelDropDown.jsx:82
 #: src/components/menus/userContextMenu.js:51
-#: src/components/windows/User.jsx:253
-#: src/components/windows/User.jsx:285
+#: src/components/windows/User.jsx:254
+#: src/components/windows/User.jsx:286
 msgid "DM"
 msgstr ""
 
-#: src/components/Table.jsx:29
+#: src/components/Table.jsx:30
 msgid "Daily Pixel"
 msgstr ""
 
@@ -706,7 +706,7 @@ msgstr ""
 msgid "Daily Pixels per Player"
 msgstr ""
 
-#: src/components/Table.jsx:28
+#: src/components/Table.jsx:29
 #: src/components/windows/Faction.jsx:783
 #: src/components/windows/User.jsx:167
 #: src/components/windows/UserArea.jsx:112
@@ -744,7 +744,7 @@ msgstr ""
 msgid "Deny"
 msgstr ""
 
-#: src/components/Table.jsx:23
+#: src/components/Table.jsx:24
 #: src/components/windows/Faction.jsx:777
 #: src/components/windows/Faction.jsx:1554
 #: src/components/windows/MyFactions.jsx:211
@@ -963,7 +963,7 @@ msgstr ""
 #: src/components/windows/OIDCConsent.jsx:295
 #: src/components/windows/Search.jsx:79
 #: src/components/windows/User.jsx:92
-#: src/components/windows/User.jsx:222
+#: src/components/windows/User.jsx:223
 msgid "Error"
 msgstr ""
 
@@ -992,7 +992,7 @@ msgstr ""
 
 #: src/components/ChannelDropDown.jsx:84
 #: src/components/windows/Search.jsx:27
-#: src/components/windows/User.jsx:193
+#: src/components/windows/User.jsx:194
 msgid "Factions"
 msgstr ""
 
@@ -1278,7 +1278,7 @@ msgstr ""
 msgid "Join Faction"
 msgstr ""
 
-#: src/components/Table.jsx:27
+#: src/components/Table.jsx:28
 msgid "Joined"
 msgstr ""
 
@@ -1428,7 +1428,7 @@ msgstr ""
 msgid "Media Actions"
 msgstr ""
 
-#: src/components/Table.jsx:25
+#: src/components/Table.jsx:26
 #: src/components/windows/Faction.jsx:89
 #: src/components/windows/Faction.jsx:799
 msgid "Members"
@@ -1467,7 +1467,7 @@ msgstr ""
 
 #: src/components/LogInForm.jsx:320
 #: src/components/LogInForm.jsx:325
-#: src/components/Table.jsx:22
+#: src/components/Table.jsx:23
 #: src/components/windows/Faction.jsx:1162
 #: src/components/windows/Faction.jsx:1332
 #: src/components/windows/MyFactions.jsx:177
@@ -1738,8 +1738,8 @@ msgstr ""
 msgid "Ping"
 msgstr ""
 
-#: src/components/Table.jsx:31
-#: src/components/Table.jsx:33
+#: src/components/Table.jsx:32
+#: src/components/Table.jsx:34
 msgid "Pixel"
 msgstr ""
 
@@ -1856,8 +1856,8 @@ msgid "Press ${ bindX } to toggle showing of pixel activity"
 msgstr ""
 
 #: src/components/SocialSettings.jsx:206
-#: src/components/Table.jsx:94
-#: src/components/Table.jsx:122
+#: src/components/Table.jsx:99
+#: src/components/Table.jsx:127
 msgid "Private"
 msgstr ""
 
@@ -1868,7 +1868,7 @@ msgid "Profile"
 msgstr ""
 
 #: src/components/ChannelDropDown.jsx:80
-#: src/components/Table.jsx:24
+#: src/components/Table.jsx:25
 msgid "Public"
 msgstr ""
 
@@ -1880,8 +1880,8 @@ msgstr ""
 msgid "Range Banned"
 msgstr ""
 
-#: src/components/Table.jsx:30
-#: src/components/Table.jsx:32
+#: src/components/Table.jsx:31
+#: src/components/Table.jsx:33
 msgid "Rank"
 msgstr ""
 
@@ -1909,7 +1909,7 @@ msgstr ""
 
 #: src/components/RefreshPrompt.jsx:14
 #: src/components/windows/Faction.jsx:829
-#: src/components/windows/User.jsx:233
+#: src/components/windows/User.jsx:234
 msgid "Refresh"
 msgstr ""
 
@@ -2007,7 +2007,7 @@ msgstr ""
 msgid "Revoke consent of third party applications:"
 msgstr ""
 
-#: src/components/Table.jsx:26
+#: src/components/Table.jsx:27
 msgid "Role"
 msgstr ""
 
@@ -2365,7 +2365,7 @@ msgid ""
 "on the template, should be one pixel on the canvas."
 msgstr ""
 
-#: src/components/Table.jsx:21
+#: src/components/Table.jsx:22
 #: src/components/windows/Faction.jsx:1543
 #: src/components/windows/MyFactions.jsx:200
 msgid "Title"
@@ -2483,8 +2483,8 @@ msgstr ""
 msgid "Unban members"
 msgstr ""
 
-#: src/components/windows/User.jsx:243
-#: src/components/windows/User.jsx:249
+#: src/components/windows/User.jsx:244
+#: src/components/windows/User.jsx:250
 msgid "Unblock"
 msgstr ""
 
