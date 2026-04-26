@@ -90,7 +90,8 @@ export async function getDummyUser(name) {
  * get basic userinfo by username or id
  * @param username or id
  * @return {
- *   uid, name, country, userlvl, isMuted, customFlag
+ *   uid, name, country, userlvl, isMuted,
+ *   customFlag, customRoleFlagId, avatarId,
  * }
  */
 export async function getBasicUserInfo(uidOrUsername) {
