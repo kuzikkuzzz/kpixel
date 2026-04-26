@@ -101,11 +101,11 @@ msgstr ""
 msgid "Can not chat while being banned"
 msgstr ""
 
-#: src/routes/api/factionrolecreate.js:53
+#: src/routes/api/factionrolecreate.js:56
 msgid "Can not create a role on the same level as yours"
 msgstr ""
 
-#: src/routes/api/factionrolecreate.js:47
+#: src/routes/api/factionrolecreate.js:50
 msgid "Can not create a role with a powerlevel beyond yours"
 msgstr ""
 
@@ -125,8 +125,9 @@ msgstr ""
 msgid "Can not elevate the powerlevel of a role to yours"
 msgstr ""
 
-#: src/routes/api/factionrolecreate.js:73
-msgid "Can not have more than 20 faction roles"
+#: src/routes/api/factionrolecreate.js:77
+#, javascript-format
+msgid "Can not have more than ${ MAX_ROLES_PER_FACTION } faction roles"
 msgstr ""
 
 #: src/routes/api/factioninvitecreate.js:32
@@ -154,7 +155,7 @@ msgid ""
 msgstr ""
 
 #: src/routes/api/factionrolechange.js:95
-#: src/routes/api/factionrolecreate.js:50
+#: src/routes/api/factionrolecreate.js:53
 msgid "Can only have one Sovereign role"
 msgstr ""
 
@@ -677,7 +678,7 @@ msgstr ""
 #: src/routes/api/factionkickban.js:93
 #: src/routes/api/factionleave.js:30
 #: src/routes/api/factionmembers.js:34
-#: src/routes/api/factionrolecreate.js:75
+#: src/routes/api/factionrolecreate.js:80
 #: src/routes/api/factionroledelete.js:37
 #: src/routes/api/factionrolejoin.js:63
 #: src/routes/api/factionroleleave.js:38

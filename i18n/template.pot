@@ -690,8 +690,8 @@ msgstr ""
 msgid "DM"
 msgstr ""
 
-#: src/components/Table.jsx:30
-msgid "Daily Pixel"
+#: src/components/Table.jsx:32
+msgid "Daily Pixels"
 msgstr ""
 
 #: src/components/windows/Statistics.jsx:204
@@ -706,7 +706,7 @@ msgstr ""
 msgid "Daily Pixels per Player"
 msgstr ""
 
-#: src/components/Table.jsx:29
+#: src/components/Table.jsx:31
 #: src/components/windows/Faction.jsx:783
 #: src/components/windows/User.jsx:167
 #: src/components/windows/UserArea.jsx:112
@@ -1278,7 +1278,7 @@ msgstr ""
 msgid "Join Faction"
 msgstr ""
 
-#: src/components/Table.jsx:28
+#: src/components/Table.jsx:30
 msgid "Joined"
 msgstr ""
 
@@ -1428,7 +1428,7 @@ msgstr ""
 msgid "Media Actions"
 msgstr ""
 
-#: src/components/Table.jsx:26
+#: src/components/Table.jsx:28
 #: src/components/windows/Faction.jsx:89
 #: src/components/windows/Faction.jsx:799
 msgid "Members"
@@ -1738,11 +1738,6 @@ msgstr ""
 msgid "Ping"
 msgstr ""
 
-#: src/components/Table.jsx:32
-#: src/components/Table.jsx:34
-msgid "Pixel"
-msgstr ""
-
 #: src/controls/keypress.js:193
 msgid "Pixel Notify OFF"
 msgstr ""
@@ -1757,6 +1752,11 @@ msgstr ""
 
 #: src/ui/PixelTransferController.js:131
 msgid "Pixel protected"
+msgstr ""
+
+#: src/components/Table.jsx:34
+#: src/components/Table.jsx:36
+msgid "Pixels"
 msgstr ""
 
 #: src/components/windows/Help.jsx:72
@@ -1810,7 +1810,7 @@ msgid "Powerlevel"
 msgstr ""
 
 #: src/components/windows/Faction.jsx:1197
-msgid "Powerlevel of this role. See table below for explenation."
+msgid "Powerlevel of this role. See table below for an explanation."
 msgstr ""
 
 #: src/components/windows/Help.jsx:108
@@ -1856,8 +1856,8 @@ msgid "Press ${ bindX } to toggle showing of pixel activity"
 msgstr ""
 
 #: src/components/SocialSettings.jsx:206
-#: src/components/Table.jsx:99
-#: src/components/Table.jsx:127
+#: src/components/Table.jsx:103
+#: src/components/Table.jsx:131
 msgid "Private"
 msgstr ""
 
@@ -1865,11 +1865,6 @@ msgstr ""
 #: src/components/menus/userContextMenu.js:30
 #: src/components/windows/UserArea.jsx:89
 msgid "Profile"
-msgstr ""
-
-#: src/components/ChannelDropDown.jsx:80
-#: src/components/Table.jsx:25
-msgid "Public"
 msgstr ""
 
 #: src/components/Admintools.jsx:245
@@ -1880,8 +1875,8 @@ msgstr ""
 msgid "Range Banned"
 msgstr ""
 
-#: src/components/Table.jsx:31
 #: src/components/Table.jsx:33
+#: src/components/Table.jsx:35
 msgid "Rank"
 msgstr ""
 
@@ -2007,7 +2002,7 @@ msgstr ""
 msgid "Revoke consent of third party applications:"
 msgstr ""
 
-#: src/components/Table.jsx:27
+#: src/components/Table.jsx:29
 msgid "Role"
 msgstr ""
 
@@ -2983,4 +2978,15 @@ msgstr ""
 #: src/components/windows/Settings.jsx:78
 msgctxt "keybinds"
 msgid "X"
+msgstr ""
+
+#: src/components/ChannelDropDown.jsx:80
+msgctxt "channel-list"
+msgid "Public"
+msgstr ""
+
+#: src/components/Table.jsx:27
+#. Column title of column indicating whether or not a faction is able to be joined in public
+msgctxt "statistics-table"
+msgid "Public"
 msgstr ""
