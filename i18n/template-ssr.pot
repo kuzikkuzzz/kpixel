@@ -200,12 +200,12 @@ msgstr ""
 msgid "Could not change this setting. Maybe try again later."
 msgstr ""
 
-#: src/routes/api/auth/close_session.js:22
+#: src/routes/api/auth/close_session.js:13
 #: src/routes/api/auth/revoke_consent.js:12
 msgid "Could not close this Session."
 msgstr ""
 
-#: src/routes/api/auth/remove_tpid.js:27
+#: src/routes/api/auth/remove_tpid.js:18
 msgid "Could not find this login method"
 msgstr ""
 
@@ -242,11 +242,11 @@ msgstr ""
 msgid "Delete Application"
 msgstr ""
 
-#: src/utils/validation.js:93
+#: src/utils/validation.js:109
 msgid "Description can't be empty"
 msgstr ""
 
-#: src/utils/validation.js:96
+#: src/utils/validation.js:112
 msgid "Description must be shorter than 1000 characters"
 msgstr ""
 
@@ -365,8 +365,8 @@ msgid ""
 "requested this mail was ${ ip })."
 msgstr ""
 
-#: src/utils/hash.js:36
-msgid "Incorrect password!"
+#: src/utils/validation.js:71
+msgid "Incorrect password"
 msgstr ""
 
 #: src/routes/api/media.js:145
@@ -412,7 +412,7 @@ msgstr ""
 msgid "Login is required"
 msgstr ""
 
-#: src/routes/api/auth/change_mail.js:53
+#: src/routes/api/auth/change_mail.js:34
 msgid "Mail is already in use!"
 msgstr ""
 
@@ -463,12 +463,12 @@ msgstr ""
 msgid "Name already in use."
 msgstr ""
 
-#: src/utils/validation.js:86
+#: src/utils/validation.js:102
 msgid "Name can only contain the characters: a-z . _ and -"
 msgstr ""
 
 #: src/utils/validation.js:32
-#: src/utils/validation.js:78
+#: src/utils/validation.js:94
 msgid "Name can't be empty."
 msgstr ""
 
@@ -481,12 +481,12 @@ msgid "Name is too long"
 msgstr ""
 
 #: src/utils/validation.js:33
-#: src/utils/validation.js:80
+#: src/utils/validation.js:96
 msgid "Name must be at least 2 characters long"
 msgstr ""
 
 #: src/utils/validation.js:34
-#: src/utils/validation.js:83
+#: src/utils/validation.js:99
 msgid "Name must be shorter than 26 characters"
 msgstr ""
 
@@ -511,7 +511,7 @@ msgstr ""
 msgid "No or invalid fish id."
 msgstr ""
 
-#: src/utils/validation.js:111
+#: src/utils/validation.js:127
 msgid "No password given."
 msgstr ""
 
@@ -560,11 +560,11 @@ msgstr ""
 msgid "Our main canvas, a huge map of the world. Place anywhere you like!"
 msgstr ""
 
-#: src/utils/validation.js:114
+#: src/utils/validation.js:130
 msgid "Password must be at least 6 characters long."
 msgstr ""
 
-#: src/utils/validation.js:117
+#: src/utils/validation.js:133
 msgid "Password must be shorter than 60 characters."
 msgstr ""
 
@@ -663,7 +663,7 @@ msgstr ""
 msgid "Role flag needs to be 16x11"
 msgstr ""
 
-#: src/routes/api/auth/remove_tpid.js:34
+#: src/routes/api/auth/remove_tpid.js:25
 #: src/routes/api/factionbans.js:30
 #: src/routes/api/factioncreate.js:72
 #: src/routes/api/factioncreate.js:78
@@ -684,10 +684,11 @@ msgstr ""
 #: src/routes/api/factionroleleave.js:38
 #: src/routes/api/media.js:178
 #: src/routes/api/media.js:307
+#: src/utils/validation.js:73
 msgid "Server Error"
 msgstr ""
 
-#: src/routes/api/auth/delete_account.js:53
+#: src/routes/api/auth/delete_account.js:22
 msgid "Server error while deleting user."
 msgstr ""
 
@@ -776,7 +777,7 @@ msgid ""
 "installing malware, Thank You."
 msgstr ""
 
-#: src/utils/hash.js:34
+#: src/utils/validation.js:69
 msgid ""
 "This email / password combination got hacked and leaked. To protect this "
 "account, the password has been reset. Please use the \"Forgot my password\" "
@@ -822,23 +823,27 @@ msgstr ""
 msgid "This password-reset link isn't valid anymore :("
 msgstr ""
 
+#: src/utils/validation.js:66
+msgid "This user has not password set"
+msgstr ""
+
 #: src/routes/api/userinfo.js:27
 msgid "This user is private"
 msgstr ""
 
-#: src/utils/validation.js:62
+#: src/utils/validation.js:78
 msgid "Title can't be empty."
 msgstr ""
 
-#: src/utils/validation.js:72
+#: src/utils/validation.js:88
 msgid "Title contains invalid character like @, /, \\ or #"
 msgstr ""
 
-#: src/utils/validation.js:63
+#: src/utils/validation.js:79
 msgid "Title must be at least 2 characters long"
 msgstr ""
 
-#: src/utils/validation.js:64
+#: src/utils/validation.js:80
 msgid "Title must be shorter than 26 characters"
 msgstr ""
 
@@ -961,7 +966,7 @@ msgstr ""
 msgid "You are not banned"
 msgstr ""
 
-#: src/middleware/session.js:255
+#: src/middleware/session.js:298
 #: src/routes/api/modtools.js:68
 msgid "You are not logged in"
 msgstr ""
@@ -983,7 +988,7 @@ msgstr ""
 msgid "You attached too many files"
 msgstr ""
 
-#: src/routes/api/auth/remove_tpid.js:31
+#: src/routes/api/auth/remove_tpid.js:22
 msgid "You can not delete this login method, because you have nothing else left."
 msgstr ""
 

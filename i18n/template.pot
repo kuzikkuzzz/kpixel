@@ -90,7 +90,7 @@ msgid "Add Template"
 msgstr ""
 
 #: src/components/ChangeMail.jsx:230
-msgid "Add an Mail Adress here:"
+msgid "Add a new E-Mail Address here:"
 msgstr ""
 
 #: src/components/menus/mainMenu.js:166
@@ -455,7 +455,7 @@ msgstr ""
 #: src/components/Canvastools.jsx:234
 #: src/components/Watchtools.jsx:119
 #: src/components/Window.jsx:260
-#: src/components/menus/channelContextMenu.js:31
+#: src/components/menus/channelContextMenu.js:32
 #: src/components/windows/Faction.jsx:1087
 #: src/components/windows/MyFactions.jsx:449
 msgid "Close"
@@ -469,7 +469,7 @@ msgstr ""
 msgid "Close Palette"
 msgstr ""
 
-#: src/components/menus/channelContextMenu.js:42
+#: src/components/menus/channelContextMenu.js:44
 msgid "Compact Chat"
 msgstr ""
 
@@ -735,6 +735,10 @@ msgstr ""
 msgid "Delete Faction"
 msgstr ""
 
+#: src/components/DeleteAccount.jsx:79
+msgid "Delete My Account"
+msgstr ""
+
 #: src/components/windows/Faction.jsx:1475
 msgid "Delete the faction"
 msgstr ""
@@ -752,11 +756,11 @@ msgstr ""
 msgid "Description"
 msgstr ""
 
-#: src/utils/validation.js:93
+#: src/utils/validation.js:109
 msgid "Description can't be empty"
 msgstr ""
 
-#: src/utils/validation.js:96
+#: src/utils/validation.js:112
 msgid "Description must be shorter than 1000 characters"
 msgstr ""
 
@@ -945,7 +949,7 @@ msgstr ""
 #: src/components/ChangeName.jsx:46
 #: src/components/ChangePassword.jsx:79
 #: src/components/ChangeUsername.jsx:54
-#: src/components/DeleteAccount.jsx:63
+#: src/components/DeleteAccount.jsx:58
 #: src/components/GlobalCaptcha.jsx:80
 #: src/components/LogInForm.jsx:201
 #: src/components/LogInForm.jsx:292
@@ -1223,6 +1227,10 @@ msgstr ""
 msgid "Import templates"
 msgstr ""
 
+#: src/utils/validation.js:71
+msgid "Incorrect password"
+msgstr ""
+
 #: src/components/Watchtools.jsx:143
 msgid "Interval"
 msgstr ""
@@ -1474,12 +1482,12 @@ msgstr ""
 msgid "Name"
 msgstr ""
 
-#: src/utils/validation.js:86
+#: src/utils/validation.js:102
 msgid "Name can only contain the characters: a-z . _ and -"
 msgstr ""
 
 #: src/utils/validation.js:32
-#: src/utils/validation.js:78
+#: src/utils/validation.js:94
 msgid "Name can't be empty."
 msgstr ""
 
@@ -1488,12 +1496,12 @@ msgid "Name contains invalid character like @, /, \\ or #"
 msgstr ""
 
 #: src/utils/validation.js:33
-#: src/utils/validation.js:80
+#: src/utils/validation.js:96
 msgid "Name must be at least 2 characters long"
 msgstr ""
 
 #: src/utils/validation.js:34
-#: src/utils/validation.js:83
+#: src/utils/validation.js:99
 msgid "Name must be shorter than 26 characters"
 msgstr ""
 
@@ -1550,7 +1558,7 @@ msgstr ""
 msgid "No or invalid captcha text"
 msgstr ""
 
-#: src/utils/validation.js:111
+#: src/utils/validation.js:127
 msgid "No password given."
 msgstr ""
 
@@ -1685,18 +1693,18 @@ msgstr ""
 
 #: src/components/ChangeMail.jsx:171
 #: src/components/ChangePassword.jsx:103
-#: src/components/DeleteAccount.jsx:73
+#: src/components/DeleteAccount.jsx:68
 #: src/components/LogInForm.jsx:216
 #: src/components/LogInForm.jsx:353
 #: src/components/LogInForm.jsx:358
 msgid "Password"
 msgstr ""
 
-#: src/utils/validation.js:114
+#: src/utils/validation.js:130
 msgid "Password must be at least 6 characters long."
 msgstr ""
 
-#: src/utils/validation.js:117
+#: src/utils/validation.js:133
 msgid "Password must be shorter than 60 characters."
 msgstr ""
 
@@ -1772,10 +1780,6 @@ msgstr ""
 
 #: src/components/windows/Settings.jsx:113
 msgid "Play a sound when new chat messages arrive"
-msgstr ""
-
-#: src/components/windows/index.js:42
-msgid "Player"
 msgstr ""
 
 #: src/core/chartSettings.js:127
@@ -2131,6 +2135,10 @@ msgstr ""
 msgid "Serpentine"
 msgstr ""
 
+#: src/utils/validation.js:73
+msgid "Server Error"
+msgstr ""
+
 #: src/store/actions/fetch.js:323
 msgid "Server answered with gibberish :("
 msgstr ""
@@ -2325,6 +2333,14 @@ msgid ""
 "remained active for months till it got shut down on November 30th."
 msgstr ""
 
+#: src/utils/validation.js:69
+msgid ""
+"This email / password combination got hacked and leaked. To protect this "
+"account, the password has been reset. Please use the \"Forgot my password\" "
+"function on the LogIn page to set a new password. In the future, consider "
+"not installing malware, Thank You."
+msgstr ""
+
 #: src/components/windows/Faction.jsx:1722
 msgid "This faction has no invites"
 msgstr ""
@@ -2341,6 +2357,10 @@ msgstr ""
 
 #: src/components/windows/OIDCConsent.jsx:242
 msgid "This permission is required"
+msgstr ""
+
+#: src/utils/validation.js:66
+msgid "This user has not password set"
 msgstr ""
 
 #: src/ui/PixelTransferController.js:68
@@ -2366,19 +2386,19 @@ msgstr ""
 msgid "Title"
 msgstr ""
 
-#: src/utils/validation.js:62
+#: src/utils/validation.js:78
 msgid "Title can't be empty."
 msgstr ""
 
-#: src/utils/validation.js:72
+#: src/utils/validation.js:88
 msgid "Title contains invalid character like @, /, \\ or #"
 msgstr ""
 
-#: src/utils/validation.js:63
+#: src/utils/validation.js:79
 msgid "Title must be at least 2 characters long"
 msgstr ""
 
-#: src/utils/validation.js:64
+#: src/utils/validation.js:80
 msgid "Title must be shorter than 26 characters"
 msgstr ""
 
@@ -2633,7 +2653,7 @@ msgid "Yes"
 msgstr ""
 
 #: src/components/DeleteAccount.jsx:79
-msgid "Yes, Delete My Account!"
+msgid "Yes, really delete Me"
 msgstr ""
 
 #: src/components/windows/Statistics.jsx:87
@@ -2900,6 +2920,11 @@ msgstr ""
 
 #: src/ui/PixelTransferController.js:115
 msgid "z out of bounds"
+msgstr ""
+
+#: src/components/windows/index.js:42
+msgctxt "media-player"
+msgid "Player"
 msgstr ""
 
 #: src/components/windows/Help.jsx:28
