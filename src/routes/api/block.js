@@ -9,6 +9,7 @@ import socketEvents from '../../socket/socketEvents.js';
 import { findUserByIdOrName } from '../../data/sql/User.js';
 import { deleteDMChannel } from '../../data/sql/Channel.js';
 import { blockUser, unblockUser } from '../../data/sql/UserBlock.js';
+import { CHANNEL_TYPES } from '../../core/constants.js';
 
 async function block(req, res) {
   req.tickRateLimiter(4000);
@@ -54,20 +55,21 @@ async function block(req, res) {
     ret = await blockUser(user.id, userId);
     const dmChannelId = await deleteDMChannel(user.id, userId);
     if (dmChannelId) {
-      socketEvents.reloadUser(user.id);
-      socketEvents.reloadUser(userId);
+      const chatPatch = {
+        op: 'del',
+        path: `channels.${CHANNEL_TYPES.DM}[0:${dmChannelId}]`,
+      };
+      socketEvents.patchUserState(user.id, 'chat', chatPatch);
+      socketEvents.patchUserState(userId, 'chat', chatPatch);
     }
   } else {
     ret = await unblockUser(user.id, userId);
   }
 
   if (ret) {
-    res.json({
-      status: 'ok',
-    });
+    res.json({ status: 'ok' });
   } else {
-    res.status(502);
-    res.json({
+    res.status(502).json({
       errors: ['Could not (un)block user'],
     });
     logger.info(

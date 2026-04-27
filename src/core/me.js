@@ -6,7 +6,8 @@
  */
 import { getUserRanks } from '../data/redis/ranks.js';
 import { USE_MAILER, TIMEBLOCK_USERS, TIMEBLOCK_IPS } from './config.js';
-import { USER_FLAGS, CHANNEL_TYPES, USERLVL } from './constants.js';
+import { CHANNEL_TYPES, USERLVL } from './constants.js';
+import { getUserChatData } from '../data/sql/Channel.js';
 import chatProvider from './ChatProvider.js';
 
 export default async function getMe(user, ip, lang) {
@@ -26,23 +27,16 @@ export default async function getMe(user, ip, lang) {
   };
 
   if (user) {
-    const { data } = user;
-    ({ id, name, username, userlvl } = data);
-    blockDm = !!(data.flags & (0x01 << USER_FLAGS.BLOCK_DM));
-    priv = !!(data.flags & (0x01 << USER_FLAGS.PRIV));
-    havePassword = data.password !== null;
-    blocked = data.blocked.map(({ id: bid, name: bname }) => [bid, bname]);
-    channels = {
-      ...channels,
-      ...data.channels,
-    };
+    ({
+      id, name, username, userlvl, blockDm, priv,
+      hasPassword: havePassword,
+    } = user);
   } else {
     id = 0;
     name = null;
     username = null;
     userlvl = USERLVL.ANONYM;
     havePassword = false;
-    blockDm = false;
     blockDm = false;
     priv = false;
     blocked = [];
@@ -52,12 +46,22 @@ export default async function getMe(user, ip, lang) {
    * make sure ip.getAllowance() if fetched here to make a user.touch() possible
    * later
    */
-  const [ranks] = await Promise.all([
-    (user) ? getUserRanks(user.id) : null,
+  const [ranks, chatData] = await Promise.all([
+    (user) ? getUserRanks(id) : null,
+    (user) ? getUserChatData(id) : null,
     user && ip.getAllowance(),
   ]);
+
   user?.touch(ip.ipString);
   ip.touch();
+
+  if (chatData) {
+    blocked = chatData.blocked;
+    channels = {
+      ...channels,
+      ...chatData.channels,
+    };
+  }
 
   const me = {
     id, name, username, userlvl, havePassword, blockDm, priv, channels, blocked,

@@ -1,6 +1,7 @@
 import express from 'express';
 
 import { ensureLoggedIn } from '../../../middleware/session.js';
+import { validatePasswordCompareReturn } from '../../../utils/validation.js';
 
 import register from './register.js';
 import verify from './verify.js';
@@ -56,11 +57,28 @@ router.get('/get_tpids', get_tpids);
 
 router.get('/resend_verify', resend_verify);
 
+router.post('/revoke_consent', revoke_consent);
+
+/*
+ * require given password
+ */
+
+router.use((req, res, next) => {
+  const passReturnCode = req.user.checkPassword(req.body?.password);
+  if (passReturnCode !== 1) {
+    /* remember that we do allow users to not have a password set */
+    const errorString = validatePasswordCompareReturn(passReturnCode);
+    if (errorString !== null) {
+      res.status(401).json({ errors: [req.ttag.gettext(errorString)] });
+      return;
+    }
+  }
+  next();
+});
+
 router.post('/remove_tpid', remove_tpid);
 
 router.post('/close_session', close_session);
-
-router.post('/revoke_consent', revoke_consent);
 
 router.post('/change_passwd', change_passwd);
 

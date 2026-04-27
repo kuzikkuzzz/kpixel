@@ -133,7 +133,7 @@ export default async function factionchange(req, res) {
       const value = factionChanges[key];
       socketEvents.patchUserState(affectedUserIds, 'profile', {
         op: 'setex',
-        path: `factions[fid:${name}].${key}`,
+        path: `factions[name:${name}].${key}`,
         value,
       });
     }

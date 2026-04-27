@@ -6,53 +6,38 @@ import mailProvider from '../../../core/MailProvider.js';
 
 import logger from '../../../core/logger.js';
 import { validateEMail } from '../../../utils/validation.js';
-import { comparePasswordToHash } from '../../../utils/hash.js';
 import { checkMailOverShards } from '../../../utils/intel/index.js';
 import { setEmail, getTPIDsOfUser } from '../../../data/sql/ThreePID.js';
 import { setUserProperty } from '../../../data/sql/User.js';
 import { USERLVL } from '../../../core/constants.js';
 import socketEvents from '../../../socket/socketEvents.js';
 
-async function validate(email, t, gettext) {
-  const errors = [];
+export default async (req, res) => {
+  const { body: { email }, ttag: { t, gettext } } = req;
 
-  const mailerror = gettext(validateEMail(email));
-  if (mailerror) {
-    errors.push(mailerror);
+  const errors = [];
+  const validationError = validateEMail(email);
+  if (validationError) {
+    errors.push(gettext(validationError));
   } else if (await checkMailOverShards(email)) {
     errors.push(t`This email provider is not allowed`);
   }
-
-  return errors;
-}
-
-export default async (req, res) => {
-  const { email, password } = req.body;
-  const { t, gettext } = req.ttag;
-  const errors = await validate(email, t, gettext);
   if (errors.length > 0) {
-    res.status(400);
-    res.json({
-      errors,
-    });
+    res.status(400).json({ errors });
     return;
   }
 
   const { user, lang } = req;
-  /* remember that we do allow users to not have a password set */
-  const currentPassword = user.data.password;
-  if (currentPassword) {
-    const err = comparePasswordToHash(password, currentPassword, t);
-    if (err !== null) {
-      throw err;
-    }
-  }
 
   const ret = await setEmail(user.id, email, false);
   if (!ret) {
     throw new Error(t`Mail is already in use!`);
   }
 
+  /*
+   * this actually just adds a mail address, rather than removing an existing
+   * one, so double-checking userlvl is kinda pointless here
+   */
   const tpids = await getTPIDsOfUser(req.user.id);
   const { userlvl } = user;
   const hasVerified = tpids.some(({ verified }) => verified);
@@ -61,10 +46,18 @@ export default async (req, res) => {
     && userlvl > USERLVL.REGISTERED
   ) {
     await setUserProperty(user.id, 'userlvl', USERLVL.REGISTERED);
-    socketEvents.reloadUser(user.id);
+    socketEvents.patchUserState(user.id, 'user', {
+      op: 'setex',
+      path: 'userlvl',
+      value: USERLVL.REGISTERED,
+    });
   } else if (hasVerified && userlvl === USERLVL.REGISTERED) {
     await setUserProperty(user.id, 'userlvl', USERLVL.VERIFIED);
-    socketEvents.reloadUser(user.id);
+    socketEvents.patchUserState(user.id, 'user', {
+      op: 'setex',
+      path: 'userlvl',
+      value: USERLVL.VERIFIED,
+    });
   }
 
   // eslint-disable-next-line max-len

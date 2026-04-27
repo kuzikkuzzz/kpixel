@@ -54,11 +54,12 @@ export default async function factionjoin(req, res) {
 
   const patches = [];
   if (factionInfo.channelId) {
+    const ts = Math.floor(Date.now() / 1000);
     const chatPatch = {
       op: 'addnx',
       path: `channels.${CHANNEL_TYPES.FACTION}[0:${factionInfo.channelId}]`,
       value: [
-        factionInfo.channelId, factionInfo.name, Date.now(), Date.now(),
+        factionInfo.channelId, factionInfo.name, ts, ts,
         false, factionInfo.avatarId,
       ],
     };

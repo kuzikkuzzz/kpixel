@@ -10,21 +10,10 @@ import { validatePassword } from '../utils/validation.js';
 import { requestDeleteAccount } from '../store/actions/fetch.js';
 import { logoutUser } from '../store/actions/index.js';
 
-function validate(havePassword, password) {
-  const errors = [];
-  if (!havePassword) {
-    return errors;
-  }
-
-  const passworderror = validatePassword(password);
-  if (passworderror) errors.push(passworderror);
-
-  return errors;
-}
-
 const DeleteAccount = ({ done }) => {
   const [password, setPassword] = useState('');
   const [submitting, setSubmitting] = useState(false);
+  const [confirm, setConfirm] = useState(false);
   const [errors, setErrors] = useState([]);
 
   const havePassword = useSelector((state) => state.user.havePassword);
@@ -35,11 +24,17 @@ const DeleteAccount = ({ done }) => {
     if (submitting) {
       return;
     }
-
-    const valErrors = validate(havePassword, password);
-    if (valErrors.length > 0) {
-      setErrors(valErrors);
+    if (!confirm) {
+      setConfirm(true);
       return;
+    }
+
+    if (havePassword) {
+      const validationError = validatePassword(password);
+      if (validationError) {
+        setErrors([validationError]);
+        return;
+      }
     }
 
     setSubmitting(true);
@@ -75,8 +70,13 @@ const DeleteAccount = ({ done }) => {
             <br />
           </React.Fragment>
         )}
-        <button type="submit">
-          {(submitting) ? '...' : t`Yes, Delete My Account!`}
+        <button
+          type="submit"
+          disabled={submitting}
+          className={confirm ? 'confirm' : undefined}
+        >
+          {/* t: button for leaving a faction, it asks for confirmation */}
+          {(confirm) ? t`Yes, really delete Me` : t`Delete My Account`}
         </button>
         <button type="button" onClick={done}>{t`Cancel`}</button>
       </form>

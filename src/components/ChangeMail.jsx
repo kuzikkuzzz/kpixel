@@ -227,7 +227,7 @@ const ChangeMail = ({ done }) => {
           <div className="modaldivider" />
         </React.Fragment>
       )}
-      <p>{t`Add an Mail Adress here:`}</p>
+      <p>{t`Add a new E-Mail Address here:`}</p>
       <form onSubmit={changeMail}>
         <input
           value={email}

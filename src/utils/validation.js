@@ -58,6 +58,22 @@ export function validateUsername(username) {
   return false;
 }
 
+export function validatePasswordCompareReturn(returnCode) {
+  switch (returnCode) {
+    case 0:
+      return null;
+    case 1:
+      return t`This user has not password set`;
+    case 2:
+      // eslint-disable-next-line max-len
+      return t`This email / password combination got hacked and leaked. To protect this account, the password has been reset. Please use the "Forgot my password" function on the LogIn page to set a new password. In the future, consider not installing malware, Thank You.`;
+    case 3:
+      return t`Incorrect password`;
+    default:
+      return t`Server Error`;
+  }
+}
+
 export function validateFactionTitle(title) {
   if (!title) return t`Title can't be empty.`;
   if (title.length < 2) return t`Title must be at least 2 characters long`;

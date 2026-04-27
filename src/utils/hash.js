@@ -21,25 +21,6 @@ export function compareToHash(password, hash) {
 }
 
 /*
- * compare password to hash, returning translated error string if false
- */
-
-export function comparePasswordToHash(password, hash, t) {
-  if (compareToHash(password, hash)) {
-    return null;
-  }
-  let error;
-  if (hash === 'hacked') {
-    // eslint-disable-next-line max-len
-    error = new Error(t`This email / password combination got hacked and leaked. To protect this account, the password has been reset. Please use the "Forgot my password" function on the LogIn page to set a new password. In the future, consider not installing malware, Thank You.`);
-  } else {
-    error = new Error(t`Incorrect password!`);
-  }
-  error.status = 401;
-  return error;
-}
-
-/*
  * 216 bit token and SHA-224 hash for sessions
  */
 

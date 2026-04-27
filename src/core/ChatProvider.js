@@ -319,7 +319,7 @@ export class ChatProvider {
   async sendMessage(user, ip, message, channelId, lang, ttag) {
     const { id } = user;
     const { t } = ttag;
-    const { name, customRoleFlagId, customFlag, avatarId } = user.data;
+    const { name, customRoleFlagId, customFlag, avatarId } = user.nameData;
     const { country } = ip;
 
     if (!user.rateLimiter) {

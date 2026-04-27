@@ -28,6 +28,8 @@
  *   op:
  *     'add':  add into an array and create array if not exists,
  *     'push': push into an array only if it exists,
+ *     'pushnx',
+ *     'addnx',
  *     'set': set a target value,
  *     'setex': set a target value, but only if its target already exists,
  *     'del': delete a target value,

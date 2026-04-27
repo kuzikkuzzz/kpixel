@@ -2,23 +2,14 @@
  * get ThreePIDs
  */
 import { removeTpidFromUser } from '../../../data/sql/ThreePID.js';
-import { comparePasswordToHash } from '../../../utils/hash.js';
 import socketEvents from '../../../socket/socketEvents.js';
 
 export default async (req, res) => {
-  const { user, body: { id, password }, ttag: { t } } = req;
-
-  const currentPassword = user.data.password;
-  if (currentPassword) {
-    const err = comparePasswordToHash(password, currentPassword, t);
-    if (err !== null) {
-      throw err;
-    }
-  }
+  const { user, body: { id }, ttag: { t } } = req;
 
   const [
     remReturn, newUserlvl,
-  ] = await removeTpidFromUser(user.id, id, !!currentPassword);
+  ] = await removeTpidFromUser(user.id, id, user.hasPassword);
 
   switch (remReturn) {
     case 0:
@@ -35,7 +26,11 @@ export default async (req, res) => {
   }
 
   if ((newUserlvl || newUserlvl === 0) && newUserlvl !== user.userlvl) {
-    socketEvents.reloadUser(user.id);
+    socketEvents.patchUserState(user.id, 'user', {
+      op: 'setex',
+      path: 'userlvl',
+      value: newUserlvl,
+    });
   }
 
   res.status(200).json({ success: true });

@@ -60,7 +60,7 @@ export default async function userchange(req, res) {
   if (typeof username === 'string') {
     changed = true;
     let error;
-    if (!user.data.username.startsWith('pp_')) {
+    if (!user.username.startsWith('pp_')) {
       error = t`You already chose your username`;
     } else if (username.startsWith('pp_')) {
       error = t`Username can not start with pp_`;

@@ -97,15 +97,15 @@ export async function deleteDMChannel(uidA, uidB) {
  * user leaving a channel
  * @param uid user id
  * @param cid channel id
- * @return affectedUsers or null
+ * @return [affectedUsers, channelType] | null
  */
 export async function leaveChannel(uid, cid) {
   try {
-    const [[{ result }], affectedUsers] = await pool.query(
+    const [[{ result, channelType }], affectedUsers] = await pool.query(
       'CALL LEAVE_CHANNEL(?, ?)', [uid, cid],
     );
     if (result === 0) {
-      return affectedUsers.map(({ uid: id }) => id);
+      return [affectedUsers.map(({ uid: id }) => id), channelType];
     }
   } catch (error) {
     console.error(`SQL Error on leaveChannel: ${error.message}`);
@@ -154,6 +154,50 @@ export async function setUserChannelMute(channelId, userId, mute) {
   } catch (error) {
     return false;
   }
+}
+
+/**
+ * get chat related data of user like channels and blocked users
+ * @param uid userId
+ * @return {
+ *   channels: {
+ *     [CHANNEL_TYPE]: [
+ *        [cid, name, lastTs, lastReadTs, muted, avatarIdOrCc,
+ *      ], ...],
+ *   ... },
+ *   blocked: [[uid, name], ...],
+ * }
+ */
+export async function getUserChatData(uid) {
+  const channels = {};
+  const blocked = [];
+  try {
+    const [blockedModels, channelModels] = await pool.query(
+      'CALL GET_USER_CHANNEL_INFO(?)', [uid],
+    );
+
+    for (let i = 0; i < blockedModels.length; i += 1) {
+      const { buid, name } = blockedModels[i];
+      blocked.push([buid, name]);
+    }
+
+    for (let i = 0; i < channelModels.length; i += 1) {
+      const {
+        type, id, name, lastTs, lastReadTs, muted, avatarId,
+      } = channelModels[i];
+      let typeArray = channels[type];
+      if (!typeArray) {
+        typeArray = [];
+        channels[type] = typeArray;
+      }
+      typeArray.push([
+        id, name, lastTs, lastReadTs, muted !== 0, avatarId,
+      ]);
+    }
+  } catch (error) {
+    console.error('SQL Error on getUserChatData:', error.message);
+  }
+  return { channels, blocked };
 }
 
 /**

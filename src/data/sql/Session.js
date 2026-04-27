@@ -1,7 +1,6 @@
 import pool from './mariadb.js';
-import { nestQuery } from './utils.js';
 import { generateToken, generateTokenHash } from '../../utils/hash.js';
-import { HOUR, CHANNEL_TYPES } from '../../core/constants.js';
+import { USER_FLAGS, HOUR } from '../../core/constants.js';
 
 /**
  * create session for a user
@@ -181,20 +180,18 @@ WHERE token = ? AND (expires > NOW() OR expires IS NULL)`,
  * @return null | {
  *   id,
  *   name,
+ *   username,
  *   password,
  *   userlvl,
- *   flags,
+ *   blockDm,
+ *   priv,
  *   lastSeen,
  *   createdAt,
  *   customFlag,
  *   customRoleFlagId,
  *   activeFactionId,
- *   blocked: [ { id, name }, ...],
  *   bans: [ { expires, flags }, ... ],
- *   channels: {
- *     cid: [ name, type, lastTs, [dmuid] ],
- *     ...
- *   },
+ *   userChannels: [ [cid, muted], ...],
  * }
  */
 export async function resolveSession(token) {
@@ -202,184 +199,47 @@ export async function resolveSession(token) {
     return null;
   }
 
-  let conn;
   try {
-    conn = await pool.getConnection();
-    /*
-     * CURRENT STATUS:
-     * Resolving a session takes two round-trip-times of:
-     *  1 + 3 queries if User has any DM chat channels associated
-     *  1 + 2 queries otherwise
-     * Consider that in api/me we also get redis ranks after resolving session,
-     * making a api/me call have three round-trips.
-     * Resolving IP intel (whois, proxycheck) is in parallel to resolving the
-     * session and takes longer than two sql round-trips if it has to be
-     * fetched. Therefore session resolving isn't the largest issue in case of
-     * a DDoS with unique IPs.
-     */
-
-    /* eslint-disable max-len */
-
-    let user = await conn.query(
-      `SELECT u.id, u.name, u.username, u.password, u.userlvl, u.flags, u.lastSeen, u.createdAt,
-p.customFlag,
-CONCAT(a.shortId, ':', a.extension) AS avatarId,
-CONCAT(frm.shortId, ':', frm.extension) AS customRoleFlagId,
-fr.fid AS activeFactionId,
-c.id AS 'channels.cid', c.name AS 'channels.name', c.\`type\` AS 'channels.type', c.lastMessage AS 'channels.lastDate', ucm.lastRead AS 'channels.lastReadDate', ucm.muted AS 'channels.muted' FROM Users u
-  INNER JOIN Sessions s ON s.uid = u.id
-  LEFT JOIN Profiles p ON p.uid = u.id
-  LEFT JOIN Media a ON a.id = p.avatar
-  LEFT JOIN FactionRoles fr ON fr.id = p.activeRole
-  LEFT JOIN Media frm ON frm.id = fr.customFlag
-  LEFT JOIN UserChannels ucm ON ucm.uid = u.id
-  LEFT JOIN Channels c ON c.id = ucm.cid
-WHERE s.token = ? AND (s.expires > NOW() OR s.expires IS NULL)`,
-      [generateTokenHash(token)],
+    const models = await pool.query(
+      'CALL RESOLVE_SESSION(?)', [generateTokenHash(token)],
     );
-    /*
-     * {
-     *   id, name, password, userlvl, flags, lastSeen, createdAt, customFlag,
-     *   channels: [{
-     *     cid, name, type, lastDate,
-     *   }, ...]
-     * }
-     */
-    user = nestQuery(user);
-
-    if (!user) {
+    if (!Array.isArray(models)) {
+      /*
+       * mariadb-connector returns an OkPacket object if no result sets are
+       * present
+       */
       return null;
     }
-    const promises = [];
-    const userId = user.id;
-
-    /* get info to DM channels */
-    const dmChannelIds = user.channels.filter(
-      ({ type }) => type === CHANNEL_TYPES.DM,
-    ).map(({ cid }) => cid);
-    if (dmChannelIds.length) {
-      promises.push(conn.query(
-        // eslint-disable-next-line max-len
-        `SELECT uc.cid, dmu.name AS 'dmname', CONCAT(a.shortId, ':', a.extension) AS avatarId FROM UserChannels uc
-    INNER JOIN Users dmu ON dmu.id = uc.uid
-    LEFT JOIN Profiles p ON p.uid = dmu.id
-    LEFT JOIN Media a ON a.id = p.avatar
-  WHERE dmu.id != ? AND uc.cid IN (?)`,
-        [userId, dmChannelIds],
-      ));
-    } else {
-      promises.push([]);
+    const [userModels, banModels, channelModels] = models;
+    if (!userModels.length) {
+      return null;
     }
-
-    /* get info to factions */
-    if (user.channels.some(({ type }) => type === CHANNEL_TYPES.FACTION)) {
-      promises.push(conn.query(
-        // eslint-disable-next-line max-len
-        `SELECT CONCAT(a.shortId, ':', a.extension) AS avatarId, f.cid FROM UserFactions uf
-    INNER JOIN Factions f ON f.id = uf.fid
-    INNER JOIN Media a ON a.id = f.avatar
-  WHERE uf.uid = ?`,
-        [userId],
-      ));
-    } else {
-      promises.push([]);
-    }
-
-    /* get blocked users */
-    promises.push(conn.query(
-      `SELECT bu.id, bu.name FROM UserBlocks ub
-  INNER JOIN Users bu ON bu.id = ub.buid
-WHERE ub.uid = ?`,
-      [userId],
-    ));
-
-    /* get bans applying on user id or tpid */
-    promises.push(conn.query(
-      `SELECT b.expires, b.flags FROM Bans b WHERE b.id IN (
-  SELECT DISTINCT b.id FROM (
-    SELECT ub.bid AS id FROM UserBans ub WHERE ub.uid = ?
-    UNION ALL
-    SELECT tb.bid AS id FROM ThreePIDBans tb INNER JOIN ThreePIDs t ON tb.tid = t.id WHERE t.uid = ?
-  ) AS b
-) AND (b.expires > NOW() OR b.expires IS NULL)`,
-      [userId, userId],
-    ));
-
-    /* eslint-enable max-len */
-
-    const [
-      dmChannels, factionAvatars, blocked, bans,
-    ] = await Promise.all(promises);
-
+    const [userModel] = userModels;
     /*
-     * dmChannels:
-     *   [{ cid, dmname, muted, avatarId }, ...]
-     * user.channels:
-     *   [{ cid, name, type, lastDate, lastReadDate }, ...]
-     * target user.channels:
-     *   { PUBLIC: [[cid, name, lastTs, lastReadTs, muted, avatarIdOrCc], ...], ... }
+     * userModel: {
+     *   id, name, username, password, userlvl, flags,
+     *   lastSeen, createdAt, customFlag,
+     *   avatarId, customRoleFlagId,
+     *   activeFactionId,
+     * }
+     * banModels: [
+     *   { expires, flags }, ...
+     * ]
+     * channelModels: [
+     *   { cid, muted }, ...
+     * ]
      */
-    if (user.channels.length) {
-      const { channels } = user;
-      user.channels = {};
-      let i = channels.length;
-      while (i > 0) {
-        i -= 1;
-        const { cid, name, type, lastDate, lastReadDate, muted } = channels[i];
-        const channel = [
-          // eslint-disable-next-line max-len
-          cid, name, lastDate.getTime(), lastReadDate.getTime(), muted === 1, null,
-        ];
-        if (type === CHANNEL_TYPES.DM) {
-          /*
-           * if it is a dm channel, set the name to the name of the other user
-           */
-          const dmChannel = dmChannels.find(({ cid: dmcid }) => dmcid === cid);
-          if (!dmChannel) {
-            console.error(
-              // eslint-disable-next-line max-len
-              `Session Error: User ${userId} has DM channel ${cid} but no other use associated`,
-            );
-            continue;
-          }
-          channel[1] = dmChannel.dmname;
-          channel[5] = dmChannel.avatarId;
-        }
-        if (type === CHANNEL_TYPES.FACTION) {
-          /*
-           * populate avatar of faction channels
-           */
-          const factionAvatar = factionAvatars
-            .find((f) => f.cid === cid)?.avatarId;
-          if (factionAvatar) {
-            channel[5] = factionAvatar;
-          }
-        }
-        if (user.channels[type]) {
-          user.channels[type].push(channel);
-        } else {
-          user.channels[type] = [channel];
-        }
-      }
-    } else {
-      user.channels = {};
-    }
+    userModel.bans = banModels;
+    userModel.userChannels = channelModels.map(
+      ({ cid, muted }) => [cid, muted !== 0],
+    );
 
-    /*
-     * [{ id, name }]
-     */
-    user.blocked = blocked;
-
-    /*
-     * [{ expires, flags }]
-     */
-    user.bans = bans;
-
-    return user;
+    userModel.blockDm = (userModel.flags & (0x01 << USER_FLAGS.BLOCK_DM)) !== 0;
+    userModel.priv = (userModel.flags & (0x01 << USER_FLAGS.PRIV)) !== 0;
+    delete userModel.flags;
+    return userModel;
   } catch (error) {
     console.error(`SQL Error on resolveSession: ${error.message}`);
-  } finally {
-    if (conn) conn.release();
   }
   return null;
 }

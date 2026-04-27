@@ -2,7 +2,7 @@
  * express middlewares for handling user sessions
  */
 import { parse as parseCookie } from 'cookie';
-import { HOUR, USER_FLAGS } from '../core/constants.js';
+import { HOUR } from '../core/constants.js';
 import { TIMEBLOCK_USERS } from '../core/config.js';
 import {
   resolveSession, createSession, removeSession, resolveSessionUid,
@@ -11,7 +11,7 @@ import {
 import { parseListOfBans } from '../data/sql/Ban.js';
 import { touchUser } from '../data/sql/User.js';
 import { patchState } from '../store/index.js';
-import { sign, unsign } from '../utils/hash.js';
+import { sign, unsign, compareToHash } from '../utils/hash.js';
 
 
 export class User {
@@ -24,22 +24,16 @@ export class User {
    *   username,
    *   password,
    *   userlvl,
-   *   flags,
+   *   blockDm,
+   *   priv,
    *   lastSeen,
    *   createdAt,
-   *   havePassword,
    *   avatarId,
    *   customFlag,
    *   activeFactionId,
    *   customRoleFlagId,
    *   bans: [ { expires, flags }, ... ],
-   *   tpids: [ { tpid, provider }, ... ],
-   *   blocked: [ { id, name }, ...],
-   *   channels: {
-   *     [CHANNEL_TYPES.DM]: [
-   *       [cid, name, lastTs, lastReadTs, muted, avatar], ...
-   *     ], ...
-   *   },
+   *   userChannels: [ [cid, muted], ...],
    * }
    */
   #data;
@@ -89,18 +83,9 @@ export class User {
     this.banRecheckTs = banRecheckTs;
 
     this.channelIds.clear();
-    /*
-     * data.channels:
-     *   { PUBLIC: [[cid, name, lastTs, lastReadTs, muted, avatar], ...], ... }
-     */
-    const channelsByType = Object.values(this.#data.channels);
-    for (let i = 0; i < channelsByType.length; i += 1) {
-      const typeChannels = channelsByType[i];
-      for (let u = 0; u < typeChannels.length; u += 1) {
-        const typeChannel = typeChannels[u];
-        // Map<isMuted>
-        this.channelIds.set(typeChannel[0], typeChannel[4]);
-      }
+    for (let i = 0; i < data.userChannels.length; i += 1) {
+      const [cid, muted] = data.userChannels[i];
+      this.channelIds.set(cid, muted);
     }
   }
 
@@ -110,20 +95,37 @@ export class User {
     User.mailProvider = mailProvider;
   }
 
-  get data() {
-    return this.#data;
-  }
-
   get name() {
     return this.#data.name;
+  }
+
+  get username() {
+    return this.#data.username;
+  }
+
+  get blockDm() {
+    return this.#data.blockDm;
+  }
+
+  get priv() {
+    return this.#data.priv;
   }
 
   get token() {
     return this.#token;
   }
 
-  get isPrivate() {
-    return (this.#data.flags & (0x01 << USER_FLAGS.PRIV)) !== 0;
+  get nameData() {
+    return {
+      name: this.#data.name,
+      customRoleFlagId: this.#data.customRoleFlagId,
+      customFlag: this.#data.customFlag,
+      avatarId: this.#data.avatarId,
+    };
+  }
+
+  get hasPassword() {
+    return this.#data.password !== null;
   }
 
   touch(ipString) {
@@ -131,6 +133,28 @@ export class User {
       return false;
     }
     return touchUser(this.id, ipString);
+  }
+
+  /*
+   * compare a password to the stored hash,
+   * return number
+   *   0: success
+   *   1: no password set
+   *   2: account marked as hacked
+   *   3: password wrong
+   */
+  checkPassword(password) {
+    const passwordHash = this.#data.password;
+    if (!passwordHash) {
+      return 1;
+    }
+    if (passwordHash === 'hacked') {
+      return 2;
+    }
+    if (compareToHash(password, passwordHash)) {
+      return 0;
+    }
+    return 3;
   }
 
   hasChannel(cid) {
@@ -146,19 +170,38 @@ export class User {
   }
 
   patchUserState(state, patch) {
-    if (state === 'chat' || state === 'profile') {
+    if (state === 'profile' || state === 'user') {
       if (patch.path === 'activeFactionRole') {
         this.refresh();
         return;
       }
 
-      const [newState, target, hasChanged] = patchState(this.#data, patch);
+      const [newState,, hasChanged] = patchState(this.#data, patch);
       if (!hasChanged) {
         return;
       }
-      this.#data = newState;
-      if (target === 'channels') {
-        this.populateFromData(newState);
+      this.populateFromData(newState);
+    } else if (state === 'chat' && patch.path.startsWith('channels.')) {
+      /*
+       * parse the patch partially to check if channel got added or removed
+       */
+      const { path, op } = patch;
+      const targetCid = Number(path.substring(
+        path.indexOf('[0:') + 3, path.indexOf(']'),
+      ));
+      const channelIndex = this.#data.userChannels.findIndex(
+        ([cid]) => cid === targetCid,
+      );
+      if (op === 'addnx') {
+        if (channelIndex === -1) {
+          this.#data.userChannels.push([targetCid, false]);
+          this.populateFromData(this.#data);
+        }
+      } else if (op === 'del') {
+        if (channelIndex !== -1) {
+          this.#data.userChannels.splice(channelIndex, 1);
+          this.populateFromData(this.#data);
+        }
       }
     }
   }

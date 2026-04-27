@@ -175,9 +175,11 @@ WHERE ${Number(uidOrUsername) ? 'u.id = ?' : 'u.username = ?'}`,
     );
 
     model = nestQuery(model);
-    model.isPrivate = (model.flags & (0x01 << USER_FLAGS.PRIV)) !== 0;
-    delete model.flags;
-    return model;
+    if (model) {
+      model.isPrivate = (model.flags & (0x01 << USER_FLAGS.PRIV)) !== 0;
+      delete model.flags;
+      return model;
+    }
   } catch (error) {
     console.error(`SQL Error on getUserInfo: ${error.message}`);
   }

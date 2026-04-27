@@ -143,7 +143,7 @@ export default function chat(
 
       const typeChannels = [...state.channels[type]];
       typeChannels[channelIndex] = [...typeChannels[channelIndex]];
-      typeChannels[channelIndex][3] = Date.now();
+      typeChannels[channelIndex][3] = Math.ceil(Date.now() / 1000);
 
       return {
         ...state,
@@ -209,7 +209,7 @@ export default function chat(
       if (type !== CHANNEL_TYPES.PUBLIC) {
         typeChannels = [...typeChannels];
         typeChannels[channelIndex] = [...typeChannels[channelIndex]];
-        const ts = Date.now();
+        const ts = Math.ceil(Date.now() / 1000);
         typeChannels[channelIndex][2] = ts;
         if (!notify) {
           typeChannels[channelIndex][3] = ts;

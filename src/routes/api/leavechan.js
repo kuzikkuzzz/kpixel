@@ -22,26 +22,32 @@ async function leaveChan(req, res) {
     return;
   }
 
-  const affectedUsers = await leaveChannel(user.id, channelId);
+  const leaveReturn = await leaveChannel(user.id, channelId);
 
-  if (!affectedUsers) {
+  if (!leaveReturn) {
     res.status(401).json({
       errors: [t`Could not leave this channel`],
     });
     return;
   }
 
+  const [affectedUsers, channelType] = leaveReturn;
+
   logger.info(
     `Removed user ${user.name} from channel ${channelId}`,
   );
 
-  for (let i = 0; i < affectedUsers.length; i += 1) {
-    socketEvents.reloadUser(affectedUsers[i]);
+  if (channelType) {
+    for (let i = 0; i < affectedUsers.length; i += 1) {
+      const chatPatch = {
+        op: 'del',
+        path: `channels.${channelType}[0:${channelId}]`,
+      };
+      socketEvents.patchUserState(affectedUsers[i], 'chat', chatPatch);
+    }
   }
 
-  res.json({
-    status: 'ok',
-  });
+  res.json({ status: 'ok' });
 }
 
 export default leaveChan;

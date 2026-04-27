@@ -9,7 +9,7 @@ import { USERLVL } from '../../../core/constants.js';
 export default async (req, res) => {
   const { user, lang, ttag: { t } } = req;
 
-  const { name, userlvl } = user.data;
+  const { name, userlvl } = user;
   if (userlvl >= USERLVL.VERIFIED) {
     throw new Error(t`You are already verified.`);
   }

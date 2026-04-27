@@ -246,3 +246,52 @@ BEGIN
 
   COMMIT;
 END;;
+
+-- Resolve Session
+--   If it can't be removed, no result sets, otherwise...
+--
+--   1st result set (user info):
+--     id, name, username, password (bcrypt hash), userlvl, flags, lastSeen,
+--     createdAt, customFlag, avatarId, customRoleFlagId, activeFactionId,
+--   2nd result set (active bans):
+--     expires, flags
+--   3rd result set (chat channels):
+--     cid, muted
+CREATE PROCEDURE IF NOT EXISTS RESOLVE_SESSION(
+  IN p_token char(38) CHARACTER SET ascii COLLATE ascii_bin
+) NOT DETERMINISTIC READS SQL DATA
+BEGIN
+  DECLARE v_uid INT UNSIGNED;
+
+  SELECT uid INTO v_uid FROM Sessions WHERE token = p_token AND (
+    expires > NOW() OR expires IS NULL
+  ) LIMIT 1;
+
+  IF v_uid IS NOT NULL THEN
+
+    SELECT u.id, u.name, u.username, u.password, u.userlvl, u.flags, u.lastSeen,
+      u.createdAt,
+      p.customFlag,
+      CONCAT(a.shortId, ':', a.extension) AS avatarId,
+      CONCAT(frm.shortId, ':', frm.extension) AS customRoleFlagId,
+      fr.fid AS activeFactionId
+    FROM Users u
+      LEFT JOIN Profiles p ON p.uid = u.id
+      LEFT JOIN Media a ON a.id = p.avatar
+      LEFT JOIN FactionRoles fr ON fr.id = p.activeRole
+      LEFT JOIN Media frm ON frm.id = fr.customFlag
+    WHERE u.id = v_uid;
+
+    SELECT b.expires, b.flags FROM Bans b WHERE b.id IN (
+      SELECT DISTINCT b.id FROM (
+        SELECT ub.bid AS id FROM UserBans ub WHERE ub.uid = v_uid
+          UNION ALL
+        SELECT tb.bid AS id FROM ThreePIDBans tb
+          INNER JOIN ThreePIDs t ON tb.tid = t.id
+        WHERE t.uid = v_uid
+      ) AS b
+    ) AND (b.expires > NOW() OR b.expires IS NULL);
+
+    SELECT cid, muted FROM UserChannels WHERE uid = v_uid;
+  END IF;
+END;;

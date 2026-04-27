@@ -9,7 +9,7 @@ import { isUserBlockedBy } from '../../data/sql/UserBlock.js';
 import { findUserByIdOrName } from '../../data/sql/User.js';
 import { createDMChannel } from '../../data/sql/Channel.js';
 import { getAvatarById } from '../../data/sql/Profile.js';
-import { USER_FLAGS } from '../../core/constants.js';
+import { USER_FLAGS, CHANNEL_TYPES } from '../../core/constants.js';
 
 async function startDm(req, res) {
   req.tickRateLimiter(5000);
@@ -30,10 +30,7 @@ async function startDm(req, res) {
     errors.push('You can not  DM yourself.');
   }
   if (errors.length) {
-    res.status(400);
-    res.json({
-      errors,
-    });
+    res.status(400).json({ errors });
     return;
   }
 
@@ -70,28 +67,26 @@ async function startDm(req, res) {
 
   const [channelId] = await createDMChannel(user.id, userId);
 
+  const ts = Math.floor(Date.now() / 1000);
+  const avatarId = await getAvatarById(userId);
+  const channelArray = [channelId, userName, ts, ts, false, avatarId];
+
   if (channelId) {
-    socketEvents.reloadUser(user.id);
-    socketEvents.reloadUser(userId);
+    socketEvents.patchUserState(user.id, 'chat', {
+      op: 'addnx',
+      path: `channels.${CHANNEL_TYPES.DM}[0:${channelId}]`,
+      value: channelArray,
+    });
+    socketEvents.patchUserState(userId, 'chat', {
+      op: 'addnx',
+      path: `channels.${CHANNEL_TYPES.DM}[0:${channelId}]`,
+      value: [channelId, user.name, ts, ts, false, user.nameData.avatarId],
+    });
   } else {
     throw new Error(`Couldn't create a DM with ${userName}, try again later.`);
   }
 
-  const avatarId = await getAvatarById(userId);
-
-  const ts = Date.now();
-
-  res.json({
-    status: 'ok',
-    channel: [
-      channelId,
-      userName,
-      ts,
-      ts,
-      false,
-      avatarId,
-    ],
-  });
+  res.json({ status: 'ok', channel: channelArray });
 }
 
 export default startDm;

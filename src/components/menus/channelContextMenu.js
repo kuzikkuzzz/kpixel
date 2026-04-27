@@ -21,15 +21,17 @@ export default function channelContextMenu(store, args) {
       state: muted,
       text: t`Mute Channel`,
     });
-    elements.push({
-      id: 'cl',
-      type: 'func',
-      func: () => {
-        store.dispatch(setLeaveChannel(cid));
-      },
-      symbol: MdOutlineSensorDoor,
-      text: t`Close`,
-    });
+    if (type !== CHANNEL_TYPES.FACTION) {
+      elements.push({
+        id: 'cl',
+        type: 'func',
+        func: () => {
+          store.dispatch(setLeaveChannel(cid));
+        },
+        symbol: MdOutlineSensorDoor,
+        text: t`Close`,
+      });
+    }
   }
   elements.push({
     id: 'co',
