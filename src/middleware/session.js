@@ -111,6 +111,10 @@ export class User {
     return this.#data.priv;
   }
 
+  get activeFactionId() {
+    return this.#data.activeFactionId;
+  }
+
   get token() {
     return this.#token;
   }
