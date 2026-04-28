@@ -88,7 +88,7 @@ msgstr "Προσθήκη πλέγματος (αποεπιλέξτε εάν χρ�
 msgid "Add Template"
 msgstr "Προσθήκη πρωτοτύπου"
 
-msgid "Add an Mail Adress here:"
+msgid "Add a new E-Mail Address here:"
 msgstr ""
 
 #. This if for moderation tools, it's not important to translate this
@@ -511,7 +511,7 @@ msgstr ""
 msgid "DM"
 msgstr "Προσωπικά Μηνύματα (DM)"
 
-msgid "Daily Pixel"
+msgid "Daily Pixels"
 msgstr ""
 
 #, fuzzy
@@ -542,6 +542,9 @@ msgid "Delete Account"
 msgstr "Διαγραφή λογαριασμού"
 
 msgid "Delete Faction"
+msgstr ""
+
+msgid "Delete My Account"
 msgstr ""
 
 msgid "Delete the faction"
@@ -894,6 +897,9 @@ msgstr "Μεταφόρτωση εικόνας"
 
 msgid "Import templates"
 msgstr "Εξαγωγή προτύπων"
+
+msgid "Incorrect password"
+msgstr ""
 
 msgid "Interval"
 msgstr "Διάστημα"
@@ -1266,9 +1272,6 @@ msgstr ""
 msgid "Ping"
 msgstr "Ανέφερε τον χρήστη (ping)"
 
-msgid "Pixel"
-msgstr ""
-
 msgid "Pixel Notify OFF"
 msgstr "Ειδοποίηση Pixel Ανενεργή"
 
@@ -1282,6 +1285,9 @@ msgstr "Προστασία Pixel"
 msgid "Pixel protected"
 msgstr "Προστατευμένα pixel!"
 
+msgid "Pixels"
+msgstr ""
+
 msgid "Place color pixels on a large canvas with other players online!"
 msgstr ""
 "Τοποθετήστε έγχρωμα pixel σε έναν μεγάλο καμβά με άλλους παίκτες στο "
@@ -1292,9 +1298,6 @@ msgstr "Pixels που τοποθετήθηκαν"
 
 msgid "Play a sound when new chat messages arrive"
 msgstr "Παίξτε έναν ήχο όταν φτάνουν νέα μηνύματα συνομιλίας"
-
-msgid "Player"
-msgstr "Παίχτης"
 
 msgid "Players and Pixels per hour"
 msgstr "Παίκτες και pixel ανά ώρα"
@@ -1319,7 +1322,7 @@ msgstr "Λειτουργία πατάτας"
 msgid "Powerlevel"
 msgstr ""
 
-msgid "Powerlevel of this role. See table below for explenation."
+msgid "Powerlevel of this role. See table below for an explanation."
 msgstr ""
 
 #, javascript-format
@@ -1364,9 +1367,6 @@ msgstr "Ιδιωτικό"
 
 msgid "Profile"
 msgstr "Προφιλ"
-
-msgid "Public"
-msgstr ""
 
 msgid "Quick Actions"
 msgstr ""
@@ -1563,6 +1563,9 @@ msgstr ""
 msgid "Serpentine"
 msgstr "Οφιοειδής"
 
+msgid "Server Error"
+msgstr ""
+
 msgid "Server answered with gibberish :("
 msgstr "Ο διακομιστής απάντησε με ασυναρτησίες :("
 
@@ -1712,6 +1715,13 @@ msgstr ""
 "cooldown και 60s stacking. Κυκλοφόρησε στις 11 Μαΐου και παρέμεινε ενεργό "
 "για μήνες μέχρι να κλείσει στις 30 Νοεμβρίου."
 
+msgid ""
+"This email / password combination got hacked and leaked. To protect this "
+"account, the password has been reset. Please use the \"Forgot my password\" "
+"function on the LogIn page to set a new password. In the future, consider "
+"not installing malware, Thank You."
+msgstr ""
+
 msgid "This faction has no invites"
 msgstr ""
 
@@ -1724,6 +1734,9 @@ msgid "This login may only work if your account is verified."
 msgstr ""
 
 msgid "This permission is required"
+msgstr ""
+
+msgid "This user has not password set"
 msgstr ""
 
 msgid "Timeout"
@@ -1942,8 +1955,8 @@ msgstr ""
 msgid "Yes"
 msgstr "Ναι"
 
-msgid "Yes, Delete My Account!"
-msgstr "Ναι, Διαγραφή του λογαριασμού μου!"
+msgid "Yes, really delete Me"
+msgstr ""
 
 msgid "Yesterday"
 msgstr "Μόνο οι Top10 απο χθες μπορούν να τοποθετήσουν εδώ"
@@ -2157,6 +2170,10 @@ msgstr "y εκτός ορίων"
 msgid "z out of bounds"
 msgstr "z εκτός ορίων"
 
+msgctxt "media-player"
+msgid "Player"
+msgstr ""
+
 msgctxt "keybinds"
 msgid "A"
 msgstr ""
@@ -2217,6 +2234,21 @@ msgstr ""
 msgctxt "keybinds"
 msgid "X"
 msgstr "x εκτός ορίων"
+
+msgctxt "channel-list"
+msgid "Public"
+msgstr ""
+
+#. Column title of column indicating whether or not a faction is able to be joined in public
+msgctxt "statistics-table"
+msgid "Public"
+msgstr ""
+
+#~ msgid "Player"
+#~ msgstr "Παίχτης"
+
+#~ msgid "Yes, Delete My Account!"
+#~ msgstr "Ναι, Διαγραφή του λογαριασμού μου!"
 
 #~ msgid "Change your Mail Adress here:"
 #~ msgstr "Άλλαξε το mail address σου εδώ:"

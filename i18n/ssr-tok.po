@@ -99,7 +99,8 @@ msgstr ""
 msgid "Can not elevate the powerlevel of a role to yours"
 msgstr ""
 
-msgid "Can not have more than 20 faction roles"
+#, javascript-format
+msgid "Can not have more than ${ MAX_ROLES_PER_FACTION } faction roles"
 msgstr ""
 
 msgid "Can not have more than 20 invites per faction"
@@ -274,7 +275,7 @@ msgid ""
 "requested this mail was ${ ip })."
 msgstr ""
 
-msgid "Incorrect password!"
+msgid "Incorrect password"
 msgstr ""
 
 msgid "Invalid type of media"
@@ -581,6 +582,9 @@ msgid "This media is banned ${ reason }. Ban ID: ${ mbid }"
 msgstr ""
 
 msgid "This password-reset link isn't valid anymore :("
+msgstr ""
+
+msgid "This user has not password set"
 msgstr ""
 
 msgid "This user is private"

@@ -106,7 +106,8 @@ msgstr ""
 msgid "Can not elevate the powerlevel of a role to yours"
 msgstr ""
 
-msgid "Can not have more than 20 faction roles"
+#, javascript-format
+msgid "Can not have more than ${ MAX_ROLES_PER_FACTION } faction roles"
 msgstr ""
 
 msgid "Can not have more than 20 invites per faction"
@@ -293,8 +294,8 @@ msgstr ""
 "Dacă nu ai cerut acest mail, te rog să îl ignori (IP-ul care a cerut acest "
 "mail era ${ ip })."
 
-msgid "Incorrect password!"
-msgstr "Parolă incorrectă!"
+msgid "Incorrect password"
+msgstr ""
 
 msgid "Invalid type of media"
 msgstr "Tip nevalid de media"
@@ -628,6 +629,9 @@ msgstr "Această media este interzisă ${ reason }. ID ban: ${ mbid }"
 msgid "This password-reset link isn't valid anymore :("
 msgstr "Acest parolă-reset link deja nu este valid :("
 
+msgid "This user has not password set"
+msgstr ""
+
 msgid "This user is private"
 msgstr ""
 
@@ -905,6 +909,9 @@ msgid ""
 msgstr ""
 "Bine ai venit în mica noastră comunitate de pixelplacers, pentru a-ți folosi "
 "contul, trebuie să-ți verifici e-mailul. Poți face asta aici: "
+
+#~ msgid "Incorrect password!"
+#~ msgstr "Parolă incorrectă!"
 
 #~ msgid "No file metadata given"
 #~ msgstr "Nu sunt date metadate ale fișierului"

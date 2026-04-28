@@ -105,7 +105,8 @@ msgstr ""
 msgid "Can not elevate the powerlevel of a role to yours"
 msgstr ""
 
-msgid "Can not have more than 20 faction roles"
+#, javascript-format
+msgid "Can not have more than ${ MAX_ROLES_PER_FACTION } faction roles"
 msgstr ""
 
 msgid "Can not have more than 20 invites per faction"
@@ -291,8 +292,8 @@ msgstr ""
 "Ha nem Te kérted ezt a levelet, kérjük, hagyjad figyelmen kívül (az IP, aki "
 "ezt a levelet kérte, ${ ip } volt)."
 
-msgid "Incorrect password!"
-msgstr "Hibás jelszó!"
+msgid "Incorrect password"
+msgstr ""
 
 msgid "Invalid type of media"
 msgstr ""
@@ -612,6 +613,9 @@ msgstr ""
 msgid "This password-reset link isn't valid anymore :("
 msgstr "Ez a jelszó-visszaállítási link már nem érvényes :("
 
+msgid "This user has not password set"
+msgstr ""
+
 msgid "This user is private"
 msgstr ""
 
@@ -890,6 +894,9 @@ msgid ""
 msgstr ""
 "Üdvözöljük a mi kis pixelrakó közösségünkben. Ha szeretnéd, hogy megmaradjon "
 "a fiókod, meg kell erősítened az e-mail címedet. Ezt itt teheted meg: "
+
+#~ msgid "Incorrect password!"
+#~ msgstr "Hibás jelszó!"
 
 #~ msgid "Server error when deleting user."
 #~ msgstr "Szerver hiba felhasználó törlése közben."

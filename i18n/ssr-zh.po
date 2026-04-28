@@ -100,8 +100,9 @@ msgstr ""
 msgid "Can not elevate the powerlevel of a role to yours"
 msgstr ""
 
-msgid "Can not have more than 20 faction roles"
-msgstr "不可拥有多于20个派别身份"
+#, javascript-format
+msgid "Can not have more than ${ MAX_ROLES_PER_FACTION } faction roles"
+msgstr ""
 
 msgid "Can not have more than 20 invites per faction"
 msgstr ""
@@ -280,8 +281,8 @@ msgid ""
 "requested this mail was ${ ip })."
 msgstr "如果您没有请求收到此邮件，请忽略它（请求此邮件的 IP 地址为 ${ ip }）。"
 
-msgid "Incorrect password!"
-msgstr "密码错误！"
+msgid "Incorrect password"
+msgstr ""
 
 msgid "Invalid type of media"
 msgstr "媒体类型无效"
@@ -601,6 +602,9 @@ msgstr "此媒体已被禁${ reason }。禁播 ID：${ mbid }"
 msgid "This password-reset link isn't valid anymore :("
 msgstr "这个密码重置链接已经失效了 :("
 
+msgid "This user has not password set"
+msgstr ""
+
 msgid "This user is private"
 msgstr ""
 
@@ -868,6 +872,12 @@ msgid ""
 msgstr ""
 "欢迎来到我们的像素画爱好者小社区！要使用您的账号，您需要验证邮箱。您可以在这"
 "里进行验证： "
+
+#~ msgid "Incorrect password!"
+#~ msgstr "密码错误！"
+
+#~ msgid "Can not have more than 20 faction roles"
+#~ msgstr "不可拥有多于20个派别身份"
 
 #~ msgid "No file metadata given"
 #~ msgstr "未提供文件元数据"

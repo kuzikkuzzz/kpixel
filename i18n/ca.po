@@ -87,7 +87,7 @@ msgstr "Afegeix Quadrícula (desactiva-ho si necessites una plantilla 1:1)"
 msgid "Add Template"
 msgstr "Afegeix una Plantilla"
 
-msgid "Add an Mail Adress here:"
+msgid "Add a new E-Mail Address here:"
 msgstr ""
 
 #. This if for moderation tools, it's not important to translate this
@@ -506,7 +506,7 @@ msgstr ""
 msgid "DM"
 msgstr "Missatge Privat"
 
-msgid "Daily Pixel"
+msgid "Daily Pixels"
 msgstr ""
 
 msgid "Daily Pixels per Country"
@@ -534,6 +534,9 @@ msgid "Delete Account"
 msgstr "Esborra el Compte"
 
 msgid "Delete Faction"
+msgstr ""
+
+msgid "Delete My Account"
 msgstr ""
 
 msgid "Delete the faction"
@@ -888,6 +891,9 @@ msgstr "Puja una Imatge"
 
 msgid "Import templates"
 msgstr "Importa plantilles"
+
+msgid "Incorrect password"
+msgstr ""
 
 msgid "Interval"
 msgstr "Interval"
@@ -1257,9 +1263,6 @@ msgstr "Peixos"
 msgid "Ping"
 msgstr "Ping"
 
-msgid "Pixel"
-msgstr ""
-
 msgid "Pixel Notify OFF"
 msgstr "Activitat de Píxels Desactivada"
 
@@ -1273,6 +1276,9 @@ msgstr "Protecció de Píxels"
 msgid "Pixel protected"
 msgstr "Píxel protegit!"
 
+msgid "Pixels"
+msgstr ""
+
 msgid "Place color pixels on a large canvas with other players online!"
 msgstr ""
 "Col·loca píxels de colors en un gran llenç amb altres jugadors en línia!"
@@ -1282,9 +1288,6 @@ msgstr "Píxels Col·locats"
 
 msgid "Play a sound when new chat messages arrive"
 msgstr "Reprodueix un so quan arribi un nou missatge al xat"
-
-msgid "Player"
-msgstr "Jugador"
 
 msgid "Players and Pixels per hour"
 msgstr "Jugadors i Píxels per hora"
@@ -1311,7 +1314,7 @@ msgstr "Mode Patata"
 msgid "Powerlevel"
 msgstr ""
 
-msgid "Powerlevel of this role. See table below for explenation."
+msgid "Powerlevel of this role. See table below for an explanation."
 msgstr ""
 
 #, javascript-format
@@ -1355,9 +1358,6 @@ msgstr "Privat"
 
 msgid "Profile"
 msgstr "Perfil"
-
-msgid "Public"
-msgstr ""
 
 msgid "Quick Actions"
 msgstr "Accions Ràpides"
@@ -1552,6 +1552,9 @@ msgstr ""
 msgid "Serpentine"
 msgstr "Serpentí"
 
+msgid "Server Error"
+msgstr ""
+
 msgid "Server answered with gibberish :("
 msgstr "El servidor ha respost amb un galimaties :("
 
@@ -1710,6 +1713,13 @@ msgstr ""
 "segons. Es va estrenar l'11 de maig i es va mantenir actiu durant uns mesos "
 "fins que es va tancar el 30 de novembre."
 
+msgid ""
+"This email / password combination got hacked and leaked. To protect this "
+"account, the password has been reset. Please use the \"Forgot my password\" "
+"function on the LogIn page to set a new password. In the future, consider "
+"not installing malware, Thank You."
+msgstr ""
+
 msgid "This faction has no invites"
 msgstr ""
 
@@ -1726,6 +1736,9 @@ msgstr ""
 
 msgid "This permission is required"
 msgstr "Aquest permís és necessari"
+
+msgid "This user has not password set"
+msgstr ""
 
 msgid "Timeout"
 msgstr ""
@@ -1942,8 +1955,8 @@ msgstr "NOMÉS POTS TRIAR EL TEU NOM D'USUARI UNA VEGADA!"
 msgid "Yes"
 msgstr "Sí"
 
-msgid "Yes, Delete My Account!"
-msgstr "Sí, Esborra el Meu Compte!"
+msgid "Yes, really delete Me"
+msgstr ""
 
 msgid "Yesterday"
 msgstr "Ahir"
@@ -2162,6 +2175,10 @@ msgstr "Coordenada y fora de límits"
 msgid "z out of bounds"
 msgstr "Coordenada z fora de límits"
 
+msgctxt "media-player"
+msgid "Player"
+msgstr ""
+
 msgctxt "keybinds"
 msgid "A"
 msgstr "A"
@@ -2221,6 +2238,21 @@ msgstr "W"
 msgctxt "keybinds"
 msgid "X"
 msgstr "X"
+
+msgctxt "channel-list"
+msgid "Public"
+msgstr ""
+
+#. Column title of column indicating whether or not a faction is able to be joined in public
+msgctxt "statistics-table"
+msgid "Public"
+msgstr ""
+
+#~ msgid "Player"
+#~ msgstr "Jugador"
+
+#~ msgid "Yes, Delete My Account!"
+#~ msgstr "Sí, Esborra el Meu Compte!"
 
 #~ msgid "Change your Mail Adress here:"
 #~ msgstr "Canvia la teva Adreça de Correu aquí:"

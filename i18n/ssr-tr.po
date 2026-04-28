@@ -106,8 +106,9 @@ msgid "Can not elevate the powerlevel of a role to yours"
 msgstr ""
 "Bir rolün güç düzeyi kendi rolününkine eşit olacak şekilde değiştirilemez"
 
-msgid "Can not have more than 20 faction roles"
-msgstr "20'den fazla örgüt rolü bulunamaz"
+#, javascript-format
+msgid "Can not have more than ${ MAX_ROLES_PER_FACTION } faction roles"
+msgstr ""
 
 msgid "Can not have more than 20 invites per faction"
 msgstr "Örgüt başı 20'den fazla davet linki bulunamaz"
@@ -294,8 +295,8 @@ msgstr ""
 "Eğer bu e-postayı siz istemediyseniz lütfen görmezden gelin (bunu isteyen "
 "ip: ${ ip })."
 
-msgid "Incorrect password!"
-msgstr "Yanlış parola!"
+msgid "Incorrect password"
+msgstr ""
 
 msgid "Invalid type of media"
 msgstr "Geçersiz medya türü"
@@ -625,6 +626,9 @@ msgstr "Bu medya ${ reason } nedeniyle yasaklanmıştır. Ban ID'si: ${ mbid }"
 msgid "This password-reset link isn't valid anymore :("
 msgstr "Bu parola değiştirme bağlantısı artık geçerli değil :("
 
+msgid "This user has not password set"
+msgstr ""
+
 msgid "This user is private"
 msgstr "Bu kullanıcı gizlidir"
 
@@ -904,6 +908,12 @@ msgid ""
 msgstr ""
 "piksel atanlardan oluşan bu küçük topluluğumuza hoş geldiniz, hesabınızı "
 "kullanabilmek için e-posta adresini doğrulayın. Bunu buradan yapabilirsiniz: "
+
+#~ msgid "Incorrect password!"
+#~ msgstr "Yanlış parola!"
+
+#~ msgid "Can not have more than 20 faction roles"
+#~ msgstr "20'den fazla örgüt rolü bulunamaz"
 
 #~ msgid "No file metadata given"
 #~ msgstr "Dosya üstverisi verilmedi"

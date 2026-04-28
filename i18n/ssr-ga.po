@@ -103,7 +103,8 @@ msgstr ""
 msgid "Can not elevate the powerlevel of a role to yours"
 msgstr ""
 
-msgid "Can not have more than 20 faction roles"
+#, javascript-format
+msgid "Can not have more than ${ MAX_ROLES_PER_FACTION } faction roles"
 msgstr ""
 
 msgid "Can not have more than 20 invites per faction"
@@ -288,8 +289,8 @@ msgstr ""
 "Múna rinne tú iarratas don phost seo, neamhaird é le do chul (rinne an ip $"
 "{ ip } an iarratas don phost seo)."
 
-msgid "Incorrect password!"
-msgstr "Phasfhocal mícheart!"
+msgid "Incorrect password"
+msgstr ""
 
 msgid "Invalid type of media"
 msgstr ""
@@ -626,6 +627,9 @@ msgstr ""
 msgid "This password-reset link isn't valid anymore :("
 msgstr "Níl an pasfhocal-nasc a athshocrú bailí níos mó:("
 
+msgid "This user has not password set"
+msgstr ""
+
 msgid "This user is private"
 msgstr ""
 
@@ -910,6 +914,9 @@ msgid ""
 msgstr ""
 "Fáilte go dtí Ár Pobal de daoine picteilíní, the baint úsáid as do cuntas, "
 "caithfidh tú do phost a cinntigh, is féidir leat sin a dhéanamh anseo: "
+
+#~ msgid "Incorrect password!"
+#~ msgstr "Phasfhocal mícheart!"
 
 #~ msgid "Server error when deleting user."
 #~ msgstr "Earráid freastalaí agus úsáideoir á scriosadh."

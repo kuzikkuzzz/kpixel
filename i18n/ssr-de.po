@@ -105,8 +105,9 @@ msgstr "Kann das Powerlevel nicht über dein eigenes anheben"
 msgid "Can not elevate the powerlevel of a role to yours"
 msgstr "Kann das Powerlevel einer Rolle nicht auf dein eigenes anheben"
 
-msgid "Can not have more than 20 faction roles"
-msgstr "Kann nicht mehr als 20 Fraktionen haben"
+#, javascript-format
+msgid "Can not have more than ${ MAX_ROLES_PER_FACTION } faction roles"
+msgstr ""
 
 msgid "Can not have more than 20 invites per faction"
 msgstr "Kann nicht mehr als 20 Einladungen in einer Fraktion haben"
@@ -297,8 +298,8 @@ msgstr ""
 "Falls du diese Mail nicht beantragt hast, bitte ignoriere sie (die IP welche "
 "diese Nachricht beantragt hat war ${ ip })."
 
-msgid "Incorrect password!"
-msgstr "Falsches Passwort!"
+msgid "Incorrect password"
+msgstr ""
 
 msgid "Invalid type of media"
 msgstr "Ungültiger Medientyp"
@@ -635,6 +636,9 @@ msgstr "Dieses Medium ist verbannt ${ reason }. Ban ID: ${ mbid }"
 msgid "This password-reset link isn't valid anymore :("
 msgstr "Dieser Passwort-Wiederherstellungslink ist nichtmehr gültig :("
 
+msgid "This user has not password set"
+msgstr ""
+
 msgid "This user is private"
 msgstr "Dieser Benutzer ist privat"
 
@@ -924,6 +928,12 @@ msgstr ""
 "wilkommen in unserer kleinen Gemeinschaft aus Pixel schubser, um dein Konto "
 "zu verwenden musst du deine E-Mail Adresse verifizieren. Du kannst das hier "
 "erledigen: "
+
+#~ msgid "Incorrect password!"
+#~ msgstr "Falsches Passwort!"
+
+#~ msgid "Can not have more than 20 faction roles"
+#~ msgstr "Kann nicht mehr als 20 Fraktionen haben"
 
 #~ msgid "No file metadata given"
 #~ msgstr "Keine Metadaten angegeben"

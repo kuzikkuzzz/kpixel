@@ -83,7 +83,7 @@ msgstr "زیادکردنی تۆڕ (ئەگەر پێویستت بە قاڵبی ١:
 msgid "Add Template"
 msgstr "زیادکردنی قاڵب"
 
-msgid "Add an Mail Adress here:"
+msgid "Add a new E-Mail Address here:"
 msgstr ""
 
 #. This if for moderation tools, it's not important to translate this
@@ -502,7 +502,7 @@ msgstr ""
 msgid "DM"
 msgstr "نامەى ڕاستەوخۆ"
 
-msgid "Daily Pixel"
+msgid "Daily Pixels"
 msgstr ""
 
 msgid "Daily Pixels per Country"
@@ -530,6 +530,9 @@ msgid "Delete Account"
 msgstr "سڕینەوەی هەژمار"
 
 msgid "Delete Faction"
+msgstr ""
+
+msgid "Delete My Account"
 msgstr ""
 
 msgid "Delete the faction"
@@ -865,6 +868,9 @@ msgstr "بارکردنی وێنە"
 
 msgid "Import templates"
 msgstr "هاوردەکردنی قاڵبەکان"
+
+msgid "Incorrect password"
+msgstr ""
 
 msgid "Interval"
 msgstr "ئینتەرڤاڵ"
@@ -1231,9 +1237,6 @@ msgstr ""
 msgid "Ping"
 msgstr "پینگ"
 
-msgid "Pixel"
-msgstr ""
-
 msgid "Pixel Notify OFF"
 msgstr "پێکسڵ ئاگادارکردنەوە ناچالاکە"
 
@@ -1246,6 +1249,9 @@ msgstr "پاراستنی پێکسڵ"
 msgid "Pixel protected"
 msgstr "پێکسڵ پارێزراوە"
 
+msgid "Pixels"
+msgstr ""
+
 msgid "Place color pixels on a large canvas with other players online!"
 msgstr ""
 "پێکسڵی ڕەنگاوڕەنگ لەسەر کانڤاسێکی گەورە لەگەڵ یاریزانەکانی تر بە شێوەی "
@@ -1256,9 +1262,6 @@ msgstr "پێکسڵەکانی دانراو"
 
 msgid "Play a sound when new chat messages arrive"
 msgstr "کاتێک نامەی چاتی نوێ دێت دەنگێک لێبدە"
-
-msgid "Player"
-msgstr ""
 
 msgid "Players and Pixels per hour"
 msgstr "یاریزان و پێکسڵ لە کاتژمێرێکدا"
@@ -1283,7 +1286,7 @@ msgstr "دۆخی پەتاتە"
 msgid "Powerlevel"
 msgstr ""
 
-msgid "Powerlevel of this role. See table below for explenation."
+msgid "Powerlevel of this role. See table below for an explanation."
 msgstr ""
 
 #, javascript-format
@@ -1325,9 +1328,6 @@ msgstr "تایبەت"
 
 msgid "Profile"
 msgstr "پرۆفایل"
-
-msgid "Public"
-msgstr ""
 
 msgid "Quick Actions"
 msgstr ""
@@ -1521,6 +1521,9 @@ msgstr ""
 msgid "Serpentine"
 msgstr "سێرپێنتین"
 
+msgid "Server Error"
+msgstr ""
+
 msgid "Server answered with gibberish :("
 msgstr "سێرڤەر بە قسەی بێمانا وەڵامی دایەوە :("
 
@@ -1668,6 +1671,13 @@ msgstr ""
 "ستاککردنی ٦٠س. لە١١ی ئایار دەستیپێکرد و بۆ چەند مانگێک چالاک بوو تا لە ٣٠ی "
 "تشرینی دووەمدا داخراوە."
 
+msgid ""
+"This email / password combination got hacked and leaked. To protect this "
+"account, the password has been reset. Please use the \"Forgot my password\" "
+"function on the LogIn page to set a new password. In the future, consider "
+"not installing malware, Thank You."
+msgstr ""
+
 msgid "This faction has no invites"
 msgstr ""
 
@@ -1680,6 +1690,9 @@ msgid "This login may only work if your account is verified."
 msgstr ""
 
 msgid "This permission is required"
+msgstr ""
+
+msgid "This user has not password set"
 msgstr ""
 
 msgid "Timeout"
@@ -1898,8 +1911,8 @@ msgstr ""
 msgid "Yes"
 msgstr "بەڵێ"
 
-msgid "Yes, Delete My Account!"
-msgstr "بەڵێ، ئەکاونتەکەم بسڕەوە!"
+msgid "Yes, really delete Me"
+msgstr ""
 
 msgid "Yesterday"
 msgstr "دوێنێ"
@@ -2108,6 +2121,10 @@ msgstr "y لە دەرەوەی سنوور"
 msgid "z out of bounds"
 msgstr "z لە دەرەوەی سنوور"
 
+msgctxt "media-player"
+msgid "Player"
+msgstr ""
+
 msgctxt "keybinds"
 msgid "A"
 msgstr "A"
@@ -2167,6 +2184,18 @@ msgstr "W"
 msgctxt "keybinds"
 msgid "X"
 msgstr "X"
+
+msgctxt "channel-list"
+msgid "Public"
+msgstr ""
+
+#. Column title of column indicating whether or not a faction is able to be joined in public
+msgctxt "statistics-table"
+msgid "Public"
+msgstr ""
+
+#~ msgid "Yes, Delete My Account!"
+#~ msgstr "بەڵێ، ئەکاونتەکەم بسڕەوە!"
 
 #~ msgid "You must enter a duration"
 #~ msgstr "پێویستە ماوەیەک دابنێیت"

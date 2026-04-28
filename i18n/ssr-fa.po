@@ -105,7 +105,8 @@ msgstr ""
 msgid "Can not elevate the powerlevel of a role to yours"
 msgstr ""
 
-msgid "Can not have more than 20 faction roles"
+#, javascript-format
+msgid "Can not have more than ${ MAX_ROLES_PER_FACTION } faction roles"
 msgstr ""
 
 msgid "Can not have more than 20 invites per faction"
@@ -288,8 +289,8 @@ msgstr ""
 "اگر شما این نامه را درخواست نکردید، لطفاً آن را نادیده بگیرید (IP درخواست "
 "کننده این نامه ${ ip } بود)."
 
-msgid "Incorrect password!"
-msgstr "رمزت رو غلط وارد کردی!"
+msgid "Incorrect password"
+msgstr ""
 
 msgid "Invalid type of media"
 msgstr ""
@@ -615,6 +616,9 @@ msgstr ""
 msgid "This password-reset link isn't valid anymore :("
 msgstr "این password-reset دیگر معتبر نیست :("
 
+msgid "This user has not password set"
+msgstr ""
+
 msgid "This user is private"
 msgstr ""
 
@@ -891,6 +895,9 @@ msgid ""
 msgstr ""
 "به pixelplacers خوش آمدید، برای استفاده از حساب خود، باید ایمیل خود را تأیید "
 "کنید. تو میتوانی آن کار را اینجا انجام بدی: "
+
+#~ msgid "Incorrect password!"
+#~ msgstr "رمزت رو غلط وارد کردی!"
 
 #~ msgid "Server error when deleting user."
 #~ msgstr "خطای سرور هنگام حذف کاربر!"

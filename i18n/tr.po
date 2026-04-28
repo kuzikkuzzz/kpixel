@@ -94,7 +94,7 @@ msgstr "Izgara ekle (eğer 1:1 bir şablon istiyorsanız bu seçeneği kapatın)
 msgid "Add Template"
 msgstr "Şablon Ekle"
 
-msgid "Add an Mail Adress here:"
+msgid "Add a new E-Mail Address here:"
 msgstr ""
 
 #. This if for moderation tools, it's not important to translate this
@@ -515,8 +515,8 @@ msgstr "Özel Bayrak"
 msgid "DM"
 msgstr "DM"
 
-msgid "Daily Pixel"
-msgstr "Günlük Piksel"
+msgid "Daily Pixels"
+msgstr ""
 
 msgid "Daily Pixels per Country"
 msgstr "Ülke başına atılan günlük piksel"
@@ -544,6 +544,9 @@ msgstr "Hesabı Sil"
 
 msgid "Delete Faction"
 msgstr "Örgütü Sil"
+
+msgid "Delete My Account"
+msgstr ""
 
 msgid "Delete the faction"
 msgstr "Örgütü sil"
@@ -898,6 +901,9 @@ msgstr "Resim Yükle"
 
 msgid "Import templates"
 msgstr "Şablonları içe aktar"
+
+msgid "Incorrect password"
+msgstr ""
 
 msgid "Interval"
 msgstr "Aralık"
@@ -1271,9 +1277,6 @@ msgstr "Balıklar"
 msgid "Ping"
 msgstr "Ping"
 
-msgid "Pixel"
-msgstr "Piksel"
-
 msgid "Pixel Notify OFF"
 msgstr "Piksel Bildirimleri KAPALI"
 
@@ -1286,6 +1289,9 @@ msgstr "Piksel Koruması"
 msgid "Pixel protected"
 msgstr "Piksel korunuyor"
 
+msgid "Pixels"
+msgstr ""
+
 msgid "Place color pixels on a large canvas with other players online!"
 msgstr ""
 "Diğer oyuncularla beraber büyük bir Dünya haritasında renkli pikseller atın!"
@@ -1295,9 +1301,6 @@ msgstr "Atılan Pikseller"
 
 msgid "Play a sound when new chat messages arrive"
 msgstr "Sohbette yeni iletilerde sesle uyar"
-
-msgid "Player"
-msgstr "Oyuncu"
 
 msgid "Players and Pixels per hour"
 msgstr "Saatlik oyuncu ve piksel sayısı"
@@ -1324,8 +1327,8 @@ msgstr "Patates Modu"
 msgid "Powerlevel"
 msgstr "Güç düzeyi"
 
-msgid "Powerlevel of this role. See table below for explenation."
-msgstr "Rolün güç düzeyi. Açıklama için aşağıdaki tabloya bakın."
+msgid "Powerlevel of this role. See table below for an explanation."
+msgstr ""
 
 #, javascript-format
 msgid ""
@@ -1372,9 +1375,6 @@ msgstr "Gizli"
 
 msgid "Profile"
 msgstr "Profil"
-
-msgid "Public"
-msgstr "Herkese Açık"
 
 msgid "Quick Actions"
 msgstr "Hızlı Eylemler"
@@ -1570,6 +1570,9 @@ msgstr ""
 msgid "Serpentine"
 msgstr "Serpantin"
 
+msgid "Server Error"
+msgstr ""
+
 msgid "Server answered with gibberish :("
 msgstr "Sunucu anlamsız yanıt verdi :("
 
@@ -1727,6 +1730,13 @@ msgstr ""
 "biriktirilebiliyordu. 11 Mayıstan başladı ve 30 Kasımda kapatılana kadar "
 "aylarca aktif olarak oynandı."
 
+msgid ""
+"This email / password combination got hacked and leaked. To protect this "
+"account, the password has been reset. Please use the \"Forgot my password\" "
+"function on the LogIn page to set a new password. In the future, consider "
+"not installing malware, Thank You."
+msgstr ""
+
 msgid "This faction has no invites"
 msgstr "Bu örgütün daveti bulunmamaktadır"
 
@@ -1743,6 +1753,9 @@ msgstr "Bu giriş yalnız hesabınız doğrulandıysa çalışabilir."
 
 msgid "This permission is required"
 msgstr "Bu izin zorunludur"
+
+msgid "This user has not password set"
+msgstr ""
 
 msgid "Timeout"
 msgstr "Zaman aşımı"
@@ -1958,8 +1971,8 @@ msgstr "KULLANICI ADINI YALNIZ BİR KERE SEÇEBİLİRSİN!"
 msgid "Yes"
 msgstr "Evet"
 
-msgid "Yes, Delete My Account!"
-msgstr "Evet, Hesabımı Sil!"
+msgid "Yes, really delete Me"
+msgstr ""
 
 msgid "Yesterday"
 msgstr "Dün"
@@ -2185,6 +2198,10 @@ msgstr "y sınırların dışında"
 msgid "z out of bounds"
 msgstr "z sınırların dışında"
 
+msgctxt "media-player"
+msgid "Player"
+msgstr ""
+
 msgctxt "keybinds"
 msgid "A"
 msgstr "A"
@@ -2244,6 +2261,33 @@ msgstr "W"
 msgctxt "keybinds"
 msgid "X"
 msgstr "X"
+
+msgctxt "channel-list"
+msgid "Public"
+msgstr ""
+
+#. Column title of column indicating whether or not a faction is able to be joined in public
+msgctxt "statistics-table"
+msgid "Public"
+msgstr ""
+
+#~ msgid "Player"
+#~ msgstr "Oyuncu"
+
+#~ msgid "Yes, Delete My Account!"
+#~ msgstr "Evet, Hesabımı Sil!"
+
+#~ msgid "Daily Pixel"
+#~ msgstr "Günlük Piksel"
+
+#~ msgid "Pixel"
+#~ msgstr "Piksel"
+
+#~ msgid "Powerlevel of this role. See table below for explenation."
+#~ msgstr "Rolün güç düzeyi. Açıklama için aşağıdaki tabloya bakın."
+
+#~ msgid "Public"
+#~ msgstr "Herkese Açık"
 
 #~ msgid "Change your Mail Adress here:"
 #~ msgstr "E-posta adresinizi buradan değiştirin:"

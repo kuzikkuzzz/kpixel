@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: admin@pixelplanet.fun\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2026-04-19 10:59+0000\n"
+"PO-Revision-Date: 2026-04-26 14:50+0000\n"
 "Last-Translator: hf <hf@noreply.pixelplanet.fun>\n"
 "Language-Team: German <https://translate.gs-os.com/projects/ppfun/client/de/"
 ">\n"
@@ -95,7 +95,7 @@ msgstr "Zeichne Raster (deaktiviere falls du eine 1:1 Vorlage benötigst)"
 msgid "Add Template"
 msgstr "Vorlage hinzufügen"
 
-msgid "Add an Mail Adress here:"
+msgid "Add a new E-Mail Address here:"
 msgstr ""
 
 #. This if for moderation tools, it's not important to translate this
@@ -518,7 +518,7 @@ msgstr "Individuelle Flagge"
 msgid "DM"
 msgstr "DM"
 
-msgid "Daily Pixel"
+msgid "Daily Pixels"
 msgstr "Tägliche Pixel"
 
 msgid "Daily Pixels per Country"
@@ -547,6 +547,9 @@ msgstr "Konto löschen"
 
 msgid "Delete Faction"
 msgstr "Fraktion Löschen"
+
+msgid "Delete My Account"
+msgstr ""
 
 msgid "Delete the faction"
 msgstr "Lösche diese Fraktion"
@@ -903,6 +906,9 @@ msgstr "Bild Hochladen"
 
 msgid "Import templates"
 msgstr "Importiere Vorlagen"
+
+msgid "Incorrect password"
+msgstr ""
 
 msgid "Interval"
 msgstr "Intervall"
@@ -1278,9 +1284,6 @@ msgstr "Fische"
 msgid "Ping"
 msgstr "Erwähnen"
 
-msgid "Pixel"
-msgstr "Pixel"
-
 msgid "Pixel Notify OFF"
 msgstr "Pixelaktivität Aus"
 
@@ -1293,6 +1296,9 @@ msgstr "Pixel beschützen"
 msgid "Pixel protected"
 msgstr "Pixel beschützt"
 
+msgid "Pixels"
+msgstr "Pixel"
+
 msgid "Place color pixels on a large canvas with other players online!"
 msgstr ""
 "Zeichne gemeinsam mit anderen Spielern auf einer großen Leinwand online!"
@@ -1302,9 +1308,6 @@ msgstr "Plazierte Pixel"
 
 msgid "Play a sound when new chat messages arrive"
 msgstr "Spielt ein Geräusch ab, wenn eine neue Chat Nachricht eintrifft"
-
-msgid "Player"
-msgstr "Spieler"
 
 msgid "Players and Pixels per hour"
 msgstr "Spieler und Pixel pro Stunde"
@@ -1331,7 +1334,7 @@ msgstr "Erdapfel Modus"
 msgid "Powerlevel"
 msgstr "Powerlevel"
 
-msgid "Powerlevel of this role. See table below for explenation."
+msgid "Powerlevel of this role. See table below for an explanation."
 msgstr "Powerlevel dieser Rolle. Siehe die Tabelle unten für eine Erklärung."
 
 #, javascript-format
@@ -1374,9 +1377,6 @@ msgstr "Privat"
 
 msgid "Profile"
 msgstr "Profil"
-
-msgid "Public"
-msgstr "Öffentlich"
 
 msgid "Quick Actions"
 msgstr "Schnellzugriff"
@@ -1570,6 +1570,9 @@ msgstr "Sendete eine E-Mail mit Instruktionen um das Passwort zurückzusetzen."
 msgid "Serpentine"
 msgstr "Serpentine"
 
+msgid "Server Error"
+msgstr ""
+
 msgid "Server answered with gibberish :("
 msgstr "Server antwortet mit wirrwarr :("
 
@@ -1723,6 +1726,13 @@ msgstr ""
 "Abklingzeit und 60s gesamter Wartezeit. Es wurde am 11. Mai 2020 gestartet "
 "und war für Monate aktiv bis es am 30. November geschlossen wurde."
 
+msgid ""
+"This email / password combination got hacked and leaked. To protect this "
+"account, the password has been reset. Please use the \"Forgot my password\" "
+"function on the LogIn page to set a new password. In the future, consider "
+"not installing malware, Thank You."
+msgstr ""
+
 msgid "This faction has no invites"
 msgstr "Diese Fraktion hat keine Einladungen"
 
@@ -1739,6 +1749,9 @@ msgstr ""
 
 msgid "This permission is required"
 msgstr "Diese Berechtigung ist erforderlich"
+
+msgid "This user has not password set"
+msgstr ""
 
 msgid "Timeout"
 msgstr "Zeitüberschreitung"
@@ -1957,8 +1970,8 @@ msgstr "DER BENUTZERNAME KANN NUR EINMAL GEWÄHLT WERDEN!"
 msgid "Yes"
 msgstr "Ja"
 
-msgid "Yes, Delete My Account!"
-msgstr "Ja, löche mein Konto!"
+msgid "Yes, really delete Me"
+msgstr ""
 
 msgid "Yesterday"
 msgstr "Gestern"
@@ -2184,6 +2197,10 @@ msgstr "y außerhalb des Spielfelds"
 msgid "z out of bounds"
 msgstr "z außerhalb des Spielfelds"
 
+msgctxt "media-player"
+msgid "Player"
+msgstr ""
+
 msgctxt "keybinds"
 msgid "A"
 msgstr "A"
@@ -2243,6 +2260,37 @@ msgstr "W"
 msgctxt "keybinds"
 msgid "X"
 msgstr "X"
+
+msgctxt "channel-list"
+msgid "Public"
+msgstr "Öffentlich"
+
+#. Column title of column indicating whether or not a faction is able to be joined in public
+msgctxt "statistics-table"
+msgid "Public"
+msgstr "Öffentlich"
+
+#~ msgid "Add an Mail Adress here:"
+#~ msgstr "Füge hier eine Mail Adresse hinzu:"
+
+#~ msgid "Player"
+#~ msgstr "Spieler"
+
+#~ msgid "Yes, Delete My Account!"
+#~ msgstr "Ja, löche mein Konto!"
+
+#~ msgid "Daily Pixel"
+#~ msgstr "Tägliche Pixel"
+
+#~ msgid "Pixel"
+#~ msgstr "Pixel"
+
+#~ msgid "Powerlevel of this role. See table below for explenation."
+#~ msgstr ""
+#~ "Powerlevel dieser Rolle. Siehe die Tabelle unten für eine Erklärung."
+
+#~ msgid "Public"
+#~ msgstr "Öffentlich"
 
 #~ msgid "Change your Mail Adress here:"
 #~ msgstr "Hier können Sie Ihre E-Mail-Adresse ändern:"

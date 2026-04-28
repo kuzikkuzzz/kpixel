@@ -89,7 +89,7 @@ msgstr "Adaugă o Grilă (debifează dacă ai nevoie de template 1:1)"
 msgid "Add Template"
 msgstr "Încarcă Templateul"
 
-msgid "Add an Mail Adress here:"
+msgid "Add a new E-Mail Address here:"
 msgstr ""
 
 #. This if for moderation tools, it's not important to translate this
@@ -507,7 +507,7 @@ msgstr "Steag Personalizat"
 msgid "DM"
 msgstr "DM"
 
-msgid "Daily Pixel"
+msgid "Daily Pixels"
 msgstr ""
 
 msgid "Daily Pixels per Country"
@@ -535,6 +535,9 @@ msgid "Delete Account"
 msgstr "Șterge Contul"
 
 msgid "Delete Faction"
+msgstr ""
+
+msgid "Delete My Account"
 msgstr ""
 
 msgid "Delete the faction"
@@ -884,6 +887,9 @@ msgstr "Încarcă Imagine"
 
 msgid "Import templates"
 msgstr "Iportează șabloane"
+
+msgid "Incorrect password"
+msgstr ""
 
 msgid "Interval"
 msgstr "Interval"
@@ -1252,9 +1258,6 @@ msgstr "Pești"
 msgid "Ping"
 msgstr "Pingează"
 
-msgid "Pixel"
-msgstr ""
-
 msgid "Pixel Notify OFF"
 msgstr "Notificare Pixeli Oprită"
 
@@ -1267,6 +1270,9 @@ msgstr "Protejare de Pixeli"
 msgid "Pixel protected"
 msgstr "Pixel protejat"
 
+msgid "Pixels"
+msgstr "Pixeli"
+
 msgid "Place color pixels on a large canvas with other players online!"
 msgstr "Pune pixeli colorați pe un canvas mare cu alți jucători online!"
 
@@ -1275,9 +1281,6 @@ msgstr "Pixeli Puși în total"
 
 msgid "Play a sound when new chat messages arrive"
 msgstr "Redă un sunet atunci când sunt trimise mesaje noi pe chat"
-
-msgid "Player"
-msgstr "Jucător"
 
 msgid "Players and Pixels per hour"
 msgstr "Jucători și pixeli pe oră"
@@ -1304,7 +1307,7 @@ msgstr "Modul Cartof"
 msgid "Powerlevel"
 msgstr ""
 
-msgid "Powerlevel of this role. See table below for explenation."
+msgid "Powerlevel of this role. See table below for an explanation."
 msgstr ""
 
 #, javascript-format
@@ -1347,9 +1350,6 @@ msgstr "Privat"
 
 msgid "Profile"
 msgstr "Profil"
-
-msgid "Public"
-msgstr ""
 
 msgid "Quick Actions"
 msgstr "Acțiuni rapide"
@@ -1541,6 +1541,9 @@ msgstr "Ți-am trimis un mail cu instrucțiuni ca să îți resetezi parola."
 msgid "Serpentine"
 msgstr "Serpentine"
 
+msgid "Server Error"
+msgstr ""
+
 msgid "Server answered with gibberish :("
 msgstr "Serverul a răspuns într-o limbă necunoscută :("
 
@@ -1694,6 +1697,13 @@ msgstr ""
 "și stacare de 60s. A fost lansat pe 11 Mai și a rămas activ pentru luni până "
 "când a fost oprit pe 30 Noiembrie."
 
+msgid ""
+"This email / password combination got hacked and leaked. To protect this "
+"account, the password has been reset. Please use the \"Forgot my password\" "
+"function on the LogIn page to set a new password. In the future, consider "
+"not installing malware, Thank You."
+msgstr ""
+
 msgid "This faction has no invites"
 msgstr ""
 
@@ -1710,6 +1720,9 @@ msgstr ""
 
 msgid "This permission is required"
 msgstr "Această permisiune este necesară"
+
+msgid "This user has not password set"
+msgstr ""
 
 msgid "Timeout"
 msgstr "Pauză"
@@ -1926,8 +1939,8 @@ msgstr "IȚI POȚI ALEGE NUMELE DE UTILIZATOR O SINGURĂ DATĂ!"
 msgid "Yes"
 msgstr "Da"
 
-msgid "Yes, Delete My Account!"
-msgstr "Da, Șterge-Mi Contul!"
+msgid "Yes, really delete Me"
+msgstr ""
 
 msgid "Yesterday"
 msgstr "Ieri"
@@ -2146,6 +2159,10 @@ msgstr "y în afara limitelor"
 msgid "z out of bounds"
 msgstr "z în afara limitelor"
 
+msgctxt "media-player"
+msgid "Player"
+msgstr ""
+
 msgctxt "keybinds"
 msgid "A"
 msgstr "A"
@@ -2206,6 +2223,21 @@ msgctxt "keybinds"
 msgid "X"
 msgstr "X"
 
+msgctxt "channel-list"
+msgid "Public"
+msgstr ""
+
+#. Column title of column indicating whether or not a faction is able to be joined in public
+msgctxt "statistics-table"
+msgid "Public"
+msgstr ""
+
+#~ msgid "Player"
+#~ msgstr "Jucător"
+
+#~ msgid "Yes, Delete My Account!"
+#~ msgstr "Da, Șterge-Mi Contul!"
+
 #~ msgid "Change your Mail Adress here:"
 #~ msgstr "Schimbă-ți adresa de Mail aici:"
 
@@ -2224,9 +2256,6 @@ msgstr "X"
 #~ "private vor fi șterse. Tot vei putea sa trimiți mesaje private celorlalți "
 #~ "utilizatori, dar ceilalți utilizatori nu vor putea sa îti trimita ție "
 #~ "mesaje private."
-
-#~ msgid "Pixels"
-#~ msgstr "Pixeli"
 
 #~ msgid "Pixels Today"
 #~ msgstr "Pixeli Astăzi"

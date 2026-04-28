@@ -104,7 +104,8 @@ msgstr ""
 msgid "Can not elevate the powerlevel of a role to yours"
 msgstr ""
 
-msgid "Can not have more than 20 faction roles"
+#, javascript-format
+msgid "Can not have more than ${ MAX_ROLES_PER_FACTION } faction roles"
 msgstr ""
 
 msgid "Can not have more than 20 invites per faction"
@@ -283,8 +284,8 @@ msgstr ""
 "Se non hai richiesto questa mail, per favore ignorala (l'IP che ha richiesto "
 "questa mail era ${ ip })"
 
-msgid "Incorrect password!"
-msgstr "Password incorretta"
+msgid "Incorrect password"
+msgstr ""
 
 msgid "Invalid type of media"
 msgstr ""
@@ -599,6 +600,9 @@ msgstr ""
 msgid "This password-reset link isn't valid anymore :("
 msgstr "Questo password reset link non è più valido"
 
+msgid "This user has not password set"
+msgstr ""
+
 msgid "This user is private"
 msgstr ""
 
@@ -875,6 +879,9 @@ msgid ""
 msgstr ""
 "Benvenuo alla nostra piccola community di pixelplacers, per usare il tuo "
 "account, devi verificare il tuo account mail. Lo puoi fare qui:"
+
+#~ msgid "Incorrect password!"
+#~ msgstr "Password incorretta"
 
 #~ msgid "You are banned"
 #~ msgstr "Sei bannato"

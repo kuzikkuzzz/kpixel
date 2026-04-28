@@ -91,7 +91,7 @@ msgstr "Dodaj rešetku (poništite ako vam je potreban predložak 1:1)"
 msgid "Add Template"
 msgstr "Dodaj šablon"
 
-msgid "Add an Mail Adress here:"
+msgid "Add a new E-Mail Address here:"
 msgstr ""
 
 #. This if for moderation tools, it's not important to translate this
@@ -511,8 +511,8 @@ msgstr "Prilagođena zastava"
 msgid "DM"
 msgstr "DM"
 
-msgid "Daily Pixel"
-msgstr "Dnevni pixeli"
+msgid "Daily Pixels"
+msgstr ""
 
 msgid "Daily Pixels per Country"
 msgstr "Dnevni pikseli po zemlji"
@@ -540,6 +540,9 @@ msgstr "Izbriši račun"
 
 msgid "Delete Faction"
 msgstr "Izbriši fakciju"
+
+msgid "Delete My Account"
+msgstr ""
 
 msgid "Delete the faction"
 msgstr "Izbriši ovu fakciju"
@@ -890,6 +893,9 @@ msgstr "Prijenos slike"
 
 msgid "Import templates"
 msgstr "Uvoz šablona"
+
+msgid "Incorrect password"
+msgstr ""
 
 msgid "Interval"
 msgstr "Intervall"
@@ -1257,9 +1263,6 @@ msgstr "Ribe"
 msgid "Ping"
 msgstr "Ping"
 
-msgid "Pixel"
-msgstr "Pixel"
-
 msgid "Pixel Notify OFF"
 msgstr "Notifikacija za pixele OFF"
 
@@ -1272,6 +1275,9 @@ msgstr "Zaštita piksela"
 msgid "Pixel protected"
 msgstr "Pixel zaštićen"
 
+msgid "Pixels"
+msgstr ""
+
 msgid "Place color pixels on a large canvas with other players online!"
 msgstr "Postavite piksele u boji na veliko platno s drugim igračima na mreži!"
 
@@ -1280,9 +1286,6 @@ msgstr "Postavljeni pixeli"
 
 msgid "Play a sound when new chat messages arrive"
 msgstr "Pusti zvuk kada stignu nove chat poruke"
-
-msgid "Player"
-msgstr "Igrač"
 
 msgid "Players and Pixels per hour"
 msgstr "Igrači i pikseli po satu"
@@ -1309,8 +1312,8 @@ msgstr "Način krumpira"
 msgid "Powerlevel"
 msgstr "powerlevel"
 
-msgid "Powerlevel of this role. See table below for explenation."
-msgstr "Powerlevel ove uloge. Pogledaj tabelu za objašnjenje."
+msgid "Powerlevel of this role. See table below for an explanation."
+msgstr ""
 
 #, javascript-format
 msgid ""
@@ -1354,9 +1357,6 @@ msgstr "Privatno"
 
 msgid "Profile"
 msgstr "Profil"
-
-msgid "Public"
-msgstr "Javno"
 
 msgid "Quick Actions"
 msgstr "Brze radnje"
@@ -1548,6 +1548,9 @@ msgstr "Poslao sam vam e-poštu s uputama za ponovno postavljanje lozinke."
 msgid "Serpentine"
 msgstr "Serpentina"
 
+msgid "Server Error"
+msgstr ""
+
 msgid "Server answered with gibberish :("
 msgstr "Server je odgovorio besmislicama :("
 
@@ -1701,6 +1704,13 @@ msgstr ""
 "slaganjem od 60 s. Pokrenut je 11. svibnja i ostao je aktivan mjesecima dok "
 "se nije ugasio 30. studenog."
 
+msgid ""
+"This email / password combination got hacked and leaked. To protect this "
+"account, the password has been reset. Please use the \"Forgot my password\" "
+"function on the LogIn page to set a new password. In the future, consider "
+"not installing malware, Thank You."
+msgstr ""
+
 msgid "This faction has no invites"
 msgstr "Ova fakcija nema pozivnica"
 
@@ -1716,6 +1726,9 @@ msgstr "Ova prijava može funkcionirati samo ako je vaš račun verificiran."
 
 msgid "This permission is required"
 msgstr "Ovo dopuštenje je potrebno"
+
+msgid "This user has not password set"
+msgstr ""
 
 msgid "Timeout"
 msgstr "Pauza"
@@ -1929,8 +1942,8 @@ msgstr "KORISNIČKO IME MOŽETE ODABRATI SAMO JEDNOM!"
 msgid "Yes"
 msgstr "Da"
 
-msgid "Yes, Delete My Account!"
-msgstr "Da, izbriši moj račun!"
+msgid "Yes, really delete Me"
+msgstr ""
 
 msgid "Yesterday"
 msgstr "Jučer"
@@ -2153,6 +2166,10 @@ msgstr "y izvan granica"
 msgid "z out of bounds"
 msgstr "z izvan granica"
 
+msgctxt "media-player"
+msgid "Player"
+msgstr ""
+
 msgctxt "keybinds"
 msgid "A"
 msgstr "A"
@@ -2212,6 +2229,33 @@ msgstr "W"
 msgctxt "keybinds"
 msgid "X"
 msgstr "X"
+
+msgctxt "channel-list"
+msgid "Public"
+msgstr ""
+
+#. Column title of column indicating whether or not a faction is able to be joined in public
+msgctxt "statistics-table"
+msgid "Public"
+msgstr ""
+
+#~ msgid "Player"
+#~ msgstr "Igrač"
+
+#~ msgid "Yes, Delete My Account!"
+#~ msgstr "Da, izbriši moj račun!"
+
+#~ msgid "Daily Pixel"
+#~ msgstr "Dnevni pixeli"
+
+#~ msgid "Pixel"
+#~ msgstr "Pixel"
+
+#~ msgid "Powerlevel of this role. See table below for explenation."
+#~ msgstr "Powerlevel ove uloge. Pogledaj tabelu za objašnjenje."
+
+#~ msgid "Public"
+#~ msgstr "Javno"
 
 #~ msgid "Change your Mail Adress here:"
 #~ msgstr "Promijenite email adresu ovdje:"

@@ -88,7 +88,7 @@ msgstr "Aldonu Kradon (ne elektu se necesus 1:1 proporcion)"
 msgid "Add Template"
 msgstr "Elŝultu Modelon"
 
-msgid "Add an Mail Adress here:"
+msgid "Add a new E-Mail Address here:"
 msgstr ""
 
 #. This if for moderation tools, it's not important to translate this
@@ -514,7 +514,7 @@ msgstr ""
 msgid "DM"
 msgstr "Mesaĝi Rekte"
 
-msgid "Daily Pixel"
+msgid "Daily Pixels"
 msgstr ""
 
 #, fuzzy
@@ -545,6 +545,9 @@ msgid "Delete Account"
 msgstr "Nuligu Konton"
 
 msgid "Delete Faction"
+msgstr ""
+
+msgid "Delete My Account"
 msgstr ""
 
 msgid "Delete the faction"
@@ -895,6 +898,9 @@ msgstr "Je Bild' Alŝutu"
 
 msgid "Import templates"
 msgstr "Importi ŝablonojn"
+
+msgid "Incorrect password"
+msgstr ""
 
 msgid "Interval"
 msgstr "Intervalo"
@@ -1267,9 +1273,6 @@ msgstr "Fiŝoj"
 msgid "Ping"
 msgstr "Eĥosondu"
 
-msgid "Pixel"
-msgstr ""
-
 msgid "Pixel Notify OFF"
 msgstr "Piksela Sciigo MALŜALTITA"
 
@@ -1282,6 +1285,9 @@ msgstr "Piksela Protektaĵ'"
 msgid "Pixel protected"
 msgstr "Piksel' protektita"
 
+msgid "Pixels"
+msgstr ""
+
 msgid "Place color pixels on a large canvas with other players online!"
 msgstr ""
 "Metu kolorajn pikselojn en grandan kanvason kun alian ludantojn enrete!"
@@ -1291,9 +1297,6 @@ msgstr "Metitaj Pikseloj"
 
 msgid "Play a sound when new chat messages arrive"
 msgstr "Meti sonon kiam novan babilan mensaĝon alvenas"
-
-msgid "Player"
-msgstr "Ludanto"
 
 #, fuzzy
 msgid "Players and Pixels per hour"
@@ -1321,7 +1324,7 @@ msgstr "Malmultekosta Computilaĉo Modo"
 msgid "Powerlevel"
 msgstr ""
 
-msgid "Powerlevel of this role. See table below for explenation."
+msgid "Powerlevel of this role. See table below for an explanation."
 msgstr ""
 
 #, javascript-format
@@ -1363,9 +1366,6 @@ msgstr "Privata"
 
 msgid "Profile"
 msgstr "Profil'"
-
-msgid "Public"
-msgstr ""
 
 msgid "Quick Actions"
 msgstr "Rapidaj Agoj"
@@ -1559,6 +1559,9 @@ msgstr ""
 msgid "Serpentine"
 msgstr "Serpentumo"
 
+msgid "Server Error"
+msgstr ""
+
 msgid "Server answered with gibberish :("
 msgstr "La servilo respondis sensencaĵe :("
 
@@ -1715,6 +1718,13 @@ msgstr ""
 "malvarmiĝon kaj 60s bufron. Ĝi estis lanĉita je 11-a de Maio kaj daŭris "
 "aktivece je monatoj ĝis ĝi estis mallanĉita je 11-a de Novembro."
 
+msgid ""
+"This email / password combination got hacked and leaked. To protect this "
+"account, the password has been reset. Please use the \"Forgot my password\" "
+"function on the LogIn page to set a new password. In the future, consider "
+"not installing malware, Thank You."
+msgstr ""
+
 msgid "This faction has no invites"
 msgstr ""
 
@@ -1730,6 +1740,9 @@ msgstr ""
 
 msgid "This permission is required"
 msgstr "Ĉi tiu permeso estas necesa"
+
+msgid "This user has not password set"
+msgstr ""
 
 msgid "Timeout"
 msgstr "Paŭzo"
@@ -1950,8 +1963,8 @@ msgstr ""
 msgid "Yes"
 msgstr ""
 
-msgid "Yes, Delete My Account!"
-msgstr "Jes, Nuligu Mian Konton!"
+msgid "Yes, really delete Me"
+msgstr ""
 
 msgid "Yesterday"
 msgstr ""
@@ -2158,6 +2171,10 @@ msgstr "y forbara"
 msgid "z out of bounds"
 msgstr "z forbara"
 
+msgctxt "media-player"
+msgid "Player"
+msgstr ""
+
 msgctxt "keybinds"
 msgid "A"
 msgstr "A"
@@ -2217,6 +2234,21 @@ msgstr "W"
 msgctxt "keybinds"
 msgid "X"
 msgstr "X"
+
+msgctxt "channel-list"
+msgid "Public"
+msgstr ""
+
+#. Column title of column indicating whether or not a faction is able to be joined in public
+msgctxt "statistics-table"
+msgid "Public"
+msgstr ""
+
+#~ msgid "Player"
+#~ msgstr "Ludanto"
+
+#~ msgid "Yes, Delete My Account!"
+#~ msgstr "Jes, Nuligu Mian Konton!"
 
 #~ msgid "Change your Mail Adress here:"
 #~ msgstr "Ŝanĝu vian retpoŝtadreson ĉi tie:"

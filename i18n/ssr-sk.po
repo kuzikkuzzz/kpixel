@@ -103,7 +103,8 @@ msgstr ""
 msgid "Can not elevate the powerlevel of a role to yours"
 msgstr ""
 
-msgid "Can not have more than 20 faction roles"
+#, javascript-format
+msgid "Can not have more than ${ MAX_ROLES_PER_FACTION } faction roles"
 msgstr ""
 
 msgid "Can not have more than 20 invites per faction"
@@ -283,8 +284,8 @@ msgstr ""
 "Pokial si nežiadal tento mail, tak ho prosím ignoruj (ip ktorá žiadala tento "
 "mail bola ${ ip })."
 
-msgid "Incorrect password!"
-msgstr "Nesprávne heslo!"
+msgid "Incorrect password"
+msgstr ""
 
 msgid "Invalid type of media"
 msgstr ""
@@ -597,6 +598,9 @@ msgstr ""
 msgid "This password-reset link isn't valid anymore :("
 msgstr "Tento link na resetovanie hesla už nie je platný :("
 
+msgid "This user has not password set"
+msgstr ""
+
 msgid "This user is private"
 msgstr ""
 
@@ -870,6 +874,9 @@ msgid ""
 msgstr ""
 "vitaj na našej malej komunite pre pokladatelov pixelov, nato aby si mohol "
 "použiť svoj účet, musíš si overiť svoj mail. To môžeš urobiť tu: "
+
+#~ msgid "Incorrect password!"
+#~ msgstr "Nesprávne heslo!"
 
 #~ msgid "You are banned"
 #~ msgstr "Si zabanovaný"

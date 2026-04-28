@@ -85,7 +85,7 @@ msgstr "Хызæджы Бафтау (тырысæйы ис, сымахæн ку�
 msgid "Add Template"
 msgstr "Шаблоны Равæр"
 
-msgid "Add an Mail Adress here:"
+msgid "Add a new E-Mail Address here:"
 msgstr ""
 
 #. This if for moderation tools, it's not important to translate this
@@ -507,7 +507,7 @@ msgstr ""
 msgid "DM"
 msgstr "Гоймагон Фыстæджытæ"
 
-msgid "Daily Pixel"
+msgid "Daily Pixels"
 msgstr ""
 
 #, fuzzy
@@ -538,6 +538,9 @@ msgid "Delete Account"
 msgstr "Аккаунты Адард кæн"
 
 msgid "Delete Faction"
+msgstr ""
+
+msgid "Delete My Account"
 msgstr ""
 
 msgid "Delete the faction"
@@ -876,6 +879,9 @@ msgid "Image Upload"
 msgstr "Сурæты Байдзаг"
 
 msgid "Import templates"
+msgstr ""
+
+msgid "Incorrect password"
 msgstr ""
 
 msgid "Interval"
@@ -1249,9 +1255,6 @@ msgstr ""
 msgid "Ping"
 msgstr "Пинг"
 
-msgid "Pixel"
-msgstr ""
-
 msgid "Pixel Notify OFF"
 msgstr ""
 
@@ -1265,6 +1268,9 @@ msgstr "Пикселы Хъахъхъæд"
 msgid "Pixel protected"
 msgstr "Пиксел хъахъхъæн у!"
 
+msgid "Pixels"
+msgstr ""
+
 msgid "Place color pixels on a large canvas with other players online!"
 msgstr "Хуызджын пикселтæ бынæт стыр четæны иумæ иннæ хъазæгимæ онлайн!"
 
@@ -1273,9 +1279,6 @@ msgstr "Равæрды Пикселтæ"
 
 msgid "Play a sound when new chat messages arrive"
 msgstr "Сноджы зæл фæзынд рæстæджы ног чаты фыстæджытæ"
-
-msgid "Player"
-msgstr ""
 
 #, fuzzy
 msgid "Players and Pixels per hour"
@@ -1301,7 +1304,7 @@ msgstr "Картофы Уаг"
 msgid "Powerlevel"
 msgstr ""
 
-msgid "Powerlevel of this role. See table below for explenation."
+msgid "Powerlevel of this role. See table below for an explanation."
 msgstr ""
 
 #, javascript-format
@@ -1344,9 +1347,6 @@ msgstr ""
 
 msgid "Profile"
 msgstr "Профил"
-
-msgid "Public"
-msgstr ""
 
 msgid "Quick Actions"
 msgstr ""
@@ -1542,6 +1542,9 @@ msgstr "Арвит фыстæг уын амындимæ паролы раппа�
 msgid "Serpentine"
 msgstr ""
 
+msgid "Server Error"
+msgstr ""
+
 msgid "Server answered with gibberish :("
 msgstr "Сервер хатиаг æвзаг  дзуапп ратт ма"
 
@@ -1690,6 +1693,13 @@ msgstr ""
 "суммированийы 60 сикъунд. 11 майы фехс ма йæ æмæ зайы разæнгард цыды цалдæр "
 "мæй,цалынмæ сæхгæн йæ ай."
 
+msgid ""
+"This email / password combination got hacked and leaked. To protect this "
+"account, the password has been reset. Please use the \"Forgot my password\" "
+"function on the LogIn page to set a new password. In the future, consider "
+"not installing malware, Thank You."
+msgstr ""
+
 msgid "This faction has no invites"
 msgstr ""
 
@@ -1702,6 +1712,9 @@ msgid "This login may only work if your account is verified."
 msgstr ""
 
 msgid "This permission is required"
+msgstr ""
+
+msgid "This user has not password set"
 msgstr ""
 
 msgid "Timeout"
@@ -1916,8 +1929,8 @@ msgstr ""
 msgid "Yes"
 msgstr ""
 
-msgid "Yes, Delete My Account!"
-msgstr "О, Мæ Аккаунт Адард кæн!"
+msgid "Yes, really delete Me"
+msgstr ""
 
 msgid "Yesterday"
 msgstr ""
@@ -2128,6 +2141,10 @@ msgstr "y арæн æддейы"
 msgid "z out of bounds"
 msgstr "z арæн æддейы"
 
+msgctxt "media-player"
+msgid "Player"
+msgstr ""
+
 msgctxt "keybinds"
 msgid "A"
 msgstr "A"
@@ -2187,6 +2204,18 @@ msgstr "W"
 msgctxt "keybinds"
 msgid "X"
 msgstr "X"
+
+msgctxt "channel-list"
+msgid "Public"
+msgstr ""
+
+#. Column title of column indicating whether or not a faction is able to be joined in public
+msgctxt "statistics-table"
+msgid "Public"
+msgstr ""
+
+#~ msgid "Yes, Delete My Account!"
+#~ msgstr "О, Мæ Аккаунт Адард кæн!"
 
 #~ msgid "Close Menu"
 #~ msgstr "Меню Сæхгæнын"

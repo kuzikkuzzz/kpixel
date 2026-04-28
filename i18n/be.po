@@ -89,7 +89,7 @@ msgstr "Дадаць сетку (зняміце галачку, калі вам 
 msgid "Add Template"
 msgstr "Спампаваць Шаблон"
 
-msgid "Add an Mail Adress here:"
+msgid "Add a new E-Mail Address here:"
 msgstr ""
 
 #. This if for moderation tools, it's not important to translate this
@@ -509,7 +509,7 @@ msgstr ""
 msgid "DM"
 msgstr "АП"
 
-msgid "Daily Pixel"
+msgid "Daily Pixels"
 msgstr ""
 
 #, fuzzy
@@ -540,6 +540,9 @@ msgid "Delete Account"
 msgstr "Выдаліць Акаўнт"
 
 msgid "Delete Faction"
+msgstr ""
+
+msgid "Delete My Account"
 msgstr ""
 
 msgid "Delete the faction"
@@ -885,6 +888,9 @@ msgid "Image Upload"
 msgstr "Загрузіць Відарыс"
 
 msgid "Import templates"
+msgstr ""
+
+msgid "Incorrect password"
 msgstr ""
 
 msgid "Interval"
@@ -1252,9 +1258,6 @@ msgstr ""
 msgid "Ping"
 msgstr "Пінг"
 
-msgid "Pixel"
-msgstr ""
-
 msgid "Pixel Notify OFF"
 msgstr "Піксельныя Апавяшчэнні Выкл"
 
@@ -1268,6 +1271,9 @@ msgstr "Абарона Пікселяў"
 msgid "Pixel protected"
 msgstr "Піксель абаронены!"
 
+msgid "Pixels"
+msgstr ""
+
 msgid "Place color pixels on a large canvas with other players online!"
 msgstr "Малюйце пікселямі разам з іншымі людзьмі анлайн!"
 
@@ -1276,9 +1282,6 @@ msgstr "Пікселяў Пастаўлена"
 
 msgid "Play a sound when new chat messages arrive"
 msgstr "Гукавое апавяшчэнне, калі ў чаце з'яўляецца новае паведамленне"
-
-msgid "Player"
-msgstr ""
 
 msgid "Players and Pixels per hour"
 msgstr "Гульцы і Пікселі за гадзіну"
@@ -1303,7 +1306,7 @@ msgstr "Рэжым Бульбы"
 msgid "Powerlevel"
 msgstr ""
 
-msgid "Powerlevel of this role. See table below for explenation."
+msgid "Powerlevel of this role. See table below for an explanation."
 msgstr ""
 
 #, javascript-format
@@ -1347,9 +1350,6 @@ msgstr "Прыватны Рэжым"
 
 msgid "Profile"
 msgstr "Профіль"
-
-msgid "Public"
-msgstr ""
 
 msgid "Quick Actions"
 msgstr ""
@@ -1545,6 +1545,9 @@ msgstr "Адправіць пісьмо з інструкцыяй па скід�
 msgid "Serpentine"
 msgstr "Серпантын"
 
+msgid "Server Error"
+msgstr ""
+
 msgid "Server answered with gibberish :("
 msgstr "Сервер адказаў абы-чым :("
 
@@ -1695,6 +1698,13 @@ msgstr ""
 "мая 2020 года і заставалася актыўным на працягу месяцаў, пакуль не было "
 "закрыта 30-га лістапада таго ж року."
 
+msgid ""
+"This email / password combination got hacked and leaked. To protect this "
+"account, the password has been reset. Please use the \"Forgot my password\" "
+"function on the LogIn page to set a new password. In the future, consider "
+"not installing malware, Thank You."
+msgstr ""
+
 msgid "This faction has no invites"
 msgstr ""
 
@@ -1707,6 +1717,9 @@ msgid "This login may only work if your account is verified."
 msgstr ""
 
 msgid "This permission is required"
+msgstr ""
+
+msgid "This user has not password set"
 msgstr ""
 
 msgid "Timeout"
@@ -1923,8 +1936,8 @@ msgstr ""
 msgid "Yes"
 msgstr "Так"
 
-msgid "Yes, Delete My Account!"
-msgstr "Так, Выдаліць Мой Акаўнт!"
+msgid "Yes, really delete Me"
+msgstr ""
 
 msgid "Yesterday"
 msgstr "Учора"
@@ -2135,6 +2148,10 @@ msgstr "y каардыната па-за межамі"
 msgid "z out of bounds"
 msgstr "z каардыната па-за межамі"
 
+msgctxt "media-player"
+msgid "Player"
+msgstr ""
+
 msgctxt "keybinds"
 msgid "A"
 msgstr "A"
@@ -2195,6 +2212,18 @@ msgstr "W"
 msgctxt "keybinds"
 msgid "X"
 msgstr "X"
+
+msgctxt "channel-list"
+msgid "Public"
+msgstr ""
+
+#. Column title of column indicating whether or not a faction is able to be joined in public
+msgctxt "statistics-table"
+msgid "Public"
+msgstr ""
+
+#~ msgid "Yes, Delete My Account!"
+#~ msgstr "Так, Выдаліць Мой Акаўнт!"
 
 #~ msgid "Change your Mail Adress here:"
 #~ msgstr "Змяніце свой адрас электроннай пошты тут:"

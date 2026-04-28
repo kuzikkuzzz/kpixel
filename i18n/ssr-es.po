@@ -105,8 +105,9 @@ msgstr "No puedes elevar un nivel de poder de un rol superior al tuyo"
 msgid "Can not elevate the powerlevel of a role to yours"
 msgstr "No puedes elevar un nivel de poder de un rol al tuyo"
 
-msgid "Can not have more than 20 faction roles"
-msgstr "No puedes tener mas de 20 roles de facción"
+#, javascript-format
+msgid "Can not have more than ${ MAX_ROLES_PER_FACTION } faction roles"
+msgstr ""
 
 msgid "Can not have more than 20 invites per faction"
 msgstr ""
@@ -288,8 +289,8 @@ msgstr ""
 "Si usted no solicitó este correo, por favor ignórelo (la ip que solicitó "
 "este correo fue ${ ip })."
 
-msgid "Incorrect password!"
-msgstr "¡Contraseña incorrecta!"
+msgid "Incorrect password"
+msgstr ""
 
 msgid "Invalid type of media"
 msgstr ""
@@ -609,6 +610,9 @@ msgstr ""
 msgid "This password-reset link isn't valid anymore :("
 msgstr "Este enlace de reinicio de contraseña ya no es válido :("
 
+msgid "This user has not password set"
+msgstr ""
+
 msgid "This user is private"
 msgstr ""
 
@@ -886,6 +890,12 @@ msgid ""
 msgstr ""
 "bienvenido a nuestra pequeña comunidad de colocadores de píxeles, para "
 "utilizar tu cuenta necesitas verificar tu correo. Puedes hacerlo acá: "
+
+#~ msgid "Incorrect password!"
+#~ msgstr "¡Contraseña incorrecta!"
+
+#~ msgid "Can not have more than 20 faction roles"
+#~ msgstr "No puedes tener mas de 20 roles de facción"
 
 #~ msgid "Server error when deleting user."
 #~ msgstr "Error de servidor al eliminar usuario."

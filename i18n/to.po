@@ -88,7 +88,7 @@ msgstr "Tanaki atu ʻa e grid (uncheck kapau ʻoku ke fie maʻu ha template 1:1)
 msgid "Add Template"
 msgstr "Download Template"
 
-msgid "Add an Mail Adress here:"
+msgid "Add a new E-Mail Address here:"
 msgstr ""
 
 #. This if for moderation tools, it's not important to translate this
@@ -517,7 +517,7 @@ msgstr ""
 msgid "DM"
 msgstr "DM"
 
-msgid "Daily Pixel"
+msgid "Daily Pixels"
 msgstr ""
 
 #, fuzzy
@@ -548,6 +548,9 @@ msgid "Delete Account"
 msgstr "Tāmateʻi e ʻAkauní"
 
 msgid "Delete Faction"
+msgstr ""
+
+msgid "Delete My Account"
 msgstr ""
 
 msgid "Delete the faction"
@@ -889,6 +892,9 @@ msgid "Image Upload"
 msgstr "Upload e ʻĪmisí"
 
 msgid "Import templates"
+msgstr ""
+
+msgid "Incorrect password"
 msgstr ""
 
 msgid "Interval"
@@ -1259,9 +1265,6 @@ msgstr ""
 msgid "Ping"
 msgstr "Ping"
 
-msgid "Pixel"
-msgstr ""
-
 msgid "Pixel Notify OFF"
 msgstr "Pixel Fakaha mavahe mei he"
 
@@ -1275,6 +1278,9 @@ msgstr "Pixel maluʻi"
 msgid "Pixel protected"
 msgstr "Pixel maluʻi!"
 
+msgid "Pixels"
+msgstr ""
+
 msgid "Place color pixels on a large canvas with other players online!"
 msgstr ""
 "Tuku ʻa e lanu ʻo e lanu ʻi ha fakatataa lahi mo ha kau vaʻinga kehe ʻi he "
@@ -1285,9 +1291,6 @@ msgstr "Fokotuʻu ʻa e pixel"
 
 msgid "Play a sound when new chat messages arrive"
 msgstr "Ta ha ongo ʻi he taimi ʻoku aʻu mai ai ha ngaahi popoaki foʻou"
-
-msgid "Player"
-msgstr ""
 
 msgid "Players and Pixels per hour"
 msgstr "Kau vaʻinga mo e pixel ʻi he houa"
@@ -1312,7 +1315,7 @@ msgstr "Founga pateta"
 msgid "Powerlevel"
 msgstr ""
 
-msgid "Powerlevel of this role. See table below for explenation."
+msgid "Powerlevel of this role. See table below for an explanation."
 msgstr ""
 
 #, javascript-format
@@ -1355,9 +1358,6 @@ msgstr "Fakafoʻituitui"
 
 msgid "Profile"
 msgstr "Fakamatala Fakafoʻituituí"
-
-msgid "Public"
-msgstr ""
 
 msgid "Quick Actions"
 msgstr ""
@@ -1554,6 +1554,9 @@ msgstr ""
 msgid "Serpentine"
 msgstr "Serpentine"
 
+msgid "Server Error"
+msgstr ""
+
 msgid "Server answered with gibberish :("
 msgstr "Tali ʻa e server ʻaki e gibberish :("
 
@@ -1707,6 +1710,13 @@ msgstr ""
 "ʻaho 11 ʻo Mee pea kei malohi pe ʻi ha ngaahi mahina kae ʻoua kuo tapuni ʻi "
 "he ʻaho 30 ʻo Novema."
 
+msgid ""
+"This email / password combination got hacked and leaked. To protect this "
+"account, the password has been reset. Please use the \"Forgot my password\" "
+"function on the LogIn page to set a new password. In the future, consider "
+"not installing malware, Thank You."
+msgstr ""
+
 msgid "This faction has no invites"
 msgstr ""
 
@@ -1719,6 +1729,9 @@ msgid "This login may only work if your account is verified."
 msgstr ""
 
 msgid "This permission is required"
+msgstr ""
+
+msgid "This user has not password set"
 msgstr ""
 
 msgid "Timeout"
@@ -1936,8 +1949,8 @@ msgstr ""
 msgid "Yes"
 msgstr "ʻIo"
 
-msgid "Yes, Delete My Account!"
-msgstr "ʻIo, tamateʻi ʻeku ʻakauni!"
+msgid "Yes, really delete Me"
+msgstr ""
 
 msgid "Yesterday"
 msgstr "ʻAneafi"
@@ -2152,6 +2165,10 @@ msgstr "y mei he ngaahi ngataʻanga"
 msgid "z out of bounds"
 msgstr "z mei he ngaahi ngataʻanga"
 
+msgctxt "media-player"
+msgid "Player"
+msgstr ""
+
 msgctxt "keybinds"
 msgid "A"
 msgstr "A"
@@ -2212,6 +2229,18 @@ msgstr "W"
 msgctxt "keybinds"
 msgid "X"
 msgstr "X"
+
+msgctxt "channel-list"
+msgid "Public"
+msgstr ""
+
+#. Column title of column indicating whether or not a faction is able to be joined in public
+msgctxt "statistics-table"
+msgid "Public"
+msgstr ""
+
+#~ msgid "Yes, Delete My Account!"
+#~ msgstr "ʻIo, tamateʻi ʻeku ʻakauni!"
 
 #~ msgid "You must enter a duration"
 #~ msgstr "Kuo pau ke ke fakahū ha taimi"

@@ -104,7 +104,8 @@ msgstr ""
 msgid "Can not elevate the powerlevel of a role to yours"
 msgstr ""
 
-msgid "Can not have more than 20 faction roles"
+#, javascript-format
+msgid "Can not have more than ${ MAX_ROLES_PER_FACTION } faction roles"
 msgstr ""
 
 msgid "Can not have more than 20 invites per faction"
@@ -283,8 +284,8 @@ msgstr ""
 "Бұл сұрауды жасамаған болсаңыз, осы хатты елемей-ақ қойыңыз (оны сұраған IP: "
 "${ ip })."
 
-msgid "Incorrect password!"
-msgstr "Құпиясөз дұрыс емес!"
+msgid "Incorrect password"
+msgstr ""
 
 msgid "Invalid type of media"
 msgstr ""
@@ -600,6 +601,9 @@ msgstr ""
 msgid "This password-reset link isn't valid anymore :("
 msgstr "Бұл құпиясөз арылту сілтемесі енді жарамсыз :("
 
+msgid "This user has not password set"
+msgstr ""
+
 msgid "This user is private"
 msgstr ""
 
@@ -876,6 +880,9 @@ msgid ""
 msgstr ""
 "біздің пиксел салушылар шағын қоғамдастығымызға қош келдіңіз, тіркелгіңізді "
 "қолдану үшін эл. пошта растауыңыз керек. Бұны мына жерде істей аласыз: "
+
+#~ msgid "Incorrect password!"
+#~ msgstr "Құпиясөз дұрыс емес!"
 
 #~ msgid "You are banned"
 #~ msgstr "Сіз бұғатталғансыз"

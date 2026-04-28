@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: admin@pixelplanet.fun\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2026-02-23 10:50+0000\n"
-"Last-Translator: ⁡⁢󠀥⁤ <info@noreply.pixelplanet.fun>\n"
+"PO-Revision-Date: 2026-04-26 14:50+0000\n"
+"Last-Translator: hjik <goi89ma@noreply.pixelplanet.fun>\n"
 "Language-Team: Russian <https://translate.gs-os.com/projects/ppfun/server/ru/"
 ">\n"
 "Language: ru\n"
@@ -65,59 +65,61 @@ msgid "Avatar can only be an image"
 msgstr "Аватаром может быть только изображение"
 
 msgid "Avatar not given or not an image"
-msgstr ""
+msgstr "Аватар не указан или не является изображением"
 
 msgid "Black and White canvas"
 msgstr "Чёрно-белое полотно"
 
 msgid "Can not change a role above your own"
-msgstr ""
+msgstr "Нельзя изменить роль, которая выше вашей"
 
 msgid "Can not change a role that is equal to your own"
-msgstr ""
+msgstr "Нельзя изменить роль, равную вашей"
 
 msgid "Can not change the default setting of this role"
-msgstr ""
+msgstr "Нельзя изменить настройки по умолчанию для этой роли"
 
 msgid "Can not change the powerlevel of a role equal or above you"
 msgstr ""
+"У роли нельзя изменить уровень полномочий, равный или превышающий вашему"
 
 msgid "Can not change the powerlevel of the Sovereign"
-msgstr ""
+msgstr "Нельзя изменить уровень полномочий роли лидера"
 
 msgid "Can not chat while being banned"
 msgstr "Нельзя писать в чат находясь в бане"
 
 msgid "Can not create a role on the same level as yours"
-msgstr ""
+msgstr "Нельзя создать роль того же уровня, что и ваша"
 
 msgid "Can not create a role with a powerlevel beyond yours"
-msgstr ""
+msgstr "Нельзя создать роль с уровнем полномочий выше вашего"
 
 msgid "Can not delete a role on the same level as yours"
-msgstr ""
+msgstr "Нельзя удалить роль того же уровня, что и ваша"
 
 msgid "Can not delete this role"
-msgstr ""
+msgstr "Нельзя удалить эту роль"
 
 msgid "Can not elevate the powerlevel of a role beyond yours"
-msgstr ""
+msgstr "Нельзя повысить уровень роли выше вашего"
 
 msgid "Can not elevate the powerlevel of a role to yours"
-msgstr ""
+msgstr "Нельзя повысить уровень полномочий роли до вашего"
 
-msgid "Can not have more than 20 faction roles"
-msgstr ""
+#, javascript-format
+msgid "Can not have more than ${ MAX_ROLES_PER_FACTION } faction roles"
+msgstr "В фракции может быть не более ${ MAX_ROLES_PER_FACTION } ролей"
 
 msgid "Can not have more than 20 invites per faction"
-msgstr ""
+msgstr "Нельзя иметь более 20 приглашений во фракции"
 
 msgid "Can not modify user equal to you or above you"
-msgstr ""
+msgstr "Нельзя изменять пользователя, который равен вам или выше вас"
 
 #. when leaving a faction and you are the last owner
 msgid "Can not orphan a faction"
-msgstr ""
+msgstr "Нельзя бросить фракцию без лидера"
 
 #, javascript-format
 msgid ""
@@ -128,7 +130,7 @@ msgstr ""
 "{ amountOfFiles }"
 
 msgid "Can only have one Sovereign role"
-msgstr ""
+msgstr "Можно иметь только одну роль лидера"
 
 msgid "Click here"
 msgstr "Нажмите здесь"
@@ -156,10 +158,10 @@ msgid "Coronavirus"
 msgstr "Коронавирус"
 
 msgid "Could not change the flag of this role"
-msgstr ""
+msgstr "Не удалось изменить флаг этой роли"
 
 msgid "Could not change this setting. Maybe try again later."
-msgstr ""
+msgstr "Не удалось изменить эту настройку. Попробуйте позже."
 
 msgid "Could not close this Session."
 msgstr "Не удалось закрыть эту сессию."
@@ -168,16 +170,16 @@ msgid "Could not find this login method"
 msgstr "Не удалось найти этот способ входа"
 
 msgid "Could not leave this channel"
-msgstr ""
+msgstr "Не удалось покинуть канал"
 
 msgid "Could not set this factions avatar"
-msgstr ""
+msgstr "Не удалось установить аватар этой фракции"
 
 msgid "Could not set your avatar"
-msgstr ""
+msgstr "Не удалось установить ваш аватар"
 
 msgid "Could not set your faction role"
-msgstr ""
+msgstr "Не удалось установить роль вашей фракции"
 
 msgid "Could not upload all files"
 msgstr "Не удалось загрузить все файлы"
@@ -192,10 +194,10 @@ msgid "Delete Application"
 msgstr "Удалить приложение"
 
 msgid "Description can't be empty"
-msgstr ""
+msgstr "Описание не может быть пустым"
 
 msgid "Description must be shorter than 1000 characters"
-msgstr ""
+msgstr "Описание должно быть короче 1000 символов"
 
 msgid "Display name for your OIDC client"
 msgstr "Отображаемое имя для вашего OIDC клиента"
@@ -297,8 +299,8 @@ msgstr ""
 "Если вы не запрашивали это письмо, просто проигнорируйте его (IP-адрес, "
 "который запрашивал это письмо: ${ ip })."
 
-msgid "Incorrect password!"
-msgstr "Неверный пароль!"
+msgid "Incorrect password"
+msgstr ""
 
 msgid "Invalid type of media"
 msgstr "Некорректный тип медиафайла"
@@ -310,7 +312,7 @@ msgid "Just admins can do that"
 msgstr "Это могут делать только администраторы"
 
 msgid "Just janny, mod or admin can do that"
-msgstr "Это могут делать только уборщики, модераторы или администраторы"
+msgstr "Это могут делать только мини-модераторы, модераторы или администраторы"
 
 msgid "Just mods and admins can do that"
 msgstr "Это могут делать только модераторы и администраторы"
@@ -372,22 +374,22 @@ msgid "Name already in use."
 msgstr "Ник уже используется."
 
 msgid "Name can only contain the characters: a-z . _ and -"
-msgstr ""
+msgstr "Имя может содержать только символы: a-z . _ и -"
 
 msgid "Name can't be empty."
-msgstr "Ник не может быть пустым."
+msgstr "Имя не может быть пустым."
 
 msgid "Name contains invalid character like @, /, \\ or #"
-msgstr "Ник содержит недопустимые символы, такие как @, /, \\ или #"
+msgstr "Имя содержит недопустимые символы, такие как @, /, \\ или #"
 
 msgid "Name is too long"
 msgstr "Ник слишком длинный"
 
 msgid "Name must be at least 2 characters long"
-msgstr "Ник должен состоять не менее чем из 2 символов"
+msgstr "Имя должно состоять не менее чем из 2 символов"
 
 msgid "Name must be shorter than 26 characters"
-msgstr "Ник должен быть короче 26 символов"
+msgstr "Имя должно быть короче 26 символов"
 
 msgid "Name or Email does not exist!"
 msgstr "Ник или почта не существуют!"
@@ -396,7 +398,7 @@ msgid "New Password"
 msgstr "Новый пароль"
 
 msgid "No Avatar given"
-msgstr ""
+msgstr "Аватар не указан"
 
 msgid "No Captcha given"
 msgstr "Капча не введена"
@@ -515,16 +517,16 @@ msgid "Reset your password here"
 msgstr "Сбросьте пароль здесь"
 
 msgid "Role flag can only be an image"
-msgstr ""
+msgstr "Флаг роли может быть только изображением"
 
 msgid "Role flag needs to be 16x11"
-msgstr ""
+msgstr "Флаг роли должен быть размером 16x11"
 
 msgid "Server Error"
 msgstr "Ошибка сервера"
 
 msgid "Server error while deleting user."
-msgstr ""
+msgstr "Ошибка сервера при удалении пользователя."
 
 msgid "Someone logged into your account from a new location, with the IP:"
 msgstr "Кто то вошёл в ваш аккаунт из нового местоположения, IP:"
@@ -616,13 +618,13 @@ msgid "This email provider is not allowed"
 msgstr "Этот провайдер электронной почты не разрешен"
 
 msgid "This faction does not exist"
-msgstr ""
+msgstr "Этой фракции не существует"
 
 msgid "This faction is full"
-msgstr ""
+msgstr "Эта фракция полна"
 
 msgid "This faction is private"
-msgstr ""
+msgstr "Это приватная фракция"
 
 #, javascript-format
 msgid "This media is banned ${ reason }. Ban ID: ${ mbid }"
@@ -631,20 +633,23 @@ msgstr "Этот медиафайл забанен по причине ${ reason
 msgid "This password-reset link isn't valid anymore :("
 msgstr "Эта ссылка для сброса пароля больше недействительна :("
 
-msgid "This user is private"
+msgid "This user has not password set"
 msgstr ""
+
+msgid "This user is private"
+msgstr "Это приватный пользователь"
 
 msgid "Title can't be empty."
-msgstr ""
+msgstr "Название не может быть пустым."
 
 msgid "Title contains invalid character like @, /, \\ or #"
-msgstr ""
+msgstr "Название содержит недопустимые символы: @, /, \\ или #"
 
 msgid "Title must be at least 2 characters long"
-msgstr ""
+msgstr "Название должно содержать не менее 2 символов"
 
 msgid "Title must be shorter than 26 characters"
-msgstr ""
+msgstr "Название должно быть короче 26 символов"
 
 #. "redirect_uris" is a technical term and should not be translated
 msgid "Too many or too long redirect_uris"
@@ -717,13 +722,13 @@ msgid "You already have that name."
 msgstr "У вас уже есть это имя."
 
 msgid "You are already part of this faction"
-msgstr ""
+msgstr "Вы уже состоите в этой фракции"
 
 msgid "You are already verified."
 msgstr "Вы уже верифицированы."
 
 msgid "You are banned from this faction"
-msgstr ""
+msgstr "Вы забанены в этой фракции"
 
 #, javascript-format
 msgid "You are muted for another ${ timeMin } minutes"
@@ -774,10 +779,11 @@ msgstr "Вы не можете отправлять сообщения в чат
 msgid ""
 "You can only be owner of ${ MAX_OWNED_FACTIONS_PER_USER } factions in total"
 msgstr ""
+"Вы можете быть владельцем не более ${ MAX_OWNED_FACTIONS_PER_USER } фракций"
 
 #, javascript-format
 msgid "You can only have ${ MAX_FACTIONS_PER_USER } factions in total"
-msgstr ""
+msgstr "У вас может быть только ${ MAX_FACTIONS_PER_USER } фракций"
 
 msgid ""
 "You can register your own application here to get the client_id and "
@@ -814,7 +820,7 @@ msgid "You must be logged in to access this page"
 msgstr "Вы должны войти в аккаунт для доступа к этой странице"
 
 msgid "You need an invite to join this faction"
-msgstr ""
+msgstr "Чтобы вступить в эту фракцию, вам нужно приглашение"
 
 #. "scope" is a technical term and should not be translated
 msgid "You need to define a valid scope"
@@ -851,6 +857,7 @@ msgstr "Ваш браузер выглядит подозрительно"
 msgid ""
 "Your account must be at least two weeks old before you can create a faction"
 msgstr ""
+"Чтобы создать фракцию, ваш аккаунт должен существовать не менее двух недель"
 
 msgid "Your account needs to be verified to access this page"
 msgstr "Ваш аккаунт должен быть верифицирован для доступа к этой странице"
@@ -893,7 +900,7 @@ msgstr "за наличие насилия"
 
 #. This media is banned xyz
 msgid "for containing personal information"
-msgstr ""
+msgstr "за содержание личной информации"
 
 #. This media is banned xyz
 msgid "for glorifying terrorism"
@@ -913,6 +920,12 @@ msgstr ""
 "добро пожаловать в наше маленькое сообщество тех, кто ставит пиксели, чтобы "
 "использовать свою учетную запись, вы должны подтвердить свою почту. Вы "
 "можете сделать это здесь: "
+
+#~ msgid "Incorrect password!"
+#~ msgstr "Неверный пароль!"
+
+#~ msgid "Can not have more than 20 faction roles"
+#~ msgstr "Нельзя иметь более 20 ролей во фракции"
 
 #~ msgid "No file metadata given"
 #~ msgstr "Метаданные файла отсутствуют"

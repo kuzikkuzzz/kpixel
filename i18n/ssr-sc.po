@@ -102,7 +102,8 @@ msgstr ""
 msgid "Can not elevate the powerlevel of a role to yours"
 msgstr ""
 
-msgid "Can not have more than 20 faction roles"
+#, javascript-format
+msgid "Can not have more than ${ MAX_ROLES_PER_FACTION } faction roles"
 msgstr ""
 
 msgid "Can not have more than 20 invites per faction"
@@ -280,8 +281,8 @@ msgstr ""
 "Si un arrichieristi sti email, ignorala (U ip ca arrichidi sti email esti $"
 "{ ip })."
 
-msgid "Incorrect password!"
-msgstr "Password sbagliata!"
+msgid "Incorrect password"
+msgstr ""
 
 msgid "Invalid type of media"
 msgstr ""
@@ -599,6 +600,9 @@ msgstr ""
 msgid "This password-reset link isn't valid anymore :("
 msgstr "U link pi ressettari a password unne chiu validu"
 
+msgid "This user has not password set"
+msgstr ""
+
 msgid "This user is private"
 msgstr ""
 
@@ -871,6 +875,9 @@ msgid ""
 msgstr ""
 "binvinuto nala community ri niavutri pixelplacers, usa u to account, "
 "virifica a to email, u po fari ca: "
+
+#~ msgid "Incorrect password!"
+#~ msgstr "Password sbagliata!"
 
 #~ msgid "You are banned"
 #~ msgstr "Si bannatu"

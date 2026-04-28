@@ -95,7 +95,7 @@ msgstr "Raster toevoegen (uitvinken als u een 1:1-sjabloon nodig heeft)"
 msgid "Add Template"
 msgstr "Sjabloon toevoegen"
 
-msgid "Add an Mail Adress here:"
+msgid "Add a new E-Mail Address here:"
 msgstr ""
 
 #. This if for moderation tools, it's not important to translate this
@@ -516,8 +516,8 @@ msgstr "Anngepaste Vlag"
 msgid "DM"
 msgstr "DM"
 
-msgid "Daily Pixel"
-msgstr "Dagelijkse Pixel"
+msgid "Daily Pixels"
+msgstr ""
 
 msgid "Daily Pixels per Country"
 msgstr "Dagelijkse Pixels per Land"
@@ -545,6 +545,9 @@ msgstr "Account verwijderen"
 
 msgid "Delete Faction"
 msgstr "Factie Verwijderen"
+
+msgid "Delete My Account"
+msgstr ""
 
 msgid "Delete the faction"
 msgstr "Verwijder de Factie"
@@ -899,6 +902,9 @@ msgstr "Afbeelding uploaden"
 
 msgid "Import templates"
 msgstr "Sjablonen importeren"
+
+msgid "Incorrect password"
+msgstr ""
 
 msgid "Interval"
 msgstr "Interval"
@@ -1269,9 +1275,6 @@ msgstr "Vissen"
 msgid "Ping"
 msgstr "Ping"
 
-msgid "Pixel"
-msgstr "Pixel"
-
 msgid "Pixel Notify OFF"
 msgstr "Pixelmelding UIT"
 
@@ -1284,6 +1287,9 @@ msgstr "Pixelbescherming"
 msgid "Pixel protected"
 msgstr "Pixel beschermd"
 
+msgid "Pixels"
+msgstr ""
+
 msgid "Place color pixels on a large canvas with other players online!"
 msgstr ""
 "Plaats kleurpixels op een groot canvas samen met andere spelers online!"
@@ -1293,9 +1299,6 @@ msgstr "Geplaatste pixels"
 
 msgid "Play a sound when new chat messages arrive"
 msgstr "Speel een geluid af wanneer er nieuwe chatberichten binnenkomen"
-
-msgid "Player"
-msgstr "Speler"
 
 msgid "Players and Pixels per hour"
 msgstr "Spelers en pixels per uur"
@@ -1322,8 +1325,8 @@ msgstr "Aardappel modus"
 msgid "Powerlevel"
 msgstr "Machtniveau"
 
-msgid "Powerlevel of this role. See table below for explenation."
-msgstr "Machtniveau van deze rol. Zie onderstaande tabel voor een toelichting."
+msgid "Powerlevel of this role. See table below for an explanation."
+msgstr ""
 
 #, javascript-format
 msgid ""
@@ -1366,9 +1369,6 @@ msgstr "Privé"
 
 msgid "Profile"
 msgstr "Profiel"
-
-msgid "Public"
-msgstr "Openbaar"
 
 msgid "Quick Actions"
 msgstr "Snelle Acties"
@@ -1566,6 +1566,9 @@ msgstr ""
 msgid "Serpentine"
 msgstr "Serpentijn"
 
+msgid "Server Error"
+msgstr ""
+
 msgid "Server answered with gibberish :("
 msgstr "Server antwoordde met gebrabbel :("
 
@@ -1724,6 +1727,13 @@ msgstr ""
 "seconden. Het werd gelanceerd op 11 mei en bleef maandenlang actief totdat "
 "het op 30 november werd stopgezet."
 
+msgid ""
+"This email / password combination got hacked and leaked. To protect this "
+"account, the password has been reset. Please use the \"Forgot my password\" "
+"function on the LogIn page to set a new password. In the future, consider "
+"not installing malware, Thank You."
+msgstr ""
+
 msgid "This faction has no invites"
 msgstr "Deze factie heeft geen uitnodigingen"
 
@@ -1740,6 +1750,9 @@ msgstr ""
 
 msgid "This permission is required"
 msgstr "Deze toestemming is vereist"
+
+msgid "This user has not password set"
+msgstr ""
 
 msgid "Timeout"
 msgstr "Time-out"
@@ -1958,8 +1971,8 @@ msgstr "JE KUNT JE GEBRUIKERSNAAM MAAR ÉÉN KEER KIEZEN!"
 msgid "Yes"
 msgstr "Ja"
 
-msgid "Yes, Delete My Account!"
-msgstr "Ja, verwijder mijn account!"
+msgid "Yes, really delete Me"
+msgstr ""
 
 msgid "Yesterday"
 msgstr "Gisteren"
@@ -2185,6 +2198,10 @@ msgstr "y buiten de baan"
 msgid "z out of bounds"
 msgstr "z buiten de baan"
 
+msgctxt "media-player"
+msgid "Player"
+msgstr ""
+
 msgctxt "keybinds"
 msgid "A"
 msgstr "A"
@@ -2244,6 +2261,34 @@ msgstr "W"
 msgctxt "keybinds"
 msgid "X"
 msgstr "X"
+
+msgctxt "channel-list"
+msgid "Public"
+msgstr ""
+
+#. Column title of column indicating whether or not a faction is able to be joined in public
+msgctxt "statistics-table"
+msgid "Public"
+msgstr ""
+
+#~ msgid "Player"
+#~ msgstr "Speler"
+
+#~ msgid "Yes, Delete My Account!"
+#~ msgstr "Ja, verwijder mijn account!"
+
+#~ msgid "Daily Pixel"
+#~ msgstr "Dagelijkse Pixel"
+
+#~ msgid "Pixel"
+#~ msgstr "Pixel"
+
+#~ msgid "Powerlevel of this role. See table below for explenation."
+#~ msgstr ""
+#~ "Machtniveau van deze rol. Zie onderstaande tabel voor een toelichting."
+
+#~ msgid "Public"
+#~ msgstr "Openbaar"
 
 #~ msgid "Change your Mail Adress here:"
 #~ msgstr "Wijzig hier uw E-mailadres:"

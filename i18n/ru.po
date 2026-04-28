@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: admin@pixelplanet.fun\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2026-02-23 01:19+0000\n"
-"Last-Translator: sallbet <sallbet@noreply.pixelplanet.fun>\n"
+"PO-Revision-Date: 2026-04-26 14:50+0000\n"
+"Last-Translator: hjik <goi89ma@noreply.pixelplanet.fun>\n"
 "Language-Team: Russian <https://translate.gs-os.com/projects/ppfun/client/ru/"
 ">\n"
 "Language: ru\n"
@@ -55,10 +55,10 @@ msgid "(0 = infinite)"
 msgstr "(0 = бесконечно)"
 
 msgid "(click a role to activate it)"
-msgstr ""
+msgstr "(нажмите на роль, чтобы её активировать)"
 
 msgid "(click a role to assign or remove it)"
-msgstr ""
+msgstr "(нажмите на роль, чтобы назначить или убрать её)"
 
 msgid "+last hour"
 msgstr "+последний час"
@@ -73,6 +73,8 @@ msgid ""
 "A flag representing the role, it should be 16x11 pixels. If left empty, "
 "users with this role selected will still show their own flags."
 msgstr ""
+"Флаг, отображающий роль, должен быть размером 16x11 пикселей. Если не "
+"назначен, у пользователей всё равно будут отображаться их флаги."
 
 msgid "A new verification mail is getting sent to you."
 msgstr "Вам будет отправлено новое письмо с подтверждением."
@@ -81,6 +83,9 @@ msgid ""
 "A role has all the permissions of all levels below and equal to it. In "
 "example: Every role with a power level of >=50 can manage invites (50)."
 msgstr ""
+"Роль обладает всеми разрешениями всех уровней ниже и равного ей уровня. "
+"Например: каждая роль с уровнем полномочий >=50 может управлять "
+"приглашениями (50)."
 
 msgid "ACCESS MODTOOLS"
 msgstr "ДОСТУП К ИНСТРУМЕНТАМ МОДЕРАТОРА"
@@ -91,7 +96,7 @@ msgstr "Добавить сетку (снимите флажок, если ва�
 msgid "Add Template"
 msgstr "Добавить шаблон"
 
-msgid "Add an Mail Adress here:"
+msgid "Add a new E-Mail Address here:"
 msgstr ""
 
 #. This if for moderation tools, it's not important to translate this
@@ -99,10 +104,10 @@ msgid "Admintools"
 msgstr "Инструменты администратора"
 
 msgid "Age"
-msgstr ""
+msgstr "Возраст"
 
 msgid "All members of this faction are hidden"
-msgstr ""
+msgstr "Все участники этой фракции скрыты"
 
 msgid "All sound effects will be disabled."
 msgstr "Все звуковые эффекты будут отключены."
@@ -114,7 +119,7 @@ msgid "Always show movement control buttons"
 msgstr "Всегда показывать кнопки управления движением"
 
 msgid "An image representing your faction"
-msgstr ""
+msgstr "Изображение, представляющее вашу фракцию"
 
 msgid "Anti Aliasing"
 msgstr "Сглаживание"
@@ -126,22 +131,22 @@ msgid "Archive"
 msgstr "Архив"
 
 msgid "Assign Roles"
-msgstr ""
+msgstr "Выдать роли"
 
 msgid "Assign new Mod"
 msgstr "Назначить нового модератора"
 
 msgid "Assign role per default to new members"
-msgstr ""
+msgstr "Выдавать роль новым участникам по умолчанию"
 
 msgid "Assign roles below their own"
-msgstr ""
+msgstr "Выдавать роли ниже собственной"
 
 msgid "Assign this role to every new member automatically on join."
-msgstr ""
+msgstr "Автоматически выдавать эту роль каждому зашедшему участнику."
 
 msgid "Assigned role per default"
-msgstr ""
+msgstr "Выдавать роль по умолчанию"
 
 msgid "Attach File"
 msgstr "Прикрепить файл"
@@ -162,13 +167,13 @@ msgid "Badges"
 msgstr "Значки"
 
 msgid "Ban"
-msgstr ""
+msgstr "Забанить"
 
 msgid "Ban media"
 msgstr "Забанить медиафайл"
 
 msgid "Ban members"
-msgstr ""
+msgstr "Банить участников"
 
 msgid "Banned"
 msgstr "Забанен"
@@ -177,7 +182,7 @@ msgid "Banned? Detected as Proxy?"
 msgstr "Вы в бане? Определяетесь как прокси?"
 
 msgid "Bans"
-msgstr ""
+msgstr "Баны"
 
 msgid "Block"
 msgstr "Заблокировать"
@@ -190,6 +195,10 @@ msgid ""
 "users to start messaging you. You can still start new DMs with other users "
 "and already ongoing DMs will still be open."
 msgstr ""
+"Блокировать все личные сообщения. Если вы включите эту функцию, другие "
+"пользователи не смогут отправлять вам сообщения. Вы по-прежнему сможете "
+"создавать переписки с другими пользователями, а уже созданные переписки "
+"останутся открытыми."
 
 msgid "Blocked"
 msgstr "Заблокирован"
@@ -254,7 +263,7 @@ msgid "Caught by"
 msgstr "Поймано"
 
 msgid "Change Flag"
-msgstr ""
+msgstr "Сменить флаг"
 
 msgid "Change Happened"
 msgstr "Произошли изменения"
@@ -339,7 +348,7 @@ msgid "Click a color in palette to select it"
 msgstr "Нажмите на цвет в палитре, чтобы выбрать его"
 
 msgid "Click here to cease representation."
-msgstr ""
+msgstr "Нажмите здесь, чтобы прекратить представительство."
 
 msgid "Click here to request a new verification mail."
 msgstr "Нажмите здесь, чтобы запросить новое письмо с подтверждением."
@@ -363,25 +372,25 @@ msgid "Close Palette"
 msgstr "Закрыть палитру"
 
 msgid "Compact Chat"
-msgstr ""
+msgstr "Компактный чат"
 
 msgid "Compact Palette"
 msgstr "Компактная палитра"
 
 msgid "Confirm"
-msgstr ""
+msgstr "Подтвердить"
 
 msgid "Confirm Ban"
-msgstr ""
+msgstr "Подтвердить бан"
 
 msgid "Confirm Delete"
-msgstr ""
+msgstr "Подтвердить удаление"
 
 msgid "Confirm Kick"
-msgstr ""
+msgstr "Подтвердить кик"
 
 msgid "Confirm Leave"
-msgstr ""
+msgstr "Подтвердить выход"
 
 msgid "Confirm New Password"
 msgstr "Подтвердите новый пароль"
@@ -390,7 +399,7 @@ msgid "Confirm Password"
 msgstr "Повторите пароль"
 
 msgid "Confirm your password."
-msgstr ""
+msgstr "Подтвердите пароль."
 
 #, javascript-format
 msgid "Connection error ${ code } :("
@@ -467,25 +476,25 @@ msgid "Country"
 msgstr "Страна"
 
 msgid "Create Faction"
-msgstr ""
+msgstr "Создать фракцию"
 
 msgid "Create Invite"
-msgstr ""
+msgstr "Создать приглашение"
 
 msgid "Create New Faction"
-msgstr ""
+msgstr "Создать новую фракцию"
 
 msgid "Create New Invite"
-msgstr ""
+msgstr "Создать новое приглашение"
 
 msgid "Create New Role"
-msgstr ""
+msgstr "Создать новую роль"
 
 msgid "Create Role"
-msgstr ""
+msgstr "Создать роль"
 
 msgid "Create roles"
-msgstr ""
+msgstr "Создавать роли"
 
 #, javascript-format
 msgid "Credit for the Palette of the 2bit canvas goes to ${ donendoLink }."
@@ -511,14 +520,14 @@ msgstr "Пользовательский флаг"
 msgid "DM"
 msgstr "ЛС"
 
-msgid "Daily Pixel"
-msgstr ""
+msgid "Daily Pixels"
+msgstr "Пиксели за день"
 
 msgid "Daily Pixels per Country"
 msgstr "Пиксели поставленные странами за день"
 
 msgid "Daily Pixels per Faction"
-msgstr ""
+msgstr "Пиксели за день по фракциям"
 
 msgid "Daily Pixels per Player"
 msgstr "Пикселей размещенных за день игроками"
@@ -539,25 +548,28 @@ msgid "Delete Account"
 msgstr "Удалить аккаунт"
 
 msgid "Delete Faction"
+msgstr "Удалить фракцию"
+
+msgid "Delete My Account"
 msgstr ""
 
 msgid "Delete the faction"
-msgstr ""
+msgstr "Удалять фракцию"
 
 msgid "Deny"
 msgstr "Отклонить"
 
 msgid "Description"
-msgstr ""
+msgstr "Описание"
 
 msgid "Description can't be empty"
-msgstr ""
+msgstr "Описание не может быть пустым"
 
 msgid "Description must be shorter than 1000 characters"
-msgstr ""
+msgstr "Описание должно быть короче 1000 символов"
 
 msgid "Description of your faction"
-msgstr ""
+msgstr "Описание вашей фракции"
 
 msgid ""
 "Didn't get an answer from pixelplanet. Try to refresh if this problem "
@@ -591,18 +603,20 @@ msgstr "Сделать что-то с IP (один IP на строку)"
 msgid ""
 "Don't let people find this faction in public search or look at its profile."
 msgstr ""
+"Не позволять людям находить эту фракцию в публичном поиске или просматривать "
+"её профиль."
 
 msgid "Don't remember"
 msgstr "Не запоминать"
 
 msgid "Don't show faction in search"
-msgstr ""
+msgstr "Не отображать фракцию в поиске"
 
 msgid "Don't show me in global stats"
 msgstr "Не отображать меня в глобальной статистике"
 
 msgid "Done"
-msgstr ""
+msgstr "Принять"
 
 msgid "Download"
 msgstr "Скачать"
@@ -629,13 +643,14 @@ msgid "Edit"
 msgstr "Изменить"
 
 msgid "Edit faction"
-msgstr ""
+msgstr "Редактировать фракцию"
 
 msgid "Edit roles below their own"
-msgstr ""
+msgstr "Редактировать роли ниже своей"
 
 msgid "Edit their own role and elevate users to their own level"
 msgstr ""
+"Редактировать собственную роль и повышать пользователей до своего уровня"
 
 msgid "Email"
 msgstr "Электронный адрес"
@@ -681,10 +696,10 @@ msgid "Enter UserName of new Mod"
 msgstr "Введите имя пользователя нового модератора"
 
 msgid "Enter a little text that describes your faction"
-msgstr ""
+msgstr "Введите небольшой текст, описывающий вашу фракцию"
 
 msgid "Enter search term and press Search."
-msgstr ""
+msgstr "Введите поисковый запрос и нажмите Поиск."
 
 msgid "Enter your mail address and we will send you a new password:"
 msgstr "Введите свой адрес электронной почты, и мы вышлем вам новый пароль:"
@@ -706,21 +721,24 @@ msgid "Export enabled templates"
 msgstr "Экспортировать включенные шаблоны"
 
 msgid "Faction"
-msgstr ""
+msgstr "Фракция"
 
 msgid "Factions"
-msgstr ""
+msgstr "Фракции"
 
 msgid "Factions Today"
-msgstr ""
+msgstr "Фракции сегодня"
 
 msgid "Factions Total"
-msgstr ""
+msgstr "Фракции всего"
 
 msgid ""
 "Factions allow you to coordinate better with other players. Search for "
 "existing factions, find friends or create your own faction."
 msgstr ""
+"Фракции позволяют лучше координировать свои действия с другими игроками. "
+"Ищите существующие фракции, находите друзей или создайте свою собственную "
+"фракцию."
 
 msgid "Factor"
 msgstr "Фактор"
@@ -803,7 +821,7 @@ msgid "Grid ON"
 msgstr "Сетка включена"
 
 msgid "Groups"
-msgstr ""
+msgstr "Группы"
 
 msgid "Have fun!"
 msgstr "Развлекайтесь!"
@@ -825,7 +843,7 @@ msgid "Hide Embed"
 msgstr "Спрятать вставленное"
 
 msgid "Hide from profile"
-msgstr ""
+msgstr "Скрыть из профиля"
 
 msgid ""
 "Higher zoomlevels take some time to update, the 3D globe gets updated at "
@@ -850,7 +868,7 @@ msgid "I forgot my Password."
 msgstr "Я забыл мой пароль."
 
 msgid "ID"
-msgstr ""
+msgstr "ID"
 
 msgid "IID (optional)"
 msgstr "IID (необязательно)"
@@ -892,6 +910,9 @@ msgstr "Загрузить изображение"
 msgid "Import templates"
 msgstr "Импортировать шаблоны"
 
+msgid "Incorrect password"
+msgstr ""
+
 msgid "Interval"
 msgstr "Интервал"
 
@@ -908,16 +929,16 @@ msgid "Invalid color selected"
 msgstr "Выбран недопустимый цвет"
 
 msgid "Invite"
-msgstr ""
+msgstr "Приглашение"
 
 msgid "Invited to Chat"
 msgstr "Приглашение в чат"
 
 msgid "Invites"
-msgstr ""
+msgstr "Приглашения"
 
 msgid "Is One-Time-Invite"
-msgstr ""
+msgstr "Одноразовое приглашение"
 
 msgid ""
 "It requests the following permissions. Uncheck what you don't want to grant:"
@@ -931,13 +952,13 @@ msgstr ""
 "кто ставил пиксели или банить игроков."
 
 msgid "Join"
-msgstr ""
+msgstr "Присоединиться"
 
 msgid "Join Faction"
-msgstr ""
+msgstr "Присоединиться к фракции"
 
 msgid "Joined"
-msgstr ""
+msgstr "Присоединился"
 
 msgid "Just for registered Users"
 msgstr "Только для зарегистрированных пользователей"
@@ -952,31 +973,31 @@ msgid "Keep Ratio"
 msgstr "Сохранять пропорции"
 
 msgid "Kick"
-msgstr ""
+msgstr "Кикнуть"
 
 msgid "Kick members"
-msgstr ""
+msgstr "Кикать участников"
 
 msgid "Know that an account exists"
 msgstr "Знать, что аккаунт существует"
 
 msgid "Leave"
-msgstr ""
+msgstr "Выйти"
 
 msgid "Leave Faction"
-msgstr ""
+msgstr "Выйти из фракции"
 
 msgid "Legal Requests"
 msgstr "Юридические запросы"
 
 msgid "Let everyone join this faction"
-msgstr ""
+msgstr "Позволить всем заходить в эту фракцию"
 
 msgid "Let people join this faction without needing an invite."
-msgstr ""
+msgstr "Позволить всем заходить в эту фракцию без приглашения."
 
 msgid "Level"
-msgstr ""
+msgstr "Уровень"
 
 msgid "Light Grid"
 msgstr "Светлая сетка"
@@ -991,7 +1012,7 @@ msgid "Loading..."
 msgstr "Загрузка..."
 
 msgid "Log in or Register"
-msgstr ""
+msgstr "Войдите или зарегистрируйтесь"
 
 msgid "Log out"
 msgstr "Выйти"
@@ -1012,7 +1033,7 @@ msgid "Login to grant access to other application."
 msgstr "Войдите, чтобы дать доступ другому приложению."
 
 msgid "Login to join us."
-msgstr ""
+msgstr "Войдите, чтобы присоединиться к нам."
 
 msgid "Login to other application"
 msgstr "Вход в другое приложение"
@@ -1027,10 +1048,10 @@ msgid "Manage Moderators"
 msgstr "Управление модераторами"
 
 msgid "Manage Templates"
-msgstr ""
+msgstr "Управление шаблонами"
 
 msgid "Manage invites"
-msgstr ""
+msgstr "Управлять приглашениями"
 
 msgid "Map Data"
 msgstr "Картографические данные"
@@ -1042,7 +1063,7 @@ msgid "Media Actions"
 msgstr "Действия с медиафайлами"
 
 msgid "Members"
-msgstr ""
+msgstr "Участники"
 
 msgid "Minimum Color Distance"
 msgstr "Минимальное цветовое расстояние"
@@ -1060,37 +1081,37 @@ msgid "Move"
 msgstr "Двигать"
 
 msgid "Mute Channel"
-msgstr ""
+msgstr "Заглушить канал"
 
 msgid "Muted Sound"
 msgstr "Звук выключен"
 
 msgid "My Factions"
-msgstr ""
+msgstr "Мои фракции"
 
 msgid "Name"
-msgstr "Ник"
+msgstr "Имя"
 
 msgid "Name can only contain the characters: a-z . _ and -"
-msgstr ""
+msgstr "Имя может содержать только символы: a-z . _ и -"
 
 msgid "Name can't be empty."
-msgstr "Ник не может быть пустым."
+msgstr "Имя не может быть пустым."
 
 msgid "Name contains invalid character like @, /, \\ or #"
-msgstr "Ник содержит недопустимые символы, такие как @, /, \\ или #"
+msgstr "Имя содержит недопустимые символы, такие как @, /, \\ или #"
 
 msgid "Name must be at least 2 characters long"
-msgstr "Ник должен состоять не менее чем из 2 символов"
+msgstr "Имя должно состоять не менее чем из 2 символов"
 
 msgid "Name must be shorter than 26 characters"
-msgstr "Ник должен быть короче 26 символов"
+msgstr "Имя должно быть короче 26 символов"
 
 msgid "Name of this role"
-msgstr ""
+msgstr "Имя этой роли"
 
 msgid "Name of your faction (this can not be changed later)"
-msgstr ""
+msgstr "Имя вашей фракции (позже его нельзя будет изменить)"
 
 msgid "Name or Email"
 msgstr "Имя или адрес электронной почты"
@@ -1129,13 +1150,13 @@ msgid "No password given."
 msgstr "Пароль не указан."
 
 msgid "No results."
-msgstr ""
+msgstr "Нет результатов."
 
 msgid "Nobody is banned from this faction"
-msgstr ""
+msgstr "Никто не забанен в этой фракции"
 
 msgid "Not Allowed"
-msgstr ""
+msgstr "Не разрешено"
 
 msgid "Not allowed"
 msgstr "Не разрешено"
@@ -1145,6 +1166,7 @@ msgstr "Замечание"
 
 msgid "Note: Your active Faction may overwrite your flag settings."
 msgstr ""
+"Примечание: Активная фракция может перезаписать настройки вашего флага."
 
 msgid "OIDC LogIn"
 msgstr "Вход через OIDC"
@@ -1162,7 +1184,7 @@ msgid "Old Password"
 msgstr "Старый пароль"
 
 msgid "One-Time"
-msgstr ""
+msgstr "Одноразовое"
 
 msgid "Online Users"
 msgstr "Пользователей онлайн"
@@ -1177,7 +1199,7 @@ msgid "Opacity of Overlay in percent."
 msgstr "Прозрачность оверлея в процентах."
 
 msgid "Open"
-msgstr ""
+msgstr "Открыть"
 
 msgid "Open Chat"
 msgstr "Открыть чат"
@@ -1217,7 +1239,7 @@ msgid "Overlay Opacity"
 msgstr "Прозрачность оверлея"
 
 msgid "Overview"
-msgstr ""
+msgstr "Обзор"
 
 msgid "Palette Download"
 msgstr "Скачать палитру"
@@ -1252,7 +1274,7 @@ msgid "Permission"
 msgstr "Разрешение"
 
 msgid "Permissions of Powerlevels"
-msgstr ""
+msgstr "Права уровней полномочий"
 
 msgid "Phish!"
 msgstr "Рыба поймана!"
@@ -1262,9 +1284,6 @@ msgstr "Рыбы"
 
 msgid "Ping"
 msgstr "Упомянуть"
-
-msgid "Pixel"
-msgstr ""
 
 msgid "Pixel Notify OFF"
 msgstr "Активность пикселей выключена"
@@ -1278,6 +1297,9 @@ msgstr "Защита пикселей"
 msgid "Pixel protected"
 msgstr "Пиксель защищён"
 
+msgid "Pixels"
+msgstr "Пикселей"
+
 msgid "Place color pixels on a large canvas with other players online!"
 msgstr "Ставьте цветные пиксели на огромном полотне с другими людьми по сети!"
 
@@ -1286,9 +1308,6 @@ msgstr "Поставленных пикселей"
 
 msgid "Play a sound when new chat messages arrive"
 msgstr "Воспроизводить звук при поступлении новых сообщений чата"
-
-msgid "Player"
-msgstr "Игрок"
 
 msgid "Players and Pixels per hour"
 msgstr "Игроки и пиксели в час"
@@ -1313,10 +1332,10 @@ msgid "Potato Mode"
 msgstr "Режим калькулятора"
 
 msgid "Powerlevel"
-msgstr ""
+msgstr "Уровень полномочий"
 
-msgid "Powerlevel of this role. See table below for explenation."
-msgstr ""
+msgid "Powerlevel of this role. See table below for an explanation."
+msgstr "Уровень полномочий этой роли. Объяснение приведено в таблице ниже."
 
 #, javascript-format
 msgid ""
@@ -1360,9 +1379,6 @@ msgstr "Закрытый профиль"
 msgid "Profile"
 msgstr "Профиль"
 
-msgid "Public"
-msgstr ""
-
 msgid "Quick Actions"
 msgstr "Быстрые действия"
 
@@ -1370,7 +1386,7 @@ msgid "Range Banned"
 msgstr "Область адресов забанена"
 
 msgid "Rank"
-msgstr ""
+msgstr "Ранг"
 
 msgid "Ranked"
 msgstr "Учитывается в рейтинге"
@@ -1423,14 +1439,14 @@ msgid "Remove Moderator"
 msgstr "Убрать модератора"
 
 msgid "Remove Roles"
-msgstr ""
+msgstr "Убрать роли"
 
 msgid "Remove a Login method:"
 msgstr "Убрать способ входа:"
 
 #, javascript-format
 msgid "Represents ${ activeFactionTitle } as ${ activeFactionRoleName }"
-msgstr ""
+msgstr "Представляет ${ activeFactionTitle } как ${ activeFactionRoleName }"
 
 msgid "Require Verification to Place"
 msgstr "Требовать подтвержденный аккаунт для размещения пикселей"
@@ -1463,13 +1479,13 @@ msgid "Revoke consent of third party applications:"
 msgstr "Отозвать разрешения у сторонних приложений:"
 
 msgid "Role"
-msgstr ""
+msgstr "Роль"
 
 msgid "Role Flags"
-msgstr ""
+msgstr "Флаги ролей"
 
 msgid "Roles"
-msgstr ""
+msgstr "Роли"
 
 msgid "Roll different Captcha Fonts"
 msgstr "Выбрать другие шрифты капчи"
@@ -1493,19 +1509,20 @@ msgstr ""
 "чтобы изменять масштаб"
 
 msgid "Search"
-msgstr ""
+msgstr "Поиск"
 
 msgid "Search Existing Faction"
-msgstr ""
+msgstr "Поиск существующих фракций"
 
 msgid "Search Term"
-msgstr ""
+msgstr "Поисковый запрос"
 
 msgid "See hidden users in member list"
-msgstr ""
+msgstr "Видеть скрытых пользователей в списке участников"
 
 msgid "Select Avatar of this Faction. Supported Formats: jpg, gif, png, webp"
 msgstr ""
+"Выберите аватар для этой фракции. Поддерживаемые форматы: jpg, gif, png, webp"
 
 msgid "Select Date above"
 msgstr "Выберите дату выше"
@@ -1520,10 +1537,10 @@ msgid "Select Language"
 msgstr "Выбрать язык"
 
 msgid "Select a valid powerlevel"
-msgstr ""
+msgstr "Выберите допустимый уровень полномочий"
 
 msgid "Select a valid pwerlevel"
-msgstr ""
+msgstr "Выберите допустимый уровень полномочий"
 
 msgid ""
 "Select the canvas you want to use.\n"
@@ -1553,6 +1570,9 @@ msgstr "Вам отправлено письмо с инструкциями п�
 
 msgid "Serpentine"
 msgstr "Серпантин"
+
+msgid "Server Error"
+msgstr ""
 
 msgid "Server answered with gibberish :("
 msgstr "Сервер ответил тарабарщиной :("
@@ -1687,7 +1707,7 @@ msgstr ""
 "его позже будет невозможно."
 
 msgid "The password for your account."
-msgstr ""
+msgstr "Пароль вашего аккаунта."
 
 msgid "Themes"
 msgstr "Темы"
@@ -1710,8 +1730,15 @@ msgstr ""
 "запущен 11 мая 2020 и оставался активным в течение нескольких месяцев, пока "
 "не был закрыт 30 ноября 2020."
 
-msgid "This faction has no invites"
+msgid ""
+"This email / password combination got hacked and leaked. To protect this "
+"account, the password has been reset. Please use the \"Forgot my password\" "
+"function on the LogIn page to set a new password. In the future, consider "
+"not installing malware, Thank You."
 msgstr ""
+
+msgid "This faction has no invites"
+msgstr "У этой фракции нет приглашений"
 
 msgid ""
 "This is the name that other people see, e.g. in Chat. You can change it at "
@@ -1726,6 +1753,9 @@ msgstr "Вы сможете авторизоваться, только если 
 
 msgid "This permission is required"
 msgstr "Это разрешение необходимо"
+
+msgid "This user has not password set"
+msgstr ""
 
 msgid "Timeout"
 msgstr "Тайм-аут"
@@ -1746,22 +1776,22 @@ msgstr ""
 "соответствовать одному пикселю на полотне."
 
 msgid "Title"
-msgstr ""
+msgstr "Название"
 
 msgid "Title can't be empty."
-msgstr ""
+msgstr "Название не может быть пустым."
 
 msgid "Title contains invalid character like @, /, \\ or #"
-msgstr ""
+msgstr "Название содержит недопустимые символы: @, /, \\ или #"
 
 msgid "Title must be at least 2 characters long"
-msgstr ""
+msgstr "Название должно содержать не менее 2 символов"
 
 msgid "Title must be shorter than 26 characters"
-msgstr ""
+msgstr "Название должно быть короче 26 символов"
 
 msgid "Title of your faction"
-msgstr ""
+msgstr "Название вашей фракции"
 
 msgid "To use this page, enter your Password:"
 msgstr "Чтобы использовать эту страницу, введите ваш пароль:"
@@ -1794,7 +1824,7 @@ msgid "Total Online Users"
 msgstr "Всего пользователей онлайн"
 
 msgid "Total Pixels per Faction"
-msgstr ""
+msgstr "Всего пикселей по фракциям"
 
 msgid "Total Pixels per Player"
 msgstr "Всего пикселей размещенных игроками"
@@ -1825,10 +1855,10 @@ msgid "Unban media"
 msgstr "Разбанить медиафайл"
 
 msgid "Unban members"
-msgstr ""
+msgstr "Разбанивать участников"
 
 msgid "Unblock"
-msgstr ""
+msgstr "Разблокировать"
 
 msgid "Unblock Users"
 msgstr "Разблокировать пользователей"
@@ -1885,7 +1915,7 @@ msgid "Username must be shorter than 26 characters"
 msgstr "Имя пользователя должно быть короче 26 символов"
 
 msgid "Users"
-msgstr ""
+msgstr "Пользователи"
 
 #, javascript-format
 msgid "We are Libre Software under the ${ agplLink }, "
@@ -1913,7 +1943,7 @@ msgid "What the pencil should draw on the current canvas."
 msgstr "Как будет идти непрерывное рисование на текущем полотне."
 
 msgid "Whether or not this invite can only be used once."
-msgstr ""
+msgstr "Можно ли использовать это приглашение только один раз."
 
 msgid ""
 "While we tend to not delete canvases, some canvases are started for fun or "
@@ -1941,8 +1971,8 @@ msgstr "ВЫ МОЖЕТЕ ВЫБРАТЬ ВАШЕ ИМЯ ПОЛЬЗОВАТЕЛ�
 msgid "Yes"
 msgstr "Да"
 
-msgid "Yes, Delete My Account!"
-msgstr "Да, удалить мой аккаунт!"
+msgid "Yes, really delete Me"
+msgstr ""
 
 msgid "Yesterday"
 msgstr "Вчера"
@@ -1964,7 +1994,7 @@ msgstr ""
 "можете найти ниже."
 
 msgid "You are currently not a member of any faction."
-msgstr ""
+msgstr "Вы не состоите ни в одной фракции."
 
 msgid "You are currently not allowed to access this game."
 msgstr "В настоящее время вам запрещено иметь доступ к этой игре."
@@ -1973,15 +2003,17 @@ msgid ""
 "You are currently not representing any faction. To represent one, activate a "
 "role in one of your factions below."
 msgstr ""
+"Вы не представляете ни одну из фракций. Чтобы представлять одну из них, "
+"активируйте роль в одной из ваших фракций снизу."
 
 #, javascript-format
 msgid ""
 "You are currently representing ${ activeFactionTitle } as ${ activeRoleName }"
-msgstr ""
+msgstr "Вы представляете ${ activeFactionTitle } как ${ activeRoleName }"
 
 #, javascript-format
 msgid "You are logged in as ${ name } [${ username }]."
-msgstr ""
+msgstr "Вы вошли как ${ name } [${ username }]."
 
 msgid "You are not allowed to play this game right now :("
 msgstr "Сейчас вам нельзя играть в эту игру :("
@@ -2026,6 +2058,8 @@ msgid ""
 "You have been invited to join us on pixelplanet. We currently have $"
 "{ memberCount } members."
 msgstr ""
+"Вы были приглашены к нам на pixelplanet. Сейчас у нас ${ memberCount } "
+"участников."
 
 msgid "You have no users blocked"
 msgstr "У вас нет заблокированных пользователей"
@@ -2064,7 +2098,7 @@ msgid "You must enter at least one IID, User Id or BID"
 msgstr "Необходимо ввести хотя бы один IID, ID пользователя или BID"
 
 msgid "You must select an avatar for your faction"
-msgstr ""
+msgstr "Вы должны выбрать аватар для вашей фракции"
 
 msgid "You took too long, try again."
 msgstr "Слишком долго, попробуйте еще раз."
@@ -2081,13 +2115,13 @@ msgid "Your Browser looks shady"
 msgstr "Ваш браузер выглядит подозрительно"
 
 msgid "Your Factions"
-msgstr ""
+msgstr "Ваши фракции"
 
 msgid "Your Internet Provider is banned from this game"
 msgstr "Вашему интернет-провайдеру запрещено играть в эту игру"
 
 msgid "Your Roles"
-msgstr ""
+msgstr "Ваши роли"
 
 msgid "Your ban expires at "
 msgstr "Ваш бан истечет "
@@ -2113,32 +2147,32 @@ msgstr ""
 "пиксель и масштаб невелик."
 
 msgid "a hidden faction"
-msgstr ""
+msgstr "скрытую фракцию"
 
 msgid "affects"
-msgstr ""
+msgstr "затрагивает"
 
 #, javascript-format
 msgid "and ${ canvas.req } Pixels set"
 msgstr "и ${ canvas.req } поставленных пикселей"
 
 msgid "by"
-msgstr ""
+msgstr "от"
 
 msgid "check compliance here"
 msgstr "проверьте соответствие здесь"
 
 msgid "created at"
-msgstr ""
+msgstr "создано"
 
 msgid "days"
-msgstr ""
+msgstr "дней"
 
 msgid "download here"
 msgstr "скачать здесь"
 
 msgid "lift"
-msgstr ""
+msgstr "снять"
 
 msgid "or login with:"
 msgstr "или войдите с помощью:"
@@ -2150,7 +2184,7 @@ msgid "recommended"
 msgstr "рекомендовано"
 
 msgid "times used"
-msgstr ""
+msgstr "использовано раз"
 
 #, javascript-format
 msgid "try again after ${ ti }min"
@@ -2164,6 +2198,10 @@ msgstr "у вне границ"
 
 msgid "z out of bounds"
 msgstr "z вне границ"
+
+msgctxt "media-player"
+msgid "Player"
+msgstr ""
 
 msgctxt "keybinds"
 msgid "A"
@@ -2225,6 +2263,36 @@ msgctxt "keybinds"
 msgid "X"
 msgstr "X"
 
+msgctxt "channel-list"
+msgid "Public"
+msgstr "Публичные"
+
+#. Column title of column indicating whether or not a faction is able to be joined in public
+msgctxt "statistics-table"
+msgid "Public"
+msgstr "Публичная"
+
+#~ msgid "Add an Mail Adress here:"
+#~ msgstr "Добавлять почту здесь:"
+
+#~ msgid "Player"
+#~ msgstr "Игрок"
+
+#~ msgid "Yes, Delete My Account!"
+#~ msgstr "Да, удалить мой аккаунт!"
+
+#~ msgid "Daily Pixel"
+#~ msgstr "Пиксели за день"
+
+#~ msgid "Pixel"
+#~ msgstr "Пиксели"
+
+#~ msgid "Powerlevel of this role. See table below for explenation."
+#~ msgstr "Уровень полномочий этой роли. Объяснение см. в таблице ниже."
+
+#~ msgid "Public"
+#~ msgstr "Публично"
+
 #~ msgid "Change your Mail Adress here:"
 #~ msgstr "Измените ваш адрес почты здесь:"
 
@@ -2242,9 +2310,6 @@ msgstr "X"
 #~ "Заблокировать все личные сообщения (ЛС). Включение этого удалит все ваши "
 #~ "существующие ЛС. Вы сможете начинать новые ЛС с другими пользователями, "
 #~ "но другие пользователи не смогут создать ЛС с вами."
-
-#~ msgid "Pixels"
-#~ msgstr "Пикселей"
 
 #~ msgid "Pixels Today"
 #~ msgstr "Пикселей сегодня"

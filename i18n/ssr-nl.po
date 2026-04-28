@@ -116,8 +116,9 @@ msgstr ""
 msgid "Can not elevate the powerlevel of a role to yours"
 msgstr "Je kunt het machtsniveau van een rol niet verhogen tot dat van jezelf"
 
-msgid "Can not have more than 20 faction roles"
-msgstr "Je kunt niet meer dan 20 factierollen hebben"
+#, javascript-format
+msgid "Can not have more than ${ MAX_ROLES_PER_FACTION } faction roles"
+msgstr ""
 
 msgid "Can not have more than 20 invites per faction"
 msgstr "Je mag niet meer dan 20 uitnodigingen per factie"
@@ -310,8 +311,8 @@ msgstr ""
 "Als je deze mail niet hebt aangevraagd, negeer deze dan gewoon (het IP-adres "
 "dat deze mail opvroeg was ${ ip })."
 
-msgid "Incorrect password!"
-msgstr "Onjuist wachtwoord!"
+msgid "Incorrect password"
+msgstr ""
 
 msgid "Invalid type of media"
 msgstr "Ongeldig mediatype"
@@ -652,6 +653,9 @@ msgstr ""
 "Deze link voor het opnieuw instellen van het wachtwoord is niet meer geldig :"
 "("
 
+msgid "This user has not password set"
+msgstr ""
+
 msgid "This user is private"
 msgstr "Deze gebruiker is privé"
 
@@ -935,6 +939,12 @@ msgid ""
 msgstr ""
 "welkom bij onze kleine gemeenschap van pixelplacers, om je account te "
 "gebruiken, moet je je e-mail verifiëren. Dat kan hier: "
+
+#~ msgid "Incorrect password!"
+#~ msgstr "Onjuist wachtwoord!"
+
+#~ msgid "Can not have more than 20 faction roles"
+#~ msgstr "Je kunt niet meer dan 20 factierollen hebben"
 
 #~ msgid "You are banned"
 #~ msgstr "Je bent gebanned"

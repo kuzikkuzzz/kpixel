@@ -105,7 +105,8 @@ msgstr ""
 msgid "Can not elevate the powerlevel of a role to yours"
 msgstr ""
 
-msgid "Can not have more than 20 faction roles"
+#, javascript-format
+msgid "Can not have more than ${ MAX_ROLES_PER_FACTION } faction roles"
 msgstr ""
 
 msgid "Can not have more than 20 invites per faction"
@@ -287,8 +288,8 @@ msgstr ""
 "Si no has sol·licitat aquest correu electrònic, si us plau ignora'l (la IP "
 "que va sol·licitar aquest correu era ${ ip })."
 
-msgid "Incorrect password!"
-msgstr "Contrasenya incorrecta!"
+msgid "Incorrect password"
+msgstr ""
 
 msgid "Invalid type of media"
 msgstr ""
@@ -605,6 +606,9 @@ msgstr ""
 msgid "This password-reset link isn't valid anymore :("
 msgstr "Aquest enllaç per restablir la contrasenya ja no és vàlid :("
 
+msgid "This user has not password set"
+msgstr ""
+
 msgid "This user is private"
 msgstr ""
 
@@ -886,6 +890,9 @@ msgstr ""
 "benvingut a la nostra petita comunitat de col·locadors de píxels. Per "
 "utilizar el teu compte, has de verificar el teu correu electrònic. Pots fer-"
 "ho aquí: "
+
+#~ msgid "Incorrect password!"
+#~ msgstr "Contrasenya incorrecta!"
 
 #~ msgid "You are banned"
 #~ msgstr "Has sigut vetat"

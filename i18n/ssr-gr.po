@@ -105,7 +105,8 @@ msgstr ""
 msgid "Can not elevate the powerlevel of a role to yours"
 msgstr ""
 
-msgid "Can not have more than 20 faction roles"
+#, javascript-format
+msgid "Can not have more than ${ MAX_ROLES_PER_FACTION } faction roles"
 msgstr ""
 
 msgid "Can not have more than 20 invites per faction"
@@ -287,8 +288,8 @@ msgstr ""
 "Εάν δεν ζητήσατε αυτό το μήνυμα ηλεκτρονικού ταχυδρομείου, απλώς αγνοήστε το "
 "(η διεύθυνση IP που ζήτησε αυτό το μήνυμα ήταν ${ ip })."
 
-msgid "Incorrect password!"
-msgstr "Λάθος κωδικός!"
+msgid "Incorrect password"
+msgstr ""
 
 msgid "Invalid type of media"
 msgstr ""
@@ -605,6 +606,9 @@ msgid "This password-reset link isn't valid anymore :("
 msgstr ""
 "Αυτός ο σύνδεσμος επαναφοράς κωδικού πρόσβασης δεν είναι πλέον έγκυρος :("
 
+msgid "This user has not password set"
+msgstr ""
+
 msgid "This user is private"
 msgstr ""
 
@@ -884,6 +888,9 @@ msgstr ""
 "καλώς ήρθατε στη μικρή μας κοινότητα των pixelplacers, για να "
 "χρησιμοποιήσετε τον λογαριασμό σας, πρέπει να επαληθεύσετε την αλληλογραφία "
 "σας. Μπορείτε να το κάνετε εδώ: "
+
+#~ msgid "Incorrect password!"
+#~ msgstr "Λάθος κωδικός!"
 
 #~ msgid ""
 #~ "Generate a new client secret. The old secret will become invalid "

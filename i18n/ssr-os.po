@@ -101,7 +101,8 @@ msgstr ""
 msgid "Can not elevate the powerlevel of a role to yours"
 msgstr ""
 
-msgid "Can not have more than 20 faction roles"
+#, javascript-format
+msgid "Can not have more than ${ MAX_ROLES_PER_FACTION } faction roles"
 msgstr ""
 
 msgid "Can not have more than 20 invites per faction"
@@ -278,8 +279,8 @@ msgstr ""
 "Куы æнæ фæрсы дæ фыстæг ай, æнцонæй ницæмæ уый (IP-Адрис, кæцы æрфæрс фыстæг "
 "ай ${ip} у)."
 
-msgid "Incorrect password!"
-msgstr "Æнæраст парол!"
+msgid "Incorrect password"
+msgstr ""
 
 msgid "Invalid type of media"
 msgstr ""
@@ -595,6 +596,9 @@ msgstr ""
 msgid "This password-reset link isn't valid anymore :("
 msgstr "Дæнгæг ай паролы раппарæн уæлдай æнæтых :("
 
+msgid "This user has not password set"
+msgstr ""
+
 msgid "This user is private"
 msgstr ""
 
@@ -869,6 +873,9 @@ msgid ""
 msgstr ""
 "æгас цу нæ къаннæг æмбалдмæ пикселы бакуыстгæнæг, цæмæй спайда дæ аккаунт, "
 "Дары сфидар дæ пост. Гæнæн ис сараз ай ам: "
+
+#~ msgid "Incorrect password!"
+#~ msgstr "Æнæраст парол!"
 
 #, fuzzy
 #~ msgid "You are banned"

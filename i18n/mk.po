@@ -83,7 +83,7 @@ msgstr "Додадете мрежа (отштиклирајте ако ви тр
 msgid "Add Template"
 msgstr "Додадете шаблон"
 
-msgid "Add an Mail Adress here:"
+msgid "Add a new E-Mail Address here:"
 msgstr ""
 
 #. This if for moderation tools, it's not important to translate this
@@ -503,7 +503,7 @@ msgstr ""
 msgid "DM"
 msgstr "ДМ"
 
-msgid "Daily Pixel"
+msgid "Daily Pixels"
 msgstr ""
 
 msgid "Daily Pixels per Country"
@@ -531,6 +531,9 @@ msgid "Delete Account"
 msgstr "Избриши сметка"
 
 msgid "Delete Faction"
+msgstr ""
+
+msgid "Delete My Account"
 msgstr ""
 
 msgid "Delete the faction"
@@ -872,6 +875,9 @@ msgstr "Постави слика"
 
 msgid "Import templates"
 msgstr "Увезете шаблони"
+
+msgid "Incorrect password"
+msgstr ""
 
 msgid "Interval"
 msgstr "Интервал"
@@ -1237,9 +1243,6 @@ msgstr ""
 msgid "Ping"
 msgstr "Пинг"
 
-msgid "Pixel"
-msgstr ""
-
 msgid "Pixel Notify OFF"
 msgstr "Пикселска Активност Исклучена"
 
@@ -1252,6 +1255,9 @@ msgstr "Пиксел Протекција"
 msgid "Pixel protected"
 msgstr "Пиксел Одбранет"
 
+msgid "Pixels"
+msgstr ""
+
 msgid "Place color pixels on a large canvas with other players online!"
 msgstr "Ставете пиксели во боја на големо платно со други играчи на интернет!"
 
@@ -1260,9 +1266,6 @@ msgstr "Поставени Пиксели"
 
 msgid "Play a sound when new chat messages arrive"
 msgstr "Пуштете звук кога ќе пристигнете нови пораки за разговор"
-
-msgid "Player"
-msgstr "Играч"
 
 msgid "Players and Pixels per hour"
 msgstr "Играчи и пиксели на час"
@@ -1287,7 +1290,7 @@ msgstr "Компир Мод"
 msgid "Powerlevel"
 msgstr ""
 
-msgid "Powerlevel of this role. See table below for explenation."
+msgid "Powerlevel of this role. See table below for an explanation."
 msgstr ""
 
 #, javascript-format
@@ -1333,9 +1336,6 @@ msgstr "Приватен"
 
 msgid "Profile"
 msgstr "Профил"
-
-msgid "Public"
-msgstr ""
 
 msgid "Quick Actions"
 msgstr ""
@@ -1527,6 +1527,9 @@ msgstr "Пратен ви е маил со инструкции за да го �
 msgid "Serpentine"
 msgstr "Серпентин"
 
+msgid "Server Error"
+msgstr ""
+
 msgid "Server answered with gibberish :("
 msgstr "Серверот одговори со глупост :("
 
@@ -1674,6 +1677,13 @@ msgstr ""
 "од 5-ки и редење на 60-тите. Тој беше лансиран на 11-ти мај и остана активен "
 "со месеци додека не беше затворен на 30-ти ноември."
 
+msgid ""
+"This email / password combination got hacked and leaked. To protect this "
+"account, the password has been reset. Please use the \"Forgot my password\" "
+"function on the LogIn page to set a new password. In the future, consider "
+"not installing malware, Thank You."
+msgstr ""
+
 msgid "This faction has no invites"
 msgstr ""
 
@@ -1686,6 +1696,9 @@ msgid "This login may only work if your account is verified."
 msgstr ""
 
 msgid "This permission is required"
+msgstr ""
+
+msgid "This user has not password set"
 msgstr ""
 
 msgid "Timeout"
@@ -1903,8 +1916,8 @@ msgstr ""
 msgid "Yes"
 msgstr "Да"
 
-msgid "Yes, Delete My Account!"
-msgstr "Да , избришете го мојот Акаунт!"
+msgid "Yes, really delete Me"
+msgstr ""
 
 msgid "Yesterday"
 msgstr "Вчера"
@@ -2115,6 +2128,10 @@ msgstr "у излезено од рамка"
 msgid "z out of bounds"
 msgstr "z излезен од рамка"
 
+msgctxt "media-player"
+msgid "Player"
+msgstr ""
+
 msgctxt "keybinds"
 msgid "A"
 msgstr "А"
@@ -2174,6 +2191,21 @@ msgstr "W"
 msgctxt "keybinds"
 msgid "X"
 msgstr "Х"
+
+msgctxt "channel-list"
+msgid "Public"
+msgstr ""
+
+#. Column title of column indicating whether or not a faction is able to be joined in public
+msgctxt "statistics-table"
+msgid "Public"
+msgstr ""
+
+#~ msgid "Player"
+#~ msgstr "Играч"
+
+#~ msgid "Yes, Delete My Account!"
+#~ msgstr "Да , избришете го мојот Акаунт!"
 
 #~ msgid "You must enter a duration"
 #~ msgstr "Мора да внесете времетраење"

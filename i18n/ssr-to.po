@@ -103,7 +103,8 @@ msgstr ""
 msgid "Can not elevate the powerlevel of a role to yours"
 msgstr ""
 
-msgid "Can not have more than 20 faction roles"
+#, javascript-format
+msgid "Can not have more than ${ MAX_ROLES_PER_FACTION } faction roles"
 msgstr ""
 
 msgid "Can not have more than 20 invites per faction"
@@ -284,8 +285,8 @@ msgstr ""
 "Kapau naʻe ʻikai ke ke kole ʻa e meili ko ʻeni, kataki ʻo tukunoaʻi pe ia "
 "(ko e ip naʻa ne kole ʻa e meili ko ʻeni ko e ${ ip })."
 
-msgid "Incorrect password!"
-msgstr "ʻIkai tonu e lea fufuú!"
+msgid "Incorrect password"
+msgstr ""
 
 msgid "Invalid type of media"
 msgstr ""
@@ -606,6 +607,9 @@ msgstr ""
 "ʻOku ʻikai toe ʻaonga ʻa e fehokotakiʻanga fakafoʻou ko ʻeni ʻo e lea fufuú :"
 "("
 
+msgid "This user has not password set"
+msgstr ""
+
 msgid "This user is private"
 msgstr ""
 
@@ -886,6 +890,9 @@ msgid ""
 msgstr ""
 "talitali lelei ki homau kiʻi kolo pixelplacers, ke fakaʻaongaʻi hoʻo "
 "ʻakauni, kuo pau ke ke fakapapauʻi hoʻo meili. Te ke lava ʻo fai ia heni: "
+
+#~ msgid "Incorrect password!"
+#~ msgstr "ʻIkai tonu e lea fufuú!"
 
 #~ msgid "You are banned"
 #~ msgstr "ʻOku ke banned"

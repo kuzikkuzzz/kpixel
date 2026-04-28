@@ -105,7 +105,8 @@ msgstr ""
 msgid "Can not elevate the powerlevel of a role to yours"
 msgstr ""
 
-msgid "Can not have more than 20 faction roles"
+#, javascript-format
+msgid "Can not have more than ${ MAX_ROLES_PER_FACTION } faction roles"
 msgstr ""
 
 msgid "Can not have more than 20 invites per faction"
@@ -292,8 +293,8 @@ msgstr ""
 "Hvis du ikke anmodet om denne mail, ignorerer den bare (ip'en der anmodet om "
 "denne mail var ${ ip })."
 
-msgid "Incorrect password!"
-msgstr "Forkerte adgangskode!"
+msgid "Incorrect password"
+msgstr ""
 
 msgid "Invalid type of media"
 msgstr ""
@@ -621,6 +622,9 @@ msgstr ""
 msgid "This password-reset link isn't valid anymore :("
 msgstr "Dette adgangskode-nulstillings link er ikke længere gyldig :("
 
+msgid "This user has not password set"
+msgstr ""
+
 msgid "This user is private"
 msgstr ""
 
@@ -897,6 +901,9 @@ msgid ""
 msgstr ""
 "velkommen til vores lille samfund of pixelplacere, for at bruge din konto, "
 "har du brug for at bekræfte din mail. Du kan gøre det her: "
+
+#~ msgid "Incorrect password!"
+#~ msgstr "Forkerte adgangskode!"
 
 #~ msgid "Server error when deleting user."
 #~ msgstr "Serverfejl når man sletter bruger."

@@ -87,7 +87,7 @@ msgstr ""
 msgid "Add Template"
 msgstr "Tilføj skabelon"
 
-msgid "Add an Mail Adress here:"
+msgid "Add a new E-Mail Address here:"
 msgstr ""
 
 #. This if for moderation tools, it's not important to translate this
@@ -503,7 +503,7 @@ msgstr ""
 msgid "DM"
 msgstr "DM"
 
-msgid "Daily Pixel"
+msgid "Daily Pixels"
 msgstr ""
 
 msgid "Daily Pixels per Country"
@@ -531,6 +531,9 @@ msgid "Delete Account"
 msgstr "Slet Konto"
 
 msgid "Delete Faction"
+msgstr ""
+
+msgid "Delete My Account"
 msgstr ""
 
 msgid "Delete the faction"
@@ -881,6 +884,9 @@ msgstr "Billede Upload"
 
 msgid "Import templates"
 msgstr "Importér skabeloner"
+
+msgid "Incorrect password"
+msgstr ""
 
 msgid "Interval"
 msgstr "Interval"
@@ -1248,9 +1254,6 @@ msgstr "Phisk"
 msgid "Ping"
 msgstr "Ping"
 
-msgid "Pixel"
-msgstr ""
-
 msgid "Pixel Notify OFF"
 msgstr "Pixel Notificer Fra"
 
@@ -1263,6 +1266,9 @@ msgstr "Pixel Beskyttelse"
 msgid "Pixel protected"
 msgstr "Pixel beskyttet"
 
+msgid "Pixels"
+msgstr ""
+
 msgid "Place color pixels on a large canvas with other players online!"
 msgstr "Placer farvede pixels på en stor kanvas med andre spillere online!"
 
@@ -1271,9 +1277,6 @@ msgstr "Placerede Pixels"
 
 msgid "Play a sound when new chat messages arrive"
 msgstr "Spil en lyd når nye chat beskeder ankommer"
-
-msgid "Player"
-msgstr "Spiller"
 
 msgid "Players and Pixels per hour"
 msgstr "Spillere og Pixels per time"
@@ -1300,7 +1303,7 @@ msgstr "Kartoffeltilstand"
 msgid "Powerlevel"
 msgstr ""
 
-msgid "Powerlevel of this role. See table below for explenation."
+msgid "Powerlevel of this role. See table below for an explanation."
 msgstr ""
 
 #, javascript-format
@@ -1343,9 +1346,6 @@ msgstr "Privat"
 
 msgid "Profile"
 msgstr "Profil"
-
-msgid "Public"
-msgstr ""
 
 msgid "Quick Actions"
 msgstr "Hurtige Handlinger"
@@ -1537,6 +1537,9 @@ msgstr ""
 msgid "Serpentine"
 msgstr "Serpentin"
 
+msgid "Server Error"
+msgstr ""
+
 msgid "Server answered with gibberish :("
 msgstr "Server svarede med volapyk :("
 
@@ -1689,6 +1692,13 @@ msgstr ""
 "kompas med et 5s nedkøling og 60s stabling. Den blev iværksat i Maj 11th og "
 "forblev aktiv i måneder indtil det blev lukket ned i November 30th."
 
+msgid ""
+"This email / password combination got hacked and leaked. To protect this "
+"account, the password has been reset. Please use the \"Forgot my password\" "
+"function on the LogIn page to set a new password. In the future, consider "
+"not installing malware, Thank You."
+msgstr ""
+
 msgid "This faction has no invites"
 msgstr ""
 
@@ -1704,6 +1714,9 @@ msgstr ""
 
 msgid "This permission is required"
 msgstr "Denne tilladelse er nødvendig"
+
+msgid "This user has not password set"
+msgstr ""
 
 msgid "Timeout"
 msgstr "Timeout"
@@ -1920,8 +1933,8 @@ msgstr "DU KAN KUN VÆLGE DIT BRUGERNAVN ÉN GANG!"
 msgid "Yes"
 msgstr "Ja"
 
-msgid "Yes, Delete My Account!"
-msgstr "Ja, Slet Min Konto!"
+msgid "Yes, really delete Me"
+msgstr ""
 
 msgid "Yesterday"
 msgstr "I Går"
@@ -2141,6 +2154,10 @@ msgstr "y ud af grænserne"
 msgid "z out of bounds"
 msgstr "z ud af grænserne"
 
+msgctxt "media-player"
+msgid "Player"
+msgstr ""
+
 msgctxt "keybinds"
 msgid "A"
 msgstr "A"
@@ -2200,6 +2217,21 @@ msgstr "W"
 msgctxt "keybinds"
 msgid "X"
 msgstr "X"
+
+msgctxt "channel-list"
+msgid "Public"
+msgstr ""
+
+#. Column title of column indicating whether or not a faction is able to be joined in public
+msgctxt "statistics-table"
+msgid "Public"
+msgstr ""
+
+#~ msgid "Player"
+#~ msgstr "Spiller"
+
+#~ msgid "Yes, Delete My Account!"
+#~ msgstr "Ja, Slet Min Konto!"
 
 #~ msgid "Change your Mail Adress here:"
 #~ msgstr "Skift din Mail adresse her:"

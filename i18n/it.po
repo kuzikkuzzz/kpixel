@@ -88,7 +88,7 @@ msgstr "Aggiungi griglia (non usare se ti serve un template 1:1)"
 msgid "Add Template"
 msgstr "Download Template"
 
-msgid "Add an Mail Adress here:"
+msgid "Add a new E-Mail Address here:"
 msgstr ""
 
 #. This if for moderation tools, it's not important to translate this
@@ -509,7 +509,7 @@ msgstr ""
 msgid "DM"
 msgstr "DM"
 
-msgid "Daily Pixel"
+msgid "Daily Pixels"
 msgstr ""
 
 #, fuzzy
@@ -540,6 +540,9 @@ msgid "Delete Account"
 msgstr "Elimina l'Account"
 
 msgid "Delete Faction"
+msgstr ""
+
+msgid "Delete My Account"
 msgstr ""
 
 msgid "Delete the faction"
@@ -878,6 +881,9 @@ msgid "Image Upload"
 msgstr "Carica Immagine"
 
 msgid "Import templates"
+msgstr ""
+
+msgid "Incorrect password"
 msgstr ""
 
 msgid "Interval"
@@ -1246,9 +1252,6 @@ msgstr ""
 msgid "Ping"
 msgstr "Ping"
 
-msgid "Pixel"
-msgstr ""
-
 msgid "Pixel Notify OFF"
 msgstr "Notifiche Pixel DISATTIVE"
 
@@ -1261,6 +1264,9 @@ msgstr "Protezione pixel"
 msgid "Pixel protected"
 msgstr "Pixel protetto"
 
+msgid "Pixels"
+msgstr ""
+
 msgid "Place color pixels on a large canvas with other players online!"
 msgstr "Piazza pixel colorati su un canvas enorme con altri giocatori online!"
 
@@ -1269,9 +1275,6 @@ msgstr "Pixel piazzati"
 
 msgid "Play a sound when new chat messages arrive"
 msgstr "Riproduci un suono quando arriva un nuovo messaggio arriva in chat"
-
-msgid "Player"
-msgstr ""
 
 msgid "Players and Pixels per hour"
 msgstr "Player e pixel/ora"
@@ -1296,7 +1299,7 @@ msgstr "Modalità Spranga"
 msgid "Powerlevel"
 msgstr ""
 
-msgid "Powerlevel of this role. See table below for explenation."
+msgid "Powerlevel of this role. See table below for an explanation."
 msgstr ""
 
 #, javascript-format
@@ -1340,9 +1343,6 @@ msgstr "Privato"
 
 msgid "Profile"
 msgstr "Profilo"
-
-msgid "Public"
-msgstr ""
 
 msgid "Quick Actions"
 msgstr ""
@@ -1539,6 +1539,9 @@ msgstr ""
 msgid "Serpentine"
 msgstr "Serpentina"
 
+msgid "Server Error"
+msgstr ""
+
 msgid "Server answered with gibberish :("
 msgstr "Il server ha risposto confusonariamente :("
 
@@ -1688,6 +1691,13 @@ msgstr ""
 "con 5s di cooldown e 60s di stacking. E' stato lanciato l'11 maggio ed è "
 "rimasto attivo per mesi fino a quando non è stato spento il 30 novembre"
 
+msgid ""
+"This email / password combination got hacked and leaked. To protect this "
+"account, the password has been reset. Please use the \"Forgot my password\" "
+"function on the LogIn page to set a new password. In the future, consider "
+"not installing malware, Thank You."
+msgstr ""
+
 msgid "This faction has no invites"
 msgstr ""
 
@@ -1700,6 +1710,9 @@ msgid "This login may only work if your account is verified."
 msgstr ""
 
 msgid "This permission is required"
+msgstr ""
+
+msgid "This user has not password set"
 msgstr ""
 
 msgid "Timeout"
@@ -1914,8 +1927,8 @@ msgstr ""
 msgid "Yes"
 msgstr "Si"
 
-msgid "Yes, Delete My Account!"
-msgstr "Si, elimina il mio account!"
+msgid "Yes, really delete Me"
+msgstr ""
 
 msgid "Yesterday"
 msgstr "Ieri"
@@ -2125,6 +2138,10 @@ msgstr "y fuori dai bordi"
 msgid "z out of bounds"
 msgstr "z fuori dai bordi"
 
+msgctxt "media-player"
+msgid "Player"
+msgstr ""
+
 msgctxt "keybinds"
 msgid "A"
 msgstr ""
@@ -2185,6 +2202,18 @@ msgstr ""
 msgctxt "keybinds"
 msgid "X"
 msgstr ""
+
+msgctxt "channel-list"
+msgid "Public"
+msgstr ""
+
+#. Column title of column indicating whether or not a faction is able to be joined in public
+msgctxt "statistics-table"
+msgid "Public"
+msgstr ""
+
+#~ msgid "Yes, Delete My Account!"
+#~ msgstr "Si, elimina il mio account!"
 
 #~ msgid "You must enter a duration"
 #~ msgstr "Devi inserire una durata"

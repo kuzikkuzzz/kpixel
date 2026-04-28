@@ -85,7 +85,7 @@ msgstr "شبکه اضافه کن (تیک رو بردار اگر یک قالب ی
 msgid "Add Template"
 msgstr "دانلود قالب"
 
-msgid "Add an Mail Adress here:"
+msgid "Add a new E-Mail Address here:"
 msgstr ""
 
 #. This if for moderation tools, it's not important to translate this
@@ -506,7 +506,7 @@ msgstr ""
 msgid "DM"
 msgstr "پیام"
 
-msgid "Daily Pixel"
+msgid "Daily Pixels"
 msgstr ""
 
 #, fuzzy
@@ -537,6 +537,9 @@ msgid "Delete Account"
 msgstr "اکانتت رو پاک کن"
 
 msgid "Delete Faction"
+msgstr ""
+
+msgid "Delete My Account"
 msgstr ""
 
 msgid "Delete the faction"
@@ -876,6 +879,9 @@ msgid "Image Upload"
 msgstr "آپلود تصویر"
 
 msgid "Import templates"
+msgstr ""
+
+msgid "Incorrect password"
 msgstr ""
 
 msgid "Interval"
@@ -1244,9 +1250,6 @@ msgstr ""
 msgid "Ping"
 msgstr "پینگ"
 
-msgid "Pixel"
-msgstr ""
-
 msgid "Pixel Notify OFF"
 msgstr "هشدار دهنده پیکسل خاموش است"
 
@@ -1260,6 +1263,9 @@ msgstr "محافظت از پیکسل"
 msgid "Pixel protected"
 msgstr "ادمین ها بهت اجازه نمیدند اینجا پیکسل بذاری، محافظت شده"
 
+msgid "Pixels"
+msgstr ""
+
 msgid "Place color pixels on a large canvas with other players online!"
 msgstr "پیکسل های رنگی را روی یک بوم بزرگ با سایر بازیکنان آنلاین قرار دهید!"
 
@@ -1268,9 +1274,6 @@ msgstr "پیکسل های گذاشته شده"
 
 msgid "Play a sound when new chat messages arrive"
 msgstr "وقتی یه پیام جدید میاد یه صدایی بده"
-
-msgid "Player"
-msgstr ""
 
 msgid "Players and Pixels per hour"
 msgstr "پخش کننده و پیکسل در ساعت"
@@ -1295,7 +1298,7 @@ msgstr "حالت سیب زمینی"
 msgid "Powerlevel"
 msgstr ""
 
-msgid "Powerlevel of this role. See table below for explenation."
+msgid "Powerlevel of this role. See table below for an explanation."
 msgstr ""
 
 #, javascript-format
@@ -1339,9 +1342,6 @@ msgstr "خصوصی"
 
 msgid "Profile"
 msgstr "پروفایل"
-
-msgid "Public"
-msgstr ""
 
 msgid "Quick Actions"
 msgstr ""
@@ -1536,6 +1536,9 @@ msgstr "یک ایمیل فرستادیم با آموزش که پسوردتون �
 msgid "Serpentine"
 msgstr "شکل مارپیچ"
 
+msgid "Server Error"
+msgstr ""
+
 msgid "Server answered with gibberish :("
 msgstr "سرور با چرت و پرت جواب داد :("
 
@@ -1685,6 +1688,13 @@ msgstr ""
 "1024x1024 از قطب‌نمای سیاسی با خنک‌کردن 5s و انباشته شدن 60s بود. در 21 "
 "اردیبهشت راه اندازی شد و برای ماه ها فعال بود تا اینکه در 9 آذر تعطیل شد."
 
+msgid ""
+"This email / password combination got hacked and leaked. To protect this "
+"account, the password has been reset. Please use the \"Forgot my password\" "
+"function on the LogIn page to set a new password. In the future, consider "
+"not installing malware, Thank You."
+msgstr ""
+
 msgid "This faction has no invites"
 msgstr ""
 
@@ -1697,6 +1707,9 @@ msgid "This login may only work if your account is verified."
 msgstr ""
 
 msgid "This permission is required"
+msgstr ""
+
+msgid "This user has not password set"
 msgstr ""
 
 msgid "Timeout"
@@ -1912,8 +1925,8 @@ msgstr ""
 msgid "Yes"
 msgstr "آره"
 
-msgid "Yes, Delete My Account!"
-msgstr "آره، اکانتم رو پاک کن!"
+msgid "Yes, really delete Me"
+msgstr ""
 
 msgid "Yesterday"
 msgstr "دیروز"
@@ -2126,6 +2139,10 @@ msgstr "ایگرگ خارج از محدوده است"
 msgid "z out of bounds"
 msgstr "زد خارج از محدوده است"
 
+msgctxt "media-player"
+msgid "Player"
+msgstr ""
+
 msgctxt "keybinds"
 msgid "A"
 msgstr ""
@@ -2186,6 +2203,18 @@ msgstr ""
 msgctxt "keybinds"
 msgid "X"
 msgstr ""
+
+msgctxt "channel-list"
+msgid "Public"
+msgstr ""
+
+#. Column title of column indicating whether or not a faction is able to be joined in public
+msgctxt "statistics-table"
+msgid "Public"
+msgstr ""
+
+#~ msgid "Yes, Delete My Account!"
+#~ msgstr "آره، اکانتم رو پاک کن!"
 
 #~ msgid "You must enter a duration"
 #~ msgstr "باید مدت زمان را وارد کنید"

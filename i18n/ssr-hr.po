@@ -106,8 +106,9 @@ msgstr "Nije moguće podizanje powerlevela većeg od vašeg osobnog"
 msgid "Can not elevate the powerlevel of a role to yours"
 msgstr "Nije moguće podizanje powerlevela uloge na razinu vaše uloge"
 
-msgid "Can not have more than 20 faction roles"
-msgstr "Ne možete imati više od 20 uloga u fakciji"
+#, javascript-format
+msgid "Can not have more than ${ MAX_ROLES_PER_FACTION } faction roles"
+msgstr ""
 
 msgid "Can not have more than 20 invites per faction"
 msgstr "Ne možete imati više od 20 pozivnica po fakciji"
@@ -295,8 +296,8 @@ msgstr ""
 "Ako niste zatražili ovu poruku e-pošte, jednostavno je zanemarite (IP koji "
 "je zatražio ovu poruku e-pošte bio je ${ ip })."
 
-msgid "Incorrect password!"
-msgstr "Netočna lozinka!"
+msgid "Incorrect password"
+msgstr ""
 
 msgid "Invalid type of media"
 msgstr "Nevažeća vrsta medija"
@@ -626,6 +627,9 @@ msgstr "Ovaj medij je zabranjen ${ reason }. ID zabrane: ${ mbid }"
 msgid "This password-reset link isn't valid anymore :("
 msgstr "Ova veza za ponovno postavljanje lozinke više nije važeća :("
 
+msgid "This user has not password set"
+msgstr ""
+
 msgid "This user is private"
 msgstr "Ovaj korisnik je privatan"
 
@@ -906,6 +910,12 @@ msgid ""
 msgstr ""
 "dobrodošli u našu malu zajednicu postavljača pixela (pičkovca), da biste "
 "koristili svoj račun, morate potvrditi svoju poštu. To možete učiniti ovdje: "
+
+#~ msgid "Incorrect password!"
+#~ msgstr "Netočna lozinka!"
+
+#~ msgid "Can not have more than 20 faction roles"
+#~ msgstr "Ne možete imati više od 20 uloga u fakciji"
 
 #~ msgid "No file metadata given"
 #~ msgstr "Nisu navedeni metapodaci datoteke"

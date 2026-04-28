@@ -106,7 +106,8 @@ msgstr ""
 msgid "Can not elevate the powerlevel of a role to yours"
 msgstr ""
 
-msgid "Can not have more than 20 faction roles"
+#, javascript-format
+msgid "Can not have more than ${ MAX_ROLES_PER_FACTION } faction roles"
 msgstr ""
 
 msgid "Can not have more than 20 invites per faction"
@@ -290,8 +291,8 @@ msgstr ""
 "Se você não pediu esse e-mail, por favor ignore-o (o IP que pediu esse e-"
 "mail foi ${ ip })."
 
-msgid "Incorrect password!"
-msgstr "Senha errada!"
+msgid "Incorrect password"
+msgstr ""
 
 msgid "Invalid type of media"
 msgstr ""
@@ -608,6 +609,9 @@ msgstr ""
 msgid "This password-reset link isn't valid anymore :("
 msgstr "O link para trocar a senha não é mais valido :("
 
+msgid "This user has not password set"
+msgstr ""
+
 msgid "This user is private"
 msgstr ""
 
@@ -888,6 +892,9 @@ msgid ""
 msgstr ""
 "bem-vindo à nossa comunidade de colocadores de píxeis, para usar sua conta, "
 "você deve verificar seu e-mail. Você pode fazer isso aqui: "
+
+#~ msgid "Incorrect password!"
+#~ msgstr "Senha errada!"
 
 #~ msgid "You are banned"
 #~ msgstr "Você está banido"

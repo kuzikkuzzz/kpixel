@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: admin@pixelplanet.fun\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2026-04-23 08:30+0000\n"
-"Last-Translator: Extreme Motorsex <em@noreply.pixelplanet.fun>\n"
+"PO-Revision-Date: 2026-04-27 09:39+0000\n"
+"Last-Translator: Coldi <coldbaba50@gmail.com>\n"
 "Language-Team: Albanian <https://translate.gs-os.com/projects/ppfun/server/"
 "sq/>\n"
 "Language: sq\n"
@@ -107,8 +107,9 @@ msgstr "Nuk mund të ngritësh nivelin e fuqisë së një roli mbi tëndin"
 msgid "Can not elevate the powerlevel of a role to yours"
 msgstr "Nuk mund të ngritësh nivelin e fuqisë së një rolin me ty"
 
-msgid "Can not have more than 20 faction roles"
-msgstr "Nuk mund të kesh më shumë se 20 role të fraksionit"
+#, javascript-format
+msgid "Can not have more than ${ MAX_ROLES_PER_FACTION } faction roles"
+msgstr "Nuk mund të kesh më shum se ${ MAX_ROLES_PER_FACTION } role fraksioni"
 
 msgid "Can not have more than 20 invites per faction"
 msgstr "Nuk mund të kesh më shumë se 20 ftesa të fraksionit"
@@ -298,8 +299,8 @@ msgstr ""
 "Nëse nuk e keni kërkuar këtë email, thjesht injorojeni (ip-ja që e kërkoi "
 "këtë email ishte ${ ip })."
 
-msgid "Incorrect password!"
-msgstr "Fjalëkalim i gabuar!"
+msgid "Incorrect password"
+msgstr ""
 
 msgid "Invalid type of media"
 msgstr "Lloj i pavlefshëm media"
@@ -636,6 +637,9 @@ msgstr "Kjo media është e ndaluar ${ reason }. BID Media: ${ mbid }"
 msgid "This password-reset link isn't valid anymore :("
 msgstr "Kjo lidhje e rivendosjes së fjalëkalimit nuk është më e vlefshme :("
 
+msgid "This user has not password set"
+msgstr ""
+
 msgid "This user is private"
 msgstr "Ky përdorues është privat"
 
@@ -926,6 +930,12 @@ msgid ""
 msgstr ""
 "mirësevini në komunitetin tonë të vogël të pixelplacers, për të përdorur "
 "llogarinë tuaj, duhet të verifikoni emailin tuaj. Këtë mund ta bëni këtu: "
+
+#~ msgid "Incorrect password!"
+#~ msgstr "Fjalëkalim i gabuar!"
+
+#~ msgid "Can not have more than 20 faction roles"
+#~ msgstr "Nuk mund të kesh më shumë se 20 role të fraksionit"
 
 #~ msgid "No file metadata given"
 #~ msgstr "Nuk janë dhënë informacione shtesë për skedarin"

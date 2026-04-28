@@ -104,7 +104,8 @@ msgstr ""
 msgid "Can not elevate the powerlevel of a role to yours"
 msgstr ""
 
-msgid "Can not have more than 20 faction roles"
+#, javascript-format
+msgid "Can not have more than ${ MAX_ROLES_PER_FACTION } faction roles"
 msgstr ""
 
 msgid "Can not have more than 20 invites per faction"
@@ -285,8 +286,8 @@ msgstr ""
 "Ako niste zahtevali ovaj e-mail, ignorišite ga. (ip koji je pitao za ovaj "
 "email je ${ ip })."
 
-msgid "Incorrect password!"
-msgstr "Neispravna lozinka!"
+msgid "Incorrect password"
+msgstr ""
 
 msgid "Invalid type of media"
 msgstr ""
@@ -598,6 +599,9 @@ msgstr ""
 msgid "This password-reset link isn't valid anymore :("
 msgstr "Ovaj link za resetovanje lozinke ne radi više :("
 
+msgid "This user has not password set"
+msgstr ""
+
 msgid "This user is private"
 msgstr ""
 
@@ -871,6 +875,9 @@ msgid ""
 msgstr ""
 "Dobrodošli u našu malu publiku od piksel postavljača, verifikujte vaš e-"
 "mail. Možete to uraditi ovde: "
+
+#~ msgid "Incorrect password!"
+#~ msgstr "Neispravna lozinka!"
 
 #~ msgid "You are banned"
 #~ msgstr "Banovani ste"

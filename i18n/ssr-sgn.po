@@ -100,7 +100,8 @@ msgstr ""
 msgid "Can not elevate the powerlevel of a role to yours"
 msgstr ""
 
-msgid "Can not have more than 20 faction roles"
+#, javascript-format
+msgid "Can not have more than ${ MAX_ROLES_PER_FACTION } faction roles"
 msgstr ""
 
 msgid "Can not have more than 20 invites per faction"
@@ -278,7 +279,7 @@ msgstr ""
 "👋 🤞🤛👇👌☝️🤙 🤞👋 (👋🖐🤙 🤞👎 👋🖐✌️👋 ☝️🤙🤝🙌🤙🖖👋🤙🤚 👋🖐🤞🖖 👆✌️🤞👍 👐✌️"
 "🖖 ${ ip })."
 
-msgid "Incorrect password!"
+msgid "Incorrect password"
 msgstr ""
 
 msgid "Invalid type of media"
@@ -590,6 +591,9 @@ msgstr ""
 msgid "This password-reset link isn't valid anymore :("
 msgstr ""
 "👋🖐🤞🖖 👎✌️🖖🖖👐👌☝️🤚-☝️🤙🖖🤙👋 👍🤞👇👊 🤞🖖👇👋 🤜✌️👍🤞🤚 ✌️👇👏👆👌☝️🤙 😔"
+
+msgid "This user has not password set"
+msgstr ""
 
 msgid "This user is private"
 msgstr ""

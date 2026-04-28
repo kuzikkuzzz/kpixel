@@ -88,7 +88,7 @@ msgstr "Grid-ის დამატება (არ მონიშნოთ, �
 msgid "Add Template"
 msgstr "თემფლეითის დამატება"
 
-msgid "Add an Mail Adress here:"
+msgid "Add a new E-Mail Address here:"
 msgstr ""
 
 #. This if for moderation tools, it's not important to translate this
@@ -506,7 +506,7 @@ msgstr ""
 msgid "DM"
 msgstr "DM"
 
-msgid "Daily Pixel"
+msgid "Daily Pixels"
 msgstr ""
 
 #, fuzzy
@@ -536,6 +536,9 @@ msgid "Delete Account"
 msgstr "Ანგარიშის წაშლა"
 
 msgid "Delete Faction"
+msgstr ""
+
+msgid "Delete My Account"
 msgstr ""
 
 msgid "Delete the faction"
@@ -873,6 +876,9 @@ msgstr "სურათის ატვირთვა"
 
 msgid "Import templates"
 msgstr "თემფლეითების იმპორტირება"
+
+msgid "Incorrect password"
+msgstr ""
 
 msgid "Interval"
 msgstr "ინტერვალი"
@@ -1239,9 +1245,6 @@ msgstr ""
 msgid "Ping"
 msgstr "პინგი"
 
-msgid "Pixel"
-msgstr ""
-
 msgid "Pixel Notify OFF"
 msgstr "Pixel Notify გამორთულია"
 
@@ -1254,6 +1257,9 @@ msgstr "პიქსელის დაცვა"
 msgid "Pixel protected"
 msgstr "პიქსელი დაპროტექტებულია"
 
+msgid "Pixels"
+msgstr ""
+
 msgid "Place color pixels on a large canvas with other players online!"
 msgstr ""
 "განათავსეთ ფერადი პიქსელები დიდ კანვასზე ონლაინ სხვა მოთამაშეებთან ერთად!"
@@ -1263,9 +1269,6 @@ msgstr "დასმული პიქსელები"
 
 msgid "Play a sound when new chat messages arrive"
 msgstr "ახალი ჩეთის შეტყობინებების მოსვლისას ხმის დაკვრა"
-
-msgid "Player"
-msgstr ""
 
 msgid "Players and Pixels per hour"
 msgstr "მოთამაშეები და პიქსელები საათში"
@@ -1290,7 +1293,7 @@ msgstr "კარტოფილის რეჟიმი"
 msgid "Powerlevel"
 msgstr ""
 
-msgid "Powerlevel of this role. See table below for explenation."
+msgid "Powerlevel of this role. See table below for an explanation."
 msgstr ""
 
 #, javascript-format
@@ -1334,9 +1337,6 @@ msgstr "პირადი"
 
 msgid "Profile"
 msgstr "პროფილი"
-
-msgid "Public"
-msgstr ""
 
 msgid "Quick Actions"
 msgstr ""
@@ -1531,6 +1531,9 @@ msgstr "გამოგიგზავნეთ მეილი ინსტრ�
 msgid "Serpentine"
 msgstr "სერპენტინი"
 
+msgid "Server Error"
+msgstr ""
+
 msgid "Server answered with gibberish :("
 msgstr "სერვერმა უპასუხა უაზროდ :("
 
@@ -1677,6 +1680,13 @@ msgstr ""
 "დაწყობით. ის ამოქმედდა 11 მაისს და აქტიური იყო თვეების განმავლობაში, სანამ "
 "არ დაიხურა 30 ნოემბერს."
 
+msgid ""
+"This email / password combination got hacked and leaked. To protect this "
+"account, the password has been reset. Please use the \"Forgot my password\" "
+"function on the LogIn page to set a new password. In the future, consider "
+"not installing malware, Thank You."
+msgstr ""
+
 msgid "This faction has no invites"
 msgstr ""
 
@@ -1689,6 +1699,9 @@ msgid "This login may only work if your account is verified."
 msgstr ""
 
 msgid "This permission is required"
+msgstr ""
+
+msgid "This user has not password set"
 msgstr ""
 
 msgid "Timeout"
@@ -1908,8 +1921,8 @@ msgstr ""
 msgid "Yes"
 msgstr "დიახ"
 
-msgid "Yes, Delete My Account!"
-msgstr "დიახ, წაშალე ჩემი ანგარიში!"
+msgid "Yes, really delete Me"
+msgstr ""
 
 msgid "Yesterday"
 msgstr "გუშინ"
@@ -2118,6 +2131,10 @@ msgstr "კორდინატი ყ არასწორია"
 msgid "z out of bounds"
 msgstr "კორდინატი ზ არასწორია"
 
+msgctxt "media-player"
+msgid "Player"
+msgstr ""
+
 msgctxt "keybinds"
 msgid "A"
 msgstr "ა"
@@ -2177,6 +2194,18 @@ msgstr "წ"
 msgctxt "keybinds"
 msgid "X"
 msgstr "ხ"
+
+msgctxt "channel-list"
+msgid "Public"
+msgstr ""
+
+#. Column title of column indicating whether or not a faction is able to be joined in public
+msgctxt "statistics-table"
+msgid "Public"
+msgstr ""
+
+#~ msgid "Yes, Delete My Account!"
+#~ msgstr "დიახ, წაშალე ჩემი ანგარიში!"
 
 #~ msgid "You must enter a duration"
 #~ msgstr "თქვენ უნდა შეიყვანოთ ხანგრძლივობა"

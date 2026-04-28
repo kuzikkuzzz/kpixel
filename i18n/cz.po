@@ -90,7 +90,7 @@ msgstr "Přidat mřížku (zrušte zaškrtnutí jestli chcete 1:1 šablonu)"
 msgid "Add Template"
 msgstr "Přidat Šablonu"
 
-msgid "Add an Mail Adress here:"
+msgid "Add a new E-Mail Address here:"
 msgstr ""
 
 #. This if for moderation tools, it's not important to translate this
@@ -508,7 +508,7 @@ msgstr ""
 msgid "DM"
 msgstr "DM"
 
-msgid "Daily Pixel"
+msgid "Daily Pixels"
 msgstr ""
 
 msgid "Daily Pixels per Country"
@@ -536,6 +536,9 @@ msgid "Delete Account"
 msgstr "Odstranit Účet"
 
 msgid "Delete Faction"
+msgstr ""
+
+msgid "Delete My Account"
 msgstr ""
 
 msgid "Delete the faction"
@@ -871,6 +874,9 @@ msgstr "Nahrát Obrázek"
 
 msgid "Import templates"
 msgstr "Importovat šablony"
+
+msgid "Incorrect password"
+msgstr ""
 
 msgid "Interval"
 msgstr "Přestávka"
@@ -1237,9 +1243,6 @@ msgstr ""
 msgid "Ping"
 msgstr "Ping"
 
-msgid "Pixel"
-msgstr ""
-
 msgid "Pixel Notify OFF"
 msgstr "Vypnuty oznámení na pixely"
 
@@ -1252,6 +1255,9 @@ msgstr "Chránění pixely"
 msgid "Pixel protected"
 msgstr "Chráněný pixel"
 
+msgid "Pixels"
+msgstr ""
+
 msgid "Place color pixels on a large canvas with other players online!"
 msgstr "Položte barevné pixely na velkém plátnu s ostatními online hráči!"
 
@@ -1260,9 +1266,6 @@ msgstr "Položeno Pixelů"
 
 msgid "Play a sound when new chat messages arrive"
 msgstr "Hraje zvuk když se pošlou nové zprávy"
-
-msgid "Player"
-msgstr ""
 
 msgid "Players and Pixels per hour"
 msgstr "Hráči a Pixely za hodinu"
@@ -1287,7 +1290,7 @@ msgstr "Bramborový mod"
 msgid "Powerlevel"
 msgstr ""
 
-msgid "Powerlevel of this role. See table below for explenation."
+msgid "Powerlevel of this role. See table below for an explanation."
 msgstr ""
 
 #, javascript-format
@@ -1331,9 +1334,6 @@ msgstr "Privát"
 
 msgid "Profile"
 msgstr "Profil"
-
-msgid "Public"
-msgstr ""
 
 msgid "Quick Actions"
 msgstr ""
@@ -1526,6 +1526,9 @@ msgstr "Poslal vám mail s instrukcemi jak si resetovat heslo."
 msgid "Serpentine"
 msgstr "Serpentine"
 
+msgid "Server Error"
+msgstr ""
+
 msgid "Server answered with gibberish :("
 msgstr "Server odpověděl nesmyslem :("
 
@@ -1672,6 +1675,13 @@ msgstr ""
 "60s zásobníkem. Bylo to puštěno 11. Května a zůstalo to být aktivní několik "
 "měsíců než to bylo uzavřeno 30. Listopadu."
 
+msgid ""
+"This email / password combination got hacked and leaked. To protect this "
+"account, the password has been reset. Please use the \"Forgot my password\" "
+"function on the LogIn page to set a new password. In the future, consider "
+"not installing malware, Thank You."
+msgstr ""
+
 msgid "This faction has no invites"
 msgstr ""
 
@@ -1684,6 +1694,9 @@ msgid "This login may only work if your account is verified."
 msgstr ""
 
 msgid "This permission is required"
+msgstr ""
+
+msgid "This user has not password set"
 msgstr ""
 
 msgid "Timeout"
@@ -1898,8 +1911,8 @@ msgstr ""
 msgid "Yes"
 msgstr "Ano"
 
-msgid "Yes, Delete My Account!"
-msgstr "Ano, Odstraňte Mi Účet!"
+msgid "Yes, really delete Me"
+msgstr ""
 
 msgid "Yesterday"
 msgstr "Včera"
@@ -2108,6 +2121,10 @@ msgstr "y je mimo meze"
 msgid "z out of bounds"
 msgstr "z je mimo meze"
 
+msgctxt "media-player"
+msgid "Player"
+msgstr ""
+
 msgctxt "keybinds"
 msgid "A"
 msgstr "A"
@@ -2167,6 +2184,18 @@ msgstr "W"
 msgctxt "keybinds"
 msgid "X"
 msgstr "X"
+
+msgctxt "channel-list"
+msgid "Public"
+msgstr ""
+
+#. Column title of column indicating whether or not a faction is able to be joined in public
+msgctxt "statistics-table"
+msgid "Public"
+msgstr ""
+
+#~ msgid "Yes, Delete My Account!"
+#~ msgstr "Ano, Odstraňte Mi Účet!"
 
 #~ msgid "You must enter a duration"
 #~ msgstr "Musíš nastavit dobu"
