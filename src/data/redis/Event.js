@@ -75,14 +75,14 @@ export async function clearOldEvent() {
           );
           if (!chunk) {
             logger.warn(
-              // eslint-disable-next-line max-len
+
               `Couldn't get chunk event backup for ${ic}/${jc}, which is weird`,
             );
             continue;
           }
           if (chunk.length <= 1) {
             logger.info(
-              // eslint-disable-next-line max-len
+
               `Tiny chunk in event backup, not-generated chunk at ${ic}/${jc}`,
             );
             await RedisCanvas.delChunk(ic, jc, CANVAS_ID);

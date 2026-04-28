@@ -2,7 +2,7 @@
  *
  */
 
-import React, { useCallback } from 'react';
+import { Fragment, useCallback } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { c, t, jt } from 'ttag';
 import { GiMouse } from 'react-icons/gi';
@@ -91,10 +91,10 @@ const Help = () => {
       <p>IID</p>
       <GetIID />
       {(userId > 0) && (
-        <React.Fragment key="cui">
+        <Fragment key="cui">
           <p>UID</p>
           <p><ClipboardCopyField text={userId} /></p>
-        </React.Fragment>
+        </Fragment>
       )}
       <h3>2D {t`Controls`}</h3>
       <div style={{ lineHeight: 1.5 }}>

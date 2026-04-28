@@ -2,7 +2,7 @@
  * show IID
  */
 
-import React, { useState } from 'react';
+import { memo, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { t } from 'ttag';
 
@@ -30,30 +30,30 @@ const GetIID = () => {
       />
       {(!iid)
         ? (
-          <button
-            key="subtn"
-            type="button"
-            onClick={async () => {
-              setSubmitting(true);
-              const resp = await requestIID();
-              if (resp.iid) {
-                setIID(resp.iid);
-              }
-              setSubmitting(false);
-            }}
-          >{(submitting) ? '...' : t`Get IID`}</button>
-        ) : (
-          <button
-            key="cobtn"
-            type="button"
-            onClick={() => {
-              copyTextToClipboard(iid);
-              dispatch(notify(t`Copied`));
-            }}
-          >{t`Copy`}</button>
-        )}
+            <button
+              key="subtn"
+              type="button"
+              onClick={async () => {
+                setSubmitting(true);
+                const resp = await requestIID();
+                if (resp.iid) {
+                  setIID(resp.iid);
+                }
+                setSubmitting(false);
+              }}
+            >{(submitting) ? '...' : t`Get IID`}</button>
+          ) : (
+            <button
+              key="cobtn"
+              type="button"
+              onClick={() => {
+                copyTextToClipboard(iid);
+                dispatch(notify(t`Copied`));
+              }}
+            >{t`Copy`}</button>
+          )}
     </p>
   );
 };
 
-export default React.memo(GetIID);
+export default memo(GetIID);

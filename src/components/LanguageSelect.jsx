@@ -6,7 +6,7 @@
  *           [['hz', 'am'], ['de', 'de'], ...]
  *           [languageCode, countryCode (for flag)]
  */
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { t } from 'ttag';
 import { MONTH } from '../core/constants.js';
 import { cdn } from '../utils/utag.js';

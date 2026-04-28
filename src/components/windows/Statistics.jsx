@@ -4,7 +4,7 @@
 
 /* eslint-disable max-len */
 
-import React, { useMemo, useCallback, useContext } from 'react';
+import { memo, Fragment, useMemo, useCallback, useContext } from 'react';
 import { shallowEqual, useSelector, useDispatch } from 'react-redux';
 import { t } from 'ttag';
 import {
@@ -224,15 +224,15 @@ const Rankings = () => {
                   title={rank.cc}
                   className="tab-cc-cell"
                 ><img
-                  alt={rank.cc}
-                  src={cdn`/cf/${rank.cc}.gif`}
-                /></td>
+                    alt={rank.cc}
+                    src={cdn`/cf/${rank.cc}.gif`}
+                  /></td>
                 <td className="c-num">
                   {numberToStringFull(rank.px)}
                   {(cHourlyStats[rank.cc] > 0) && (
-                  <span className="c-last-hour">
+                    <span className="c-last-hour">
                     &nbsp;+{numberToString(cHourlyStats[rank.cc])}
-                  </span>
+                    </span>
                   )}
                 </td>
               </tr>
@@ -258,18 +258,18 @@ const Rankings = () => {
     <div className="content" key="factionpage">
       <div className="tab-container margin-container">
         {availableTabs.map((tab, ind) => (
-          <React.Fragment key={tab}>
+          <Fragment key={tab}>
             <span
               role="button"
               tabIndex={-1}
               className={
-              (activeTab === tab) ? 'modallink selected' : 'modallink'
-            }
+                (activeTab === tab) ? 'modallink selected' : 'modallink'
+              }
               onClick={() => setActiveTab(tab)}
             >{tabNames[tab]}</span>
             {(ind !== availableTabs.length - 1)
-            && <span className="hdivider" />}
-          </React.Fragment>
+              && <span className="hdivider" />}
+          </Fragment>
         ))}
         <div className="modaldivider" />
       </div>
@@ -281,4 +281,4 @@ const Rankings = () => {
   );
 };
 
-export default React.memo(Rankings);
+export default memo(Rankings);

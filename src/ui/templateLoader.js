@@ -82,9 +82,9 @@ class TemplateLoader {
     const templatesInView = this.#store.getState().templates.list
       .filter((template) => (
         template.enabled && template.canvasId === canvasId
-      && template.x <= x && template.y <= y
-      && template.x + template.width > x
-      && template.y + template.height > y
+        && template.x <= x && template.y <= y
+        && template.x + template.width > x
+        && template.y + template.height > y
       ));
 
     for (const tData of templatesInView) {

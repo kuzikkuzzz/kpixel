@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import { memo, useState, useRef } from 'react';
 
 import { stripQuery } from '../../core/utils.js';
 import usePostMessage from '../hooks/postMessage.js';
@@ -65,7 +65,7 @@ const Twitter = ({ url, fill }) => {
 };
 
 export default [
-  React.memo(Twitter),
+  memo(Twitter),
   (url) => {
     const statPos = url.indexOf(urlStr);
     if (statPos === -1 || statPos + urlStr.length + 1 >= url.length) {

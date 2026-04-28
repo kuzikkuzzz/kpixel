@@ -3,7 +3,7 @@
  * Menu for WASD keys for mobile users
  */
 
-import React, { useState, useCallback, useEffect } from 'react';
+import { useState, useCallback, useEffect } from 'react';
 import { useSelector, useDispatch, shallowEqual } from 'react-redux';
 import {
   PiMagnifyingGlassMinus,

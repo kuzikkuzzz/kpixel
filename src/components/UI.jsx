@@ -2,7 +2,7 @@
  *
  */
 
-import React from 'react';
+import { memo } from 'react';
 import { useSelector, shallowEqual } from 'react-redux';
 
 import CoolDownBox from './CoolDownBox.jsx';
@@ -59,4 +59,4 @@ const UI = () => {
   );
 };
 
-export default React.memo(UI);
+export default memo(UI);

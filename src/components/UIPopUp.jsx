@@ -2,7 +2,7 @@
  * UI for single-window popUp
  */
 
-import React, { useMemo, Suspense } from 'react';
+import { memo, useMemo, Suspense } from 'react';
 import { t } from 'ttag';
 import { useSelector, useDispatch } from 'react-redux';
 
@@ -54,16 +54,16 @@ const UIPopUp = () => {
         <WindowContext.Provider value={contextData}>
           {(windowType)
             ? (
-              <Suspense
-                fallback={<div className="content">{t`Loading...`}</div>}
-              >
-                <Content />
-              </Suspense>
-            ) : <h1>{t`Loading...`}</h1>}
+                <Suspense
+                  fallback={<div className="content">{t`Loading...`}</div>}
+                >
+                  <Content />
+                </Suspense>
+              ) : <h1>{t`Loading...`}</h1>}
         </WindowContext.Provider>
       </div>
     </div>
   );
 };
 
-export default React.memo(UIPopUp);
+export default memo(UIPopUp);

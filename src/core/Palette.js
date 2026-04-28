@@ -62,8 +62,8 @@ class Palette {
       i -= 1;
       const off = i * 3;
       if (rgb[off] === r
-          && rgb[off + 1] === g
-          && rgb[off + 2] === b
+        && rgb[off + 1] === g
+        && rgb[off + 2] === b
       ) {
         return i;
       }

@@ -1,4 +1,4 @@
-import React from 'react';
+import { memo } from 'react';
 
 import DirectLinkEmbed from './DirectLinkEmbed.jsx';
 
@@ -31,7 +31,7 @@ const BitChute = ({ url, fill, maxHeight }) => {
 };
 
 export default [
-  React.memo(BitChute),
+  memo(BitChute),
   getIdFromURL,
   getIdFromURL,
   '/embico/bitchute.png',

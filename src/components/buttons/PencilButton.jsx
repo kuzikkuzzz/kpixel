@@ -2,7 +2,7 @@
  *
  */
 
-import React, { useCallback } from 'react';
+import { memo, useCallback } from 'react';
 import { useSelector, useDispatch, shallowEqual } from 'react-redux';
 import { TbPencil, TbPencilMinus } from 'react-icons/tb';
 import { t } from 'ttag';
@@ -74,4 +74,4 @@ const PencilButton = () => {
   );
 };
 
-export default React.memo(PencilButton);
+export default memo(PencilButton);

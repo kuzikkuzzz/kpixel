@@ -165,7 +165,6 @@ export default function mainMenu(store) {
       /* t: This if for moderation tools, it's not important to translate this */
       text: (state.user.userlvl >= USERLVL.ADMIN) ? t`Admintools` : t`Modtools`,
     });
-    /* eslint-enable max-len */
   }
 
   if (state.templates.available) {

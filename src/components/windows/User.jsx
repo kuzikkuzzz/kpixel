@@ -1,9 +1,7 @@
 /*
  * User
  */
-import React, {
-  useState, useEffect, useContext,
-} from 'react';
+import { Fragment, useState, useEffect, useContext } from 'react';
 import { useSelector, useStore } from 'react-redux';
 import { t, jt } from 'ttag';
 import { IoIosRefresh } from 'react-icons/io';
@@ -135,11 +133,11 @@ const User = () => {
         <p>
           {jt`Represents ${activeFactionTitle} as ${activeFactionRoleName}`}
           {(userData.activeFactionRoleFlag) && (
-          <img
-            className="chatflag presentation"
-            src={cdn`${getUrlsFromMediaIdAndName(userData.activeFactionRoleFlag)[0]}`}
-            alt=""
-          />
+            <img
+              className="chatflag presentation"
+              src={cdn`${getUrlsFromMediaIdAndName(userData.activeFactionRoleFlag)[0]}`}
+              alt=""
+            />
           )}.&nbsp;
         </p>
       )}
@@ -238,54 +236,54 @@ const User = () => {
           }}
         ><IoIosRefresh /></button>
         {(ownUid !== 0 && ownUid && ownUid !== uid) && (
-        <React.Fragment key="user-actions">
-          <button
-            type="button"
-            title={(isBlocked) ? t`Unblock` : t`Block`}
-            onClick={() => {
-              setErrors([]);
-              store.dispatch(setUserBlock(uid, userData.name, !isBlocked));
-            }}
-          >
-            {(isBlocked) ? t`Unblock` : t`Block`}
-          </button>
-          <button
-            type="button"
-            title={t`DM`}
-            onClick={async (evt) => {
-              evt.stopPropagation();
-              /*
+          <Fragment key="user-actions">
+            <button
+              type="button"
+              title={(isBlocked) ? t`Unblock` : t`Block`}
+              onClick={() => {
+                setErrors([]);
+                store.dispatch(setUserBlock(uid, userData.name, !isBlocked));
+              }}
+            >
+              {(isBlocked) ? t`Unblock` : t`Block`}
+            </button>
+            <button
+              type="button"
+              title={t`DM`}
+              onClick={async (evt) => {
+                evt.stopPropagation();
+                /*
                 * if dm channel already exists,
                 * just switch
                 */
-              const { chat: { channels } } = store.getState();
-              const cids = Object.keys(channels);
-              for (let i = 0; i < cids.length; i += 1) {
-                const cid = cids[i];
-                if (channels[cid].length === 4 && channels[cid][3] === uid) {
-                  link('CHAT', {
-                    target: 'parent',
-                    args: { chatChannel: cid },
-                  });
-                  return;
+                const { chat: { channels } } = store.getState();
+                const cids = Object.keys(channels);
+                for (let i = 0; i < cids.length; i += 1) {
+                  const cid = cids[i];
+                  if (channels[cid].length === 4 && channels[cid][3] === uid) {
+                    link('CHAT', {
+                      target: 'parent',
+                      args: { chatChannel: cid },
+                    });
+                    return;
+                  }
                 }
-              }
-              const error = await store.dispatch(
-                startDm({ userId: uid }, (cid) => {
-                  link('CHAT', {
-                    target: 'parent',
-                    args: { chatChannel: cid },
-                  });
-                }, false),
-              );
-              if (error) {
-                setErrors([error]);
-              }
-            }}
-          >
-            {t`DM`}
-          </button>
-        </React.Fragment>
+                const error = await store.dispatch(
+                  startDm({ userId: uid }, (cid) => {
+                    link('CHAT', {
+                      target: 'parent',
+                      args: { chatChannel: cid },
+                    });
+                  }, false),
+                );
+                if (error) {
+                  setErrors([error]);
+                }
+              }}
+            >
+              {t`DM`}
+            </button>
+          </Fragment>
         )}
       </div>
     </div>

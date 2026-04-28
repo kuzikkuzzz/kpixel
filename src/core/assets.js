@@ -178,7 +178,6 @@ export async function sync() {
     const name = l.substring(0, seperator).trim();
     const description = l.substring(seperator + 1).trim();
     if (name.length && description.length) {
-      // eslint-disable-next-line no-await-in-loop
       await ensureBadgeExistence(name, description);
     }
   }

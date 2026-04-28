@@ -2,7 +2,7 @@
  * Item for list of Tamplates
  */
 
-import React, { useRef, useEffect } from 'react';
+import { memo, useRef, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { t } from 'ttag';
 
@@ -85,4 +85,4 @@ const TemplateItem = ({
   );
 };
 
-export default React.memo(TemplateItem);
+export default memo(TemplateItem);

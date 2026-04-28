@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import { memo, useContext } from 'react';
 import { t } from 'ttag';
 
 import WindowContext from '../context/window.js';
@@ -29,4 +29,4 @@ const Player = () => {
   );
 };
 
-export default React.memo(Player);
+export default memo(Player);

@@ -1,7 +1,7 @@
 /*
  * Form to LogIn, Register and reset password
  */
-import React, { useState, useCallback } from 'react';
+import { memo, Fragment, useState, useCallback } from 'react';
 import { useDispatch } from 'react-redux';
 import { t } from 'ttag';
 
@@ -196,7 +196,7 @@ const LogInForm = ({
         switch (page) {
           case 'login':
             return (
-              <React.Fragment key="log">
+              <Fragment key="log">
                 <h2>{t`Login with Name or Mail:`}</h2>
                 <form onSubmit={submitLogin}>
                   {errors.map((error) => (
@@ -245,7 +245,7 @@ const LogInForm = ({
                   </span>
                 </p>
                 {(!reauthenticate && window.ssv?.availableTp?.length > 0) && (
-                  <React.Fragment key="tp">
+                  <Fragment key="tp">
                     <h2>{t`or login with:`}</h2>
                     {window.ssv.availableTp.map((abbr) => {
                       const providerName = THREEPID_ABBR[abbr];
@@ -261,7 +261,7 @@ const LogInForm = ({
                         </a>
                       );
                     })}
-                  </React.Fragment>
+                  </Fragment>
                 )}
                 <h2>{t`or register here:`}</h2>
                 <button
@@ -270,23 +270,23 @@ const LogInForm = ({
                 >
                   {t`Register`}
                 </button>
-              </React.Fragment>
+              </Fragment>
             );
           case 'restore':
             return (
-              <React.Fragment key="rest">
+              <Fragment key="rest">
                 <h2>{t`Reset your password`}</h2>
                 {(success) ? (
-                  <React.Fragment key="succ">
+                  <Fragment key="succ">
                     <p className="modalmessage">
                       {t`Sent you a mail with instructions to reset your password.`}
                     </p>
                     <button type="button" onClick={changePage('login')}>
                       {t`Back`}
                     </button>
-                  </React.Fragment>
+                  </Fragment>
                 ) : (
-                  <React.Fragment key="do">
+                  <Fragment key="do">
                     <p>
                       {t`Enter your mail address and we will send you a new password:`}
                     </p><br />
@@ -310,13 +310,13 @@ const LogInForm = ({
                         {t`Cancel`}
                       </button>
                     </form>
-                  </React.Fragment>
+                  </Fragment>
                 )}
-              </React.Fragment>
+              </Fragment>
             );
           case 'register':
             return (
-              <React.Fragment key="rest">
+              <Fragment key="rest">
                 <h2>{t`Register new account here`}</h2>
                 <form onSubmit={submitRegister} className="client-form">
                   <div className="form-group">
@@ -417,7 +417,7 @@ const LogInForm = ({
                     </button>
                   </div>
                 </form>
-              </React.Fragment>
+              </Fragment>
             );
           default:
             return null;
@@ -427,4 +427,4 @@ const LogInForm = ({
   );
 };
 
-export default React.memo(LogInForm);
+export default memo(LogInForm);

@@ -2,7 +2,7 @@
  *
  */
 
-import React, { useCallback } from 'react';
+import { memo, useCallback } from 'react';
 import { useDispatch, useSelector, shallowEqual } from 'react-redux';
 import { t } from 'ttag';
 
@@ -68,28 +68,28 @@ Archived canvases can be accessed here:`}&nbsp;
       {
         (window.ssv?.backupurl
           && Object.keys(canvases).some((i) => canvases[i].ed))
-          && (
+        && (
           <>
             <h3>{t`Retired Canvases (history only)`}</h3>
             {
-            Object.keys(canvases).map((canvasId) => (
-              canvases[canvasId].ed
-              && (
-                <CanvasItem
-                  key={canvasId}
-                  online={online[canvasId]}
-                  canvasId={canvasId}
-                  canvas={canvases[canvasId]}
-                  selCanvas={selCanvas}
-                />
-              )
-            ))
-          }
+              Object.keys(canvases).map((canvasId) => (
+                canvases[canvasId].ed
+                && (
+                  <CanvasItem
+                    key={canvasId}
+                    online={online[canvasId]}
+                    canvasId={canvasId}
+                    canvas={canvases[canvasId]}
+                    selCanvas={selCanvas}
+                  />
+                )
+              ))
+            }
           </>
-          )
+        )
       }
     </div>
   );
 };
 
-export default React.memo(CanvasSelect);
+export default memo(CanvasSelect);

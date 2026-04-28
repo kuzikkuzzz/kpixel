@@ -92,7 +92,7 @@ export default class MString {
     let { iter } = this;
     for (;
       iter < this.txt.length && this.txt[iter] !== '\n'
-        && this.txt[iter] !== chr;
+      && this.txt[iter] !== chr;
       iter += 1
     );
     if (this.txt[iter] === chr) {

@@ -2,7 +2,7 @@
  * get information about ban
  */
 
-import React, { useState, useCallback } from 'react';
+import { memo, Fragment, useState, useCallback } from 'react';
 import { jt, t } from 'ttag';
 
 import useInterval from './hooks/interval.js';
@@ -127,7 +127,7 @@ const BanInfo = ({ close }) => {
       ))}
       <p>
         {(bans.length === 0) && (
-          <React.Fragment key="btnr">
+          <Fragment key="btnr">
             <button
               type="button"
               style={{
@@ -139,7 +139,7 @@ const BanInfo = ({ close }) => {
               {(submitting) ? '...' : t`Why?`}
             </button>
             &nbsp;
-          </React.Fragment>
+          </Fragment>
         )}
         <button type="submit" onClick={close}>{t`OK`}</button>
       </p>
@@ -147,4 +147,4 @@ const BanInfo = ({ close }) => {
   );
 };
 
-export default React.memo(BanInfo);
+export default memo(BanInfo);

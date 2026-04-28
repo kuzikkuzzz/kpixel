@@ -1,9 +1,7 @@
 /*
  * faction
  */
-import React, {
-  useState, useEffect, useContext, useCallback, useRef,
-} from 'react';
+import { Fragment, useState, useEffect, useContext, useCallback, useRef } from 'react';
 import { useDispatch } from 'react-redux';
 import { t } from 'ttag';
 import { RiSave3Line } from 'react-icons/ri';
@@ -308,7 +306,6 @@ const Faction = () => {
     }
     setConfirm(false);
     setSubmitting(false);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [recalculateMemberRoles]);
 
   const submitRemoveFactionRole = useCallback(async (uid, frid) => {
@@ -337,7 +334,6 @@ const Faction = () => {
     }
     setConfirm(false);
     setSubmitting(false);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [recalculateMemberRoles]);
 
   const submitDeleteFactionRole = useCallback(async (frid) => {
@@ -387,7 +383,6 @@ const Faction = () => {
     }
     setConfirm(false);
     setSubmitting(false);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const submitLiftBan = useCallback(async (fbid, factionName) => {
@@ -406,7 +401,6 @@ const Faction = () => {
     }
     setConfirm(false);
     setSubmitting(false);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const submitCreateRole = useCallback(async (evt) => {
@@ -494,7 +488,6 @@ const Faction = () => {
     }
     setConfirm(false);
     setSubmitting(false);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [name]);
 
   const submitDeleteInvite = useCallback(async (inviteId) => {
@@ -515,7 +508,6 @@ const Faction = () => {
     }
     setConfirm(false);
     setSubmitting(false);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   const submitEditRole = useCallback(async (evt, role) => {
@@ -800,7 +792,7 @@ const Faction = () => {
           value={faction.memberCount}
         />
         {(faction.roles.find((r) => r.customFlagId)) && (
-          <React.Fragment key="rolelist">
+          <Fragment key="rolelist">
             <span className="factionlist-key">{t`Role Flags`}: </span>
             {faction.roles.map(({ customFlagId, name: roleName }) => {
               const [flagUrl] = getUrlsFromMediaIdAndName(customFlagId);
@@ -817,7 +809,7 @@ const Faction = () => {
                 />
               );
             })}<br />
-          </React.Fragment>
+          </Fragment>
         )}
         <div className="form-actions">
           <ClipboardCopyField
@@ -953,128 +945,128 @@ const Faction = () => {
                         <span>{t`Error`}</span>:&nbsp;{error}</p>
                     ))}
                     {(canChangeMemberRoles) && (
-                    <React.Fragment key="changeroles">
-                      <span className="factionlist-key">{t`Remove Roles`}: </span>
-                      {faction.roles.filter((role) => memberRolesIds.includes(role.frid)).map((role) => {
-                        const [flagUrl] = getUrlsFromMediaIdAndName(role.customFlagId);
-                        let roleClassName = 'factionlist-role';
-                        const { factionlvl, frid } = role;
-                        const confirmString = `role-${frid}`;
-                        if (factionlvl >= 100) {
-                          roleClassName += ' powerlvl-sovereign';
-                        } else if (factionlvl >= 80) {
-                          roleClassName += ' powerlvl-magistrate';
-                        } else if (factionlvl >= 50) {
-                          roleClassName += ' powerlvl-noble';
-                        } else {
-                          roleClassName += ' powerlvl-peasant';
-                        }
-                        if (confirm === confirmString) {
-                          roleClassName += ' confirm';
-                        }
-                        return (
-                          <span
-                            key={role.frid}
-                            role="button"
-                            tabIndex={-1}
-                            className={roleClassName}
-                            onClick={() => {
-                              if (factionlvl >= 50 && confirm !== confirmString) {
-                                setConfirm(confirmString);
-                                return;
-                              }
-                              submitRemoveFactionRole(member.uid, role.frid);
-                            }}
-                          >
-                            {(flagUrl) && (
-                            <img
-                              className="chatflag presentation"
-                              src={cdn`${flagUrl}`}
-                              alt=""
-                            />
-                            )} {(confirm === confirmString && factionlvl >= 50) ? t`Confirm` : role.name}
-                          </span>
-                        );
-                      })}<br />
-                      <span className="factionlist-key">{t`Assign Roles`}: </span>
-                      {faction.roles.filter((role) => !memberRolesIds.includes(role.frid)).map((role) => {
-                        const [flagUrl] = getUrlsFromMediaIdAndName(role.customFlagId);
-                        let roleClassName = 'factionlist-role';
-                        const { factionlvl, frid } = role;
-                        const confirmString = `role-${frid}`;
-                        if (factionlvl >= 100) {
-                          roleClassName += ' powerlvl-sovereign';
-                        } else if (factionlvl >= 80) {
-                          roleClassName += ' powerlvl-magistrate';
-                        } else if (factionlvl >= 50) {
-                          roleClassName += ' powerlvl-noble';
-                        } else {
-                          roleClassName += ' powerlvl-peasant';
-                        }
-                        if (confirm === confirmString) {
-                          roleClassName += ' confirm';
-                        }
-                        return (
-                          <span
-                            key={frid}
-                            role="button"
-                            tabIndex={-1}
-                            className={roleClassName}
-                            onClick={() => {
-                              if (factionlvl >= 50 && confirm !== confirmString) {
-                                setConfirm(confirmString);
-                                return;
-                              }
-                              submitAddFactionRole(member.uid, frid);
-                            }}
-                          >
-                            {(flagUrl) && (
-                            <img
-                              className="chatflag"
-                              src={cdn`${flagUrl}`}
-                              alt=""
-                            />
-                            )} {(confirm === confirmString && factionlvl >= 50) ? t`Confirm` : role.name}
-                          </span>
-                        );
-                      })}<br />
-                      <span className="factionlist-key">{t`(click a role to assign or remove it)`}</span>
-                    </React.Fragment>
+                      <Fragment key="changeroles">
+                        <span className="factionlist-key">{t`Remove Roles`}: </span>
+                        {faction.roles.filter((role) => memberRolesIds.includes(role.frid)).map((role) => {
+                          const [flagUrl] = getUrlsFromMediaIdAndName(role.customFlagId);
+                          let roleClassName = 'factionlist-role';
+                          const { factionlvl, frid } = role;
+                          const confirmString = `role-${frid}`;
+                          if (factionlvl >= 100) {
+                            roleClassName += ' powerlvl-sovereign';
+                          } else if (factionlvl >= 80) {
+                            roleClassName += ' powerlvl-magistrate';
+                          } else if (factionlvl >= 50) {
+                            roleClassName += ' powerlvl-noble';
+                          } else {
+                            roleClassName += ' powerlvl-peasant';
+                          }
+                          if (confirm === confirmString) {
+                            roleClassName += ' confirm';
+                          }
+                          return (
+                            <span
+                              key={role.frid}
+                              role="button"
+                              tabIndex={-1}
+                              className={roleClassName}
+                              onClick={() => {
+                                if (factionlvl >= 50 && confirm !== confirmString) {
+                                  setConfirm(confirmString);
+                                  return;
+                                }
+                                submitRemoveFactionRole(member.uid, role.frid);
+                              }}
+                            >
+                              {(flagUrl) && (
+                                <img
+                                  className="chatflag presentation"
+                                  src={cdn`${flagUrl}`}
+                                  alt=""
+                                />
+                              )} {(confirm === confirmString && factionlvl >= 50) ? t`Confirm` : role.name}
+                            </span>
+                          );
+                        })}<br />
+                        <span className="factionlist-key">{t`Assign Roles`}: </span>
+                        {faction.roles.filter((role) => !memberRolesIds.includes(role.frid)).map((role) => {
+                          const [flagUrl] = getUrlsFromMediaIdAndName(role.customFlagId);
+                          let roleClassName = 'factionlist-role';
+                          const { factionlvl, frid } = role;
+                          const confirmString = `role-${frid}`;
+                          if (factionlvl >= 100) {
+                            roleClassName += ' powerlvl-sovereign';
+                          } else if (factionlvl >= 80) {
+                            roleClassName += ' powerlvl-magistrate';
+                          } else if (factionlvl >= 50) {
+                            roleClassName += ' powerlvl-noble';
+                          } else {
+                            roleClassName += ' powerlvl-peasant';
+                          }
+                          if (confirm === confirmString) {
+                            roleClassName += ' confirm';
+                          }
+                          return (
+                            <span
+                              key={frid}
+                              role="button"
+                              tabIndex={-1}
+                              className={roleClassName}
+                              onClick={() => {
+                                if (factionlvl >= 50 && confirm !== confirmString) {
+                                  setConfirm(confirmString);
+                                  return;
+                                }
+                                submitAddFactionRole(member.uid, frid);
+                              }}
+                            >
+                              {(flagUrl) && (
+                                <img
+                                  className="chatflag"
+                                  src={cdn`${flagUrl}`}
+                                  alt=""
+                                />
+                              )} {(confirm === confirmString && factionlvl >= 50) ? t`Confirm` : role.name}
+                            </span>
+                          );
+                        })}<br />
+                        <span className="factionlist-key">{t`(click a role to assign or remove it)`}</span>
+                      </Fragment>
                     )}
                     <div className="form-actions">
                       {(canBanMember) && (
-                      <React.Fragment key="kickban">
-                        <button
-                          type="button"
-                          className={confirm === 'kick' ? 'confirm' : undefined}
-                          disabled={submitting}
-                          onClick={() => {
-                            if (confirm !== 'kick') {
-                              setConfirm('kick');
-                              return;
-                            }
-                            submitKickBanMember(member.uid, name, false);
-                          }}
-                        >
-                          {/* t: button for kicking a user from a faction, it asks for confirmation */}
-                          {(confirm === 'kick') ? t`Confirm Kick` : t`Kick`}
-                        </button>
-                        <button
-                          type="button"
-                          className={confirm === 'ban' ? 'confirm' : undefined}
-                          disabled={submitting}
-                          onClick={() => {
-                            if (confirm !== 'ban') {
-                              setConfirm('ban');
-                              return;
-                            }
-                            submitKickBanMember(member.uid, name, true);
-                          }}
-                        >
-                          {/* t: button for banning a user from a faction, it asks for confirmation */}
-                          {(confirm === 'ban') ? t`Confirm Ban` : t`Ban`}
-                        </button>
-                      </React.Fragment>
+                        <Fragment key="kickban">
+                          <button
+                            type="button"
+                            className={confirm === 'kick' ? 'confirm' : undefined}
+                            disabled={submitting}
+                            onClick={() => {
+                              if (confirm !== 'kick') {
+                                setConfirm('kick');
+                                return;
+                              }
+                              submitKickBanMember(member.uid, name, false);
+                            }}
+                          >
+                            {/* t: button for kicking a user from a faction, it asks for confirmation */}
+                            {(confirm === 'kick') ? t`Confirm Kick` : t`Kick`}
+                          </button>
+                          <button
+                            type="button"
+                            className={confirm === 'ban' ? 'confirm' : undefined}
+                            disabled={submitting}
+                            onClick={() => {
+                              if (confirm !== 'ban') {
+                                setConfirm('ban');
+                                return;
+                              }
+                              submitKickBanMember(member.uid, name, true);
+                            }}
+                          >
+                            {/* t: button for banning a user from a faction, it asks for confirmation */}
+                            {(confirm === 'ban') ? t`Confirm Ban` : t`Ban`}
+                          </button>
+                        </Fragment>
                       )}
                       <button
                         type="button"
@@ -1155,7 +1147,7 @@ const Faction = () => {
     let roleContent;
     if (selected === '@create-role') {
       roleContent = (
-        <React.Fragment key="role-create">
+        <Fragment key="role-create">
           <h3>{t`Create Role`}</h3>
           <form onSubmit={submitCreateRole} className="client-form">
             <div className="form-group">
@@ -1229,12 +1221,12 @@ const Faction = () => {
               </button>
             </div>
           </form>
-        </React.Fragment>
+        </Fragment>
       );
     } else {
       const { roles } = faction;
       roleContent = (
-        <React.Fragment key="role-edit">
+        <Fragment key="role-edit">
           <div className="factionlist">{roles.map((role) => {
             const { frid, customFlagId, factionlvl, isProtected } = role;
             const [flagUrl] = getUrlsFromMediaIdAndName(customFlagId);
@@ -1413,7 +1405,7 @@ const Faction = () => {
               </button>
             </div>
           )}
-        </React.Fragment>
+        </Fragment>
       );
     }
 
@@ -1744,18 +1736,18 @@ const Faction = () => {
       <h3><span className={`factionlist-square powerlvl-${powerlvlName}`} /> [{faction.name}]</h3>
       <div className="tab-container">
         {availableTabs.map((tab, ind) => (
-          <React.Fragment key={tab}>
+          <Fragment key={tab}>
             <span
               role="button"
               tabIndex={-1}
               className={
-              (activeTab === tab) ? 'modallink selected' : 'modallink'
-            }
+                (activeTab === tab) ? 'modallink selected' : 'modallink'
+              }
               onClick={() => setActiveTab(tab)}
             >{tabNames[tab]}</span>
             {(ind !== availableTabs.length - 1)
-            && <span className="hdivider" />}
-          </React.Fragment>
+              && <span className="hdivider" />}
+          </Fragment>
         ))}
         <div className="modaldivider" />
         {!didPrintErrors && errors.map((error) => (

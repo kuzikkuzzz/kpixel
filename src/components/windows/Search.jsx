@@ -1,9 +1,7 @@
 /*
  * Search for users and factions
  */
-import React, {
-  useState, useContext, useCallback,
-} from 'react';
+import { Fragment, useState, useContext, useCallback } from 'react';
 import { t } from 'ttag';
 
 import WindowContext from '../context/window.js';
@@ -60,18 +58,18 @@ const Search = () => {
       <h2>{t`Search`}</h2>
       <div className="tab-container">
         {availableTabs.map((tab, ind) => (
-          <React.Fragment key={tab}>
+          <Fragment key={tab}>
             <span
               role="button"
               tabIndex={-1}
               className={
-              (activeTab === tab) ? 'modallink selected' : 'modallink'
-            }
+                (activeTab === tab) ? 'modallink selected' : 'modallink'
+              }
               onClick={() => setActiveTab(tab)}
             >{tabNames[tab]}</span>
             {(ind !== availableTabs.length - 1)
-            && <span className="hdivider" />}
-          </React.Fragment>
+              && <span className="hdivider" />}
+          </Fragment>
         ))}
         <div className="modaldivider" />
         {errors.map((error) => (

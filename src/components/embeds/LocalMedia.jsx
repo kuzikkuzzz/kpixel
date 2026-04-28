@@ -3,7 +3,7 @@
  */
 /* eslint-disable jsx-a11y/media-has-caption */
 
-import React, { useState, useMemo, useContext } from 'react';
+import { memo, Fragment, useState, useMemo, useContext } from 'react';
 import { useSelector } from 'react-redux';
 import { t } from 'ttag';
 import { MdFileDownload } from 'react-icons/md';
@@ -241,7 +241,7 @@ const LocalMedia = ({
           <MdFileDownload />
         </a>
         {(!fill) && (
-          <React.Fragment key="fillbtn">
+          <Fragment key="fillbtn">
             <span
               onClick={(evt) => {
                 evt.stopPropagation();
@@ -268,7 +268,7 @@ const LocalMedia = ({
             >
               <HiStop />
             </span>
-          </React.Fragment>
+          </Fragment>
         )}
       </span>
     </div>
@@ -276,7 +276,7 @@ const LocalMedia = ({
 };
 
 export default [
-  React.memo(LocalMedia),
+  memo(LocalMedia),
   (url) => {
     const [path, ext] = splitUrl(url);
     if (!ext || !path.startsWith('/m/') || path[4] === '/') {

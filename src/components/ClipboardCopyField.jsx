@@ -1,4 +1,3 @@
-import React from 'react';
 import { useDispatch } from 'react-redux';
 import { FaLink } from 'react-icons/fa';
 import { t } from 'ttag';

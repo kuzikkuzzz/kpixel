@@ -1,7 +1,7 @@
 /*
  * Menu Button on top left
  */
-import React, { useContext } from 'react';
+import { useContext } from 'react';
 
 import { MdExpandMore, MdExpandLess } from 'react-icons/md';
 import MenuContext from '../context/menu.js';

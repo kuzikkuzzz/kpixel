@@ -49,24 +49,24 @@ if (!REDIS_URL || !BACKUP_REDIS_URL || !BACKUP_DIR) {
 const canvasRedis = createClient(REDIS_URL
   .startsWith('redis://')
   ? {
-    url: REDIS_URL,
-  }
+      url: REDIS_URL,
+    }
   : {
-    socket: {
-      path: REDIS_URL,
+      socket: {
+        path: REDIS_URL,
+      },
     },
-  },
 );
 const backupRedis = createClient(BACKUP_REDIS_URL
   .startsWith('redis://')
   ? {
-    url: BACKUP_REDIS_URL,
-  }
+      url: BACKUP_REDIS_URL,
+    }
   : {
-    socket: {
-      path: BACKUP_REDIS_URL,
+      socket: {
+        path: BACKUP_REDIS_URL,
+      },
     },
-  },
 );
 //
 canvasRedis.on('error', () => {

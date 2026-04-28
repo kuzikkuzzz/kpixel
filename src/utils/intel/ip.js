@@ -143,7 +143,7 @@ export function hexToIP(hex) {
   if (hex.length === 8) {
     // IPv4
     let i = 0;
-    // eslint-disable-next-line no-constant-condition
+
     while (true) {
       ip += parseInt(hex.slice(i, i += 2), 16).toString(10);
       if (i >= 8) break;

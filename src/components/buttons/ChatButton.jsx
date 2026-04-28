@@ -2,7 +2,7 @@
  *
  */
 
-import React from 'react';
+import { memo } from 'react';
 import { useSelector, useDispatch, shallowEqual } from 'react-redux';
 import { MdForum } from 'react-icons/md';
 import { t } from 'ttag';
@@ -46,4 +46,4 @@ const ChatButton = () => {
   );
 };
 
-export default React.memo(ChatButton);
+export default memo(ChatButton);

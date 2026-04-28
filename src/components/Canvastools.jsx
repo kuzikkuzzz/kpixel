@@ -2,7 +2,7 @@
  * ModCanvastools
  */
 
-import React, { useState } from 'react';
+import { memo, Fragment, useState } from 'react';
 import { useSelector, shallowEqual, useDispatch } from 'react-redux';
 import { t } from 'ttag';
 
@@ -254,7 +254,7 @@ function ModCanvastools() {
         </select>
       </p>
       {(userlvl >= USERLVL.MOD) && (
-        <React.Fragment key="imgup">
+        <Fragment key="imgup">
           <div className="modaldivider" />
           <h3>{t`Image Upload`}</h3>
           <p>{t`Upload images to canvas`}</p>
@@ -322,7 +322,7 @@ function ModCanvastools() {
             {(submitting) ? '...' : t`Submit`}
           </button>
           <br />
-        </React.Fragment>
+        </Fragment>
       )}
       <div className="modaldivider" />
       <h3>{t`Pixel Protection`}</h3>
@@ -415,12 +415,12 @@ function ModCanvastools() {
       </button>
       <br />
       {(window.ssv && window.ssv.backupurl) && (
-        <React.Fragment key="rlbb">
+        <Fragment key="rlbb">
           <div className="modaldivider" />
           <h3>{t`Rollback to Date`}</h3>
           <p>
             {
-              // eslint-disable-next-line max-len
+
               t`Rollback an area of the canvas to a set date and time`
             }
           </p>
@@ -492,10 +492,10 @@ function ModCanvastools() {
             {(submitting) ? '...' : t`Submit`}
           </button>
           <br />
-        </React.Fragment>
+        </Fragment>
       )}
       {(userlvl >= USERLVL.MOD) && (
-        <React.Fragment key="cnvcln">
+        <Fragment key="cnvcln">
           <div className="modaldivider" />
           <h3>{t`Canvas Cleaner`}</h3>
           <p>
@@ -612,10 +612,10 @@ function ModCanvastools() {
           >
             {(submitting) ? '...' : t`Stop Cleaner`}
           </button>
-        </React.Fragment>
+        </Fragment>
       )}
     </div>
   );
 }
 
-export default React.memo(ModCanvastools);
+export default memo(ModCanvastools);

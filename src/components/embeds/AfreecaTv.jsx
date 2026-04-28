@@ -1,4 +1,4 @@
-import React from 'react';
+import { memo } from 'react';
 
 import DirectLinkEmbed from './DirectLinkEmbed.jsx';
 
@@ -44,7 +44,7 @@ const AfreecaTv = ({ url, fill, maxHeight }) => {
 };
 
 export default [
-  React.memo(AfreecaTv),
+  memo(AfreecaTv),
   getIdFromURL,
   getIdFromURL,
   '/embico/afreecatv.png',

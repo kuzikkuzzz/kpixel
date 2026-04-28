@@ -2,7 +2,7 @@
  *
  */
 
-import React, { useState, useEffect } from 'react';
+import { memo, useState, useEffect } from 'react';
 import { useDispatch, useSelector, shallowEqual } from 'react-redux';
 
 import { selectColor } from '../store/actions/index.js';
@@ -157,4 +157,4 @@ const Palette = () => {
   );
 };
 
-export default React.memo(Palette);
+export default memo(Palette);

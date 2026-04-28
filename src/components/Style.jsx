@@ -2,7 +2,7 @@
  *
  */
 
-import React from 'react';
+import { memo } from 'react';
 import { useSelector } from 'react-redux';
 import { cdn } from '../utils/utag.js';
 
@@ -19,4 +19,4 @@ function Style() {
     : (<link rel="stylesheet" type="text/css" href={cdn`${cssUri}`} />);
 }
 
-export default React.memo(Style);
+export default memo(Style);

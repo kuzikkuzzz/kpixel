@@ -270,7 +270,7 @@ export async function registerMedia(
 
     if (pHash) {
       await conn.query(
-        // eslint-disable-next-line max-len
+
         'INSERT INTO ImageHashes (mid, pHash) VALUES (?, CONV(?, 16, 10))',
         [result.insertId, pHash],
       );

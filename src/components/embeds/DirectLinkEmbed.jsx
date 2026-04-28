@@ -1,4 +1,4 @@
-import React from 'react';
+import { memo } from 'react';
 
 const DirectLinkEmbed = ({
   url, fill, maxHeight, aspectRatio = 56.35, strictReferrer,
@@ -44,7 +44,7 @@ const DirectLinkEmbed = ({
 };
 
 export default [
-  React.memo(DirectLinkEmbed),
+  memo(DirectLinkEmbed),
   () => true,
   null,
   '/embico/direct.png',

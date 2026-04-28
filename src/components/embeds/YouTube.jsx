@@ -1,4 +1,4 @@
-import React from 'react';
+import { memo } from 'react';
 
 import DirectLinkEmbed from './DirectLinkEmbed.jsx';
 
@@ -43,7 +43,7 @@ const YouTube = ({ url, fill, maxHeight }) => {
 };
 
 export default [
-  React.memo(YouTube),
+  memo(YouTube),
   getIdFromURL,
   getIdFromURL,
   '/embico/youtube.png',

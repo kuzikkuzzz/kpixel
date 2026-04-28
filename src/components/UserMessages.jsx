@@ -1,7 +1,7 @@
 /*
  * Messages on top of UserArea
  */
-import React, { useState } from 'react';
+import { memo, Fragment, useState } from 'react';
 import { useSelector } from 'react-redux';
 import { t } from 'ttag';
 
@@ -26,7 +26,7 @@ const UserMessages = () => {
             {(verifyAnswer) ? (
               <span style={{ fontWeight: 'bold' }}>{verifyAnswer}</span>
             ) : (
-              <React.Fragment key="umv">
+              <Fragment key="umv">
                 {
                   // eslint-disable-next-line max-len
                   t`Please verify your mail address or add a new one, otherwise your account could get deleted in the future.`
@@ -47,7 +47,7 @@ const UserMessages = () => {
                 >
                   {t`Click here to request a new verification mail.`}
                 </span>
-              </React.Fragment>
+              </Fragment>
             )}
           </p>
         )}
@@ -59,4 +59,4 @@ const UserMessages = () => {
   );
 };
 
-export default React.memo(UserMessages);
+export default memo(UserMessages);

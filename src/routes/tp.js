@@ -327,7 +327,7 @@ router.get('/r/:abbr', parseDevice, async (req, res) => {
   if (!userData) {
     preferredName = await getNameThatIsNotTaken(preferredName);
     console.log(
-      // eslint-disable-next-line max-len
+
       `TP LOGIN: Create new user from ${providerName} oauth login ${tpid}`,
     );
     userData = await createNewUser(preferredName, null);

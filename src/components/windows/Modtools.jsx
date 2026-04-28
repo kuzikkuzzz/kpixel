@@ -1,7 +1,7 @@
 /*
  * Modtools
  */
-import React, { useLayoutEffect, useContext, useCallback } from 'react';
+import { memo, Fragment, useLayoutEffect, useContext, useCallback } from 'react';
 import { useSelector } from 'react-redux';
 
 import WindowContext from '../context/window.js';
@@ -71,7 +71,7 @@ function Modtools() {
           className="content tab-container margin-container"
         >
           {parts.map((part, ind) => (
-            <React.Fragment key={part}>
+            <Fragment key={part}>
               <span
                 role="button"
                 tabIndex={-1}
@@ -82,7 +82,7 @@ function Modtools() {
               >{part}</span>
               {(ind !== parts.length - 1)
                 && <span className="hdivider" />}
-            </React.Fragment>
+            </Fragment>
           ))}
           <div className="modaldivider" />
         </div>
@@ -92,4 +92,4 @@ function Modtools() {
   );
 }
 
-export default React.memo(Modtools);
+export default memo(Modtools);

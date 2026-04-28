@@ -1,7 +1,7 @@
 /*
  * user faction overview
  */
-import React, { useMemo, useState, useCallback, useRef } from 'react';
+import { Fragment, useMemo, useState, useCallback, useRef } from 'react';
 import { useDispatch } from 'react-redux';
 import { t, jt } from 'ttag';
 
@@ -275,16 +275,16 @@ const MyFactions = () => {
           <span>{t`Error`}</span>:&nbsp;{error}</p>
       ))}
       {(factions.length > 0) ? (
-        <React.Fragment key="fl">
+        <Fragment key="fl">
           {(activeFaction) ? (
             <p key="pres">
               {jt`You are currently representing ${activeFactionTitle} as ${activeRoleName}`}
               {(activeCustomFlagId) && (
-              <img
-                className="chatflag"
-                src={cdn`${getUrlsFromMediaIdAndName(activeCustomFlagId)[0]}`}
-                alt=""
-              />
+                <img
+                  className="chatflag"
+                  src={cdn`${getUrlsFromMediaIdAndName(activeCustomFlagId)[0]}`}
+                  alt=""
+                />
               )}.&nbsp;
               <span
                 role="button"
@@ -342,12 +342,12 @@ const MyFactions = () => {
                 tabIndex={0}
               >
                 {(thumb) && (
-                <img
-                  src={cdn`${thumb}`}
-                  loading="lazy"
-                  className="factionlist-avatar"
-                  alt=""
-                />
+                  <img
+                    src={cdn`${thumb}`}
+                    loading="lazy"
+                    className="factionlist-avatar"
+                    alt=""
+                  />
                 )}
                 <span className={`factionlist-square powerlvl-${powerlvl}`} />
                 <span className={titleClass}>{faction.title}</span>
@@ -365,44 +365,44 @@ const MyFactions = () => {
                   <div className="factionlist-edit">
                     <span className="factionlist-key">{t`Description`}: </span>{faction.description}<br />
                     {(faction.roles.length > 0) && (
-                    <React.Fragment key="role-list">
-                      <span className="factionlist-key">{t`Your Roles`}: </span>
-                      {faction.roles.filter((role) => role.isMember).map((role) => {
-                        const [flagUrl] = getUrlsFromMediaIdAndName(role.customFlagId);
-                        let roleClassName = 'factionlist-role';
-                        if (role.frid === activeFactionRole) {
-                          roleClassName += ' active';
-                        }
-                        const { factionlvl } = role;
-                        if (factionlvl >= 100) {
-                          roleClassName += ' powerlvl-sovereign';
-                        } else if (factionlvl >= 80) {
-                          roleClassName += ' powerlvl-magistrate';
-                        } else if (factionlvl >= 50) {
-                          roleClassName += ' powerlvl-noble';
-                        } else {
-                          roleClassName += ' powerlvl-peasant';
-                        }
-                        return (
-                          <span
-                            key={role.frid}
-                            role="button"
-                            tabIndex={-1}
-                            className={roleClassName}
-                            onClick={() => setActiveRole(role.frid)}
-                          >
-                            {(flagUrl) && (
-                              <img
-                                className="chatflag"
-                                src={cdn`${flagUrl}`}
-                                alt=""
-                              />
-                            )} {role.name}
-                          </span>
-                        );
-                      })}<br />
-                      <span className="factionlist-key">{t`(click a role to activate it)`}</span><br />
-                    </React.Fragment>
+                      <Fragment key="role-list">
+                        <span className="factionlist-key">{t`Your Roles`}: </span>
+                        {faction.roles.filter((role) => role.isMember).map((role) => {
+                          const [flagUrl] = getUrlsFromMediaIdAndName(role.customFlagId);
+                          let roleClassName = 'factionlist-role';
+                          if (role.frid === activeFactionRole) {
+                            roleClassName += ' active';
+                          }
+                          const { factionlvl } = role;
+                          if (factionlvl >= 100) {
+                            roleClassName += ' powerlvl-sovereign';
+                          } else if (factionlvl >= 80) {
+                            roleClassName += ' powerlvl-magistrate';
+                          } else if (factionlvl >= 50) {
+                            roleClassName += ' powerlvl-noble';
+                          } else {
+                            roleClassName += ' powerlvl-peasant';
+                          }
+                          return (
+                            <span
+                              key={role.frid}
+                              role="button"
+                              tabIndex={-1}
+                              className={roleClassName}
+                              onClick={() => setActiveRole(role.frid)}
+                            >
+                              {(flagUrl) && (
+                                <img
+                                  className="chatflag"
+                                  src={cdn`${flagUrl}`}
+                                  alt=""
+                                />
+                              )} {role.name}
+                            </span>
+                          );
+                        })}<br />
+                        <span className="factionlist-key">{t`(click a role to activate it)`}</span><br />
+                      </Fragment>
                     )}
                     <input
                       type="checkbox"
@@ -455,7 +455,7 @@ const MyFactions = () => {
             }
             return item;
           })}</div>
-        </React.Fragment>
+        </Fragment>
       ) : (
         <p key="nofl">{t`You are currently not a member of any faction.`}</p>
       )}

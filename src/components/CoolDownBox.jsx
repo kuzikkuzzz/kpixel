@@ -2,7 +2,7 @@
  *
  */
 
-import React from 'react';
+import { memo } from 'react';
 import { useSelector } from 'react-redux';
 
 import {
@@ -23,4 +23,4 @@ const CoolDownBox = () => {
   );
 };
 
-export default React.memo(CoolDownBox);
+export default memo(CoolDownBox);

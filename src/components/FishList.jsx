@@ -1,7 +1,7 @@
 /*
  * List of caught fishes inside profile
  */
-import React, { useState } from 'react';
+import { memo, useState } from 'react';
 import { t } from 'ttag';
 
 import useLink from './hooks/link.js';
@@ -72,4 +72,4 @@ const FishList = ({ fishes }) => {
   );
 };
 
-export default React.memo(FishList);
+export default memo(FishList);

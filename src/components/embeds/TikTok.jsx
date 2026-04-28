@@ -1,4 +1,4 @@
-import React from 'react';
+import { memo } from 'react';
 
 import { stripQuery } from '../../core/utils.js';
 
@@ -34,9 +34,9 @@ const TikTok = ({ url, fill }) => {
           width: 320,
         }}
         src={
-        // eslint-disable-next-line max-len
-        `https://www.tiktok.com/embed/v2/${tid}`
-      }
+
+          `https://www.tiktok.com/embed/v2/${tid}`
+        }
         frameBorder="0"
         referrerPolicy="no-referrer"
         allow="autoplay"
@@ -51,7 +51,7 @@ const TikTok = ({ url, fill }) => {
 };
 
 export default [
-  React.memo(TikTok),
+  memo(TikTok),
   (url) => url.includes('/video/'),
   (url) => getUserFromUrl(url),
   '/embico/tiktok.png',

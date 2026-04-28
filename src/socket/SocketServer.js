@@ -370,7 +370,7 @@ class SocketServer {
         ws._sender.sendFrame(frames, (err) => {
           if (err) {
             logger.error(
-              // eslint-disable-next-line max-len
+
               `WebSocket broadcast error on ${ws.ip.ipString} : ${err.message}`,
             );
           }

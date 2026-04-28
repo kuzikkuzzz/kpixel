@@ -1,9 +1,7 @@
 /*
  * LogIn Form
  */
-import React, {
-  useState, useCallback, useRef, useEffect,
-} from 'react';
+import { memo, useState, useCallback, useRef, useEffect } from 'react';
 import { useSelector, shallowEqual, useDispatch } from 'react-redux';
 import { t } from 'ttag';
 
@@ -114,7 +112,7 @@ const HistorySelect = ({ id }) => {
         setTimes(await handleDateChange(date));
       }
       if (cache && cache[0].length
-      && !cache[0].includes(stringToTime(historicalTime))
+        && !cache[0].includes(stringToTime(historicalTime))
       ) {
         setTime(date, cache[0][0]);
       }
@@ -183,4 +181,4 @@ const HistorySelect = ({ id }) => {
   );
 };
 
-export default React.memo(HistorySelect);
+export default memo(HistorySelect);

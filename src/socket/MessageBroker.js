@@ -249,7 +249,7 @@ class MessageBroker extends SocketEvents {
   req(type, ...args) {
     return new Promise((resolve, reject) => {
       const chan = Math.floor(Math.random() * 100000).toString()
-      + Math.floor(Math.random() * 100000).toString();
+        + Math.floor(Math.random() * 100000).toString();
       const chankey = `res:${chan}`;
       let id;
       const callback = (ret) => {

@@ -366,7 +366,7 @@ export async function markUserAccountsAsHacked(nameIdsOrEmails) {
         }
       }
     }
-    /* eslint-enable no-await-in-loop */
+
     return [emailSet, mailExists];
   } finally {
     if (conn) conn.release();

@@ -2,7 +2,7 @@
  *
  */
 
-import React, { useState, useEffect, useCallback } from 'react';
+import { memo, useState, useEffect, useCallback } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 
 import GlobalCaptcha from './GlobalCaptcha.jsx';
@@ -85,4 +85,4 @@ const Alert = () => {
   );
 };
 
-export default React.memo(Alert);
+export default memo(Alert);

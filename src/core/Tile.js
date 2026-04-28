@@ -684,7 +684,7 @@ export async function initializeTiles(
     canvas,
     canvasTileFolder,
   );
-  //--
+  // --
   console.log(
     // eslint-disable-next-line max-len
     `Tiling: Elapsed Time: ${Math.round((Date.now() - startTime) / 1000)} for canvas${canvasId}`,

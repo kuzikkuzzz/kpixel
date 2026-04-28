@@ -1,4 +1,4 @@
-import React, { useState, useCallback, useMemo } from 'react';
+import { useState, useCallback, useMemo } from 'react';
 
 import MenuContext from '../context/menu.js';
 import Menu from './Menu.jsx';
@@ -32,16 +32,16 @@ const ContextMenuProvider = ({ children }) => {
     <MenuContext.Provider value={contextData}>
       {children}
       {(menuState) && (
-      <Menu
-        type={menuState.type}
-        x={menuState.x}
-        y={menuState.y}
-        args={menuState.args}
-        align={menuState.align}
-        isOpen={menuState.active}
-        remove={remove}
-        close={close}
-      />
+        <Menu
+          type={menuState.type}
+          x={menuState.x}
+          y={menuState.y}
+          args={menuState.args}
+          align={menuState.align}
+          isOpen={menuState.active}
+          remove={remove}
+          close={close}
+        />
       )}
     </MenuContext.Provider>
   );

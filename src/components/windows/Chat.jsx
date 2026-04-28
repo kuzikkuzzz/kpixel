@@ -2,8 +2,14 @@
  *
  */
 
-import React, {
-  useRef, useLayoutEffect, useState, useEffect, useCallback, useContext,
+import {
+  Fragment,
+  useRef,
+  useLayoutEffect,
+  useState,
+  useEffect,
+  useCallback,
+  useContext,
   useMemo,
 } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
@@ -102,7 +108,6 @@ const Chat = () => {
       }
     }
     return ['', CHANNEL_TYPES.PUBLIC, true, null];
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [chatChannel, channels]);
 
   useEffect(() => {
@@ -239,7 +244,7 @@ const Chat = () => {
       const files = await uploadRef.current?.();
       if (files.length) {
         const attachments = files.map(
-          // eslint-disable-next-line max-len
+
           (i) => `$[${escapeMd(i.name)}](${i.shortId}:${i.extension})`,
         ).join(' ');
         if (attachments) {
@@ -306,7 +311,7 @@ const Chat = () => {
         }}
       >
         {(ownName) ? (
-          <React.Fragment key="iptfr">
+          <Fragment key="iptfr">
             <input
               key="iptre"
               style={{
@@ -339,7 +344,7 @@ const Chat = () => {
             >
               ‣
             </button>
-          </React.Fragment>
+          </Fragment>
         ) : (
           <div
             className="modallink"

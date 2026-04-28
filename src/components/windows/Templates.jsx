@@ -2,9 +2,9 @@
  * Settings for minimap / overlay
  */
 
-/* eslint-disable react/no-array-index-key */
 
-import React, { useState, useCallback, useRef } from 'react';
+
+import { Fragment, useState, useCallback, useRef } from 'react';
 import { useSelector, useDispatch, shallowEqual } from 'react-redux';
 import fileDownload from 'js-file-download';
 import { c, t } from 'ttag';
@@ -139,7 +139,7 @@ const Templates = () => {
         > {t`Add Template`}</span>
       )}
       {(list.some((z) => z.enabled)) && (
-        <React.Fragment key="exps">
+        <Fragment key="exps">
           &nbsp;|&nbsp;
           <span
             role="button"
@@ -154,7 +154,7 @@ const Templates = () => {
               }
             }}
           >{t`Export enabled templates`}</span>
-        </React.Fragment>
+        </Fragment>
       )}
       &nbsp;|&nbsp;
       <span

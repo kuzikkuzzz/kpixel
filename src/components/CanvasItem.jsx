@@ -2,7 +2,7 @@
  *
  */
 
-import React from 'react';
+import { memo, Fragment } from 'react';
 import { t } from 'ttag';
 
 import { cdn } from '../utils/utag.js';
@@ -26,10 +26,10 @@ const CanvasItem = ({
     <div className="modalcvtext">
       <h4>{canvas.title}</h4>
       {(online) && (
-        <React.Fragment key="online">
+        <Fragment key="online">
           {t`Online Users`}:&nbsp;
           <span className="modalinfo">{online}</span><br />
-        </React.Fragment>
+        </Fragment>
       )}
       <span className="modalinfo">{canvas.desc}</span><br />
       {t`Cooldown`}:&nbsp;
@@ -46,7 +46,7 @@ const CanvasItem = ({
       }
       </span><br />
       {(canvas.req !== undefined) && (
-        <React.Fragment key="req">
+        <Fragment key="req">
           <span>
             {t`Requirements`}:<br />
             <span className="modalinfo">
@@ -56,11 +56,11 @@ const CanvasItem = ({
                 ? <span> {t`and ${canvas.req} Pixels set`} </span>
                 : null}
               {(canvas.req === 'top')
-                  && <span>{t`Top 10 Daily Ranking`}</span>}
+                && <span>{t`Top 10 Daily Ranking`}</span>}
             </span>
           </span>
           <br />
-        </React.Fragment>
+        </Fragment>
       )}
       {t`Dimensions`}:&nbsp;
       <span className="modalinfo"> {canvas.size} x {canvas.size}
@@ -72,4 +72,4 @@ const CanvasItem = ({
   </div>
 );
 
-export default React.memo(CanvasItem);
+export default memo(CanvasItem);

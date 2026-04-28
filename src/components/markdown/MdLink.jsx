@@ -3,7 +3,7 @@
  * Also provides previews
  * Links are assumed to start with protocol (http:// etc.)
  */
-import React, { useContext, useMemo } from 'react';
+import { memo, useContext, useMemo } from 'react';
 import { HiArrowsExpand, HiStop } from 'react-icons/hi';
 import { HiWindow } from 'react-icons/hi2';
 import { t } from 'ttag';
@@ -97,15 +97,15 @@ const MdLink = ({ href, title }) => {
           &nbsp;
           {(embedObj[3])
             && (
-            <img
-              style={{
-                width: '1em',
-                height: '1em',
-                verticalAlign: 'middle',
-              }}
-              src={cdn`${embedObj[3]}`}
-              alt={`${desc}-icon`}
-            />
+              <img
+                style={{
+                  width: '1em',
+                  height: '1em',
+                  verticalAlign: 'middle',
+                }}
+                src={cdn`${embedObj[3]}`}
+                alt={`${desc}-icon`}
+              />
             )}
           <span
             onClick={(evt) => {
@@ -131,17 +131,17 @@ const MdLink = ({ href, title }) => {
           >
             {(isOpen)
               ? (
-                <HiStop
-                  className="mdlink-redbutton"
-                  title={t`Hide Embed`}
-                />
-              )
+                  <HiStop
+                    className="mdlink-redbutton"
+                    title={t`Hide Embed`}
+                  />
+                )
               : (
-                <HiArrowsExpand
-                  className="mdlink-button"
-                  title={t`Show Embedded`}
-                />
-              )}
+                  <HiArrowsExpand
+                    className="mdlink-button"
+                    title={t`Show Embedded`}
+                  />
+                )}
           </span>
         </span>
       )}
@@ -149,4 +149,4 @@ const MdLink = ({ href, title }) => {
   );
 };
 
-export default React.memo(MdLink);
+export default memo(MdLink);

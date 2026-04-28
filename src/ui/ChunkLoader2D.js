@@ -281,7 +281,6 @@ class ChunkLoader2D extends ChunkLoader {
   async fetchTile(zoom, cx, cy, chunkRGB) {
     this.bcReqChunk(chunkRGB);
     try {
-    // eslint-disable-next-line max-len
       const url = cdn`/tiles/${this.canvasId}/${zoom}/${cx}/${cy}.webp`;
       const img = await loadImage(url);
       chunkRGB.fromImage(img);

@@ -2,7 +2,7 @@
  * Change Name Form
  */
 
-import React, { useState } from 'react';
+import { memo, useState } from 'react';
 import { t } from 'ttag';
 import { useDispatch } from 'react-redux';
 
@@ -61,4 +61,4 @@ const ChangeName = ({ done }) => {
   );
 };
 
-export default React.memo(ChangeName);
+export default memo(ChangeName);

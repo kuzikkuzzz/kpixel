@@ -1,9 +1,7 @@
 /*
  * Component to upload files
  */
-import React, {
-  useEffect, useState, useCallback, useRef, useLayoutEffect,
-} from 'react';
+import { memo, useEffect, useState, useCallback, useRef, useLayoutEffect } from 'react';
 import { t } from 'ttag';
 import { ImAttachment } from 'react-icons/im';
 
@@ -574,4 +572,4 @@ const FileUpload = ({
   );
 };
 
-export default React.memo(FileUpload);
+export default memo(FileUpload);

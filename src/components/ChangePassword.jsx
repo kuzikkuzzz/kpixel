@@ -2,7 +2,7 @@
  * Change Password Form
  */
 
-import React, { useState } from 'react';
+import { memo, Fragment, useState } from 'react';
 import { t } from 'ttag';
 import { useSelector, useDispatch } from 'react-redux';
 
@@ -81,21 +81,21 @@ const ChangePassword = ({ done }) => {
         ))}
         {(havePassword)
           ? (
-            <React.Fragment key="oldpass">
-              <input
-                value={password}
-                onChange={(evt) => setPassword(evt.target.value)}
-                type="password"
-                placeholder={t`Old Password`}
-              />
-              <br />
-            </React.Fragment>
-          ) : (
-            <p key="passinfo">{
-            /* eslint-disable-next-line max-len */
-            t`Setting a password allows you to login by username or email, rather than only relying on 3rd party login.`
-          }</p>
-          )}
+              <Fragment key="oldpass">
+                <input
+                  value={password}
+                  onChange={(evt) => setPassword(evt.target.value)}
+                  type="password"
+                  placeholder={t`Old Password`}
+                />
+                <br />
+              </Fragment>
+            ) : (
+              <p key="passinfo">{
+                /* eslint-disable-next-line max-len */
+                t`Setting a password allows you to login by username or email, rather than only relying on 3rd party login.`
+              }</p>
+            )}
         <input
           value={newPassword}
           onChange={(evt) => setNewPassword(evt.target.value)}
@@ -128,4 +128,4 @@ const ChangePassword = ({ done }) => {
   );
 };
 
-export default React.memo(ChangePassword);
+export default memo(ChangePassword);

@@ -115,7 +115,7 @@ async function history(req, res) {
 
   const { day, id } = req.query;
   if (!BACKUP_URL || !day || !id
-      || day.includes('/') || day.includes('\\') || day.length !== 8
+    || day.includes('/') || day.includes('\\') || day.length !== 8
   ) {
     res.status(404).end();
     return;

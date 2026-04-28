@@ -103,7 +103,7 @@ router.use(async (req, res) => {
 /*
  * error handler
  */
-// eslint-disable-next-line no-unused-vars
+
 router.use((err, req, res, next) => {
   if (res.headersSent) {
     next(err);

@@ -3,7 +3,7 @@
  * Button to open/close palette
  */
 
-import React from 'react';
+import { memo } from 'react';
 import { useSelector, useDispatch, shallowEqual } from 'react-redux';
 import { MdPalette } from 'react-icons/md';
 import { t } from 'ttag';
@@ -36,4 +36,4 @@ const PalselButton = () => {
   );
 };
 
-export default React.memo(PalselButton);
+export default memo(PalselButton);

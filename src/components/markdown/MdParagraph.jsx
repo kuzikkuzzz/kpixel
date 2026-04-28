@@ -1,7 +1,7 @@
 /*
  * Renders Markdown that got parsed by core/MarkdownParser
  */
-import React, { useState, useMemo } from 'react';
+import { memo, useState, useMemo } from 'react';
 
 import MdLink from './MdLink.jsx';
 import MdMention from './MdMention.jsx';
@@ -143,4 +143,4 @@ const MdParagraph = ({
   );
 };
 
-export default React.memo(MdParagraph);
+export default memo(MdParagraph);

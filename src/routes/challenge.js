@@ -16,7 +16,7 @@ async function challenge(req, res) {
   if (req.csrfPossible) {
     res.status(403);
     res.send(
-      // eslint-disable-next-line max-len
+
       'console.log(\'JS Challenge experienced an server error 403\');',
     );
     return;
@@ -70,7 +70,7 @@ async function challenge(req, res) {
     if (!res.writableEnded) {
       res.status(503);
       res.send(
-        // eslint-disable-next-line max-len
+
         'console.log(\'JS Challenge experienced an server error 503\');',
       );
     }

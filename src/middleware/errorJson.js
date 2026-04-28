@@ -2,7 +2,7 @@
  * error handling middleware for json requests
  */
 
-// eslint-disable-next-line no-unused-vars
+
 export default (err, req, res, next) => {
   if (res.headersSent) {
     next(err);

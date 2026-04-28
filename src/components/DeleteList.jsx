@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { memo, useState } from 'react';
 import { t } from 'ttag';
 
 import { cdn } from '../utils/utag.js';
@@ -18,7 +18,7 @@ const DeleteList = ({ list, callback, enabled, joinident }) => {
     return null;
   }
 
-  /* eslint-disable no-nested-ternary */
+
   return (
     <div className="deletelist">{
       list.map(([identifier, name, iconUrl]) => (
@@ -56,4 +56,4 @@ const DeleteList = ({ list, callback, enabled, joinident }) => {
   );
 };
 
-export default React.memo(DeleteList);
+export default memo(DeleteList);

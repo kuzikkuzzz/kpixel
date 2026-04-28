@@ -2,7 +2,7 @@
  * Converts images to canvas palettes
  */
 
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { useSelector, shallowEqual } from 'react-redux';
 import fileDownload from 'js-file-download';
 import { jt, t } from 'ttag';
@@ -198,22 +198,22 @@ function Converter() {
           }}
         >
           {
-          Object.keys(canvases).map((canvas) => (
-            (canvases[canvas].v
-              || (canvases[canvas].hid && !showHiddenCanvases))
-              ? null
-              : (
-                <option
-                  key={canvas}
-                  value={canvas}
-                >
-                  {
-              canvases[canvas].title
-            }
-                </option>
-              )
-          ))
-        }
+            Object.keys(canvases).map((canvas) => (
+              (canvases[canvas].v
+                || (canvases[canvas].hid && !showHiddenCanvases))
+                ? null
+                : (
+                    <option
+                      key={canvas}
+                      value={canvas}
+                    >
+                      {
+                        canvases[canvas].title
+                      }
+                    </option>
+                  )
+            ))
+          }
         </select>
       </div>
       <h3>{t`Palette Download`}</h3>
@@ -540,35 +540,35 @@ function Converter() {
       )}
       {(inputImageCanvas)
         ? (
-          <div>
-            <p id="qprog">...</p>
-            <p>
-              <canvas
-                id="imgoutput"
-                style={{ width: '80%', imageRendering: 'crisp-edges' }}
-              />
-            </p>
-            <button
-              type="button"
-              onClick={downloadOutput}
-            >
-              {t`Download Template`}
-            </button>
-            {(typeof ClipboardItem === 'undefined')
-              ? null
-              : (
-                <button
-                  type="button"
-                  onClick={() => {
-                    const output = document.getElementById('imgoutput');
-                    copyCanvasToClipboard(output);
-                  }}
-                >
-                  {t`Copy to Clipboard`}
-                </button>
-              )}
-          </div>
-        ) : null}
+            <div>
+              <p id="qprog">...</p>
+              <p>
+                <canvas
+                  id="imgoutput"
+                  style={{ width: '80%', imageRendering: 'crisp-edges' }}
+                />
+              </p>
+              <button
+                type="button"
+                onClick={downloadOutput}
+              >
+                {t`Download Template`}
+              </button>
+              {(typeof ClipboardItem === 'undefined')
+                ? null
+                : (
+                    <button
+                      type="button"
+                      onClick={() => {
+                        const output = document.getElementById('imgoutput');
+                        copyCanvasToClipboard(output);
+                      }}
+                    >
+                      {t`Copy to Clipboard`}
+                    </button>
+                  )}
+            </div>
+          ) : null}
     </div>
   );
 }

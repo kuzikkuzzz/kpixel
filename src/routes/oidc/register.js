@@ -114,7 +114,7 @@ router.use(verifySession, urlEncoded, async (req, res) => {
       }
     } catch (error) {
       status = 400;
-      // eslint-disable-next-line max-len
+
       innerHtml += `<p class="topmessage" style="color: #b73c3c;"><span>${t`Error`}</span>: ${error.message}</p>`;
     }
   }

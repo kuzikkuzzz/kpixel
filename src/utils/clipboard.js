@@ -29,13 +29,13 @@ export async function copyCanvasToClipboard(canvas) {
       }
       navigator.clipboard.write([
         // this is defined in current chrome, but not firefox
-        // eslint-disable-next-line no-undef
+
         new ClipboardItem({
           'image/png': blob,
         }),
       ]);
     } catch (e) {
-      console.log("Couldn't copy canvas to clipboard", e);
+      console.log('Couldn\'t copy canvas to clipboard', e);
     }
   }, 'image/png');
 }

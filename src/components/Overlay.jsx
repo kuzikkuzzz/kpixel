@@ -2,7 +2,7 @@
  * Overlay to fade out background
  */
 
-import React, { useState, useEffect } from 'react';
+import { memo, useState, useEffect } from 'react';
 
 const Overlay = ({ show, onClick, z }) => {
   const [render, setRender] = useState(false);
@@ -34,4 +34,4 @@ const Overlay = ({ show, onClick, z }) => {
   );
 };
 
-export default React.memo(Overlay);
+export default memo(Overlay);

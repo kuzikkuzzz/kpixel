@@ -2,7 +2,7 @@
  *
  */
 
-import React from 'react';
+import { memo } from 'react';
 import { useSelector } from 'react-redux';
 import { MdFileDownload } from 'react-icons/md';
 import fileDownload from 'js-file-download';
@@ -42,4 +42,4 @@ const DownloadButton = () => {
   );
 };
 
-export default React.memo(DownloadButton);
+export default memo(DownloadButton);

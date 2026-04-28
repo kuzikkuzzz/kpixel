@@ -3,7 +3,7 @@
  * therefore we can't use it right now.
  * Still keeping this here in case that the policy changes in the future
  */
-import React from 'react';
+import { memo } from 'react';
 
 import { stripQuery } from '../../core/utils.js';
 import DirectLinkEmbed from './DirectLinkEmbed.jsx';
@@ -43,7 +43,7 @@ const Odysee = ({ url, fill, maxHeight }) => {
 };
 
 export default [
-  React.memo(Odysee),
+  memo(Odysee),
   (url) => {
     const urlPart = stripQuery(url);
     let posA = urlPart.indexOf(urlStr);

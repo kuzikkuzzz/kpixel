@@ -227,7 +227,7 @@ export default function windows(
           /*
            * if window of this type is already at this position, move it a bit
            */
-          // eslint-disable-next-line no-loop-func
+
           while (Object.values(state.positions).some((win) => (
             win.windowType === windowType
             && win.xPos === prefXPos && win.yPos === prefYPos
@@ -642,9 +642,9 @@ export default function windows(
       const newState = (showWindows === state.showWindows)
         ? state
         : {
-          ...state,
-          showWindows,
-        };
+            ...state,
+            showWindows,
+          };
       return correctPositions(newState);
     }
 

@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import { memo, useState, useRef } from 'react';
 
 import { stripQuery } from '../../core/utils.js';
 import usePostMessage from '../hooks/postMessage.js';
@@ -44,7 +44,7 @@ const Telegram = ({ url, fill }) => {
       referrerPolicy="no-referrer"
       allow="autoplay"
       scrolling="no"
-    // eslint-disable-next-line max-len
+      // eslint-disable-next-line max-len
       sandbox="allow-scripts allow-modals allow-forms allow-popups allow-same-origin allow-presentation"
       allowFullScreen
       title="Embedded telegram"
@@ -64,7 +64,7 @@ const Telegram = ({ url, fill }) => {
 };
 
 export default [
-  React.memo(Telegram),
+  memo(Telegram),
   (url) => {
     // https://t.me/name/34
     let statPos = url.indexOf(urlStr);

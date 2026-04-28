@@ -126,7 +126,7 @@ class Void {
     } else {
       // build in a circle
       /* that really is the best here */
-      // eslint-disable-next-line no-constant-condition
+
       while (true) {
         this.curAngle += this.curAngleDelta;
         if (this.curAngle > 2 * Math.PI) {

@@ -4,7 +4,7 @@
 
 /* eslint-disable max-len */
 
-import React, { useState } from 'react';
+import { memo, Fragment, useState } from 'react';
 import { useSelector } from 'react-redux';
 import { t } from 'ttag';
 
@@ -147,7 +147,7 @@ function ModIIDtools() {
           ))}
         </select>
         {(iIDAction === 'ban') && (
-          <React.Fragment key="ban">
+          <Fragment key="ban">
             <p>{t`Reason`}</p>
             <input
               maxLength="200"
@@ -158,7 +158,7 @@ function ModIIDtools() {
               placeholder={t`Enter Reason`}
               onChange={(evt) => setReason(evt.target.value)}
             />
-          </React.Fragment>
+          </Fragment>
         )}
         {(iIDAction === 'whitelist' || iIDAction === 'unwhitelist' || iIDAction === 'givecaptcha' || iIDAction === 'ipstatus') && (
           <p key="iidactions">
@@ -214,7 +214,7 @@ function ModIIDtools() {
           </p>
         )}
         {(iIDAction === 'ban' || iIDAction === 'searchalts') && (
-          <React.Fragment key="duration">
+          <Fragment key="duration">
             <p>
               {`${t`Duration`}: `}
               <input
@@ -231,10 +231,10 @@ function ModIIDtools() {
               />
               {t`(0 = infinite)`}
             </p>
-          </React.Fragment>
+          </Fragment>
         )}
         {(iIDAction === 'changeusername') && (
-          <React.Fragment key="changeusername">
+          <Fragment key="changeusername">
             <p>
               UserID or Name:
               <input
@@ -260,7 +260,7 @@ function ModIIDtools() {
               placeholder={t`Enter Reason`}
               onChange={(evt) => setUsername(evt.target.value)}
             />
-          </React.Fragment>
+          </Fragment>
         )}
         {(iIDAction === 'ban' || iIDAction === 'unban') && (
           <p key="banunban">
@@ -296,4 +296,4 @@ function ModIIDtools() {
   );
 }
 
-export default React.memo(ModIIDtools);
+export default memo(ModIIDtools);

@@ -4,7 +4,7 @@
  * Displayed in an Alert
  */
 
-import React, { useState } from 'react';
+import { memo, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { t } from 'ttag';
 
@@ -108,4 +108,4 @@ const GlobalCaptcha = ({ close }) => {
   );
 };
 
-export default React.memo(GlobalCaptcha);
+export default memo(GlobalCaptcha);

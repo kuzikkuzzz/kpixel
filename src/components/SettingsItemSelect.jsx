@@ -2,7 +2,6 @@
  *
  */
 
-import React from 'react';
 import { cdn } from '../utils/utag.js';
 
 const SettingsItemSelect = ({
@@ -20,15 +19,15 @@ const SettingsItemSelect = ({
         }}
       >
         {
-    values.map((value) => (
-      <option
-        key={value}
-        value={value}
-      >
-        {value}
-      </option>
-    ))
-  }
+          values.map((value) => (
+            <option
+              key={value}
+              value={value}
+            >
+              {value}
+            </option>
+          ))
+        }
       </select>
     </div>
     <div className="modaldesc">{children}</div>

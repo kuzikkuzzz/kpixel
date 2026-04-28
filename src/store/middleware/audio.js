@@ -259,7 +259,6 @@ export default (store) => (next) => (action) => {
 
         // Generate pink noise (more natural than white noise)
         for (let i = 0; i < bufferSize; i++) {
-          // eslint-disable-next-line max-len
           output[i] = (Math.random() * 2 - 1) * (1 - (i / bufferSize)) ** 1.5;
         }
 

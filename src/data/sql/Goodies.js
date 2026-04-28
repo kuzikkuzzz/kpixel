@@ -66,7 +66,7 @@ export async function getFishesOfUser(uid) {
 export async function getBadgeById(id) {
   try {
     const [badge] = await pool.query(
-      // eslint-disable-next-line max-len
+
       `SELECT b.name, b.description, ub.note,
 ub.createdAt, u.id AS userId, u.name AS userDisplayName, u.username AS userName,
 (u.flags & ?) != 0 AS isPrivate FROM Badges b
@@ -126,7 +126,7 @@ export async function ensureBadgeExistence(name, description) {
     conn = await pool.getConnection();
 
     const [found] = await conn.query(
-      // eslint-disable-next-line max-len
+
       'SELECT description FROM Badges WHERE name = ?', [name],
     );
     if (found) {
@@ -139,7 +139,7 @@ export async function ensureBadgeExistence(name, description) {
       return true;
     }
     await conn.query(
-      // eslint-disable-next-line max-len
+
       'INSERT INTO Badges (name, description) VALUES (?, ?)',
       [name, description],
     );

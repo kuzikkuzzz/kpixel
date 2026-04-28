@@ -2,9 +2,9 @@
  * Admintools
  */
 
-/* eslint-disable max-len */
 
-import React, { useState } from 'react';
+
+import { memo, Fragment, useState } from 'react';
 import { useSelector } from 'react-redux';
 import { t } from 'ttag';
 
@@ -85,7 +85,7 @@ function ModMediatools() {
           switch (mediaAction) {
             case 'ban':
               return (
-                <React.Fragment key="ban">
+                <Fragment key="ban">
                   <p>{t`Ban media`}</p>
                   <p>
                     mediaId:&nbsp;
@@ -120,11 +120,11 @@ function ModMediatools() {
                       </option>
                     ))}
                   </select>
-                </React.Fragment>
+                </Fragment>
               );
             case 'unban':
               return (
-                <React.Fragment key="unban">
+                <Fragment key="unban">
                   <p>{t`Unban media`}</p>
                   <p>
                     Media BID:&nbsp;
@@ -142,7 +142,7 @@ function ModMediatools() {
                       }}
                     />
                   </p>
-                </React.Fragment>
+                </Fragment>
               );
             default:
               return null;
@@ -166,4 +166,4 @@ function ModMediatools() {
   );
 }
 
-export default React.memo(ModMediatools);
+export default memo(ModMediatools);

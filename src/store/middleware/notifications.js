@@ -29,7 +29,6 @@ export default (store) => (next) => (action) => {
           }
 
           if (window.Notification && Notification.permission === 'granted') {
-            // eslint-disable-next-line no-new
             new Notification(t`Your next pixels are ready`, {
               icon: '/tile.png',
               silent: false,

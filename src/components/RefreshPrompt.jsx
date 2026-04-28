@@ -1,4 +1,4 @@
-import React from 'react';
+import { memo } from 'react';
 import { t } from 'ttag';
 
 const RefreshPrompt = ({ close }) => (
@@ -17,4 +17,4 @@ const RefreshPrompt = ({ close }) => (
   </>
 );
 
-export default React.memo(RefreshPrompt);
+export default memo(RefreshPrompt);

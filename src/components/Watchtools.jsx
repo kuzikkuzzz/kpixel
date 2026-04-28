@@ -3,7 +3,7 @@
  * Tools to check who placed what where
  */
 
-import React, { useState, useEffect } from 'react';
+import { memo, Fragment, useState, useEffect } from 'react';
 import { useSelector, shallowEqual, useDispatch } from 'react-redux';
 import { t } from 'ttag';
 
@@ -282,7 +282,7 @@ function ModWatchtools() {
       </div>
       <br />
       {(rows && columns && types) && (
-        <React.Fragment key={ts}>
+        <Fragment key={ts}>
           <div className="modaldivider" />
           <table className="watchtable">
             <thead>
@@ -471,9 +471,9 @@ function ModWatchtools() {
                                 onClick={() => copyTextToClipboard(uid)}
                               >
                                 {
-                                    // eslint-disable-next-line max-len
-                                    `${val.slice(0, seperator)} [${uid}]`
-                                  }
+
+                                  `${val.slice(0, seperator)} [${uid}]`
+                                }
                               </span>
                             </div>
                           </td>
@@ -498,7 +498,7 @@ function ModWatchtools() {
           >
             {t`Copy Selected to Clipboard`}
           </button>
-        </React.Fragment>
+        </Fragment>
       )}
     </div>
   );
@@ -507,4 +507,4 @@ function ModWatchtools() {
 // possible types:
 // 'coord', 'clr', 'ts', 'user', 'uuid', 'string', 'number', 'flag', 'cid'
 
-export default React.memo(ModWatchtools);
+export default memo(ModWatchtools);

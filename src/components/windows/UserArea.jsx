@@ -2,7 +2,7 @@
  * Menu to change user credentials
  */
 
-import React, { useState, useCallback } from 'react';
+import { memo, Fragment, useState, useCallback } from 'react';
 import { useSelector, shallowEqual, useDispatch } from 'react-redux';
 import { t } from 'ttag';
 
@@ -146,7 +146,7 @@ const UserArea = () => {
         > {t`Change Name`}</span>
         <span className="hdivider" />
         {(username.startsWith('pp_')) && (
-          <React.Fragment key="choseun">
+          <Fragment key="choseun">
             <span
               role="button"
               tabIndex={-1}
@@ -158,7 +158,7 @@ const UserArea = () => {
               onClick={() => setArea('CHANGE_USERNAME')}
             > {t`Choose Username`}</span>
             <span className="hdivider" />
-          </React.Fragment>
+          </Fragment>
         )}
         <span
           role="button"
@@ -197,4 +197,4 @@ const UserArea = () => {
   );
 };
 
-export default React.memo(UserArea);
+export default memo(UserArea);

@@ -64,15 +64,15 @@ const scripts = {
 
 const client = createClient(REDIS_URL.startsWith('redis://')
   ? {
-    url: REDIS_URL,
-    scripts,
-  }
+      url: REDIS_URL,
+      scripts,
+    }
   : {
-    socket: {
-      path: REDIS_URL,
+      socket: {
+        path: REDIS_URL,
+      },
+      scripts,
     },
-    scripts,
-  },
 );
 
 /*

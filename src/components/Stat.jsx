@@ -1,4 +1,3 @@
-import React from 'react';
 import { numberToString, numberToStringFull } from '../core/utils.js';
 
 const Stat = ({

@@ -3,9 +3,7 @@
  *
  */
 
-import React, {
-  useRef, useState, useCallback, useMemo, useEffect,
-} from 'react';
+import { memo, Fragment, useRef, useState, useCallback, useMemo, useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import { FaUser } from 'react-icons/fa';
 import { MdGroups } from 'react-icons/md';
@@ -133,67 +131,67 @@ const ChannelDropDown = ({
       </button>
       {(dropDownState !== 3)
         && (
-        <div
-          key="dropdown"
-          className="channeldd"
-          style={{
-            opacity: dropDownState === 1 ? 1 : 0,
-            transition: 'opacity 100ms ease-in-out',
-          }}
-          onTransitionEnd={dropDownState !== 2 ? undefined
-            : () => setDropDownState(3)}
-        >
-          {Object.values(CHANNEL_TYPES).map((type) => channels[type]?.length > 0 && (
-            <React.Fragment key={type}>
-              <div
-                className={`channeldd-category${(selectedType === type) ? ' selected' : ''}${(unreadCategories.includes(type)) ? ' unread' : ''}`}
-                role="button"
-                tabIndex={0}
-                onClick={() => {
-                  setSelectedType(selectedType === type ? null : type);
-                }}
-              >
-                <span><span>{categorySymbols[type]()}</span> {categoryNames[type]}</span>
-                <span className="expand-btn">{(selectedType === type) ? '▼' : '▶'}</span>
-              </div>
-              <div className={`channeldd-channellist${(selectedType === type) ? ' expanded' : ''}`}>
-                {(type !== CHANNEL_TYPES.PUBLIC
-                  ? channels[type].sort((a, b) => b[2] - a[2])
-                  : channels[type]
-                ).map((channelArray) => {
-                  const isUnread = isChannelUnread(channelArray);
-                  const [cid, name] = channelArray;
-                  const avatarId = channelArray[5];
-                  let className = 'channeldd-channel';
-                  if (cid === chatChannel) {
-                    className += ' selected';
-                  }
-                  if (isUnread) {
-                    className += ' unread';
-                  }
-                  return (
-                    <div
-                      key={cid}
-                      className={className}
-                      onClick={() => { setChatChannel(cid); }}
-                    >
-                      <ChannelAvatar
-                        cid={cid}
-                        isDarkMode={isDarkMode}
-                        avatarId={avatarId}
-                        type={type}
-                      />
-                      <span className="channeldd-name">{name}</span>
-                    </div>
-                  );
-                })}
-              </div>
-            </React.Fragment>
-          ))}
-        </div>
+          <div
+            key="dropdown"
+            className="channeldd"
+            style={{
+              opacity: dropDownState === 1 ? 1 : 0,
+              transition: 'opacity 100ms ease-in-out',
+            }}
+            onTransitionEnd={dropDownState !== 2 ? undefined
+              : () => setDropDownState(3)}
+          >
+            {Object.values(CHANNEL_TYPES).map((type) => channels[type]?.length > 0 && (
+              <Fragment key={type}>
+                <div
+                  className={`channeldd-category${(selectedType === type) ? ' selected' : ''}${(unreadCategories.includes(type)) ? ' unread' : ''}`}
+                  role="button"
+                  tabIndex={0}
+                  onClick={() => {
+                    setSelectedType(selectedType === type ? null : type);
+                  }}
+                >
+                  <span><span>{categorySymbols[type]()}</span> {categoryNames[type]}</span>
+                  <span className="expand-btn">{(selectedType === type) ? '▼' : '▶'}</span>
+                </div>
+                <div className={`channeldd-channellist${(selectedType === type) ? ' expanded' : ''}`}>
+                  {(type !== CHANNEL_TYPES.PUBLIC
+                    ? channels[type].sort((a, b) => b[2] - a[2])
+                    : channels[type]
+                  ).map((channelArray) => {
+                    const isUnread = isChannelUnread(channelArray);
+                    const [cid, name] = channelArray;
+                    const avatarId = channelArray[5];
+                    let className = 'channeldd-channel';
+                    if (cid === chatChannel) {
+                      className += ' selected';
+                    }
+                    if (isUnread) {
+                      className += ' unread';
+                    }
+                    return (
+                      <div
+                        key={cid}
+                        className={className}
+                        onClick={() => { setChatChannel(cid); }}
+                      >
+                        <ChannelAvatar
+                          cid={cid}
+                          isDarkMode={isDarkMode}
+                          avatarId={avatarId}
+                          type={type}
+                        />
+                        <span className="channeldd-name">{name}</span>
+                      </div>
+                    );
+                  })}
+                </div>
+              </Fragment>
+            ))}
+          </div>
         )}
     </div>
   );
 };
 
-export default React.memo(ChannelDropDown);
+export default memo(ChannelDropDown);

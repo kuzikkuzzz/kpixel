@@ -344,7 +344,7 @@ export class ChatProvider {
       return this.adminCommands(message, channelId, user);
     }
 
-    // eslint-disable-next-line prefer-const
+
     let { isBanned, isMuted, isProxy } = await ip.getAllowance();
     if (!isBanned && !isMuted && !isProxy) {
       ({ isBanned, isMuted } = await user.getAllowance());
@@ -388,16 +388,16 @@ export class ChatProvider {
       return t`Please use int channel`;
     }
 
-    if (user.last_message && user.last_message === message) {
-      user.message_repeat += 1;
-      if (user.message_repeat >= 4) {
+    if (user.lastMessage && user.lastMssage === message) {
+      user.messageRepeat += 1;
+      if (user.messageRepeat >= 4) {
         this.mute(id, { duration: 60, printChannel: channelId });
-        user.message_repeat = 0;
+        user.messageRepeat = 0;
         return t`Stop flooding.`;
       }
     } else {
-      user.message_repeat = 0;
-      user.last_message = message;
+      user.messageRepeat = 0;
+      user.lastMessage = message;
     }
 
     logger.info(

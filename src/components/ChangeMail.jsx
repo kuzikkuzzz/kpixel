@@ -3,7 +3,7 @@
  * it is called ChangeMail, because that is what it originally was
  */
 
-import React, { useState, useCallback, useEffect, useMemo } from 'react';
+import { memo, Fragment, useState, useCallback, useEffect, useMemo } from 'react';
 import { useSelector } from 'react-redux';
 import { t } from 'ttag';
 
@@ -160,19 +160,19 @@ const ChangeMail = ({ done }) => {
         </p>
       ))}
       {(havePassword)
-      && (
-        <React.Fragment key="pass">
-          {t`To use this page, enter your Password:`}
-          <br />
-          <input
-            value={password}
-            onChange={(evt) => setPassword(evt.target.value)}
-            type="password"
-            placeholder={t`Password`}
-          />
-          <div className="modaldivider" />
-        </React.Fragment>
-      )}
+        && (
+          <Fragment key="pass">
+            {t`To use this page, enter your Password:`}
+            <br />
+            <input
+              value={password}
+              onChange={(evt) => setPassword(evt.target.value)}
+              type="password"
+              placeholder={t`Password`}
+            />
+            <div className="modaldivider" />
+          </Fragment>
+        )}
       {(() => {
         /* this is so ugly, but it is what it is.. */
         if (tpids === null && !errors.length) {
@@ -184,7 +184,7 @@ const ChangeMail = ({ done }) => {
           return null;
         }
         return (
-          <React.Fragment key="tpids">
+          <Fragment key="tpids">
             <p>{t`Remove a Login method:`}</p>
             <DeleteList
               list={tpids.map(({ id, provider, tpid }) => [
@@ -193,14 +193,14 @@ const ChangeMail = ({ done }) => {
               callback={removeTpid}
               enabled={!submitting}
             />
-          </React.Fragment>
+          </Fragment>
         );
       })()}
       {(tpids?.length || (tpids === null && !errors.length)) && (
         <div className="modaldivider" />
       )}
       {(sessions?.length > 0) && (
-        <React.Fragment key="sessions">
+        <Fragment key="sessions">
           <p>{t`Log out a Session:`}</p>
           <DeleteList
             list={sessions.map(({ id, country, os, browser, current }) => [
@@ -212,10 +212,10 @@ const ChangeMail = ({ done }) => {
             enabled={!submitting}
           />
           <div className="modaldivider" />
-        </React.Fragment>
+        </Fragment>
       )}
       {(consents?.length > 0) && (
-        <React.Fragment key="consents">
+        <Fragment key="consents">
           <p>{t`Revoke consent of third party applications:`}</p>
           <DeleteList
             list={consents.map(({ id, name, domain, image }) => [
@@ -225,7 +225,7 @@ const ChangeMail = ({ done }) => {
             enabled={!submitting}
           />
           <div className="modaldivider" />
-        </React.Fragment>
+        </Fragment>
       )}
       <p>{t`Add a new E-Mail Address here:`}</p>
       <form onSubmit={changeMail}>
@@ -245,4 +245,4 @@ const ChangeMail = ({ done }) => {
   );
 };
 
-export default React.memo(ChangeMail);
+export default memo(ChangeMail);

@@ -556,10 +556,10 @@ class Renderer2D extends Renderer {
         this.canvas,
         Math.floor(width / 2 - this.canvas.width / 2
           + ((cx + 0.5) * TILE_SIZE / this.tiledScale
-          - canvasCenter - x) * viewscale),
+            - canvasCenter - x) * viewscale),
         Math.floor(height / 2 - this.canvas.height / 2
           + ((cy + 0.5) * TILE_SIZE / this.tiledScale
-          - canvasCenter - y) * viewscale),
+            - canvasCenter - y) * viewscale),
       );
     }
 

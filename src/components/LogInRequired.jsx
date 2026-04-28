@@ -2,7 +2,6 @@
  * component that shows a login form if not loged in and its children otherwise
  */
 
-import React from 'react';
 import { useSelector } from 'react-redux';
 
 import LogInForm from './LogInForm.jsx';

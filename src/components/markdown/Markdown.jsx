@@ -1,7 +1,7 @@
 /*
  * Renders Markdown that got parsed by core/MarkdownParser
  */
-import React from 'react';
+import { memo } from 'react';
 
 import MdParagraph from './MdParagraph.jsx';
 import { parse } from '../../utils/markdown/MarkdownParser.js';
@@ -114,4 +114,4 @@ const Markdown = ({ text, mdArray, attachmentInfo, parseLinks = false }) => {
   );
 };
 
-export default React.memo(Markdown);
+export default memo(Markdown);

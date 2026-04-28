@@ -72,7 +72,6 @@ export async function getIPVerification(ipString) {
     };
   }
   try {
-    /* eslint-disable max-len */
     const [ipVerification] = await pool.query(
       `SELECT
 IF(t.ip IS NOT NULL, UNIX_TIMESTAMP(t.expires) * 1000, 0) AS challengeExpiresTs,
@@ -82,7 +81,7 @@ FROM (SELECT IP_TO_BIN(?) AS ip ) AS dummy
   LEFT JOIN IPTrusts t ON t.ip = dummy.ip`,
       [ipString],
     );
-    /* eslint-enable max-len */
+
     return ipVerification;
   } catch (error) {
     console.error(`SQL Error on getIPVerification: ${error.message}`);

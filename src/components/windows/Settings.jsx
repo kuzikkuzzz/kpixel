@@ -2,7 +2,7 @@
  *
  */
 
-import React from 'react';
+import { memo } from 'react';
 import { useSelector, useDispatch, shallowEqual } from 'react-redux';
 import { c, t } from 'ttag';
 
@@ -122,7 +122,7 @@ const Settings = () => {
       </SettingsItem>
       <SettingsItem
         title={t`Compact Palette`}
-        // eslint-disable-next-line max-len
+
         value={compactPalette}
         onToggle={() => dispatch(toggleCompactPalette())}
       >
@@ -194,4 +194,4 @@ const Settings = () => {
   );
 };
 
-export default React.memo(Settings);
+export default memo(Settings);

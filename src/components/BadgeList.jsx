@@ -1,7 +1,7 @@
 /*
  * List of badges inside profile
  */
-import React, { useState } from 'react';
+import { memo, useState } from 'react';
 import { t } from 'ttag';
 
 import useLink from './hooks/link.js';
@@ -62,4 +62,4 @@ const BadgeList = ({ badges }) => {
   );
 };
 
-export default React.memo(BadgeList);
+export default memo(BadgeList);

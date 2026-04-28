@@ -59,7 +59,7 @@ class Renderer3D extends Renderer {
   plane;
   oobGeometry;
   oobMaterial;
-  //--
+  // --
   threeRenderer;
   // temp variables for mouse events
   mouse = new Vector2();
@@ -201,7 +201,7 @@ class Renderer3D extends Renderer {
 
   destructor() {
     // TODO is still leaking memory
-    // eslint-disable-next-line max-len
+
     // https://threejs.org/docs/#manual/en/introduction/How-to-dispose-of-objects
     window.removeEventListener('resize', this.onWindowResize, false);
     this.controls.dispose();
@@ -473,8 +473,8 @@ class Renderer3D extends Renderer {
         const hover = target.toArray().map((u) => Math.floor(u));
         if (!prevHover
           || (prevHover[0] !== hover[0]
-          || prevHover[1] !== hover[1]
-          || prevHover[2] !== hover[2])
+            || prevHover[1] !== hover[1]
+            || prevHover[2] !== hover[2])
         ) {
           this.store.dispatch(setHover(hover));
           this.forceNextSubrender = true;

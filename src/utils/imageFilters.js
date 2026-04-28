@@ -88,7 +88,7 @@ export function scaleImage(imgCanvas, width, height, doAA) {
     for (let y = 0; y < height; y += 1) {
       for (let x = 0; x < width; x += 1) {
         let posi = (Math.round(x / scaleX) + Math.round(y / scaleY)
-            * imgCanvas.width) * 4;
+          * imgCanvas.width) * 4;
         let poso = (x + y * width) * 4;
         datao[poso++] = datai[posi++];
         datao[poso++] = datai[posi++];

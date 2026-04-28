@@ -1,7 +1,7 @@
 /*
  * Parse Mention of Username
  */
-import React from 'react';
+import { memo } from 'react';
 import { useSelector } from 'react-redux';
 
 import { colorFromText, setBrightness } from '../../core/utils.js';
@@ -26,4 +26,4 @@ const MdMention = ({ name, uid }) => {
   );
 };
 
-export default React.memo(MdMention);
+export default memo(MdMention);

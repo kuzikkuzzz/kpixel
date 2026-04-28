@@ -119,7 +119,7 @@ export function renderOverlay(
   // world coordinates of center of center chunk
   const [x, y] = centerChunk
     .map((z) => z * TILE_SIZE / tiledScale
-    + TILE_SIZE / 2 / tiledScale - canvasSize / 2);
+      + TILE_SIZE / 2 / tiledScale - canvasSize / 2);
 
   // if scale > scaleThreshold, then scaling happens in renderer
   // instead of offscreen canvas

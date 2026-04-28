@@ -146,7 +146,7 @@ export async function getDefaultChannel(name) {
 export async function setUserChannelMute(channelId, userId, mute) {
   try {
     await pool.query(
-      // eslint-disable-next-line max-len
+
       'UPDATE UserChannels SET muted = ? WHERE cid = ? AND uid = ?',
       [(mute) ? 1 : 0, channelId, userId],
     );
@@ -240,7 +240,7 @@ export async function markChannelsRead(channelIds, userIds) {
 
   try {
     await pool.query(
-      // eslint-disable-next-line max-len
+
       `UPDATE UserChannels SET lastRead = NOW() WHERE ${channelWhere} AND ${userWhere}`,
       replacements,
     );

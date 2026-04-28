@@ -11,6 +11,8 @@ import { getUserOIDCProfile } from '../data/sql/User.js';
 import { OIDC_URL } from '../core/config.js';
 import { USERLVL } from '../core/constants.js';
 
+/* eslint-disable camelcase */
+
 /**
  * generate openid id_token for user
  * @param uid userId
@@ -307,7 +309,7 @@ export const validateAuthRequest = async (req, res, next) => {
     req.oidcRedirectIsLocal = redirectIsLocal;
     req.oidcUserValid = userIsValid;
     req.oidcNeedReauth = Number(params.max_age) < sessionAge
-    || params.prompt === 'login';
+      || params.prompt === 'login';
     /* overwriting req.query does not work, so send it extra */
     req.oidcParams = params;
     next();

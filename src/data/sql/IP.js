@@ -21,7 +21,6 @@ import { sanitizeIPString, ipToHex } from '../../utils/intel/ip.js';
 export async function getIPAllowance(ipString) {
   let ipAllowance;
   try {
-    /* eslint-disable max-len */
     ipAllowance = await pool.query(
       `SELECT COALESCE(i.lastSeen, CAST('1970-01-01' AS DATETIME)) as lastSeen,
 p.isProxy > 0 AS isProxy, w.ip IS NOT NULL AS isWhitelisted,
@@ -43,7 +42,6 @@ WHERE i.ip = IP_TO_BIN(?)`,
       ipAllowance.isProxy = ipAllowance.isProxy === 1;
       ipAllowance.isWhitelisted = ipAllowance.isWhitelisted === 1;
     }
-    /* eslint-enable max-len */
   } catch (error) {
     console.error(`SQL Error on getIPAllowance: ${error.message}`);
   }
@@ -391,7 +389,7 @@ export async function findAlts(userId, ipString, daysLookBack) {
       let userIps;
       if (daysLookBack) {
         userIps = await conn.query(
-          // eslint-disable-next-line max-len
+
           `SELECT BIN_TO_UUID(i.uuid) AS iid, l.uid FROM UserIPs l
   INNER JOIN IPs i ON l.ip = i.ip
   INNER JOIN UserIPs m ON m.ip = l.ip
@@ -402,7 +400,7 @@ WHERE m.uid = ?
         );
       } else {
         userIps = await conn.query(
-          // eslint-disable-next-line max-len
+
           `SELECT BIN_TO_UUID(i.uuid) AS iid, l.uid FROM UserIPs l
   INNER JOIN IPs i ON l.ip = i.ip
   INNER JOIN UserIPs m ON m.ip = l.ip
@@ -419,7 +417,7 @@ WHERE m.uid = ?`,
       let userIps;
       if (daysLookBack) {
         userIps = await conn.query(
-          // eslint-disable-next-line max-len
+
           `SELECT BIN_TO_UUID(i.uuid) AS iid, l.uid FROM UserIPs l
   INNER JOIN IPs i ON l.ip = i.ip
   INNER JOIN UserIPs m ON m.uid = l.uid
@@ -430,7 +428,7 @@ WHERE m.ip = IP_TO_BIN(?)
         );
       } else {
         userIps = await conn.query(
-          // eslint-disable-next-line max-len
+
           `SELECT BIN_TO_UUID(i.uuid) AS iid, l.uid FROM UserIPs l
   INNER JOIN IPs i ON l.ip = i.ip
   INNER JOIN UserIPs m ON m.uid = l.uid
@@ -645,7 +643,7 @@ WHERE min <= b.ip AND max >= b.ip AND LENGTH(b.ip) = LENGTH(min) AND expires > N
 export async function getProxCheckHistory(ipString) {
   try {
     const [result] = await pool.query(
-      // eslint-disable-next-line max-len
+
       'SELECT isProxy, repetition FROM Proxies WHERE ip = IP_TO_BIN(?)',
       [ipString],
     );

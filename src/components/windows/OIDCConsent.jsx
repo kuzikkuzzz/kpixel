@@ -6,9 +6,7 @@
 
 /* eslint-disable max-len */
 
-import React, {
-  useMemo, useContext, useState, useEffect,
-} from 'react';
+import { Fragment, useMemo, useContext, useState, useEffect } from 'react';
 import { useSelector, shallowEqual, useDispatch } from 'react-redux';
 import { t, jt } from 'ttag';
 
@@ -117,6 +115,7 @@ const OIDCConsent = () => {
     if (errors) {
       urlParams = {
         error: 'cosent_error',
+        // eslint-disable-next-line camelcase
         error_description: errors[0],
       };
     } else {
@@ -177,6 +176,7 @@ const OIDCConsent = () => {
   const deny = () => {
     const urlParams = new URLSearchParams({
       error: 'consent_required',
+      // eslint-disable-next-line camelcase
       error_description: t`You did not consent`,
     });
     if (params.state) {
@@ -198,9 +198,9 @@ const OIDCConsent = () => {
   appUrl = <span key="b" className="statvalue">{appUrl}</span>;
 
   const accountName = (
-    <React.Fragment key="c">
+    <Fragment key="c">
       <span className="statvalue">{name}</span>[{` ${username} `}]
-    </React.Fragment>
+    </Fragment>
   );
 
   return (
@@ -220,39 +220,39 @@ const OIDCConsent = () => {
         </button>{'. '}
       </p>
       {(userIsValid) ? (
-        <React.Fragment key="vu">
+        <Fragment key="vu">
           {(scopes.length > 0) && (
-          <React.Fragment key="ctt">
-            <p>{t`It requests the following permissions. Uncheck what you don't want to grant:`}</p>
-            <table className="consenttable">
-              <thead>
-                <tr>
-                  <th>{t`Consent`}</th>
-                  <th>{t`Permission`}</th>
-                </tr>
-              </thead>
-              <tbody>
-                {scopes.map(([scope, description, required]) => (
-                  <tr key={scope}>
-                    <th>
-                      <input
-                        type="checkbox"
-                        value={scope}
-                        disabled={required}
-                        title={required ? t`This permission is required` : t`Check to allow`}
-                        checked={consentedScopes.includes(scope)}
-                        onChange={consentScope}
-                      />
-                    </th>
-                    <th>{description}</th>
+            <Fragment key="ctt">
+              <p>{t`It requests the following permissions. Uncheck what you don't want to grant:`}</p>
+              <table className="consenttable">
+                <thead>
+                  <tr>
+                    <th>{t`Consent`}</th>
+                    <th>{t`Permission`}</th>
                   </tr>
-                ))}
-              </tbody>
-            </table>
-            {(notVerified && scopes.some(([scope]) => scope === 'user_id')) && (
-              <p key="scv"><strong>{`${t`Note`}: `}</strong>{t`This login may only work if your account is verified.`}</p>
-            )}
-          </React.Fragment>
+                </thead>
+                <tbody>
+                  {scopes.map(([scope, description, required]) => (
+                    <tr key={scope}>
+                      <th>
+                        <input
+                          type="checkbox"
+                          value={scope}
+                          disabled={required}
+                          title={required ? t`This permission is required` : t`Check to allow`}
+                          checked={consentedScopes.includes(scope)}
+                          onChange={consentScope}
+                        />
+                      </th>
+                      <th>{description}</th>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+              {(notVerified && scopes.some(([scope]) => scope === 'user_id')) && (
+                <p key="scv"><strong>{`${t`Note`}: `}</strong>{t`This login may only work if your account is verified.`}</p>
+              )}
+            </Fragment>
           )}
           <p>
             {t`Remember this decision: `}
@@ -285,9 +285,9 @@ const OIDCConsent = () => {
           >
             {(submitting) ? '...' : t`Grant`}
           </button>
-        </React.Fragment>
+        </Fragment>
       ) : (
-        <React.Fragment key="nuv">
+        <Fragment key="nuv">
           <p>{t`Your did not set your username yet. A username is required to login to other applications. You can set it now:`}</p>
           <form onSubmit={submitChangeUsername}>
             {usernameErrors.map((error) => (
@@ -322,7 +322,7 @@ const OIDCConsent = () => {
             >{t`Save`}
             </button>
           </form>
-        </React.Fragment>
+        </Fragment>
       )}
     </div>
   );

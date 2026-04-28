@@ -2,7 +2,6 @@
  * draw windows
  */
 
-import React from 'react';
 import { useSelector, shallowEqual } from 'react-redux';
 
 import Window from './Window.jsx';

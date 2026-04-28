@@ -2,7 +2,6 @@
  * display a message during specific intervals
  */
 
-import React from 'react';
 import { useSelector } from 'react-redux';
 import { t } from 'ttag';
 

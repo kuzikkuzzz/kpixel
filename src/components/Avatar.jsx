@@ -1,7 +1,7 @@
 /*
  * display an avatar
  */
-import React from 'react';
+import { memo } from 'react';
 
 import { getColorFromId, getCharFromId } from '../core/utils.js';
 import { cdn } from '../utils/utag.js';
@@ -40,4 +40,4 @@ const Avatar = ({ uid, isDarkMode, avatarId }) => {
   );
 };
 
-export default React.memo(Avatar);
+export default memo(Avatar);

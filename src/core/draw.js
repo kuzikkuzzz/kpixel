@@ -213,7 +213,6 @@ export default async function drawByOffsets(
     }
 
     if (!errorLater) {
-      // eslint-disable-next-line prefer-const
       let { isBanned, isProxy } = await ip.getAllowance();
       if (!isProxy && !isBanned && user) {
         ({ isBanned } = await user.getAllowance());

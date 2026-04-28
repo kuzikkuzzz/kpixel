@@ -3,9 +3,7 @@
  *
  */
 
-import React, {
-  useState, useEffect, useRef, useCallback,
-} from 'react';
+import { memo, Fragment, useState, useEffect, useRef, useCallback } from 'react';
 import { useStore } from 'react-redux';
 
 import { useConditionalClickOutside } from '../hooks/clickOutside.js';
@@ -227,7 +225,7 @@ const MenuList = ({
           elementClassName += ' selected';
         }
 
-        // eslint-disable-next-line max-len
+
         const text = (
           <>
             <span className="menuicon">
@@ -306,7 +304,7 @@ const MenuList = ({
             const childState = childrenStates[childId];
             if (childId === 'ca') return null;
             return (
-              <React.Fragment key={childId}>
+              <Fragment key={childId}>
                 <div
                   className={elementClassName}
                   title={element.text}
@@ -338,7 +336,7 @@ const MenuList = ({
                     className={className}
                   />
                 )}
-              </React.Fragment>
+              </Fragment>
             );
           }
           default:
@@ -464,4 +462,4 @@ const Menu = ({ type, x, y, args, align, isOpen, remove, close }) => {
   );
 };
 
-export default React.memo(Menu);
+export default memo(Menu);

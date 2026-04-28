@@ -14,7 +14,7 @@ export default (store) => (next) => (action) => {
       || action.type === 'CHANGE_WIN_TYPE'
       || action.type === 'HYDRATED'
     ) && !parentExists()
-      && POPUPS_NEEDING_WS.includes(store.getState().popup.windowType)
+    && POPUPS_NEEDING_WS.includes(store.getState().popup.windowType)
     ) {
       SocketClient.initialize(store);
     }

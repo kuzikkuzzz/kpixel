@@ -4,7 +4,7 @@
 
 import putHtmlIntoModal from '../ssr/modalShell.js';
 
-// eslint-disable-next-line no-unused-vars
+
 export default (err, req, res, next) => {
   if (res.headersSent) {
     next(err);
@@ -21,6 +21,7 @@ export default (err, req, res, next) => {
   if (err.redirectUri) {
     const responseParams = new URLSearchParams({
       error: title.toLowerCase(),
+      // eslint-disable-next-line camelcase
       error_description: description,
     });
     res.redirect(`${err.redirectUri}?${responseParams.toString()}`);

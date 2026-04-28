@@ -2,7 +2,7 @@
  * mouse dragging
  */
 
-/* eslint-disable consistent-return */
+
 
 import { useEffect, useCallback, useState } from 'react';
 

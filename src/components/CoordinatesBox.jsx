@@ -2,7 +2,7 @@
  *
  */
 
-import React from 'react';
+import { memo } from 'react';
 import { useSelector, shallowEqual, useDispatch } from 'react-redux';
 import { t } from 'ttag';
 import { CANVAS_TYPES } from '../core/constants.js';
@@ -46,9 +46,9 @@ const CoordinatesBox = () => {
       title={t`Copy to Clipboard`}
       tabIndex="0"
     >{
-      renderCoordinates(coords)
-    }</div>
+        renderCoordinates(coords)
+      }</div>
   );
 };
 
-export default React.memo(CoordinatesBox);
+export default memo(CoordinatesBox);

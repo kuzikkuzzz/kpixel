@@ -15,7 +15,7 @@ import {
   MAX_CHUNK_AGE,
 } from '../core/constants.js';
 
-/* eslint-disable class-methods-use-this */
+
 
 class ChunkLoader {
   #store;

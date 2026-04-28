@@ -3,7 +3,7 @@
  * temporary cooldown reduction
  */
 import { t } from 'ttag';
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { useSelector } from 'react-redux';
 
 import socketClient from '../socket/SocketClient.js';

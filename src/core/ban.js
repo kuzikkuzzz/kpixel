@@ -203,7 +203,6 @@ export async function checkIfMediaBanned(hash, pHash, userId, ipString) {
       `User ${userId} ${ipString} tried to post banned Media`,
     );
     if (bans.some(({ reason }) => reason === MEDIA_BAN_REASONS.CSAM)) {
-      // eslint-disable-next-line max-len
       console.log(`Autoban user ${userId} ${ipString} for posting CSAM`);
       await upsertBan(ipString, userId, 'Posting CSAM', null);
       /*

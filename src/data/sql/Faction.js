@@ -1193,11 +1193,11 @@ export async function banUserFromFaction(
 export async function unbanFromFaction(factionName, fbid) {
   try {
     await pool.query(
-      /* eslint-disable max-len */
+
       `DELETE FROM FactionBans WHERE uuid = UUID_TO_BIN(?) AND EXISTS(
   SELECT id FROM Factions f WHERE f.id = FactionBans.fid AND f.name = ?
 )`,
-      /* eslint-enable max-len */
+
       [fbid, factionName],
     );
     return true;

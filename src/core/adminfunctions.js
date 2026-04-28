@@ -556,7 +556,7 @@ export async function executeImageAction(
   const canvasMaxXY = canvas.size / 2;
   const canvasMinXY = -canvasMaxXY;
   if (x < canvasMinXY || y < canvasMinXY
-      || x >= canvasMaxXY || y >= canvasMaxXY) {
+    || x >= canvasMaxXY || y >= canvasMaxXY) {
     return [403, 'Coordinates are outside of canvas'];
   }
 

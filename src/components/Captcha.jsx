@@ -6,9 +6,7 @@
 
 /* eslint-disable jsx-a11y/no-autofocus */
 
-import React, {
-  useState, useEffect, useCallback, useRef,
-} from 'react';
+import { memo, useState, useEffect, useCallback, useRef } from 'react';
 import { t } from 'ttag';
 import { IoReloadCircleSharp } from 'react-icons/io5';
 
@@ -209,7 +207,7 @@ const Captcha = ({
               top: '0',
               left: '0',
             }}
-            /* eslint-disable-next-line react/no-danger */
+
             dangerouslySetInnerHTML={{ __html: captchaData.svg }}
             title="CAPTCHA"
             ref={svgContainerRef}
@@ -217,48 +215,48 @@ const Captcha = ({
           />
         )
           : (
-            <span
-              style={{
-                width: '100%',
-                position: 'absolute',
-                top: '50%',
-                left: '50%',
-                transform: 'translate(-50%,-50%)',
-              }}
-              role="button"
-              tabIndex={0}
-              title={t`Load Captcha`}
-              className="modallink"
-              onClick={reloadCaptcha}
-              onKeyPress={reloadCaptcha}
-              key="caplt"
-            >
-              {t`Click to Load Captcha`}
-            </span>
-          )}
+              <span
+                style={{
+                  width: '100%',
+                  position: 'absolute',
+                  top: '50%',
+                  left: '50%',
+                  transform: 'translate(-50%,-50%)',
+                }}
+                role="button"
+                tabIndex={0}
+                title={t`Load Captcha`}
+                className="modallink"
+                onClick={reloadCaptcha}
+                onKeyPress={reloadCaptcha}
+                key="caplt"
+              >
+                {t`Click to Load Captcha`}
+              </span>
+            )}
         {captchaData.transforms && (
-        <input
-          style={{
-            position: 'absolute',
-            bottom: 0,
-            left: 5,
-            right: 5,
-          }}
-          type="range"
-          min="0"
-          max="360"
-          value={animationProgress}
-          onMouseDown={stopAnimation}
-          onTouchStart={stopAnimation}
-          onChange={(evt) => {
-            const { value } = evt.target;
-            for (const [id, vals] of Object.entries(captchaData.transforms)) {
-              document.getElementById(id).transform.baseVal.getItem(0)
-                .setRotate((vals.clockwise) ? value : -value, vals.x, vals.y);
-            }
-            setAnimationProgress(value);
-          }}
-        />
+          <input
+            style={{
+              position: 'absolute',
+              bottom: 0,
+              left: 5,
+              right: 5,
+            }}
+            type="range"
+            min="0"
+            max="360"
+            value={animationProgress}
+            onMouseDown={stopAnimation}
+            onTouchStart={stopAnimation}
+            onChange={(evt) => {
+              const { value } = evt.target;
+              for (const [id, vals] of Object.entries(captchaData.transforms)) {
+                document.getElementById(id).transform.baseVal.getItem(0)
+                  .setRotate((vals.clockwise) ? value : -value, vals.x, vals.y);
+              }
+              setAnimationProgress(value);
+            }}
+          />
         )}
       </div>
       <p>
@@ -300,4 +298,4 @@ const Captcha = ({
   );
 };
 
-export default React.memo(Captcha);
+export default memo(Captcha);

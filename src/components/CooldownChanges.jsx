@@ -4,7 +4,7 @@
 
 /* eslint-disable max-len */
 
-import React from 'react';
+import { memo } from 'react';
 import { useSelector } from 'react-redux';
 import { t } from 'ttag';
 
@@ -34,9 +34,9 @@ const CooldownChanges = () => {
                 title={cc}
                 className="tab-cc-cell"
               ><img
-                alt={cc}
-                src={cdn`/cf/${cc}.gif`}
-              /></td>
+                  alt={cc}
+                  src={cdn`/cf/${cc}.gif`}
+                /></td>
               <td>
                 x&nbsp;{factor}
               </td>
@@ -51,4 +51,4 @@ const CooldownChanges = () => {
   );
 };
 
-export default React.memo(CooldownChanges);
+export default memo(CooldownChanges);

@@ -1,5 +1,5 @@
 /* vday banner */
-import React, { useState, useRef } from 'react';
+import { useState, useRef } from 'react';
 import { cdn } from '../utils/utag.js';
 
 const VDay = () => {
@@ -38,7 +38,7 @@ const VDay = () => {
           right: 0,
           height: '5%',
           width: '100vh',
-          backgroundImage: "url('special/russia-flag.png')",
+          backgroundImage: 'url(\'special/russia-flag.png\')',
           backgroundSize: 'contain',
           transform: 'rotate(45deg) translateX(30%) translateY(60%)',
           transformOrigin: 'right top',

@@ -129,7 +129,7 @@ router.use(async (req, res, next) => {
 router.post('/', async (req, res, next) => {
   const aLogger = (text) => {
     const timeString = new Date().toLocaleTimeString();
-    // eslint-disable-next-line max-len
+
     const logText = `@[${escapeMd(req.user.name)}](${req.user.id}) ${text}`;
     modtoolsLogger.info(
       `${timeString} | MODTOOLS> ${logText}`,
@@ -227,7 +227,7 @@ router.use(async (req, res, next) => {
 router.post('/', async (req, res, next) => {
   const aLogger = (text) => {
     const timeString = new Date().toLocaleTimeString();
-    // eslint-disable-next-line max-len
+
     const logText = `@[${escapeMd(req.user.name)}](${req.user.id}) ${text}`;
     modtoolsLogger.info(
       `${timeString} | MODTOOLS> ${logText}`,
@@ -405,7 +405,7 @@ router.use(async (req, res, next) => {
   next(new Error('Invalid request'));
 });
 
-// eslint-disable-next-line no-unused-vars
+
 router.use((err, req, res, next) => {
   if (res.headersSent) {
     next(err);

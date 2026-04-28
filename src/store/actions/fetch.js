@@ -780,7 +780,7 @@ export async function requestFileUpload(
         });
       }
 
-      /* eslint-disable prefer-promise-reject-errors */
+
       xhr.addEventListener('load', () => {
         if (xhr.status === 429) {
           resolve({ errors: [t`You made too many requests`] });
@@ -795,7 +795,7 @@ export async function requestFileUpload(
 
       xhr.addEventListener('error', () => reject(false));
       xhr.addEventListener('abort', () => reject(true));
-      /* eslint-enable prefer-promise-reject-errors */
+
 
       xhr.open('POST', api`/api/media/${route}`);
       xhr.send(formData);

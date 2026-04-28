@@ -2,7 +2,7 @@
  * Admintools
  */
 
-import React, { useState, useEffect, useCallback } from 'react';
+import { memo, Fragment, useState, useEffect, useCallback } from 'react';
 import { useSelector } from 'react-redux';
 import { t } from 'ttag';
 
@@ -309,7 +309,7 @@ function Admintools() {
 
         <h3>{t`Manage Moderators`}</h3>
         {(modlist[USERLVL.MOD]?.length > 0) && (
-          <React.Fragment key="mmod">
+          <Fragment key="mmod">
             <p>{t`Remove Moderator`}</p>
             <DeleteList
               list={modlist[USERLVL.MOD]}
@@ -318,10 +318,10 @@ function Admintools() {
               joinident
             />
             <br />
-          </React.Fragment>
+          </Fragment>
         )}
         {(modlist[USERLVL.JANNY]?.length > 0) && (
-          <React.Fragment key="mjan">
+          <Fragment key="mjan">
             <p>{t`Remove Janny`}</p>
             <DeleteList
               list={modlist[USERLVL.JANNY]}
@@ -330,10 +330,10 @@ function Admintools() {
               joinident
             />
             <br />
-          </React.Fragment>
+          </Fragment>
         )}
         {(modlist[USERLVL.CLEANER]?.length > 0) && (
-          <React.Fragment key="mcln">
+          <Fragment key="mcln">
             <p>{t`Remove Cleaner`}</p>
             <DeleteList
               list={modlist[USERLVL.CLEANER]}
@@ -342,10 +342,10 @@ function Admintools() {
               joinident
             />
             <br />
-          </React.Fragment>
+          </Fragment>
         )}
         {(modlist[USERLVL.CHATMOD]?.length > 0) && (
-          <React.Fragment key="mcmd">
+          <Fragment key="mcmd">
             <p>{t`Remove Chatmod`}</p>
             <DeleteList
               list={modlist[USERLVL.CHATMOD]}
@@ -354,7 +354,7 @@ function Admintools() {
               joinident
             />
             <br />
-          </React.Fragment>
+          </Fragment>
         )}
         <p>
           { t`Assign new Mod` }
@@ -419,4 +419,4 @@ function Admintools() {
   );
 }
 
-export default React.memo(Admintools);
+export default memo(Admintools);

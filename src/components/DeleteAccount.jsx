@@ -2,7 +2,7 @@
  * Change Password Form
  */
 
-import React, { useState } from 'react';
+import { memo, Fragment, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { t } from 'ttag';
 
@@ -59,17 +59,17 @@ const DeleteAccount = ({ done }) => {
             :&nbsp;{error}</p>
         ))}
         {(havePassword)
-        && (
-          <React.Fragment key="pass">
-            <input
-              value={password}
-              onChange={(evt) => setPassword(evt.target.value)}
-              type="password"
-              placeholder={t`Password`}
-            />
-            <br />
-          </React.Fragment>
-        )}
+          && (
+            <Fragment key="pass">
+              <input
+                value={password}
+                onChange={(evt) => setPassword(evt.target.value)}
+                type="password"
+                placeholder={t`Password`}
+              />
+              <br />
+            </Fragment>
+          )}
         <button
           type="submit"
           disabled={submitting}
@@ -84,4 +84,4 @@ const DeleteAccount = ({ done }) => {
   );
 };
 
-export default React.memo(DeleteAccount);
+export default memo(DeleteAccount);

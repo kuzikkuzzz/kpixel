@@ -2,7 +2,7 @@
  *
  */
 
-import React from 'react';
+import { memo, Fragment } from 'react';
 import { useSelector, useDispatch, shallowEqual } from 'react-redux';
 import {
   FaUser,
@@ -52,31 +52,31 @@ const OnlineBox = () => {
     >
       {(onlineCanvas)
         ? (
-          <span
-            title={t`Online Users on Canvas`}
-            role="button"
-            tabIndex="0"
-            key="onlinec"
-            onClick={() => dispatch(toggleOnlineCanvas())}
-          >
-            {online[canvasId] || 0}&nbsp;<FaUser /><FaFlipboard />
-          </span>
-        )
+            <span
+              title={t`Online Users on Canvas`}
+              role="button"
+              tabIndex="0"
+              key="onlinec"
+              onClick={() => dispatch(toggleOnlineCanvas())}
+            >
+              {online[canvasId] || 0}&nbsp;<FaUser /><FaFlipboard />
+            </span>
+          )
         : (
-          <span
-            role="button"
-            tabIndex="0"
-            key="onlinec"
-            onClick={() => dispatch(toggleOnlineCanvas())}
-            title={t`Total Online Users`}
-          >
-            {online.total}&nbsp;<FaUser />
-          </span>
-        )}
+            <span
+              role="button"
+              tabIndex="0"
+              key="onlinec"
+              onClick={() => dispatch(toggleOnlineCanvas())}
+              title={t`Total Online Users`}
+            >
+              {online.total}&nbsp;<FaUser />
+            </span>
+          )}
        &nbsp;
       {(name != null)
         && (
-          <React.Fragment key="plxc">
+          <Fragment key="plxc">
             <span
               role="button"
               tabIndex="0"
@@ -93,10 +93,10 @@ const OnlineBox = () => {
             >
               {(dailyPxls) ? <FaCalendarDay /> : <FaPaintBrush />}
             </span>
-          </React.Fragment>
+          </Fragment>
         )}
     </div>
   );
 };
 
-export default React.memo(OnlineBox);
+export default memo(OnlineBox);

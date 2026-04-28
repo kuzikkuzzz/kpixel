@@ -2,9 +2,7 @@
  * draw window
  */
 
-import React, {
-  useState, useCallback, useRef, useEffect, useMemo, Suspense,
-} from 'react';
+import { memo, useState, useCallback, useRef, useEffect, useMemo, Suspense } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { BiChalkboard } from 'react-icons/bi';
 import { t } from 'ttag';
@@ -286,4 +284,4 @@ const Window = ({ id }) => {
   );
 };
 
-export default React.memo(Window);
+export default memo(Window);

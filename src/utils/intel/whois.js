@@ -89,8 +89,8 @@ function parseWhois(ip, whoisReturn) {
   });
 
   let range = whoisData.inetnum || whoisData.inet6num || whoisData.cidr
-      || whoisData.netrange || whoisData.route || whoisData.route6
-      || whoisData['ip-network'] || whoisData['auth-area'];
+    || whoisData.netrange || whoisData.route || whoisData.route6
+    || whoisData['ip-network'] || whoisData['auth-area'];
   range = ipSubnetToHex(range, ip);
   if (range) data.range = range;
 

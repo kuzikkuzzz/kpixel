@@ -1,6 +1,6 @@
-/* eslint-disable jsx-a11y/media-has-caption */
 
-import React from 'react';
+
+import { memo } from 'react';
 
 import DirectLinkMedia from './DirectLinkMedia.jsx';
 
@@ -19,7 +19,7 @@ const Matrix = ({ url, fill, maxHeight }) => {
 };
 
 export default [
-  React.memo(Matrix),
+  memo(Matrix),
   (url) => url.includes('?type=video') || url.includes('?type=image'),
   null,
   '/embico/matrix.png',

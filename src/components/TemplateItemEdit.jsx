@@ -2,9 +2,7 @@
  * Item for list of Tamplates
  */
 
-import React, {
-  useRef, useState, useEffect, useMemo,
-} from 'react';
+import { memo, useRef, useState, useEffect, useMemo } from 'react';
 import { useSelector, shallowEqual } from 'react-redux';
 import { t } from 'ttag';
 
@@ -195,7 +193,7 @@ const TemplateItemEdit = ({
               }
               if (initTitle
                 && (initTitle !== title || initX !== x
-                || initY !== y || initCanvasId !== canvasId
+                  || initY !== y || initCanvasId !== canvasId
                 )) {
                 templateLoader.changeTemplate(initTitle, {
                   title, canvasId, x, y,
@@ -213,4 +211,4 @@ const TemplateItemEdit = ({
   );
 };
 
-export default React.memo(TemplateItemEdit);
+export default memo(TemplateItemEdit);

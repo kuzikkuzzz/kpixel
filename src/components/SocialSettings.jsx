@@ -3,7 +3,7 @@
  */
 /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 
-import React, { useRef, useState, useEffect } from 'react';
+import { memo, useRef, useState, useEffect } from 'react';
 import { useDispatch, useSelector, shallowEqual } from 'react-redux';
 import { RiSave3Line } from 'react-icons/ri';
 import { IoTrashOutline } from 'react-icons/io5';
@@ -247,4 +247,4 @@ const SocialSettings = ({ done }) => {
   );
 };
 
-export default React.memo(SocialSettings);
+export default memo(SocialSettings);

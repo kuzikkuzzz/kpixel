@@ -1,4 +1,4 @@
-import React from 'react';
+import { memo } from 'react';
 import { useSelector } from 'react-redux';
 
 import MdParagraph from './markdown/MdParagraph.jsx';
@@ -125,4 +125,4 @@ function ChatMessage({
   );
 }
 
-export default React.memo(ChatMessage);
+export default memo(ChatMessage);

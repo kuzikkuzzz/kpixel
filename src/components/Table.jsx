@@ -1,7 +1,7 @@
 /*
  * show some data as table
  */
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { c, t } from 'ttag';
 
 import useLink from './hooks/link.js';
@@ -22,16 +22,18 @@ const Table = ({
     title: t`Title`,
     name: t`Name`,
     description: t`Description`,
-    // eslint-disable-next-line max-len
+
     /* t: Column title of column indicating whether or not a faction is able to be joined in public */
     ispublic: c('statistics-table').t`Public`,
     members: t`Members`,
     role: t`Role`,
     joined: t`Joined`,
+    /* eslint-disable camelcase */
     today_rank: t`Daily Rank`,
     today_pixel: t`Daily Pixels`,
     yesterday_rank: t`Rank`,
     yesterday_pixel: t`Pixels`,
+    /* eslint-enable camelcase */
     rank: t`Rank`,
     pixel: t`Pixels`,
   };
@@ -155,7 +157,6 @@ const Table = ({
                   );
                 }
                 case 'mediaId': {
-                  // eslint-disable-next-line prefer-const
                   let [url,, thumb] = getUrlsFromMediaIdAndName(val);
                   if (thumb) {
                     thumb = `url(${cdn`${thumb}`})`;
@@ -198,8 +199,8 @@ const Table = ({
                 case 'ts':
                   return (
                     <td key={key}>{
-                  (new Date(val)).toLocaleDateString()
-                }</td>
+                      (new Date(val)).toLocaleDateString()
+                    }</td>
                   );
                 default:
                   return (<td key={key}>{val}</td>);

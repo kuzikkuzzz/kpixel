@@ -1,4 +1,4 @@
-import React from 'react';
+import { memo } from 'react';
 
 import DirectLinkEmbed from './DirectLinkEmbed.jsx';
 
@@ -39,7 +39,7 @@ const TwitchTv = ({ url, fill, maxHeight }) => {
 };
 
 export default [
-  React.memo(TwitchTv),
+  memo(TwitchTv),
   getIdFromURL,
   getIdFromURL,
   '/embico/twitchtv.png',

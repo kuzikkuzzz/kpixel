@@ -1,7 +1,7 @@
-import React from 'react';
+import { memo } from 'react';
 import ToggleButton from 'react-toggle';
 
-const SettingsItem = React.memo(({
+const SettingsItem = memo(({
   title, keyBind, value, onToggle, children, deactivated,
 }) => (
   <div className="setitem">

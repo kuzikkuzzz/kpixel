@@ -2,7 +2,7 @@
  * resolving an invite
  */
 
-import React, { useState, useEffect, useContext } from 'react';
+import { Fragment, useState, useEffect, useContext } from 'react';
 import { useSelector, shallowEqual, useDispatch } from 'react-redux';
 import { t } from 'ttag';
 
@@ -96,7 +96,7 @@ const Invite = () => {
       )}
       <p>{t`You have been invited to join us on pixelplanet. We currently have ${memberCount} members.`}</p>
       {(name) ? (
-        <React.Fragment key="need-login">
+        <Fragment key="need-login">
           <p>{t`You are logged in as ${name} [${username}].`}</p>
           <div className="form-actions">
             <button
@@ -132,7 +132,7 @@ const Invite = () => {
               {t`Cancel`}
             </button>
           </div>
-        </React.Fragment>
+        </Fragment>
       ) : (
         <LogInForm title={t`Login to join us.`} />
       )}
