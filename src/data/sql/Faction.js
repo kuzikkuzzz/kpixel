@@ -175,7 +175,6 @@ export async function setFlagOfFaction(name, index, value) {
       );
     } else {
       await pool.query(
-        // eslint-disable-next-line max-len
         'UPDATE Factions SET flags = flags & ~(?) WHERE name = ?',
         [mask, name],
       );
@@ -291,7 +290,6 @@ export async function populateFactionIdObj(rawRanks) {
   }
   const fids = rawRanks.map((r) => r.id);
   const userData = await pool.query(
-    // eslint-disable-next-line max-len
     `SELECT f.id, f.title, f.name,
 CONCAT(a.shortId, ':', a.extension) AS avatarId
 FROM Factions f
@@ -319,7 +317,6 @@ export async function setFactionAvatar(sqlFid, mediaId = null) {
   try {
     if (!mediaId) {
       await pool.query(
-        // eslint-disable-next-line max-len
         'UPDATE Factions SET avatar = NULL WHERE id = ?',
         [sqlFid],
       );
@@ -602,7 +599,6 @@ WHERE uf.fid = ?`,
 export async function getFactionBanInfo(sqlFid) {
   try {
     let model = await pool.query(
-      // eslint-disable-next-line max-len
       `SELECT BIN_TO_UUID(fb.uuid) AS fbid, fb.reason, fb.expires, fb.createdAt,
 u.id AS 'users.id', u.name AS 'users.name', u.username AS 'users.username',
 mu.username AS createdBy,
@@ -881,7 +877,6 @@ export async function deleteFactionRole(uid, frid) {
 export async function setFlagOfFactionRole(sqlFrid, index, value) {
   try {
     const mask = 0x01 << index;
-    /* eslint-disable max-len */
     if (value) {
       await pool.query(
         'UPDATE FactionRoles SET flags = flags | ? WHERE id = ?',
@@ -893,7 +888,6 @@ export async function setFlagOfFactionRole(sqlFrid, index, value) {
         [mask, sqlFrid],
       );
     }
-    /* eslint-enable max-len */
     return true;
   } catch (error) {
     console.error(`SQL Error on setFlagOfFactionRole: ${error.message}`);

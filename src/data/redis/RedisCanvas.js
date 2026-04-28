@@ -127,6 +127,7 @@ class RedisCanvas {
     offset,
   ) {
     const clr = RedisCanvas.getPixelIfExists(canvasId, i, j, offset);
+    // eslint-disable-next-line eqeqeq
     return (clr == null) ? 0 : clr;
   }
 
@@ -141,6 +142,7 @@ class RedisCanvas {
     const offset = getOffsetOfPixel(canvasSize, x, y, z);
 
     const clr = RedisCanvas.getPixelIfExists(canvasId, i, j, offset);
+    // eslint-disable-next-line eqeqeq
     return (clr == null) ? 0 : clr;
   }
 }

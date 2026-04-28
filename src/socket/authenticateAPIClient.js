@@ -12,9 +12,9 @@ router.use(parseIP);
 
 function authenticateClient(req) {
   return new Promise(
-    ((resolve) => {
+    (resolve) => {
       router(req, {}, resolve);
-    }),
+    },
   );
 }
 

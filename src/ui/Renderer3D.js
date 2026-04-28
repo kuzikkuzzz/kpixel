@@ -19,7 +19,7 @@ import {
   MeshLambertMaterial,
   WebGLRenderer,
 } from 'three';
-import { Sky } from 'three/examples/jsm/objects/Sky';
+import { Sky } from 'three/examples/jsm/objects/Sky.js';
 import { CANVAS_TYPES,
   THREE_TILE_SIZE,
   BACKGROUND_CLR_HEX,
@@ -370,7 +370,6 @@ class Renderer3D extends Renderer {
       return;
     }
     if (this.lol !== ident) {
-      // eslint-disable-next-line no-console
       console.log(this.lol, this.lola);
       this.lol = ident;
       this.lola = 0;

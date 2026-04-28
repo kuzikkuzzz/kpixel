@@ -29,7 +29,6 @@ function monkeyPatchRenderer(renderer) {
   ) {
     return;
   }
-  // eslint-disable-next-line no-console
   console.log('Extension hooked into Renderer');
   renderer.origUpdateView = renderer.updateView;
   renderer.updateView = function mpUpdateView(...args) {
@@ -55,7 +54,6 @@ function monkeyPatchRenderer(renderer) {
 
 (function mpPixelPlanetEvents() {
   function setActive() {
-    // eslint-disable-next-line no-console
     console.log('Extension active');
     pixelPlanetEvents.once = pixelPlanetEvents.origOnce;
     pixelPlanetEvents.addListener = pixelPlanetEvents.origAdd;

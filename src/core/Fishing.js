@@ -3,8 +3,6 @@
  * has the chance to catcha a fish, which will reduce his cooldown
  */
 
-/* eslint-disable import/prefer-default-export */
-
 import logger from './logger.js';
 import socketEvents from '../socket/socketEvents.js';
 import { getAmountOfIPCooldownModifications } from './CooldownModifiers.js';

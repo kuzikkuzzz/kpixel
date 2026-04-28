@@ -2,8 +2,6 @@
  * redux store for popups
  */
 
-/* eslint-disable no-console */
-
 import {
   applyMiddleware, createStore, combineReducers,
 } from 'redux';

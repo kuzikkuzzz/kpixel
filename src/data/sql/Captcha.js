@@ -1,6 +1,7 @@
 /*
  * captcha and js challenge
  */
+import anyAscii from 'any-ascii';
 
 import pool from './mariadb.js';
 
@@ -133,12 +134,16 @@ export async function resetAllCaptchas() {
  *   6 challenge failed
  */
 export async function checkVerificationSolutions(
-  captchaId, captchaSolution, challengeSolution, deviceId, ipString, isOneTime,
+  captchaId, captchaSolution, challengeSolution,
+  browserHash, ipString,
+  isOneTime,
 ) {
   if (captchaId || captchaSolution) {
     if (captchaSolution?.length !== 4 || !captchaId) {
       return 3;
     }
+    /* converts funny cyrillic characters and converts them to ascii */
+    captchaSolution = anyAscii(captchaSolution);
   }
   if (typeof challengeSolution === 'undefined') {
     challengeSolution = null;
@@ -163,12 +168,24 @@ export async function checkVerificationSolutions(
       challengeReturn,
       captchaExpiresTs,
       challengeExpiresTs,
+      captchaBrowserHash,
+      challengeBrowserHash,
+      solutionBrowserHash,
     }]] = await pool.query(
       'CALL CHECK_VERIFICATION_SOLUTIONS(?, ?, ?, ?, ?, ?, ?, ?)', [
-        captchaId, captchaSolution, challengeSolution, deviceId, ipString,
+        captchaId, captchaSolution, challengeSolution, browserHash, ipString,
         isOneTime ? 1 : 0, CAPTCHA_TIME, TRUSTED_TIME,
       ],
     );
+
+    if (solutionBrowserHash !== challengeBrowserHash
+      || solutionBrowserHash !== captchaBrowserHash
+    ) {
+      console.log(
+        // eslint-disable-next-line max-len
+        `CAPTCHA HASH MISMATCH ${browserHash} ${solutionBrowserHash} ${captchaBrowserHash} ${challengeBrowserHash}`,
+      );
+    }
 
     if (isOneTime) {
       if (captchaReturn === 0 && challengeReturn === 0) {

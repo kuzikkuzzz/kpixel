@@ -145,7 +145,6 @@ class ChunkLoader2D extends ChunkLoader {
         return chunkRGB.image;
       }
     } catch (error) {
-      // eslint-disable-next-line no-console
       console.warn(`Error occurred while preloading for ${zoom}:${cx}:${cy}`,
         error);
       return null;

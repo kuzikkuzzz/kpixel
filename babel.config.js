@@ -14,8 +14,8 @@ export default function (api) {
 
   const presets = [
     [
-      "@babel/preset-env",
-      api.caller(caller => caller && caller.target === "node")
+      '@babel/preset-env',
+      api.caller(caller => caller && caller.target === 'node')
         ? {
           targets: {
             node: pkg.engines.node.replace(/^\D+/g, ''),
@@ -28,7 +28,9 @@ export default function (api) {
           },
         }
     ],
-    '@babel/react',
+    ['@babel/preset-react', {
+      runtime: 'automatic',
+    }],
   ];
 
   return {

@@ -93,8 +93,8 @@ BEGIN
       SET v_captcha_return = 2;
     ELSEIF v_stored_captcha_expiration IS NOT NULL AND v_stored_captcha_expiration < NOW() THEN
       SET v_captcha_return = 3;
-    ELSEIF p_browser_hash IS NOT NULL AND v_stored_captcha_browser_hash != p_browser_hash THEN
-      SET v_captcha_return = 4;
+    -- ELSEIF p_browser_hash IS NOT NULL AND v_stored_captcha_browser_hash != p_browser_hash THEN
+      -- SET v_captcha_return = 4;
     ELSE
       SET v_captcha_return = 0;
 
@@ -142,8 +142,8 @@ BEGIN
       SET v_challenge_return = 2;
     ELSEIF v_stored_challenge_expiration IS NOT NULL AND v_stored_challenge_expiration < NOW() THEN
       SET v_challenge_return = 3;
-    ELSEIF p_browser_hash IS NOT NULL AND v_stored_challenge_browser_hash != p_browser_hash THEN
-      SET v_challenge_return = 4;
+    -- ELSEIF p_browser_hash IS NOT NULL AND v_stored_challenge_browser_hash != p_browser_hash THEN
+      -- SET v_challenge_return = 4;
     ELSE
       SET v_challenge_return = 0;
 
@@ -158,6 +158,9 @@ BEGIN
   SELECT
     v_captcha_return AS captchaReturn,
     v_challenge_return AS challengeReturn,
+    v_stored_captcha_browser_hash AS captchaBrowserHash,
+    v_stored_challenge_browser_hash AS challengeBrowserHash,
+    p_browser_hash AS solutionBrowserHash,
     IF(
       t.ip IS NOT NULL,
       UNIX_TIMESTAMP(t.expires) * 1000,

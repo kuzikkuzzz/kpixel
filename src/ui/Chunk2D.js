@@ -73,7 +73,6 @@ class Chunk2D extends Chunk {
     if (!transparent) {
       const { image, palette } = this;
       const ctx = image.getContext('2d');
-      // eslint-disable-next-line prefer-destructuring
       ctx.fillStyle = palette.colors[0];
       ctx.fillRect(0, 0, TILE_SIZE, TILE_SIZE);
     }

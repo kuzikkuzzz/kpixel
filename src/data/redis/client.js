@@ -84,7 +84,6 @@ export const pubsub = {
 };
 
 export const connect = async () => {
-  // eslint-disable-next-line no-console
   console.log(`Connecting to redis server at ${REDIS_URL}`);
   await client.connect();
   if (IS_CLUSTER && isMainThread) {

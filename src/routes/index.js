@@ -70,6 +70,7 @@ if (OIDC_URL) {
       'Cache-Control': `public, max-age=${24 * 3600}`,
       'Access-Control-Allow-Origin': '*',
     });
+    /* eslint-disable camelcase */
     res.json({
       issuer: OIDC_URL,
       authorization_endpoint: `${baseUrl}/oidc/auth`,
@@ -89,6 +90,7 @@ if (OIDC_URL) {
       request_object_signing_alg_values_supported: ['none'],
     });
   });
+  /* eslint-enable camelcase */
   router.get('/.well-known/jwks.json', async (req, res) => {
     res.set({
       'Cache-Control': `public, max-age=${24 * 3600}`,

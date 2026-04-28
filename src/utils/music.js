@@ -87,7 +87,6 @@ class ChunkScanner {
         : (this.v - yCor + 1);
       for (let xc = xLow; xc < xHigh; xc += 1) {
         for (let yc = yLow; yc < yHigh; yc += 1) {
-          // eslint-disable-next-line no-await-in-loop
           await this.callback(xc, yc, this);
         }
       }
@@ -120,7 +119,6 @@ class ChunkScanner {
           chunk = chunks[jAbs - jo + 1][iAbs - io + 1];
         } else {
           try {
-            // eslint-disable-next-line no-await-in-loop
             chunk = await getChunk(iAbs, jAbs);
           } catch (error) {
             this.logger(

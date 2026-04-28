@@ -35,7 +35,6 @@ export async function copyCanvasToClipboard(canvas) {
         }),
       ]);
     } catch (e) {
-      // eslint-disable-next-line no-console
       console.log("Couldn't copy canvas to clipboard", e);
     }
   }, 'image/png');

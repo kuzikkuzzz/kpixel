@@ -2,8 +2,6 @@
  * worker thread for creating Captchas
  */
 
-/* eslint-disable no-console */
-
 import fs from 'fs';
 import path from 'path';
 import ppfunCaptcha from 'ppfun-captcha';
@@ -88,10 +86,7 @@ parentPort.on('message', (msg) => {
         // nothing
     }
   } catch (error) {
-    console.warn(
-      // eslint-disable-next-line max-len
-      `CAPTCHAS: Error on ${msg}: ${error.message}`,
-    );
+    console.warn(`CAPTCHAS: Error on ${msg}: ${error.message}`);
     parentPort.postMessage(['Failure!']);
   }
 });

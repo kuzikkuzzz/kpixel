@@ -2,7 +2,7 @@
  * state related functions
  */
 
-/* eslint-disable import/prefer-default-export */
+/* eslint-disable import-x/prefer-default-export */
 
 /**
  * Apply a patch to a state. In example:

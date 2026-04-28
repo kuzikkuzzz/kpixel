@@ -2,8 +2,6 @@
  * send and receive actions from parent window
  */
 
-/* eslint-disable no-console */
-
 import { parentExists } from '../../core/utils.js';
 import { load, unload } from '../actions/index.js';
 

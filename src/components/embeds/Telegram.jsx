@@ -19,7 +19,6 @@ const Telegram = ({ url, fill }) => {
           if (pdata.height) setFrameHeight(pdata.height);
         }
       } catch {
-        // eslint-disable-next-line no-console
         console.error('Could not read postMessage from frame', data);
       }
     },

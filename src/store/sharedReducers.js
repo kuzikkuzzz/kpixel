@@ -2,8 +2,6 @@
  * reducers that are shared between pages
  */
 
-/* eslint-disable no-console */
-
 import { persistReducer } from 'redux-persist';
 import storage from 'redux-persist/es/storage/index.js';
 

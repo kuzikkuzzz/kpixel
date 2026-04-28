@@ -15,10 +15,10 @@ import {
   Vector2,
 } from 'three';
 
-import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
+import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader.js';
 import {
   TrackballControls,
-} from 'three/examples/jsm/controls/TrackballControls';
+} from 'three/examples/jsm/controls/TrackballControls.js';
 
 // eslint-disable-next-line
 __webpack_public_path__ = `${window.ssv?.basename || ''}/assets/`;

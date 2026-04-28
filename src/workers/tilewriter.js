@@ -2,8 +2,6 @@
  * worker thread for ..core/tileserver.js
  */
 
-/* eslint-disable no-console */
-
 import { isMainThread, parentPort } from 'worker_threads';
 
 import { connect as connectRedis } from '../data/redis/client.js';

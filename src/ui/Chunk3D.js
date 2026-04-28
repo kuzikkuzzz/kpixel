@@ -4,7 +4,6 @@
  */
 
 /* We have to look for performance here not for good looking code */
-/* eslint-disable prefer-destructuring */
 
 import {
   MeshLambertMaterial,

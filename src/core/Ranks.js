@@ -113,7 +113,6 @@ export class Ranks {
       this.#mergeIntoRanks(await Ranks.hourlyUpdateRanking());
       await Ranks.updateRanking();
     } catch (err) {
-      // eslint-disable-next-line no-console
       console.error(`Error initialize ranks: ${err.message}`);
     }
     setInterval(Ranks.updateRanking, 5 * MINUTE);

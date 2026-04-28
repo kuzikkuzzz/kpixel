@@ -87,7 +87,6 @@ class ChunkLoader {
       });
       const remChunks = chunksByTs.map((c) => c[1]);
       this.bcRemoveChunks(remChunks);
-      // eslint-disable-next-line max-len, no-console
       console.log(`Cleared ${remChunks.length} to cut amount of chunks to ${this.#chunks.size}`);
     }
   }
@@ -131,7 +130,7 @@ class ChunkLoader {
     if (remChunks.length) {
       this.bcRemoveChunks(remChunks);
     }
-    // eslint-disable-next-line no-console,max-len
+    // eslint-disable-next-line max-len
     console.log(`GC cleaned ${remChunks.length} / ${chunks.size + remChunks.length} chunks`);
   }
 }

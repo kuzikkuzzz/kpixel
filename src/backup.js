@@ -8,8 +8,6 @@
  *
  */
 
-/* eslint-disable no-console */
-
 import fs from 'fs';
 import os from 'os';
 import { spawn } from 'child_process';

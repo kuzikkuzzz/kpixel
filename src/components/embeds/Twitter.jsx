@@ -20,7 +20,6 @@ const Twitter = ({ url, fill }) => {
           setFrameHeight(data['twttr.embed'].params[0].height);
         }
       } catch {
-        // eslint-disable-next-line no-console
         console.error('Could not read postMessage from frame', data);
       }
     },

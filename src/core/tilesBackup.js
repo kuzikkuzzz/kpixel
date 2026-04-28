@@ -3,8 +3,6 @@
  *
  */
 
-/* eslint-disable no-console */
-
 import sharp from 'sharp';
 import fs from 'fs';
 import { commandOptions } from 'redis';

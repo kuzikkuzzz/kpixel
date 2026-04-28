@@ -2,8 +2,6 @@
  * send and receive actions from popups
  */
 
-/* eslint-disable no-console */
-
 import { propagateMe } from '../actions/index.js';
 import {
   removePopUp, addPopUp, dispatchToPopUps, hasPopUps,

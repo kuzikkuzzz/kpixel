@@ -13,6 +13,8 @@ import {
 import { validatePkceChallenge } from '../../utils/hash.js';
 import { generateIdToken } from '../../middleware/oidc.js';
 
+/* eslint-disable camelcase */
+
 export default async (req, res) => {
   req.tickRateLimiter(500);
   res.set({

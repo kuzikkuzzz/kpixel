@@ -2,7 +2,7 @@
  * selectors for ranks
  */
 
-/* eslint-disable import/prefer-default-export */
+/* eslint-disable import-x/prefer-default-export */
 
 export const selectStats = (state) => [
   state.ranks.totalRanking,

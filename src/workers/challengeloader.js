@@ -2,8 +2,6 @@
  * worker thread for creating JS Challenges
  */
 
-/* eslint-disable no-console */
-
 import { randomInt } from 'crypto';
 import compile from 'watr';
 import { isMainThread, parentPort } from 'worker_threads';
@@ -30,7 +28,6 @@ parentPort.on('message', (msg) => {
     }
   } catch (error) {
     console.warn(
-      // eslint-disable-next-line max-len
       `CHALLENGES: Error on createChallenge: ${error.message}`,
     );
     parentPort.postMessage(['Failure!']);

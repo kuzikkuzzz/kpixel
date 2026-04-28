@@ -119,7 +119,6 @@ function parseWhois(ip, whoisReturn) {
     if (Array.isArray(asn)) {
       [asn] = asn;
     }
-    // eslint-disable-next-line prefer-destructuring
     asn = asn.split(',')[0].split('\n')[0];
     // only number
     if (asn.startsWith('AS')) {

@@ -1,5 +1,3 @@
-// allow the websocket to be noisy on the console
-/* eslint-disable no-console */
 
 import {
   hydratePixelUpdate,

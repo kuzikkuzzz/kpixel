@@ -37,17 +37,17 @@ import pixelNotify from './PixelNotify.js';
 class Renderer2D extends Renderer {
   canvasId = null;
   viewscale = 0;
-  //--
+  // --
   centerChunk = [null, null];
   tiledScale = 0;
   tiledZoom = 4;
   hover = false;
-  //--
+  // --
   viewport = null;
-  //--
+  // --
   lastFetch = 0;
   canvas;
-  //--
+  // --
   oldHistoricalTime = null;
 
   constructor(store) {
@@ -57,7 +57,7 @@ class Renderer2D extends Renderer {
     this.canvasMaxTiledZoom = 0;
     this.historicalCanvasMaxTiledZoom = 0;
     this.scaleThreshold = 1;
-    //--
+    // --
     const viewport = document.createElement('canvas');
     viewport.className = 'viewport';
     const viewportCtx = viewport.getContext('2d', { alpha: false });
@@ -66,16 +66,16 @@ class Renderer2D extends Renderer {
     const context = canvas.getContext('2d', { alpha: false });
     this.canvas = canvas;
     this.onWindowResize();
-    //--
+    // --
     context.fillStyle = '#C4C4C4';
     context.fillRect(0, 0, this.canvas.width, this.canvas.height);
     viewportCtx.fillStyle = '#C4C4C4';
     viewportCtx.fillRect(0, 0, this.viewport.width, this.viewport.height);
-    //--
+    // --
     document.body.appendChild(this.viewport);
     this.onWindowResize = this.onWindowResize.bind(this);
     window.addEventListener('resize', this.onWindowResize);
-    //--
+    // --
     this.updateCanvasData(store.getState());
     this.controls = new PixelPainterControls(this, this.viewport, store);
   }
@@ -102,7 +102,6 @@ class Renderer2D extends Renderer {
     if (this.canvas.width !== canvasWidth
       || this.canvas.height !== canvasHeight
     ) {
-      // eslint-disable-next-line no-console
       console.log(`Noticed screen: ${canvasWidth} / ${canvasHeight}`);
       this.canvas.width = canvasWidth;
       this.canvas.height = canvasHeight;
@@ -505,7 +504,7 @@ class Renderer2D extends Renderer {
         || doRenderPixelnotify
       ) && isPotato
     );
-    //--
+    // --
     // if we have nothing to render, return
     // note: this.hover is used to, to render without the placeholder one last
     // time when cursor leaves window

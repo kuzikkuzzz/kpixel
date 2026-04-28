@@ -128,7 +128,6 @@ export function nestQuery(query, primaryKey) {
         (r) => r[primaryKey].toString() === primary.toString(),
       );
     } else {
-      // eslint-disable-next-line prefer-destructuring
       target = ret[0];
     }
 

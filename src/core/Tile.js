@@ -4,8 +4,6 @@
  *
  * */
 
-/* eslint-disable no-console */
-
 // Tile creation is allowed to be slow
 /* eslint-disable no-await-in-loop */
 
@@ -466,11 +464,8 @@ async function createEmptyTile(
   let i = 0;
   const max = TILE_SIZE * TILE_SIZE * 3;
   while (i < max) {
-    // eslint-disable-next-line prefer-destructuring
     tileRGBBuffer[i++] = palette.rgb[0];
-    // eslint-disable-next-line prefer-destructuring
     tileRGBBuffer[i++] = palette.rgb[1];
-    // eslint-disable-next-line prefer-destructuring
     tileRGBBuffer[i++] = palette.rgb[2];
   }
   const filename = path.resolve(canvasTileFolder, 'emptytile.webp');

@@ -33,12 +33,13 @@ export function validateName(name) {
   if (name.length < 2) return t`Name must be at least 2 characters long`;
   if (name.length > 26) return t`Name must be shorter than 26 characters`;
   if (name.indexOf('@') !== -1
-      || name.indexOf('/') !== -1
-      || name.indexOf('\\') !== -1
-      || name.indexOf('>') !== -1
-      || name.indexOf('<') !== -1
-      || name.indexOf('#') !== -1
-      || name.indexOf(String.fromCharCode(27)) !== -1) {
+    || name.indexOf('/') !== -1
+    || name.indexOf('\\') !== -1
+    || name.indexOf('>') !== -1
+    || name.indexOf('<') !== -1
+    || name.indexOf('#') !== -1
+    || name.indexOf(String.fromCharCode(27)) !== -1
+  ) {
     return t`Name contains invalid character like @, /, \\ or #`;
   }
   return false;
@@ -79,12 +80,13 @@ export function validateFactionTitle(title) {
   if (title.length < 2) return t`Title must be at least 2 characters long`;
   if (title.length > 26) return t`Title must be shorter than 26 characters`;
   if (title.indexOf('@') !== -1
-      || title.indexOf('/') !== -1
-      || title.indexOf('\\') !== -1
-      || title.indexOf('>') !== -1
-      || title.indexOf('<') !== -1
-      || title.indexOf('#') !== -1
-      || title.indexOf(String.fromCharCode(27)) !== -1) {
+    || title.indexOf('/') !== -1
+    || title.indexOf('\\') !== -1
+    || title.indexOf('>') !== -1
+    || title.indexOf('<') !== -1
+    || title.indexOf('#') !== -1
+    || title.indexOf(String.fromCharCode(27)) !== -1
+  ) {
     return t`Title contains invalid character like @, /, \\ or #`;
   }
   return false;
@@ -177,11 +179,13 @@ export function validateCoorRange(ulcoor, brcoor, canvasSize) {
   const canvasMaxXY = canvasSize / 2;
   const canvasMinXY = -canvasMaxXY;
   if (x < canvasMinXY || y < canvasMinXY
-      || x >= canvasMaxXY || y >= canvasMaxXY) {
+    || x >= canvasMaxXY || y >= canvasMaxXY
+  ) {
     return 'Coordinates of top-left corner are outside of canvas';
   }
   if (u < canvasMinXY || v < canvasMinXY
-      || u >= canvasMaxXY || v >= canvasMaxXY) {
+    || u >= canvasMaxXY || v >= canvasMaxXY
+  ) {
     return 'Coordinates of bottom-right corner are outside of canvas';
   }
 

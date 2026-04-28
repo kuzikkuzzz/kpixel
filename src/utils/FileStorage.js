@@ -29,7 +29,6 @@ class FileStorage {
         const db = event.target.result;
 
         db.onerror = (evt) => {
-          // eslint-disable-next-line no-console
           console.error('indexedDB error:', evt.target.error);
         };
 
@@ -46,7 +45,6 @@ class FileStorage {
       };
 
       request.onerror = () => {
-        // eslint-disable-next-line no-console
         console.error('Error on opening indexedDB:', request.error);
         reject(request.error);
       };
@@ -195,13 +193,11 @@ class FileStorage {
     const allKeys = await this.getAllKeys();
     const toDelete = allKeys.filter((i) => !ids.includes(i));
     if (toDelete.length) {
-      // eslint-disable-next-line no-console
       console.log('Templaes: Keys in db but not in store', toDelete);
       await this.deleteFile(toDelete);
     }
     const deadIds = ids.filter((i) => !allKeys.includes(i));
     if (deadIds.length) {
-      // eslint-disable-next-line no-console
       console.log('Templates: Keys in store but not in db', deadIds);
     }
     return deadIds;

@@ -8,6 +8,8 @@ import { generatePPID } from '../../utils/hash.js';
 
 import { USERLVL } from '../../core/constants.js';
 
+/* eslint-disable camelcase */
+
 export default async (req, res) => {
   req.tickRateLimiter(500);
   res.set({

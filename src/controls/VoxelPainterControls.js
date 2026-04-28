@@ -13,8 +13,6 @@
  * @author hf / http://git.pixelplanet.fun/hf
  */
 
-/* eslint-disable no-console */
-
 import {
   MOUSE,
   Quaternion,

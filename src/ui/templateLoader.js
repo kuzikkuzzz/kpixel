@@ -35,7 +35,6 @@ class TemplateLoader {
       this.#store.dispatch(templatesReady());
       await this.syncDB();
     } catch (err) {
-      // eslint-disable-next-line no-console
       console.warn(`Couldn't initialize Templates: ${err.message}`);
     }
   }
@@ -129,7 +128,6 @@ class TemplateLoader {
         this.#store.dispatch(removeTemplate(z.title));
       });
     } catch (err) {
-      // eslint-disable-next-line no-console
       console.error(
         `Error on syncing templates store and indexedDB: ${err.message}`,
       );
@@ -166,7 +164,6 @@ class TemplateLoader {
       this.#store.dispatch(receivedTemplate());
       return template;
     } catch (err) {
-      // eslint-disable-next-line no-console
       console.error(`Error loading template ${imageId}: ${err.message}`);
       return null;
     }
@@ -188,7 +185,6 @@ class TemplateLoader {
         imageId, title, canvasId, x, y, ...dimensions,
       ));
     } catch (err) {
-      // eslint-disable-next-line no-console
       console.error(`Error saving template ${title}: ${err.message}`);
     }
   }
@@ -201,7 +197,6 @@ class TemplateLoader {
       this.#templates.set(imageId, template);
       this.#store.dispatch(updatedTemplateImage(imageId, ...dimensions));
     } catch (err) {
-      // eslint-disable-next-line no-console
       console.error(`Error updating file ${imageId}: ${err.message}`);
     }
   }

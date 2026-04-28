@@ -615,7 +615,6 @@ export default function windows(
         if (win.open && (win.fullscreen || showWindows)) {
           return true;
         }
-        // eslint-disable-next-line no-console
         console.log(
           `Cleaning up window from previous session: ${win.windowId}`,
         );
