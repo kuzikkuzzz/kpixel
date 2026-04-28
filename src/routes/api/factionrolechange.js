@@ -7,11 +7,9 @@ import socketEvents from '../../socket/socketEvents.js';
 import { validateFactionName } from '../../utils/validation.js';
 import {
   getFactionLvlOfUser, getAllMembersOfFaction,
-} from '../../data/sql/Faction.js';
-import {
   getFactionRole, setFactionRoleFlag, setFactionRoleProperty,
   setFlagOfFactionRole,
-} from '../../data/sql/FactionRole.js';
+} from '../../data/sql/Faction.js';
 import { getMediaDimensions } from '../../data/sql/Media.js';
 import {
   FACTION_PERMISSIONS, FACTION_ROLE_FLAGS,

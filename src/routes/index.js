@@ -19,6 +19,7 @@ import m from './m.js';
 
 import { getJWKS } from '../core/jwt.js';
 import { expressTTag } from '../middleware/ttag.js';
+import { parseDevice } from '../middleware/device.js';
 import cors from '../middleware/cors.js';
 import { parseIP } from '../middleware/ip.js';
 import rateLimiter from '../middleware/ratelimit.js';
@@ -125,6 +126,9 @@ router.get('/test', (req, res) => {
 });
 
 router.use(rateLimiter);
+
+/* device */
+router.use(parseDevice);
 
 /*
  * Redirect to chat

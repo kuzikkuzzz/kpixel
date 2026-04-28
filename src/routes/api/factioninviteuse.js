@@ -3,8 +3,7 @@
  */
 import logger from '../../core/logger.js';
 import socketEvents from '../../socket/socketEvents.js';
-import { getFactionInfo } from '../../data/sql/Faction.js';
-import { consumeInvite } from '../../data/sql/FactionInvite.js';
+import { getFactionInfo, consumeInvite } from '../../data/sql/Faction.js';
 import { MAX_FACTIONS_PER_USER, CHANNEL_TYPES } from '../../core/constants.js';
 
 export default async function factioninvitecreate(req, res) {

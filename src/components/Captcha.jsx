@@ -37,9 +37,11 @@ async function getUrlAndId() {
 /*
  * autoload: Load captcha immediately and autofocus input textbox
  * width: width of the captcha image
+ * isOneTime: if its used one single time for a specific action, rather than
+ *   cached sitewide
  */
 const Captcha = ({
-  autoload, width, setLegit, onReadyStateChange,
+  autoload, width, setLegit, onReadyStateChange, isOneTime,
 }) => {
   const [captchaData, setCaptchaData] = useState({});
   const [challengeSolution, setChallengeSolution] = useState(null);
@@ -60,7 +62,7 @@ const Captcha = ({
     setLoading(true);
     setCaptchaData({});
     setAnimationRunning(false);
-    const captchaResponse = await getUrlAndId();
+    const captchaResponse = await getUrlAndId(isOneTime);
     setLoading(false);
     if (!captchaResponse) {
       setErrors([t`Could not load captcha`]);
@@ -71,7 +73,7 @@ const Captcha = ({
     /*
      * solve JS Challenge in Worker on first load
      */
-    if (challengeNeeded && challengeSolution === null) {
+    if ((challengeNeeded || isOneTime) && challengeSolution === null) {
       const worker = new Worker(`/challenge.js?cb=${getRandomString()}`);
       // TODO Timeout
       worker.onmessage = (e) => {
@@ -84,7 +86,7 @@ const Captcha = ({
 
     setCaptchaData({ svg, id: captchaid });
     setErrors([]);
-  }, [challengeSolution, loading]);
+  }, [challengeSolution, loading, isOneTime]);
 
   useEffect(() => {
     /*

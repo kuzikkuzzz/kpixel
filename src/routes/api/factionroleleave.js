@@ -3,7 +3,7 @@
  */
 import logger from '../../core/logger.js';
 import socketEvents from '../../socket/socketEvents.js';
-import { leaveFactionRole } from '../../data/sql/FactionRole.js';
+import { leaveFactionRole } from '../../data/sql/Faction.js';
 
 export default async function factionroleleave(req, res) {
   req.tickRateLimiter(500);

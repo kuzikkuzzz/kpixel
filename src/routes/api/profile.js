@@ -1,8 +1,7 @@
 /*
  * get profile information of user
  */
-import { getFishesOfUser } from '../../data/sql/Fish.js';
-import { getBadgesOfUser } from '../../data/sql/Badge.js';
+import { getFishesOfUser, getBadgesOfUser } from '../../data/sql/Goodies.js';
 import { getFactionsOfUser } from '../../data/sql/Faction.js';
 
 export default async (req, res) => {

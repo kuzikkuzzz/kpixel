@@ -1,7 +1,7 @@
 /*
  * print informations about invite
  */
-import { getInviteData } from '../../data/sql/FactionInvite.js';
+import { getInviteData } from '../../data/sql/Faction.js';
 
 export default async function factioninfo(req, res) {
   req.tickRateLimiter(1000);

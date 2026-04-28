@@ -2,8 +2,7 @@
  * print all informations about faction bans
  *
  */
-import { getFactionLvlOfUser } from '../../data/sql/Faction.js';
-import { getInviteInfo } from '../../data/sql/FactionInvite.js';
+import { getFactionLvlOfUser, getInviteInfo } from '../../data/sql/Faction.js';
 import { FACTION_PERMISSIONS } from '../../core/constants.js';
 
 export default async function factioninvites(req, res) {

@@ -3,8 +3,7 @@
  */
 import { getUserOIDCProfile } from '../../data/sql/User.js';
 import { getUserRanks } from '../../data/redis/ranks.js';
-import { getFishesOfUser } from '../../data/sql/Fish.js';
-import { getBadgesOfUser } from '../../data/sql/Badge.js';
+import { getFishesOfUser, getBadgesOfUser } from '../../data/sql/Goodies.js';
 import { generatePPID } from '../../utils/hash.js';
 
 import { USERLVL } from '../../core/constants.js';

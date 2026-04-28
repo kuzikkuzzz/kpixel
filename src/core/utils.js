@@ -32,7 +32,7 @@ export function getRandomInt(min, max) {
  * 11 chars length
  */
 export function getRandomString() {
-  return Math.random().toString(36).substring(2, 15);
+  return Math.random().toString(36).substring(2, 13).padEnd(11, 'o');
 }
 
 /*

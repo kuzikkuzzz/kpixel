@@ -9,7 +9,7 @@ import { Worker } from 'worker_threads';
 
 import logger from './logger.js';
 import socketEvents from '../socket/socketEvents.js';
-import { getCaptchaFonts, setCaptchaFonts } from '../data/redis/captcha.js';
+import { getState, setState } from './SharedState.js';
 import { DailyCron } from '../utils/cron.js';
 
 const MAX_WAIT = 30 * 1000;
@@ -19,14 +19,6 @@ const FONT_FOLDER = path.resolve('captchaFonts');
  * worker thread
  */
 const worker = new Worker(path.resolve('workers', 'captchaloader.js'));
-
-/*
- * set captcha fonts according to stored fonts in redis
- */
-export async function loadCaptchaFontsFromRedis() {
-  const fonts = await getCaptchaFonts();
-  worker.postMessage(`setCaptchaFonts,${JSON.stringify(fonts)}`);
-}
 
 /*
  * update captcha fonts
@@ -49,10 +41,23 @@ export async function rollCaptchaFonts() {
       Math.floor(Math.random() * fontFilenames.length)
     ]);
   }
-  await setCaptchaFonts(choosenFonts);
+  await setState('captcha_fonts', choosenFonts);
   logger.info(`CAPTCHAS: Rolled new fonts: ${choosenFonts.join(',')}`);
   socketEvents.broadcastCaptchaFonts(choosenFonts);
   return choosenFonts;
+}
+
+/*
+ * set captcha fonts according to stored fonts in redis
+ */
+export async function loadCaptchaFontsFromDb() {
+  const fonts = await getState('captcha_fonts');
+  if (!fonts?.length) {
+    logger.info('CAPTCHAS: No captcha fonts stored, reload...');
+    rollCaptchaFonts();
+  } else {
+    worker.postMessage(`setCaptchaFonts,${JSON.stringify(fonts)}`);
+  }
 }
 
 /*

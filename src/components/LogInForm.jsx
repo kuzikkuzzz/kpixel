@@ -153,7 +153,10 @@ const LogInForm = ({
     const durationsel = evt.target.durationsel.value;
     const captcha = evt.target.captcha.value;
     const captchaid = evt.target.captchaid.value;
-    const challengeSolution = evt.target.challengesolution.value;
+    let challengeSolution = evt.target.challengesolution.value;
+    if (challengeSolution) {
+      challengeSolution = Number(challengeSolution);
+    }
     const valErrors = validateRegister(
       name, username, email, password, confirmPassword,
     );
@@ -392,6 +395,7 @@ const LogInForm = ({
                       width={85}
                       key={captKey}
                       onReadyStateChange={setSuccess}
+                      isOneTime
                     /><br />
                     {errors.map((error) => (
                       <p key={error} className="errormessage"><span>{t`Error`}</span>

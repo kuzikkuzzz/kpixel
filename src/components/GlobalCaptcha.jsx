@@ -36,7 +36,10 @@ const GlobalCaptcha = ({ close }) => {
         }
         // ----
         const captchaid = e.target.captchaid.value;
-        const challengeSolution = e.target.challengesolution.value;
+        let challengeSolution = e.target.challengesolution.value;
+        if (challengeSolution) {
+          challengeSolution = Number(challengeSolution);
+        }
         let errorText;
         try {
           setSubmitting(true);
@@ -56,7 +59,7 @@ const GlobalCaptcha = ({ close }) => {
               errorText = t`No or invalid captcha text`;
               break;
             case 4:
-              errorText = t`No captcha id given`;
+              errorText = t`Your device looks weird`;
               break;
             case 6:
               errorText = t`Your Browser looks shady`;
@@ -96,6 +99,7 @@ const GlobalCaptcha = ({ close }) => {
        &nbsp;
         <button
           type="submit"
+          disabled={submitting || !ready}
         >
           {(submitting || !ready) ? '...' : t`Send`}
         </button>

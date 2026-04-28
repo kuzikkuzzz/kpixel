@@ -5,9 +5,8 @@ import logger from '../../core/logger.js';
 import socketEvents from '../../socket/socketEvents.js';
 import { validateFactionName } from '../../utils/validation.js';
 import {
-  getFactionLvlOfUser, getAllMembersOfFaction,
+  getFactionLvlOfUser, getAllMembersOfFaction, createFactionRole,
 } from '../../data/sql/Faction.js';
-import { createFactionRole } from '../../data/sql/FactionRole.js';
 import {
   FACTION_PERMISSIONS,
   MAX_ROLES_PER_FACTION,

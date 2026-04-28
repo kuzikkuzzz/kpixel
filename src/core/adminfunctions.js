@@ -11,7 +11,7 @@ import { validateCoorRange, validateUsername } from '../utils/validation.js';
 import CanvasCleaner from './CanvasCleaner.js';
 import socketEvents from '../socket/socketEvents.js';
 import { giveEveryoneAFish } from './Fishing.js';
-import { forceCaptcha, resetAllCaptchas } from '../data/redis/captcha.js';
+import { forceCaptcha, resetAllCaptchas } from '../data/sql/Captcha.js';
 import { rollCaptchaFonts } from './captchaserver.js';
 import { getBanInfos } from '../data/sql/Ban.js';
 import { getTPIDsOfUser, getTPIDHistoryOfUser } from '../data/sql/ThreePID.js';
@@ -109,8 +109,9 @@ export async function executeQuickAction(action, logger = null) {
       return `Rolled captcha fonts: ${fonts.join(',')}`;
     }
     case 'resetcaptchas': {
-      const amount = await resetAllCaptchas();
-      return `Reset ${amount} Captchas and JS Challenges!`;
+      await resetAllCaptchas();
+      socketEvents.resetAllCaptchas();
+      return 'Reset Captchas and JS Challenges!';
     }
     case 'enableverify': {
       await setState('needVerification', true);
@@ -386,14 +387,9 @@ export async function executeIIDAction(
       return printBans(banInfos);
     }
     case 'givecaptcha': {
-      const succ = await forceCaptcha(ipString);
-      if (succ === null) {
-        return 'Captchas are deactivated on this server.';
-      }
-      if (succ) {
-        return `Forced captcha on ${iid}`;
-      }
-      return `${iid} would have gotten captcha anyway`;
+      await forceCaptcha(ipString);
+      socketEvents.reloadIP(ipString, true);
+      return `Forced captcha on ${iid}`;
     }
     case 'changeusername': {
       const [curUser, targetUser] = await Promise.all([

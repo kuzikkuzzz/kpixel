@@ -1,7 +1,7 @@
 /*
  * get information of badge
  */
-import { getBadgeById } from '../../data/sql/Badge.js';
+import { getBadgeById } from '../../data/sql/Goodies.js';
 import { resolveSessionUidOfRequest } from '../../middleware/session.js';
 
 export default async function badge(req, res) {

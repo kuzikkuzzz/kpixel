@@ -15,7 +15,7 @@ import { sync as syncAssets } from './core/assets.js';
 import { connect as connectRedis } from './data/redis/client.js';
 import routes from './routes/index.js';
 import chatProvider from './core/ChatProvider.js';
-import { loadCaptchaFontsFromRedis } from './core/captchaserver.js';
+import { loadCaptchaFontsFromDb } from './core/captchaserver.js';
 import rpgEvent from './core/RpgEvent.js';
 import { initialize as initializeFishing } from './core/Fishing.js';
 import canvasCleaner from './core/CanvasCleaner.js';
@@ -108,7 +108,7 @@ syncSql()
     User.setMailProvider(mailProvider);
     chatProvider.initialize();
     startAllCanvasLoops();
-    loadCaptchaFontsFromRedis();
+    loadCaptchaFontsFromDb();
     usersocket.initialize();
     apisocket.initialize();
     canvasCleaner.initialize();

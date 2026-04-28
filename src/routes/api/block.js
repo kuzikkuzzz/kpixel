@@ -6,9 +6,10 @@
 
 import logger from '../../core/logger.js';
 import socketEvents from '../../socket/socketEvents.js';
-import { findUserByIdOrName } from '../../data/sql/User.js';
+import {
+  findUserByIdOrName, blockUser, unblockUser,
+} from '../../data/sql/User.js';
 import { deleteDMChannel } from '../../data/sql/Channel.js';
-import { blockUser, unblockUser } from '../../data/sql/UserBlock.js';
 import { CHANNEL_TYPES } from '../../core/constants.js';
 
 async function block(req, res) {

@@ -15,6 +15,18 @@ sql query:
 UPDATE Users SET username = CONCAT('pp_', id) WHERE username NOT REGEXP '^[A-Za-z]';
 ```
 
+The following redis keys aren't used anymore because captchas and js challenges
+got moved into sql: `trus:*`, `chal:*`, `chip:*`, `capt:*`, `human:*`.
+Commands to remove them:
+
+```bash
+redis-cli KEYS "trus:*" | xargs redis-cli DEL
+redis-cli KEYS "chal:*" | xargs redis-cli DEL
+redis-cli KEYS "chip:*" | xargs redis-cli DEL
+redis-cli KEYS "capt:*" | xargs redis-cli DEL
+redis-cli KEYS "human:*" | xargs redis-cli DEL
+```
+
 # Pixelplanet <2.0 to 2.0
 
 The 2.0 release comes with a total revamp of the account system, proxy detection

@@ -4,13 +4,10 @@
 import logger from '../../core/logger.js';
 import socketEvents from '../../socket/socketEvents.js';
 import {
-  getFactionInfo, leaveFaction, getFactionLvlOfUser,
+  getFactionInfo, leaveFaction, getFactionLvlOfUser, banUserFromFaction,
 } from '../../data/sql/Faction.js';
 import { deleteUserChannelMessages } from '../../data/sql/Message.js';
 import { getLastIPOfUser } from '../../data/sql/User.js';
-import {
-  banUserFromFaction,
-} from '../../data/sql/FactionBan.js';
 import {
   FACTION_PERMISSIONS, CHANNEL_TYPES,
 } from '../../core/constants.js';

@@ -11,7 +11,7 @@ import { REDIS_URL, IS_CLUSTER, BACKUP_URL } from '../../core/config.js';
 
 const scripts = {
   placePixel: {
-    NUMBER_OF_KEYS: 10,
+    NUMBER_OF_KEYS: 9,
     transformArguments(...args) {
       return args.map((a) => ((typeof a === 'string') ? a : a.toString()));
     },

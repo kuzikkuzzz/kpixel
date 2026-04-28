@@ -329,6 +329,13 @@ class SocketEvents extends EventEmitter {
   }
 
   /**
+   * reset all captchas and challenges
+   */
+  resetAllCaptchas() {
+    this.emit('resetAllCaptchas');
+  }
+
+  /**
    * change a users profile,
    * @param userId userId or Array of userIds
    * @param patch object describing the profile state

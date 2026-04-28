@@ -6,7 +6,7 @@ import fs from 'fs';
 import path from 'path';
 import readline from 'readline';
 
-import { ensureBadgeExistence } from '../data/sql/Badge.js';
+import { ensureBadgeExistence } from '../data/sql/Goodies.js';
 import { assetWatcher } from './fsWatcher.js';
 import { ASSET_DIR } from './config.js';
 

@@ -100,5 +100,14 @@ export default function getDeviceInfo(req) {
     .digest('base64url')
     .substring(0, 15);
 
-  return { hash, device, browser, os, headerSignature };
+  /*
+    * hash for a specific browser that only fits temporary and isn't stored
+    */
+  const browserHash = crypto.createHash('sha224')
+  // eslint-disable-next-line max-len
+    .update(userAgent + headers.host + headers['accept-language'] + headers['accept-encoding'])
+    .digest('base64url')
+    .substring(0, 15);
+
+  return { hash, device, browser, os, headerSignature, browserHash };
 }

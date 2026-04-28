@@ -27,7 +27,7 @@ export async function upsertDevice({
       return { id: insertId, lastSeen: new Date() };
     }
   } catch (error) {
-    console.error(`SQL Error on getDeviceIdByHash: ${error.message}`);
+    console.error(`SQL Error on upsertDevice: ${error.message}`);
   } finally {
     if (conn) conn.release();
   }

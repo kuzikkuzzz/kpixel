@@ -1,7 +1,6 @@
 import express from 'express';
 
 import { verifySession, ensureLoggedIn } from '../../middleware/session.js';
-import { parseDevice } from '../../middleware/device.js';
 import errorJson from '../../middleware/errorJson.js';
 
 import me from './me.js';
@@ -102,8 +101,6 @@ router.post('/factioninfo', factioninfo);
 router.post('/userinfo', userinfo);
 router.post('/factionmembers', factionmembers);
 router.post('/factioninvitedata', factioninvitedata);
-
-router.use(parseDevice);
 
 router.use('/auth', auth);
 

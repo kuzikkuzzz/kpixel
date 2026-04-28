@@ -3,7 +3,7 @@
  */
 import logger from '../core/logger.js';
 import requestChallenge from '../core/challengeserver.js';
-import { setChallengeSolution } from '../data/redis/captcha.js';
+import { registerChallenge } from '../data/sql/Captcha.js';
 
 async function challenge(req, res) {
   req.tickRateLimiter(3000);
@@ -22,29 +22,60 @@ async function challenge(req, res) {
     return;
   }
 
-  const { ipString } = req.ip;
+  try {
+    /* ensures IP table is populated */
+    await req.ip.getAllowance();
+    const { ipString } = req.ip;
+    const { browserHash } = req.device;
 
-  requestChallenge(async (error, solution, data) => {
-    try {
-      if (error) {
-        throw new Error(error);
-      }
+    let solution;
+    let data;
+    let needCaptcha;
+    /* eslint-disable no-await-in-loop */
+    let retries = 3;
+    while (typeof needCaptcha !== 'boolean' && retries) {
+      /*
+       * challenge data could return duplicate solution, so we retry
+       */
+      retries -= 1;
+      const challengeData = await new Promise((resolve) => {
+        requestChallenge((...args) => resolve(args));
+      });
 
-      setChallengeSolution(solution, ipString, req.headers['user-agent']);
-      // eslint-disable-next-line max-len
-      logger.info(`CHALLENGE ${ipString} got challenge with solution: ${solution}`);
-      res.end(data);
-    } catch (err) {
-      if (!res.writableEnded) {
-        res.status(503);
-        res.send(
-          // eslint-disable-next-line max-len
-          'console.log(\'JS Challenge experienced an server error 503\');',
-        );
+      // error return
+      if (challengeData[0]) {
+        throw new Error(challengeData[0]);
       }
-      logger.warn(err.message);
+      [, solution, data] = challengeData;
+
+      try {
+        needCaptcha = await registerChallenge(solution, browserHash, ipString);
+      } catch (error) {
+        if (error.code !== 'ER_DUP_ENTRY') {
+          throw new Error('SQL Error on registering Captcha');
+        }
+      }
     }
-  });
+    /* eslint-enable no-await-in-loop */
+    if (typeof needCaptcha !== 'boolean') {
+      throw new Error('Could not generate unique Challenge');
+    }
+
+    logger.info(
+      `CHALLENGE ${ipString} got challenge with solution: ${solution}`,
+    );
+
+    res.end(data);
+  } catch (err) {
+    if (!res.writableEnded) {
+      res.status(503);
+      res.send(
+        // eslint-disable-next-line max-len
+        'console.log(\'JS Challenge experienced an server error 503\');',
+      );
+    }
+    logger.warn(err.message);
+  }
 }
 
 export default challenge;

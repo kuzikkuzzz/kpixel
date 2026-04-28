@@ -37,7 +37,7 @@ function setCaptchaFonts(fontFilenames) {
   }
   font = newFont.map((f) => ppfunCaptcha.loadFont(f));
   // eslint-disable-next-line max-len
-  console.info(`CAPTCHAS: change fonts to ${newFont.map((f) => f.slice(-15)).join(',')}`);
+  console.info(`CAPTCHAS: change fonts to ${newFont.map((f) => f.slice(-18)).join(',')}`);
 }
 
 function createCaptcha() {

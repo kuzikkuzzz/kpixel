@@ -21,13 +21,13 @@ import { sanitizeIPString, ipToHex } from '../../utils/intel/ip.js';
 export async function getIPAllowance(ipString) {
   let ipAllowance;
   try {
+    /* eslint-disable max-len */
     ipAllowance = await pool.query(
-      /* eslint-disable max-len */
-      `SELECT COALESCE(i.lastSeen, NOW() - INTERVAL 5 MINUTE) as lastSeen,
+      `SELECT COALESCE(i.lastSeen, CAST('1970-01-01' AS DATETIME)) as lastSeen,
 p.isProxy > 0 AS isProxy, w.ip IS NOT NULL AS isWhitelisted,
 COALESCE(r.country, 'xx') AS country,
-COALESCE(r.expires, NOW() - INTERVAL 5 MINUTE) AS whoisExpires,
-COALESCE(p.expires, NOW() - INTERVAL 5 MINUTE) AS proxyCheckExpires,
+COALESCE(UNIX_TIMESTAMP(r.expires) * 1000, 0) AS whoisExpiresTs,
+COALESCE(UNIX_TIMESTAMP(p.expires) * 1000, 0) AS proxyCheckExpiresTs,
 b.expires AS 'bans.expires', b.flags AS 'bans.flags' FROM IPs i
   LEFT JOIN ProxyWhitelists w ON w.ip = i.ip
   LEFT JOIN Proxies p ON p.ip = i.ip AND p.expires > NOW()
@@ -35,7 +35,6 @@ b.expires AS 'bans.expires', b.flags AS 'bans.flags' FROM IPs i
   LEFT JOIN IPBans ib ON ib.ip = i.ip
   LEFT JOIN Bans b ON b.id = ib.bid AND (b.expires > NOW() OR b.expires IS NULL)
 WHERE i.ip = IP_TO_BIN(?)`,
-      /* eslint-enable max-len */
       [ipString],
     );
     ipAllowance = nestQuery(ipAllowance);
@@ -43,12 +42,8 @@ WHERE i.ip = IP_TO_BIN(?)`,
     if (ipAllowance) {
       ipAllowance.isProxy = ipAllowance.isProxy === 1;
       ipAllowance.isWhitelisted = ipAllowance.isWhitelisted === 1;
-      ipAllowance.whoisExpiresTs = ipAllowance.whoisExpires.getTime();
-      // eslint-disable-next-line max-len
-      ipAllowance.proxyCheckExpiresTs = ipAllowance.proxyCheckExpires.getTime();
-      delete ipAllowance.whoisExpires;
-      delete ipAllowance.proxyCheckExpires;
     }
+    /* eslint-enable max-len */
   } catch (error) {
     console.error(`SQL Error on getIPAllowance: ${error.message}`);
   }
@@ -64,6 +59,8 @@ WHERE i.ip = IP_TO_BIN(?)`,
       lastSeen: new Date(),
       whoisExpiresTs: expiredTs,
       proxyCheckExpiresTs: expiredTs,
+      captchaExpiresTs: expiredTs,
+      challengeExpiresTs: expiredTs,
     };
   }
 

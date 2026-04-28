@@ -8,6 +8,7 @@ import {
 import { getIPIntelOverShards } from '../utils/intel/index.js';
 import { queue } from '../utils/intel/queue.js';
 import { getIPAllowance, touchIP } from '../data/sql/IP.js';
+import { getIPVerification } from '../data/sql/Captcha.js';
 import { parseListOfBans } from '../data/sql/Ban.js';
 
 const getIPAllowanceQueued = queue(getIPAllowance);
@@ -40,6 +41,15 @@ export class IP {
    * null means to never recheck (so if not banned or perma banned)
    */
   banRecheckTs = null;
+  /*
+   * if we need a captcha or challenge
+   */
+  captchaNeeded = true;
+  challengeNeeded = true;
+  /*
+   * when to recheck for needed captcha or challenge
+   */
+  verificationRecheckTs = 0;
 
   constructor(req) {
     this.#req = req;
@@ -151,7 +161,49 @@ export class IP {
   }
 
   refresh() {
+    this.verificationRecheckTs = 0;
     return this.getAllowance(true);
+  }
+
+  /**
+   * fetch verification status (captcha, js challenge) of ip
+   * @return { captchaNeeded, challengeNeeded }
+   */
+  async getVerification() {
+    const currentTs = Date.now();
+    if (this.verificationRecheckTs !== null
+      && this.verificationRecheckTs < currentTs
+    ) {
+      const { ipString } = this;
+      const {
+        captchaExpiresTs, challengeExpiresTs,
+      } = await getIPVerification(ipString);
+
+      this.verificationRecheckTs = captchaExpiresTs;
+      if (challengeExpiresTs !== null
+        && challengeExpiresTs < this.verificationRecheckTs
+      ) {
+        this.verificationRecheckTs = challengeExpiresTs;
+      }
+
+      this.challengeNeeded = (
+        challengeExpiresTs !== null && challengeExpiresTs < currentTs
+      );
+      this.captchaNeeded = (
+        captchaExpiresTs !== null && captchaExpiresTs < currentTs
+      );
+
+      if (this.verificationRecheckTs !== null
+        && this.verificationRecheckTs < currentTs
+      ) {
+        /* limit recheck time */
+        this.verificationRecheckTs = currentTs + 3000;
+      }
+    }
+    return {
+      captchaNeeded: this.captchaNeeded,
+      challengeNeeded: this.challengeNeeded,
+    };
   }
 
   /**

@@ -114,25 +114,6 @@ export default async function drawByOffsets(
       throw new Error(3);
     }
 
-    /*
-     * errors that we want to be logged later on
-     * In example: The user should not know that he is detected as a proxy,
-     * unless he already solved a captcha
-     */
-    let errorLater;
-
-    // eslint-disable-next-line prefer-const
-    let { isBanned, isProxy } = await ip.getAllowance();
-    if (!isProxy && !isBanned && user) {
-      ({ isBanned } = await user.getAllowance());
-    }
-    if (isBanned) {
-      throw new Error(14);
-    }
-    if (isProxy) {
-      errorLater = 11;
-    }
-
     const isAdmin = (user?.userlvl >= USERLVL.ADMIN);
     const req = (isAdmin) ? null : canvas.req;
     const clrIgnore = canvas.cli || 0;
@@ -210,10 +191,39 @@ export default async function drawByOffsets(
       cdIfNull = 0;
     }
 
+    /*
+     * Errors that we want to be logged later on
+     * In example: The user should not know that he is detected as a proxy,
+     * unless he already solved a captcha.
+     * Also useful for letting pixels be logged before throwing.
+     */
+    let errorLater;
+
     if ((await getState('needVerification')) && (
       !user || user.userlvl < USERLVL.VERIFIED
     )) {
       errorLater = 17;
+    }
+
+    if (!errorLater) {
+      const { captchaNeeded, challengeNeeded } = await ip.getVerification();
+      if (captchaNeeded || challengeNeeded) {
+        errorLater = 10;
+      }
+    }
+
+    if (!errorLater) {
+      // eslint-disable-next-line prefer-const
+      let { isBanned, isProxy } = await ip.getAllowance();
+      if (!isProxy && !isBanned && user) {
+        ({ isBanned } = await user.getAllowance());
+      }
+      if (isBanned) {
+        throw new Error(14);
+      }
+      if (isProxy) {
+        errorLater = 11;
+      }
     }
 
     /* temporary blocks */
@@ -272,7 +282,8 @@ export default async function drawByOffsets(
     }
 
     /*
-     * pxlCnt is only larger than 0 if we don't need a captcha or other stuff
+     * pxlCnt is only larger than 0 if all requirements are met for placing on
+     * that canvas
      */
     if (pxlCnt > 0 && errorLater) {
       throw new Error(errorLater);

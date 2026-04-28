@@ -3,11 +3,8 @@
  */
 import logger from '../../core/logger.js';
 import {
-  getFactionLvlOfUser,
+  getFactionLvlOfUser, unbanFromFaction,
 } from '../../data/sql/Faction.js';
-import {
-  unbanFromFaction,
-} from '../../data/sql/FactionBan.js';
 import { FACTION_PERMISSIONS } from '../../core/constants.js';
 
 export default async function factionunban(req, res) {

@@ -37,9 +37,9 @@ import chatProvider from '../core/ChatProvider.js';
 import authenticateClient from './authenticateClient.js';
 import drawByOffsets from '../core/draw.js';
 import { HOUR } from '../core/constants.js';
-import { checkCaptchaSolution } from '../data/redis/captcha.js';
 import { getCoolDown } from '../data/redis/cooldown.js';
 import { markChannelsRead } from '../data/sql/Channel.js';
+import { checkVerificationSolutions } from '../data/sql/Captcha.js';
 import { isCORSAllowed } from '../middleware/cors.js';
 import evaluateMalware from '../core/malwareEvaluation.js';
 
@@ -86,12 +86,12 @@ class SocketServer {
       ws.chunkCnt = 0;
       ws.openChatChannels = new Set();
       /* populate data from request */
-      const { user, ip, lang, ttag } = req;
+      const { user, ip, lang, device, ttag } = req;
       ws.user = user;
       ws.ip = ip;
+      ws.browserHash = device.browserHash;
       ws.lang = lang;
       ws.ttag = ttag;
-      ws.userAgent = req.headers['user-agent'];
       ipCounter.add(ip.ipString);
 
       ws.send(dehydrateOnlineCounter(socketEvents.onlineCounter));
@@ -121,6 +121,12 @@ class SocketServer {
     socketEvents.on('reloadUser', this.reloadUser);
     socketEvents.on('reloadIP', this.reloadIP);
     socketEvents.on('patchState', this.patchUserState);
+
+    socketEvents.on('resetAllCaptchas', () => {
+      this.wss.clients.forEach((ws) => {
+        ws.ip.verificationRecheckTs = 0;
+      });
+    });
 
     socketEvents.on('onlineCounter', (online) => {
       this.broadcast(dehydrateOnlineCounter(online));
@@ -607,9 +613,9 @@ class SocketServer {
         case 'cs': {
           // captcha solution
           const [solution, captchaid, challengeSolution] = val;
-          const ret = await checkCaptchaSolution(
-            solution, ipString, ws.userAgent, false,
-            captchaid, challengeSolution,
+          const ret = await checkVerificationSolutions(
+            captchaid, solution, challengeSolution,
+            ws.browserHash, ipString, false,
           );
           ws.send(dehydrateCaptchaReturn(ret));
           break;

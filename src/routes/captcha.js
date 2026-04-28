@@ -3,7 +3,7 @@
  */
 import logger from '../core/logger.js';
 import { requestCaptcha } from '../core/captchaserver.js';
-import { setCaptchaSolution, isTrusted } from '../data/redis/captcha.js';
+import { registerCaptcha } from '../data/sql/Captcha.js';
 
 async function captcha(req, res) {
   req.tickRateLimiter(3000);
@@ -23,26 +23,53 @@ async function captcha(req, res) {
     return;
   }
 
-  const { ipString } = req.ip;
-
   try {
-    const [trusted, [err, text, data, id]] = await Promise.all([
-      isTrusted(ipString, req.headers['user-agent']),
-      new Promise((resolve) => {
-        requestCaptcha((...args) => resolve(args));
-      }),
-    ]);
+    /* ensures IP table is populated */
+    await req.ip.getAllowance();
+    const { ipString } = req.ip;
+    const { browserHash } = req.device;
 
-    if (err) {
-      throw new Error(err);
+    let data;
+    let text;
+    let id;
+    let needChallenge;
+    /* eslint-disable no-await-in-loop */
+    let retries = 3;
+    while (typeof needChallenge !== 'boolean' && retries) {
+      /*
+       * captcha data could return duplicate ids, so we retry if that is the
+       * case
+       */
+      retries -= 1;
+      const captchaData = await new Promise((resolve) => {
+        requestCaptcha((...args) => resolve(args));
+      });
+
+      // error return
+      if (captchaData[0]) {
+        throw new Error(captchaData[0]);
+      }
+      [, text, data, id] = captchaData;
+
+      try {
+        needChallenge = await registerCaptcha(id, text, browserHash, ipString);
+      } catch (error) {
+        if (error.code !== 'ER_DUP_ENTRY') {
+          throw new Error('SQL Error on registering Captcha');
+        }
+      }
     }
-    setCaptchaSolution(text, id);
+    /* eslint-enable no-await-in-loop */
+    if (typeof needChallenge !== 'boolean') {
+      throw new Error('Could not generate unique Captcha');
+    }
+
     logger.info(`CAPTCHA ${ipString} got captcha with text: ${text}`);
 
     res.set({
       'Content-Type': 'image/svg+xml',
       'Captcha-Id': id,
-      'Challenge-Needed': trusted ? '0' : '1',
+      'Challenge-Needed': needChallenge ? '1' : '0',
     });
     res.end(data);
   } catch (err) {

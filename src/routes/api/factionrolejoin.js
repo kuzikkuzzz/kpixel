@@ -3,10 +3,9 @@
  */
 import logger from '../../core/logger.js';
 import socketEvents from '../../socket/socketEvents.js';
-import { getFactionLvlOfUser } from '../../data/sql/Faction.js';
 import {
-  getFactionRole, joinFactionRole,
-} from '../../data/sql/FactionRole.js';
+  getFactionRole, joinFactionRole, getFactionLvlOfUser,
+} from '../../data/sql/Faction.js';
 import { FACTION_PERMISSIONS } from '../../core/constants.js';
 
 export default async function factionrolejoin(req, res) {

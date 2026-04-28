@@ -2,8 +2,7 @@
  * print all informations about user
  *
  */
-import { getFishesOfUser } from '../../data/sql/Fish.js';
-import { getBadgesOfUser } from '../../data/sql/Badge.js';
+import { getFishesOfUser, getBadgesOfUser } from '../../data/sql/Goodies.js';
 import { getUserInfo } from '../../data/sql/User.js';
 import { getUserRanks } from '../../data/redis/ranks.js';
 

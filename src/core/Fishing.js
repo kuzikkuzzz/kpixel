@@ -10,7 +10,7 @@ import socketEvents from '../socket/socketEvents.js';
 import { getAmountOfIPCooldownModifications } from './CooldownModifiers.js';
 import chatProvider from './ChatProvider.js';
 import { escapeMd, calculateFishBonusDuration } from './utils.js';
-import { storeFish } from '../data/sql/Fish.js';
+import { storeFish } from '../data/sql/Goodies.js';
 import {
   EVENT_USER_NAME,
   FISH_TYPES,

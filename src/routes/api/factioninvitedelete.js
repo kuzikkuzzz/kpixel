@@ -2,7 +2,7 @@
  * create a faction
  */
 import logger from '../../core/logger.js';
-import { deleteInvite } from '../../data/sql/FactionInvite.js';
+import { deleteInvite } from '../../data/sql/Faction.js';
 
 export default async function factioninvitecreate(req, res) {
   req.tickRateLimiter(7000);

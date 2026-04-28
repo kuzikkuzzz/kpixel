@@ -3,7 +3,7 @@
  */
 import logger from '../../core/logger.js';
 import socketEvents from '../../socket/socketEvents.js';
-import { deleteFactionRole } from '../../data/sql/FactionRole.js';
+import { deleteFactionRole } from '../../data/sql/Faction.js';
 
 export default async function factionroledelete(req, res) {
   req.tickRateLimiter(10000);

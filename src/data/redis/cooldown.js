@@ -3,7 +3,6 @@
  * this does not set any pixels itself, see lua/placePixel.lua
  */
 import client from './client.js';
-import { PREFIX as CAPTCHA_PREFIX } from './captcha.js';
 import {
   RANKED_KEY,
   DAILY_RANKED_KEY,
@@ -12,7 +11,6 @@ import {
   DAILY_CRANKED_KEY,
   PREV_DAY_TOP_KEY,
 } from './ranks.js';
-import { CAPTCHA_TIME } from '../../core/config.js';
 
 const PREFIX = 'cd';
 
@@ -49,8 +47,6 @@ export default function allowPlace(
   dontIncreaseCounters,
   pxls,
 ) {
-  const captKey = (CAPTCHA_TIME >= 0)
-    ? `${CAPTCHA_PREFIX}:${ipString}` : 'nope';
   const ipCdKey = `${PREFIX}:${canvasCdId}:ip:${ipString}`;
   let idCdKey;
   if (id) {
@@ -66,7 +62,7 @@ export default function allowPlace(
   const dailyset = (ranked) ? DAILY_RANKED_KEY : 'nope';
   /* eslint-disable max-len */
   return client.placePixel(
-    captKey, ipCdKey, idCdKey, chunkKey, RANKED_KEY, dailyset, FRANKED_KEY, DAILY_FRANKED_KEY, DAILY_CRANKED_KEY, PREV_DAY_TOP_KEY,
+    ipCdKey, idCdKey, chunkKey, RANKED_KEY, dailyset, FRANKED_KEY, DAILY_FRANKED_KEY, DAILY_CRANKED_KEY, PREV_DAY_TOP_KEY,
     clrIgnore, bcd, pcd, cds, cdIfNull, id, activeFactionId, cc, req, dontIncreaseCounters ? 1 : 0,
     ...pxls,
   );

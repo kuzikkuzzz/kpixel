@@ -2,7 +2,7 @@
  * create a faction invite
  */
 import logger from '../../core/logger.js';
-import { createInvite } from '../../data/sql/FactionInvite.js';
+import { createInvite } from '../../data/sql/Faction.js';
 
 export default async function factioninvitecreate(req, res) {
   req.tickRateLimiter(7000);

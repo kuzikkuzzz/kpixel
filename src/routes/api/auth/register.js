@@ -3,6 +3,7 @@ import {
   createNewUser, getUsersByNameOrEmail,
 } from '../../../data/sql/User.js';
 import { addOrReplaceTpid } from '../../../data/sql/ThreePID.js';
+import { checkVerificationSolutions } from '../../../data/sql/Captcha.js';
 import mailProvider from '../../../core/MailProvider.js';
 import getMe from '../../../core/me.js';
 import { openSession } from '../../../middleware/session.js';
@@ -13,7 +14,6 @@ import {
   validatePassword,
   validateUsername,
 } from '../../../utils/validation.js';
-import { checkCaptchaSolution } from '../../../data/redis/captcha.js';
 import { THREEPID_PROVIDERS } from '../../../core/constants.js';
 
 async function validate(
@@ -47,10 +47,10 @@ export default async (req, res) => {
   );
 
   const { ip } = req;
-  const userAgent = req.headers['user-agent'];
   if (!errors.length) {
-    const captchaPass = await checkCaptchaSolution(
-      captcha, ip.ipString, userAgent, true, captchaid, challengeSolution,
+    const captchaPass = await checkVerificationSolutions(
+      captchaid, captcha, challengeSolution,
+      req.device.browserHash, ip.ipString, true,
     );
     switch (captchaPass) {
       case 0:
@@ -61,8 +61,11 @@ export default async (req, res) => {
       case 2:
         errors.push(t`You failed your captcha`);
         break;
-      case 5:
-        errors.push(t`Please refresh the website`);
+      case 3:
+        errors.pusht('No or invalid captcha text');
+        break;
+      case 4:
+        errors.push(t`Your device looks weird`);
         break;
       case 6:
         errors.push(t`Your Browser looks shady`);

@@ -1,7 +1,7 @@
 /*
  * get information of fish
  */
-import { getFishById } from '../../data/sql/Fish.js';
+import { getFishById } from '../../data/sql/Goodies.js';
 import { resolveSessionUidOfRequest } from '../../middleware/session.js';
 
 export default async function fish(req, res) {

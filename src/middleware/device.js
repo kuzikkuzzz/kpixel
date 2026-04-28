@@ -35,6 +35,13 @@ export class Device {
   }
 
   /**
+   * @return hash of the specific browser which only fits temporary
+   */
+  get browserHash() {
+    return this.deviceData.browserHash;
+  }
+
+  /**
    * @return mobile or desktop
    */
   get device() {
@@ -97,5 +104,20 @@ export class Device {
  */
 export function parseDevice(req, res, next) {
   req.device = new Device(req);
+  next();
+}
+
+
+/*
+ * express middleware to resolve device in a promise under req.promise,
+ * must be called after parseIP.
+ * Promise can be resolved by './promises.js' middleware.
+ * This has the purpose to allow other actions to happen while we wait.
+ */
+export async function ensureDeviceExistencePromisified(req, res, next) {
+  if (!req.promise) {
+    req.promise = [];
+  }
+  req.promise.push(req.device.getDeviceId());
   next();
 }
