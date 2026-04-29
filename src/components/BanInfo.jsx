@@ -67,6 +67,7 @@ const BanInfo = ({ close }) => {
         }
         return newBans;
       }
+      return oldBans;
     });
   }, [bans, close]);
 

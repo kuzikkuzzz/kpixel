@@ -56,6 +56,7 @@ export default [
       'camelcase': 'error',
       'no-underscore-dangle': 'warn',
       'class-methods-use-this': 'error',
+      'consistent-return': 'error',
       'eqeqeq': ['error', 'always', { null: 'always' }],
       'max-len': ['warn', {
         code: 80,

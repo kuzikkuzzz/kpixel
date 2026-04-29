@@ -30,25 +30,25 @@ export default function getDeviceInfo(req) {
     device = 'Mobile';
   }
 
-  let userAgent = req.headers['sec-ch-ua'];
+  let userAgent = req.headers['user-agent'];
   if (!userAgent) {
-    userAgent = req.headers['user-agent'];
+    userAgent = req.headers['sec-ch-ua'];
   }
   if (userAgent) {
     userAgent = userAgent.toLowerCase();
 
-    if (userAgent.includes('opear')) {
+    if (userAgent.includes('opera')) {
       browser = 'Opera';
     } else if (userAgent.includes('brave')) {
       browser = 'Brave';
-    } else if (userAgent.includes('edge')) {
+    } else if (userAgent.includes('edge') || userAgent.includes('edg/')) {
       browser = 'Edge';
-    } else if (userAgent.includes('safari')) {
-      browser = 'Safari';
     } else if (userAgent.includes('firefox')) {
       browser = 'Firefox';
     } else if (userAgent.includes('chrome') || userAgent.includes('chromium')) {
       browser = 'Chrome';
+    } else if (userAgent.includes('safari')) {
+      browser = 'Safari';
     }
 
     if (!uaMobileCH || !uaPlatformCH) {
@@ -101,13 +101,30 @@ export default function getDeviceInfo(req) {
     .substring(0, 15);
 
   /*
-    * hash for a specific browser that only fits temporary and isn't stored
+    * hash for a specific browser that only fits temporary and isn't stored,
+    * supposed to ensure session consistency
     */
-  const browserHash = crypto.createHash('sha224')
-  // eslint-disable-next-line max-len
-    .update(headers['user-agent'] + headers.host + headers['accept-language'] + headers['accept-encoding'])
-    .digest('base64url')
-    .substring(0, 15);
+  let browserHash = crypto.createHash('sha224')
+    .update(headers['user-agent'] + headers.host);
+  if (browser === 'Safari') {
+    browserHash.update(os + device);
+  } else {
+    browserHash.update(headers['accept-encoding'] || '');
+  }
+  if (headers['accept-language']) {
+    let language = headers['accept-language'].split(',').map((l) => {
+      const separator = l.indexOf(';');
+      return separator !== -1 ? l.substring(0, separator) : l;
+    }).sort().join(',');
+    browserHash.update(language);
+  }
+  browserHash = browserHash.digest('base64url').substring(0, 15);
 
+  /*
+  console.log('HASH', browserHash, headers['user-agent'], headers.host,
+    headers['accept-language'], headers['accept-encoding'], browser, os,
+    device,
+  );
+  */
   return { hash, device, browser, os, headerSignature, browserHash };
 }

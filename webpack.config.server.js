@@ -153,9 +153,8 @@ export default ({
           null, `commonjs ${prefix}${request.substring(funcPathInd)}`,
         );
       }
-      callback();
-    },
-    ],
+      return callback();
+    }],
 
     plugins: [
       new webpack.DefinePlugin({

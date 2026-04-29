@@ -24,7 +24,7 @@ export function useConditionalClickOutside(insideRefs, active, callback) {
       : null;
 
     if (insideElems === null) {
-      return;
+      return undefined;
     }
 
     const handleClickOutside = (event) => {
@@ -63,7 +63,7 @@ export function useClickOutside(insideRefs, callback) {
       : null;
 
     if (insideElems === null) {
-      return;
+      return undefined;
     }
 
     const handleClickOutside = (event) => {

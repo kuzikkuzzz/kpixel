@@ -3,7 +3,7 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Plural-Forms: nplurals=2; plural=(n!=1);\n"
 
-#: src/components/BanInfo.jsx:115
+#: src/components/BanInfo.jsx:116
 msgid " which is in "
 msgstr ""
 
@@ -250,7 +250,7 @@ msgstr ""
 msgid "Build image, but reset cooldown to unset-pixel cd."
 msgstr ""
 
-#: src/components/BanInfo.jsx:106
+#: src/components/BanInfo.jsx:107
 msgid "By Mod"
 msgstr ""
 
@@ -842,7 +842,7 @@ msgstr ""
 msgid "Drag ${ mouseSymbol } mouse or ${ touchSymbol } pan to move"
 msgstr ""
 
-#: src/components/BanInfo.jsx:112
+#: src/components/BanInfo.jsx:113
 #: src/components/IIDTools.jsx:219
 msgid "Duration"
 msgstr ""
@@ -943,7 +943,7 @@ msgstr ""
 msgid "Enter your mail address and we will send you a new password:"
 msgstr ""
 
-#: src/components/BanInfo.jsx:95
+#: src/components/BanInfo.jsx:96
 #: src/components/Captcha.jsx:189
 #: src/components/ChangeMail.jsx:160
 #: src/components/ChangeName.jsx:46
@@ -1136,7 +1136,7 @@ msgstr ""
 msgid "Height"
 msgstr ""
 
-#: src/components/BanInfo.jsx:84
+#: src/components/BanInfo.jsx:85
 #: src/components/menus/mainMenu.js:236
 #: src/components/windows/index.js:35
 msgid "Help"
@@ -1593,7 +1593,7 @@ msgstr ""
 msgid "OIDC LogIn"
 msgstr ""
 
-#: src/components/BanInfo.jsx:148
+#: src/components/BanInfo.jsx:149
 #: src/store/actions/index.js:9
 msgid "OK"
 msgstr ""
@@ -1896,7 +1896,7 @@ msgstr ""
 msgid "Read name, username and account age"
 msgstr ""
 
-#: src/components/BanInfo.jsx:101
+#: src/components/BanInfo.jsx:102
 #: src/components/IIDTools.jsx:151
 #: src/components/Mediatools.jsx:106
 msgid "Reason"
@@ -2627,7 +2627,7 @@ msgid ""
 "to keep them and we may decide to remove them."
 msgstr ""
 
-#: src/components/BanInfo.jsx:143
+#: src/components/BanInfo.jsx:144
 msgid "Why?"
 msgstr ""
 
@@ -2662,7 +2662,7 @@ msgid ""
 "suitable for them? Send us an email."
 msgstr ""
 
-#: src/components/BanInfo.jsx:91
+#: src/components/BanInfo.jsx:92
 #, javascript-format
 msgid ""
 "You are banned. You think it is unjustified? Check out the ${ helpButton } "
@@ -2823,7 +2823,7 @@ msgstr ""
 msgid "Your Roles"
 msgstr ""
 
-#: src/components/BanInfo.jsx:113
+#: src/components/BanInfo.jsx:114
 msgid "Your ban expires at "
 msgstr ""
 

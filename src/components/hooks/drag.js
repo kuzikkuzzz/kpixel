@@ -80,7 +80,7 @@ function useDrag(elRef, startHandler, diffHandler, doubleClickHandler) {
     const refElem = elRef.current;
 
     if (!refElem) {
-      return;
+      return undefined;
     }
 
     refElem.addEventListener('mousedown', startDrag, {
