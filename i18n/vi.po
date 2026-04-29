@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: admin@pixelplanet.fun\n"
-"PO-Revision-Date: 2026-04-28 10:30+0000\n"
-"Last-Translator: Yuki_ <yuki@noreply.pixelplanet.fun>\n"
+"PO-Revision-Date: 2026-04-29 11:30+0000\n"
+"Last-Translator: Extreme Motorsex <em@noreply.pixelplanet.fun>\n"
 "Language-Team: Vietnamese <https://translate.gs-os.com/projects/ppfun/client/"
 "vi/>\n"
 "Language: vi\n"
@@ -107,7 +107,7 @@ msgid "Always show Movement Controls"
 msgstr "Luôn luôn hiện bảng phím điều hướng"
 
 msgid "Always show movement control buttons"
-msgstr "Luôn luôn hiện bảng gồm các phím để điều hướng"
+msgstr "Luôn hiển thị phím điều hướng"
 
 msgid "An image representing your faction"
 msgstr "Một hình ảnh đại diện cho nhóm của bạn"
@@ -209,7 +209,7 @@ msgstr ""
 "được đặt."
 
 msgid "By Mod"
-msgstr "Bời Quản Trị Viên"
+msgstr "Bởi Mod"
 
 msgid "Calculate like GIMP"
 msgstr "Tính toán như GIMP"
@@ -405,7 +405,7 @@ msgid "Convert an image to canvas colors"
 msgstr "Chuyển đổi 1 ảnh thành màu khung vẽ"
 
 msgid "Converter"
-msgstr "Bộ chuyển đổi"
+msgstr "Bộ chuyển đổi màu"
 
 msgid "Cooldown"
 msgstr "Thời gian hồi 1 pixel"
@@ -424,7 +424,7 @@ msgid "Coordinates:"
 msgstr "Toạ độ:"
 
 msgid "Copied"
-msgstr "Đã sao chép"
+msgstr "Đã chép tọa độ"
 
 msgid "Copy"
 msgstr "Sao chép"
@@ -617,7 +617,7 @@ msgid "Drag ${ mouseSymbol } mouse or ${ touchSymbol } pan to move"
 msgstr ""
 
 msgid "Duration"
-msgstr ""
+msgstr "Khoảng thời gian"
 
 msgid "Easter Egg OFF"
 msgstr "TẮT trứng phục sinh"
@@ -632,10 +632,11 @@ msgid "Edit faction"
 msgstr "Chỉnh sửa nhóm"
 
 msgid "Edit roles below their own"
-msgstr ""
+msgstr "Chỉnh sửa vai trò bên dưới vai trò của họ"
 
 msgid "Edit their own role and elevate users to their own level"
 msgstr ""
+"Họ tự chỉnh sửa vai trò của mình và nâng cấp người dùng lên cấp độ phù hợp"
 
 msgid "Email"
 msgstr "Email"
@@ -672,19 +673,19 @@ msgid "Enable chat notifications"
 msgstr "Bật thông báo về chat"
 
 msgid "Enter Characters"
-msgstr ""
+msgstr "Nhập ký tự"
 
 msgid "Enter Reason"
 msgstr "Nhập lí do"
 
 msgid "Enter UserName of new Mod"
-msgstr "Nhập tên người dùng của người quản lí mới"
+msgstr "Nhập tên người dùng của mod mới"
 
 msgid "Enter a little text that describes your faction"
 msgstr "Hãy mô tả một chút về nhóm của bạn"
 
 msgid "Enter search term and press Search."
-msgstr ""
+msgstr "Nhập từ khoá tìm kiếm và nhấn Tìm kiếm."
 
 msgid "Enter your mail address and we will send you a new password:"
 msgstr "Nhập địa chỉ mail của bạn và chúng tôi sẻ gửi bạn một mật khẩu mới:"
@@ -725,13 +726,13 @@ msgstr ""
 "có sẵn, tìm bạn bè hoặc tạo một nhóm cho riêng mình."
 
 msgid "Factor"
-msgstr ""
+msgstr "Hệ số"
 
 msgid "File"
 msgstr "Tệp"
 
 msgid "Fish Display"
-msgstr ""
+msgstr "Trưng bày cá"
 
 msgid "For"
 msgstr "Cho"
@@ -775,7 +776,7 @@ msgid "From Template"
 msgstr "Từ ảnh mẫu"
 
 msgid "Get IID"
-msgstr ""
+msgstr "Lấy IID"
 
 msgid "Get Pixels"
 msgstr ""
@@ -1016,7 +1017,7 @@ msgid "Make Screenshot"
 msgstr "Tạo ảnh chụp màn hình"
 
 msgid "Manage Moderators"
-msgstr "Quản lí người quản lí"
+msgstr "Quản lí mod"
 
 msgid "Manage Templates"
 msgstr "Quản lí ảnh mẫu"
@@ -1137,7 +1138,7 @@ msgid "Note: Your active Faction may overwrite your flag settings."
 msgstr ""
 
 msgid "OIDC LogIn"
-msgstr ""
+msgstr "Đăng nhập OIDC"
 
 msgid "OK"
 msgstr "OK"
@@ -1179,7 +1180,7 @@ msgid "Open in PopUp"
 msgstr ""
 
 msgid "OpenID Connect Client registration"
-msgstr ""
+msgstr "Đăng kí máy khách OpenID Connect"
 
 msgid ""
 "Our main canvas is a huge worldmap, you can place wherever you like, but you "
@@ -1406,7 +1407,7 @@ msgid "Remove Janny"
 msgstr ""
 
 msgid "Remove Moderator"
-msgstr "Xoá người quản lí"
+msgstr "Xoá mod"
 
 msgid "Remove Roles"
 msgstr "Xoá (các) vai trò"
@@ -1452,7 +1453,7 @@ msgid "Role"
 msgstr "Vai trò"
 
 msgid "Role Flags"
-msgstr ""
+msgstr "Cờ vai trò"
 
 msgid "Roles"
 msgstr "Các vai trò"
@@ -1475,6 +1476,8 @@ msgstr "Chỉnh kích thước ảnh"
 #, javascript-format
 msgid "Scroll ${ mouseSymbol } mouse wheel or ${ touchSymbol } pinch to zoom"
 msgstr ""
+"Lăn ${ mouseSymbol } con lăn cuột hoặc ${ touchSymbol } dùng hai ngón tay để "
+"thu phóng"
 
 msgid "Search"
 msgstr "Tìm kiếm"
@@ -1579,10 +1582,10 @@ msgid "Show Grid in white instead of black."
 msgstr "Hiện thị lưới trắng thay vì đen."
 
 msgid "Show Pixel Activity"
-msgstr ""
+msgstr "Hiện thị các hoạt động pixel"
 
 msgid "Show circles where pixels are placed."
-msgstr ""
+msgstr "Hiện dấu hình tròn nơi có pixel được đặt."
 
 msgid "Show overlay as small individual pixels on high zoomlevels."
 msgstr "Hiện lớp phủ như các pixel nhỏ lẻ khi phóng to."
@@ -1654,11 +1657,15 @@ msgid ""
 "The application ${ appName } at ${ appUrl } wants to login with your "
 "pixelplanet account ${ accountName }"
 msgstr ""
+"Chương trình ${ appName } tại ${ appUrl } muốn đăng nhập tài khoản "
+"pixelplanet ${ accountName } của bạn"
 
 msgid ""
 "The bare map data that we use, together with converted OpenStreetMap tiles "
 "for orientation, can be downloaded from mega.nz here: "
 msgstr ""
+"Dữ liệu bản đồ gốc chúng tôi sử dụng cùng với các ô bản đồ từ OpenStreetMap "
+"đã qua xử lí để định vị có thể được tải xuống từ mega.nz ngay đây: "
 
 msgid ""
 "The name of your account, only a-z, A-Z, -, ., and - characters are allowed. "
@@ -1674,7 +1681,7 @@ msgid "Themes"
 msgstr "Chủ đề"
 
 msgid "This URL is not supported by our Media Player"
-msgstr ""
+msgstr "URL này không được trình đa phương tiện của chúng tôi hỗ trợ"
 
 msgid "This canvas doesn't exist"
 msgstr "Khung vẽ này không tồn tại"
@@ -1721,6 +1728,7 @@ msgstr ""
 
 msgid "Tip: Not case-sensitive; I and l are the same"
 msgstr ""
+"Mẹo: không phần biệt chữ hoa với chữ thường, I và l được coi là như nhau"
 
 msgid ""
 "Tired of always spaming one single color? Want to create art instead, but "
@@ -1735,7 +1743,7 @@ msgstr ""
 "vẽ."
 
 msgid "Title"
-msgstr ""
+msgstr "Tiêu đề"
 
 msgid "Title can't be empty."
 msgstr "Tiêu đề không thể để trống."
@@ -1768,10 +1776,10 @@ msgid "Top 10 Daily Ranking"
 msgstr "Bảng xếp hạng top 10 hằng ngày"
 
 msgid "Top 10 Players [pxls / day]"
-msgstr ""
+msgstr "Top 10 người chơi [pixel/ngày]"
 
 msgid "Top 10 Players from Yesterday"
-msgstr ""
+msgstr "Top 10 người chơi hôm qua"
 
 msgid "Top-left corner"
 msgstr ""
@@ -1803,7 +1811,7 @@ msgid "Turn on grid to highlight pixel borders."
 msgstr "Bật chế độ lưới để làm nổi bật biên giới các điểm ảnh."
 
 msgid "Type of Mod"
-msgstr "Kiểu của chức quản lí"
+msgstr "Kiểu của mod"
 
 msgid "Type the characters from the following image:"
 msgstr ""
@@ -2137,7 +2145,7 @@ msgstr "(Toạ độ) z vượt quá giới hạn"
 
 msgctxt "media-player"
 msgid "Player"
-msgstr ""
+msgstr "Trình phát"
 
 msgctxt "keybinds"
 msgid "A"

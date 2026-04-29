@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: admin@pixelplanet.fun\n"
-"PO-Revision-Date: 2026-04-01 21:23+0000\n"
-"Last-Translator: Sakuya <sakuya@noreply.pixelplanet.fun>\n"
+"PO-Revision-Date: 2026-04-29 11:30+0000\n"
+"Last-Translator: Extreme Motorsex <em@noreply.pixelplanet.fun>\n"
 "Language-Team: Chinese (Simplified Han script) <https://translate.gs-os.com/"
 "projects/ppfun/server/zh_Hans/>\n"
 "Language: zh\n"
@@ -71,7 +71,7 @@ msgid "Can not change a role that is equal to your own"
 msgstr "不可改变一个地位等于自己的身份"
 
 msgid "Can not change the default setting of this role"
-msgstr ""
+msgstr "无法更改此角色的默认设置"
 
 msgid "Can not change the powerlevel of a role equal or above you"
 msgstr "不可更改一个高于或等于自己的身份地位"
@@ -83,29 +83,29 @@ msgid "Can not chat while being banned"
 msgstr "被禁期间无法聊天"
 
 msgid "Can not create a role on the same level as yours"
-msgstr ""
+msgstr "无法创建与您级别相同的角色"
 
 msgid "Can not create a role with a powerlevel beyond yours"
-msgstr ""
+msgstr "无法创建等级高于您自身等级的角色"
 
 msgid "Can not delete a role on the same level as yours"
-msgstr ""
+msgstr "无法删除与您级别相同的角色"
 
 msgid "Can not delete this role"
 msgstr "不可删除这个身份"
 
 msgid "Can not elevate the powerlevel of a role beyond yours"
-msgstr ""
+msgstr "无法将角色的权力等级提升到超出你自身能力范围"
 
 msgid "Can not elevate the powerlevel of a role to yours"
-msgstr ""
+msgstr "无法将某个角色的权力级别提升到你的水平"
 
 #, javascript-format
 msgid "Can not have more than ${ MAX_ROLES_PER_FACTION } faction roles"
-msgstr ""
+msgstr "每个派系角色数量不能超过 ${ MAX_ROLES_PER_FACTION } 个"
 
 msgid "Can not have more than 20 invites per faction"
-msgstr ""
+msgstr "每个阵营最多只能收到 20 个邀请"
 
 msgid "Can not modify user equal to you or above you"
 msgstr "不可调整一个地位等于或高于你的用户"
@@ -121,7 +121,7 @@ msgid ""
 msgstr "一次上传的文件数量不能超过 5 个，您有 ${ amountOfFiles } 个文件"
 
 msgid "Can only have one Sovereign role"
-msgstr ""
+msgstr "只能有一个主权角色"
 
 msgid "Click here"
 msgstr "点击这里"
@@ -147,7 +147,7 @@ msgid "Coronavirus"
 msgstr "新冠病毒"
 
 msgid "Could not change the flag of this role"
-msgstr ""
+msgstr "无法更改此角色的标志"
 
 msgid "Could not change this setting. Maybe try again later."
 msgstr "暂时无法更改此设置，请稍后再试。"
@@ -282,7 +282,7 @@ msgid ""
 msgstr "如果您没有请求收到此邮件，请忽略它（请求此邮件的 IP 地址为 ${ ip }）。"
 
 msgid "Incorrect password"
-msgstr ""
+msgstr "密码错误"
 
 msgid "Invalid type of media"
 msgstr "媒体类型无效"
@@ -603,10 +603,10 @@ msgid "This password-reset link isn't valid anymore :("
 msgstr "这个密码重置链接已经失效了 :("
 
 msgid "This user has not password set"
-msgstr ""
+msgstr "此用户未设置密码"
 
 msgid "This user is private"
-msgstr ""
+msgstr "此用户已设为私密"
 
 msgid "Title can't be empty."
 msgstr "标题不能为空。"
@@ -812,7 +812,7 @@ msgstr "你的浏览器看起来可疑"
 
 msgid ""
 "Your account must be at least two weeks old before you can create a faction"
-msgstr ""
+msgstr "您的账号必须注册满两周才能创建阵营"
 
 msgid "Your account needs to be verified to access this page"
 msgstr "您的帐户需要验证才能访问此页面"

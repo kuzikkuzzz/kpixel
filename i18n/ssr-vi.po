@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: admin@pixelplanet.fun\n"
-"PO-Revision-Date: 2026-04-28 10:30+0000\n"
+"PO-Revision-Date: 2026-04-29 11:30+0000\n"
 "Last-Translator: Ngvn <ngvn@noreply.pixelplanet.fun>\n"
 "Language-Team: Vietnamese <https://translate.gs-os.com/projects/ppfun/server/"
 "vi/>\n"
@@ -306,10 +306,10 @@ msgid "Just admins can do that"
 msgstr "Chỉ những quản trị viên mới có thể làm vậy"
 
 msgid "Just janny, mod or admin can do that"
-msgstr "Chỉ lao công, quản lý hoặc quản trị viên mới có thể làm vậy"
+msgstr "Chỉ lao công, mod hoặc quản trị viên mới được làm vậy"
 
 msgid "Just mods and admins can do that"
-msgstr "Chỉ các quản lý và quản trị viên mới có thể làm vậy"
+msgstr "Chỉ các mod và quản trị viên mới được làm vậy"
 
 msgid "Know that an account exists"
 msgstr "Biết rằng một tài khoản có tồn tại"

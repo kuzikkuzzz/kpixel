@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: admin@pixelplanet.fun\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2026-04-27 09:39+0000\n"
+"PO-Revision-Date: 2026-04-29 11:30+0000\n"
 "Last-Translator: Coldi <coldbaba50@gmail.com>\n"
 "Language-Team: Albanian <https://translate.gs-os.com/projects/ppfun/client/"
 "sq/>\n"
@@ -95,7 +95,7 @@ msgid "Add Template"
 msgstr "Shto Shabllon"
 
 msgid "Add a new E-Mail Address here:"
-msgstr ""
+msgstr "Fusni një email të ri ktu:"
 
 #. This if for moderation tools, it's not important to translate this
 msgid "Admintools"
@@ -548,7 +548,7 @@ msgid "Delete Faction"
 msgstr "Fshij Fraksion"
 
 msgid "Delete My Account"
-msgstr ""
+msgstr "Fshij llogarinë time"
 
 msgid "Delete the faction"
 msgstr "Fshij Fraksionin"
@@ -904,7 +904,7 @@ msgid "Import templates"
 msgstr "Importo shabllone"
 
 msgid "Incorrect password"
-msgstr ""
+msgstr "Fjalëkalimi është gabim"
 
 msgid "Interval"
 msgstr "Intervali"
@@ -1565,7 +1565,7 @@ msgid "Serpentine"
 msgstr "Serpentin"
 
 msgid "Server Error"
-msgstr ""
+msgstr "Gabim i serverit"
 
 msgid "Server answered with gibberish :("
 msgstr "Serveri dha një përgjigje të pakuptimtë :("
@@ -1727,6 +1727,11 @@ msgid ""
 "function on the LogIn page to set a new password. In the future, consider "
 "not installing malware, Thank You."
 msgstr ""
+"Ky kombinim emaili/fjalëkalimi është hakuar dhe publikuar. Për të mbrojtur "
+"këtë llogari, fjalëkalimi është rivendosur. Ju lutemi përdorni funksionin "
+"\"Kam harruar fjalëkalimin tim\" në faqen e hyrjes për të vendosur një "
+"fjalëkalim të ri. Në të ardhmen, merrni në konsideratë mos instalimin e "
+"programeve keqdashëse. Faleminderit."
 
 msgid "This faction has no invites"
 msgstr "Ky Fraksion nuk ka ftesa"
@@ -1747,7 +1752,7 @@ msgid "This permission is required"
 msgstr "Kjo leje është e detyrueshme"
 
 msgid "This user has not password set"
-msgstr ""
+msgstr "Ky përdorues nuk ka vendosur fjalëkalim akoma"
 
 msgid "Timeout"
 msgstr "Vonesë"
@@ -1968,7 +1973,7 @@ msgid "Yes"
 msgstr "Po"
 
 msgid "Yes, really delete Me"
-msgstr ""
+msgstr "Po, me të vërtetë më fshij"
 
 msgid "Yesterday"
 msgstr "Dje"
@@ -2198,7 +2203,7 @@ msgstr "z jashtë kufijve"
 
 msgctxt "media-player"
 msgid "Player"
-msgstr ""
+msgstr "Lojtar"
 
 msgctxt "keybinds"
 msgid "A"

@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: admin@pixelplanet.fun\n"
-"PO-Revision-Date: 2026-04-01 21:23+0000\n"
-"Last-Translator: Sakuya <sakuya@noreply.pixelplanet.fun>\n"
+"PO-Revision-Date: 2026-04-29 11:30+0000\n"
+"Last-Translator: Extreme Motorsex <em@noreply.pixelplanet.fun>\n"
 "Language-Team: Chinese (Simplified Han script) <https://translate.gs-os.com/"
 "projects/ppfun/client/zh_Hans/>\n"
 "Language: zh\n"
@@ -60,6 +60,8 @@ msgid ""
 "A flag representing the role, it should be 16x11 pixels. If left empty, "
 "users with this role selected will still show their own flags."
 msgstr ""
+"代表角色的旗帜，尺寸应为 16×11 像素。如果留空，选择此角色的用户仍将显示他们自"
+"己的旗帜。"
 
 msgid "A new verification mail is getting sent to you."
 msgstr "正在向您发送一封新验证邮件。"
@@ -68,6 +70,8 @@ msgid ""
 "A role has all the permissions of all levels below and equal to it. In "
 "example: Every role with a power level of >=50 can manage invites (50)."
 msgstr ""
+"角色拥有与其级别相同及以下的所有权限。例如：所有权限级别大于等于50的角色都可"
+"以管理邀请(50)。"
 
 msgid "ACCESS MODTOOLS"
 msgstr "访问管理员工具"
@@ -79,17 +83,17 @@ msgid "Add Template"
 msgstr "添加模板"
 
 msgid "Add a new E-Mail Address here:"
-msgstr ""
+msgstr "请在此处添加新的电子邮件地址："
 
 #. This if for moderation tools, it's not important to translate this
 msgid "Admintools"
 msgstr "管理员工具"
 
 msgid "Age"
-msgstr ""
+msgstr "年龄"
 
 msgid "All members of this faction are hidden"
-msgstr ""
+msgstr "该派系所有成员均已隐藏"
 
 msgid "All sound effects will be disabled."
 msgstr "所有声音效果都将不可用。"
@@ -119,16 +123,16 @@ msgid "Assign new Mod"
 msgstr "指定新管理员"
 
 msgid "Assign role per default to new members"
-msgstr ""
+msgstr "默认为新成员分配角色"
 
 msgid "Assign roles below their own"
-msgstr ""
+msgstr "分配角色在其下方"
 
 msgid "Assign this role to every new member automatically on join."
-msgstr ""
+msgstr "将此角色自动分配给每位新成员。"
 
 msgid "Assigned role per default"
-msgstr ""
+msgstr "默认分配的角色"
 
 msgid "Attach File"
 msgstr "附加文件"
@@ -155,7 +159,7 @@ msgid "Ban media"
 msgstr "封禁媒体"
 
 msgid "Ban members"
-msgstr ""
+msgstr "禁令成员"
 
 msgid "Banned"
 msgstr "已封禁"
@@ -177,6 +181,8 @@ msgid ""
 "users to start messaging you. You can still start new DMs with other users "
 "and already ongoing DMs will still be open."
 msgstr ""
+"屏蔽所有私信。启用此功能后，其他用户将无法向您发送私信。您仍然可以与其他用户"
+"发起新的私信，并且正在进行的私信对话仍将保持开放状态。"
 
 msgid "Blocked"
 msgstr "已屏蔽"
@@ -239,7 +245,7 @@ msgid "Caught by"
 msgstr "抓取者"
 
 msgid "Change Flag"
-msgstr ""
+msgstr "更改标志"
 
 msgid "Change Happened"
 msgstr "发生变化"
@@ -354,7 +360,7 @@ msgid "Confirm Ban"
 msgstr "确认封禁"
 
 msgid "Confirm Delete"
-msgstr ""
+msgstr "确认删除"
 
 msgid "Confirm Kick"
 msgstr "确认踢除"
@@ -369,7 +375,7 @@ msgid "Confirm Password"
 msgstr "确认密码"
 
 msgid "Confirm your password."
-msgstr ""
+msgstr "请确认您的密码。"
 
 #, javascript-format
 msgid "Connection error ${ code } :("
@@ -447,22 +453,22 @@ msgid "Create Faction"
 msgstr "创建派别"
 
 msgid "Create Invite"
-msgstr ""
+msgstr "创建邀请"
 
 msgid "Create New Faction"
 msgstr "创建新派别"
 
 msgid "Create New Invite"
-msgstr ""
+msgstr "创建新邀请"
 
 msgid "Create New Role"
-msgstr ""
+msgstr "创建新角色"
 
 msgid "Create Role"
-msgstr ""
+msgstr "创建角色"
 
 msgid "Create roles"
-msgstr ""
+msgstr "创建角色"
 
 #, javascript-format
 msgid "Credit for the Palette of the 2bit canvas goes to ${ donendoLink }."
@@ -489,13 +495,13 @@ msgid "DM"
 msgstr "私信"
 
 msgid "Daily Pixels"
-msgstr ""
+msgstr "每日像素"
 
 msgid "Daily Pixels per Country"
 msgstr "各国每日像素数"
 
 msgid "Daily Pixels per Faction"
-msgstr ""
+msgstr "每阵营每日像素数"
 
 msgid "Daily Pixels per Player"
 msgstr "玩家每日像素数"
@@ -516,13 +522,13 @@ msgid "Delete Account"
 msgstr "删除帐户"
 
 msgid "Delete Faction"
-msgstr ""
+msgstr "删除派系"
 
 msgid "Delete My Account"
-msgstr ""
+msgstr "删除我的帐户"
 
 msgid "Delete the faction"
-msgstr ""
+msgstr "删除该派系"
 
 msgid "Deny"
 msgstr "否定"
@@ -579,7 +585,7 @@ msgid "Don't show me in global stats"
 msgstr "不要在全球统计数据中显示"
 
 msgid "Done"
-msgstr ""
+msgstr "完毕"
 
 msgid "Download"
 msgstr "下载"
@@ -604,13 +610,13 @@ msgid "Edit"
 msgstr "编辑"
 
 msgid "Edit faction"
-msgstr ""
+msgstr "编辑派系"
 
 msgid "Edit roles below their own"
-msgstr ""
+msgstr "编辑角色如下"
 
 msgid "Edit their own role and elevate users to their own level"
-msgstr ""
+msgstr "编辑他们自己的角色，并将用户提升到他们自己的水平"
 
 msgid "Email"
 msgstr "电子邮件"
@@ -657,7 +663,7 @@ msgid "Enter a little text that describes your faction"
 msgstr "输入一点文字以描述你的派别"
 
 msgid "Enter search term and press Search."
-msgstr ""
+msgstr "输入搜索词并按搜索。"
 
 msgid "Enter your mail address and we will send you a new password:"
 msgstr "请输入您的邮箱地址，我们将向您发送新密码："
@@ -679,16 +685,16 @@ msgid "Export enabled templates"
 msgstr "已启用导出功能的模板"
 
 msgid "Faction"
-msgstr ""
+msgstr "派"
 
 msgid "Factions"
 msgstr "派系"
 
 msgid "Factions Today"
-msgstr ""
+msgstr "今日派系"
 
 msgid "Factions Total"
-msgstr ""
+msgstr "派系总数"
 
 msgid ""
 "Factions allow you to coordinate better with other players. Search for "
@@ -817,7 +823,7 @@ msgid "I forgot my Password."
 msgstr "我忘记密码了。"
 
 msgid "ID"
-msgstr ""
+msgstr "ID"
 
 msgid "IID (optional)"
 msgstr "IID（可选）"
@@ -857,7 +863,7 @@ msgid "Import templates"
 msgstr "导入模板"
 
 msgid "Incorrect password"
-msgstr ""
+msgstr "密码错误"
 
 msgid "Interval"
 msgstr "间隔"
@@ -875,16 +881,16 @@ msgid "Invalid color selected"
 msgstr "选择了无效的颜色"
 
 msgid "Invite"
-msgstr ""
+msgstr "邀请"
 
 msgid "Invited to Chat"
 msgstr "受邀聊天"
 
 msgid "Invites"
-msgstr ""
+msgstr "邀请"
 
 msgid "Is One-Time-Invite"
-msgstr ""
+msgstr "一次性邀请"
 
 msgid ""
 "It requests the following permissions. Uncheck what you don't want to grant:"
@@ -894,13 +900,13 @@ msgid "Jannies can rollback and protect, but not watch or ban."
 msgstr "管理员可以回滚和保护，但不能监视或封禁。"
 
 msgid "Join"
-msgstr ""
+msgstr "加入"
 
 msgid "Join Faction"
-msgstr ""
+msgstr "加入阵营"
 
 msgid "Joined"
-msgstr ""
+msgstr "加入"
 
 msgid "Just for registered Users"
 msgstr "仅限注册用户"
@@ -915,122 +921,122 @@ msgid "Keep Ratio"
 msgstr "保持比例"
 
 msgid "Kick"
-msgstr ""
+msgstr "踢"
 
 msgid "Kick members"
-msgstr ""
+msgstr "踢成员"
 
 msgid "Know that an account exists"
 msgstr "确认账户存在"
 
 msgid "Leave"
-msgstr ""
+msgstr "离开"
 
 msgid "Leave Faction"
-msgstr ""
+msgstr "离开派系"
 
 msgid "Legal Requests"
 msgstr "法律请求"
 
 msgid "Let everyone join this faction"
-msgstr ""
+msgstr "让所有人都加入这个派系"
 
 msgid "Let people join this faction without needing an invite."
-msgstr ""
+msgstr "允许人们无需邀请即可加入该阵营。"
 
 msgid "Level"
-msgstr ""
+msgstr "等级"
 
 msgid "Light Grid"
-msgstr ""
+msgstr "轻网格"
 
 msgid "Load Captcha"
-msgstr ""
+msgstr "加载验证码"
 
 msgid "Loading"
-msgstr ""
+msgstr "加载中"
 
 msgid "Loading..."
 msgstr "加载中…"
 
 msgid "Log in or Register"
-msgstr ""
+msgstr "登录或注册"
 
 msgid "Log out"
-msgstr ""
+msgstr "退出登录"
 
 msgid "Log out a Session:"
-msgstr ""
+msgstr "注销会话："
 
 msgid "LogIn"
-msgstr ""
+msgstr "登录"
 
 msgid "Login Methods"
-msgstr ""
+msgstr "登录方式"
 
 msgid "Login to access more features and stats."
-msgstr ""
+msgstr "登录即可查看更多功能和统计数据。"
 
 msgid "Login to grant access to other application."
-msgstr ""
+msgstr "登录以授予其他应用程序访问权限。"
 
 msgid "Login to join us."
-msgstr ""
+msgstr "登录即可加入我们。"
 
 msgid "Login to other application"
-msgstr ""
+msgstr "登录其他应用程序"
 
 msgid "Login with Name or Mail:"
-msgstr ""
+msgstr "使用姓名或邮箱登录："
 
 msgid "Make Screenshot"
-msgstr ""
+msgstr "截屏"
 
 msgid "Manage Moderators"
-msgstr ""
+msgstr "管理版主"
 
 msgid "Manage Templates"
-msgstr ""
+msgstr "管理模板"
 
 msgid "Manage invites"
-msgstr ""
+msgstr "管理邀请"
 
 msgid "Map Data"
-msgstr ""
+msgstr "地图数据"
 
 msgid "Maximize"
-msgstr ""
+msgstr "最大化"
 
 msgid "Media Actions"
-msgstr ""
+msgstr "媒体行动"
 
 msgid "Members"
-msgstr ""
+msgstr "成员"
 
 msgid "Minimum Color Distance"
-msgstr ""
+msgstr "最小颜色距离"
 
 msgid "Moderators can access all Canvas, Watch and IID tools."
-msgstr ""
+msgstr "版主可以访问所有 Canvas、Watch 和 IID 工具。"
 
 #. This if for moderation tools, it's not important to translate this
 msgid "Modtools"
-msgstr ""
+msgstr "模组工具"
 
 msgid "Move"
-msgstr ""
+msgstr "移动"
 
 msgid "Mute Channel"
-msgstr ""
+msgstr "静音频道"
 
 msgid "Muted Sound"
-msgstr ""
+msgstr "静音"
 
 msgid "My Factions"
-msgstr ""
+msgstr "我的派系"
 
 msgid "Name"
-msgstr ""
+msgstr "姓名"
 
 msgid "Name can only contain the characters: a-z . _ and -"
 msgstr "名字只能含有以下字符：a~z . _ -"
@@ -1048,82 +1054,82 @@ msgid "Name must be shorter than 26 characters"
 msgstr "名称必须少于26字符"
 
 msgid "Name of this role"
-msgstr ""
+msgstr "该职位名称"
 
 msgid "Name of your faction (this can not be changed later)"
-msgstr ""
+msgstr "你的阵营名称（之后无法更改）"
 
 msgid "Name or Email"
-msgstr ""
+msgstr "姓名或电子邮件"
 
 msgid "New Mail"
-msgstr ""
+msgstr "新电子邮件"
 
 msgid "New Name"
-msgstr ""
+msgstr "新名称"
 
 msgid "New Password"
 msgstr "新密码"
 
 msgid "New Username"
-msgstr ""
+msgstr "新用户名"
 
 msgid "No"
-msgstr ""
+msgstr "不"
 
 msgid "No File selected to upload"
-msgstr ""
+msgstr "未选择要上传的文件"
 
 msgid "No Phish!"
-msgstr ""
+msgstr "没有鱼！"
 
 msgid "No captcha id given"
-msgstr ""
+msgstr "未提供验证码 ID"
 
 msgid "No flag selected"
-msgstr ""
+msgstr "未选择旗帜"
 
 msgid "No or invalid captcha text"
-msgstr ""
+msgstr "验证码缺失或无效"
 
 msgid "No password given."
 msgstr "无可用密码。"
 
 msgid "No results."
-msgstr ""
+msgstr "没有结果。"
 
 msgid "Nobody is banned from this faction"
-msgstr ""
+msgstr "这个阵营里没有人被禁止加入"
 
 msgid "Not Allowed"
-msgstr ""
+msgstr "不允许"
 
 msgid "Not allowed"
-msgstr ""
+msgstr "不允许"
 
 msgid "Note"
-msgstr ""
+msgstr "注意"
 
 msgid "Note: Your active Faction may overwrite your flag settings."
-msgstr ""
+msgstr "注意：您当前使用的阵营可能会覆盖您的旗帜设置。"
 
 msgid "OIDC LogIn"
-msgstr ""
+msgstr "OIDC 登录"
 
 msgid "OK"
-msgstr ""
+msgstr "好的"
 
 msgid "Offset"
-msgstr ""
+msgstr "抵消"
 
 msgid "Oh no, the phish escaped. Better luck next time!"
-msgstr ""
+msgstr "糟糕，鱼跑了。下次好运吧！"
 
 msgid "Old Password"
-msgstr ""
+msgstr "旧密码"
 
 msgid "One-Time"
-msgstr ""
+msgstr "一度"
 
 msgid "Online Users"
 msgstr ""
@@ -1652,7 +1658,7 @@ msgid "This permission is required"
 msgstr ""
 
 msgid "This user has not password set"
-msgstr ""
+msgstr "此用户未设置密码"
 
 msgid "Timeout"
 msgstr ""
@@ -2020,38 +2026,38 @@ msgid "and ${ canvas.req } Pixels set"
 msgstr ""
 
 msgid "by"
-msgstr ""
+msgstr "经过"
 
 msgid "check compliance here"
-msgstr ""
+msgstr "在此处检查合规性"
 
 msgid "created at"
-msgstr ""
+msgstr "创建于"
 
 msgid "days"
-msgstr ""
+msgstr "天"
 
 msgid "download here"
-msgstr ""
+msgstr "点击此处下载"
 
 msgid "lift"
-msgstr ""
+msgstr "解除"
 
 msgid "or login with:"
-msgstr ""
+msgstr "或使用以下方式登录："
 
 msgid "or register here:"
-msgstr ""
+msgstr "或在此注册："
 
 msgid "recommended"
-msgstr ""
+msgstr "受到推崇的"
 
 msgid "times used"
-msgstr ""
+msgstr "使用次数"
 
 #, javascript-format
 msgid "try again after ${ ti }min"
-msgstr ""
+msgstr "请在${ ti }分钟后重试"
 
 msgid "x out of bounds"
 msgstr ""
@@ -2128,12 +2134,12 @@ msgstr ""
 
 msgctxt "channel-list"
 msgid "Public"
-msgstr ""
+msgstr "民众"
 
 #. Column title of column indicating whether or not a faction is able to be joined in public
 msgctxt "statistics-table"
 msgid "Public"
-msgstr ""
+msgstr "民众"
 
 #~ msgid "Change your Mail Adress here:"
 #~ msgstr "此处更改你的邮箱地址："
