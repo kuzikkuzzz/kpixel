@@ -28,7 +28,8 @@ export default async function getMe(user, ip, lang) {
 
   if (user) {
     ({
-      id, name, username, userlvl, blockDm, priv,
+      id, name, username, userlvl, blockDm,
+      isPrivate: priv,
       hasPassword: havePassword,
     } = user);
   } else {

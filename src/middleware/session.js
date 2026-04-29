@@ -107,7 +107,7 @@ export class User {
     return this.#data.blockDm;
   }
 
-  get priv() {
+  get isPrivate() {
     return this.#data.priv;
   }
 
