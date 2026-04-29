@@ -6,7 +6,7 @@
 
 /* eslint-disable max-len */
 
-import { Fragment, useMemo, useContext, useState, useEffect } from 'react';
+import { Fragment, useMemo, useContext, useState } from 'react';
 import { useSelector, shallowEqual, useDispatch } from 'react-redux';
 import { t, jt } from 'ttag';
 
@@ -21,7 +21,7 @@ import { validateUsername } from '../../utils/validation.js';
 const OIDCConsent = () => {
   const [expirationHours, setExpirationHours] = useState(String(24 * 7));
   const [submitting, setSubmitting] = useState(false);
-  const [consentedScopes, setConsentedScopes] = useState([]);
+  const [gConsentedScopes, setConsentedScopes] = useState(null);
   /* when logging in to different account */
   const [switchAccount, setSwitchAccount] = useState(false);
   /* only relevant on forced reauthentification */
@@ -46,13 +46,7 @@ const OIDCConsent = () => {
    */
   const { params } = useContext(WindowContext);
 
-  useEffect(() => {
-    if (params.scope) {
-      setConsentedScopes([...params.scope]);
-    } else {
-      setConsentedScopes([]);
-    }
-  }, [params]);
+  const consentedScopes = gConsentedScopes || params.scope || [];
 
   const scopes = useMemo(() => params.scope?.sort().map((s) => {
     const required = params.requiredScopes.includes(s);

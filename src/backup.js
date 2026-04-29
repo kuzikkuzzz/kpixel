@@ -2,7 +2,8 @@
  * Creates regular backups of the canvas in png tiles
  * In order to run huge redis operations, you have to allow redis to use
  * more virtual memory, with:
- * vm.overcommit_memory = 1 in /etc/sysctl.conf and `sysctl vm.overcommit_memory=1`
+ * vm.overcommit_memory = 1
+ * in /etc/sysctl.conf and `sysctl vm.overcommit_memory=1`
  * also:
  * echo never > /sys/kernel/mm/transparent_hugepage/enabled
  *

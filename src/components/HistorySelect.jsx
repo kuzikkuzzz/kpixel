@@ -134,7 +134,7 @@ const HistorySelect = ({ id }) => {
         min={canvasStartDate}
         max={canvasEndDate || max}
         ref={dateSelect}
-        autoComplete="history-time"
+        autoComplete="off"
         onChange={async (evt) => {
           const date = evt.target.value;
           const newTimes = await handleDateChange(date);

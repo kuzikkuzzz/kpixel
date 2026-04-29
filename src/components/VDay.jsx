@@ -2,6 +2,8 @@
 import { useState, useRef } from 'react';
 import { cdn } from '../utils/utag.js';
 
+/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
+
 const VDay = () => {
   const [isPlaying, setIsPlaying] = useState(false);
   const audioRef = useRef(null);
@@ -17,7 +19,6 @@ const VDay = () => {
 
   return (
     <>
-      { /* eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions */}
       <img
         style={{
           position: 'absolute',

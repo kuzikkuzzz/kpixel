@@ -48,21 +48,31 @@ const MyFactions = () => {
   }, []);
 
   const [
-    activeFaction, activeFactionTitle, activeRoleName, activeCustomFlagId,
+    activeFaction,
+    activeFactionTitle,
+    activeRoleName,
+    activeCustomFlagId,
   ] = useMemo(() => {
-    for (let i = 0; i < factions.length; i += 1) {
-      const { roles } = factions[i];
-      for (let u = 0; u < roles.length; u += 1) {
-        if (roles[u].frid === activeFactionRole) {
-          return [
-            factions[i].name,
-            // eslint-disable-next-line react/jsx-key
-            <strong>&quot;{factions[i].title}&quot;</strong>,
-            // eslint-disable-next-line react/jsx-key
-            <strong>&quot;{roles[u].name}&quot;</strong>,
-            roles[u].customFlagId,
-          ];
+    if (factions?.length) {
+      let retValue;
+      for (let i = 0; i < factions.length; i += 1) {
+        const { roles } = factions[i];
+        for (let u = 0; u < roles.length; u += 1) {
+          if (roles[u].frid === activeFactionRole) {
+            retValue = [
+              factions[i].name,
+              // eslint-disable-next-line react/jsx-key
+              <strong>&quot;{factions[i].title}&quot;</strong>,
+              // eslint-disable-next-line react/jsx-key
+              <strong>&quot;{roles[u].name}&quot;</strong>,
+              roles[u].customFlagId,
+            ];
+            break;
+          }
         }
+      }
+      if (retValue) {
+        return retValue;
       }
     }
     return [null, '', '', null];

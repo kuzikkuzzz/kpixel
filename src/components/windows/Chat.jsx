@@ -42,7 +42,6 @@ const Chat = () => {
   const waitingForUpload = useRef();
   const historyFetchRef = useRef();
 
-  const [blockedIds, setBlockedIds] = useState([]);
   const [btnSize, setBtnSize] = useState(20);
 
   const dispatch = useDispatch();
@@ -95,20 +94,27 @@ const Chat = () => {
   const [
     channelName, channelType, channelMuted, channelAvatarId,
   ] = useMemo(() => {
+    let retValue;
     const types = Object.keys(channels);
     for (let i = 0; i < types.length; i += 1) {
       const typeChannels = channels[types[i]];
       for (let u = 0; u < typeChannels.length; u += 1) {
         const typeChannel = typeChannels[u];
         if (typeChannel[0] === chatChannel) {
-          return [
+          retValue = [
             typeChannel[1], Number(types[i]), typeChannel[4], typeChannel[5],
           ];
+          break;
         }
       }
     }
+    if (retValue) {
+      return retValue;
+    }
     return ['', CHANNEL_TYPES.PUBLIC, true, null];
   }, [chatChannel, channels]);
+
+  const blockedIds = useMemo(() => blocked.map(([id]) => id), [blocked]);
 
   useEffect(() => {
     if (channelName) {
@@ -221,15 +227,6 @@ const Chat = () => {
       setBtnSize(Math.min(28, fontSize));
     }, 330);
   }, [targetRef]);
-
-  useEffect(() => {
-    const bl = [];
-    for (let i = 0; i < blocked.length; i += 1) {
-      bl.push(blocked[i][0]);
-    }
-    setBlockedIds(bl);
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [blocked.length]);
 
   async function handleSubmit(evt) {
     evt.preventDefault();

@@ -201,7 +201,6 @@ class Renderer3D extends Renderer {
 
   destructor() {
     // TODO is still leaking memory
-
     // https://threejs.org/docs/#manual/en/introduction/How-to-dispose-of-objects
     window.removeEventListener('resize', this.onWindowResize, false);
     this.controls.dispose();

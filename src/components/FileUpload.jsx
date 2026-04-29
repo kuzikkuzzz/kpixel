@@ -1,7 +1,9 @@
 /*
  * Component to upload files
  */
-import { memo, useEffect, useState, useCallback, useRef, useLayoutEffect } from 'react';
+import {
+  memo, useEffect, useState, useCallback, useRef, useLayoutEffect,
+} from 'react';
 import { t } from 'ttag';
 import { ImAttachment } from 'react-icons/im';
 
@@ -317,6 +319,7 @@ const FileUpload = ({
         fileInfo.id = id;
       }
     }
+    /* readyToUpload is only set when preflight */
     if (readyToUpload) {
       for (let i = 0; i < readyToUpload.length; i += 1) {
         const fileInfo = readyToUpload[i];
@@ -324,11 +327,6 @@ const FileUpload = ({
         fileInfo.name = name;
         fileInfo.id = id;
       }
-
-      if (uploadInfoRef.current.uploadTimeout) {
-        clearTimeout(uploadInfoRef.current.uploadTimeout);
-      }
-      uploadInfoRef.current.uploadTimeout = setTimeout(uploadFile, 2000);
     }
 
     setFileInfos((oldInfos) => oldInfos.map((info) => {
@@ -368,7 +366,13 @@ const FileUpload = ({
     resolvePromise();
   }, [printErrors, uploadRoute, preflightRoute]);
 
-  const doPreflight = useCallback(() => uploadFile(true), [uploadFile]);
+  const doPreflight = useCallback(async () => {
+    await uploadFile(true);
+    if (uploadInfoRef.current.uploadTimeout) {
+      clearTimeout(uploadInfoRef.current.uploadTimeout);
+    }
+    uploadInfoRef.current.uploadTimeout = setTimeout(uploadFile, 2000);
+  }, [uploadFile]);
 
   const handleInputChange = useCallback((evt) => {
     let file = evt.target.files?.[0];

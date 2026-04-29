@@ -21,7 +21,6 @@ const TwitchTv = ({ url, fill, maxHeight }) => {
   if (!id) {
     return null;
   }
-  // eslint-disable-next-line max-len
   let embedUrl = `https://player.twitch.tv/?autoplay=true&parent=${window.location.hostname}`;
   if (url.includes('/videos/')) {
     embedUrl += `&video=${id}`;

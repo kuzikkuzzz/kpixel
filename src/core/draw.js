@@ -285,6 +285,7 @@ export default async function drawByOffsets(
      * that canvas
      */
     if (pxlCnt > 0 && errorLater) {
+      pxlCnt = 0;
       throw new Error(errorLater);
     }
 

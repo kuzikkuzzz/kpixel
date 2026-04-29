@@ -75,7 +75,7 @@ const LogInForm = ({
   const [success, setSuccess] = useState(false);
   const [page, setPage] = useState('login');
   // used to be able to force Captcha rerender on error
-  const [captKey, setCaptKey] = useState(Date.now());
+  const [captKey, setCaptKey] = useState(() => Date.now());
 
   const dispatch = useDispatch();
 

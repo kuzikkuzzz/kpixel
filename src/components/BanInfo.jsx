@@ -45,25 +45,29 @@ const BanInfo = ({ close }) => {
   }, [submitting]);
 
   const countDown = useCallback(() => {
-    if (bans.length) {
-      const newBans = [];
-      for (let i = 0; i < bans.length; i += 1) {
-        const ban = bans[i];
-        if (ban.sleft) {
-          const sleft = ban.sleft - 1;
-          if (sleft <= 0) {
-            continue;
+    setBans((oldBans) => {
+      if (bans.length) {
+        const newBans = [];
+        for (let i = 0; i < oldBans.length; i += 1) {
+          let ban = oldBans[i];
+          if (ban.sleft) {
+            const sleft = ban.sleft - 1;
+            if (sleft <= 0) {
+              continue;
+            }
+            ban = {
+              ...ban,
+              sleft,
+            };
           }
-          ban.sleft = sleft;
+          newBans.push(ban);
         }
-        newBans.push(ban);
+        if (!newBans.length) {
+          close();
+        }
+        return newBans;
       }
-      if (!newBans.length) {
-        close();
-      } else {
-        setBans(newBans);
-      }
-    }
+    });
   }, [bans, close]);
 
   useInterval(countDown, 1000);

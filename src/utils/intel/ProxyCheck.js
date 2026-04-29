@@ -289,8 +289,8 @@ class ProxyCheck {
               if (result.status === 'error' && values.length === 1) {
                 /*
                  * invalid ip, like a link local address
-                 * Error is either thrown in the top, when requesting only one ip
-                 * or in the ip-part as "error": "No valid.." when multiple
+                 * Error is either thrown in the top, when requesting only one
+                 * ip or in the ip-part as "error": "No valid.." when multiple
                  * */
                 resolve({
                   [values[0]]: {

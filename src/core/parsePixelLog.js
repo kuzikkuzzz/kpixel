@@ -417,7 +417,7 @@ export async function populateTable(table, reducedInfo = false) {
               ipStringsArray.slice(i, i += 300),
             );
             ip2Info = new Map([...ip2Info, ...partialInfos]);
-          } catch (err) {
+          } catch {
             break;
           }
         }

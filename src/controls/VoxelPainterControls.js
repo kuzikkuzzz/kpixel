@@ -73,7 +73,8 @@ const maxPolarAngle = Math.PI; // radians
 // If set, must be a sub-interval of the interval [ - Math.PI, Math.PI ].
 const minAzimuthAngle = -Infinity; // radians
 const maxAzimuthAngle = Infinity; // radians
-// This option actually enables dollying in and out; left as "zoom" for backwards compatibility.
+// This option actually enables dollying in and out; left as "zoom" for
+// backwards compatibility.
 // Set to false to disable zooming
 const enableZoom = true;
 const zoomSpeed = 1.0;
@@ -253,7 +254,8 @@ class VoxelPainterControls {
     this.rotateDelta
       .subVectors(rotateEnd, rotateStart)
       .multiplyScalar(rotateSpeed);
-    this.rotateLeft(Math.PI * rotateDelta.x / element.clientHeight); // yes, height
+    // yes, height
+    this.rotateLeft(Math.PI * rotateDelta.x / element.clientHeight);
     this.rotateUp(Math.PI * rotateDelta.y / element.clientHeight);
     this.rotateStart.copy(rotateEnd);
   }

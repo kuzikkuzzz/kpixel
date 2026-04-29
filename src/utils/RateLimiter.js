@@ -1,8 +1,9 @@
-/*
+/**
  * RateLimiter for a single client per instance
  * @param ticksPerMin How many ticks per min are allowed
  * @param burst Amount of ticks that are allowed before limiter kicks in
- * @param onCooldown If we force to wait the whole burst time once the limit is reached
+ * @param onCooldown If we force to wait the whole burst time once the limit is
+ *   reached
  */
 class RateLimiter {
   msPerTick;

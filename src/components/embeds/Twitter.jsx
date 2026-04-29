@@ -48,7 +48,6 @@ const Twitter = ({ url, fill }) => {
           borderRadius: 12,
         }}
         src={
-          // eslint-disable-next-line max-len
           `https://platform.twitter.com/embed/Tweet.html?dnt=true&embedId=twitter-widget-&frame=false&hideCard=false&hideThread=true&id=${tid}&theme=light`
         }
         frameBorder="0"

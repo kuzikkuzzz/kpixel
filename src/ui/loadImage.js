@@ -1,10 +1,11 @@
+import { cdn } from '../utils/utag.js';
+
 /*
  * check if cross-origin request
  * see:
- * https://medium.com/@albertogasparin/manipulating-cross-origin-images-with-html-canvas-1e3e8780964c
+ * https://medium.com/@albertogasparin/
+ * manipulating-cross-origin-images-with-html-canvas-1e3e8780964c
  */
-import { cdn } from '../utils/utag.js';
-
 const corsRegEx = /^([\w]+:)?\/\//;
 function isCors(url) {
   return corsRegEx && url.replace(corsRegEx, '').indexOf(window.location.host);

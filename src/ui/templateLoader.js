@@ -172,8 +172,8 @@ class TemplateLoader {
   /*
    * add template from File or Blob
    * @param file, title, canvasId, x, y self explenatory
-   * @param element optional image or canvas element where file is already loaded,
-   *                can be used to avoid having to load it multiple times
+   * @param element optional image or canvas element where file is already
+   *   loaded, can be used to avoid having to load it multiple times
    */
   async addFile(file, title, canvasId, x, y) {
     try {

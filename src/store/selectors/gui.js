@@ -16,8 +16,9 @@ export const selectMovementControlProps = (state) => [
     state.gui.showMvmCtrls || (
       state.user.isOnMobile && (
         state.canvas.rendererType === CANVAS_TYPES.THREED
-        || (state.gui.holdPaint > 0)
-        && !state.canvas.isHistoricalView
+        || (
+          state.gui.holdPaint > 0 && !state.canvas.isHistoricalView
+        )
       )
     )
   ),

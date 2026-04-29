@@ -74,38 +74,38 @@ msgstr ""
 msgid "Black and White canvas"
 msgstr ""
 
-#: src/routes/api/factionrolechange.js:45
+#: src/routes/api/factionrolechange.js:43
 #: src/routes/api/factionroledelete.js:33
-#: src/routes/api/factionrolejoin.js:53
+#: src/routes/api/factionrolejoin.js:52
 msgid "Can not change a role above your own"
 msgstr ""
 
-#: src/routes/api/factionrolechange.js:50
-#: src/routes/api/factionrolejoin.js:58
+#: src/routes/api/factionrolechange.js:48
+#: src/routes/api/factionrolejoin.js:57
 msgid "Can not change a role that is equal to your own"
 msgstr ""
 
-#: src/routes/api/factionrolechange.js:62
+#: src/routes/api/factionrolechange.js:60
 msgid "Can not change the default setting of this role"
 msgstr ""
 
-#: src/routes/api/factionrolechange.js:84
+#: src/routes/api/factionrolechange.js:82
 msgid "Can not change the powerlevel of a role equal or above you"
 msgstr ""
 
-#: src/routes/api/factionrolechange.js:80
+#: src/routes/api/factionrolechange.js:78
 msgid "Can not change the powerlevel of the Sovereign"
 msgstr ""
 
-#: src/core/ChatProvider.js:356
+#: src/core/ChatProvider.js:358
 msgid "Can not chat while being banned"
 msgstr ""
 
-#: src/routes/api/factionrolecreate.js:56
+#: src/routes/api/factionrolecreate.js:55
 msgid "Can not create a role on the same level as yours"
 msgstr ""
 
-#: src/routes/api/factionrolecreate.js:50
+#: src/routes/api/factionrolecreate.js:49
 msgid "Can not create a role with a powerlevel beyond yours"
 msgstr ""
 
@@ -117,15 +117,15 @@ msgstr ""
 msgid "Can not delete this role"
 msgstr ""
 
-#: src/routes/api/factionrolechange.js:90
+#: src/routes/api/factionrolechange.js:88
 msgid "Can not elevate the powerlevel of a role beyond yours"
 msgstr ""
 
-#: src/routes/api/factionrolechange.js:100
+#: src/routes/api/factionrolechange.js:98
 msgid "Can not elevate the powerlevel of a role to yours"
 msgstr ""
 
-#: src/routes/api/factionrolecreate.js:77
+#: src/routes/api/factionrolecreate.js:76
 #, javascript-format
 msgid "Can not have more than ${ MAX_ROLES_PER_FACTION } faction roles"
 msgstr ""
@@ -134,13 +134,13 @@ msgstr ""
 msgid "Can not have more than 20 invites per faction"
 msgstr ""
 
-#: src/routes/api/factionkickban.js:49
-#: src/routes/api/factionrolejoin.js:50
+#: src/routes/api/factionkickban.js:46
+#: src/routes/api/factionrolejoin.js:49
 #: src/routes/api/factionroleleave.js:34
 msgid "Can not modify user equal to you or above you"
 msgstr ""
 
-#: src/routes/api/factionkickban.js:65
+#: src/routes/api/factionkickban.js:62
 #: src/routes/api/factionleave.js:28
 #: src/routes/api/factionroleleave.js:36
 #. when leaving a faction and you are the last owner
@@ -154,8 +154,8 @@ msgid ""
 "amountOfFiles }"
 msgstr ""
 
-#: src/routes/api/factionrolechange.js:95
-#: src/routes/api/factionrolecreate.js:53
+#: src/routes/api/factionrolechange.js:93
+#: src/routes/api/factionrolecreate.js:52
 msgid "Can only have one Sovereign role"
 msgstr ""
 
@@ -191,7 +191,7 @@ msgstr ""
 msgid "Coronavirus"
 msgstr ""
 
-#: src/routes/api/factionrolechange.js:150
+#: src/routes/api/factionrolechange.js:148
 msgid "Could not change the flag of this role"
 msgstr ""
 
@@ -242,11 +242,11 @@ msgstr ""
 msgid "Delete Application"
 msgstr ""
 
-#: src/utils/validation.js:109
+#: src/utils/validation.js:111
 msgid "Description can't be empty"
 msgstr ""
 
-#: src/utils/validation.js:112
+#: src/utils/validation.js:114
 msgid "Description must be shorter than 1000 characters"
 msgstr ""
 
@@ -259,7 +259,7 @@ msgstr ""
 msgid "Double click on globe to go back."
 msgstr ""
 
-#: src/routes/api/auth/register.js:82
+#: src/routes/api/auth/register.js:85
 msgid "E-Mail already in use."
 msgstr ""
 
@@ -296,7 +296,7 @@ msgstr ""
 msgid "Error"
 msgstr ""
 
-#: src/routes/api/auth/register.js:120
+#: src/routes/api/auth/register.js:123
 msgid "Failed to create a new user :("
 msgstr ""
 
@@ -365,7 +365,7 @@ msgid ""
 "requested this mail was ${ ip })."
 msgstr ""
 
-#: src/utils/validation.js:71
+#: src/utils/validation.js:72
 msgid "Incorrect password"
 msgstr ""
 
@@ -457,22 +457,22 @@ msgid ""
 "art) or art larger than 1.5k x 1.5k pixels."
 msgstr ""
 
-#: src/routes/api/auth/register.js:85
+#: src/routes/api/auth/register.js:88
 #: src/routes/api/factioncreate.js:70
 #: src/routes/api/userchange.js:102
 msgid "Name already in use."
 msgstr ""
 
-#: src/utils/validation.js:102
+#: src/utils/validation.js:104
 msgid "Name can only contain the characters: a-z . _ and -"
 msgstr ""
 
 #: src/utils/validation.js:32
-#: src/utils/validation.js:94
+#: src/utils/validation.js:96
 msgid "Name can't be empty."
 msgstr ""
 
-#: src/utils/validation.js:42
+#: src/utils/validation.js:43
 msgid "Name contains invalid character like @, /, \\ or #"
 msgstr ""
 
@@ -481,12 +481,12 @@ msgid "Name is too long"
 msgstr ""
 
 #: src/utils/validation.js:33
-#: src/utils/validation.js:96
+#: src/utils/validation.js:98
 msgid "Name must be at least 2 characters long"
 msgstr ""
 
 #: src/utils/validation.js:34
-#: src/utils/validation.js:99
+#: src/utils/validation.js:101
 msgid "Name must be shorter than 26 characters"
 msgstr ""
 
@@ -511,7 +511,7 @@ msgstr ""
 msgid "No or invalid fish id."
 msgstr ""
 
-#: src/utils/validation.js:127
+#: src/utils/validation.js:129
 msgid "No password given."
 msgstr ""
 
@@ -560,11 +560,11 @@ msgstr ""
 msgid "Our main canvas, a huge map of the world. Place anywhere you like!"
 msgstr ""
 
-#: src/utils/validation.js:130
+#: src/utils/validation.js:132
 msgid "Password must be at least 6 characters long."
 msgstr ""
 
-#: src/utils/validation.js:133
+#: src/utils/validation.js:135
 msgid "Password must be shorter than 60 characters."
 msgstr ""
 
@@ -605,15 +605,11 @@ msgstr ""
 msgid "Place color pixels on an map styled canvas with other players online"
 msgstr ""
 
-#: src/routes/api/auth/register.js:65
-msgid "Please refresh the website"
-msgstr ""
-
-#: src/routes/api/auth/register.js:79
+#: src/routes/api/auth/register.js:82
 msgid "Please try again."
 msgstr ""
 
-#: src/core/ChatProvider.js:388
+#: src/core/ChatProvider.js:390
 msgid "Please use int channel"
 msgstr ""
 
@@ -655,11 +651,11 @@ msgstr ""
 msgid "Reset your password here"
 msgstr ""
 
-#: src/routes/api/factionrolechange.js:142
+#: src/routes/api/factionrolechange.js:140
 msgid "Role flag can only be an image"
 msgstr ""
 
-#: src/routes/api/factionrolechange.js:145
+#: src/routes/api/factionrolechange.js:143
 msgid "Role flag needs to be 16x11"
 msgstr ""
 
@@ -670,21 +666,21 @@ msgstr ""
 #: src/routes/api/factiondelete.js:30
 #: src/routes/api/factioninvitecreate.js:34
 #: src/routes/api/factioninvitedelete.js:28
-#: src/routes/api/factioninvites.js:29
-#: src/routes/api/factioninviteuse.js:39
-#: src/routes/api/factioninviteuse.js:44
+#: src/routes/api/factioninvites.js:28
+#: src/routes/api/factioninviteuse.js:38
+#: src/routes/api/factioninviteuse.js:43
 #: src/routes/api/factionjoin.js:39
-#: src/routes/api/factionkickban.js:67
-#: src/routes/api/factionkickban.js:93
+#: src/routes/api/factionkickban.js:64
+#: src/routes/api/factionkickban.js:90
 #: src/routes/api/factionleave.js:30
 #: src/routes/api/factionmembers.js:34
-#: src/routes/api/factionrolecreate.js:80
+#: src/routes/api/factionrolecreate.js:79
 #: src/routes/api/factionroledelete.js:37
-#: src/routes/api/factionrolejoin.js:63
+#: src/routes/api/factionrolejoin.js:62
 #: src/routes/api/factionroleleave.js:38
 #: src/routes/api/media.js:178
 #: src/routes/api/media.js:307
-#: src/utils/validation.js:73
+#: src/utils/validation.js:74
 msgid "Server Error"
 msgstr ""
 
@@ -721,7 +717,7 @@ msgstr ""
 msgid "Special canvas to spread awareness of SARS-CoV2 (take the vax)."
 msgstr ""
 
-#: src/core/ChatProvider.js:396
+#: src/core/ChatProvider.js:398
 msgid "Stop flooding."
 msgstr ""
 
@@ -748,24 +744,24 @@ msgstr ""
 msgid "The user owning this fish is private"
 msgstr ""
 
-#: src/middleware/oidc.js:225
-#: src/middleware/oidc.js:248
+#: src/middleware/oidc.js:227
+#: src/middleware/oidc.js:250
 msgid "This application is not allowed to login"
 msgstr ""
 
-#: src/middleware/oidc.js:267
+#: src/middleware/oidc.js:269
 msgid "This application redirects to an unallowed page"
 msgstr ""
 
-#: src/middleware/oidc.js:262
+#: src/middleware/oidc.js:264
 msgid "This application sent a faulty login request with no redirection"
 msgstr ""
 
-#: src/middleware/oidc.js:235
+#: src/middleware/oidc.js:237
 msgid "This application uses a PKCE method we do not support"
 msgstr ""
 
-#: src/middleware/oidc.js:221
+#: src/middleware/oidc.js:223
 msgid "This application uses a login method we do not support"
 msgstr ""
 
@@ -777,7 +773,7 @@ msgid ""
 "installing malware, Thank You."
 msgstr ""
 
-#: src/utils/validation.js:69
+#: src/utils/validation.js:70
 msgid ""
 "This email / password combination got hacked and leaked. To protect this "
 "account, the password has been reset. Please use the \"Forgot my password\" "
@@ -786,25 +782,25 @@ msgid ""
 msgstr ""
 
 #: src/routes/api/auth/change_mail.js:23
-#: src/routes/api/auth/register.js:98
+#: src/routes/api/auth/register.js:101
 msgid "This email provider is not allowed"
 msgstr ""
 
 #: src/routes/api/factionbans.js:22
 #: src/routes/api/factioninfo.js:25
-#: src/routes/api/factioninvites.js:21
+#: src/routes/api/factioninvites.js:20
 #: src/routes/api/factionjoin.js:25
 #: src/routes/api/factionjoin.js:42
-#: src/routes/api/factionkickban.js:62
-#: src/routes/api/factionkickban.js:70
+#: src/routes/api/factionkickban.js:59
+#: src/routes/api/factionkickban.js:67
 #: src/routes/api/factionleave.js:25
 #: src/routes/api/factionleave.js:33
 #: src/routes/api/factionmembers.js:25
-#: src/routes/api/factionunban.js:34
+#: src/routes/api/factionunban.js:31
 msgid "This faction does not exist"
 msgstr ""
 
-#: src/routes/api/factioninviteuse.js:35
+#: src/routes/api/factioninviteuse.js:34
 #: src/routes/api/factionjoin.js:35
 msgid "This faction is full"
 msgstr ""
@@ -823,27 +819,27 @@ msgstr ""
 msgid "This password-reset link isn't valid anymore :("
 msgstr ""
 
-#: src/utils/validation.js:66
+#: src/utils/validation.js:67
 msgid "This user has not password set"
 msgstr ""
 
-#: src/routes/api/userinfo.js:27
+#: src/routes/api/userinfo.js:26
 msgid "This user is private"
 msgstr ""
 
-#: src/utils/validation.js:78
+#: src/utils/validation.js:79
 msgid "Title can't be empty."
 msgstr ""
 
-#: src/utils/validation.js:88
+#: src/utils/validation.js:90
 msgid "Title contains invalid character like @, /, \\ or #"
 msgstr ""
 
-#: src/utils/validation.js:79
+#: src/utils/validation.js:80
 msgid "Title must be at least 2 characters long"
 msgstr ""
 
-#: src/utils/validation.js:80
+#: src/utils/validation.js:81
 msgid "Title must be shorter than 26 characters"
 msgstr ""
 
@@ -856,7 +852,7 @@ msgstr ""
 msgid "Top10"
 msgstr ""
 
-#: src/routes/api/auth/register.js:71
+#: src/routes/api/auth/register.js:74
 msgid "Unknown Captcha Error"
 msgstr ""
 
@@ -878,7 +874,7 @@ msgstr ""
 msgid "User doesn't exist in our database :("
 msgstr ""
 
-#: src/routes/api/auth/register.js:88
+#: src/routes/api/auth/register.js:91
 #: src/routes/api/userchange.js:78
 msgid "Username already in use."
 msgstr ""
@@ -887,19 +883,19 @@ msgstr ""
 msgid "Username can not start with pp_"
 msgstr ""
 
-#: src/utils/validation.js:56
+#: src/utils/validation.js:57
 msgid "Username can only contain the characters: a-z . _ and -"
 msgstr ""
 
-#: src/utils/validation.js:48
+#: src/utils/validation.js:49
 msgid "Username can't be empty."
 msgstr ""
 
-#: src/utils/validation.js:50
+#: src/utils/validation.js:51
 msgid "Username must be at least 2 characters long"
 msgstr ""
 
-#: src/utils/validation.js:53
+#: src/utils/validation.js:54
 msgid "Username must be shorter than 26 characters"
 msgstr ""
 
@@ -934,7 +930,7 @@ msgstr ""
 msgid "You already have that name."
 msgstr ""
 
-#: src/routes/api/factioninviteuse.js:33
+#: src/routes/api/factioninviteuse.js:32
 #: src/routes/api/factionjoin.js:33
 msgid "You are already part of this faction"
 msgstr ""
@@ -943,17 +939,17 @@ msgstr ""
 msgid "You are already verified."
 msgstr ""
 
-#: src/routes/api/factioninviteuse.js:31
+#: src/routes/api/factioninviteuse.js:30
 #: src/routes/api/factionjoin.js:31
 msgid "You are banned from this faction"
 msgstr ""
 
-#: src/core/ChatProvider.js:366
+#: src/core/ChatProvider.js:368
 #, javascript-format
 msgid "You are muted for another ${ timeMin } minutes"
 msgstr ""
 
-#: src/core/ChatProvider.js:368
+#: src/core/ChatProvider.js:370
 #, javascript-format
 msgid "You are muted for another ${ ttl } seconds"
 msgstr ""
@@ -966,7 +962,7 @@ msgstr ""
 msgid "You are not banned"
 msgstr ""
 
-#: src/middleware/session.js:298
+#: src/middleware/session.js:302
 #: src/routes/api/modtools.js:68
 msgid "You are not logged in"
 msgstr ""
@@ -975,16 +971,16 @@ msgstr ""
 msgid "You are now verified :)"
 msgstr ""
 
-#: src/core/ChatProvider.js:361
+#: src/core/ChatProvider.js:363
 msgid "You are permanently muted, join our guilded to appeal the mute"
 msgstr ""
 
-#: src/core/ChatProvider.js:332
+#: src/core/ChatProvider.js:334
 #, javascript-format
 msgid "You are sending messages too fast, you have to wait ${ waitTime }s :("
 msgstr ""
 
-#: src/core/ChatProvider.js:421
+#: src/core/ChatProvider.js:423
 msgid "You attached too many files"
 msgstr ""
 
@@ -992,15 +988,15 @@ msgstr ""
 msgid "You can not delete this login method, because you have nothing else left."
 msgstr ""
 
-#: src/routes/api/auth/register.js:107
+#: src/routes/api/auth/register.js:110
 msgid "You can not register an account while you are banned"
 msgstr ""
 
-#: src/routes/api/auth/register.js:104
+#: src/routes/api/auth/register.js:107
 msgid "You can not register an account with a proxy"
 msgstr ""
 
-#: src/core/ChatProvider.js:353
+#: src/core/ChatProvider.js:355
 msgid "You can not send chat messages while using a proxy"
 msgstr ""
 
@@ -1010,7 +1006,7 @@ msgid "You can only be owner of ${ MAX_OWNED_FACTIONS_PER_USER } factions in tot
 msgstr ""
 
 #: src/routes/api/factioncreate.js:55
-#: src/routes/api/factioninviteuse.js:28
+#: src/routes/api/factioninviteuse.js:27
 #: src/routes/api/factionjoin.js:28
 #, javascript-format
 msgid "You can only have ${ MAX_FACTIONS_PER_USER } factions in total"
@@ -1022,7 +1018,7 @@ msgid ""
 "client_secret needed to make use of this."
 msgstr ""
 
-#: src/core/ChatProvider.js:419
+#: src/core/ChatProvider.js:421
 msgid "You can't send a message this long :("
 msgstr ""
 
@@ -1036,7 +1032,7 @@ msgid ""
 "Methods\"."
 msgstr ""
 
-#: src/core/ChatProvider.js:336
+#: src/core/ChatProvider.js:338
 msgid "You don't have access to this channel"
 msgstr ""
 
@@ -1056,7 +1052,7 @@ msgstr ""
 msgid "You must be logged in to access this page"
 msgstr ""
 
-#: src/routes/api/factioninviteuse.js:37
+#: src/routes/api/factioninviteuse.js:36
 #: src/routes/api/factionjoin.js:37
 msgid "You need an invite to join this faction"
 msgstr ""
@@ -1094,7 +1090,7 @@ msgstr ""
 msgid "You will be automatically redirected after 15s"
 msgstr ""
 
-#: src/routes/api/auth/register.js:68
+#: src/routes/api/auth/register.js:71
 msgid "Your Browser looks shady"
 msgstr ""
 
@@ -1106,11 +1102,15 @@ msgstr ""
 msgid "Your account needs to be verified to access this page"
 msgstr ""
 
-#: src/core/ChatProvider.js:341
+#: src/core/ChatProvider.js:343
 msgid "Your country is temporary muted from this chat channel"
 msgstr ""
 
-#: src/core/ChatProvider.js:379
+#: src/routes/api/auth/register.js:68
+msgid "Your device looks weird"
+msgstr ""
+
+#: src/core/ChatProvider.js:381
 msgid "Your mail has to be verified in order to chat"
 msgstr ""
 

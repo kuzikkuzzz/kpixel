@@ -3,7 +3,9 @@
  *
  */
 
-import { memo, Fragment, useRef, useState, useCallback, useMemo, useEffect } from 'react';
+import {
+  memo, Fragment, useRef, useState, useCallback, useMemo, useEffect,
+} from 'react';
 import { useSelector } from 'react-redux';
 import { FaUser } from 'react-icons/fa';
 import { MdGroups } from 'react-icons/md';

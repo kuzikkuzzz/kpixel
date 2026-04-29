@@ -1,7 +1,9 @@
 /*
  * faction
  */
-import { Fragment, useState, useEffect, useContext, useCallback, useRef } from 'react';
+import {
+  Fragment, useState, useEffect, useContext, useCallback, useRef,
+} from 'react';
 import { useDispatch } from 'react-redux';
 import { t } from 'ttag';
 import { RiSave3Line } from 'react-icons/ri';
@@ -739,7 +741,11 @@ const Faction = () => {
     powerlvlName = 'stranger';
   }
 
-  let didPrintErrors = false;
+  const didPrintErrors = (
+    (activeTab === 'members' && memberData?.length)
+    || (activeTab === 'roles' && selected && selected !== '@create-role')
+    || (activeTab === 'edit')
+  );
   let content = null;
   if (!availableTabs.includes(activeTab)) {
     content = <h3 key="notallowed">{t`Not Allowed`}</h3>;
@@ -873,7 +879,6 @@ const Faction = () => {
     } else {
       const canBan = powerlvl >= FACTION_PERMISSIONS.BAN;
       const canChangeRoles = powerlvl >= FACTION_PERMISSIONS.ASSIGN_ROLES;
-      didPrintErrors = true;
       content = (
         <div className={`factionwin-${activeTab}`} key={activeTab}>
           <div className="factionlist">{memberData.map((member) => {
@@ -1273,8 +1278,6 @@ const Faction = () => {
             );
 
             if (frid === selected) {
-              didPrintErrors = true;
-
               return (
                 <div
                   key={`edit-${frid}`}
@@ -1475,7 +1478,6 @@ const Faction = () => {
     /* ================================ EDIT ================================ */
     const { avatarId } = faction;
     const [thumbUrl] = getUrlsFromMediaIdAndName(avatarId, 'avatar');
-    didPrintErrors = true;
 
     content = (
       <div className={`factionwin-${activeTab}`} key={activeTab}>

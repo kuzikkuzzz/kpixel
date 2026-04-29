@@ -119,7 +119,8 @@ export function patchState(state, patch) {
               && endIndex === path.length - 1
             ) {
               /*
-               * pushnx HAS to end with a [key:value] selector that doesn't exist
+               * pushnx HAS to end with a [key:value] selector that doesn't
+               * exist
                */
               targetSelectorPushNX = [key, value];
             } else {

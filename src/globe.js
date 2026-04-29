@@ -49,7 +49,7 @@ function parseHashCoords() {
       throw new Error('NaN');
     }
     return [ident, id, size, x, y];
-  } catch (error) {
+  } catch {
     return ['d', 0, 65536, 0, 0];
   }
 }

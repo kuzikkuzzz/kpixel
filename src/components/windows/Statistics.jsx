@@ -223,10 +223,12 @@ const Rankings = () => {
                 <td
                   title={rank.cc}
                   className="tab-cc-cell"
-                ><img
+                >
+                  <img
                     alt={rank.cc}
                     src={cdn`/cf/${rank.cc}.gif`}
-                  /></td>
+                  />
+                </td>
                 <td className="c-num">
                   {numberToStringFull(rank.px)}
                   {(cHourlyStats[rank.cc] > 0) && (

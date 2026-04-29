@@ -33,10 +33,12 @@ const CooldownChanges = () => {
               <td
                 title={cc}
                 className="tab-cc-cell"
-              ><img
+              >
+                <img
                   alt={cc}
                   src={cdn`/cf/${cc}.gif`}
-                /></td>
+                />
+              </td>
               <td>
                 x&nbsp;{factor}
               </td>

@@ -9,7 +9,8 @@ export default function hashScript(scriptString) {
   return [
     scriptString,
     /*
-     * LibreJS modifies the script, which should be considered a bug on their side
+     * LibreJS modifies the script, which should be considered a bug on their
+     * side
      * TODO: remove once LibreJS supports it
      */
     `/* LibreJS: script accepted by user. */\n${scriptString}`,

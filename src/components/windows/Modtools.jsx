@@ -1,7 +1,9 @@
 /*
  * Modtools
  */
-import { memo, Fragment, useLayoutEffect, useContext, useCallback } from 'react';
+import {
+  memo, Fragment, useLayoutEffect, useContext, useCallback,
+} from 'react';
 import { useSelector } from 'react-redux';
 
 import WindowContext from '../context/window.js';

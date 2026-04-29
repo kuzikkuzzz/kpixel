@@ -15,18 +15,18 @@ export default function (api) {
   const presets = [
     [
       '@babel/preset-env',
-      api.caller(caller => caller && caller.target === 'node')
+      api.caller((caller) => caller && caller.target === 'node')
         ? {
-          targets: {
-            node: pkg.engines.node.replace(/^\D+/g, ''),
-          },
-          modules: false,
-        }
+            targets: {
+              node: pkg.engines.node.replace(/^\D+/g, ''),
+            },
+            modules: false,
+          }
         : {
-          targets: {
-            browsers: pkg.browserslist,
+            targets: {
+              browsers: pkg.browserslist,
+            },
           },
-        }
     ],
     ['@babel/preset-react', {
       runtime: 'automatic',
@@ -35,6 +35,6 @@ export default function (api) {
 
   return {
     presets,
-    plugins
+    plugins,
   };
 }

@@ -137,7 +137,9 @@ export class ChatProvider {
   /**
    * return all the public channels someone has access to, given a language
    * code
-   * @return [[cid, name, lastTs, null (lastReadTs), true (muted), null (avatarId)], ...]
+   * @return [
+   *   [cid, name, lastTs, null (lastReadTs), true (muted), null (avatarId)],
+   * ...]
    */
   getAccessiblePublicChannels(lang) {
     const ret = [...this.defaultChannels];

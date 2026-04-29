@@ -28,7 +28,7 @@ const basePackageValues = {
     start: 'node server.js',
     poststop: 'pm2 kill',
     sqlsync: 'node scripts/sqlsync.js',
-    'install-pm2': 'npm install -g pm2'
+    'install-pm2': 'npm install -g pm2',
   },
   dependencies: {
     'utf-8-validate': '',
@@ -68,12 +68,12 @@ export default ({
       workerEntries[name] = fullPath;
     });
 
-    /*
+  /*
      * same with scripts that are part of the final package
      */
-    const scriptsDir = path.resolve('deployment', 'scripts');
-    const scriptsEntries = {};
-    fs.readdirSync(scriptsDir)
+  const scriptsDir = path.resolve('deployment', 'scripts');
+  const scriptsEntries = {};
+  fs.readdirSync(scriptsDir)
     .filter((e) => e.endsWith('.js'))
     .forEach((filename) => {
       const name = `scripts/${filename.slice(0, -3)}`;
@@ -128,33 +128,33 @@ export default ({
     },
 
     externals: [{
-        'sharp': 'commonjs sharp',
-        'bcrypt': 'commonjs bcrypt',
-        'utf-8-validate': 'commonjs utf-8-validate',
-        'bufferutil': 'commonjs bufferutil',
-        'mariadb': 'commonjs mariadb',
-        'express': 'commonjs express',
-        'ppfun-captcha': 'commonjs ppfun-captcha',
-        'ws': 'commonjs ws',
-        'compression': 'commonjs compression',
-        'redis': 'commonjs redis',
-        'arctic': 'commonjs arctic',
-        'winston': 'commonjs winston',
-        'winston-daily-rotate-file': 'commonjs winston-daily-rotate-file',
-      },
-      // the ./src/funcs folder does not get bundled, but copied
-      // into dist/workers/funcs instead to allow overriding
-      function ({ context, request }, callback) {
-        const funcPathInd = request.indexOf('/funcs/');
-        if (request.startsWith('.') && funcPathInd !== -1) {
-          const prefix = context.endsWith(path.join('src', 'workers'))
-            ? '.' : './workers';
-          return callback(
-            null, `commonjs ${prefix}${request.substring(funcPathInd)}`,
-          );
-        }
-        callback();
-      },
+      'sharp': 'commonjs sharp',
+      'bcrypt': 'commonjs bcrypt',
+      'utf-8-validate': 'commonjs utf-8-validate',
+      'bufferutil': 'commonjs bufferutil',
+      'mariadb': 'commonjs mariadb',
+      'express': 'commonjs express',
+      'ppfun-captcha': 'commonjs ppfun-captcha',
+      'ws': 'commonjs ws',
+      'compression': 'commonjs compression',
+      'redis': 'commonjs redis',
+      'arctic': 'commonjs arctic',
+      'winston': 'commonjs winston',
+      'winston-daily-rotate-file': 'commonjs winston-daily-rotate-file',
+    },
+    // the ./src/funcs folder does not get bundled, but copied
+    // into dist/workers/funcs instead to allow overriding
+    function ({ context, request }, callback) {
+      const funcPathInd = request.indexOf('/funcs/');
+      if (request.startsWith('.') && funcPathInd !== -1) {
+        const prefix = context.endsWith(path.join('src', 'workers'))
+          ? '.' : './workers';
+        return callback(
+          null, `commonjs ${prefix}${request.substring(funcPathInd)}`,
+        );
+      }
+      callback();
+    },
     ],
 
     plugins: [
@@ -167,7 +167,7 @@ export default ({
       }),
       // create package.json for deployment
       new GeneratePackageJsonPlugin(basePackageValues, {
-        sourcePackageFilenames: [ path.resolve('package.json') ],
+        sourcePackageFilenames: [path.resolve('package.json')],
         // provided by node itself
         excludeDependencies: [
           'node:fs', 'node:path', 'node:stream',

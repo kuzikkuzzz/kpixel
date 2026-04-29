@@ -74,7 +74,7 @@ const OnlineBox = () => {
             </span>
           )}
        &nbsp;
-      {(name != null)
+      {(!!name)
         && (
           <Fragment key="plxc">
             <span

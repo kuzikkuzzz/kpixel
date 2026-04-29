@@ -151,7 +151,7 @@ export async function setUserChannelMute(channelId, userId, mute) {
       [(mute) ? 1 : 0, channelId, userId],
     );
     return true;
-  } catch (error) {
+  } catch {
     return false;
   }
 }

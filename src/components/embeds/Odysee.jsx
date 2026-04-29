@@ -48,14 +48,14 @@ export default [
     const urlPart = stripQuery(url);
     let posA = urlPart.indexOf(urlStr);
     if (posA !== -1) {
-      // https://odysee.com/@lotuseaters_com:1/disney%E2%80%99s-%E2%80%9Cgay-agenda%E2%80%9D:1
+      // https://odysee.com/@user:1/video:1
       if (posA === -1 || posA + 4 >= urlPart.length) {
         return false;
       }
       posA = urlPart.indexOf('/', posA + urlStr.length);
       return !(posA === -1 || posA + 2 >= urlPart.length);
     }
-    // https://odysee.com/why-we-were-wrong-about-ukraine:6bd300b38bf1b30fa56e53c191b0652682c2ae6f
+    // https://odysee.com/video:6bd300b38bf1b30fa56e53c191b0652682c2ae6f
     posA = urlPart.indexOf('//');
     if (posA === -1) {
       posA = 0;

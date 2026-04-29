@@ -112,7 +112,8 @@ export async function imageABGR2Canvas(
  * @param width Width of image
  * @param height height of image
  * @param filter function that defines what happens to the pixel that matches,
- *               it will be called with the pixelcolor as argument, its return value gets set
+ *   it will be called with the pixelcolor as argument, its return value gets
+ *   set
  */
 export async function imagemask2Canvas(
   canvasId,

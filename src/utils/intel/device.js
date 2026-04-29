@@ -105,7 +105,7 @@ export default function getDeviceInfo(req) {
     */
   const browserHash = crypto.createHash('sha224')
   // eslint-disable-next-line max-len
-    .update(userAgent + headers.host + headers['accept-language'] + headers['accept-encoding'])
+    .update(headers['user-agent'] + headers.host + headers['accept-language'] + headers['accept-encoding'])
     .digest('base64url')
     .substring(0, 15);
 

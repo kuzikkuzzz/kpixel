@@ -18,8 +18,7 @@ const pkg = JSON.parse(
   fs.readFileSync(path.resolve('package.json')),
 );
 
-export default ({ development, analyze}) => {
-
+export default ({ development, analyze }) => {
   const babelPlugins = [];
   /*
    * In development mode, we resolve translations to the default english.
@@ -43,7 +42,7 @@ export default ({ development, analyze}) => {
       },
     ]);
     babelPlugins.push([
-      "transform-remove-imports", { "test": "^ttag$" },
+      'transform-remove-imports', { 'test': '^ttag$' },
     ]);
   }
 
@@ -76,7 +75,9 @@ export default ({ development, analyze}) => {
       filename: (pathData) => (pathData.chunk.chunkReason)
         ? '[name].[chunkhash:8].js'
         : `[name].${(development) ? 'en' : 'WPLANGCODE'}.[chunkhash:8].js`,
-      chunkFilename: `[name].${(development) ? 'en' : 'WPLANGCODE'}.[chunkhash:8].js`,
+      chunkFilename: `[name].${
+        (development) ? 'en' : 'WPLANGCODE'
+      }.[chunkhash:8].js`,
     },
 
     resolve: {
@@ -149,7 +150,9 @@ export default ({ development, analyze}) => {
           /*
            * add language scripts that might be built later
            */
-          const clientScripts = out.find(({ name }) => name === 'Client Scripts').scripts;
+          const clientScripts = out.find(
+            ({ name }) => name === 'Client Scripts',
+          ).scripts;
           const scriptAmount = clientScripts.length;
           const langs = fs.readdirSync(path.resolve('i18n'))
             .filter((e) => (e.endsWith('.po') && !e.startsWith('ssr')))
@@ -180,7 +183,7 @@ export default ({ development, analyze}) => {
             const newBuildObj = {
               ...buildObj,
               scripts: [],
-            }
+            };
             buildObj.scripts.forEach((scriptObj) => {
               let targetInd = newBuildObj.scripts.findIndex(
                 (s) => s.name === scriptObj.name,
@@ -192,7 +195,7 @@ export default ({ development, analyze}) => {
                   .deepMergeNamedArrays(
                     newBuildObj.scripts[targetInd],
                     { ...scriptObj, url: null },
-                   );
+                  );
               }
             });
             return newBuildObj;
@@ -270,5 +273,5 @@ export default ({ development, analyze}) => {
       type: 'filesystem',
     },
   };
-}
+};
 

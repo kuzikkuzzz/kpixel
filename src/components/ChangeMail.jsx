@@ -3,7 +3,9 @@
  * it is called ChangeMail, because that is what it originally was
  */
 
-import { memo, Fragment, useState, useCallback, useEffect, useMemo } from 'react';
+import {
+  memo, Fragment, useState, useCallback, useEffect, useMemo,
+} from 'react';
 import { useSelector } from 'react-redux';
 import { t } from 'ttag';
 

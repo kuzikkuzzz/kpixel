@@ -194,7 +194,7 @@ class SocketEvents extends EventEmitter {
    * @param name chatname
    * @param message Message to send
    * @param sendapi If chat message should get broadcasted to api websockets
-   *                (useful if the api is supposed to not answer to its own messages)
+   *   (useful if the api is supposed to not answer to its own messages)
    */
   broadcastChatMessage(
     name,
@@ -230,7 +230,7 @@ class SocketEvents extends EventEmitter {
    * @param name chatname
    * @param userId user id
    * @param sendapi If chat message should get broadcasted to api websockets
-   *                (useful if the api is supposed to not answer to its own messages)
+   *   (useful if the api is supposed to not answer to its own messages)
    */
   broadcastUserPublicChatMessageDeletion(userId, sendapi = true) {
     this.emit('deletePublicUserMessages', userId, sendapi);

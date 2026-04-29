@@ -123,12 +123,15 @@ class Chunk3D extends Chunk {
   // Test Sin environment creation for load tests
   async generateSin() {
     let cnt = 0;
-    this.buffer = new Uint8Array(THREE_TILE_SIZE * THREE_TILE_SIZE * THREE_CANVAS_HEIGHT);
+    this.buffer = new Uint8Array(THREE_TILE_SIZE * THREE_TILE_SIZE
+      * THREE_CANVAS_HEIGHT);
     const cellSize = THREE_TILE_SIZE;
     for (let y = 0; y < THREE_CANVAS_HEIGHT; ++y) {
       for (let z = 0; z < THREE_TILE_SIZE; ++z) {
         for (let x = 0; x < THREE_TILE_SIZE; ++x) {
-          const height = (Math.sin(x / cellSize * Math.PI * 2) + Math.sin(z / cellSize * Math.PI * 3)) * (cellSize / 6) + (cellSize / 2);
+          const height = (Math.sin(x / cellSize * Math.PI * 2)
+            + Math.sin(z / cellSize * Math.PI * 3)
+          ) * (cellSize / 6) + (cellSize / 2);
           if (y < height) {
             const offset = x
               + z * THREE_TILE_SIZE
@@ -142,7 +145,9 @@ class Chunk3D extends Chunk {
       }
     }
     console.log(`Created buffer with ${cnt} voxels`);
-    const [faceCnt, lastPixel, heightMap] = Chunk3D.calculateMetaData(this.buffer);
+    const [
+      faceCnt, lastPixel, heightMap,
+    ] = Chunk3D.calculateMetaData(this.buffer);
     this.faceCnt = faceCnt;
     this.lastPixel = lastPixel;
     this.heightMap = heightMap;
@@ -244,8 +249,10 @@ class Chunk3D extends Chunk {
     let chunkBuffer = chunkBufferInpt;
     const neededLength = THREE_TILE_SIZE ** 2 * THREE_CANVAS_HEIGHT;
     if (chunkBuffer.byteLength < neededLength) {
+      console.log(
       // eslint-disable-next-line
-      console.log(`Padding chunk ${this.key} with ${neededLength - chunkBuffer.byteLength} voxels to full length`);
+        `Padding chunk ${this.key} with ${neededLength - chunkBuffer.byteLength} voxels to full length`
+      );
       chunkBuffer = new Uint8Array(neededLength);
       chunkBuffer.set(chunkBufferInpt);
     }
@@ -382,6 +389,7 @@ class Chunk3D extends Chunk {
     }
 
     // const time3 = Date.now();
+    // eslint-disable-next-line max-len
     // console.log(`Created mesh with ${this.faceCnt} faces in ${time3 - time2}ms webgl and ${time2 - time1}ms data creation`);
   }
 }

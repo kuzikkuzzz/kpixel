@@ -169,7 +169,6 @@ export async function checkVerificationSolutions(
       challengeExpiresTs,
       captchaBrowserHash,
       challengeBrowserHash,
-      solutionBrowserHash,
     }]] = await pool.query(
       'CALL CHECK_VERIFICATION_SOLUTIONS(?, ?, ?, ?, ?, ?, ?, ?)', [
         captchaId, captchaSolution, challengeSolution, browserHash, ipString,
@@ -177,12 +176,10 @@ export async function checkVerificationSolutions(
       ],
     );
 
-    if (solutionBrowserHash !== challengeBrowserHash
-      || solutionBrowserHash !== captchaBrowserHash
-    ) {
+    if (captchaReturn === 4) {
       console.log(
         // eslint-disable-next-line max-len
-        `CAPTCHA HASH MISMATCH ${browserHash} ${solutionBrowserHash} ${captchaBrowserHash} ${challengeBrowserHash}`,
+        `CAPTCHAS: hash mismatch ${browserHash} ${captchaBrowserHash} ${challengeBrowserHash}`,
       );
     }
 

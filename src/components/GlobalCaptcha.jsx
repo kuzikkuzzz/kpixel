@@ -19,7 +19,7 @@ const GlobalCaptcha = ({ close }) => {
   const [legit, setLegit] = useState(false);
   const [ready, setReady] = useState(false);
   // used to be able to force Captcha rerender on error
-  const [captKey, setCaptKey] = useState(Date.now());
+  const [captKey, setCaptKey] = useState(() => Date.now());
   const dispatch = useDispatch();
 
   return (

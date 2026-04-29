@@ -1,4 +1,4 @@
-import { lazy: reactLazy } from 'react';
+import { lazy as reactLazy } from 'react';
 import { c, t } from 'ttag';
 
 import RefreshPrompt from '../RefreshPrompt.jsx';

@@ -1,7 +1,6 @@
-import { memo } from 'react';
 import ToggleButton from 'react-toggle';
 
-const SettingsItem = memo(({
+const SettingsItem = ({
   title, keyBind, value, onToggle, children, deactivated,
 }) => (
   <div className="setitem">
@@ -18,6 +17,6 @@ const SettingsItem = memo(({
     <div className="modaldesc">{children}</div>
     <div className="modaldivider" />
   </div>
-), (prevProps, nextProps) => prevProps.value === nextProps.value);
+);
 
 export default SettingsItem;

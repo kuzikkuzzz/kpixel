@@ -50,7 +50,7 @@ async function parseAPIresponse(response) {
 
   try {
     return await response.json();
-  } catch (e) {
+  } catch {
     return {
       errors: [t`Connection error ${code} :(`],
     };
@@ -83,7 +83,7 @@ async function makeAPIPOSTRequest(
     });
 
     return parseAPIresponse(response);
-  } catch (e) {
+  } catch {
     return {
       errors: [t`Could not connect to server, please try again later :(`],
     };
@@ -109,7 +109,7 @@ async function makeAPIGETRequest(
     });
 
     return parseAPIresponse(response);
-  } catch (e) {
+  } catch {
     return {
       errors: [t`Could not connect to server, please try again later :(`],
     };

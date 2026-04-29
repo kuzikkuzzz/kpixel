@@ -3,7 +3,9 @@
  *
  */
 
-import { memo, Fragment, useState, useEffect, useRef, useCallback } from 'react';
+import {
+  memo, Fragment, useState, useEffect, useRef, useCallback,
+} from 'react';
 import { useStore } from 'react-redux';
 
 import { useConditionalClickOutside } from '../hooks/clickOutside.js';
@@ -349,18 +351,9 @@ const MenuList = ({
 
 
 const Menu = ({ type, x, y, args, align, isOpen, remove, close }) => {
-  const [elements, setElements] = useState([]);
-  const wrapperRef = useRef(null);
-  /*
-   * ref to remember which button we already pressed while it is being
-   * processed, to avoid double clicks
-   */
-  const processStateRef = useRef({});
-
-  const link = useLink();
   const store = useStore();
 
-  useEffect(() => {
+  const getElementsFromProps = () => {
     let newElements;
     switch (type) {
       case 'MAIN':
@@ -378,9 +371,33 @@ const Menu = ({ type, x, y, args, align, isOpen, remove, close }) => {
       default:
         newElements = [];
     }
-    setElements(newElements);
-  // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [type, args]);
+    return newElements;
+  };
+
+  const [elements, setElements] = useState(getElementsFromProps);
+  const wrapperRef = useRef(null);
+  /*
+   * ref to remember which button we already pressed while it is being
+   * processed, to avoid double clicks
+   */
+  const processStateRef = useRef({});
+
+  const link = useLink();
+
+  /*
+   * This pattern is recommended by react-docs instead of setting state in a
+   * useEffect.
+   * It doesn't appear much better to me... we share a second render (with the
+   * first one being with an empty array) with two new states and confusing
+   * logic without clear intent.
+   */
+  const [prevType, setPrevType] = useState(type);
+  const [prevArgs, setPrevArgs] = useState(args);
+  if (prevType !== type || prevArgs !== args) {
+    setPrevType(type);
+    setPrevArgs(args);
+    setElements(getElementsFromProps());
+  }
 
   const onClick = useCallback(async (element) => {
     const elementId = element.id;

@@ -28,7 +28,6 @@ const AfreecaTv = ({ url, fill, maxHeight }) => {
   }
   let embedUrl;
   if (url.includes('vod.afreecatv')) {
-    // eslint-disable-next-line max-len
     embedUrl = `https://vod.afreecatv.com/player/${id}/embed?autoPlay=true&showChat=true`;
   } else {
     embedUrl = `https://play.afreecatv.com/${id}/embed`;

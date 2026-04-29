@@ -75,8 +75,8 @@ const TemplateItemEdit = ({
     })();
   }, [file]);
 
-  const canSubmit = (imgRef.current && (file || imageId)
-    && titleUnique && coords && title && dimensions);
+  const canSubmit = (file || imageId)
+    && titleUnique && coords && title && dimensions;
 
   return (
     <div className="tmpitm">
@@ -181,7 +181,7 @@ const TemplateItemEdit = ({
         <button
           disabled={!canSubmit}
           onClick={async () => {
-            if (!canSubmit) {
+            if (!canSubmit || !imgRef.current) {
               return;
             }
             const [x, y] = coords;

@@ -101,6 +101,7 @@ export function getChunkOfPixel(
   z = null,
 ) {
   const tileSize = (z === null) ? TILE_SIZE : THREE_TILE_SIZE;
+  // eslint-disable-next-line eqeqeq
   const width = (z == null) ? y : z;
   const cx = Math.floor((x + (canvasSize / 2)) / tileSize);
   const cy = Math.floor((width + (canvasSize / 2)) / tileSize);
@@ -172,6 +173,7 @@ export function getOffsetOfPixel(
   z = null,
 ) {
   const tileSize = (z === null) ? TILE_SIZE : THREE_TILE_SIZE;
+  // eslint-disable-next-line eqeqeq
   const width = (z == null) ? y : z;
   let offset = (z === null) ? 0 : (y * tileSize * tileSize);
   const modOffset = mod((canvasSize / 2), tileSize);
@@ -447,7 +449,8 @@ export function escapeMd(string) {
  * @return escaped string
  */
 export function escapeRegExp(string) {
-  return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'); // $& means the whole matched string
+  return string.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  // $& means the whole matched string
 }
 
 /*
