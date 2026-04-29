@@ -469,9 +469,6 @@ msgstr ""
 "განათავსეთ ფერადი პიქსელები რუკის კანვასზე ტილოზე სხვა მოთამაშეებთან ერთად "
 "ონლაინ რეჟიმში"
 
-msgid "Please refresh the website"
-msgstr ""
-
 msgid "Please try again."
 msgstr ""
 
@@ -831,6 +828,9 @@ msgstr ""
 
 msgid "Your country is temporary muted from this chat channel"
 msgstr "თქვენი ქვეყანა დამუდებული არის ამ ჩატიდან"
+
+msgid "Your device looks weird"
+msgstr ""
 
 msgid "Your mail has to be verified in order to chat"
 msgstr "თქვენი ფოსტა უნდა დადასტურდეს ჩეთისთვის"

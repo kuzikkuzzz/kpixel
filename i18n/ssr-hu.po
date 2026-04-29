@@ -469,9 +469,6 @@ msgid "Place color pixels on an map styled canvas with other players online"
 msgstr ""
 "Helyezz el pixeleket egy hatalmas online vásznon más játékosokkal együtt"
 
-msgid "Please refresh the website"
-msgstr "Kérlek töltsd újra a weboldalt"
-
 msgid "Please try again."
 msgstr "Kérlek próbáld újra."
 
@@ -840,6 +837,9 @@ msgstr ""
 msgid "Your country is temporary muted from this chat channel"
 msgstr "Az országod ideiglenesen némítva van ezen a chaten"
 
+msgid "Your device looks weird"
+msgstr ""
+
 msgid "Your mail has to be verified in order to chat"
 msgstr ""
 "Az e-mail címednek hitelesítettnek kell lennie ahhoz, hogy írhass a chatre"
@@ -894,6 +894,9 @@ msgid ""
 msgstr ""
 "Üdvözöljük a mi kis pixelrakó közösségünkben. Ha szeretnéd, hogy megmaradjon "
 "a fiókod, meg kell erősítened az e-mail címedet. Ezt itt teheted meg: "
+
+#~ msgid "Please refresh the website"
+#~ msgstr "Kérlek töltsd újra a weboldalt"
 
 #~ msgid "Incorrect password!"
 #~ msgstr "Hibás jelszó!"

@@ -482,9 +482,6 @@ msgstr "Размещайте воксели на 3D полотне вместе 
 msgid "Place color pixels on an map styled canvas with other players online"
 msgstr "Ставьте цветные пиксели на огромном полотне с другими людьми по сети"
 
-msgid "Please refresh the website"
-msgstr "Пожалуйста, обновите страницу"
-
 msgid "Please try again."
 msgstr "Пожалуйста, повторите попытку."
 
@@ -865,6 +862,9 @@ msgstr "Ваш аккаунт должен быть верифицирован �
 msgid "Your country is temporary muted from this chat channel"
 msgstr "Ваша страна временно в муте в этом канале"
 
+msgid "Your device looks weird"
+msgstr ""
+
 msgid "Your mail has to be verified in order to chat"
 msgstr "Ваша почта должна быть подтверждена, чтобы общаться в чате"
 
@@ -920,6 +920,9 @@ msgstr ""
 "добро пожаловать в наше маленькое сообщество тех, кто ставит пиксели, чтобы "
 "использовать свою учетную запись, вы должны подтвердить свою почту. Вы "
 "можете сделать это здесь: "
+
+#~ msgid "Please refresh the website"
+#~ msgstr "Пожалуйста, обновите страницу"
 
 #~ msgid "Incorrect password!"
 #~ msgstr "Неверный пароль!"

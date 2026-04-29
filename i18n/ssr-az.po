@@ -475,9 +475,6 @@ msgid "Place color pixels on an map styled canvas with other players online"
 msgstr ""
 "Digər oyunçularla biryerdə fərqli lövhələrdə fərqli rənglərdə pixellər atın"
 
-msgid "Please refresh the website"
-msgstr "Lütfən saytı yeniləyin"
-
 msgid "Please try again."
 msgstr "Lütfən yenidən sınayın."
 
@@ -834,6 +831,9 @@ msgstr ""
 msgid "Your country is temporary muted from this chat channel"
 msgstr "Sİzin ölkəniz bu söhbət kanalından keçici olaraq susturulub"
 
+msgid "Your device looks weird"
+msgstr ""
+
 msgid "Your mail has to be verified in order to chat"
 msgstr "Doğrulanan bir emailin olmadan söhbət eliyəbilməzsən"
 
@@ -888,6 +888,9 @@ msgid ""
 msgstr ""
 "kiçik pixelplacers icmamıza xoş gəlmisiniz, hesabınızdan istifadə etmək üçün "
 "emailinizi doğrulamalısınız. Bunu burada edə bilərsiniz: "
+
+#~ msgid "Please refresh the website"
+#~ msgstr "Lütfən saytı yeniləyin"
 
 #~ msgid "Incorrect password!"
 #~ msgstr "Səhv Parol!"

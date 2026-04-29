@@ -477,9 +477,6 @@ msgid "Place color pixels on an map styled canvas with other players online"
 msgstr ""
 "Postavite piksele u boji na platno u stilu karte s drugim igračima na mreži"
 
-msgid "Please refresh the website"
-msgstr "Osvježi web stranicu"
-
 msgid "Please try again."
 msgstr "Pokušajte ponovno."
 
@@ -857,6 +854,9 @@ msgstr "Vaš račun mora biti potvrđen da biste pristupili ovoj stranici"
 msgid "Your country is temporary muted from this chat channel"
 msgstr "Vaša je zemlja privremeno isključena iz ovog kanala za chat"
 
+msgid "Your device looks weird"
+msgstr ""
+
 msgid "Your mail has to be verified in order to chat"
 msgstr "Vaša pošta mora biti potvrđena da biste mogli razgovarati"
 
@@ -910,6 +910,9 @@ msgid ""
 msgstr ""
 "dobrodošli u našu malu zajednicu postavljača pixela (pičkovca), da biste "
 "koristili svoj račun, morate potvrditi svoju poštu. To možete učiniti ovdje: "
+
+#~ msgid "Please refresh the website"
+#~ msgstr "Osvježi web stranicu"
 
 #~ msgid "Incorrect password!"
 #~ msgstr "Netočna lozinka!"

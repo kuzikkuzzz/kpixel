@@ -469,9 +469,6 @@ msgid "Place color pixels on an map styled canvas with other players online"
 msgstr ""
 "Pinta amb píxels de colors en un gran llenç amb altres jugadors en línia"
 
-msgid "Please refresh the website"
-msgstr ""
-
 msgid "Please try again."
 msgstr ""
 
@@ -834,6 +831,9 @@ msgstr ""
 #, fuzzy
 msgid "Your country is temporary muted from this chat channel"
 msgstr "El teu país està temporalment silenciat al xat"
+
+msgid "Your device looks weird"
+msgstr ""
 
 msgid "Your mail has to be verified in order to chat"
 msgstr "S'ha de verificar el correu electrònic per poder xatejar"

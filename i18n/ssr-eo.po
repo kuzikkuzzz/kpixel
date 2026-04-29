@@ -472,9 +472,6 @@ msgstr "Metu Vokselojn je 3D canvas kun aliaj fekuloj"
 msgid "Place color pixels on an map styled canvas with other players online"
 msgstr "Metu kolorajn pikselojn en grandan kanvason kun alian ludantojn enrete"
 
-msgid "Please refresh the website"
-msgstr "Bonvolu refreŝigi la retejon"
-
 msgid "Please try again."
 msgstr "Bonvolu provi denove."
 
@@ -853,6 +850,9 @@ msgstr "Via konto devas esti konfirmita por aliri ĉi tiun paĝon"
 msgid "Your country is temporary muted from this chat channel"
 msgstr "Vian tutan landon estas silentata ĉe l' babilej'"
 
+msgid "Your device looks weird"
+msgstr ""
+
 msgid "Your mail has to be verified in order to chat"
 msgstr "Vian retpostadreson devas esti verigita por babili"
 
@@ -907,6 +907,9 @@ msgid ""
 msgstr ""
 "bonvenon al nia comunumeta de pixelmetistoj; por uzi vian konton, vi devus "
 "verigi vian retpostadreson. Povus fari ĝin ĉi tie: "
+
+#~ msgid "Please refresh the website"
+#~ msgstr "Bonvolu refreŝigi la retejon"
 
 #~ msgid "Incorrect password!"
 #~ msgstr "Pasvorto erara!"

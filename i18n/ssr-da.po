@@ -473,9 +473,6 @@ msgid "Place color pixels on an map styled canvas with other players online"
 msgstr ""
 "Placer farvede pixels på et kort-stilet kanvas med andre spillere online"
 
-msgid "Please refresh the website"
-msgstr "Genindlæs hjemmesiden"
-
 msgid "Please try again."
 msgstr "Prøv igen."
 
@@ -847,6 +844,9 @@ msgstr "Din konto skal være bekræftet for at tilgå denne side"
 msgid "Your country is temporary muted from this chat channel"
 msgstr "Dit land er midlertidigt gjort stum i denne chat kanal"
 
+msgid "Your device looks weird"
+msgstr ""
+
 msgid "Your mail has to be verified in order to chat"
 msgstr "Din mail skal være bekræftet for at chatte"
 
@@ -901,6 +901,9 @@ msgid ""
 msgstr ""
 "velkommen til vores lille samfund of pixelplacere, for at bruge din konto, "
 "har du brug for at bekræfte din mail. Du kan gøre det her: "
+
+#~ msgid "Please refresh the website"
+#~ msgstr "Genindlæs hjemmesiden"
 
 #~ msgid "Incorrect password!"
 #~ msgstr "Forkerte adgangskode!"

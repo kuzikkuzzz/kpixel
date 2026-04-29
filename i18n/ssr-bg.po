@@ -463,9 +463,6 @@ msgstr "Слагайте воксели на 3D платно с други."
 msgid "Place color pixels on an map styled canvas with other players online"
 msgstr "Слагайте цветни пиксели на платно в стил карта с други играчи онлайн"
 
-msgid "Please refresh the website"
-msgstr "Моля обновете уебсайта"
-
 msgid "Please try again."
 msgstr ""
 
@@ -821,6 +818,9 @@ msgstr ""
 msgid "Your country is temporary muted from this chat channel"
 msgstr "Държавата Ви е временно заглушена от този текстови канал"
 
+msgid "Your device looks weird"
+msgstr ""
+
 msgid "Your mail has to be verified in order to chat"
 msgstr "Вашият имейл трябва да е потвърден, за да пишете"
 
@@ -875,6 +875,9 @@ msgid ""
 msgstr ""
 "добре дошли в нашето малко общество, за да използвате Вашия профил трябва да "
 "си потвърдите имейла. Може да го направите от тук: "
+
+#~ msgid "Please refresh the website"
+#~ msgstr "Моля обновете уебсайта"
 
 #~ msgid "Incorrect password!"
 #~ msgstr "Грешна парола!"

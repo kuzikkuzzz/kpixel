@@ -459,9 +459,6 @@ msgstr "将体素与其他体素一起放置在 3D 画布上。"
 msgid "Place color pixels on an map styled canvas with other players online"
 msgstr "在地图风格的画布上放置彩色像素，并与其他玩家在线互动"
 
-msgid "Please refresh the website"
-msgstr "请刷新网站"
-
 msgid "Please try again."
 msgstr "请重试。"
 
@@ -820,6 +817,9 @@ msgstr "您的帐户需要验证才能访问此页面"
 msgid "Your country is temporary muted from this chat channel"
 msgstr "您的国家／地区已被暂时从此聊天频道中屏蔽"
 
+msgid "Your device looks weird"
+msgstr ""
+
 msgid "Your mail has to be verified in order to chat"
 msgstr "您需要验证电子邮件地址才能聊天"
 
@@ -872,6 +872,9 @@ msgid ""
 msgstr ""
 "欢迎来到我们的像素画爱好者小社区！要使用您的账号，您需要验证邮箱。您可以在这"
 "里进行验证： "
+
+#~ msgid "Please refresh the website"
+#~ msgstr "请刷新网站"
 
 #~ msgid "Incorrect password!"
 #~ msgstr "密码错误！"

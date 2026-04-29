@@ -1113,10 +1113,6 @@ msgstr ""
 msgid "No Phish!"
 msgstr ""
 
-#, fuzzy
-msgid "No captcha id given"
-msgstr "Niste vnesli gesla"
-
 msgid "No flag selected"
 msgstr ""
 
@@ -2081,6 +2077,9 @@ msgstr ""
 msgid "Your ban expires at "
 msgstr ""
 
+msgid "Your device looks weird"
+msgstr ""
+
 msgid ""
 "Your did not set your username yet. A username is required to login to other "
 "applications. You can set it now:"
@@ -2224,6 +2223,10 @@ msgstr ""
 msgctxt "statistics-table"
 msgid "Public"
 msgstr ""
+
+#, fuzzy
+#~ msgid "No captcha id given"
+#~ msgstr "Niste vnesli gesla"
 
 #~ msgid "Yes, Delete My Account!"
 #~ msgstr "Ja, Izbriši Moj Profil!"

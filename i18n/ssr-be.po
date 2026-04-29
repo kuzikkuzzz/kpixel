@@ -464,9 +464,6 @@ msgstr ""
 "Стаўце рознакаляровыя пікселі на палатне ў выглядзе мапы свету анлайн, разам "
 "з іншымі гульцамі"
 
-msgid "Please refresh the website"
-msgstr ""
-
 msgid "Please try again."
 msgstr ""
 
@@ -826,6 +823,9 @@ msgstr ""
 
 msgid "Your country is temporary muted from this chat channel"
 msgstr "Ваша краіна часова прыглушана ў гэтым канале чата"
+
+msgid "Your device looks weird"
+msgstr ""
 
 msgid "Your mail has to be verified in order to chat"
 msgstr "Ваша пошта павінна быць верыфікаванай, каб вы маглі карыстацца чатам"

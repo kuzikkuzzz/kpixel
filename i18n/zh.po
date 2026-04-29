@@ -1083,9 +1083,6 @@ msgstr "未选择要上传的文件"
 msgid "No Phish!"
 msgstr "没有鱼！"
 
-msgid "No captcha id given"
-msgstr "未提供验证码 ID"
-
 msgid "No flag selected"
 msgstr "未选择旗帜"
 
@@ -1999,6 +1996,9 @@ msgstr ""
 msgid "Your ban expires at "
 msgstr ""
 
+msgid "Your device looks weird"
+msgstr ""
+
 msgid ""
 "Your did not set your username yet. A username is required to login to other "
 "applications. You can set it now:"
@@ -2140,6 +2140,9 @@ msgstr "民众"
 msgctxt "statistics-table"
 msgid "Public"
 msgstr "民众"
+
+#~ msgid "No captcha id given"
+#~ msgstr "未提供验证码 ID"
 
 #~ msgid "Change your Mail Adress here:"
 #~ msgstr "此处更改你的邮箱地址："

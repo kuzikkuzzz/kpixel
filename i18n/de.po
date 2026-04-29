@@ -1134,9 +1134,6 @@ msgstr "Keine Datei zum Hochladen ausgewählt"
 msgid "No Phish!"
 msgstr "Kein Fisch!"
 
-msgid "No captcha id given"
-msgstr "Keine Captcha-ID angegeben"
-
 msgid "No flag selected"
 msgstr "Keine Flagge ausgewählt"
 
@@ -2124,6 +2121,9 @@ msgstr "Deine Rollen"
 msgid "Your ban expires at "
 msgstr "Du bist gesperrt bis "
 
+msgid "Your device looks weird"
+msgstr ""
+
 msgid ""
 "Your did not set your username yet. A username is required to login to other "
 "applications. You can set it now:"
@@ -2269,6 +2269,9 @@ msgstr "Öffentlich"
 msgctxt "statistics-table"
 msgid "Public"
 msgstr "Öffentlich"
+
+#~ msgid "No captcha id given"
+#~ msgstr "Keine Captcha-ID angegeben"
 
 #~ msgid "Add an Mail Adress here:"
 #~ msgstr "Füge hier eine Mail Adresse hinzu:"

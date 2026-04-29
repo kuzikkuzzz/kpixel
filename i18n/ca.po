@@ -1115,9 +1115,6 @@ msgstr ""
 msgid "No Phish!"
 msgstr ""
 
-msgid "No captcha id given"
-msgstr "No s'ha proporcionat cap captcha"
-
 msgid "No flag selected"
 msgstr ""
 
@@ -2102,6 +2099,9 @@ msgstr ""
 msgid "Your ban expires at "
 msgstr "El teu ban caduca a les "
 
+msgid "Your device looks weird"
+msgstr ""
+
 msgid ""
 "Your did not set your username yet. A username is required to login to other "
 "applications. You can set it now:"
@@ -2247,6 +2247,9 @@ msgstr ""
 msgctxt "statistics-table"
 msgid "Public"
 msgstr ""
+
+#~ msgid "No captcha id given"
+#~ msgstr "No s'ha proporcionat cap captcha"
 
 #~ msgid "Player"
 #~ msgstr "Jugador"

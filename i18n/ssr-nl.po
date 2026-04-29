@@ -496,9 +496,6 @@ msgstr ""
 "Plaats kleurpixels op een canvas in kaartstijl samen met andere spelers "
 "online"
 
-msgid "Please refresh the website"
-msgstr "Vernieuw de website"
-
 msgid "Please try again."
 msgstr "Probeer het opnieuw."
 
@@ -886,6 +883,9 @@ msgstr ""
 msgid "Your country is temporary muted from this chat channel"
 msgstr "Je land is tijdelijk gedempt op dit chatkanaal"
 
+msgid "Your device looks weird"
+msgstr ""
+
 msgid "Your mail has to be verified in order to chat"
 msgstr "Je e-mail moet worden geverifieerd om te kunnen chatten"
 
@@ -939,6 +939,9 @@ msgid ""
 msgstr ""
 "welkom bij onze kleine gemeenschap van pixelplacers, om je account te "
 "gebruiken, moet je je e-mail verifiëren. Dat kan hier: "
+
+#~ msgid "Please refresh the website"
+#~ msgstr "Vernieuw de website"
 
 #~ msgid "Incorrect password!"
 #~ msgstr "Onjuist wachtwoord!"

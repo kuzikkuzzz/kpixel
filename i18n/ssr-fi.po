@@ -456,9 +456,6 @@ msgstr ""
 "Sijoita väripikseleitä karttatyyliselle kankaalle muiden pelaajien kanssa "
 "verkossa"
 
-msgid "Please refresh the website"
-msgstr "Päivitä sivusto"
-
 msgid "Please try again."
 msgstr ""
 
@@ -809,6 +806,9 @@ msgstr ""
 msgid "Your country is temporary muted from this chat channel"
 msgstr "Maasi on väliaikaisesti mykistetty tältä chat-kanavalta"
 
+msgid "Your device looks weird"
+msgstr ""
+
 msgid "Your mail has to be verified in order to chat"
 msgstr "Sähköpostisi on vahvistettava, jotta voit keskustella"
 
@@ -861,6 +861,9 @@ msgid ""
 "welcome to our little community of pixelplacers, to use your account, you "
 "have to verify your mail. You can do that here: "
 msgstr ""
+
+#~ msgid "Please refresh the website"
+#~ msgstr "Päivitä sivusto"
 
 #~ msgid "You are banned"
 #~ msgstr "Sinulle on annettu porttikielto"

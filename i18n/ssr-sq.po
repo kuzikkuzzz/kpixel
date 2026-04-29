@@ -486,9 +486,6 @@ msgstr ""
 "Vendosni piksele me ngjyra në një kanavacë të stiluar me hartë me lojtarë të "
 "tjerë në internet"
 
-msgid "Please refresh the website"
-msgstr "Ju lutemi rifreskoni webfaqen"
-
 msgid "Please try again."
 msgstr "Ju lutemi provoni përsëri."
 
@@ -877,6 +874,9 @@ msgstr "Llogaria juaj duhet të jetë e verifikuar për të aksesuar këtë faqe
 msgid "Your country is temporary muted from this chat channel"
 msgstr "Shteti juaj është i heshtur përkohësisht nga ky kanal bisede"
 
+msgid "Your device looks weird"
+msgstr ""
+
 msgid "Your mail has to be verified in order to chat"
 msgstr "Emaili juaj duhet të jetë i verifikuar në mënyrë që të bisedoni"
 
@@ -931,6 +931,9 @@ msgid ""
 msgstr ""
 "mirësevini në komunitetin tonë të vogël të pixelplacers, për të përdorur "
 "llogarinë tuaj, duhet të verifikoni emailin tuaj. Këtë mund ta bëni këtu: "
+
+#~ msgid "Please refresh the website"
+#~ msgstr "Ju lutemi rifreskoni webfaqen"
 
 #~ msgid "Incorrect password!"
 #~ msgstr "Fjalëkalim i gabuar!"

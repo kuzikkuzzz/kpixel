@@ -1129,9 +1129,6 @@ msgstr "Yükleme için herhangi bir dosya seçilmedi"
 msgid "No Phish!"
 msgstr "Balık yok!"
 
-msgid "No captcha id given"
-msgstr "Captcha kimliği verilmedi"
-
 msgid "No flag selected"
 msgstr "Bayrak seçilmedi"
 
@@ -2125,6 +2122,9 @@ msgstr "Rolleriniz"
 msgid "Your ban expires at "
 msgstr "Yasağınızın kalkacağı zaman "
 
+msgid "Your device looks weird"
+msgstr ""
+
 msgid ""
 "Your did not set your username yet. A username is required to login to other "
 "applications. You can set it now:"
@@ -2270,6 +2270,9 @@ msgstr ""
 msgctxt "statistics-table"
 msgid "Public"
 msgstr ""
+
+#~ msgid "No captcha id given"
+#~ msgstr "Captcha kimliği verilmedi"
 
 #~ msgid "Player"
 #~ msgstr "Oyuncu"

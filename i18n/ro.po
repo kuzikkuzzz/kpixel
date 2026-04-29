@@ -1112,9 +1112,6 @@ msgstr "Niciun fișier selectat pentru încărcare"
 msgid "No Phish!"
 msgstr "Niciun pește!"
 
-msgid "No captcha id given"
-msgstr "Niciun id captcha primit"
-
 msgid "No flag selected"
 msgstr "Niciun steag selectat"
 
@@ -2086,6 +2083,9 @@ msgstr ""
 msgid "Your ban expires at "
 msgstr "Banul tău expiră la• "
 
+msgid "Your device looks weird"
+msgstr ""
+
 msgid ""
 "Your did not set your username yet. A username is required to login to other "
 "applications. You can set it now:"
@@ -2231,6 +2231,9 @@ msgstr ""
 msgctxt "statistics-table"
 msgid "Public"
 msgstr ""
+
+#~ msgid "No captcha id given"
+#~ msgstr "Niciun id captcha primit"
 
 #~ msgid "Player"
 #~ msgstr "Jucător"

@@ -1085,9 +1085,6 @@ msgstr ""
 msgid "No Phish!"
 msgstr ""
 
-msgid "No captcha id given"
-msgstr "لم يتم تقديم معرف الكابتشا"
-
 msgid "No flag selected"
 msgstr ""
 
@@ -2036,6 +2033,9 @@ msgstr ""
 msgid "Your ban expires at "
 msgstr "ينتهي حظرك في "
 
+msgid "Your device looks weird"
+msgstr ""
+
 msgid ""
 "Your did not set your username yet. A username is required to login to other "
 "applications. You can set it now:"
@@ -2177,6 +2177,9 @@ msgstr ""
 msgctxt "statistics-table"
 msgid "Public"
 msgstr ""
+
+#~ msgid "No captcha id given"
+#~ msgstr "لم يتم تقديم معرف الكابتشا"
 
 #~ msgid "Yes, Delete My Account!"
 #~ msgstr "نعم، قم بحذف حسابي!"

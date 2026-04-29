@@ -480,9 +480,6 @@ msgstr ""
 "Đặt các pixel đầy màu sắc trên một khung vẽ dạng bản đồ với các người chơi "
 "trực tuyến khác"
 
-msgid "Please refresh the website"
-msgstr "Vui lòng tải lại trang"
-
 msgid "Please try again."
 msgstr "Vui lòng thử lại."
 
@@ -866,6 +863,9 @@ msgstr "Tài khoản của bạn phải được xác thực để truy cập tr
 msgid "Your country is temporary muted from this chat channel"
 msgstr "Quốc gia của bạn hiện đang tạm thời bị tắt tiếng trong kênh chat này"
 
+msgid "Your device looks weird"
+msgstr ""
+
 msgid "Your mail has to be verified in order to chat"
 msgstr "Email của bạn phải được xác thực để có thể trò chuyện"
 
@@ -920,6 +920,9 @@ msgstr ""
 "chào mừng đã đến với cộng đồng nhỏ của chúng tôi cho những người hay đặt "
 "pixel ở đây, để sử dụng tài khoản của bạn, bạn cần phải xác thực email của "
 "bạn. Bạn có thể làm thế ở đây: "
+
+#~ msgid "Please refresh the website"
+#~ msgstr "Vui lòng tải lại trang"
 
 #~ msgid "Incorrect password!"
 #~ msgstr "Mật khẩu sai!"

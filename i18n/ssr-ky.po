@@ -471,9 +471,6 @@ msgstr ""
 "Башка онлайн оюнчулар менен карта стилиндеги холстка түстүү пикселдерди "
 "жайгаштырыңыз"
 
-msgid "Please refresh the website"
-msgstr "Сураныч, веб-сайтты жаңыртыңыз"
-
 msgid "Please try again."
 msgstr "Кайра аракет кылып көрүңүз."
 
@@ -846,6 +843,9 @@ msgstr ""
 msgid "Your country is temporary muted from this chat channel"
 msgstr "Сиздин өлкө бул чат каналынан убактылуу өчүрүлгөн"
 
+msgid "Your device looks weird"
+msgstr ""
+
 msgid "Your mail has to be verified in order to chat"
 msgstr "Маектешүү үчүн почтаңыз текшерилиши керек"
 
@@ -900,6 +900,9 @@ msgstr ""
 "‐биздин кичинекей пикселди жайгаштыргыч коомчулугубузга кош келиңиз, "
 "аккаунтуңузду колдонуу үчүн почтаңызды ырасташыңыз керек. Сен бул жерде эмне "
 "кыла алышат: "
+
+#~ msgid "Please refresh the website"
+#~ msgstr "Сураныч, веб-сайтты жаңыртыңыз"
 
 #~ msgid "Incorrect password!"
 #~ msgstr "Туура эмес сырсөз!"

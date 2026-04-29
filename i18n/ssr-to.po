@@ -468,9 +468,6 @@ msgstr ""
 "Fokotuʻu ʻa e lanu ʻo e lanu ʻi ha mape styled fakatataa mo e kau vaʻinga "
 "kehe ʻi he ʻInitaneti"
 
-msgid "Please refresh the website"
-msgstr ""
-
 msgid "Please try again."
 msgstr ""
 
@@ -835,6 +832,9 @@ msgstr ""
 msgid "Your country is temporary muted from this chat channel"
 msgstr ""
 "ʻOku ʻikai ke ʻi ai ha meʻa fakataimi ʻi ho fonua mei he senolo ko ʻeni"
+
+msgid "Your device looks weird"
+msgstr ""
 
 msgid "Your mail has to be verified in order to chat"
 msgstr "Kuo pau ke fakapapauʻi hoʻo meili kae lava ke talanoa"

@@ -477,9 +477,6 @@ msgid "Place color pixels on an map styled canvas with other players online"
 msgstr ""
 "Diğer oyuncularla beraber harita tarzı tuvallerde renkli pikseller atın"
 
-msgid "Please refresh the website"
-msgstr "Lütfen sayfayı yenileyin"
-
 msgid "Please try again."
 msgstr "Lütfen tekrar deneyin."
 
@@ -854,6 +851,9 @@ msgstr ""
 msgid "Your country is temporary muted from this chat channel"
 msgstr "Ülkeniz geçici olarak susturuldu"
 
+msgid "Your device looks weird"
+msgstr ""
+
 msgid "Your mail has to be verified in order to chat"
 msgstr "Sohbet edebilmek için e-posta adresinizi onaylamanız gerekiyor"
 
@@ -908,6 +908,9 @@ msgid ""
 msgstr ""
 "piksel atanlardan oluşan bu küçük topluluğumuza hoş geldiniz, hesabınızı "
 "kullanabilmek için e-posta adresini doğrulayın. Bunu buradan yapabilirsiniz: "
+
+#~ msgid "Please refresh the website"
+#~ msgstr "Lütfen sayfayı yenileyin"
 
 #~ msgid "Incorrect password!"
 #~ msgstr "Yanlış parola!"

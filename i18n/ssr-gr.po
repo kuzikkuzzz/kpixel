@@ -468,9 +468,6 @@ msgstr ""
 "Τοποθετήστε έγχρωμα pixel σε έναν μεγάλο καμβά με άλλους παίκτες στο "
 "διαδίκτυο"
 
-msgid "Please refresh the website"
-msgstr ""
-
 msgid "Please try again."
 msgstr ""
 
@@ -832,6 +829,9 @@ msgstr ""
 msgid "Your country is temporary muted from this chat channel"
 msgstr ""
 "Η χώρα σας έχει τεθεί προσωρινά σε σίγαση από αυτό το κανάλι συνομιλίας"
+
+msgid "Your device looks weird"
+msgstr ""
 
 msgid "Your mail has to be verified in order to chat"
 msgstr "Το mail σας πρέπει να επαληθευτεί για να συνομιλήσετε"

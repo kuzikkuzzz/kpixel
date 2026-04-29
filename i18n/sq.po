@@ -1128,9 +1128,6 @@ msgstr "Nuk është përzgjedhur asnjë skedar për t'u ngarkuar"
 msgid "No Phish!"
 msgstr "Nuk ka Peshk!"
 
-msgid "No captcha id given"
-msgstr "Asnjë id captcha nuk është dhënë"
-
 msgid "No flag selected"
 msgstr "Nuk është përzgjedhur flamur"
 
@@ -2127,6 +2124,9 @@ msgstr "Rolet e Tua"
 msgid "Your ban expires at "
 msgstr "Dëbimi juaj skadon në "
 
+msgid "Your device looks weird"
+msgstr ""
+
 msgid ""
 "Your did not set your username yet. A username is required to login to other "
 "applications. You can set it now:"
@@ -2273,6 +2273,9 @@ msgstr "Publik"
 msgctxt "statistics-table"
 msgid "Public"
 msgstr "Publik"
+
+#~ msgid "No captcha id given"
+#~ msgstr "Asnjë id captcha nuk është dhënë"
 
 #~ msgid "Add an Mail Adress here:"
 #~ msgstr "Fusni një email ktu:"

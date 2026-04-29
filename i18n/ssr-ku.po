@@ -462,9 +462,6 @@ msgstr ""
 "Pîkselên rengîn bi lîstikvanên din ên serhêl re li ser nexşeyek şêwazê "
 "nexşeyê bi cîh bikin"
 
-msgid "Please refresh the website"
-msgstr ""
-
 msgid "Please try again."
 msgstr ""
 
@@ -820,6 +817,9 @@ msgstr ""
 
 msgid "Your country is temporary muted from this chat channel"
 msgstr "Welatê we ji vê kanala sohbetê re demkî ye"
+
+msgid "Your device looks weird"
+msgstr ""
 
 msgid "Your mail has to be verified in order to chat"
 msgstr "Ji bo sohbetê divê nameya we were verast kirin"

@@ -473,9 +473,6 @@ msgstr ""
 "Cuir picteilíní dathuil ar canbháis cosúil le léarscáil le daoine eile ar "
 "líne"
 
-msgid "Please refresh the website"
-msgstr "Athnuaigh an suíomh gréasáin le do thoil"
-
 msgid "Please try again."
 msgstr "Déan iarracht arís."
 
@@ -860,6 +857,9 @@ msgstr ""
 msgid "Your country is temporary muted from this chat channel"
 msgstr "Cuirtear balbh sealadach ar do Tír Ón comhrá seo"
 
+msgid "Your device looks weird"
+msgstr ""
+
 msgid "Your mail has to be verified in order to chat"
 msgstr "Caithfidh tú do phost a shocraigh le caint"
 
@@ -914,6 +914,9 @@ msgid ""
 msgstr ""
 "Fáilte go dtí Ár Pobal de daoine picteilíní, the baint úsáid as do cuntas, "
 "caithfidh tú do phost a cinntigh, is féidir leat sin a dhéanamh anseo: "
+
+#~ msgid "Please refresh the website"
+#~ msgstr "Athnuaigh an suíomh gréasáin le do thoil"
 
 #~ msgid "Incorrect password!"
 #~ msgstr "Phasfhocal mícheart!"

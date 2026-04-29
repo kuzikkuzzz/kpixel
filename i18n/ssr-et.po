@@ -459,9 +459,6 @@ msgstr "Joonista Voksleid 3D lõuendile koos teistega."
 msgid "Place color pixels on an map styled canvas with other players online"
 msgstr "Joonista piksleid maailmakaardile koos teiste inimestega"
 
-msgid "Please refresh the website"
-msgstr ""
-
 msgid "Please try again."
 msgstr "Palun proovi uuesti."
 
@@ -816,6 +813,9 @@ msgstr ""
 
 msgid "Your country is temporary muted from this chat channel"
 msgstr "Su riik ei ole hetkel siia jututuppa lubatud"
+
+msgid "Your device looks weird"
+msgstr ""
 
 msgid "Your mail has to be verified in order to chat"
 msgstr "Su meil peab olema verifitseeritud selleks, et vestelda"

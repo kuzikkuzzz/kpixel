@@ -464,9 +464,6 @@ msgid "Place color pixels on an map styled canvas with other players online"
 msgstr ""
 "Stawiôj farwné piksele na kôrtowatëch płótnach z jinszima graczama online"
 
-msgid "Please refresh the website"
-msgstr ""
-
 msgid "Please try again."
 msgstr ""
 
@@ -824,6 +821,9 @@ msgstr ""
 
 msgid "Your country is temporary muted from this chat channel"
 msgstr "Twòje państwò je na sztót wëcëszoné na tim karnôlu czatu"
+
+msgid "Your device looks weird"
+msgstr ""
 
 msgid "Your mail has to be verified in order to chat"
 msgstr "Twòja adrésa e-mail mùszi òstac sprôwdzonô żebë jes mógł czatowac"

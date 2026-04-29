@@ -478,9 +478,6 @@ msgid "Place color pixels on an map styled canvas with other players online"
 msgstr ""
 "Pune pixeli de culoare pe un Convas în stil hartă cu alți jucători online"
 
-msgid "Please refresh the website"
-msgstr "Te rugăm să dai refresh la site"
-
 msgid "Please try again."
 msgstr "Te rugăm sa încerci din nou."
 
@@ -855,6 +852,9 @@ msgstr "Contul tău trebuie să fie verificat pentru a accesa această pagină"
 msgid "Your country is temporary muted from this chat channel"
 msgstr "Țara ta este temporar dezactivată de pe acest canal de chat"
 
+msgid "Your device looks weird"
+msgstr ""
+
 msgid "Your mail has to be verified in order to chat"
 msgstr "Mailul tău trebuie să fie verificat pentru a vorbi în chat"
 
@@ -909,6 +909,9 @@ msgid ""
 msgstr ""
 "Bine ai venit în mica noastră comunitate de pixelplacers, pentru a-ți folosi "
 "contul, trebuie să-ți verifici e-mailul. Poți face asta aici: "
+
+#~ msgid "Please refresh the website"
+#~ msgstr "Te rugăm să dai refresh la site"
 
 #~ msgid "Incorrect password!"
 #~ msgstr "Parolă incorrectă!"

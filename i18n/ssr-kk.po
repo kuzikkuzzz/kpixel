@@ -464,9 +464,6 @@ msgstr ""
 "Басқа желідегі ойыншылармен бірге түрлі-түсті пикселдерді карта стиліндегі "
 "кенепке салыңыз"
 
-msgid "Please refresh the website"
-msgstr ""
-
 msgid "Please try again."
 msgstr ""
 
@@ -825,6 +822,9 @@ msgstr ""
 
 msgid "Your country is temporary muted from this chat channel"
 msgstr "Осы арнада бүкіл еліңіздің жазу рұқсаты уақытша шектелген"
+
+msgid "Your device looks weird"
+msgstr ""
 
 msgid "Your mail has to be verified in order to chat"
 msgstr "Чатта жазу үшін эл. поштаңызды растау қажет"

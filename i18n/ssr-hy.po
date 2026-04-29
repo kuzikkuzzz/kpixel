@@ -462,9 +462,6 @@ msgstr "Տեղադրեք ոքսելներ 3D կտավի վրա ուրիշներ�
 msgid "Place color pixels on an map styled canvas with other players online"
 msgstr "Տեղադրեք գունավոր պիքսելներ քարտեզանման կտավի վրա այլ խաղացողների հետ"
 
-msgid "Please refresh the website"
-msgstr ""
-
 msgid "Please try again."
 msgstr ""
 
@@ -820,6 +817,9 @@ msgstr ""
 
 msgid "Your country is temporary muted from this chat channel"
 msgstr "Ձեր երկիրը ժամանակավորապես անջատված է այս զրույցի ալիքից"
+
+msgid "Your device looks weird"
+msgstr ""
 
 msgid "Your mail has to be verified in order to chat"
 msgstr "Ձեր փոստը հաստատված պետք է լինի հաղորդագրություն ուղարկելու համար"

@@ -462,9 +462,6 @@ msgid "Place color pixels on an map styled canvas with other players online"
 msgstr ""
 "Ставете пиксели во боја на платно со стил на мапа со други играчи на интернет"
 
-msgid "Please refresh the website"
-msgstr "ве молиме освежете ја страницата"
-
 msgid "Please try again."
 msgstr ""
 
@@ -822,6 +819,9 @@ msgstr ""
 msgid "Your country is temporary muted from this chat channel"
 msgstr "Твојата држава е мутирана од овој канал"
 
+msgid "Your device looks weird"
+msgstr ""
+
 msgid "Your mail has to be verified in order to chat"
 msgstr "Вашата пошта треба да биде потврдена за да разговарате"
 
@@ -875,6 +875,9 @@ msgid ""
 msgstr ""
 "добре дојдовте во нашата мала заедница на пиксели, за да ја користите вашата "
 "сметка, треба да ја потврдите вашата пошта. Можете да го направите тоа овде: "
+
+#~ msgid "Please refresh the website"
+#~ msgstr "ве молиме освежете ја страницата"
 
 #~ msgid "Incorrect password!"
 #~ msgstr "Погрешна лозинка!"

@@ -462,9 +462,6 @@ msgstr ""
 "Pokladaj farebné pixely na mapovo orientovanom plátne s ostatnými hráčmi "
 "online"
 
-msgid "Please refresh the website"
-msgstr "Prosím refreshni si stránku"
-
 msgid "Please try again."
 msgstr ""
 
@@ -820,6 +817,9 @@ msgstr ""
 msgid "Your country is temporary muted from this chat channel"
 msgstr "Tvoja krajina je dočasne mutnutá z tohoto chatového kanála"
 
+msgid "Your device looks weird"
+msgstr ""
+
 msgid "Your mail has to be verified in order to chat"
 msgstr "Tvoj mail musí byť overený pokiaľ chceš písať v chate"
 
@@ -874,6 +874,9 @@ msgid ""
 msgstr ""
 "vitaj na našej malej komunite pre pokladatelov pixelov, nato aby si mohol "
 "použiť svoj účet, musíš si overiť svoj mail. To môžeš urobiť tu: "
+
+#~ msgid "Please refresh the website"
+#~ msgstr "Prosím refreshni si stránku"
 
 #~ msgid "Incorrect password!"
 #~ msgstr "Nesprávne heslo!"

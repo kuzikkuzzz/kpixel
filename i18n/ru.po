@@ -1137,9 +1137,6 @@ msgstr "Не выбран файл для загрузки"
 msgid "No Phish!"
 msgstr "Рыба сорвалась!"
 
-msgid "No captcha id given"
-msgstr "Не указан идентификатор капчи"
-
 msgid "No flag selected"
 msgstr "Не выбран флаг"
 
@@ -2126,6 +2123,9 @@ msgstr "Ваши роли"
 msgid "Your ban expires at "
 msgstr "Ваш бан истечет "
 
+msgid "Your device looks weird"
+msgstr ""
+
 msgid ""
 "Your did not set your username yet. A username is required to login to other "
 "applications. You can set it now:"
@@ -2271,6 +2271,9 @@ msgstr "Публичные"
 msgctxt "statistics-table"
 msgid "Public"
 msgstr "Публичная"
+
+#~ msgid "No captcha id given"
+#~ msgstr "Не указан идентификатор капчи"
 
 #~ msgid "Add an Mail Adress here:"
 #~ msgstr "Добавлять почту здесь:"

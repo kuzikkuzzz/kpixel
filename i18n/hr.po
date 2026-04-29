@@ -1117,9 +1117,6 @@ msgstr "Nije izabrana datoteka za prijenos"
 msgid "No Phish!"
 msgstr "Riba je pobjegla!"
 
-msgid "No captcha id given"
-msgstr "Nije naveden captcha ID"
-
 msgid "No flag selected"
 msgstr "Nije izabrana zastava"
 
@@ -2093,6 +2090,9 @@ msgstr "Vaše uloge"
 msgid "Your ban expires at "
 msgstr "Vaš ban ističe "
 
+msgid "Your device looks weird"
+msgstr ""
+
 msgid ""
 "Your did not set your username yet. A username is required to login to other "
 "applications. You can set it now:"
@@ -2238,6 +2238,9 @@ msgstr ""
 msgctxt "statistics-table"
 msgid "Public"
 msgstr ""
+
+#~ msgid "No captcha id given"
+#~ msgstr "Nije naveden captcha ID"
 
 #~ msgid "Player"
 #~ msgstr "Igrač"

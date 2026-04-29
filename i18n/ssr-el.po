@@ -462,9 +462,6 @@ msgid "Place color pixels on an map styled canvas with other players online"
 msgstr ""
 "Bάλε χρωματιστα πίξελς πάς σε έναν χάρτη για να παίξεις με άλλους παίκτες"
 
-msgid "Please refresh the website"
-msgstr ""
-
 msgid "Please try again."
 msgstr ""
 
@@ -818,6 +815,9 @@ msgstr ""
 msgid "Your country is temporary muted from this chat channel"
 msgstr ""
 "Η χώρα σου εν προσωρινά μουτταρισμένη που τούτο το τσιάτ κανάλι, ρε φίλε!"
+
+msgid "Your device looks weird"
+msgstr ""
 
 msgid "Your mail has to be verified in order to chat"
 msgstr "Το μέιλ σου πρέπει να επαληθευτεί για να μπορείς να τσιάτας."

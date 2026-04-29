@@ -466,9 +466,6 @@ msgstr ""
 "Dētwei stainan gleitin piksātan na mapais stīliskai dātikan kanwan su "
 "antraiis online"
 
-msgid "Please refresh the website"
-msgstr "Apgreidatwei sito palāikinan"
-
 msgid "Please try again."
 msgstr "Stātēntwei."
 
@@ -841,6 +838,9 @@ msgstr ""
 msgid "Your country is temporary muted from this chat channel"
 msgstr "twajs tāutā ast kēsmingisks dussaws iz čats"
 
+msgid "Your device looks weird"
+msgstr ""
+
 msgid "Your mail has to be verified in order to chat"
 msgstr "twajs pōstikastens turri būtwei izbandāi pluškītwei"
 
@@ -894,6 +894,9 @@ msgid ""
 msgstr ""
 "Kaīls prēi nūss pērā pēr pikselan deiktammans, tērpautun twajs kōnts, jūs "
 "papalla izbāndātun twajs pōstikastens. jūs mazzi segēi stas šāi: "
+
+#~ msgid "Please refresh the website"
+#~ msgstr "Apgreidatwei sito palāikinan"
 
 #~ msgid "Incorrect password!"
 #~ msgstr "Neteisinga slaptāžodis!"

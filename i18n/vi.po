@@ -1107,9 +1107,6 @@ msgstr "Không có tệp nào được chọn để đăng tải"
 msgid "No Phish!"
 msgstr "Không có Ká!"
 
-msgid "No captcha id given"
-msgstr ""
-
 msgid "No flag selected"
 msgstr "Không cờ nào được chọn"
 
@@ -1306,7 +1303,8 @@ msgid "Powerlevel"
 msgstr "Mức quyền hạn"
 
 msgid "Powerlevel of this role. See table below for an explanation."
-msgstr "Mức quyền hạn của vai trò này. Xem bảng bên dưới để biết thêm chi tiết."
+msgstr ""
+"Mức quyền hạn của vai trò này. Xem bảng bên dưới để biết thêm chi tiết."
 
 #, javascript-format
 msgid ""
@@ -2072,6 +2070,9 @@ msgstr "(Những) vai trò của bạn"
 
 msgid "Your ban expires at "
 msgstr "Lệnh cấm của bạn sẽ hết hiệu lực vào "
+
+msgid "Your device looks weird"
+msgstr ""
 
 msgid ""
 "Your did not set your username yet. A username is required to login to other "

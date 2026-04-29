@@ -1127,9 +1127,6 @@ msgstr "Geen bestand geselecteerd om te uploaden"
 msgid "No Phish!"
 msgstr "Geen Phish!"
 
-msgid "No captcha id given"
-msgstr "Geen captcha-ID opgegeven"
-
 msgid "No flag selected"
 msgstr "Geen vlag geselecteerd"
 
@@ -2125,6 +2122,9 @@ msgstr "Je rollen"
 msgid "Your ban expires at "
 msgstr "Je ban loopt af om "
 
+msgid "Your device looks weird"
+msgstr ""
+
 msgid ""
 "Your did not set your username yet. A username is required to login to other "
 "applications. You can set it now:"
@@ -2270,6 +2270,9 @@ msgstr ""
 msgctxt "statistics-table"
 msgid "Public"
 msgstr ""
+
+#~ msgid "No captcha id given"
+#~ msgstr "Geen captcha-ID opgegeven"
 
 #~ msgid "Player"
 #~ msgstr "Speler"

@@ -466,9 +466,6 @@ msgstr "Coloca vóxeles en un lienzo 3D junto a otros usuarios."
 msgid "Place color pixels on an map styled canvas with other players online"
 msgstr "Coloca píxeles de colores en un lienzo con otros jugadores en línea"
 
-msgid "Please refresh the website"
-msgstr "Por favor, actualiza la página web"
-
 msgid "Please try again."
 msgstr "Por favor intenta de nuevo."
 
@@ -836,6 +833,9 @@ msgstr "Tu cuenta necesita ser verificada para acceder esta pagina"
 msgid "Your country is temporary muted from this chat channel"
 msgstr "Tu país está temporalmente silenciado de este chat"
 
+msgid "Your device looks weird"
+msgstr ""
+
 msgid "Your mail has to be verified in order to chat"
 msgstr "Tu correo tiene que ser verificado para poder chatear"
 
@@ -890,6 +890,9 @@ msgid ""
 msgstr ""
 "bienvenido a nuestra pequeña comunidad de colocadores de píxeles, para "
 "utilizar tu cuenta necesitas verificar tu correo. Puedes hacerlo acá: "
+
+#~ msgid "Please refresh the website"
+#~ msgstr "Por favor, actualiza la página web"
 
 #~ msgid "Incorrect password!"
 #~ msgstr "¡Contraseña incorrecta!"

@@ -1089,9 +1089,6 @@ msgstr ""
 msgid "No Phish!"
 msgstr ""
 
-msgid "No captcha id given"
-msgstr ""
-
 msgid "No flag selected"
 msgstr ""
 
@@ -2007,6 +2004,9 @@ msgid "Your Roles"
 msgstr ""
 
 msgid "Your ban expires at "
+msgstr ""
+
+msgid "Your device looks weird"
 msgstr ""
 
 msgid ""

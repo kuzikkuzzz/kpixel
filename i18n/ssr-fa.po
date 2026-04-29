@@ -469,9 +469,6 @@ msgstr "Voxels را روی بوم سه بعدی با دیگران قرار ده�
 msgid "Place color pixels on an map styled canvas with other players online"
 msgstr "پیکسل‌های رنگی را روی بوم طرح‌دار نقشه با دیگر بازیکنان آنلاین قرار دهید"
 
-msgid "Please refresh the website"
-msgstr "لطفا سایت رو رفرش کنید"
-
 msgid "Please try again."
 msgstr "لطفا دوباره تلاش کنید."
 
@@ -841,6 +838,9 @@ msgstr ""
 msgid "Your country is temporary muted from this chat channel"
 msgstr "کشور شما موقتاً از این کانال چت بی‌صدا شده است"
 
+msgid "Your device looks weird"
+msgstr ""
+
 msgid "Your mail has to be verified in order to chat"
 msgstr "برای چت کردن، ایمیل شما باید تأیید شود"
 
@@ -895,6 +895,9 @@ msgid ""
 msgstr ""
 "به pixelplacers خوش آمدید، برای استفاده از حساب خود، باید ایمیل خود را تأیید "
 "کنید. تو میتوانی آن کار را اینجا انجام بدی: "
+
+#~ msgid "Please refresh the website"
+#~ msgstr "لطفا سایت رو رفرش کنید"
 
 #~ msgid "Incorrect password!"
 #~ msgstr "رمزت رو غلط وارد کردی!"

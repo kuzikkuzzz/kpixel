@@ -480,9 +480,6 @@ msgstr "Zeichne mit Voxel in einer 3D Umgebung."
 msgid "Place color pixels on an map styled canvas with other players online"
 msgstr "Zeichne mit farbigen Pixel auf einer Weltkarte mit anderen Spielern"
 
-msgid "Please refresh the website"
-msgstr "Bitte lade die Seite neu"
-
 msgid "Please try again."
 msgstr "Bitte noch einmal versuchen."
 
@@ -873,6 +870,9 @@ msgstr "Dein Konto muss verifiziert sein, um auf diese Seite zuzugreifen"
 msgid "Your country is temporary muted from this chat channel"
 msgstr "Dein Land ist temporär in diesem Kanal stummgeschaltet"
 
+msgid "Your device looks weird"
+msgstr ""
+
 msgid "Your mail has to be verified in order to chat"
 msgstr "E-Mail muss verifiziert sein um Nachrichten zu senden"
 
@@ -928,6 +928,9 @@ msgstr ""
 "wilkommen in unserer kleinen Gemeinschaft aus Pixel schubser, um dein Konto "
 "zu verwenden musst du deine E-Mail Adresse verifizieren. Du kannst das hier "
 "erledigen: "
+
+#~ msgid "Please refresh the website"
+#~ msgstr "Bitte lade die Seite neu"
 
 #~ msgid "Incorrect password!"
 #~ msgstr "Falsches Passwort!"
