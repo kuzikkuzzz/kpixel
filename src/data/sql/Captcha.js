@@ -131,8 +131,15 @@ export async function checkVerificationSolutions(
     if (captchaSolution?.length !== 4 || !captchaId) {
       return 3;
     }
-    /* converts funny cyrillic characters and converts them to ascii */
+    /*
+     * converts funny cyrillic characters to similar ascii, may add letters
+     */
     captchaSolution = anyAscii(captchaSolution);
+    if (captchaSolution.length > 4) {
+      captchaSolution = captchaSolution.substring(0, 4);
+    } else if (captchaSolution.length < 4) {
+      return 3;
+    }
   }
   if (typeof challengeSolution === 'undefined') {
     challengeSolution = null;
