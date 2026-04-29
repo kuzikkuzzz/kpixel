@@ -33,9 +33,7 @@ const initialState = {
    */
   avatarId: null,
   /*
-   * 0: not fetched
-   * 1: requested
-   * 2: fetched
+   * whether or not profile is fetched
    */
   fetched: false,
 };
@@ -56,6 +54,7 @@ export default function profile(state = initialState, action) {
       return state;
     }
 
+    case 's/REC_ME':
     case 's/LOGIN':
     case 's/LOGOUT':
       // reset profile if user changes

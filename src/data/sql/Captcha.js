@@ -20,17 +20,12 @@ import {
 export async function registerCaptcha(
   captchaId, captchSolution, browserHash, ipString,
 ) {
-  try {
-    const [[{ needChallenge }]] = await pool.query(
-      'CALL REGISTER_CAPTCHA(?, ?, ?, ?)', [
-        captchaId, captchSolution, browserHash, ipString,
-      ],
-    );
-    return needChallenge !== 0;
-  } catch (error) {
-    console.error(`SQL Error on registerCaptcha: ${error.message}`);
-    throw error;
-  }
+  const [[{ needChallenge }]] = await pool.query(
+    'CALL REGISTER_CAPTCHA(?, ?, ?, ?)', [
+      captchaId, captchSolution, browserHash, ipString,
+    ],
+  );
+  return needChallenge !== 0;
 }
 
 /**
@@ -43,17 +38,12 @@ export async function registerCaptcha(
 export async function registerChallenge(
   challengeSolution, browserHash, ipString,
 ) {
-  try {
-    const [[{ needCaptcha }]] = await pool.query(
-      'CALL REGISTER_CHALLENGE(?, ?, ?)', [
-        challengeSolution, browserHash, ipString,
-      ],
-    );
-    return needCaptcha !== 0;
-  } catch (error) {
-    console.error(`SQL Error on registerChallenge: ${error.message}`);
-    throw error;
-  }
+  const [[{ needCaptcha }]] = await pool.query(
+    'CALL REGISTER_CHALLENGE(?, ?, ?)', [
+      challengeSolution, browserHash, ipString,
+    ],
+  );
+  return needCaptcha !== 0;
 }
 
 /**
@@ -179,7 +169,7 @@ export async function checkVerificationSolutions(
     if (captchaReturn === 4) {
       console.log(
         // eslint-disable-next-line max-len
-        `CAPTCHAS: hash mismatch ${browserHash} ${captchaBrowserHash} ${challengeBrowserHash}`,
+        `CAPTCHAS: hash mismatch ${browserHash} ${captchaBrowserHash} ${challengeBrowserHash} ${isOneTime}`,
       );
     }
 

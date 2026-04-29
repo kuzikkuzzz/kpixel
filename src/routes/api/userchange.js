@@ -39,7 +39,7 @@ export default async function userchange(req, res) {
 
   if (typeof priv === 'boolean') {
     changed = true;
-    userChanges.prv = priv;
+    userChanges.priv = priv;
     const success = await setFlagOfUser(user.id, USER_FLAGS.PRIV, priv);
     if (!success) {
       throw new Error(t`Could not change this setting. Maybe try again later.`);

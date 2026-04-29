@@ -55,6 +55,7 @@ async function captcha(req, res) {
         needChallenge = await registerCaptcha(id, text, browserHash, ipString);
       } catch (error) {
         if (error.code !== 'ER_DUP_ENTRY') {
+          console.error(`SQL Error on registerCaptcha: ${error.message}`);
           throw new Error('SQL Error on registering Captcha');
         }
       }
