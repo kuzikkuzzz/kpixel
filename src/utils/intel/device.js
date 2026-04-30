@@ -11,7 +11,7 @@ import crypto from 'crypto';
  *   headerSignature,
  * }
  */
-export default function getDeviceInfo(req) {
+export function getDeviceInfo(req) {
   const { headers, rawHeaders } = req;
   let browser = 'Unknown';
   let os = 'Unknown';
@@ -100,31 +100,55 @@ export default function getDeviceInfo(req) {
     .digest('base64url')
     .substring(0, 15);
 
-  /*
-    * hash for a specific browser that only fits temporary and isn't stored,
-    * supposed to ensure session consistency
-    */
+  return { hash, device, browser, os, headerSignature };
+}
+
+/**
+ * get a hash that is supposed to map to a session
+ * @param req expressjs request
+ * @return hash 15 characters long
+ */
+export function getBrowserHash(req) {
+  const { headers } = req;
+
   let browserHash = crypto.createHash('sha224')
-    .update(headers['user-agent'] + headers.host);
-  if (browser === 'Safari') {
-    browserHash.update(os + device);
-  } else {
-    browserHash.update(headers['accept-encoding'] || '');
-  }
-  if (headers['accept-language']) {
-    let language = headers['accept-language'].split(',').map((l) => {
-      const separator = l.indexOf(';');
-      return separator !== -1 ? l.substring(0, separator) : l;
-    }).sort().join(',');
-    browserHash.update(language);
-  }
-  browserHash = browserHash.digest('base64url').substring(0, 15);
+    .update(`${headers['user-agent']}${headers['host']}`);
 
   /*
-  console.log('HASH', browserHash, headers['user-agent'], headers.host,
-    headers['accept-language'], headers['accept-encoding'], browser, os,
-    device,
+    * some browsers deny br and zstd on websocket
+    */
+  let encoding = headers['accept-encoding'];
+  if (encoding) {
+    encoding = encoding.split(',').map((e) => e.trim())
+      .filter(
+        (e) => (e === 'gzip' || e === 'deflate' || e === 'compress'),
+      ).join(',');
+    browserHash.update(encoding);
+  }
+
+  /*
+   * browsers scramble and change the quality values of languages for
+   * fingerprint detection, but they will keep the order the same, to not have
+   * the user be served a false language
+   */
+  let language = headers['accept-language'];
+  if (language) {
+    let separator = language.indexOf(',');
+    if (separator !== -1) {
+      language = language.substring(0, separator);
+    }
+    separator = language.indexOf(';');
+    if (separator !== -1) {
+      language = language.substring(0, separator);
+    }
+    browserHash.update(language);
+  }
+
+  browserHash = browserHash.digest('base64url').substring(0, 15);
+
+  console.log('BROWSER HASH', browserHash, headers['user-agent'], headers.host,
+    headers['accept-language'], headers['accept-encoding'],
   );
-  */
-  return { hash, device, browser, os, headerSignature, browserHash };
+
+  return browserHash;
 }

@@ -1,7 +1,7 @@
 /*
  * exporess middlewares for handling device information
  */
-import getDeviceInfo from '../utils/intel/device.js';
+import { getDeviceInfo, getBrowserHash } from '../utils/intel/device.js';
 import { upsertDevice, touchDevice } from '../data/sql/Device.js';
 
 export class Device {
@@ -38,7 +38,9 @@ export class Device {
    * @return hash of the specific browser which only fits temporary
    */
   get browserHash() {
-    return this.deviceData.browserHash;
+    const browserHash = getBrowserHash(this.#req);
+    Object.defineProperty(this, 'browserHash', { value: browserHash });
+    return browserHash;
   }
 
   /**
