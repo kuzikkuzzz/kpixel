@@ -26,7 +26,7 @@ const GlobalCaptcha = ({ close }) => {
     <form
       onSubmit={async (e) => {
         e.preventDefault();
-        const text = e.target.captcha.value.slice(0, 6);
+        const text = e.target.captcha.value.trim();
         if (submitting || !text || !ready) {
           return;
         }

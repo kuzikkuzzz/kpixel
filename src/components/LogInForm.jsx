@@ -151,7 +151,7 @@ const LogInForm = ({
     const password = evt.target.password.value;
     const confirmPassword = evt.target.confirmpassword.value;
     const durationsel = evt.target.durationsel.value;
-    const captcha = evt.target.captcha.value;
+    const captcha = evt.target.captcha.value.trim();
     const captchaid = evt.target.captchaid.value;
     let challengeSolution = evt.target.challengesolution.value;
     if (challengeSolution) {

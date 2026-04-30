@@ -1,10 +1,9 @@
 /*
  * captcha and js challenge
  */
-import anyAscii from 'any-ascii';
-
 import pool from './mariadb.js';
 
+import anyAscii from '../../utils/asciimap/index.js';
 import {
   CAPTCHA_TIME, TRUSTED_TIME,
 } from '../../core/config.js';
@@ -128,17 +127,24 @@ export async function checkVerificationSolutions(
   isOneTime,
 ) {
   if (captchaId || captchaSolution) {
-    if (captchaSolution?.length !== 4 || !captchaId) {
+    if (typeof captchaSolution !== 'string' || typeof captchaId !== 'string') {
+      return 3;
+    }
+    captchaSolution = captchaSolution.trim();
+    captchaId = captchaId.trim();
+    /*
+     * remember that the length of a string is not the amount of characters,
+     * if there is UTF-8 involved
+     */
+    if (captchaSolution.length > 16 || captchaSolution.length < 4) {
       return 3;
     }
     /*
-     * converts funny cyrillic characters to similar ascii, may add letters
+     * converts funny characters to similar looking ascii
      */
     captchaSolution = anyAscii(captchaSolution);
     if (captchaSolution.length > 4) {
       captchaSolution = captchaSolution.substring(0, 4);
-    } else if (captchaSolution.length < 4) {
-      return 3;
     }
   }
   if (typeof challengeSolution === 'undefined') {
