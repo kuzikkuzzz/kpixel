@@ -615,7 +615,7 @@ class SocketServer {
           const [solution, captchaid, challengeSolution] = val;
           const ret = await checkVerificationSolutions(
             captchaid, solution, challengeSolution,
-            ws.browserHash, ipString, false,
+            ws.browserHash, ipString, user?.id, false,
           );
           ws.send(dehydrateCaptchaReturn(ret));
           break;

@@ -126,7 +126,6 @@ export async function ensureBadgeExistence(name, description) {
     conn = await pool.getConnection();
 
     const [found] = await conn.query(
-
       'SELECT description FROM Badges WHERE name = ?', [name],
     );
     if (found) {
@@ -139,7 +138,6 @@ export async function ensureBadgeExistence(name, description) {
       return true;
     }
     await conn.query(
-
       'INSERT INTO Badges (name, description) VALUES (?, ?)',
       [name, description],
     );
@@ -150,4 +148,25 @@ export async function ensureBadgeExistence(name, description) {
     if (conn) conn.release();
   }
   return false;
+}
+
+/**
+ * give badge to user if not exists
+ * @param name of badge
+ * @param note note for users badge
+ * @param uid user id
+ */
+export async function giveBadgeToUserNX(name, note, uid) {
+  try {
+    await pool.query(
+      `INSERT INTO UserBadges (bid, uid, note)
+  SELECT b.id, ?, ? FROM Badges b WHERE b.name = ?
+    AND NOT EXISTS (
+      SELECT 1 FROM UserBadges ub WHERE ub.bid = b.id AND ub.uid = ?
+    )`,
+      [uid, note, name, uid],
+    );
+  } catch (error) {
+    console.error(`SQL Error on giveBadgeToUserNX: ${error.message}`);
+  }
 }

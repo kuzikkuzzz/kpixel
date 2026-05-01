@@ -4,6 +4,7 @@
 import pool from './mariadb.js';
 
 import anyAscii from '../../utils/asciimap/index.js';
+import { giveBadgeToUserNX } from './Goodies.js';
 import {
   CAPTCHA_TIME, TRUSTED_TIME,
 } from '../../core/config.js';
@@ -111,6 +112,7 @@ export async function resetAllCaptchas() {
  * @param challengeSolution solution of challenge (32 bit signed int) | null
  * @param browserHash hash string of browser
  * @param ipStrings
+ * @param userId optional user id
  * @param isOneTime if captcha is only one time, or should be cached for ip
  * @return number
  *   0 success
@@ -122,27 +124,32 @@ export async function resetAllCaptchas() {
  *   6 challenge failed
  */
 export async function checkVerificationSolutions(
-  captchaId, captchaSolution, challengeSolution,
-  browserHash, ipString,
+  captchaId, captchaSolutionInput, challengeSolution,
+  browserHash, ipString, userId,
   isOneTime,
 ) {
-  if (captchaId || captchaSolution) {
-    if (typeof captchaSolution !== 'string' || typeof captchaId !== 'string') {
+  let emojiOnly = false;
+  let captchaSolution;
+
+  if (captchaId || captchaSolutionInput) {
+    if (typeof captchaSolutionInput !== 'string'
+      || typeof captchaId !== 'string'
+    ) {
       return 3;
     }
-    captchaSolution = captchaSolution.trim();
+    captchaSolutionInput = captchaSolutionInput.trim();
     captchaId = captchaId.trim();
     /*
      * remember that the length of a string is not the amount of characters,
      * if there is UTF-8 involved
      */
-    if (captchaSolution.length > 16 || captchaSolution.length < 4) {
+    if (captchaSolutionInput.length > 16 || captchaSolutionInput.length < 4) {
       return 3;
     }
     /*
      * converts funny characters to similar looking ascii
      */
-    captchaSolution = anyAscii(captchaSolution);
+    [captchaSolution, emojiOnly] = anyAscii(captchaSolutionInput);
     if (captchaSolution.length > 4) {
       captchaSolution = captchaSolution.substring(0, 4);
     }
@@ -182,7 +189,7 @@ export async function checkVerificationSolutions(
     if (captchaReturn === 4) {
       console.log(
         // eslint-disable-next-line max-len
-        `CAPTCHAS: hash mismatch ${browserHash} ${captchaBrowserHash} ${challengeBrowserHash} ${isOneTime}`,
+        `CAPTCHAS: hash mismatch ${browserHash} ${captchaBrowserHash} ${challengeBrowserHash} ${userId} ${ipString} ${isOneTime}`,
       );
     }
 
@@ -195,6 +202,9 @@ export async function checkVerificationSolutions(
       if ((captchaExpiresTs === null || captchaExpiresTs > currentTs)
         && (challengeExpiresTs === null || challengeExpiresTs > currentTs)
       ) {
+        if (emojiOnly && userId) {
+          giveBadgeToUserNX('Emoji Enjoyer', captchaSolutionInput, userId);
+        }
         return 0;
       }
     }

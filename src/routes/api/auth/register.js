@@ -50,7 +50,7 @@ export default async (req, res) => {
   if (!errors.length) {
     const captchaPass = await checkVerificationSolutions(
       captchaid, captcha, challengeSolution,
-      req.device.browserHash, ip.ipString, true,
+      req.device.browserHash, ip.ipString, null, true,
     );
     switch (captchaPass) {
       case 0:

@@ -198,18 +198,32 @@ export function loadFromTsv(filePath) {
   compareMappings(asciiMap, newAsciiMap);
 }
 
+/**
+ * convert a unicode string to an ascii string, mapping characters to similar
+ * looking ascii characters
+ * @param string unicode string
+ * @return [
+ *   result, the resulting asciii string
+ *   emojiOnly, if the input consisted of emojis only
+ * ]
+ */
 export default function anyAscii(string) {
   let result = '';
+  let emojiOnly = true;
   for (const char of string) {
     const codePoint = char.codePointAt(0);
     if (codePoint <= 0x7f) {
       result += char;
+      emojiOnly = false;
     } else {
       const blockNum = codePoint >>> 8;
+      if (blockNum !== 502) {
+        emojiOnly = false;
+      }
       const lo = codePoint & 0xff;
       const newCharCode = asciiMap[blockNum]?.[lo];
       result += (newCharCode) ? String.fromCharCode(newCharCode) : ' ';
     }
   }
-  return result;
+  return [result, emojiOnly];
 }
