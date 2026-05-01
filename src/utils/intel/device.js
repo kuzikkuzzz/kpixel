@@ -146,9 +146,11 @@ export function getBrowserHash(req) {
 
   browserHash = browserHash.digest('base64url').substring(0, 15);
 
+  /*
   console.log('BROWSER HASH', browserHash, headers['user-agent'], headers.host,
     headers['accept-language'], headers['accept-encoding'],
   );
+  */
 
   return browserHash;
 }
