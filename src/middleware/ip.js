@@ -6,7 +6,7 @@ import {
   sanitizeIPString, ipToHex, getHostFromRequest,
 } from '../utils/intel/ip.js';
 import { getIPIntelOverShards } from '../utils/intel/index.js';
-import { queue } from '../utils/intel/queue.js';
+import { queue } from '../utils/queue.js';
 import { getIPAllowance, touchIP } from '../data/sql/IP.js';
 import { getIPVerification } from '../data/sql/Captcha.js';
 import { parseListOfBans } from '../data/sql/Ban.js';

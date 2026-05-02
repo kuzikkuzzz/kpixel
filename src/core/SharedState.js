@@ -7,13 +7,16 @@ import {
   setState as setStateQuery,
 } from '../data/sql/Config.js';
 import socketEvents from '../socket/socketEvents.js';
+import { queueWithoutGracePeriod as queue } from '../utils/queue.js';
 
 const cache = new Map();
+
+const getStateQueryQueued = queue(getStateQuery);
 
 export async function getState(key) {
   let value = cache.get(key);
   if (!value) {
-    value = await getStateQuery(key);
+    value = await getStateQueryQueued(key);
     cache.set(key, value);
   }
   return value;

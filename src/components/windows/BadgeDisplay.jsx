@@ -67,7 +67,7 @@ const BadgeDisplay = () => {
           style={{
             color: setBrightness(colorFromText(userName), isDarkMode),
           }}
-        >{` ${userName} `}</span>[{` ${userDisplayName} `}]
+        >{` ${userDisplayName} `}</span>[{` ${userName} `}]
       </p>
       <p>
         {t`Copy URL`}:&nbsp;

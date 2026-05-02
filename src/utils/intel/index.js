@@ -12,7 +12,7 @@ import {
   getWhoisHostOfIP,
   getProxCheckHistory,
 } from '../../data/sql/IP.js';
-import { queue } from './queue.js';
+import { queue } from '../queue.js';
 import {
   USE_PROXYCHECK, PROXYCHECK_KEY, WHOIS_DURATION,
 } from '../../core/config.js';
