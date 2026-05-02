@@ -54,7 +54,7 @@ export default async function factionroleleave(req, res) {
     socketEvents.patchUserState(uid, 'profile', activeProfilePatch);
   }
 
-  logger.info(`User ${user.id} joined ${uid} to role ${frid}`);
+  logger.info(`User ${user.id} removed role ${frid} from ${uid}`);
   res.json({
     status: 'ok',
   });
