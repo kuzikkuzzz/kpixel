@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: admin@pixelplanet.fun\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2026-04-19 10:59+0000\n"
-"Last-Translator: kurac <kurac@noreply.pixelplanet.fun>\n"
+"PO-Revision-Date: 2026-05-02 03:30+0000\n"
+"Last-Translator: juѕuf <jusuf@noreply.pixelplanet.fun>\n"
 "Language-Team: Croatian <https://translate.gs-os.com/projects/ppfun/client/"
 "hr/>\n"
 "Language: hr\n"
@@ -92,7 +92,7 @@ msgid "Add Template"
 msgstr "Dodaj šablon"
 
 msgid "Add a new E-Mail Address here:"
-msgstr ""
+msgstr "Dodajte novu e-mail adresu ovdje:"
 
 #. This if for moderation tools, it's not important to translate this
 msgid "Admintools"
@@ -322,7 +322,7 @@ msgstr ""
 "drugim postavljenim pikselima"
 
 msgid "Cleaners can use 0cd blank colors."
-msgstr "Cleaneri mogu koristiti zadane 0cd boje"
+msgstr "Cleaneri mogu koristiti zadane 0cd boje."
 
 msgid "Clear"
 msgstr "Očisti"
@@ -512,7 +512,7 @@ msgid "DM"
 msgstr "DM"
 
 msgid "Daily Pixels"
-msgstr ""
+msgstr "Dnevni pikseli"
 
 msgid "Daily Pixels per Country"
 msgstr "Dnevni pikseli po zemlji"
@@ -542,7 +542,7 @@ msgid "Delete Faction"
 msgstr "Izbriši fakciju"
 
 msgid "Delete My Account"
-msgstr ""
+msgstr "Obriši račun"
 
 msgid "Delete the faction"
 msgstr "Izbriši ovu fakciju"
@@ -895,7 +895,7 @@ msgid "Import templates"
 msgstr "Uvoz šablona"
 
 msgid "Incorrect password"
-msgstr ""
+msgstr "Netočna lozinka"
 
 msgid "Interval"
 msgstr "Intervall"
@@ -1273,7 +1273,7 @@ msgid "Pixel protected"
 msgstr "Pixel zaštićen"
 
 msgid "Pixels"
-msgstr ""
+msgstr "Pixeli"
 
 msgid "Place color pixels on a large canvas with other players online!"
 msgstr "Postavite piksele u boji na veliko platno s drugim igračima na mreži!"
@@ -1310,7 +1310,7 @@ msgid "Powerlevel"
 msgstr "powerlevel"
 
 msgid "Powerlevel of this role. See table below for an explanation."
-msgstr ""
+msgstr "Razina moći ovog rola. Pogledajte tablicu ispod za objašnjenje."
 
 #, javascript-format
 msgid ""
@@ -1546,7 +1546,7 @@ msgid "Serpentine"
 msgstr "Serpentina"
 
 msgid "Server Error"
-msgstr ""
+msgstr "Greška u serveru"
 
 msgid "Server answered with gibberish :("
 msgstr "Server je odgovorio besmislicama :("
@@ -1707,6 +1707,11 @@ msgid ""
 "function on the LogIn page to set a new password. In the future, consider "
 "not installing malware, Thank You."
 msgstr ""
+"Ova kombinacija e-pošte/lozinke je hakirana i procurila je. Kako bismo "
+"zaštitili ovaj račun, lozinka je resetirana. Molimo vas da koristite "
+"funkciju \"Zaboravljena lozinka\" na stranici za prijavu kako biste "
+"postavili novu lozinku. U budućnosti, razmislite o tome da ne instalirate "
+"zlonamjerni softver. Hvala."
 
 msgid "This faction has no invites"
 msgstr "Ova fakcija nema pozivnica"
@@ -1725,7 +1730,7 @@ msgid "This permission is required"
 msgstr "Ovo dopuštenje je potrebno"
 
 msgid "This user has not password set"
-msgstr ""
+msgstr "Ovaj korisnik nema postavljenu lozinku"
 
 msgid "Timeout"
 msgstr "Pauza"
@@ -1940,7 +1945,7 @@ msgid "Yes"
 msgstr "Da"
 
 msgid "Yes, really delete Me"
-msgstr ""
+msgstr "Da, stvarno me izbriši"
 
 msgid "Yesterday"
 msgstr "Jučer"
@@ -2091,7 +2096,7 @@ msgid "Your ban expires at "
 msgstr "Vaš ban ističe "
 
 msgid "Your device looks weird"
-msgstr ""
+msgstr "Vaš uređaj izgleda čudno"
 
 msgid ""
 "Your did not set your username yet. A username is required to login to other "
@@ -2168,7 +2173,7 @@ msgstr "z izvan granica"
 
 msgctxt "media-player"
 msgid "Player"
-msgstr ""
+msgstr "Igrač"
 
 msgctxt "keybinds"
 msgid "A"
@@ -2232,12 +2237,12 @@ msgstr "X"
 
 msgctxt "channel-list"
 msgid "Public"
-msgstr ""
+msgstr "Public"
 
 #. Column title of column indicating whether or not a faction is able to be joined in public
 msgctxt "statistics-table"
 msgid "Public"
-msgstr ""
+msgstr "Naslov stupca koji pokazuje može li se fakciji javno pridružiti ili ne"
 
 #~ msgid "No captcha id given"
 #~ msgstr "Nije naveden captcha ID"

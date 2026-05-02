@@ -3,16 +3,16 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: admin@pixelplanet.fun\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2025-11-13 16:16+0000\n"
+"PO-Revision-Date: 2026-05-02 03:30+0000\n"
 "Last-Translator: TheCat13 <thecat13@noreply.pixelplanet.fun>\n"
-"Language-Team: Catalan <https://translate.gs-os.com/projects/ppfun/client/ca/"
-">\n"
+"Language-Team: Catalan <https://translate.gs-os.com/projects/ppfun/client/"
+"ca/>\n"
 "Language: ca\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.14\n"
+"X-Generator: Weblate 5.15.2\n"
 
 msgid " which is in "
 msgstr " que està dins "
@@ -51,13 +51,13 @@ msgid "(0 = infinite)"
 msgstr "(0 = infinite)"
 
 msgid "(click a role to activate it)"
-msgstr ""
+msgstr "(clica un rol per activar-lo)"
 
 msgid "(click a role to assign or remove it)"
-msgstr ""
+msgstr "(clica un rol per assignar-lo o treure'l)"
 
 msgid "+last hour"
-msgstr ""
+msgstr "+última hora"
 
 msgid "...loading Login methods and sessions..."
 msgstr "...carregant mètodes d'Inici de Sessió i sessions..."
@@ -69,6 +69,9 @@ msgid ""
 "A flag representing the role, it should be 16x11 pixels. If left empty, "
 "users with this role selected will still show their own flags."
 msgstr ""
+"Una bandera representant el rol, ha de ser de 16x11 píxels. Si es deixa "
+"buit, els usuaris amb aquest rol seleccionat mostraran les seves pròpies "
+"banderes."
 
 msgid "A new verification mail is getting sent to you."
 msgstr "T'estem enviant un nou correu electrònic de verificació."
@@ -77,6 +80,9 @@ msgid ""
 "A role has all the permissions of all levels below and equal to it. In "
 "example: Every role with a power level of >=50 can manage invites (50)."
 msgstr ""
+"Un rol té tots els permisos de tots els nivells inferiors i iguals a ell. "
+"Per exemple: Tots els rols amb un nivell de poder de >=50 pot gestionar "
+"invitacions (50)."
 
 msgid "ACCESS MODTOOLS"
 msgstr "ACCEDEIX A LES EINES DE MODERADOR"
@@ -88,17 +94,17 @@ msgid "Add Template"
 msgstr "Afegeix una Plantilla"
 
 msgid "Add a new E-Mail Address here:"
-msgstr ""
+msgstr "Afegeix una nova Direcció de Correu aquí:"
 
 #. This if for moderation tools, it's not important to translate this
 msgid "Admintools"
 msgstr "Eines d'administrador"
 
 msgid "Age"
-msgstr ""
+msgstr "Edat"
 
 msgid "All members of this faction are hidden"
-msgstr ""
+msgstr "Tots els membres d'aquesta facció estan ocults"
 
 msgid "All sound effects will be disabled."
 msgstr "Tots els sons seran desactivats."
@@ -110,7 +116,7 @@ msgid "Always show movement control buttons"
 msgstr "Mostra sempre els botons de control de moviment"
 
 msgid "An image representing your faction"
-msgstr ""
+msgstr "Una imatge que representi la teva facció"
 
 msgid "Anti Aliasing"
 msgstr "Anti Aliasing"
@@ -122,31 +128,31 @@ msgid "Archive"
 msgstr "Arxiu"
 
 msgid "Assign Roles"
-msgstr ""
+msgstr "Assigna Rols"
 
 msgid "Assign new Mod"
 msgstr "Assigna Moderador nou"
 
 msgid "Assign role per default to new members"
-msgstr ""
+msgstr "Assigna un rol predeterminat pels nous membres"
 
 msgid "Assign roles below their own"
-msgstr ""
+msgstr "Assignar rols per sota del seu"
 
 msgid "Assign this role to every new member automatically on join."
-msgstr ""
+msgstr "Assigna aquest rol a cada nou membre automàticament en unir-s'hi."
 
 msgid "Assigned role per default"
-msgstr ""
+msgstr "Rol assignat per defecte"
 
 msgid "Attach File"
-msgstr ""
+msgstr "Adjunta un Fitxer"
 
 msgid "Auto Zoom In"
 msgstr "Zoom Automàtic"
 
 msgid "Avatar"
-msgstr ""
+msgstr "Avatar"
 
 msgid "Back"
 msgstr "Enrere"
@@ -158,13 +164,13 @@ msgid "Badges"
 msgstr "Insígnies"
 
 msgid "Ban"
-msgstr ""
+msgstr "Baneig"
 
 msgid "Ban media"
-msgstr ""
+msgstr "Mitjans de baneig"
 
 msgid "Ban members"
-msgstr ""
+msgstr "Baneja membres"
 
 msgid "Banned"
 msgstr "Banejat"
@@ -173,7 +179,7 @@ msgid "Banned? Detected as Proxy?"
 msgstr "Banejat? Detectat com a Proxy?"
 
 msgid "Bans"
-msgstr ""
+msgstr "Banejos"
 
 msgid "Block"
 msgstr "Bloqueja"
@@ -186,6 +192,10 @@ msgid ""
 "users to start messaging you. You can still start new DMs with other users "
 "and already ongoing DMs will still be open."
 msgstr ""
+"Bloqueja tots els Missatges Privats. Si actives aquesta opció, serà "
+"impossible que altres usuaris et comencin a enviar missatges. Pots continuar "
+"iniciant nous MDs amb altres usuaris i els MDs que ja estiguin en curs "
+"continuaran oberts."
 
 msgid "Blocked"
 msgstr "Bloquejat"
@@ -249,7 +259,7 @@ msgid "Caught by"
 msgstr "Atrapat per"
 
 msgid "Change Flag"
-msgstr ""
+msgstr "Canvia la Bandera"
 
 msgid "Change Happened"
 msgstr "Ha Hagut Un Canvi"
@@ -261,7 +271,7 @@ msgid "Change Password"
 msgstr "Canvia la Contrasenya"
 
 msgid "Channel"
-msgstr ""
+msgstr "Canal"
 
 msgid "Channel settings"
 msgstr "Configuració del canal"
@@ -301,20 +311,25 @@ msgid ""
 "pixels (VERY AGGRESSIVE ON CANVASES THAT ALLOW UNSET PIXELS (where there are "
 "two cooldowns)!)"
 msgstr ""
+"Neteja els píxels restants que estan envoltats per un sol altre color o "
+"píxels no definits (MOLT AGRESSIU EN LLENÇOS QUE PERMETEN PÍXELS NO DEFINITS "
+"(on hi ha dos temps de refredament)!)"
 
 msgid "Clean spare pixels that are surrounded by unset pixels"
-msgstr ""
+msgstr "Neteja els píxels restants que estan envoltats per píxels no definits"
 
 msgid ""
 "Clean spare pixels that are surrounded by unset pixels and up to 1 other set "
 "pixels"
 msgstr ""
+"Neteja els píxels restants que estan envoltats per píxels no definits i fins "
+"a 1 altre píxel definit"
 
 msgid "Cleaners can use 0cd blank colors."
 msgstr "Els netejadors poden utilitzar colors base amb 0cd."
 
 msgid "Clear"
-msgstr ""
+msgstr "Neteja"
 
 #, javascript-format
 msgid ""
@@ -328,7 +343,7 @@ msgid "Click a color in palette to select it"
 msgstr "Clica sobre un color a la paleta per seleccionar-lo"
 
 msgid "Click here to cease representation."
-msgstr ""
+msgstr "Clica aquí per cessar la representació."
 
 msgid "Click here to request a new verification mail."
 msgstr "Clica aquí per solicitar un nou correu electrònic de verificació."
@@ -337,7 +352,7 @@ msgid "Click to Load Captcha"
 msgstr "Clica per Carregar el Captcha"
 
 msgid "Click to remove"
-msgstr ""
+msgstr "Clica per eliminar"
 
 msgid "Clone"
 msgstr "Clonar"
@@ -352,25 +367,25 @@ msgid "Close Palette"
 msgstr "Tanca la Paleta"
 
 msgid "Compact Chat"
-msgstr ""
+msgstr "Xat Compacte"
 
 msgid "Compact Palette"
 msgstr "Paleta Compacta"
 
 msgid "Confirm"
-msgstr ""
+msgstr "Confirma"
 
 msgid "Confirm Ban"
-msgstr ""
+msgstr "Confirma el Baneig"
 
 msgid "Confirm Delete"
-msgstr ""
+msgstr "Confirma l'Eliminació"
 
 msgid "Confirm Kick"
-msgstr ""
+msgstr "Confirma l'Expulsió"
 
 msgid "Confirm Leave"
-msgstr ""
+msgstr "Confirma la Sortida"
 
 msgid "Confirm New Password"
 msgstr "Confirma la Contrasenya Nova"
@@ -379,7 +394,7 @@ msgid "Confirm Password"
 msgstr "Confirma la Contrasenya"
 
 msgid "Confirm your password."
-msgstr ""
+msgstr "Confirma la teva contrasenya."
 
 #, javascript-format
 msgid "Connection error ${ code } :("
@@ -436,7 +451,7 @@ msgid "Copy to Clipboard"
 msgstr "Copia al Porta-Retalls"
 
 msgid "Could not connect to server"
-msgstr ""
+msgstr "No s'ha pogut connectar al servidor"
 
 msgid "Could not connect to server, please try again later :("
 msgstr ""
@@ -447,7 +462,7 @@ msgid "Could not load captcha"
 msgstr "No s'ha pogut carregar el captcha"
 
 msgid "Could not process files"
-msgstr ""
+msgstr "No s'han pogut processar els fitxers"
 
 msgid "Couldn't set Pixel"
 msgstr "No s'ha pogut col·locar el Píxel"
@@ -459,25 +474,25 @@ msgid "Country"
 msgstr "País"
 
 msgid "Create Faction"
-msgstr ""
+msgstr "Crea una Facció"
 
 msgid "Create Invite"
-msgstr ""
+msgstr "Crea una Invitació"
 
 msgid "Create New Faction"
-msgstr ""
+msgstr "Crea una Nova Facció"
 
 msgid "Create New Invite"
-msgstr ""
+msgstr "Crea una Nova Invitació"
 
 msgid "Create New Role"
-msgstr ""
+msgstr "Crea un Nou Rol"
 
 msgid "Create Role"
-msgstr ""
+msgstr "Crea un Rol"
 
 msgid "Create roles"
-msgstr ""
+msgstr "Crea rols"
 
 #, javascript-format
 msgid "Credit for the Palette of the 2bit canvas goes to ${ donendoLink }."
@@ -549,10 +564,10 @@ msgid "Description"
 msgstr ""
 
 msgid "Description can't be empty"
-msgstr ""
+msgstr "La descripció no pot estar buida"
 
 msgid "Description must be shorter than 1000 characters"
-msgstr ""
+msgstr "La descripció ha de tenir menys de 1000 caràcters"
 
 msgid "Description of your faction"
 msgstr ""
@@ -893,7 +908,7 @@ msgid "Import templates"
 msgstr "Importa plantilles"
 
 msgid "Incorrect password"
-msgstr ""
+msgstr "Contrasenya incorrecta"
 
 msgid "Interval"
 msgstr "Interval"
@@ -959,7 +974,7 @@ msgid "Kick members"
 msgstr ""
 
 msgid "Know that an account exists"
-msgstr ""
+msgstr "Saber que un compte existeix"
 
 msgid "Leave"
 msgstr ""
@@ -1071,7 +1086,7 @@ msgid "Name"
 msgstr "Nom"
 
 msgid "Name can only contain the characters: a-z . _ and -"
-msgstr ""
+msgstr "El nom només pot contenir els caràcters: a-z . _ i -"
 
 msgid "Name can't be empty."
 msgstr "El Nom és obligatori."
@@ -1374,10 +1389,10 @@ msgstr ""
 "reinicia a les 00:00 UTC."
 
 msgid "Read Badges and fishes"
-msgstr "Llegeix les Insígnies i els peixos"
+msgstr "Llegeix Insígnies i peixos"
 
 msgid "Read name, username and account age"
-msgstr "Llegeix nom, nom d'usuari i edat del compte"
+msgstr "Llegeix el nom, el nom d'usuari i l'edat del compte"
 
 msgid "Reason"
 msgstr "Raó"

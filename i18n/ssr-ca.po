@@ -3,16 +3,16 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: admin@pixelplanet.fun\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2025-11-13 16:16+0000\n"
+"PO-Revision-Date: 2026-05-02 03:30+0000\n"
 "Last-Translator: TheCat13 <thecat13@noreply.pixelplanet.fun>\n"
-"Language-Team: Catalan <https://translate.gs-os.com/projects/ppfun/server/ca/"
-">\n"
+"Language-Team: Catalan <https://translate.gs-os.com/projects/ppfun/server/"
+"ca/>\n"
 "Language: ca\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.14\n"
+"X-Generator: Weblate 5.15.2\n"
 
 msgid "1bit"
 msgstr "1bit"
@@ -34,7 +34,7 @@ msgstr ""
 "diària s'actualitza a les 00:00 UTC."
 
 msgid "A file was too large"
-msgstr ""
+msgstr "Un fitxer era massa gran"
 
 msgid "Access modtools"
 msgstr "Accedeix a les eines de moderador"
@@ -61,72 +61,74 @@ msgid "Application successfully added"
 msgstr "L'aplicació s'ha afegit amb èxit"
 
 msgid "Avatar can only be an image"
-msgstr ""
+msgstr "L'avatar ha de ser una imatge"
 
 msgid "Avatar not given or not an image"
-msgstr ""
+msgstr "L'avatar no ha estat proporcionat o no és una imatge"
 
 msgid "Black and White canvas"
 msgstr "Llenç en Blanc i Negre"
 
 msgid "Can not change a role above your own"
-msgstr ""
+msgstr "No pots canviar un rol superior al teu"
 
 msgid "Can not change a role that is equal to your own"
-msgstr ""
+msgstr "No pots canviar un rol igual al teu"
 
 msgid "Can not change the default setting of this role"
-msgstr ""
+msgstr "No pots canviar la configuració predeterminada d'aquest rol"
 
 msgid "Can not change the powerlevel of a role equal or above you"
-msgstr ""
+msgstr "No pots canviar el nivell de poder d'un rol igual o superior al teu"
 
 msgid "Can not change the powerlevel of the Sovereign"
-msgstr ""
+msgstr "No pots canviar el nivell de poder del Sobirà"
 
 msgid "Can not chat while being banned"
 msgstr "No pots xatejar mentre estàs banejat"
 
 msgid "Can not create a role on the same level as yours"
-msgstr ""
+msgstr "No pots crear un rol amb el mateix nivell que el teu"
 
 msgid "Can not create a role with a powerlevel beyond yours"
-msgstr ""
+msgstr "No pots crear un rol amb més nivell que el teu"
 
 msgid "Can not delete a role on the same level as yours"
-msgstr ""
+msgstr "No pots suprimir un rol amb el mateix nivell que el teu"
 
 msgid "Can not delete this role"
-msgstr ""
+msgstr "No pots suprimir aquest rol"
 
 msgid "Can not elevate the powerlevel of a role beyond yours"
-msgstr ""
+msgstr "No pots elevar el nivell de poder d'un rol més enllà del teu"
 
 msgid "Can not elevate the powerlevel of a role to yours"
-msgstr ""
+msgstr "No pots elevar el nivell de poder d'un rol al teu"
 
 #, javascript-format
 msgid "Can not have more than ${ MAX_ROLES_PER_FACTION } faction roles"
-msgstr ""
+msgstr "No es poden tenir més de ${ MAX_ROLES_PER_FACTION } rols de facció"
 
 msgid "Can not have more than 20 invites per faction"
-msgstr ""
+msgstr "No es poden tenir més de 20 invitacions per facció"
 
 msgid "Can not modify user equal to you or above you"
-msgstr ""
+msgstr "No pots modificar un usuari igual o superior a tu"
 
 #. when leaving a faction and you are the last owner
 msgid "Can not orphan a faction"
-msgstr ""
+msgstr "No es pot deixar una facció orfe"
 
 #, javascript-format
 msgid ""
 "Can not upload this many files at once, only 5 are allowed, you have $"
 "{ amountOfFiles }"
 msgstr ""
+"No es poden pujar tants fitxers alhora, només se'n permeten 5, tens ${ "
+"amountOfFiles }"
 
 msgid "Can only have one Sovereign role"
-msgstr ""
+msgstr "Només es pot tenir un rol Sobirà"
 
 msgid "Click here"
 msgstr "Clica aquí"
@@ -154,10 +156,12 @@ msgid "Coronavirus"
 msgstr "Coronavirus"
 
 msgid "Could not change the flag of this role"
-msgstr ""
+msgstr "No s'ha pogut canviar la bandera d'aquest rol"
 
 msgid "Could not change this setting. Maybe try again later."
 msgstr ""
+"No s'ha pogut canviar aquesta configuració. Potser torna a provar-ho més "
+"tard."
 
 msgid "Could not close this Session."
 msgstr "No s'ha pogut tancar aquesta Sessió."
@@ -166,19 +170,19 @@ msgid "Could not find this login method"
 msgstr "No s'ha pogut trobar aquest mètode d'inici de sessió"
 
 msgid "Could not leave this channel"
-msgstr ""
+msgstr "No s'ha pogut sortir d'aquest canal"
 
 msgid "Could not set this factions avatar"
-msgstr ""
+msgstr "No s'ha pogut establir l'avatar d'aquesta facció"
 
 msgid "Could not set your avatar"
-msgstr ""
+msgstr "No s'ha pogut establir el teu avatar"
 
 msgid "Could not set your faction role"
-msgstr ""
+msgstr "No s'ha pogut establir el teu rol de facció"
 
 msgid "Could not upload all files"
-msgstr ""
+msgstr "No s'han pogut pujar tots els fitxers"
 
 msgid "Couldn't find this mail in our database"
 msgstr "No hem pogut trobar aquest correu electrònic a la nostra base de dades"
@@ -190,10 +194,10 @@ msgid "Delete Application"
 msgstr "Suprimeix l'Aplicació"
 
 msgid "Description can't be empty"
-msgstr ""
+msgstr "La descripció no pot estar buida"
 
 msgid "Description must be shorter than 1000 characters"
-msgstr ""
+msgstr "La descripció ha de tenir menys de 1000 caràcters"
 
 msgid "Display name for your OIDC client"
 msgstr "Nom de visualització pel teu client OIDC"
@@ -236,13 +240,15 @@ msgid ""
 "File ${ filename } has ${ sizeMB } MB and is too large. It may only be $"
 "{ MAX_FILE_SIZE_MB } MB"
 msgstr ""
+"El fitxer ${ filename } té ${ sizeMB } MB i és massa gran. Només pot ser "
+"fins a ${ MAX_FILE_SIZE_MB } MB"
 
 #, javascript-format
 msgid "File ${ filename } has an invalid extension"
-msgstr ""
+msgstr "El fitxer ${ filename } té una extensió invàlida"
 
 msgid "File is broken"
-msgstr ""
+msgstr "El fitxer està trencat"
 
 #. 'client_secret' is a technical term and should not be translated
 msgid ""
@@ -279,6 +285,10 @@ msgid ""
 "that you are unaware of under \"Login Methods\" in the User Area and change "
 "your password."
 msgstr ""
+"Si has estat tu, ignora aquest correu. Si no has estat tu, ves a <a "
+"href=\"https://pixelplanet.fun\">pixelplanet.fun</a> i tanca qualsevol "
+"sessió que desconeguis a \"Mètodes d'inici de sessió\" a l'Àrea d'Usuari i "
+"canvia la contrasenya."
 
 #, javascript-format
 msgid ""
@@ -289,10 +299,10 @@ msgstr ""
 "que va sol·licitar aquest correu era ${ ip })."
 
 msgid "Incorrect password"
-msgstr ""
+msgstr "Contrasenya incorrecta"
 
 msgid "Invalid type of media"
-msgstr ""
+msgstr "Tipus de fitxer multimèdia invàlid"
 
 msgid "Invalid url :( Please check your mail again."
 msgstr ""
@@ -302,45 +312,47 @@ msgid "Just admins can do that"
 msgstr "Només els administradors poden fer això"
 
 msgid "Just janny, mod or admin can do that"
-msgstr ""
+msgstr "Només els janny, mods i admins poden fer-ho"
 
 msgid "Just mods and admins can do that"
-msgstr ""
+msgstr "Només els mods i admins poden fer-ho"
 
 msgid "Know that an account exists"
-msgstr ""
+msgstr "Saber que un compte existeix"
 
 #. "scopes" is a technical term and should not be translated
 msgid "List of available scopes"
-msgstr ""
+msgstr "Llista de scopes disponibles"
 
 msgid "Loading..."
 msgstr "Carregant..."
 
 msgid "Login from new location on PixelPlanet"
-msgstr ""
+msgstr "Inicia la sessió des d'una nova ubicació a PixelPlanet"
 
 msgid "Login is required"
-msgstr ""
+msgstr "Cal iniciar sessió"
 
 msgid "Mail is already in use!"
-msgstr ""
+msgstr "Aquest correu ja està en ús!"
 
 msgid "Mail is not configured on the server"
-msgstr ""
+msgstr "Aquest correu no està configurat al servidor"
 
 msgid "Mail verification"
 msgstr "Verificació del correu electrònic"
 
 msgid "MimeType or extension not known or supported"
-msgstr ""
+msgstr "Tipus MIME o extensió no conegut/da o no compatible"
 
 #, javascript-format
 msgid "Mimetype ${ mimeType } of file ${ filename } is invalid or not allowed"
 msgstr ""
+"El tipus MIME ${ mimeType } del fitxer ${ filename } és invàlid o no està "
+"permès"
 
 msgid "Minimap"
-msgstr ""
+msgstr "Minimapa"
 
 msgid "Mirror of PixelCanvas"
 msgstr "Mirall de PixelCanvas"
@@ -360,10 +372,10 @@ msgstr ""
 "píxels."
 
 msgid "Name already in use."
-msgstr ""
+msgstr "Aquest nom ja està en ús."
 
 msgid "Name can only contain the characters: a-z . _ and -"
-msgstr ""
+msgstr "El nom només pot contenir els caràcters: a-z . _ i -"
 
 msgid "Name can't be empty."
 msgstr "El nom és obligatori."
@@ -372,7 +384,7 @@ msgid "Name contains invalid character like @, /, \\ or #"
 msgstr "El nom conté caràcters invalids com:  @   /   \\   #"
 
 msgid "Name is too long"
-msgstr ""
+msgstr "El nom és massa llarg"
 
 msgid "Name must be at least 2 characters long"
 msgstr "El nom ha de ser com a mínim de 2 caràcters"
@@ -381,56 +393,56 @@ msgid "Name must be shorter than 26 characters"
 msgstr "El nom no pot tenir més de 26 caràcters"
 
 msgid "Name or Email does not exist!"
-msgstr ""
+msgstr "El Nom o Correu no existeix!"
 
 msgid "New Password"
 msgstr "Contrasenya nova"
 
 msgid "No Avatar given"
-msgstr ""
+msgstr "No s'ha proporcionat cap Avatar"
 
 msgid "No Captcha given"
 msgstr "No s'ha rebut el captcha"
 
 msgid "No or invalid fish id."
-msgstr ""
+msgstr "No hi ha id de peix o és invàlid."
 
 msgid "No password given."
 msgstr "No s'ha escrit una contrasenya."
 
 #. "redirect_uris" is a technical term and should not be translated
 msgid "No redirect_uris given."
-msgstr ""
+msgstr "No s'ha proporcionat cap redirect_uris."
 
 msgid "No such badge found"
-msgstr ""
+msgstr "No s'ha trobat aquesta insígnia"
 
 msgid "No such fish found"
-msgstr ""
+msgstr "No s'ha trobat aquest peix"
 
 msgid "One redirect URIs per line"
-msgstr ""
+msgstr "Un redirect URIs per línia"
 
 msgid "One redirect_uri per line"
-msgstr ""
+msgstr "Un redirect_uri per línia"
 
 #. "redirect_uris" is a technical term and should not be translated
 msgid "Only five redirect_uris are allowed per client"
-msgstr ""
+msgstr "Només es permeten cinc redirect_uris per client"
 
 msgid "Only four colors. Same rules as moon!"
-msgstr ""
+msgstr "Només quatre colors. Les mateixes regles que a la lluna!"
 
 msgid "OpenID Connect specs"
-msgstr ""
+msgstr "Especificacions d'OpenID Connect"
 
 msgid "Or by copying following url:"
 msgstr "O copiant la següent URL:"
 
-#, fuzzy
 msgid "Our main canvas, a huge map of the world. Place anywhere you like!"
 msgstr ""
-"El nostre llenç principal, un enorme mapa del món. Col·loca allà on vulguis"
+"El nostre llenç principal, un enorme mapa del món. Col·loca per allà on "
+"vulguis!"
 
 msgid "Password must be at least 6 characters long."
 msgstr "La contrasenya ha de tenir 6 caràcters com a mínim."
@@ -442,7 +454,7 @@ msgid "Password successfully changed."
 msgstr "La contrasenya ha sigut reemplaçada amb èxit."
 
 msgid "Permission"
-msgstr ""
+msgstr "Permís"
 
 msgid "PixelCanvas"
 msgstr "PixelCanvas"
@@ -460,35 +472,38 @@ msgid ""
 "pixelplanet accounts. The required endpoints can be auto-discovered via the $"
 "{ wellKnownUrl } URL."
 msgstr ""
+"Pixelplanet compleix les especificacions OpenID Connect (OIDC). Per tant, "
+"una aplicació que admeti OIDC podria demanar consentiment i iniciar sessió "
+"utilitzant comptes de pixelplanet. Els punts finals requerits es poden "
+"descobrir automàticament a través de l'URL ${ wellKnownUrl }."
 
-#, fuzzy
 msgid "Place Voxels on a 3D canvas with others."
-msgstr "Col·loca voxels en un llenç 3D amb altres jugadors"
+msgstr "Col·loca Voxels en un llenç 3D amb altres jugadors."
 
 msgid "Place color pixels on an map styled canvas with other players online"
 msgstr ""
 "Pinta amb píxels de colors en un gran llenç amb altres jugadors en línia"
 
 msgid "Please try again."
-msgstr ""
+msgstr "Sisplau torna a intentar-ho."
 
 msgid "Please use int channel"
 msgstr "Si us plau, utilitza el canal \"int\""
 
 msgid "Read Badges and fishes"
-msgstr ""
+msgstr "Llegeix Insígnies i peixos"
 
 msgid "Read name, username and account age"
-msgstr ""
+msgstr "Llegeix el nom, el nom d'usuari i l'edat del compte"
 
 msgid "Redirect URIs"
-msgstr ""
+msgstr "Redirect URIs"
 
 msgid "Regularly update this data"
-msgstr ""
+msgstr "Actualitza aquestes dades regularment"
 
 msgid "Request stalled"
-msgstr ""
+msgstr "Sol·licitud estancada"
 
 #. 'client_secret' is a technical term and should not be translated
 msgid "Reroll client_secret"
@@ -501,7 +516,7 @@ msgid "Reset your password here"
 msgstr "Restableix la teva contrasenya aquí"
 
 msgid "Role flag can only be an image"
-msgstr ""
+msgstr "La bandera de rol ha de ser una imatge"
 
 msgid "Role flag needs to be 16x11"
 msgstr ""

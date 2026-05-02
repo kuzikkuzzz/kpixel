@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: admin@pixelplanet.fun\n"
-"PO-Revision-Date: 2026-04-30 15:39+0000\n"
+"PO-Revision-Date: 2026-05-02 03:30+0000\n"
 "Last-Translator: Ngvn <ngvn@noreply.pixelplanet.fun>\n"
 "Language-Team: Vietnamese <https://translate.gs-os.com/projects/ppfun/client/"
 "vi/>\n"
@@ -499,13 +499,13 @@ msgid "Credit for the Palette of the Top10 canvas goes to ${ vinikLink }."
 msgstr "Bảng màu cho khung vẽ Top10 được lấy từ ${ vinikLink }."
 
 msgid "Current Cooldown Changes per Country"
-msgstr ""
+msgstr "Những thay đổi thời gian hồi 1 pixel hiện tại theo tửng quốc gia"
 
 msgid "Custom Cursor"
-msgstr ""
+msgstr "Con trỏ của web"
 
 msgid "Custom Flag"
-msgstr ""
+msgstr "Cờ tùy chỉnh"
 
 msgid "DM"
 msgstr "Nhắn tin trực tiếp"
@@ -541,7 +541,7 @@ msgid "Delete Faction"
 msgstr "Xoá nhóm"
 
 msgid "Delete My Account"
-msgstr ""
+msgstr "Xóa tài khoản này"
 
 msgid "Delete the faction"
 msgstr "Xoá nhóm"
@@ -587,7 +587,7 @@ msgid "Display Palette in a compact form that takes less screen space."
 msgstr "Hiện thị bảng màu ở dạng nhỏ gọn và tốn ít không gian hơn."
 
 msgid "Do stuff with IPs (one IP per line)"
-msgstr ""
+msgstr "Làm các thứ với các IP (một IP mỗi dòng)"
 
 msgid ""
 "Don't let people find this faction in public search or look at its profile."
@@ -718,7 +718,7 @@ msgid "Factions Today"
 msgstr "Các nhóm hôm nay"
 
 msgid "Factions Total"
-msgstr "Tổng các nhóm"
+msgstr "Tổng nhóm"
 
 msgid ""
 "Factions allow you to coordinate better with other players. Search for "
@@ -766,7 +766,7 @@ msgid "For one year"
 msgstr "Trong một năm"
 
 msgid "For when you are playing on a potato."
-msgstr "Khi nếu bạn chơi trên một củ khoai tây."
+msgstr "Khi máy bạn quá gà."
 
 msgid "Forever"
 msgstr "Mãi mãi"
@@ -778,13 +778,13 @@ msgid "From Template"
 msgstr "Từ ảnh mẫu"
 
 msgid "Get IID"
-msgstr "Lấy IID"
+msgstr "Nhận IID"
 
 msgid "Get Pixels"
-msgstr ""
+msgstr "Nhận pixel"
 
 msgid "Get Users"
-msgstr ""
+msgstr "Nhận người dùng"
 
 msgid "Get email address"
 msgstr "Nhận địa chỉ email"
@@ -793,10 +793,10 @@ msgid "Get the amount of Pixels placed and ranking"
 msgstr "Nhận số lượng pixel đã được vẽ và bảng xếp hạng"
 
 msgid "Globe View"
-msgstr ""
+msgstr "Chế độ địa cầu"
 
 msgid "Go to"
-msgstr ""
+msgstr "Dịch chuyển đến"
 
 msgid "Grant"
 msgstr ""
@@ -814,7 +814,7 @@ msgid "Have fun!"
 msgstr "Chúc vui vẻ!"
 
 msgid "Height"
-msgstr "Độ cao"
+msgstr "Chiều cao"
 
 msgid "Help"
 msgstr "Trợ giúp"
@@ -851,16 +851,16 @@ msgid "I forgot my Password."
 msgstr "Tôi đã quên mật khẩu của tôi."
 
 msgid "ID"
-msgstr ""
+msgstr "ID"
 
 msgid "IID (optional)"
-msgstr ""
+msgstr "IID (tuỳ chọn)"
 
 msgid "IID Actions"
-msgstr ""
+msgstr "Hành động về IID"
 
 msgid "IP Actions"
-msgstr ""
+msgstr "Hành động về IP"
 
 msgid "Identifiers"
 msgstr ""
@@ -894,7 +894,7 @@ msgid "Interval"
 msgstr "Khoảng thời gian"
 
 msgid "Interval is invalid"
-msgstr ""
+msgstr "Khoảng thời gian không hợp lệ"
 
 msgid "Invalid Canvas"
 msgstr "Khung vẽ không hợp lệ"
@@ -1135,6 +1135,7 @@ msgstr "Ghi chú"
 
 msgid "Note: Your active Faction may overwrite your flag settings."
 msgstr ""
+"Ghi chú: Nhóm đang hoạt động hiện tại của bạn có thể sẽ ghi đè cờ tùy chỉnh."
 
 msgid "OIDC LogIn"
 msgstr "Đăng nhập OIDC"
@@ -1248,7 +1249,7 @@ msgid "Phish!"
 msgstr "Ká!"
 
 msgid "Phishes"
-msgstr "Những con Ká"
+msgstr "Ká đã bắt được"
 
 msgid "Ping"
 msgstr "Ping"
@@ -1417,7 +1418,8 @@ msgstr "Xoá một phương thức đăng nhập:"
 
 #, javascript-format
 msgid "Represents ${ activeFactionTitle } as ${ activeFactionRoleName }"
-msgstr "Hiện thị ${ activeFactionTitle } bằng ${ activeFactionRoleName }"
+msgstr ""
+"Đại diện cho nhóm${ activeFactionTitle }với vai trò${ activeFactionRoleName }"
 
 msgid "Require Verification to Place"
 msgstr "Yêu cầu xác thực để đặt"
@@ -1447,7 +1449,7 @@ msgid "Retract"
 msgstr ""
 
 msgid "Revoke consent of third party applications:"
-msgstr ""
+msgstr "Hủy chấp thuận cho ứng dụng bên thứ ba:"
 
 msgid "Role"
 msgstr "Vai trò"
@@ -1705,7 +1707,7 @@ msgstr ""
 "tải những phần mềm độc hại, cảm ơn."
 
 msgid "This faction has no invites"
-msgstr ""
+msgstr "Nhóm này không có lời mời"
 
 msgid ""
 "This is the name that other people see, e.g. in Chat. You can change it at "
@@ -1715,16 +1717,16 @@ msgstr ""
 "lúc nào. Tất cả kí tự trừ @, /, , >, < và # đều được cho phép."
 
 msgid "This login may only work if your account is verified."
-msgstr ""
+msgstr "Lần đăng nhập này chỉ hoạt động khi tài khoản của bạn được xác thực."
 
 msgid "This permission is required"
-msgstr ""
+msgstr "Quyền hạn này cần thiết"
 
 msgid "This user has not password set"
 msgstr "Người dùng này chưa đặt mật khẩu"
 
 msgid "Timeout"
-msgstr ""
+msgstr "Hết thời gian chờ"
 
 msgid "Tip: Not case-sensitive; I and l are the same"
 msgstr ""
@@ -1744,25 +1746,25 @@ msgstr ""
 "vẽ."
 
 msgid "Title"
-msgstr "Tiêu đề"
+msgstr "Tên hiệu"
 
 msgid "Title can't be empty."
-msgstr "Tiêu đề không thể để trống."
+msgstr "Tên hiệu không thể để trống."
 
 msgid "Title contains invalid character like @, /, \\ or #"
-msgstr "Tiêu đề chứa các kí tự không hợp lệ như @, /, \\ hoặc #"
+msgstr "Tên hiệu chứa các kí tự không hợp lệ như @, /, \\ hoặc #"
 
 msgid "Title must be at least 2 characters long"
 msgstr "Tên hiệu phải dài ít nhất hai kí tự"
 
 msgid "Title must be shorter than 26 characters"
-msgstr "Tiêu đề phải ngắn hơn 26 kí tự"
+msgstr "Tên hiệu phải ngắn hơn 26 kí tự"
 
 msgid "Title of your faction"
-msgstr ""
+msgstr "Tên hiệu cho nhóm của bạn"
 
 msgid "To use this page, enter your Password:"
-msgstr ""
+msgstr "Để sử dụng trang này, hãy nhập mật khẩu của bạn:"
 
 msgid "Today"
 msgstr "Hôm nay"
@@ -1771,7 +1773,7 @@ msgid "Today Placed Pixels"
 msgstr "Số pixel đã đặt vào hôm nay"
 
 msgid "Top 10 Countries [pxls / day]"
-msgstr ""
+msgstr "Top 10 các nước [pixel / ngày]"
 
 msgid "Top 10 Daily Ranking"
 msgstr "Bảng xếp hạng top 10 hằng ngày"
@@ -1783,13 +1785,13 @@ msgid "Top 10 Players from Yesterday"
 msgstr "Top 10 người chơi hôm qua"
 
 msgid "Top-left corner"
-msgstr ""
+msgstr "Góc trên bên trái"
 
 msgid "Total"
 msgstr "Tổng pixel"
 
 msgid "Total Online Users"
-msgstr ""
+msgstr "Tổng số người dùng trực tuyến"
 
 msgid "Total Pixels per Faction"
 msgstr "Tổng pixel được đặt mỗi nhóm"
@@ -1801,7 +1803,7 @@ msgid "Total Pixels placed per day"
 msgstr "Tổng pixel được đặt trong từng ngày"
 
 msgid "Total Rank"
-msgstr ""
+msgstr "Tổng hạng"
 
 msgid ""
 "Turn every pixel in area to 0 (YOU REALLY SHOULDN'T DO THAT ON ANY AREA THAT "
@@ -1818,40 +1820,40 @@ msgid "Type the characters from the following image:"
 msgstr "Nhập ký tự có trong hình ảnh sau:"
 
 msgid "Unban media"
-msgstr ""
+msgstr "Bỏ cấm đa phương tiện"
 
 msgid "Unban members"
-msgstr ""
+msgstr "Bỏ cấm thành viên"
 
 msgid "Unblock"
-msgstr ""
+msgstr "Bỏ chặn"
 
 msgid "Unblock Users"
-msgstr ""
+msgstr "Bỏ chặn người dùng"
 
 msgid "Unknown Captcha Error"
 msgstr "Lỗi Chaptra không xác định"
 
 msgid "Unknown Error"
-msgstr ""
+msgstr "Lỗi không xác định"
 
 msgid "Unmuted Sound"
 msgstr "Âm thanh không bị tắt tiếng"
 
 msgid "Until the browser closes"
-msgstr ""
+msgstr "Đến khi trình duyệt đóng"
 
 msgid "Upload images to canvas"
-msgstr ""
+msgstr "Tải ảnh lên khung vẽ"
 
 msgid "Use our custom cursor"
-msgstr ""
+msgstr "Sử dụng con trỏ đặc biệt của chúng tôi"
 
 msgid "User"
 msgstr "Người dùng"
 
 msgid "User Account"
-msgstr ""
+msgstr "Tài khoản người dùng"
 
 msgid "User Area"
 msgstr "Khu vực người dùng"
@@ -1885,7 +1887,7 @@ msgstr "Những người dùng"
 
 #, javascript-format
 msgid "We are Libre Software under the ${ agplLink }, "
-msgstr ""
+msgstr "Chúng tôi là Libre Sofrware theo giấy phép ${ agplLink }, "
 
 msgid ""
 "We decided to archive it as a timelapse with lossless encoded webm. Taking a "
@@ -1901,13 +1903,13 @@ msgstr ""
 "dụng bảng màu của họ tại"
 
 msgid "Weird"
-msgstr ""
+msgstr "Kì lạ"
 
 msgid "What the pencil should draw on the current canvas."
 msgstr "Bút chì nên vẽ gì trong khung vẽ hiện tại."
 
 msgid "Whether or not this invite can only be used once."
-msgstr ""
+msgstr "Liệu lời mời này có thể được sử dụng một lần hay không."
 
 msgid ""
 "While we tend to not delete canvases, some canvases are started for fun or "
@@ -1920,10 +1922,10 @@ msgid "Why?"
 msgstr "Tại sao?"
 
 msgid "Width"
-msgstr ""
+msgstr "Chiều rộng"
 
 msgid "Wrong Color"
-msgstr ""
+msgstr "Sai màu"
 
 msgid "YOU CAN ONLY CHOOSE YOUR USERNAME ONCE!"
 msgstr "BẠN CHỈ CÓ THỂ CHỌN TÊN CỦA BẠN MỘT LẦN DUY NHẤT!"
@@ -1932,7 +1934,7 @@ msgid "Yes"
 msgstr "Vâng"
 
 msgid "Yes, really delete Me"
-msgstr ""
+msgstr "Vâng, thật sự hãy xoá tôi"
 
 msgid "Yesterday"
 msgstr "Hôm qua"
@@ -1949,6 +1951,9 @@ msgid ""
 "You are banned. You think it is unjustified? Check out the ${ helpButton } "
 "on how to appeal. And don't forget to include the BID you can get below."
 msgstr ""
+"Bạn đã bị cấm. Bạn cho rằng điều này không công bằng? Hãy xem ${ "
+"helpButton } về cách kháng cáo. Và đừng quên ghi rõ BID bạn có thể nhận được "
+"dưới đây."
 
 msgid "You are currently not a member of any faction."
 msgstr "Bạn hiện đang không trong bất cứ nhóm nào."
@@ -1960,11 +1965,15 @@ msgid ""
 "You are currently not representing any faction. To represent one, activate a "
 "role in one of your factions below."
 msgstr ""
+"Bạn hiện không đại diện cho bất kì nhóm nào. Để đại diện, kích hoạt một vai "
+"trò từ một trong các nhóm của bạn dưới đây."
 
 #, javascript-format
 msgid ""
 "You are currently representing ${ activeFactionTitle } as ${ activeRoleName }"
 msgstr ""
+"Bạn đang đại diện cho nhóm${ activeFactionTitle }với vai trò${ "
+"activeRoleName }"
 
 #, javascript-format
 msgid "You are logged in as ${ name } [${ username }]."
@@ -1977,7 +1986,7 @@ msgid "You are using a Proxy."
 msgstr "Bạng đang dùng Proxy."
 
 msgid "You are weird"
-msgstr ""
+msgstr "Bạn trông khá kì lạ"
 
 msgid ""
 "You can connect to pixelplanet and use pixelplanet accounts for oauth / oidc "
@@ -1985,10 +1994,10 @@ msgid ""
 msgstr ""
 
 msgid "You can not access this canvas yet, because your pixel score is too low"
-msgstr ""
+msgstr "Bạn chưa thể truy cập khung vẽ này, vì điểm pixel của bạn quá thấp"
 
 msgid "You can now place more on pixelplanet.fun :)"
-msgstr ""
+msgstr "Bạn có thể đặt nhiều hơn tại pixelplanet.fun :)"
 
 #, javascript-format
 msgid ""
@@ -1999,7 +2008,7 @@ msgstr ""
 "{ size }kg! Như một phần thưởng, thời gian hồi 1 pixel của bạn sẽ được giảm."
 
 msgid "You did not consent"
-msgstr ""
+msgstr "Bạn không đồng ý"
 
 msgid "You failed your captcha"
 msgstr "Bạn đã không giải được captcha"
@@ -2025,10 +2034,10 @@ msgid "You must be logged in to chat"
 msgstr "Bạn phải đăng nhập để trò chuyện"
 
 msgid "You must enter a UserId"
-msgstr ""
+msgstr "Bạn phải nhập một UserId"
 
 msgid "You must enter a mediaId or media BID"
-msgstr ""
+msgstr "Bạn phải nhập một mediaid hoặc BID"
 
 msgid "You must enter a reason"
 msgstr "Bạn phải nhập một lí do"
@@ -2037,16 +2046,16 @@ msgid "You must enter a username"
 msgstr "Bạn phải nhập một tên người dùng"
 
 msgid "You must enter an BID"
-msgstr ""
+msgstr "Bạn phải nhập một BID"
 
 msgid "You must enter an IID"
-msgstr ""
+msgstr "Bạn phải nhập một IID"
 
 msgid "You must enter an IID or UserId"
-msgstr ""
+msgstr "Bạn phải nhập một IID hoặc UserId"
 
 msgid "You must enter at least one IID, User Id or BID"
-msgstr ""
+msgstr "Bạn phải nhập một IID, User Id hoặc BID"
 
 msgid "You must select an avatar for your faction"
 msgstr "Bạn phải đặt một ảnh đại diện cho nhóm của bạn"
@@ -2058,6 +2067,9 @@ msgid ""
 "Your Browser doesn't allow us to use AudioContext to play sounds. Do you "
 "have some privacy feature blocking us?"
 msgstr ""
+"Trình duyệt của bạn không cho phép chúng tôi sử dụng AudioContext để phát âm "
+"thanh. Bạn có đang kích hoạt các chức năng riêng tư mà ngăn cản chúng tôi "
+"không?"
 
 msgid "Your Browser looks shady"
 msgstr "Trình duyệt của bạn trông đáng ngờ"
@@ -2075,12 +2087,14 @@ msgid "Your ban expires at "
 msgstr "Lệnh cấm của bạn sẽ hết hiệu lực vào "
 
 msgid "Your device looks weird"
-msgstr ""
+msgstr "Thiết bị của bạn trông kì lạ"
 
 msgid ""
 "Your did not set your username yet. A username is required to login to other "
 "applications. You can set it now:"
 msgstr ""
+"Bạn chưa có một tên người dùng cho bạn. Một tên người dùng là cần thiết để "
+"đăng nhập vào các chương trình khác. Bạn có thể đặt nó ở đây ngay bây giờ:"
 
 msgid "Your name is:"
 msgstr "Tên bạn là:"
@@ -2095,7 +2109,7 @@ msgstr ""
 "Phóng to thay vì đặt một pixel khi nhấn vào khung vẽ và mức thu phóng đủ nhỏ."
 
 msgid "a hidden faction"
-msgstr ""
+msgstr "một nhóm ẩn"
 
 msgid "affects"
 msgstr ""

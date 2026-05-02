@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: admin@pixelplanet.fun\n"
-"PO-Revision-Date: 2026-04-29 16:08+0000\n"
-"Last-Translator: Ngvn <ngvn@noreply.pixelplanet.fun>\n"
+"PO-Revision-Date: 2026-05-02 03:30+0000\n"
+"Last-Translator: neron2321 <neron2321@noreply.pixelplanet.fun>\n"
 "Language-Team: Vietnamese <https://translate.gs-os.com/projects/ppfun/server/"
 "vi/>\n"
 "Language: vi\n"
@@ -303,7 +303,7 @@ msgid "Invalid url :( Please check your mail again."
 msgstr "Liên kết không hợp lệ :( Vui lòng kiểm tra mail của bạn lần nữa."
 
 msgid "Just admins can do that"
-msgstr "Chỉ những quản trị viên mới có thể làm vậy"
+msgstr "Chỉ những quản trị viên mới được làm vậy"
 
 msgid "Just janny, mod or admin can do that"
 msgstr "Chỉ lao công, mod hoặc quản trị viên mới được làm vậy"
@@ -413,7 +413,7 @@ msgid "No such badge found"
 msgstr "Không tìm thấy huy hiệu nào như vậy"
 
 msgid "No such fish found"
-msgstr "Không con cá nào được thấy"
+msgstr "Không tìm thấy con cá nào như vậy"
 
 msgid "One redirect URIs per line"
 msgstr "Một URI chuyển hướng mỗi dòng"
@@ -455,7 +455,7 @@ msgid "PixelCanvas"
 msgstr "PixelCanvas"
 
 msgid "PixelPlanet.Fun 3DGlobe"
-msgstr "PixelPlanet.Fun Quả địa cầu 3D"
+msgstr "Quả địa cầu 3D PixelPlanet.Fun"
 
 msgid "PixelZone"
 msgstr "PixelZone"
@@ -637,16 +637,16 @@ msgid "This user is private"
 msgstr "Người dùng riêng tư"
 
 msgid "Title can't be empty."
-msgstr "Tiêu đề không thể để trống."
+msgstr "Tên hiệu không thể để trống."
 
 msgid "Title contains invalid character like @, /, \\ or #"
-msgstr "Tiêu đề chứa các kí tự không hợp lệ như @, /, \\ hoặc #"
+msgstr "Tên hiệu chứa các kí tự không hợp lệ như @, /, \\ hoặc #"
 
 msgid "Title must be at least 2 characters long"
 msgstr "Tên hiệu phải dài ít nhất hai kí tự"
 
 msgid "Title must be shorter than 26 characters"
-msgstr "Tiêu đề phải ngắn hơn 26 kí tự"
+msgstr "Tên hiệu phải ngắn hơn 26 kí tự"
 
 #. "redirect_uris" is a technical term and should not be translated
 msgid "Too many or too long redirect_uris"
@@ -864,7 +864,7 @@ msgid "Your country is temporary muted from this chat channel"
 msgstr "Quốc gia của bạn hiện đang tạm thời bị tắt tiếng trong kênh chat này"
 
 msgid "Your device looks weird"
-msgstr ""
+msgstr "Thiết bị của bạn trông kì lạ"
 
 msgid "Your mail has to be verified in order to chat"
 msgstr "Email của bạn phải được xác thực để có thể trò chuyện"

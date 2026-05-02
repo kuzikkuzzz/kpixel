@@ -3,8 +3,8 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: admin@pixelplanet.fun\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2026-04-19 10:59+0000\n"
-"Last-Translator: kurac <kurac@noreply.pixelplanet.fun>\n"
+"PO-Revision-Date: 2026-05-02 03:30+0000\n"
+"Last-Translator: juѕuf <jusuf@noreply.pixelplanet.fun>\n"
 "Language-Team: Croatian <https://translate.gs-os.com/projects/ppfun/server/"
 "hr/>\n"
 "Language: hr\n"
@@ -108,7 +108,7 @@ msgstr "Nije moguće podizanje powerlevela uloge na razinu vaše uloge"
 
 #, javascript-format
 msgid "Can not have more than ${ MAX_ROLES_PER_FACTION } faction roles"
-msgstr ""
+msgstr "Ne može imati više od ${ MAX_ROLES_PER_FACTION } uloga"
 
 msgid "Can not have more than 20 invites per faction"
 msgstr "Ne možete imati više od 20 pozivnica po fakciji"
@@ -252,7 +252,7 @@ msgstr "Datoteka je oštećena"
 #. 'client_secret' is a technical term and should not be translated
 msgid ""
 "Generate a new client_secret. The old secret will become invalid immediately."
-msgstr ""
+msgstr "Generiraj novi client_secret. Stari secret će odmah postati nevažeći."
 
 msgid "Get email address"
 msgstr "Dobij adresu e-pošte"
@@ -297,7 +297,7 @@ msgstr ""
 "je zatražio ovu poruku e-pošte bio je ${ ip })."
 
 msgid "Incorrect password"
-msgstr ""
+msgstr "Netočna lozinka"
 
 msgid "Invalid type of media"
 msgstr "Nevažeća vrsta medija"
@@ -319,7 +319,7 @@ msgstr "Znajte da račun postoji"
 
 #. "scopes" is a technical term and should not be translated
 msgid "List of available scopes"
-msgstr ""
+msgstr "Popis dostupnih scopes"
 
 msgid "Loading..."
 msgstr "Učitavam..."
@@ -407,7 +407,7 @@ msgstr "Lozinka nije navedena."
 
 #. "redirect_uris" is a technical term and should not be translated
 msgid "No redirect_uris given."
-msgstr ""
+msgstr "Nije naveden redirect_uris."
 
 msgid "No such badge found"
 msgstr "Nije pronađen takav bedž"
@@ -423,7 +423,7 @@ msgstr "Jedan redirect_uri po retku"
 
 #. "redirect_uris" is a technical term and should not be translated
 msgid "Only five redirect_uris are allowed per client"
-msgstr ""
+msgstr "Dopušteno je samo pet redirect_uris po klijentu"
 
 msgid "Only four colors. Same rules as moon!"
 msgstr "Samo četiri boje. Ista pravila kao i mjesec!"
@@ -500,7 +500,7 @@ msgstr "Zahtjev je zaustavljen"
 
 #. 'client_secret' is a technical term and should not be translated
 msgid "Reroll client_secret"
-msgstr ""
+msgstr "Ponovno generiranje client_secret"
 
 msgid "Reset Password"
 msgstr "Ponovno postavite lozinku"
@@ -538,6 +538,8 @@ msgid ""
 "Space-separated list of default scopes, they will be used on requests where "
 "no other scope is given."
 msgstr ""
+"Popis zadanih scopes odvojenih razmacima, koristit će se na zahtjevima gdje "
+"nije naveden drugi scope."
 
 msgid "Space-separated list of scopes that should be available"
 msgstr "Popis opsega koji bi trebali biti dostupni, odvojen razmacima"
@@ -625,7 +627,7 @@ msgid "This password-reset link isn't valid anymore :("
 msgstr "Ova veza za ponovno postavljanje lozinke više nije važeća :("
 
 msgid "This user has not password set"
-msgstr ""
+msgstr "Ovaj korisnik nema postavljenu lozinku"
 
 msgid "This user is private"
 msgstr "Ovaj korisnik je privatan"
@@ -644,7 +646,7 @@ msgstr "Naslov mora biti kraći od 26 znakova"
 
 #. "redirect_uris" is a technical term and should not be translated
 msgid "Too many or too long redirect_uris"
-msgstr ""
+msgstr "Previše ili predugačke redirect_uris"
 
 msgid "Top10"
 msgstr "Top10"
@@ -813,7 +815,7 @@ msgstr "Trebate pozivnicu da biste se pridružili ovoj fakciji"
 
 #. "scope" is a technical term and should not be translated
 msgid "You need to define a valid scope"
-msgstr ""
+msgstr "Morate definirati valjani scope"
 
 msgid "You need to directly access this page in the browser :("
 msgstr "Morate izravno pristupiti ovoj stranici u pregledniku :("
@@ -855,7 +857,7 @@ msgid "Your country is temporary muted from this chat channel"
 msgstr "Vaša je zemlja privremeno isključena iz ovog kanala za chat"
 
 msgid "Your device looks weird"
-msgstr ""
+msgstr "Vaš uređaj izgleda čudno"
 
 msgid "Your mail has to be verified in order to chat"
 msgstr "Vaša pošta mora biti potvrđena da biste mogli razgovarati"
@@ -899,7 +901,7 @@ msgstr "Ovaj medij je zabranjen [Veličanje terorizma]"
 
 #. "redirect_uris" is a technical term and should not be translated
 msgid "redirect_uris does not look legit"
-msgstr ""
+msgstr "redirect_uris ne izgleda ispravno"
 
 msgid "to go back to pixelplanet"
 msgstr "da se vratite na pixelplanet"
