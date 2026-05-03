@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: admin@pixelplanet.fun\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2026-05-02 03:30+0000\n"
+"PO-Revision-Date: 2026-05-03 06:30+0000\n"
 "Last-Translator: TheCat13 <thecat13@noreply.pixelplanet.fun>\n"
 "Language-Team: Catalan <https://translate.gs-os.com/projects/ppfun/client/"
 "ca/>\n"
@@ -516,19 +516,19 @@ msgid "Custom Cursor"
 msgstr "Cursor Personalitzat"
 
 msgid "Custom Flag"
-msgstr ""
+msgstr "Bandera Personalitzada"
 
 msgid "DM"
 msgstr "Missatge Privat"
 
 msgid "Daily Pixels"
-msgstr ""
+msgstr "Píxels Diaris"
 
 msgid "Daily Pixels per Country"
 msgstr "Píxels Diaris per País"
 
 msgid "Daily Pixels per Faction"
-msgstr ""
+msgstr "Píxels Diaris per Facció"
 
 msgid "Daily Pixels per Player"
 msgstr "Píxels Diaris per Jugador"
@@ -537,7 +537,7 @@ msgid "Daily Rank"
 msgstr "Classificació Diària"
 
 msgid "Date of Award"
-msgstr ""
+msgstr "Data del Premi"
 
 msgid "Date of catch"
 msgstr "Data de captura"
@@ -549,19 +549,19 @@ msgid "Delete Account"
 msgstr "Esborra el Compte"
 
 msgid "Delete Faction"
-msgstr ""
+msgstr "Esborra la Facció"
 
 msgid "Delete My Account"
-msgstr ""
+msgstr "Esborra El Meu Compte"
 
 msgid "Delete the faction"
-msgstr ""
+msgstr "Esborra la facció"
 
 msgid "Deny"
 msgstr "Denegar"
 
 msgid "Description"
-msgstr ""
+msgstr "Descripció"
 
 msgid "Description can't be empty"
 msgstr "La descripció no pot estar buida"
@@ -570,7 +570,7 @@ msgid "Description must be shorter than 1000 characters"
 msgstr "La descripció ha de tenir menys de 1000 caràcters"
 
 msgid "Description of your faction"
-msgstr ""
+msgstr "Descripció de la teva facció"
 
 msgid ""
 "Didn't get an answer from pixelplanet. Try to refresh if this problem "
@@ -604,21 +604,23 @@ msgstr "Fes coses amb IPs (una IP per línia)"
 msgid ""
 "Don't let people find this faction in public search or look at its profile."
 msgstr ""
+"No permetre que la gent trobi aquesta facció en la recerca pública o miri el "
+"seu perfil."
 
 msgid "Don't remember"
 msgstr "No recordar"
 
 msgid "Don't show faction in search"
-msgstr ""
+msgstr "No mostrar la facció a la cerca"
 
 msgid "Don't show me in global stats"
 msgstr "No em mostris a les estadístiques globals"
 
 msgid "Done"
-msgstr ""
+msgstr "Fet"
 
 msgid "Download"
-msgstr ""
+msgstr "Baixa"
 
 msgid "Download Template"
 msgstr "Descarregar Plantilla"
@@ -642,13 +644,13 @@ msgid "Edit"
 msgstr "Edita"
 
 msgid "Edit faction"
-msgstr ""
+msgstr "Edita la facció"
 
 msgid "Edit roles below their own"
-msgstr ""
+msgstr "Editar els rols per sota del seu"
 
 msgid "Edit their own role and elevate users to their own level"
-msgstr ""
+msgstr "Editar el seu propi rol i elevar usuaris al seu propi nivell"
 
 msgid "Email"
 msgstr "Correu Electrònic"
@@ -694,10 +696,10 @@ msgid "Enter UserName of new Mod"
 msgstr "Introdueix el Nom d'Usuari del nou Moderador"
 
 msgid "Enter a little text that describes your faction"
-msgstr ""
+msgstr "Introdueix un petit text que descrigui la teva facció"
 
 msgid "Enter search term and press Search."
-msgstr ""
+msgstr "Introdueix el terme de cerca i prem Cerca."
 
 msgid "Enter your mail address and we will send you a new password:"
 msgstr ""
@@ -721,21 +723,23 @@ msgid "Export enabled templates"
 msgstr "Exporta les plantilles habilitades"
 
 msgid "Faction"
-msgstr ""
+msgstr "Facció"
 
 msgid "Factions"
-msgstr ""
+msgstr "Faccions"
 
 msgid "Factions Today"
-msgstr ""
+msgstr "Faccions Avui"
 
 msgid "Factions Total"
-msgstr ""
+msgstr "Total Faccions"
 
 msgid ""
 "Factions allow you to coordinate better with other players. Search for "
 "existing factions, find friends or create your own faction."
 msgstr ""
+"Les faccions et permeten coordinar-te millor amb altres jugadors. Cerca "
+"faccions existents, troba amics o crea la teva pròpia facció."
 
 msgid "Factor"
 msgstr "Factor"
@@ -818,7 +822,7 @@ msgid "Grid ON"
 msgstr "Quadrícula Activada"
 
 msgid "Groups"
-msgstr ""
+msgstr "Grups"
 
 msgid "Have fun!"
 msgstr "Passa-t'ho bé!"
@@ -840,7 +844,7 @@ msgid "Hide Embed"
 msgstr "Amaga l'Incrustació"
 
 msgid "Hide from profile"
-msgstr ""
+msgstr "Amaga-ho del perfil"
 
 msgid ""
 "Higher zoomlevels take some time to update, the 3D globe gets updated at "
@@ -865,7 +869,7 @@ msgid "I forgot my Password."
 msgstr "He oblidat la meva Contrasenya."
 
 msgid "ID"
-msgstr ""
+msgstr "ID"
 
 msgid "IID (optional)"
 msgstr "IID (opcional)"
@@ -926,16 +930,16 @@ msgid "Invalid color selected"
 msgstr "Color invàlid seleccionat"
 
 msgid "Invite"
-msgstr ""
+msgstr "Invitació"
 
 msgid "Invited to Chat"
 msgstr "T'han Convidat al Xat"
 
 msgid "Invites"
-msgstr ""
+msgstr "Invitacions"
 
 msgid "Is One-Time-Invite"
-msgstr ""
+msgstr "Convida Només Una Vegada"
 
 msgid ""
 "It requests the following permissions. Uncheck what you don't want to grant:"
@@ -946,13 +950,13 @@ msgid "Jannies can rollback and protect, but not watch or ban."
 msgstr "Els Jannies poden revertir i protegir, però no vigilar ni banejar."
 
 msgid "Join"
-msgstr ""
+msgstr "Uneix-te"
 
 msgid "Join Faction"
-msgstr ""
+msgstr "Uneix-te a la Facció"
 
 msgid "Joined"
-msgstr ""
+msgstr "T'has Unit"
 
 msgid "Just for registered Users"
 msgstr "Només per a Usuaris registrats"
@@ -968,31 +972,32 @@ msgid "Keep Ratio"
 msgstr "Mantenir Proporció"
 
 msgid "Kick"
-msgstr ""
+msgstr "Expulsa"
 
 msgid "Kick members"
-msgstr ""
+msgstr "Expulsa membres"
 
 msgid "Know that an account exists"
 msgstr "Saber que un compte existeix"
 
 msgid "Leave"
-msgstr ""
+msgstr "Abandona"
 
 msgid "Leave Faction"
-msgstr ""
+msgstr "Abandona la Facció"
 
 msgid "Legal Requests"
 msgstr "Peticions Legals"
 
 msgid "Let everyone join this faction"
-msgstr ""
+msgstr "Deixa que tothom s'uneixi a aquesta facció"
 
 msgid "Let people join this faction without needing an invite."
 msgstr ""
+"Deixa que la gent s'uneixi a aquesta facció sense necessitar una invitació."
 
 msgid "Level"
-msgstr ""
+msgstr "Nivell"
 
 msgid "Light Grid"
 msgstr "Quadrícula Clara"
@@ -1007,7 +1012,7 @@ msgid "Loading..."
 msgstr "Carregant..."
 
 msgid "Log in or Register"
-msgstr ""
+msgstr "Inicia Sessió o Registra't"
 
 msgid "Log out"
 msgstr "Tanca la sessió"
@@ -1028,7 +1033,7 @@ msgid "Login to grant access to other application."
 msgstr "Inicia la sessió per concedir accés a una altra aplicació."
 
 msgid "Login to join us."
-msgstr ""
+msgstr "Inicia sessió per unir-te a nosaltres."
 
 msgid "Login to other application"
 msgstr "Inicia la sessió a una altra aplicació"
@@ -1043,10 +1048,10 @@ msgid "Manage Moderators"
 msgstr "Administrar Moderadors"
 
 msgid "Manage Templates"
-msgstr ""
+msgstr "Gestiona les Plantilles"
 
 msgid "Manage invites"
-msgstr ""
+msgstr "Gestiona les invitacions"
 
 msgid "Map Data"
 msgstr "Dades del Mapa"
@@ -1055,10 +1060,10 @@ msgid "Maximize"
 msgstr "Maximitza"
 
 msgid "Media Actions"
-msgstr ""
+msgstr "Accions de Multimèdia"
 
 msgid "Members"
-msgstr ""
+msgstr "Membres"
 
 msgid "Minimum Color Distance"
 msgstr "Distància de Color Mínima"
@@ -1074,13 +1079,13 @@ msgid "Move"
 msgstr "Mou"
 
 msgid "Mute Channel"
-msgstr ""
+msgstr "Silencia Aquest Canal"
 
 msgid "Muted Sound"
 msgstr "So Silenciat"
 
 msgid "My Factions"
-msgstr ""
+msgstr "Les Meves Faccions"
 
 msgid "Name"
 msgstr "Nom"
@@ -1101,10 +1106,10 @@ msgid "Name must be shorter than 26 characters"
 msgstr "El nom no pot contenir més de 26 caràcters"
 
 msgid "Name of this role"
-msgstr ""
+msgstr "Nom d'aquest rol"
 
 msgid "Name of your faction (this can not be changed later)"
-msgstr ""
+msgstr "Nom de la teva facció (això no es pot canviar més tard)"
 
 msgid "Name or Email"
 msgstr "Nom o Correu Electrònic"
@@ -1125,13 +1130,13 @@ msgid "No"
 msgstr "No"
 
 msgid "No File selected to upload"
-msgstr ""
+msgstr "No has seleccionat cap Fitxer per pujar"
 
 msgid "No Phish!"
-msgstr ""
+msgstr "No hi ha cap Peix!"
 
 msgid "No flag selected"
-msgstr ""
+msgstr "No has seleccionat cap bandera"
 
 msgid "No or invalid captcha text"
 msgstr "No hi ha text de captcha o és invàlid"
@@ -1140,22 +1145,24 @@ msgid "No password given."
 msgstr "No s'ha escrit cap contrasenya."
 
 msgid "No results."
-msgstr ""
+msgstr "No hi ha resultats."
 
 msgid "Nobody is banned from this faction"
-msgstr ""
+msgstr "Ningú està banejat d'aquesta facció"
 
 msgid "Not Allowed"
-msgstr ""
+msgstr "No Permès"
 
 msgid "Not allowed"
 msgstr "No tens permisos"
 
 msgid "Note"
-msgstr ""
+msgstr "Nota"
 
 msgid "Note: Your active Faction may overwrite your flag settings."
 msgstr ""
+"Nota: La teva facció activa pot sobreescriure la teva configuració de "
+"bandera."
 
 msgid "OIDC LogIn"
 msgstr "Inici de Sessió d'OIDC"
@@ -1174,7 +1181,7 @@ msgid "Old Password"
 msgstr "Contrasenya Antiga"
 
 msgid "One-Time"
-msgstr ""
+msgstr "Una Vegada"
 
 msgid "Online Users"
 msgstr "Usuaris en Línia"
@@ -1189,7 +1196,7 @@ msgid "Opacity of Overlay in percent."
 msgstr "Opacitat de la Superposició (percentatge)."
 
 msgid "Open"
-msgstr ""
+msgstr "Obre"
 
 msgid "Open Chat"
 msgstr "Obre el Xat"
@@ -1201,7 +1208,7 @@ msgid "Open in PopUp"
 msgstr "Obre en una Finestra Emergent"
 
 msgid "OpenID Connect Client registration"
-msgstr ""
+msgstr "Registre de Client OpenID Connect"
 
 msgid ""
 "Our main canvas is a huge worldmap, you can place wherever you like, but you "
@@ -1229,7 +1236,7 @@ msgid "Overlay Opacity"
 msgstr "Opacitat de la Superposició"
 
 msgid "Overview"
-msgstr ""
+msgstr "Visió general"
 
 msgid "Palette Download"
 msgstr "Descarrega la Paleta"
@@ -1264,7 +1271,7 @@ msgid "Permission"
 msgstr "Permís"
 
 msgid "Permissions of Powerlevels"
-msgstr ""
+msgstr "Permisos dels Nivells de Poder"
 
 msgid "Phish!"
 msgstr "Peix!"
@@ -1289,7 +1296,7 @@ msgid "Pixel protected"
 msgstr "Píxel protegit!"
 
 msgid "Pixels"
-msgstr ""
+msgstr "Píxels"
 
 msgid "Place color pixels on a large canvas with other players online!"
 msgstr ""
@@ -1324,10 +1331,12 @@ msgid "Potato Mode"
 msgstr "Mode Patata"
 
 msgid "Powerlevel"
-msgstr ""
+msgstr "Nivell de poder"
 
 msgid "Powerlevel of this role. See table below for an explanation."
 msgstr ""
+"Nivell de poder d'aquest rol. Consulta la taula següent per obtenir una "
+"explicació."
 
 #, javascript-format
 msgid ""
@@ -1344,7 +1353,7 @@ msgstr "Prem ${ bindG } per activar/desactivar la quadrícula"
 msgid "Press ${ bindH } to toggle historical view"
 msgstr "Prem ${ bindH } per activar/desactivar la vista històrica"
 
-#, fuzzy, javascript-format
+#, javascript-format
 msgid "Press ${ bindQ } and ${ bindE } to fly up and down"
 msgstr "Prem ${ bindQ } i ${ bindE } per volar amunt i avall"
 
@@ -1378,7 +1387,7 @@ msgid "Range Banned"
 msgstr "Rang Banejat"
 
 msgid "Rank"
-msgstr ""
+msgstr "Rang"
 
 msgid "Ranked"
 msgstr "Classificat"
@@ -1431,14 +1440,14 @@ msgid "Remove Moderator"
 msgstr "Elimina el Moderador"
 
 msgid "Remove Roles"
-msgstr ""
+msgstr "Elimina Rols"
 
 msgid "Remove a Login method:"
 msgstr "Elimina un mètode d'Inici de Sessió:"
 
 #, javascript-format
 msgid "Represents ${ activeFactionTitle } as ${ activeFactionRoleName }"
-msgstr ""
+msgstr "Representa ${ activeFactionTitle } com a ${ activeFactionRoleName }"
 
 msgid "Require Verification to Place"
 msgstr "Cal Verificació per Col·locar"
@@ -1471,13 +1480,13 @@ msgid "Revoke consent of third party applications:"
 msgstr "Revoca el consentiment de les aplicacions de tercers:"
 
 msgid "Role"
-msgstr ""
+msgstr "Rol"
 
 msgid "Role Flags"
-msgstr ""
+msgstr "Banderes de Rol"
 
 msgid "Roles"
-msgstr ""
+msgstr "Rols"
 
 msgid "Roll different Captcha Fonts"
 msgstr "Desplega diferents Fonts de Captcha"
@@ -1501,19 +1510,20 @@ msgstr ""
 "els dits per fer zoom"
 
 msgid "Search"
-msgstr ""
+msgstr "Cerca"
 
 msgid "Search Existing Faction"
-msgstr ""
+msgstr "Cerca una Facció Existent"
 
 msgid "Search Term"
-msgstr ""
+msgstr "Terme de Cerca"
 
 msgid "See hidden users in member list"
-msgstr ""
+msgstr "Mostra els usuaris ocults a la llista de membres"
 
 msgid "Select Avatar of this Faction. Supported Formats: jpg, gif, png, webp"
 msgstr ""
+"Selecciona l'Avatar d'aquesta Facció. Formats Admesos: jpg, gif, png, webp"
 
 msgid "Select Date above"
 msgstr "Selecciona la Data amunt"
@@ -1522,16 +1532,16 @@ msgid "Select File"
 msgstr "Selecciona l'Arxiu"
 
 msgid "Select Flag"
-msgstr ""
+msgstr "Selecciona la Bandera"
 
 msgid "Select Language"
 msgstr "Selecciona l'Idioma"
 
 msgid "Select a valid powerlevel"
-msgstr ""
+msgstr "Selecciona un nivell de poder vàlid"
 
 msgid "Select a valid pwerlevel"
-msgstr ""
+msgstr "Selecciona un nivell de poder vàlid"
 
 msgid ""
 "Select the canvas you want to use.\n"
@@ -1545,13 +1555,13 @@ msgstr ""
 "Els llenços arxivats es poden accedir aquí:"
 
 msgid "Select your Avatar. Supported Formats: jpg, gif, png, webp"
-msgstr ""
+msgstr "Selecciona el teu Avatar. Formats Admesos: jpg, gif, png, webp"
 
 msgid "Selected Color"
 msgstr "Color Seleccionat"
 
 msgid "Selected Flag:"
-msgstr ""
+msgstr "Bandera Seleccionada:"
 
 msgid "Send"
 msgstr "Envia"
@@ -1565,7 +1575,7 @@ msgid "Serpentine"
 msgstr "Serpentí"
 
 msgid "Server Error"
-msgstr ""
+msgstr "Error del Servidor"
 
 msgid "Server answered with gibberish :("
 msgstr "El servidor ha respost amb un galimaties :("
@@ -1621,7 +1631,7 @@ msgid "Show templates as overlays ingame."
 msgstr "Mostra les plantilles com a superposicions dins del joc."
 
 msgid "Shrink"
-msgstr ""
+msgstr "Encongeix"
 
 msgid "Size"
 msgstr "Mida"
@@ -1634,7 +1644,7 @@ msgstr "Preferències Socials"
 
 #, javascript-format
 msgid "Source for pixelplanet on ${ gitLink } or ${ downloadHereLink }."
-msgstr ""
+msgstr "Codi font de pixelplanet a ${ gitLink } o ${ downloadHereLink }."
 
 msgid "Stacking till"
 msgstr "Acumulació fins a"
@@ -1702,7 +1712,7 @@ msgstr ""
 "És permanent, no el podràs canviar més tard."
 
 msgid "The password for your account."
-msgstr ""
+msgstr "La contrasenya del teu compte."
 
 msgid "Themes"
 msgstr "Temes"
@@ -1731,9 +1741,14 @@ msgid ""
 "function on the LogIn page to set a new password. In the future, consider "
 "not installing malware, Thank You."
 msgstr ""
+"Aquesta combinació de correu electrònic / contrasenya ha estat piratejada i "
+"filtrada. Per protegir aquest compte, s'ha restablert la contrasenya. "
+"Sisplau, utilitza la funció \"He oblidat la meva contrasenya\" a la pàgina "
+"d'inici de sessió per establir una nova contrasenya. En el futur, considera "
+"no instal·lar malware, gràcies."
 
 msgid "This faction has no invites"
-msgstr ""
+msgstr "Aquesta facció no té cap invitació"
 
 msgid ""
 "This is the name that other people see, e.g. in Chat. You can change it at "
@@ -1745,12 +1760,13 @@ msgstr ""
 
 msgid "This login may only work if your account is verified."
 msgstr ""
+"Aquest inici de sessió només pot funcionar si el teu compte està verificat."
 
 msgid "This permission is required"
 msgstr "Aquest permís és necessari"
 
 msgid "This user has not password set"
-msgstr ""
+msgstr "Aquest usuari no té contrasenya"
 
 msgid "Timeout"
 msgstr ""
@@ -1770,22 +1786,22 @@ msgstr ""
 "sobre. Un píxel a la plantilla hauria de ser un píxel al llenç."
 
 msgid "Title"
-msgstr ""
+msgstr "Títol"
 
 msgid "Title can't be empty."
-msgstr ""
+msgstr "El títol no pot estar buit."
 
 msgid "Title contains invalid character like @, /, \\ or #"
-msgstr ""
+msgstr "El títol conté algun caràcter invàlid com @, /, \\ o #"
 
 msgid "Title must be at least 2 characters long"
-msgstr ""
+msgstr "El títol ha de tenir 2 caràcters com a mínim"
 
 msgid "Title must be shorter than 26 characters"
-msgstr ""
+msgstr "El títol ha de tenir menys de 26 caràcters"
 
 msgid "Title of your faction"
-msgstr ""
+msgstr "Títol de la teva facció"
 
 msgid "To use this page, enter your Password:"
 msgstr "Per fer servir aquesta pàgina, introdueix la teva Contrasenya:"
@@ -1818,7 +1834,7 @@ msgid "Total Online Users"
 msgstr "Usuaris en Línia Totals"
 
 msgid "Total Pixels per Faction"
-msgstr ""
+msgstr "Píxels Totals per Facció"
 
 msgid "Total Pixels per Player"
 msgstr "Total de Píxels per Jugador"
@@ -1846,13 +1862,13 @@ msgid "Type the characters from the following image:"
 msgstr "Escriu els caràcters de la següent imatge:"
 
 msgid "Unban media"
-msgstr ""
+msgstr "Desbaneja multimèdia"
 
 msgid "Unban members"
-msgstr ""
+msgstr "Desbaneja membres"
 
 msgid "Unblock"
-msgstr ""
+msgstr "Desbloqueja"
 
 msgid "Unblock Users"
 msgstr "Desbloqueja Usuaris"
@@ -1909,7 +1925,7 @@ msgid "Username must be shorter than 26 characters"
 msgstr "El nom d'usuari ha de tenir menys de 26 caràcters"
 
 msgid "Users"
-msgstr ""
+msgstr "Usuaris"
 
 #, javascript-format
 msgid "We are Libre Software under the ${ agplLink }, "
@@ -1938,7 +1954,7 @@ msgid "What the pencil should draw on the current canvas."
 msgstr "El que el llapis hauria de dibuixar al llenç actual."
 
 msgid "Whether or not this invite can only be used once."
-msgstr ""
+msgstr "Si aquesta invitació es pot utilitzar només una vegada."
 
 msgid ""
 "While we tend to not delete canvases, some canvases are started for fun or "
@@ -1968,7 +1984,7 @@ msgid "Yes"
 msgstr "Sí"
 
 msgid "Yes, really delete Me"
-msgstr ""
+msgstr "Sí, suprimeix-me de debò"
 
 msgid "Yesterday"
 msgstr "Ahir"
@@ -1990,7 +2006,7 @@ msgstr ""
 "continuació."
 
 msgid "You are currently not a member of any faction."
-msgstr ""
+msgstr "Actualment no ets membre de cap facció."
 
 msgid "You are currently not allowed to access this game."
 msgstr "Actualment no tens permís per accedir a aquest joc."
@@ -1999,15 +2015,19 @@ msgid ""
 "You are currently not representing any faction. To represent one, activate a "
 "role in one of your factions below."
 msgstr ""
+"Actualment no representes cap facció. Per representar-ne una, activa un rol "
+"en una de les teves faccions a continuació."
 
 #, javascript-format
 msgid ""
 "You are currently representing ${ activeFactionTitle } as ${ activeRoleName }"
 msgstr ""
+"Actualment estàs representant ${ activeFactionTitle } com a ${ "
+"activeRoleName }"
 
 #, javascript-format
 msgid "You are logged in as ${ name } [${ username }]."
-msgstr ""
+msgstr "Has iniciat sessió com a ${ name } [${ username }]."
 
 msgid "You are not allowed to play this game right now :("
 msgstr "No tens permís per jugar a aquest joc ara mateix :("
@@ -2022,6 +2042,8 @@ msgid ""
 "You can connect to pixelplanet and use pixelplanet accounts for oauth / oidc "
 "login. See here: "
 msgstr ""
+"Pots connectar-te a pixelplanet i utilitzar comptes de pixelplanet per a "
+"l'inici de sessió oauth / oidc. Mira-ho aquí: "
 
 msgid "You can not access this canvas yet, because your pixel score is too low"
 msgstr ""
@@ -2049,6 +2071,8 @@ msgid ""
 "You have been invited to join us on pixelplanet. We currently have $"
 "{ memberCount } members."
 msgstr ""
+"T'han convidat a unir-te a nosaltres a pixelplanet. Actualment tenim ${ "
+"memberCount } membres."
 
 msgid "You have no users blocked"
 msgstr "No tens bloquejat a cap usuari"
@@ -2066,7 +2090,7 @@ msgid "You must enter a UserId"
 msgstr "Has d'introduir una ID d'Usuari"
 
 msgid "You must enter a mediaId or media BID"
-msgstr ""
+msgstr "Has d'introduir un mediaId o media BID"
 
 msgid "You must enter a reason"
 msgstr "Has d'introduir una raó"
@@ -2087,7 +2111,7 @@ msgid "You must enter at least one IID, User Id or BID"
 msgstr "Has d'introduir al menys una IID, ID d'Usuari o BID"
 
 msgid "You must select an avatar for your faction"
-msgstr ""
+msgstr "Has de seleccionar un avatar per a la teva facció"
 
 msgid "You took too long, try again."
 msgstr "Has trigat massa, torna-ho a intentar."
@@ -2103,19 +2127,19 @@ msgid "Your Browser looks shady"
 msgstr "El teu Navegador sembla sospitós"
 
 msgid "Your Factions"
-msgstr ""
+msgstr "Les Teves Faccions"
 
 msgid "Your Internet Provider is banned from this game"
 msgstr "El teu Proveïdor d'Internet està prohibit en aquest joc"
 
 msgid "Your Roles"
-msgstr ""
+msgstr "Els Teus Rols"
 
 msgid "Your ban expires at "
 msgstr "El teu ban caduca a les "
 
 msgid "Your device looks weird"
-msgstr ""
+msgstr "El teu dispositiu sembla estrany"
 
 msgid ""
 "Your did not set your username yet. A username is required to login to other "
@@ -2138,32 +2162,32 @@ msgstr ""
 "el teu nivell de zoom és baix."
 
 msgid "a hidden faction"
-msgstr ""
+msgstr "una facció oculta"
 
 msgid "affects"
-msgstr ""
+msgstr "afecta"
 
 #, javascript-format
 msgid "and ${ canvas.req } Pixels set"
 msgstr "i ${ canvas.req } Píxels col·locats"
 
 msgid "by"
-msgstr ""
+msgstr "per"
 
 msgid "check compliance here"
-msgstr ""
+msgstr "comprova el compliment aquí"
 
 msgid "created at"
-msgstr ""
+msgstr "creat a"
 
 msgid "days"
-msgstr ""
+msgstr "dies"
 
 msgid "download here"
-msgstr ""
+msgstr "descarrega aquí"
 
 msgid "lift"
-msgstr ""
+msgstr "aixeca"
 
 msgid "or login with:"
 msgstr "o inicia sessió amb:"
@@ -2175,7 +2199,7 @@ msgid "recommended"
 msgstr "recomanat"
 
 msgid "times used"
-msgstr ""
+msgstr "vegades utilitzat"
 
 #, javascript-format
 msgid "try again after ${ ti }min"
@@ -2192,7 +2216,7 @@ msgstr "Coordenada z fora de límits"
 
 msgctxt "media-player"
 msgid "Player"
-msgstr ""
+msgstr "Jugador"
 
 msgctxt "keybinds"
 msgid "A"
@@ -2256,12 +2280,12 @@ msgstr "X"
 
 msgctxt "channel-list"
 msgid "Public"
-msgstr ""
+msgstr "Públic"
 
 #. Column title of column indicating whether or not a faction is able to be joined in public
 msgctxt "statistics-table"
 msgid "Public"
-msgstr ""
+msgstr "Pública"
 
 #~ msgid "No captcha id given"
 #~ msgstr "No s'ha proporcionat cap captcha"

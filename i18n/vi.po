@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: admin@pixelplanet.fun\n"
-"PO-Revision-Date: 2026-05-02 03:30+0000\n"
+"PO-Revision-Date: 2026-05-03 06:30+0000\n"
 "Last-Translator: Ngvn <ngvn@noreply.pixelplanet.fun>\n"
 "Language-Team: Vietnamese <https://translate.gs-os.com/projects/ppfun/client/"
 "vi/>\n"
@@ -799,7 +799,7 @@ msgid "Go to"
 msgstr "Dịch chuyển đến"
 
 msgid "Grant"
-msgstr ""
+msgstr "Cho phép"
 
 msgid "Grid OFF"
 msgstr "Chế độ lưới TẮT"
@@ -825,7 +825,7 @@ msgid ""
 msgstr ""
 
 msgid "Hide Embed"
-msgstr ""
+msgstr "Ẩn nội dung nhúng"
 
 msgid "Hide from profile"
 msgstr "Ẩn khỏi hồ sơ"
@@ -863,7 +863,7 @@ msgid "IP Actions"
 msgstr "Hành động về IP"
 
 msgid "Identifiers"
-msgstr ""
+msgstr "Mã định danh"
 
 #, javascript-format
 msgid ""
@@ -872,11 +872,17 @@ msgid ""
 "mail to ${ mailLink } and, in case of a ban, include the BID you got in the "
 "ban message."
 msgstr ""
+"Nếu bạn dị nhận dạng là proxy, nhưng bạn không sử dụng, hoặc cho rằng bạn đã "
+"bị cấm oan, vui lòng truy cập ${ guildedLink } của chúng tôi hoặc gửi chúng "
+"tôi một email đến ${ mailLink } và, trong trường hợp án cấm, hãy bao gồm mã "
+"BID bạn nhận được trong tin nhắn cấm."
 
 msgid ""
 "If you talk to moderators or administrators, you might get asked for one of "
 "the following identifiers:"
 msgstr ""
+"Nếu bạn liên lạc với mod hoặc quản trị viên, bạn có thể được yêu cầu một "
+"trong các mã định danh sau:"
 
 msgid "Image Converter"
 msgstr "Bộ chuyển đổi màu cho ảnh"
@@ -1177,7 +1183,7 @@ msgid "Open Palette"
 msgstr "Mở bảng màu"
 
 msgid "Open in PopUp"
-msgstr ""
+msgstr "Mở bằng PopUp"
 
 msgid "OpenID Connect Client registration"
 msgstr "Đăng kí máy khách OpenID Connect"
@@ -1575,7 +1581,7 @@ msgid "Settings"
 msgstr "Cài đặt"
 
 msgid "Show Embedded"
-msgstr ""
+msgstr "Hiện nội dung nhúng"
 
 msgid "Show Grid"
 msgstr "Hiện thị lưới"
@@ -1596,7 +1602,7 @@ msgid "Show templates as overlays ingame."
 msgstr "Hiện thị các ảnh mẫu như lớp phủ trong game."
 
 msgid "Shrink"
-msgstr ""
+msgstr "Thu nhỏ"
 
 msgid "Size"
 msgstr "Kích thước"
@@ -1887,7 +1893,7 @@ msgstr "Những người dùng"
 
 #, javascript-format
 msgid "We are Libre Software under the ${ agplLink }, "
-msgstr "Chúng tôi là Libre Sofrware theo giấy phép ${ agplLink }, "
+msgstr "Chúng tôi là Phần mền Tự do theo giấy phép ${ agplLink }, "
 
 msgid ""
 "We decided to archive it as a timelapse with lossless encoded webm. Taking a "
@@ -2122,7 +2128,7 @@ msgid "by"
 msgstr ""
 
 msgid "check compliance here"
-msgstr ""
+msgstr "kiểm tra sự tuân thủ ngay đây"
 
 msgid "created at"
 msgstr ""

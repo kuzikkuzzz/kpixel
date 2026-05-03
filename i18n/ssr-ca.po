@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: admin@pixelplanet.fun\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2026-05-02 03:30+0000\n"
+"PO-Revision-Date: 2026-05-03 06:30+0000\n"
 "Last-Translator: TheCat13 <thecat13@noreply.pixelplanet.fun>\n"
 "Language-Team: Catalan <https://translate.gs-os.com/projects/ppfun/server/"
 "ca/>\n"
@@ -519,37 +519,41 @@ msgid "Role flag can only be an image"
 msgstr "La bandera de rol ha de ser una imatge"
 
 msgid "Role flag needs to be 16x11"
-msgstr ""
+msgstr "La bandera del rol ha de ser de 16x11"
 
 msgid "Server Error"
-msgstr ""
+msgstr "Error del Servidor"
 
 msgid "Server error while deleting user."
-msgstr ""
+msgstr "Error del servidor en suprimir l'usuari."
 
 msgid "Someone logged into your account from a new location, with the IP:"
 msgstr ""
+"Algú ha iniciat la sessió al teu compte des d'una nova ubicació, amb la IP:"
 
 msgid "Space-separated list of available scopes"
-msgstr ""
+msgstr "Llista separada per espais dels scopes disponibles"
 
 msgid ""
 "Space-separated list of default scopes, they will be used on requests if no "
 "other scope is given."
 msgstr ""
+"Llista separada per espais dels scopes predeterminats, s'utilitzaran en "
+"sol·licituds si no es proporciona cap altre scope."
 
 #. 'scope' is used as a technical term here, do not translate that word
 msgid ""
 "Space-separated list of default scopes, they will be used on requests where "
 "no other scope is given."
 msgstr ""
+"Llista separada per espais dels scopes predeterminats, s'utilitzaran en "
+"sol·licituds on no es proporciona cap altre scope."
 
 msgid "Space-separated list of scopes that should be available"
-msgstr ""
+msgstr "Llista separada per espais dels scopes que haurien d'estar disponibles"
 
-#, fuzzy
 msgid "Special canvas to spread awareness of SARS-CoV2 (take the vax)."
-msgstr "Llenç especial per conscienciar sobre el SARS-CoV-2"
+msgstr "Llenç especial per conscienciar sobre el SARS-CoV-2 (vacuna't)."
 
 msgid "Stop flooding."
 msgstr "Calma't una mica."
@@ -563,27 +567,31 @@ msgstr "Gràcies"
 #, javascript-format
 msgid "The file ${ filename } is banned ${ reason }. Ban ID: ${ mbid }"
 msgstr ""
+"El fitxer ${ filename } està prohibit ${ reason }. ID de prohibició: ${ "
+"mbid }"
 
 msgid "The user owning this badge is private"
-msgstr ""
+msgstr "L'usuari propietari d'aquesta insígnia és privat"
 
 msgid "The user owning this fish is private"
-msgstr ""
+msgstr "L'usuari propietari d'aquest peix és privat"
 
 msgid "This application is not allowed to login"
-msgstr ""
+msgstr "Aquesta aplicació no té permís per iniciar sessió"
 
 msgid "This application redirects to an unallowed page"
-msgstr ""
+msgstr "Aquesta aplicació redirigeix a una pàgina no autoritzada"
 
 msgid "This application sent a faulty login request with no redirection"
 msgstr ""
+"Aquesta aplicació ha enviat una sol·licitud d'inici de sessió defectuosa "
+"sense cap redirecció"
 
 msgid "This application uses a PKCE method we do not support"
-msgstr ""
+msgstr "Aquesta aplicació utilitza un mètode PKCE que no admetem"
 
 msgid "This application uses a login method we do not support"
-msgstr ""
+msgstr "Aquesta aplicació utilitza un mètode d'inici de sessió que no admetem"
 
 msgid ""
 "This email / password combination got hacked and leaked. To protect this "
@@ -591,6 +599,11 @@ msgid ""
 "function below to set a new password. In the future, consider not installing "
 "malware, Thank You."
 msgstr ""
+"Aquesta combinació de correu electrònic / contrasenya ha estat piratejada i "
+"filtrada. Per protegir aquest compte, s'ha restablert la contrasenya. "
+"Sisplau, utilitza la funció \"He oblidat la meva contrasenya\" a continuació "
+"per establir una nova contrasenya. En el futur, considera no instal·lar "
+"malware, gràcies."
 
 msgid ""
 "This email / password combination got hacked and leaked. To protect this "
@@ -598,47 +611,53 @@ msgid ""
 "function on the LogIn page to set a new password. In the future, consider "
 "not installing malware, Thank You."
 msgstr ""
+"Aquesta combinació de correu electrònic / contrasenya ha estat piratejada i "
+"filtrada. Per protegir aquest compte, s'ha restablert la contrasenya. "
+"Sisplau, utilitza la funció \"He oblidat la meva contrasenya\" a la pàgina "
+"d'inici de sessió per establir una nova contrasenya. En el futur, considera "
+"no instal·lar malware, gràcies."
 
 msgid "This email provider is not allowed"
-msgstr ""
+msgstr "Aquest proveïdor de correu electrònic no està permès"
 
 msgid "This faction does not exist"
-msgstr ""
+msgstr "Aquesta facció no existeix"
 
 msgid "This faction is full"
-msgstr ""
+msgstr "Aquesta facció està plena"
 
 msgid "This faction is private"
-msgstr ""
+msgstr "Aquesta facció és privada"
 
 #, javascript-format
 msgid "This media is banned ${ reason }. Ban ID: ${ mbid }"
 msgstr ""
+"Aquest tipus de fitxer està prohibit ${ reason }. ID de prohibició: ${ mbid }"
 
 msgid "This password-reset link isn't valid anymore :("
 msgstr "Aquest enllaç per restablir la contrasenya ja no és vàlid :("
 
 msgid "This user has not password set"
-msgstr ""
+msgstr "Aquest usuari no té contrasenya"
 
 msgid "This user is private"
-msgstr ""
+msgstr "Aquest usuari és privat"
 
 msgid "Title can't be empty."
-msgstr ""
+msgstr "El títol no pot estar buit."
 
 msgid "Title contains invalid character like @, /, \\ or #"
-msgstr ""
+msgstr "El títol conté algun caràcter invàlid com @, /, \\ o #"
 
 msgid "Title must be at least 2 characters long"
-msgstr ""
+msgstr "El títol ha de tenir 2 caràcters com a mínim"
 
 msgid "Title must be shorter than 26 characters"
-msgstr ""
+msgstr "El títol ha de tenir menys de 26 caràcters"
 
 #. "redirect_uris" is a technical term and should not be translated
 msgid "Too many or too long redirect_uris"
-msgstr ""
+msgstr "Hi ha massa redirect_uris o són massa llargs"
 
 msgid "Top10"
 msgstr "Top10"
@@ -648,10 +667,10 @@ msgstr "Error Desconegut del Captcha"
 
 #, javascript-format
 msgid "Unknown field ${ name } in request"
-msgstr ""
+msgstr "Camp desconegut ${ name } a la petició"
 
 msgid "Update Application"
-msgstr ""
+msgstr "Actualitza l'Aplicació"
 
 msgid "User ID and verification level"
 msgstr "ID d'usuari i nivell de verificació"
@@ -663,7 +682,7 @@ msgid "Username already in use."
 msgstr "El nom d'usuari ja està en ús."
 
 msgid "Username can not start with pp_"
-msgstr ""
+msgstr "El nom d'usuari no pot començar amb pp_"
 
 msgid "Username can only contain the characters: a-z . _ and -"
 msgstr "El nom d'usuari només pot contenir els caràcters: a-z . _ i -"
@@ -693,7 +712,7 @@ msgstr ""
 "ne un altre en ${ minLeft } minuts."
 
 msgid "We currently do not allow file uploads"
-msgstr ""
+msgstr "Actualment no permetem pujar fitxers"
 
 #, javascript-format
 msgid "Welcome ${ name } to PixelPlanet, please verify your mail"
@@ -702,19 +721,19 @@ msgstr ""
 "electrònic"
 
 msgid "You already chose your username"
-msgstr ""
+msgstr "Ja has triat el teu nom d'usuari"
 
 msgid "You already have that name."
-msgstr ""
+msgstr "Ja tens aquest nom."
 
 msgid "You are already part of this faction"
-msgstr ""
+msgstr "Ja ets part d'aquesta facció"
 
 msgid "You are already verified."
-msgstr ""
+msgstr "Ja estàs verificat."
 
 msgid "You are banned from this faction"
-msgstr ""
+msgstr "Estàs banejat d'aquesta facció"
 
 #, javascript-format
 msgid "You are muted for another ${ timeMin } minutes"
@@ -727,9 +746,8 @@ msgstr "Estàs silenciat ${ ttl } segons més"
 msgid "You are not allowed to access this page"
 msgstr "No tens permís per accedir a aquesta pàgina"
 
-#, fuzzy
 msgid "You are not banned"
-msgstr "No estàs verificat."
+msgstr "No estàs banejat"
 
 msgid "You are not logged in"
 msgstr "No has iniciat sessió"
@@ -747,17 +765,18 @@ msgid "You are sending messages too fast, you have to wait ${ waitTime }s :("
 msgstr "Estàs enviant missatges massa ràpid, has d'esperar ${ waitTime }s :("
 
 msgid "You attached too many files"
-msgstr ""
+msgstr "Has adjuntat masses fitxers"
 
 msgid ""
 "You can not delete this login method, because you have nothing else left."
 msgstr ""
+"No pots suprimir aquest mètode d'inici de sessió, perquè no et queda res més."
 
 msgid "You can not register an account while you are banned"
-msgstr ""
+msgstr "No pots registrar un compte mentre estiguis banejat"
 
 msgid "You can not register an account with a proxy"
-msgstr ""
+msgstr "No pots registrar un compte amb un proxy"
 
 msgid "You can not send chat messages while using a proxy"
 msgstr "No pots enviar missatges al xat mentre estiguis utilitzant “proxys”"
@@ -766,10 +785,12 @@ msgstr "No pots enviar missatges al xat mentre estiguis utilitzant “proxys”"
 msgid ""
 "You can only be owner of ${ MAX_OWNED_FACTIONS_PER_USER } factions in total"
 msgstr ""
+"Només pots ser propietari de ${ MAX_OWNED_FACTIONS_PER_USER } faccions en "
+"total"
 
 #, javascript-format
 msgid "You can only have ${ MAX_FACTIONS_PER_USER } factions in total"
-msgstr ""
+msgstr "Només pots tenir ${ MAX_FACTIONS_PER_USER } faccions en total"
 
 msgid ""
 "You can register your own application here to get the client_id and "
@@ -782,11 +803,13 @@ msgid "You can't send a message this long :("
 msgstr "No pots enviar un missatge tan llarg :("
 
 msgid "You did not provide all necessary information"
-msgstr ""
+msgstr "No has proporcionat tota la informació necessària"
 
 msgid ""
 "You do not have any email adress set. Please add one under \"Login Methods\"."
 msgstr ""
+"No tens cap adreça de correu electrònic establerta. Afegeix-ne una a «"
+"Mètodes d'Inici de Sessió»."
 
 msgid "You don't have access to this channel"
 msgstr "No tens accés a aquest canal"
@@ -798,24 +821,25 @@ msgid "You forgot your password for PixelPlanet? Get a new one here"
 msgstr "Has oblidat la teva contrasenya de PixelPlanet? Obtén una de nova aquí"
 
 msgid "You have to fill out all fields"
-msgstr ""
+msgstr "Has d'omplir tots els camps"
 
 msgid "You must be logged in to access this page"
-msgstr ""
+msgstr "Has d'iniciar sessió per accedir a aquesta pàgina"
 
 msgid "You need an invite to join this faction"
-msgstr ""
+msgstr "Necessites una invitació per unir-te a aquesta facció"
 
 #. "scope" is a technical term and should not be translated
 msgid "You need to define a valid scope"
-msgstr ""
+msgstr "Has de definir un scope vàlid"
 
 msgid "You need to directly access this page in the browser :("
-msgstr ""
+msgstr "Has d'accedir directament a aquesta pàgina en el navegador :("
 
 #, javascript-format
 msgid "You reached your maximum upload quota of ${ MAX_USER_MEDIA_SIZE_MB } MB"
 msgstr ""
+"Has arribat a la quota màxima de pujades de ${ MAX_USER_MEDIA_SIZE_MB } MB"
 
 msgid ""
 "You requested to get a new password. You can change your password within the "
@@ -828,7 +852,7 @@ msgid "You sent an empty password or invalid data :("
 msgstr "La contrasenya o dades que has enviat són invàlides :("
 
 msgid "You took too long, try again"
-msgstr ""
+msgstr "Has trigat massa temps, torna-ho a provar"
 
 msgid "You will be automatically redirected after 15s"
 msgstr "Seràs redirigit automàticament al cap de 15 segons"
@@ -839,16 +863,17 @@ msgstr "El teu Navegador sembla sospitós"
 msgid ""
 "Your account must be at least two weeks old before you can create a faction"
 msgstr ""
+"El teu compte ha de tenir almenys dues setmanes abans de poder crear una "
+"facció"
 
 msgid "Your account needs to be verified to access this page"
-msgstr ""
+msgstr "Cal verificar el teu compte per accedir a aquesta pàgina"
 
-#, fuzzy
 msgid "Your country is temporary muted from this chat channel"
-msgstr "El teu país està temporalment silenciat al xat"
+msgstr "El teu país està silenciat temporalment en aquest canal de xat"
 
 msgid "Your device looks weird"
-msgstr ""
+msgstr "El teu dispositiu sembla estrany"
 
 msgid "Your mail has to be verified in order to chat"
 msgstr "S'ha de verificar el correu electrònic per poder xatejar"
@@ -865,35 +890,35 @@ msgstr "Les contrasenyes no coincideixen :("
 
 #. This media is banned xyz
 msgid "because it is propaganda"
-msgstr ""
+msgstr "perquè és propaganda"
 
 #. This media is banned xyz
 msgid "for being an attempt to scam people"
-msgstr ""
+msgstr "per ser un intent d'estafar la gent"
 
 #. This media is banned xyz
 msgid "for being degenerate"
-msgstr ""
+msgstr "per ser degenerat"
 
 #. This media is banned xyz
 msgid "for containing CSAM"
-msgstr ""
+msgstr "per contenir CSAM"
 
 #. This media is banned xyz
 msgid "for containing graphic violence"
-msgstr ""
+msgstr "per contenir violència gràfica"
 
 #. This media is banned xyz
 msgid "for containing personal information"
-msgstr ""
+msgstr "per contenir informació personal"
 
 #. This media is banned xyz
 msgid "for glorifying terrorism"
-msgstr ""
+msgstr "per glorificar el terrorisme"
 
 #. "redirect_uris" is a technical term and should not be translated
 msgid "redirect_uris does not look legit"
-msgstr ""
+msgstr "els redirect_uris no semblen legítims"
 
 msgid "to go back to pixelplanet"
 msgstr "per tornar a PixelPlanet"
