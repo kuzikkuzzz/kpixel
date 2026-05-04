@@ -5,7 +5,9 @@
 /* eslint-disable max-len */
 
 import { memo, Fragment, useMemo, useCallback, useContext } from 'react';
-import { shallowEqual, useSelector, useDispatch } from '../../store/react-redux/index.js';
+import {
+  shallowEqual, useSelector, useDispatch,
+} from '../../store/react-redux/index.js';
 import { t } from 'ttag';
 import {
   Chart as ChartJS,
@@ -19,7 +21,7 @@ import {
   LineController,
   ArcElement,
 } from 'chart.js';
-import { Line, Pie } from 'react-chartjs-2';
+import { Line, Pie } from '../../utils/react-chartjs';
 
 import Table from '../Table.jsx';
 import { cdn } from '../../utils/utag.js';
