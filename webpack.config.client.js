@@ -94,22 +94,35 @@ export default ({ development, analyze }) => {
       rules: [
         {
           test: /\.svg$/,
-          use: [
-            'babel-loader',
-            {
-              loader: 'react-svg-loader',
-              options: {
-                svgo: {
-                  plugins: [
-                    { removeViewBox: false },
-                    { removeDimensions: true },
-                  ],
-                },
-                jsx: false,
+          use: [{
+            loader: '@svgr/webpack',
+            options: {
+              // jsxRuntimeImport: 'classic-preact',
+              memo: true,
+              icon: true,
+              svgProps: {
+                className: 'svgr-icon',
               },
+            },
+          }],
+        },
+        /*
+        {
+          test: /\.svg$/,
+          use : [
+            {
+              loader: 'babel-loader',
+              options: {
+                presets: ['preact', 'env'],
+              },
+            },
+            {
+              loader: '@svgr/webpack',
+              options: { babel: false },
             },
           ],
         },
+        */
         {
           test: /\.(js|jsx)$/,
           use: [

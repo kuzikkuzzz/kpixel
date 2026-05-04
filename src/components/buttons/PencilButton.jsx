@@ -6,7 +6,8 @@ import { memo, useCallback } from 'react';
 import {
   useSelector, shallowEqual, useDispatch,
 } from '../../store/react-redux/index.js';
-import { TbPencil, TbPencilMinus } from 'react-icons/tb';
+import TbPencil from '../../icons/TbPencil.svg';
+import TbPencilMinus from '../../icons/TbPencilMinus.svg';
 import { t } from 'ttag';
 
 import useLongPress from '../hooks/useLongPress.js';

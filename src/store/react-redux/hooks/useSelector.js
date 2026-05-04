@@ -55,6 +55,7 @@ export function createSelectorHook(
 
     const firstRun = React.useRef(true);
 
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     const wrappedSelector = React.useCallback(
       {
         [selector.name](state) {
@@ -127,7 +128,6 @@ export function createSelectorHook(
           return selected;
         },
       }[selector.name],
-      // eslint-disable-next-line react-hooks/exhaustive-deps
       [selector],
     );
 

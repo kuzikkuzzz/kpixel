@@ -4,7 +4,6 @@
 
 import { Provider } from '../store/react-redux/index.js';
 import { createRoot } from 'react-dom/client';
-import { IconContext } from 'react-icons';
 
 import Style from './Style.jsx';
 import CoordinatesBox from './CoordinatesBox.jsx';
@@ -15,21 +14,17 @@ import UI from './UI.jsx';
 import WindowManager from './WindowManager.jsx';
 import MenuProvider from './menus/index.jsx';
 
-const iconContextValue = { style: { verticalAlign: 'middle' } };
-
 const App = () => (
   <>
     <Style />
-    <IconContext.Provider value={iconContextValue}>
-      <MenuProvider>
-        <ChatButton />
-        <OnlineBox />
-        <CoordinatesBox />
-        <MenuButton />
-        <UI />
-        <WindowManager />
-      </MenuProvider>
-    </IconContext.Provider>
+    <MenuProvider>
+      <ChatButton />
+      <OnlineBox />
+      <CoordinatesBox />
+      <MenuButton />
+      <UI />
+      <WindowManager />
+    </MenuProvider>
   </>
 );
 

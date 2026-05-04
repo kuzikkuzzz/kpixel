@@ -7,16 +7,14 @@ import { useState, useCallback, useEffect } from 'react';
 import {
   useSelector, shallowEqual, useDispatch,
 } from '../../store/react-redux/index.js';
-import {
-  PiMagnifyingGlassMinus,
-  PiMagnifyingGlassPlus,
-  PiArrowFatLeft,
-  PiArrowFatRight,
-  PiArrowFatUp,
-  PiArrowFatDown,
-  PiCaretDoubleUp,
-  PiCaretDoubleDown,
-} from 'react-icons/pi';
+import PiMagnifyingGlassMinus from '../../icons/PiMagnifyingGlassMinus.svg';
+import PiMagnifyingGlassPlus from '../../icons/PiMagnifyingGlassPlus.svg';
+import PiArrowFatLeft from '../../icons/PiArrowFatLeft.svg';
+import PiArrowFatRight from '../../icons/PiArrowFatRight.svg';
+import PiArrowFatUp from '../../icons/PiArrowFatUp.svg';
+import PiArrowFatDown from '../../icons/PiArrowFatDown.svg';
+import PiCaretDoubleUp from '../../icons/PiCaretDoubleUp.svg';
+import PiCaretDoubleDown from '../../icons/PiCaretDoubleDown.svg';
 
 import {
   setMoveU, setMoveV, setMoveW, cancelMove,

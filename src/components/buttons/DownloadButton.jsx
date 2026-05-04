@@ -4,7 +4,7 @@
 
 import { memo } from 'react';
 import { useSelector } from '../../store/react-redux/index.js';
-import { MdFileDownload } from 'react-icons/md';
+import MdFileDownload from '../../icons/MdFileDownload.svg';
 import fileDownload from 'js-file-download';
 import { t } from 'ttag';
 

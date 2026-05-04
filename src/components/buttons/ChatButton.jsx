@@ -6,7 +6,7 @@ import { memo } from 'react';
 import {
   useSelector, shallowEqual, useDispatch,
 } from '../../store/react-redux/index.js';
-import { MdForum } from 'react-icons/md';
+import MdForum from '../../icons/MdForum.svg';
 import { t } from 'ttag';
 
 import {

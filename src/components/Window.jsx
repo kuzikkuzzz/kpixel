@@ -6,7 +6,7 @@ import {
   memo, useState, useCallback, useRef, useEffect, useMemo, Suspense,
 } from 'react';
 import { useSelector, useDispatch } from '../store/react-redux/index.js';
-import { BiChalkboard } from 'react-icons/bi';
+import BiChalkboard from '../icons/BiChalkboard.svg';
 import { t } from 'ttag';
 
 import { openWindowPopUp } from './hooks/link.js';

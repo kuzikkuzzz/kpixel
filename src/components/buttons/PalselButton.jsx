@@ -7,7 +7,7 @@ import { memo } from 'react';
 import {
   useSelector, shallowEqual, useDispatch,
 } from '../../store/react-redux/index.js';
-import { MdPalette } from 'react-icons/md';
+import MdPalette from '../../icons/MdPalette.svg';
 import { t } from 'ttag';
 
 import { toggleOpenPalette } from '../../store/actions/index.js';

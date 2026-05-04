@@ -6,9 +6,9 @@ import {
 } from 'react';
 import { useDispatch } from '../../store/react-redux/index.js';
 import { t } from 'ttag';
-import { RiSave3Line } from 'react-icons/ri';
-import { IoTrashOutline } from 'react-icons/io5';
-import { IoIosRefresh } from 'react-icons/io';
+import RiSave3Line from '../../icons/RiSave3Line.svg';
+import IoTrashOutline from '../../icons/IoTrashOutline.svg';
+import IoIosRefresh from '../../icons/IoIosRefresh.svg';
 
 import { cdn } from '../../utils/utag.js';
 import { getUrlsFromMediaIdAndName } from '../../utils/media/utils.js';

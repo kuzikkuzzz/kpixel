@@ -4,8 +4,9 @@
  * Links are assumed to start with protocol (http:// etc.)
  */
 import { memo, useContext, useMemo } from 'react';
-import { HiArrowsExpand, HiStop } from 'react-icons/hi';
-import { HiWindow } from 'react-icons/hi2';
+import HiArrowsExpand from '../../icons/HiArrowsExpand.svg';
+import HiStop from '../../icons/HiStop.svg';
+import HiWindow from '../../icons/HiWindow.svg';
 import { t } from 'ttag';
 
 import { getLinkDesc } from '../../core/utils.js';

@@ -8,7 +8,7 @@
 
 import { memo, useState, useEffect, useCallback, useRef } from 'react';
 import { t } from 'ttag';
-import { IoReloadCircleSharp } from 'react-icons/io5';
+import IoReloadCircleSharp from '../icons/IoReloadCircleSharp.svg';
 
 import useInterval from './hooks/interval.js';
 import { api } from '../utils/utag.js';

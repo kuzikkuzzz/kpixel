@@ -7,10 +7,10 @@ import {
   memo, Fragment, useRef, useState, useCallback, useMemo, useEffect,
 } from 'react';
 import { useSelector } from '../store/react-redux/index.js';
-import { FaUser } from 'react-icons/fa';
-import { MdGroups } from 'react-icons/md';
-import { PiAxeFill } from 'react-icons/pi';
-import { IoMdChatbubbles } from 'react-icons/io';
+import MdPerson from '../icons/MdPerson.svg';
+import MdGroups from '../icons/MdGroups.svg';
+import PiAxeFill from '../icons/PiAxeFill.svg';
+import IoMdChatbubbles from '../icons/IoMdChatbubbles.svg';
 import { c, t } from 'ttag';
 
 import { useConditionalClickOutside } from './hooks/clickOutside.js';
@@ -84,7 +84,7 @@ const ChannelDropDown = ({
     [CHANNEL_TYPES.FACTION]: t`Factions`,
   }, {
     [CHANNEL_TYPES.PUBLIC]: IoMdChatbubbles,
-    [CHANNEL_TYPES.DM]: FaUser,
+    [CHANNEL_TYPES.DM]: MdPerson,
     [CHANNEL_TYPES.GROUP]: MdGroups,
     [CHANNEL_TYPES.FACTION]: PiAxeFill,
   }], []);

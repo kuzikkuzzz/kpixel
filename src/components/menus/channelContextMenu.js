@@ -2,7 +2,7 @@
  * channel onContextmen
  */
 import { t } from 'ttag';
-import { MdOutlineSensorDoor } from 'react-icons/md';
+import MdOutlineSensorDoor from '../../icons/MdOutlineSensorDoor.svg';
 
 import { CHANNEL_TYPES } from '../../core/constants.js';
 import { toggleChatCompact } from '../../store/actions/index.js';

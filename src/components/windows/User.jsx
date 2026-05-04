@@ -4,7 +4,7 @@
 import { Fragment, useState, useEffect, useContext } from 'react';
 import { useSelector, useStore } from '../../store/react-redux/index.js';
 import { t, jt } from 'ttag';
-import { IoIosRefresh } from 'react-icons/io';
+import IoIosRefresh from '../../icons/IoIosRefresh.svg';
 
 import { cdn } from '../../utils/utag.js';
 import { getUrlsFromMediaIdAndName } from '../../utils/media/utils.js';

@@ -6,10 +6,10 @@
 import { memo, Fragment, useState, useMemo, useContext } from 'react';
 import { useSelector } from '../../store/react-redux/index.js';
 import { t } from 'ttag';
-import { MdFileDownload } from 'react-icons/md';
-import { HiStop } from 'react-icons/hi';
-import { HiWindow } from 'react-icons/hi2';
-import { LuFileVideo2 } from 'react-icons/lu';
+import MdFileDownload from '../../icons/MdFileDownload.svg';
+import HiStop from '../../icons/HiStop.svg';
+import HiWindow from '../../icons/HiWindow.svg';
+import LuFileVideo2 from '../../icons/LuFileVideo2.svg';
 
 import useLink from '../hooks/link.js';
 import { cdn } from '../../utils/utag.js';

@@ -4,22 +4,17 @@
 
 import { Provider } from '../store/react-redux/index.js';
 import { createRoot } from 'react-dom/client';
-import { IconContext } from 'react-icons';
 
 import Style from './Style.jsx';
 import UIPopUp from './UIPopUp.jsx';
 import MenuProvider from './menus/index.jsx';
 
-const iconContextValue = { style: { verticalAlign: 'middle' } };
-
 const AppPopUp = () => (
   <>
     <Style />
-    <IconContext.Provider value={iconContextValue}>
-      <MenuProvider>
-        <UIPopUp />
-      </MenuProvider>
-    </IconContext.Provider>
+    <MenuProvider>
+      <UIPopUp />
+    </MenuProvider>
   </>
 );
 

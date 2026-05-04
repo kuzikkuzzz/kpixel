@@ -5,8 +5,8 @@
 import { Fragment, useCallback } from 'react';
 import { useSelector, useDispatch } from '../../store/react-redux/index.js';
 import { c, t, jt } from 'ttag';
-import { GiMouse } from 'react-icons/gi';
-import { MdTouchApp } from 'react-icons/md';
+import GiMouse from '../../icons/GiMouse.svg';
+import MdTouchApp from '../../icons/MdTouchApp.svg';
 
 import GetIID from '../GetIID.jsx';
 import ClipboardCopyField from '../ClipboardCopyField.jsx';

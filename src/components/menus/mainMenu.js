@@ -1,40 +1,31 @@
 /*
  * top left main menu
  */
-import {
-  // settings cog wheel
-  FaCog,
-  // Questionmark
-  FaQuestion,
-  // canvas icon
-  FaFlipboard,
-  // paint roller for templates
-  FaPaintRoller,
-  // shield
-  FaShieldAlt,
-  // search icon
-  FaSearch,
-} from 'react-icons/fa';
-import {
-  // download symbol
-  MdFileDownload,
-  // User Symbol
-  MdPerson,
-  // 3d symbol,
-  Md3dRotation,
-} from 'react-icons/md';
-import {
-  // bar chart
-  IoIosStats,
-} from 'react-icons/io';
-import {
-  // battle axe
-  PiAxeFill,
-} from 'react-icons/pi';
-import {
-  // some square for converter
-  GiConvergenceTarget,
-} from 'react-icons/gi';
+
+// settings cog wheel
+import FaCog from '../../icons/FaCog.svg';
+// Questionmark
+import FaQuestion from '../../icons/FaQuestion.svg';
+// canvas icon
+import FaFlipboard from '../../icons/FaFlipboard.svg';
+// paint roller for templates
+import FaPaintRoller from '../../icons/FaPaintRoller.svg';
+// shield
+import FaShieldAlt from '../../icons/FaShieldAlt.svg';
+// search icon
+import FaSearch from '../../icons/FaSearch.svg';
+// download symbol
+import MdFileDownload from '../../icons/MdFileDownload.svg';
+// User Symbol
+import MdPerson from '../../icons/MdPerson.svg';
+// 3d symbol,
+import Md3dRotation from '../../icons/Md3dRotation.svg';
+// bar chart
+import IoIosStats from '../../icons/IoIosStats.svg';
+// battle axe
+import PiAxeFill from '../../icons/PiAxeFill.svg';
+// some square for converter
+import GiConvergenceTarget from '../../icons/GiConvergenceTarget.svg';
 import fileDownload from 'js-file-download';
 import { t } from 'ttag';
 

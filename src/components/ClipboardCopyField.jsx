@@ -1,5 +1,5 @@
 import { useDispatch } from '../store/react-redux/index.js';
-import { FaLink } from 'react-icons/fa';
+import FaLink from '../icons/FaLink.svg';
 import { t } from 'ttag';
 
 import copyTextToClipboard from '../utils/clipboard.js';

@@ -6,12 +6,10 @@ import { memo, Fragment } from 'react';
 import {
   useSelector, shallowEqual, useDispatch,
 } from '../store/react-redux/index.js';
-import {
-  FaUser,
-  FaPaintBrush,
-  FaFlipboard,
-  FaCalendarDay,
-} from 'react-icons/fa';
+import MdPerson from '../icons/MdPerson.svg';
+import FaPaintBrush from '../icons/FaPaintBrush.svg';
+import FaFlipboard from '../icons/FaClipboard.svg';
+import FaCalendarDay from '../icons/FaCalendarDay.svg';
 import { t } from 'ttag';
 
 import {
@@ -61,7 +59,7 @@ const OnlineBox = () => {
               key="onlinec"
               onClick={() => dispatch(toggleOnlineCanvas())}
             >
-              {online[canvasId] || 0}&nbsp;<FaUser /><FaFlipboard />
+              {online[canvasId] || 0}&nbsp;<MdPerson /><FaFlipboard />
             </span>
           )
         : (
@@ -72,7 +70,7 @@ const OnlineBox = () => {
               onClick={() => dispatch(toggleOnlineCanvas())}
               title={t`Total Online Users`}
             >
-              {online.total}&nbsp;<FaUser />
+              {online.total}&nbsp;<MdPerson />
             </span>
           )}
        &nbsp;

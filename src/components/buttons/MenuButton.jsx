@@ -3,7 +3,8 @@
  */
 import { useContext } from 'react';
 
-import { MdExpandMore, MdExpandLess } from 'react-icons/md';
+import MdExpandMore from '../../icons/MdExpandMore.svg';
+import MdExpandLess from '../../icons/MdExpandLess.svg';
 import MenuContext from '../context/menu.js';
 
 const MenuButton = () => {
