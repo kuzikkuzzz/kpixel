@@ -1,4 +1,4 @@
-import { React } from '../utils/react.js';
+import { createContext } from 'react';
 
 const ContextKey = /* @__PURE__ */ Symbol.for(`react-redux-context`);
 const gT = (
@@ -8,18 +8,18 @@ const gT = (
 );
 
 function getContext() {
-  if (!React.createContext) return {};
+  if (!createContext) return {};
 
   const contextMap = (gT[ContextKey] ??= new Map());
-  let realContext = contextMap.get(React.createContext);
+  let realContext = contextMap.get(createContext);
   if (!realContext) {
-    realContext = React.createContext(null);
+    realContext = createContext(null);
     if (process.env.NODE_ENV !== 'production') {
       realContext.displayName = 'ReactRedux';
     }
-    contextMap.set(React.createContext, realContext);
+    contextMap.set(createContext, realContext);
   }
   return realContext;
 }
 
-export const ReactReduxContext = /* #__PURE__ */ getContext();
+export const ReactReduxContext = getContext();

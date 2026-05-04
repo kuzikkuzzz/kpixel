@@ -1,8 +1,8 @@
+import { useRef, useCallback } from 'react';
 import {
   useSyncExternalStoreWithSelector,
 } from 'use-sync-external-store/with-selector';
 
-import { React } from '../utils/react.js';
 import { ReactReduxContext } from '../components/Context.js';
 import {
   createReduxContextHook,
@@ -53,10 +53,10 @@ export function createSelectorHook(
 
     const { store, subscription, getServerState } = reduxContext;
 
-    const firstRun = React.useRef(true);
+    const firstRun = useRef(true);
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
-    const wrappedSelector = React.useCallback(
+    const wrappedSelector = useCallback(
       {
         [selector.name](state) {
           const selected = selector(state);
@@ -138,8 +138,6 @@ export function createSelectorHook(
       wrappedSelector,
       equalityFn,
     );
-
-    React.useDebugValue(selectedState);
 
     return selectedState;
   };

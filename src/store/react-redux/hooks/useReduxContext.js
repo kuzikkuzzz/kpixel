@@ -1,4 +1,5 @@
-import { React } from '../utils/react.js';
+import { useContext } from 'react';
+
 import { ReactReduxContext } from '../components/Context.js';
 
 /**
@@ -11,7 +12,7 @@ import { ReactReduxContext } from '../components/Context.js';
  */
 export function createReduxContextHook(context = ReactReduxContext) {
   return function useReduxContext() {
-    const contextValue = React.useContext(context);
+    const contextValue = useContext(context);
 
     if (process.env.NODE_ENV !== 'production' && !contextValue) {
       throw new Error(

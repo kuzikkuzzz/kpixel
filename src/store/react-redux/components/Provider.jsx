@@ -1,11 +1,12 @@
-import { React } from '../utils/react.js';
+import { useMemo, useLayoutEffect } from 'react';
+
 import { createSubscription } from '../utils/Subscription.js';
 import { ReactReduxContext } from './Context.js';
 
 function Provider(providerProps) {
   const { children, context, serverState, store } = providerProps;
 
-  const contextValue = React.useMemo(() => {
+  const contextValue = useMemo(() => {
     const subscription = createSubscription(store);
 
     const baseContextValue = {
@@ -28,9 +29,9 @@ function Provider(providerProps) {
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [store, serverState]);
 
-  const previousState = React.useMemo(() => store.getState(), [store]);
+  const previousState = useMemo(() => store.getState(), [store]);
 
-  React.useLayoutEffect(() => {
+  useLayoutEffect(() => {
     const { subscription } = contextValue;
     subscription.onStateChange = subscription.notifyNestedSubs;
     subscription.trySubscribe();
