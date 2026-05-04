@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: admin@pixelplanet.fun\n"
-"PO-Revision-Date: 2026-05-03 06:30+0000\n"
-"Last-Translator: Ngvn <ngvn@noreply.pixelplanet.fun>\n"
+"PO-Revision-Date: 2026-05-04 15:30+0000\n"
+"Last-Translator: Yuki_ <yuki@noreply.pixelplanet.fun>\n"
 "Language-Team: Vietnamese <https://translate.gs-os.com/projects/ppfun/client/"
 "vi/>\n"
 "Language: vi\n"
@@ -92,7 +92,7 @@ msgstr "Thêm địa chỉ Email vào đây:"
 
 #. This if for moderation tools, it's not important to translate this
 msgid "Admintools"
-msgstr "Công cụ Quản trị viên"
+msgstr "Công cụ quản trị"
 
 msgid "Age"
 msgstr "Tuổi"
@@ -125,7 +125,7 @@ msgid "Assign Roles"
 msgstr "Cấp vai trò"
 
 msgid "Assign new Mod"
-msgstr "Chọn một Mod mới"
+msgstr "Chọn Mod mới"
 
 msgid "Assign role per default to new members"
 msgstr "Mặc định cấp vai trò này cho các thành viên mới"
@@ -808,7 +808,7 @@ msgid "Grid ON"
 msgstr "Chế độ lưới BẬT"
 
 msgid "Groups"
-msgstr ""
+msgstr "Nhóm"
 
 msgid "Have fun!"
 msgstr "Chúc vui vẻ!"
@@ -823,6 +823,8 @@ msgid ""
 "Here we collect removed canvases to archive them properly. Which is "
 "currently only one."
 msgstr ""
+"Ở đây chúng tôi thu thập các khung vẽ đã bị loại bỏ để lưu trữ chúng tử tế. "
+"Hiện nay chỉ có một cái."
 
 msgid "Hide Embed"
 msgstr "Ẩn nội dung nhúng"
@@ -872,7 +874,7 @@ msgid ""
 "mail to ${ mailLink } and, in case of a ban, include the BID you got in the "
 "ban message."
 msgstr ""
-"Nếu bạn dị nhận dạng là proxy, nhưng bạn không sử dụng, hoặc cho rằng bạn đã "
+"Nếu bạn bị nhận dạng là proxy, nhưng bạn không sử dụng, hoặc cho rằng bạn đã "
 "bị cấm oan, vui lòng truy cập ${ guildedLink } của chúng tôi hoặc gửi chúng "
 "tôi một email đến ${ mailLink } và, trong trường hợp án cấm, hãy bao gồm mã "
 "BID bạn nhận được trong tin nhắn cấm."
@@ -977,7 +979,7 @@ msgid "Let people join this faction without needing an invite."
 msgstr "Cho phép mọi người tham gia nhóm này không cần lời mời."
 
 msgid "Level"
-msgstr ""
+msgstr "Mức"
 
 msgid "Light Grid"
 msgstr "Lưới sáng"
@@ -1046,10 +1048,10 @@ msgid "Members"
 msgstr "Những thành viên"
 
 msgid "Minimum Color Distance"
-msgstr ""
+msgstr "Khoảng cách màu tối thiểu"
 
 msgid "Moderators can access all Canvas, Watch and IID tools."
-msgstr ""
+msgstr "Mod có thể truy cập mọi khung vẽ, theo dõi và các công cụ IID."
 
 #. This if for moderation tools, it's not important to translate this
 msgid "Modtools"
@@ -1150,7 +1152,7 @@ msgid "OK"
 msgstr "OK"
 
 msgid "Offset"
-msgstr ""
+msgstr "Khoảng cách"
 
 msgid "Oh no, the phish escaped. Better luck next time!"
 msgstr "Ôi không, Ká đã chạy thoát. Chúc may mắn lần sau!"
@@ -1159,7 +1161,7 @@ msgid "Old Password"
 msgstr "Mật khẩu cũ"
 
 msgid "One-Time"
-msgstr ""
+msgstr "Một lần"
 
 msgid "Online Users"
 msgstr "Người dùng trực tuyến"
@@ -1249,7 +1251,7 @@ msgid "Permission"
 msgstr "Quyền hạn"
 
 msgid "Permissions of Powerlevels"
-msgstr ""
+msgstr "Quyền của mức quyền hạng"
 
 msgid "Phish!"
 msgstr "Ká!"
@@ -1303,7 +1305,7 @@ msgstr ""
 "khoản của bạn có thể bị xoá trong tương lai."
 
 msgid "Political Compass Canvas"
-msgstr ""
+msgstr "Khung vẽ phổ chính trị"
 
 msgid "Potato Mode"
 msgstr "Chế độ khoai tây"
@@ -1361,7 +1363,7 @@ msgid "Quick Actions"
 msgstr "Những hành động nhanh"
 
 msgid "Range Banned"
-msgstr ""
+msgstr "Phạm vi bị cấm"
 
 msgid "Rank"
 msgstr "Xếp hạng"
@@ -1408,7 +1410,7 @@ msgid "Remove Chatmod"
 msgstr "Xoá cuộc trò chuyện mod"
 
 msgid "Remove Cleaner"
-msgstr ""
+msgstr "Xoá trình dọn"
 
 msgid "Remove Janny"
 msgstr "Xoá lao công"
@@ -1446,13 +1448,13 @@ msgid "Resize"
 msgstr "Chỉnh kích thước"
 
 msgid "Restore"
-msgstr ""
+msgstr "Khôi phục"
 
 msgid "Retired Canvases (history only)"
 msgstr "Khung vẽ ngừng hoạt động (chỉ xem lịch sử)"
 
 msgid "Retract"
-msgstr ""
+msgstr "Thu hồi"
 
 msgid "Revoke consent of third party applications:"
 msgstr "Hủy chấp thuận cho ứng dụng bên thứ ba:"
@@ -1467,7 +1469,7 @@ msgid "Roles"
 msgstr "Các vai trò"
 
 msgid "Roll different Captcha Fonts"
-msgstr ""
+msgstr "Chọn phông chữ Captcha khác"
 
 msgid "Rollback an area of the canvas to a set date and time"
 msgstr "Rollback một khu vực của khung vẽ đến một ngày và thời gian cụ thể"
@@ -1516,10 +1518,10 @@ msgid "Select Language"
 msgstr "Chọn ngôn ngữ"
 
 msgid "Select a valid powerlevel"
-msgstr ""
+msgstr "Chọn một mức quyền hạn hợp lệ"
 
 msgid "Select a valid pwerlevel"
-msgstr ""
+msgstr "Chọn một mức quyền hạn hợp lệ"
 
 msgid ""
 "Select the canvas you want to use.\n"
@@ -1548,13 +1550,13 @@ msgid "Sent you a mail with instructions to reset your password."
 msgstr "Gửi cho bạn một mail với hướng dẫn đặt lại mật khẩu của bạn."
 
 msgid "Serpentine"
-msgstr ""
+msgstr "Quét đảo chiều"
 
 msgid "Server Error"
 msgstr "Lỗi hệ thống"
 
 msgid "Server answered with gibberish :("
-msgstr ""
+msgstr "Máy chủ trả lời bằng thông tin vô nghĩa :("
 
 msgid ""
 "Server got confused by your pixels. Are you playing on multiple devices?"
@@ -1569,6 +1571,8 @@ msgid ""
 "Set protection of areas (if you need finer grained control, use protect with "
 "image upload and alpha layers)"
 msgstr ""
+"Đặt bảo vệ cho khu vực (Nếu bạn muốn có kiểm soát tốt hơn, sử dụng chức năng "
+"bảo vệ cùng với tải lên ảnh và lớp phủ alpha)"
 
 msgid ""
 "Setting a password allows you to login by username or email, rather than "
@@ -1618,7 +1622,7 @@ msgid "Source for pixelplanet on ${ gitLink } or ${ downloadHereLink }."
 msgstr "Mã nguồn của pixelplanet tại ${ gitLink } hoặc ${ downloadHereLink }."
 
 msgid "Stacking till"
-msgstr ""
+msgstr "Xếp chồng đến"
 
 msgid "Start chatting here"
 msgstr "Bắt đầu trò chuyện ở đây"
@@ -1636,7 +1640,7 @@ msgid "Stay logged in: "
 msgstr "Giữ đăng nhập trong: "
 
 msgid "Stop Cleaner"
-msgstr ""
+msgstr "Dừng trình dọn"
 
 msgid "Stop checking for Malware"
 msgstr "Dừng kiểm tra phần mền độc hại"
@@ -1700,6 +1704,11 @@ msgid ""
 "with a 5s cooldown and 60s stacking. It got launched on May 11th and "
 "remained active for months till it got shut down on November 30th."
 msgstr ""
+"Khung vẽ này được yêu cầu trong thời gian tranh cãi chính trị ở khung vẽ "
+"chính Trái đất. Cái này có kích thước 1024x1024 biểu thị một phổ chính trị "
+"với thời gian hồi 1 pixel 5 giây và xếp chồng được 60 giây. Nó được kích "
+"hoạt vào ngày 11 tháng 5 và được giữ hoạt động trong nhiều tháng trước khi "
+"đóng lại vào ngày 30 tháng 11."
 
 msgid ""
 "This email / password combination got hacked and leaked. To protect this "
@@ -1815,6 +1824,8 @@ msgid ""
 "Turn every pixel in area to 0 (YOU REALLY SHOULDN'T DO THAT ON ANY AREA THAT "
 "ISN'T ALREADY MOSTLY 0)"
 msgstr ""
+"Đặt mọi pixel khong khu vực thành 9 (BẠN THẬT SỰ KHÔNG NÊN LÀM THẾ TRÊN BẤT "
+"CỨ KHU VỰC NÀO NẾU CHỖ ĐÓ KHÔNG VỐN ĐA SỐ LÀ 0)"
 
 msgid "Turn on grid to highlight pixel borders."
 msgstr "Bật chế độ lưới để làm nổi bật biên giới các điểm ảnh."
@@ -1900,6 +1911,9 @@ msgid ""
 "screenshot from the timelapse results in a perfect 1:1 representation of how "
 "the canvas was at that time."
 msgstr ""
+"Chúng tôi quyết định lưu trữ bằng mã hoá webm không mất mát. Chụp màn hình "
+"từ timelapse tạo ra kết quả 1:1 hoàn hảo hiện thị khung vẽ trông như thế nào "
+"lúc đó."
 
 msgid ""
 "We thank the following artists, who made their palettes available to the "
@@ -1923,6 +1937,11 @@ msgid ""
 "become dull and inactive after a while, at which point there is no reason to "
 "keep them and we may decide to remove them."
 msgstr ""
+"Khi chúng tôi cố gắn không xoá khung vẽ, một số khung vẽ được bắt đầu cho "
+"vui hoặc vì yêu cầu của người dùng người đang thích thú với một meme phổ "
+"biến lúc ấy. Những khung vẽ đó có thể trở nên nhàm chán và không hoạt động "
+"trong một khoảng thời gian, lúc đó không có lí do gì để giữ chúng và chúng "
+"tôi quyết định xoá chúng đi."
 
 msgid "Why?"
 msgstr "Tại sao?"
@@ -1998,6 +2017,8 @@ msgid ""
 "You can connect to pixelplanet and use pixelplanet accounts for oauth / oidc "
 "login. See here: "
 msgstr ""
+"Bạn có thể kết nối tới pixelplanet và sử dụng tài khoản pixelplanet cho đăng "
+"nhập oauth / oidc. Xem ở đây: "
 
 msgid "You can not access this canvas yet, because your pixel score is too low"
 msgstr "Bạn chưa thể truy cập khung vẽ này, vì điểm pixel của bạn quá thấp"
@@ -2118,29 +2139,29 @@ msgid "a hidden faction"
 msgstr "một nhóm ẩn"
 
 msgid "affects"
-msgstr ""
+msgstr "bên ảnh hưởng"
 
 #, javascript-format
 msgid "and ${ canvas.req } Pixels set"
-msgstr ""
+msgstr "và ${ canvas.req } pixel đã đặt"
 
 msgid "by"
-msgstr ""
+msgstr "bời"
 
 msgid "check compliance here"
 msgstr "kiểm tra sự tuân thủ ngay đây"
 
 msgid "created at"
-msgstr ""
+msgstr "tạo lúc"
 
 msgid "days"
-msgstr ""
+msgstr "ngày"
 
 msgid "download here"
 msgstr "Tải xuống tại đây"
 
 msgid "lift"
-msgstr ""
+msgstr "gỡ bỏ"
 
 msgid "or login with:"
 msgstr "hoặc đăng nhập với:"
@@ -2152,7 +2173,7 @@ msgid "recommended"
 msgstr "khuyến khích"
 
 msgid "times used"
-msgstr ""
+msgstr "số lần sữ dụng"
 
 #, javascript-format
 msgid "try again after ${ ti }min"
