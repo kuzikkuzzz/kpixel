@@ -3,7 +3,9 @@
  */
 
 import { memo, useCallback } from 'react';
-import { useSelector, useDispatch, shallowEqual } from 'react-redux';
+import {
+  useSelector, shallowEqual, useDispatch,
+} from '../../store/react-redux/index.js';
 import { TbPencil, TbPencilMinus } from 'react-icons/tb';
 import { t } from 'ttag';
 

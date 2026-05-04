@@ -4,7 +4,7 @@
 
 import { memo, Fragment, useState } from 'react';
 import { t } from 'ttag';
-import { useSelector, useDispatch } from 'react-redux';
+import { useSelector, useDispatch } from '../store/react-redux/index.js';
 
 import { setHavePassword } from '../store/actions/index.js';
 import { validatePassword } from '../utils/validation.js';

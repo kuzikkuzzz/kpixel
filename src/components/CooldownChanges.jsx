@@ -5,7 +5,7 @@
 /* eslint-disable max-len */
 
 import { memo } from 'react';
-import { useSelector } from 'react-redux';
+import { useSelector } from '../store/react-redux/index.js';
 import { t } from 'ttag';
 
 import { cdn } from '../utils/utag.js';

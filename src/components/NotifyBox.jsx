@@ -1,5 +1,5 @@
 import { memo, useState, useEffect } from 'react';
-import { useSelector } from 'react-redux';
+import { useSelector } from '../store/react-redux/index.js';
 
 
 const NotifyBox = () => {

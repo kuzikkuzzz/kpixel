@@ -3,7 +3,7 @@
  */
 
 import { useState, useEffect } from 'react';
-import { useSelector, shallowEqual } from 'react-redux';
+import { useSelector, shallowEqual } from '../../store/react-redux/index.js';
 import fileDownload from 'js-file-download';
 import { jt, t } from 'ttag';
 

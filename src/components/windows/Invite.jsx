@@ -3,7 +3,9 @@
  */
 
 import { Fragment, useState, useEffect, useContext } from 'react';
-import { useSelector, shallowEqual, useDispatch } from 'react-redux';
+import {
+  useSelector, shallowEqual, useDispatch,
+} from '../../store/react-redux/index.js';
 import { t } from 'ttag';
 
 import WindowContext from '../context/window.js';

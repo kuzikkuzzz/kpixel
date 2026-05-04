@@ -4,7 +4,7 @@
 /* eslint-disable jsx-a11y/media-has-caption */
 
 import { memo, Fragment, useState, useMemo, useContext } from 'react';
-import { useSelector } from 'react-redux';
+import { useSelector } from '../../store/react-redux/index.js';
 import { t } from 'ttag';
 import { MdFileDownload } from 'react-icons/md';
 import { HiStop } from 'react-icons/hi';

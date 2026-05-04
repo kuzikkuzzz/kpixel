@@ -3,7 +3,7 @@
  */
 
 import { memo, useState } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch } from '../store/react-redux/index.js';
 import { t } from 'ttag';
 
 import { notify } from '../store/actions/thunks.js';

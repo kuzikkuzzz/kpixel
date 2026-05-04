@@ -5,7 +5,7 @@
 
 
 import { memo, Fragment, useState } from 'react';
-import { useSelector } from 'react-redux';
+import { useSelector } from '../store/react-redux/index.js';
 import { t } from 'ttag';
 
 import { MEDIA_BAN_REASONS, USERLVL } from '../core/constants.js';

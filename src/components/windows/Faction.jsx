@@ -4,7 +4,7 @@
 import {
   Fragment, useState, useEffect, useContext, useCallback, useRef,
 } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch } from '../../store/react-redux/index.js';
 import { t } from 'ttag';
 import { RiSave3Line } from 'react-icons/ri';
 import { IoTrashOutline } from 'react-icons/io5';

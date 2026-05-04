@@ -5,7 +5,7 @@
 /* eslint-disable max-len */
 
 import { memo, Fragment, useMemo, useCallback, useContext } from 'react';
-import { shallowEqual, useSelector, useDispatch } from 'react-redux';
+import { shallowEqual, useSelector, useDispatch } from '../../store/react-redux/index.js';
 import { t } from 'ttag';
 import {
   Chart as ChartJS,

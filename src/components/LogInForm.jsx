@@ -2,7 +2,7 @@
  * Form to LogIn, Register and reset password
  */
 import { memo, Fragment, useState, useCallback } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch } from '../store/react-redux/index.js';
 import { t } from 'ttag';
 
 import { u, cdn } from '../utils/utag.js';

@@ -3,7 +3,7 @@
  */
 
 import { Fragment, useCallback } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import { useSelector, useDispatch } from '../../store/react-redux/index.js';
 import { c, t, jt } from 'ttag';
 import { GiMouse } from 'react-icons/gi';
 import { MdTouchApp } from 'react-icons/md';

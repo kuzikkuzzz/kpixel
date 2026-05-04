@@ -5,7 +5,9 @@
 
 
 import { Fragment, useState, useCallback, useRef } from 'react';
-import { useSelector, useDispatch, shallowEqual } from 'react-redux';
+import {
+  useSelector, shallowEqual, useDispatch,
+} from '../../store/react-redux/index.js';
 import fileDownload from 'js-file-download';
 import { c, t } from 'ttag';
 

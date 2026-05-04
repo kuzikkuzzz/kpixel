@@ -4,7 +4,7 @@
 
 import { memo, useMemo, Suspense } from 'react';
 import { t } from 'ttag';
-import { useSelector, useDispatch } from 'react-redux';
+import { useSelector, useDispatch } from '../store/react-redux/index.js';
 
 import {
   selectWindowType, selectWindowArgs,

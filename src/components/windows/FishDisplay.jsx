@@ -2,7 +2,7 @@
  * window to display a fish
  */
 import { useContext, useState, useEffect } from 'react';
-import { useSelector } from 'react-redux';
+import { useSelector } from '../../store/react-redux/index.js';
 import { t } from 'ttag';
 
 import WindowContext from '../context/window.js';

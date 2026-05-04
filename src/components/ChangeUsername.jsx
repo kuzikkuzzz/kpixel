@@ -4,7 +4,7 @@
 
 import { memo, useState } from 'react';
 import { t } from 'ttag';
-import { useDispatch } from 'react-redux';
+import { useDispatch } from '../store/react-redux/index.js';
 
 import { validateUsername } from '../utils/validation.js';
 import { changeUser } from '../store/actions/thunks.js';

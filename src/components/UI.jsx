@@ -3,7 +3,7 @@
  */
 
 import { memo } from 'react';
-import { useSelector, shallowEqual } from 'react-redux';
+import { useSelector, shallowEqual } from '../store/react-redux/index.js';
 
 import CoolDownBox from './CoolDownBox.jsx';
 import NotifyBox from './NotifyBox.jsx';

@@ -1,5 +1,7 @@
 import { useEffect } from 'react';
-import { useSelector, useDispatch, shallowEqual } from 'react-redux';
+import {
+  useSelector, shallowEqual, useDispatch,
+} from '../../store/react-redux/index.js';
 
 import { fetchProfile } from '../../store/actions/thunks.js';
 

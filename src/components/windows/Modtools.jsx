@@ -4,7 +4,7 @@
 import {
   memo, Fragment, useLayoutEffect, useContext, useCallback,
 } from 'react';
-import { useSelector } from 'react-redux';
+import { useSelector } from '../../store/react-redux/index.js';
 
 import WindowContext from '../context/window.js';
 import Canvastools from '../Canvastools.jsx';

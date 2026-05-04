@@ -2,7 +2,7 @@
  * user faction overview
  */
 import { Fragment, useMemo, useState, useCallback, useRef } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch } from '../../store/react-redux/index.js';
 import { t, jt } from 'ttag';
 
 import {

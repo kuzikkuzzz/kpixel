@@ -4,7 +4,7 @@
  */
 import { t } from 'ttag';
 import { useState } from 'react';
-import { useSelector } from 'react-redux';
+import { useSelector } from '../store/react-redux/index.js';
 
 import socketClient from '../socket/SocketClient.js';
 import { FISH_TYPES } from '../core/constants.js';

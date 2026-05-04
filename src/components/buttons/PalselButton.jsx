@@ -4,7 +4,9 @@
  */
 
 import { memo } from 'react';
-import { useSelector, useDispatch, shallowEqual } from 'react-redux';
+import {
+  useSelector, shallowEqual, useDispatch,
+} from '../../store/react-redux/index.js';
 import { MdPalette } from 'react-icons/md';
 import { t } from 'ttag';
 

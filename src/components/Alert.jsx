@@ -3,7 +3,7 @@
  */
 
 import { memo, useState, useEffect, useCallback } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import { useSelector, useDispatch } from '../store/react-redux/index.js';
 
 import GlobalCaptcha from './GlobalCaptcha.jsx';
 import BanInfo from './BanInfo.jsx';

@@ -1,4 +1,4 @@
-import { useDispatch } from 'react-redux';
+import { useDispatch } from '../store/react-redux/index.js';
 import { FaLink } from 'react-icons/fa';
 import { t } from 'ttag';
 

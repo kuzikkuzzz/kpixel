@@ -3,7 +3,7 @@
  */
 
 import { memo, useRef, useState, useEffect, useMemo } from 'react';
-import { useSelector, shallowEqual } from 'react-redux';
+import { useSelector, shallowEqual } from '../store/react-redux/index.js';
 import { t } from 'ttag';
 
 import templateLoader from '../ui/templateLoader.js';

@@ -6,7 +6,7 @@
 import {
   memo, Fragment, useState, useEffect, useRef, useCallback,
 } from 'react';
-import { useStore } from 'react-redux';
+import { useStore } from '../../store/react-redux/index.js';
 
 import { useConditionalClickOutside } from '../hooks/clickOutside.js';
 import useLink from '../hooks/link.js';

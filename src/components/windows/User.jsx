@@ -2,7 +2,7 @@
  * User
  */
 import { Fragment, useState, useEffect, useContext } from 'react';
-import { useSelector, useStore } from 'react-redux';
+import { useSelector, useStore } from '../../store/react-redux/index.js';
 import { t, jt } from 'ttag';
 import { IoIosRefresh } from 'react-icons/io';
 

@@ -6,7 +6,7 @@
 import {
   memo, Fragment, useRef, useState, useCallback, useMemo, useEffect,
 } from 'react';
-import { useSelector } from 'react-redux';
+import { useSelector } from '../store/react-redux/index.js';
 import { FaUser } from 'react-icons/fa';
 import { MdGroups } from 'react-icons/md';
 import { PiAxeFill } from 'react-icons/pi';

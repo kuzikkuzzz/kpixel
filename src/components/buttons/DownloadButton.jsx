@@ -3,7 +3,7 @@
  */
 
 import { memo } from 'react';
-import { useSelector } from 'react-redux';
+import { useSelector } from '../../store/react-redux/index.js';
 import { MdFileDownload } from 'react-icons/md';
 import fileDownload from 'js-file-download';
 import { t } from 'ttag';

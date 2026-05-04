@@ -2,7 +2,7 @@
  * Main App
  */
 
-import { Provider } from 'react-redux';
+import { Provider } from '../store/react-redux/index.js';
 import { createRoot } from 'react-dom/client';
 import { IconContext } from 'react-icons';
 

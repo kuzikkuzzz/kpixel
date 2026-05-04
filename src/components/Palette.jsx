@@ -3,7 +3,9 @@
  */
 
 import { memo, useState, useEffect } from 'react';
-import { useDispatch, useSelector, shallowEqual } from 'react-redux';
+import {
+  useSelector, shallowEqual, useDispatch,
+} from '../store/react-redux/index.js';
 
 import { selectColor } from '../store/actions/index.js';
 import useWindowSize from './hooks/resize.js';

@@ -3,7 +3,7 @@
  */
 
 import { memo, Fragment, useState, useEffect, useCallback } from 'react';
-import { useSelector } from 'react-redux';
+import { useSelector } from '../store/react-redux/index.js';
 import { t } from 'ttag';
 
 import DeleteList from './DeleteList.jsx';

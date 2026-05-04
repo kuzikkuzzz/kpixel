@@ -3,7 +3,7 @@
  */
 
 import { memo } from 'react';
-import { useSelector } from 'react-redux';
+import { useSelector } from '../store/react-redux/index.js';
 
 import {
   durationToString,

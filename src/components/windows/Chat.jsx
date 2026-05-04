@@ -12,7 +12,7 @@ import {
   useContext,
   useMemo,
 } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import { useSelector, useDispatch } from '../../store/react-redux/index.js';
 import { t } from 'ttag';
 
 import WindowContext from '../context/window.js';

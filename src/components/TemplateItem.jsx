@@ -3,7 +3,7 @@
  */
 
 import { memo, useRef, useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch, useSelector } from '../store/react-redux/index.js';
 import { t } from 'ttag';
 
 import templateLoader from '../ui/templateLoader.js';

@@ -3,7 +3,9 @@
  */
 
 import { memo, useCallback } from 'react';
-import { useDispatch, useSelector, shallowEqual } from 'react-redux';
+import {
+  useSelector, shallowEqual, useDispatch,
+} from '../../store/react-redux/index.js';
 import { t } from 'ttag';
 
 import CanvasItem from '../CanvasItem.jsx';

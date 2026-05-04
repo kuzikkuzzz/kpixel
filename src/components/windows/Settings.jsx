@@ -3,7 +3,9 @@
  */
 
 import { memo } from 'react';
-import { useSelector, useDispatch, shallowEqual } from 'react-redux';
+import {
+  useSelector, shallowEqual, useDispatch,
+} from '../../store/react-redux/index.js';
 import { c, t } from 'ttag';
 
 import SettingsItem from '../SettingsItem.jsx';

@@ -3,7 +3,7 @@
  */
 
 import { useCallback, useContext } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch } from '../../store/react-redux/index.js';
 
 import { updateExistingPopUp } from '../../core/popUps.js';
 import availablePopups, {

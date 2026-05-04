@@ -5,7 +5,7 @@
 /* eslint-disable max-len */
 
 import { memo, Fragment, useState } from 'react';
-import { useSelector } from 'react-redux';
+import { useSelector } from '../store/react-redux/index.js';
 import { t } from 'ttag';
 
 import { parseInterval } from '../core/utils.js';

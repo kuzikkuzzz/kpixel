@@ -2,7 +2,7 @@
  * draw windows
  */
 
-import { useSelector, shallowEqual } from 'react-redux';
+import { useSelector, shallowEqual } from '../store/react-redux/index.js';
 
 import Window from './Window.jsx';
 import { selectActiveWindowIds } from '../store/selectors/windows.js';
