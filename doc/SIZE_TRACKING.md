@@ -30,7 +30,7 @@ Main entry point: 468K
 196K    vendor.aeb089a8.js
 184K    pvendor.b22c1888.js
 
-Main entry point: 496K (+7%)
+Main entry point: 496K (+6%)
 
 - after eslint and babel update
 
@@ -46,7 +46,7 @@ Main entry point: 496K (+7%)
 196K    vendor.68b754c1.js
 184K    pvendor.d90d4d43.js
 
-Main entry point: 500K (+6.8%)
+Main entry point: 500K (+0.8%)
 
 - preact with preact/compat
 
