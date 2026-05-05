@@ -3,7 +3,7 @@
  */
 /* eslint-disable jsx-a11y/media-has-caption */
 
-import { useState, useMemo, useContext } from 'preact/hooks';
+import { useState, useMemo, useContext, useCallback } from 'preact/hooks';
 import { Fragment } from 'preact';
 import { useSelector } from '../../store/react-redux/index.js';
 import { t } from 'ttag';
@@ -63,20 +63,23 @@ const LocalMedia = ({
     ];
   }, [url, gTitle, gType, gMediaId, avgColor]);
 
-  if (!fullUrl || !type) {
-    return null;
-  }
-
-  const toggleExpand = () => {
+  const toggleExpand = useCallback((evt) => {
+    evt?.stopPropagation();
     if (!fill) {
-      setExpanded(!expanded);
+      console.log('toggle expand');
+      setExpanded((oldExpanded) => !oldExpanded);
       if (scrollRef?.current) {
         requestAnimationFrame(() => {
           scrollRef?.current?.();
         });
       }
     }
-  };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  if (!fullUrl || !type) {
+    return null;
+  }
 
   if (compact && iconUrl && !expanded && !fill) {
     return (

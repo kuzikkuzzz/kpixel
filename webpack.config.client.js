@@ -104,6 +104,7 @@ export default ({ development, analyze }) => {
                 icon: true,
                 svgProps: {
                   className: 'svgr-icon',
+                  fill: 'currentColor',
                 },
                 /*
                  * don't add any jsx imports, let our babel config handle it
