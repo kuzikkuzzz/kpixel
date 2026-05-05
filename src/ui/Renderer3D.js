@@ -365,7 +365,7 @@ class Renderer3D extends Renderer {
   }
 
   debug(ident) {
-    if (process?.env.NODE_ENV !== 'development') {
+    if (process.env.NODE_ENV !== 'development') {
       return;
     }
     if (this.lol !== ident) {
@@ -405,7 +405,7 @@ class Renderer3D extends Renderer {
         this.reloadChunks();
       }
 
-      if (process?.env.NODE_ENV === 'development') {
+      if (process.env.NODE_ENV === 'development') {
         if (this.forceNextRender) {
           this.debug('force');
         } else if (this.forceNextSubrender) {
@@ -418,7 +418,7 @@ class Renderer3D extends Renderer {
       this.threeRenderer.render(this.scene, this.camera);
       this.forceNextRender = false;
       this.forceNextSubrender = false;
-    } else if (process?.env.NODE_ENV === 'development') {
+    } else if (process.env.NODE_ENV === 'development') {
       this.debug('skip');
     }
   }

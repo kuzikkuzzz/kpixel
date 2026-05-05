@@ -2,7 +2,7 @@
  *
  */
 
-import { memo, Fragment } from 'react';
+import { Fragment } from 'preact';
 import { t } from 'ttag';
 
 import { cdn } from '../utils/utag.js';
@@ -72,4 +72,4 @@ const CanvasItem = ({
   </div>
 );
 
-export default memo(CanvasItem);
+export default CanvasItem;

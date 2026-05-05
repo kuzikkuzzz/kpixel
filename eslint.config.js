@@ -86,7 +86,7 @@ export default [
     },
 
     settings: {
-      react: { version: 'detect' },
+      react: { version: '18.0' },
       'import-x/extensions': ['.js', '.jsx'],
       'import-x/resolver': { node: true },
     },

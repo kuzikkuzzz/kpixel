@@ -1,7 +1,7 @@
 /*
  * Main Script for windows (pop-ups and stuff)
  */
-import { persistStore } from 'redux-persist';
+import { persistStore } from './store/persist/index.js';
 
 import { parentExists } from './core/utils.js';
 import store from './store/storePopUp.js';
@@ -16,7 +16,7 @@ import renderAppPopUp from './components/AppPopUp.jsx';
 // eslint-disable-next-line
 __webpack_public_path__ = `${window.ssv?.basename || ''}/assets/`;
 
-persistStore(store, {}, () => {
+persistStore(store).then(() => {
   window.addEventListener('message', store.dispatch);
 
   store.dispatch({ type: 'HYDRATED' });

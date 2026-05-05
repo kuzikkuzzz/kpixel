@@ -2,7 +2,8 @@
  *
  */
 
-import { memo, Fragment } from 'react';
+import { Fragment } from 'preact';
+import { memo } from 'preact/compat';
 import {
   useSelector, shallowEqual, useDispatch,
 } from '../store/react-redux/index.js';

@@ -2,7 +2,7 @@
  * function to link to window
  */
 
-import { useCallback, useContext } from 'react';
+import { useCallback, useContext } from 'preact/hooks';
 import { useDispatch } from '../../store/react-redux/index.js';
 
 import { updateExistingPopUp } from '../../core/popUps.js';

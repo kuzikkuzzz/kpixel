@@ -36,7 +36,7 @@ export function createStoreHook(
  *
  * @example
  *
- * import React from 'react'
+ * import React from 'preact/hooks'
  * import { useStore } from 'react-redux'
  *
  * export const ExampleComponent = () => {

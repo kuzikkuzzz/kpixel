@@ -2,7 +2,8 @@
  *
  */
 
-import { Fragment, useCallback } from 'react';
+import { useCallback } from 'preact/hooks';
+import { Fragment } from 'preact';
 import { useSelector, useDispatch } from '../../store/react-redux/index.js';
 import { c, t, jt } from 'ttag';
 import GiMouse from '../../icons/GiMouse.svg';

@@ -1,7 +1,8 @@
 /*
  * LogIn Form
  */
-import { memo, useState, useCallback, useRef, useEffect } from 'react';
+import { useState, useCallback, useRef, useEffect } from 'preact/hooks';
+import { memo } from 'preact/compat';
 import {
   useSelector, shallowEqual, useDispatch,
 } from '../store/react-redux/index.js';

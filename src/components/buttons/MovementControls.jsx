@@ -3,7 +3,7 @@
  * Menu for WASD keys for mobile users
  */
 
-import { useState, useCallback, useEffect } from 'react';
+import { useState, useCallback, useEffect } from 'preact/hooks';
 import {
   useSelector, shallowEqual, useDispatch,
 } from '../../store/react-redux/index.js';

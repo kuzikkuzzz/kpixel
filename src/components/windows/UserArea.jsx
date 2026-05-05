@@ -2,7 +2,9 @@
  * Menu to change user credentials
  */
 
-import { memo, Fragment, useState, useCallback } from 'react';
+import { useState, useCallback } from 'preact/hooks';
+import { Fragment } from 'preact';
+import { memo } from 'preact/compat';
 import {
   useSelector, shallowEqual, useDispatch,
 } from '../../store/react-redux/index.js';

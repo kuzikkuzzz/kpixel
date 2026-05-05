@@ -1,7 +1,7 @@
 /*
  * context for context menus
  */
-import { createContext } from 'react';
+import { createContext } from 'preact';
 
 const MenuContext = createContext();
 /*

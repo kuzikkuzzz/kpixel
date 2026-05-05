@@ -1,4 +1,5 @@
-import { memo, useState, useRef } from 'react';
+import { useState, useRef } from 'preact/hooks';
+import { memo } from 'preact/compat';
 
 import { stripQuery } from '../../core/utils.js';
 import usePostMessage from '../hooks/postMessage.js';

@@ -4,8 +4,10 @@
  */
 
 import {
-  memo, Fragment, useRef, useState, useCallback, useMemo, useEffect,
-} from 'react';
+  useRef, useState, useCallback, useMemo, useEffect,
+} from 'preact/hooks';
+import { memo } from 'preact/compat';
+import { Fragment } from 'preact';
 import { useSelector } from '../store/react-redux/index.js';
 import MdPerson from '../icons/MdPerson.svg';
 import MdGroups from '../icons/MdGroups.svg';

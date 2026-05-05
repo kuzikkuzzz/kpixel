@@ -2,7 +2,7 @@
  *
  */
 
-import { memo } from 'react';
+import { memo } from 'preact/compat';
 import { useSelector, shallowEqual } from '../store/react-redux/index.js';
 
 import CoolDownBox from './CoolDownBox.jsx';

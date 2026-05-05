@@ -1,5 +1,3 @@
-import ToggleButton from 'react-toggle';
-
 const SettingsItem = ({
   title, keyBind, value, onToggle, children, deactivated,
 }) => (
@@ -8,10 +6,12 @@ const SettingsItem = ({
       <h3 className="settitle">
         {title} {keyBind && <kbd>{keyBind}</kbd>}
       </h3>
-      <ToggleButton
+      <input
+        type="checkbox"
         checked={value}
         onChange={onToggle}
         disabled={deactivated}
+        className="settings-checkbox"
       />
     </div>
     <div className="modaldesc">{children}</div>

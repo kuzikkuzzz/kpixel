@@ -1,7 +1,7 @@
 /*
  * context for Embeds to attach to parent elements
  */
-import { createContext } from 'react';
+import { createContext } from 'preact';
 
 const EmbedContext = createContext();
 /*

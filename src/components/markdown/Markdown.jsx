@@ -1,7 +1,7 @@
 /*
  * Renders Markdown that got parsed by core/MarkdownParser
  */
-import { memo } from 'react';
+import { memo } from 'preact/compat';
 
 import MdParagraph from './MdParagraph.jsx';
 import { parse } from '../../utils/markdown/MarkdownParser.js';

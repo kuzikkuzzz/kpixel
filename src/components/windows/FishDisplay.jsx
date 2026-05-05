@@ -1,7 +1,7 @@
 /*
  * window to display a fish
  */
-import { useContext, useState, useEffect } from 'react';
+import { useContext, useState, useEffect } from 'preact/hooks';
 import { useSelector } from '../../store/react-redux/index.js';
 import { t } from 'ttag';
 

@@ -1,5 +1,5 @@
 /* vday banner */
-import { useState, useRef } from 'react';
+import { useState, useRef } from 'preact/hooks';
 import { cdn } from '../utils/utag.js';
 
 /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */

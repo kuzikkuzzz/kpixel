@@ -1,4 +1,5 @@
-import { useEffect, useRef, forwardRef } from 'react';
+import { useEffect, useRef } from 'preact/hooks';
+import { forwardRef } from 'preact/compat';
 import { Chart as ChartJS } from 'chart.js';
 
 /* eslint-disable react-hooks/exhaustive-deps */

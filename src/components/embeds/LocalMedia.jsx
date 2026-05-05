@@ -3,7 +3,8 @@
  */
 /* eslint-disable jsx-a11y/media-has-caption */
 
-import { memo, Fragment, useState, useMemo, useContext } from 'react';
+import { useState, useMemo, useContext } from 'preact/hooks';
+import { Fragment } from 'preact';
 import { useSelector } from '../../store/react-redux/index.js';
 import { t } from 'ttag';
 import MdFileDownload from '../../icons/MdFileDownload.svg';
@@ -276,7 +277,7 @@ const LocalMedia = ({
 };
 
 export default [
-  memo(LocalMedia),
+  LocalMedia,
   (url) => {
     const [path, ext] = splitUrl(url);
     if (!ext || !path.startsWith('/m/') || path[4] === '/') {

@@ -2,7 +2,7 @@
  * hook that returns the current day and month
  */
 
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef } from 'preact/hooks';
 
 function useDate() {
   const [day, setDay] = useState(() => new Date().getDate());

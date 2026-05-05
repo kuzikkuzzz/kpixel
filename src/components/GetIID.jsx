@@ -2,7 +2,7 @@
  * show IID
  */
 
-import { memo, useState } from 'react';
+import { useState } from 'preact/hooks';
 import { useDispatch } from '../store/react-redux/index.js';
 import { t } from 'ttag';
 
@@ -56,4 +56,4 @@ const GetIID = () => {
   );
 };
 
-export default memo(GetIID);
+export default GetIID;

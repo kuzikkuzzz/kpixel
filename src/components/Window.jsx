@@ -3,8 +3,9 @@
  */
 
 import {
-  memo, useState, useCallback, useRef, useEffect, useMemo, Suspense,
-} from 'react';
+  useState, useCallback, useRef, useEffect, useMemo,
+} from 'preact/hooks';
+import { memo, Suspense } from 'preact/compat';
 import { useSelector, useDispatch } from '../store/react-redux/index.js';
 import BiChalkboard from '../icons/BiChalkboard.svg';
 import { t } from 'ttag';

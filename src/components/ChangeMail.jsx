@@ -4,8 +4,10 @@
  */
 
 import {
-  memo, Fragment, useState, useCallback, useEffect, useMemo,
-} from 'react';
+  useState, useCallback, useEffect, useMemo,
+} from 'preact/hooks';
+import { memo } from 'preact/compat';
+import { Fragment } from 'preact';
 import { useSelector } from '../store/react-redux/index.js';
 import { t } from 'ttag';
 

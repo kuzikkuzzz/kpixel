@@ -3,7 +3,7 @@
  * return a function that can be attacked as ref to an element
  */
 
-import { useState, useRef, useCallback } from 'react';
+import { useState, useRef, useCallback } from 'preact/hooks';
 
 function useLongPress(shortPressCallback, longPressCallback, timeout = 600) {
   const [pressTimeout, setPressTimeout] = useState(null);

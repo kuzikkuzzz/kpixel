@@ -4,7 +4,8 @@
  * Displayed in an Alert
  */
 
-import { memo, useState } from 'react';
+import { useState } from 'preact/hooks';
+import { memo } from 'preact/compat';
 import { useDispatch } from '../store/react-redux/index.js';
 import { t } from 'ttag';
 

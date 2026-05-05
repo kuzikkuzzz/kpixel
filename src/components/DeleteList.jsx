@@ -1,4 +1,5 @@
-import { memo, useState } from 'react';
+import { useState } from 'preact/hooks';
+import { memo } from 'preact/compat';
 import { t } from 'ttag';
 
 import { cdn } from '../utils/utag.js';

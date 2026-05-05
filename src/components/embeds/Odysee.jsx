@@ -3,7 +3,7 @@
  * therefore we can't use it right now.
  * Still keeping this here in case that the policy changes in the future
  */
-import { memo } from 'react';
+import { memo } from 'preact/compat';
 
 import { stripQuery } from '../../core/utils.js';
 import DirectLinkEmbed from './DirectLinkEmbed.jsx';

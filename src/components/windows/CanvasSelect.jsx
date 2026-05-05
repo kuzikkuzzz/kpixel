@@ -2,7 +2,8 @@
  *
  */
 
-import { memo, useCallback } from 'react';
+import { useCallback } from 'preact/hooks';
+import { memo } from 'preact/compat';
 import {
   useSelector, shallowEqual, useDispatch,
 } from '../../store/react-redux/index.js';

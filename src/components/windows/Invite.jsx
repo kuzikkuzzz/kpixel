@@ -2,7 +2,8 @@
  * resolving an invite
  */
 
-import { Fragment, useState, useEffect, useContext } from 'react';
+import { useState, useEffect, useContext } from 'preact/hooks';
+import { Fragment } from 'preact';
 import {
   useSelector, shallowEqual, useDispatch,
 } from '../../store/react-redux/index.js';

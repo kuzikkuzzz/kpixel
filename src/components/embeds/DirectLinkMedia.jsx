@@ -1,7 +1,5 @@
 /* eslint-disable jsx-a11y/media-has-caption */
 
-import { memo } from 'react';
-
 import { splitUrl } from '../../core/utils.js';
 import { VIDEO_EXTENSIONS, IMAGE_EXTENSIONS } from '../../core/constants.js';
 
@@ -57,7 +55,7 @@ const DirectLinkMedia = ({
 };
 
 export default [
-  memo(DirectLinkMedia),
+  DirectLinkMedia,
   (url) => {
     const [, ext] = splitUrl(url);
     return (VIDEO_EXTENSIONS.includes(ext) || IMAGE_EXTENSIONS.includes(ext));

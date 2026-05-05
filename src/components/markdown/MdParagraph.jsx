@@ -1,7 +1,8 @@
 /*
  * Renders Markdown that got parsed by core/MarkdownParser
  */
-import { memo, useState, useMemo } from 'react';
+import { useState, useMemo } from 'preact/hooks';
+import { memo } from 'preact/compat';
 
 import MdLink from './MdLink.jsx';
 import MdMention from './MdMention.jsx';

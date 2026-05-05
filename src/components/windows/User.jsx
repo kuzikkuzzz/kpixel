@@ -1,7 +1,8 @@
 /*
  * User
  */
-import { Fragment, useState, useEffect, useContext } from 'react';
+import { useState, useEffect, useContext } from 'preact/hooks';
+import { Fragment } from 'preact';
 import { useSelector, useStore } from '../../store/react-redux/index.js';
 import { t, jt } from 'ttag';
 import IoIosRefresh from '../../icons/IoIosRefresh.svg';

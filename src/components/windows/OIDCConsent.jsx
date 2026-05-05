@@ -6,8 +6,11 @@
 
 /* eslint-disable max-len */
 
-import { Fragment, useMemo, useContext, useState } from 'react';
-import { useSelector, shallowEqual, useDispatch } from '../../store/react-redux/index.js';
+import { useMemo, useContext, useState } from 'preact/hooks';
+import { Fragment } from 'preact';
+import {
+  useSelector, shallowEqual, useDispatch,
+} from '../../store/react-redux/index.js';
 import { t, jt } from 'ttag';
 
 import WindowContext from '../context/window.js';

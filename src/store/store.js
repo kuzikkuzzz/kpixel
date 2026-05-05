@@ -12,12 +12,9 @@ import {
   applyMiddleware, combineReducers, legacy_createStore as createStore,
 } from 'redux';
 import { thunk } from 'redux-thunk';
-import { persistReducer } from 'redux-persist';
-import storage from 'redux-persist/es/storage/index.js';
+import { persistReducer } from './persist/index.js';
 
-import sharedReducers, {
-  migrate,
-} from './sharedReducers.js';
+import sharedReducers from './sharedReducers.js';
 
 /*
  * reducers
@@ -39,9 +36,7 @@ import extensions from './middleware/extensions.js';
 
 const windowsPersist = persistReducer({
   key: 'wind',
-  storage,
   version: 18,
-  migrate,
 }, windows);
 
 const reducers = combineReducers({

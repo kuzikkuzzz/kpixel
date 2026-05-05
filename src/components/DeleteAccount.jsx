@@ -2,7 +2,8 @@
  * Change Password Form
  */
 
-import { memo, Fragment, useState } from 'react';
+import { useState } from 'preact/hooks';
+import { Fragment } from 'preact';
 import { useSelector, useDispatch } from '../store/react-redux/index.js';
 import { t } from 'ttag';
 
@@ -84,4 +85,4 @@ const DeleteAccount = ({ done }) => {
   );
 };
 
-export default memo(DeleteAccount);
+export default DeleteAccount;

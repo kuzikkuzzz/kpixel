@@ -3,7 +3,9 @@
  * Tools to check who placed what where
  */
 
-import { memo, Fragment, useState, useEffect } from 'react';
+import { useState, useEffect } from 'preact/hooks';
+import { Fragment } from 'preact';
+import { memo } from 'preact/compat';
 import {
   useSelector, shallowEqual, useDispatch,
 } from '../store/react-redux/index.js';

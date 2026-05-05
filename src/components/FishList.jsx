@@ -1,7 +1,8 @@
 /*
  * List of caught fishes inside profile
  */
-import { memo, useState } from 'react';
+import { useState } from 'preact/hooks';
+import { memo } from 'preact/compat';
 import { t } from 'ttag';
 
 import useLink from './hooks/link.js';

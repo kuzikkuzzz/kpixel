@@ -3,7 +3,7 @@
  * Button to open/close palette
  */
 
-import { memo } from 'react';
+import { memo } from 'preact/compat';
 import {
   useSelector, shallowEqual, useDispatch,
 } from '../../store/react-redux/index.js';

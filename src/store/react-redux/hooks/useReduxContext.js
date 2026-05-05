@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import { useContext } from 'preact/hooks';
 
 import { ReactReduxContext } from '../components/Context.js';
 
@@ -33,7 +33,7 @@ export function createReduxContextHook(context = ReactReduxContext) {
  *
  * @example
  *
- * import React from 'react'
+ * import React from 'preact/hooks'
  * import { useReduxContext } from 'react-redux'
  *
  * export const CounterComponent = () => {

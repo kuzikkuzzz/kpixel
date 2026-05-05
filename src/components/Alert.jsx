@@ -2,7 +2,8 @@
  *
  */
 
-import { memo, useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback } from 'preact/hooks';
+import { memo } from 'preact/compat';
 import { useSelector, useDispatch } from '../store/react-redux/index.js';
 
 import GlobalCaptcha from './GlobalCaptcha.jsx';

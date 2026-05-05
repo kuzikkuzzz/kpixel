@@ -1,7 +1,8 @@
 /*
  * Search for users and factions
  */
-import { Fragment, useState, useContext, useCallback } from 'react';
+import { useState, useContext, useCallback } from 'preact/hooks';
+import { Fragment } from 'preact';
 import { t } from 'ttag';
 
 import WindowContext from '../context/window.js';

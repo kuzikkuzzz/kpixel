@@ -1,4 +1,5 @@
-import { memo, useState, useEffect } from 'react';
+import { useState, useEffect } from 'preact/hooks';
+import { memo } from 'preact/compat';
 import { useSelector } from '../store/react-redux/index.js';
 
 

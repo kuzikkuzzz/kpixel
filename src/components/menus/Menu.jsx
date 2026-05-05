@@ -3,9 +3,9 @@
  *
  */
 
-import {
-  memo, Fragment, useState, useEffect, useRef, useCallback,
-} from 'react';
+import { useState, useEffect, useRef, useCallback } from 'preact/hooks';
+import { Fragment } from 'preact';
+import { memo } from 'preact/compat';
 import { useStore } from '../../store/react-redux/index.js';
 
 import { useConditionalClickOutside } from '../hooks/clickOutside.js';

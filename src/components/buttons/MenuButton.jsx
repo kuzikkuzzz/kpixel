@@ -1,7 +1,7 @@
 /*
  * Menu Button on top left
  */
-import { useContext } from 'react';
+import { useContext } from 'preact/hooks';
 
 import MdExpandMore from '../../icons/MdExpandMore.svg';
 import MdExpandLess from '../../icons/MdExpandLess.svg';

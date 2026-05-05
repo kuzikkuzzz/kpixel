@@ -3,7 +3,8 @@
  */
 /* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 
-import { memo, useRef, useState, useEffect } from 'react';
+import { useRef, useState, useEffect } from 'preact/hooks';
+import { memo } from 'preact/compat';
 import {
   useSelector, shallowEqual, useDispatch,
 } from '../store/react-redux/index.js';

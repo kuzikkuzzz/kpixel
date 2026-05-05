@@ -2,7 +2,9 @@
  * get information about ban
  */
 
-import { memo, Fragment, useState, useCallback } from 'react';
+import { useState, useCallback } from 'preact/hooks';
+import { Fragment } from 'preact';
+import { memo } from 'preact/compat';
 import { jt, t } from 'ttag';
 
 import useInterval from './hooks/interval.js';

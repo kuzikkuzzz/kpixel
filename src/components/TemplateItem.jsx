@@ -2,7 +2,8 @@
  * Item for list of Tamplates
  */
 
-import { memo, useRef, useEffect } from 'react';
+import { useRef, useEffect } from 'preact/hooks';
+import { memo } from 'preact/compat';
 import { useDispatch, useSelector } from '../store/react-redux/index.js';
 import { t } from 'ttag';
 

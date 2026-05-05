@@ -2,7 +2,8 @@
  * UI for single-window popUp
  */
 
-import { memo, useMemo, Suspense } from 'react';
+import { useMemo } from 'preact/hooks';
+import { memo, Suspense } from 'preact/compat';
 import { t } from 'ttag';
 import { useSelector, useDispatch } from '../store/react-redux/index.js';
 

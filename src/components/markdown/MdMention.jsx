@@ -1,7 +1,7 @@
 /*
  * Parse Mention of Username
  */
-import { memo } from 'react';
+import { memo } from 'preact/compat';
 import { useSelector } from '../../store/react-redux/index.js';
 
 import { colorFromText, setBrightness } from '../../core/utils.js';

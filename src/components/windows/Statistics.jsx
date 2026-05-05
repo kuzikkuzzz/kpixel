@@ -4,7 +4,9 @@
 
 /* eslint-disable max-len */
 
-import { memo, Fragment, useMemo, useCallback, useContext } from 'react';
+import { useMemo, useCallback, useContext } from 'preact/hooks';
+import { Fragment } from 'preact';
+import { memo } from 'preact/compat';
 import {
   shallowEqual, useSelector, useDispatch,
 } from '../../store/react-redux/index.js';

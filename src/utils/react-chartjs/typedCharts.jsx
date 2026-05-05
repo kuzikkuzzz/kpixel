@@ -1,4 +1,4 @@
-import { forwardRef } from 'react';
+import { forwardRef } from 'preact/compat';
 import {
   Chart as ChartJS,
   LineController,

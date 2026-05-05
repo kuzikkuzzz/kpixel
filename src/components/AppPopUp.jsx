@@ -1,9 +1,14 @@
 /**
  * Main App
  */
+if (process.env.NODE_ENV === 'development') {
+  // Must use require here as import statements are only allowed
+  // to exist at top-level.
+  require('preact/debug');
+}
 
 import { Provider } from '../store/react-redux/index.js';
-import { createRoot } from 'react-dom/client';
+import { render } from 'preact';
 
 import Style from './Style.jsx';
 import UIPopUp from './UIPopUp.jsx';
@@ -19,11 +24,11 @@ const AppPopUp = () => (
 );
 
 function renderAppPopUp(domParent, store) {
-  const root = createRoot(domParent);
-  root.render(
+  render(
     <Provider store={store}>
       <AppPopUp />
     </Provider>,
+    domParent,
   );
 }
 

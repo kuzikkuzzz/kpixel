@@ -2,8 +2,9 @@
  * Component to upload files
  */
 import {
-  memo, useEffect, useState, useCallback, useRef, useLayoutEffect,
-} from 'react';
+  useEffect, useState, useCallback, useRef, useLayoutEffect,
+} from 'preact/hooks';
+import { memo } from 'preact/compat';
 import { t } from 'ttag';
 import ImAttachment from '../icons/ImAttachment.svg';
 

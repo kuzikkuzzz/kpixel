@@ -1,7 +1,9 @@
 /*
  * Messages on top of UserArea
  */
-import { memo, Fragment, useState } from 'react';
+import { useState } from 'preact/hooks';
+import { Fragment } from 'preact';
+import { memo } from 'preact/compat';
 import { useSelector } from '../store/react-redux/index.js';
 import { t } from 'ttag';
 

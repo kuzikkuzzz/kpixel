@@ -4,7 +4,8 @@
 
 
 
-import { Fragment, useState, useCallback, useRef } from 'react';
+import { useState, useCallback, useRef } from 'preact/hooks';
+import { Fragment } from 'preact';
 import {
   useSelector, shallowEqual, useDispatch,
 } from '../../store/react-redux/index.js';

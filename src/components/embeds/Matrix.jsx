@@ -1,6 +1,6 @@
 
 
-import { memo } from 'react';
+import { memo } from 'preact/compat';
 
 import DirectLinkMedia from './DirectLinkMedia.jsx';
 

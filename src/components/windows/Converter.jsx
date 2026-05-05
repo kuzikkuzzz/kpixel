@@ -2,7 +2,7 @@
  * Converts images to canvas palettes
  */
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from 'preact/hooks';
 import { useSelector, shallowEqual } from '../../store/react-redux/index.js';
 import fileDownload from 'js-file-download';
 import { jt, t } from 'ttag';

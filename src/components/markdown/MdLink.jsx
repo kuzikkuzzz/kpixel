@@ -3,7 +3,8 @@
  * Also provides previews
  * Links are assumed to start with protocol (http:// etc.)
  */
-import { memo, useContext, useMemo } from 'react';
+import { useContext, useMemo } from 'preact/hooks';
+import { memo } from 'preact/compat';
 import HiArrowsExpand from '../../icons/HiArrowsExpand.svg';
 import HiStop from '../../icons/HiStop.svg';
 import HiWindow from '../../icons/HiWindow.svg';

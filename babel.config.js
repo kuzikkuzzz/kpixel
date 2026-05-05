@@ -7,9 +7,10 @@ const pkg = JSON.parse(
 
 export default function (api) {
   const plugins = [
-    // react-optimize
-    '@babel/transform-react-constant-elements',
-    '@babel/transform-react-inline-elements',
+    ['@babel/plugin-transform-react-jsx', {
+      runtime: 'automatic',
+      importSource: 'preact',
+    }],
   ];
 
   const presets = [
@@ -28,9 +29,6 @@ export default function (api) {
             },
           },
     ],
-    ['@babel/preset-react', {
-      runtime: 'automatic',
-    }],
   ];
 
   return {

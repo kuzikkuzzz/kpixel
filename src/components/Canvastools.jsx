@@ -2,7 +2,9 @@
  * ModCanvastools
  */
 
-import { memo, Fragment, useState } from 'react';
+import { useState } from 'preact/hooks';
+import { Fragment } from 'preact';
+import { memo } from 'preact/compat';
 import {
   useSelector, shallowEqual, useDispatch,
 } from '../store/react-redux/index.js';

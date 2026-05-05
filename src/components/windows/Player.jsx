@@ -1,4 +1,5 @@
-import { memo, useContext } from 'react';
+import { useContext } from 'preact/hooks';
+import { memo } from 'preact/compat';
 import { t } from 'ttag';
 
 import WindowContext from '../context/window.js';

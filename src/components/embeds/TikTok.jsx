@@ -1,4 +1,4 @@
-import { memo } from 'react';
+import { memo } from 'preact/compat';
 
 import { stripQuery } from '../../core/utils.js';
 

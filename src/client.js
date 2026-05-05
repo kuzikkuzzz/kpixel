@@ -1,7 +1,7 @@
 /*
  * Entrypoint for main client script
  */
-import { persistStore } from 'redux-persist';
+import { persistStore } from './store/persist/index.js';
 
 import {
   createKeyDownHandler,
@@ -24,7 +24,7 @@ import socketClient from './socket/SocketClient.js';
 // eslint-disable-next-line
 __webpack_public_path__ = `${window.ssv?.basename || ''}/assets/`;
 
-persistStore(store, {}, () => {
+persistStore(store).then(() => {
   window.addEventListener('message', store.dispatch);
 
   store.dispatch({ type: 'HYDRATED' });

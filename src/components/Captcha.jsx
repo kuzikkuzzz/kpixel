@@ -6,7 +6,8 @@
 
 /* eslint-disable jsx-a11y/no-autofocus */
 
-import { memo, useState, useEffect, useCallback, useRef } from 'react';
+import { useState, useEffect, useCallback, useRef } from 'preact/hooks';
+import { memo } from 'preact/compat';
 import { t } from 'ttag';
 import IoReloadCircleSharp from '../icons/IoReloadCircleSharp.svg';
 

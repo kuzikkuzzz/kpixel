@@ -1,5 +1,3 @@
-import { memo } from 'react';
-
 import DirectLinkEmbed from './DirectLinkEmbed.jsx';
 
 function getIdFromURL(url) {
@@ -43,7 +41,7 @@ const AfreecaTv = ({ url, fill, maxHeight }) => {
 };
 
 export default [
-  memo(AfreecaTv),
+  AfreecaTv,
   getIdFromURL,
   getIdFromURL,
   '/embico/afreecatv.png',

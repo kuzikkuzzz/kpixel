@@ -2,7 +2,8 @@
  * Overlay to fade out background
  */
 
-import { memo, useState, useEffect } from 'react';
+import { useState, useEffect } from 'preact/hooks';
+import { memo } from 'preact/compat';
 
 const Overlay = ({ show, onClick, z }) => {
   const [render, setRender] = useState(false);

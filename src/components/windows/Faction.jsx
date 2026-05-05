@@ -2,8 +2,9 @@
  * faction
  */
 import {
-  Fragment, useState, useEffect, useContext, useCallback, useRef,
-} from 'react';
+  useState, useEffect, useContext, useCallback, useRef,
+} from 'preact/hooks';
+import { Fragment } from 'preact';
 import { useDispatch } from '../../store/react-redux/index.js';
 import { t } from 'ttag';
 import RiSave3Line from '../../icons/RiSave3Line.svg';

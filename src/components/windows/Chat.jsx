@@ -3,7 +3,6 @@
  */
 
 import {
-  Fragment,
   useRef,
   useLayoutEffect,
   useState,
@@ -11,7 +10,8 @@ import {
   useCallback,
   useContext,
   useMemo,
-} from 'react';
+} from 'preact/hooks';
+import { Fragment } from 'preact';
 import { useSelector, useDispatch } from '../../store/react-redux/index.js';
 import { t } from 'ttag';
 

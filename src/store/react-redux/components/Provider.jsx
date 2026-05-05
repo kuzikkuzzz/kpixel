@@ -1,4 +1,4 @@
-import { useMemo, useLayoutEffect } from 'react';
+import { useMemo, useLayoutEffect } from 'preact/hooks';
 
 import { createSubscription } from '../utils/Subscription.js';
 import { ReactReduxContext } from './Context.js';

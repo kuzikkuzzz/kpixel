@@ -1,4 +1,4 @@
-import { lazy as reactLazy } from 'react';
+import { lazy as preactLazy } from 'preact/compat';
 import { c, t } from 'ttag';
 
 import RefreshPrompt from '../RefreshPrompt.jsx';
@@ -20,11 +20,11 @@ import Search from './Search.jsx';
 const reloadOnCatch = () => Promise.resolve({ default: RefreshPrompt });
 
 /* eslint-disable max-len */
-const Modtools = reactLazy(() => import(/* webpackChunkName: "modtools" */ './Modtools.jsx').catch(reloadOnCatch));
-const Statistics = reactLazy(() => import(/* webpackChunkName: "stats" */ './Statistics.jsx').catch(reloadOnCatch));
-const Converter = reactLazy(() => import(/* webpackChunkName: "converter" */ './Converter.jsx').catch(reloadOnCatch));
-const Invite = reactLazy(() => import(/* webpackChunkName: "invite" */ './Invite.jsx').catch(reloadOnCatch));
-const OIDCConsent = reactLazy(() => import(/* webpackChunkName: "oidc" */ './OIDCConsent.jsx').catch(reloadOnCatch));
+const Modtools = preactLazy(() => import(/* webpackChunkName: "modtools" */ './Modtools.jsx').catch(reloadOnCatch));
+const Statistics = preactLazy(() => import(/* webpackChunkName: "stats" */ './Statistics.jsx').catch(reloadOnCatch));
+const Converter = preactLazy(() => import(/* webpackChunkName: "converter" */ './Converter.jsx').catch(reloadOnCatch));
+const Invite = preactLazy(() => import(/* webpackChunkName: "invite" */ './Invite.jsx').catch(reloadOnCatch));
+const OIDCConsent = preactLazy(() => import(/* webpackChunkName: "oidc" */ './OIDCConsent.jsx').catch(reloadOnCatch));
 /* eslint-enable max-len */
 
 export default {

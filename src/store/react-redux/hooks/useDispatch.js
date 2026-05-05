@@ -31,7 +31,7 @@ export function createDispatchHook(context = ReactReduxContext) {
  *
  * @example
  *
- * import React, { useCallback } from 'react'
+ * import React, { useCallback } from 'preact/hooks'
  * import { useDispatch } from 'react-redux'
  *
  * export const CounterComponent = ({ value }) => {

@@ -1,7 +1,9 @@
 /*
  * Form to LogIn, Register and reset password
  */
-import { memo, Fragment, useState, useCallback } from 'react';
+import { useState, useCallback } from 'preact/hooks';
+import { Fragment } from 'preact';
+import { memo } from 'preact/compat';
 import { useDispatch } from '../store/react-redux/index.js';
 import { t } from 'ttag';
 

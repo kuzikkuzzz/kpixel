@@ -1,7 +1,7 @@
 /*
  * show some data as table
  */
-import { useState } from 'react';
+import { useState } from 'preact/hooks';
 import { c, t } from 'ttag';
 
 import useLink from './hooks/link.js';

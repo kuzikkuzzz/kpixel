@@ -4,7 +4,7 @@
 
 /* eslint-disable max-len */
 
-import { memo } from 'react';
+import { memo } from 'preact/compat';
 import { useSelector } from '../store/react-redux/index.js';
 import { t } from 'ttag';
 

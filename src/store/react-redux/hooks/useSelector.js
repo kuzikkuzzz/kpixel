@@ -1,8 +1,8 @@
-import { useRef, useCallback } from 'react';
+import { useRef, useCallback } from 'preact/hooks';
+
 import {
   useSyncExternalStoreWithSelector,
-} from 'use-sync-external-store/with-selector';
-
+} from '../utils/useSyncExternalStoreWithSelector.js';
 import { ReactReduxContext } from '../components/Context.js';
 import {
   createReduxContextHook,
@@ -164,7 +164,7 @@ export function createSelectorHook(
  *
  * @example
  *
- * import React from 'react'
+ * import React from 'preact/hooks'
  * import { useSelector } from 'react-redux'
  *
  * export const CounterComponent = () => {

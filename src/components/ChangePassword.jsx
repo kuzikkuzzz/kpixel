@@ -2,7 +2,8 @@
  * Change Password Form
  */
 
-import { memo, Fragment, useState } from 'react';
+import { useState } from 'preact/hooks';
+import { Fragment } from 'preact';
 import { t } from 'ttag';
 import { useSelector, useDispatch } from '../store/react-redux/index.js';
 
@@ -128,4 +129,4 @@ const ChangePassword = ({ done }) => {
   );
 };
 
-export default memo(ChangePassword);
+export default ChangePassword;

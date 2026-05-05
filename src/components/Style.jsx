@@ -2,7 +2,7 @@
  *
  */
 
-import { memo } from 'react';
+import { memo } from 'preact/compat';
 import { useSelector } from '../store/react-redux/index.js';
 import { cdn } from '../utils/utag.js';
 

@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { useEffect } from 'preact/hooks';
 import {
   useSelector, shallowEqual, useDispatch,
 } from '../../store/react-redux/index.js';

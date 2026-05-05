@@ -1,6 +1,6 @@
 import {
   useEffect, useLayoutEffect, useRef, useCallback,
-} from 'react';
+} from 'preact/hooks';
 
 /* eslint-disable react-hooks/exhaustive-deps */
 

@@ -2,7 +2,9 @@
  * Admintools
  */
 
-import { memo, Fragment, useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback } from 'preact/hooks';
+import { Fragment } from 'preact';
+import { memo } from 'preact/compat';
 import { useSelector } from '../store/react-redux/index.js';
 import { t } from 'ttag';
 

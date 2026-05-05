@@ -1,4 +1,4 @@
-import { useState, useCallback, useMemo } from 'react';
+import { useState, useCallback, useMemo } from 'preact/hooks';
 
 import MenuContext from '../context/menu.js';
 import Menu from './Menu.jsx';

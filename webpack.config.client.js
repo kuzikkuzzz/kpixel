@@ -29,7 +29,7 @@ export default ({ development, analyze }) => {
    * NOTE: The production output bundle isn't useable without processing it
    * first
    */
-  if (development) {
+  if (development || analyze) {
     babelPlugins.push([
       'ttag', { resolve: { translations: 'default' } },
     ]);
@@ -74,9 +74,11 @@ export default ({ development, analyze }) => {
        */
       filename: (pathData) => (pathData.chunk.chunkReason)
         ? '[name].[chunkhash:8].js'
-        : `[name].${(development) ? 'en' : 'WPLANGCODE'}.[chunkhash:8].js`,
+        : `[name].${
+          (development || analyze) ? 'en' : 'WPLANGCODE'
+        }.[chunkhash:8].js`,
       chunkFilename: `[name].${
-        (development) ? 'en' : 'WPLANGCODE'
+        (development || analyze) ? 'en' : 'WPLANGCODE'
       }.[chunkhash:8].js`,
     },
 
@@ -94,35 +96,24 @@ export default ({ development, analyze }) => {
       rules: [
         {
           test: /\.svg$/,
-          use: [{
-            loader: '@svgr/webpack',
-            options: {
-              // jsxRuntimeImport: 'classic-preact',
-              memo: true,
-              icon: true,
-              svgProps: {
-                className: 'svgr-icon',
-              },
-            },
-          }],
-        },
-        /*
-        {
-          test: /\.svg$/,
-          use : [
-            {
-              loader: 'babel-loader',
-              options: {
-                presets: ['preact', 'env'],
-              },
-            },
+          use: [
+            'babel-loader',
             {
               loader: '@svgr/webpack',
-              options: { babel: false },
+              options: {
+                icon: true,
+                svgProps: {
+                  className: 'svgr-icon',
+                },
+                /*
+                 * don't add any jsx imports, let our babel config handle it
+                 */
+                babel: false,
+                jsxRuntime: 'automatic',
+              },
             },
           ],
         },
-        */
         {
           test: /\.(js|jsx)$/,
           use: [
@@ -244,6 +235,7 @@ export default ({ development, analyze }) => {
             name: 'vendor',
             chunks: (chunk) => chunk.name.startsWith('client'),
             test: /[\\/]node_modules[\\/]/,
+            priority: 5,
           },
           pvendor: {
             name: 'pvendor',
@@ -261,7 +253,7 @@ export default ({ development, analyze }) => {
        * we post-process the bundle in production ourselves, so no need for
        * minimization here
        */
-      minimize: false,
+      minimize: !!analyze,
     },
 
     recordsPath: path.resolve('records.json'),

@@ -4,7 +4,7 @@
 
 
 
-import { useEffect } from 'react';
+import { useEffect } from 'preact/hooks';
 
 /*
  * Keeps listening to outside clicks or window resize

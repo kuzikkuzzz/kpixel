@@ -2,7 +2,7 @@
  * context for window to provide window-specific
  * state (args) and set stuff
  */
-import { createContext } from 'react';
+import { createContext } from 'preact';
 
 const WindowContext = createContext();
 /*

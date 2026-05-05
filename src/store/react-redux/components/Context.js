@@ -1,4 +1,4 @@
-import { createContext } from 'react';
+import { createContext } from 'preact';
 
 const ContextKey = /* @__PURE__ */ Symbol.for(`react-redux-context`);
 const gT = (

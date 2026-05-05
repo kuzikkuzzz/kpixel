@@ -3,7 +3,7 @@
  * to trigger on window resize
  */
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from 'preact/hooks';
 
 function useWindowSize() {
   const [windowSize, setWindowSize] = useState({
