@@ -14,6 +14,8 @@ Tracking the size of bundles over time.
 196K    vendor.7420a130.js
 184K    pvendor.b22c1888.js
 
+Main entry point: 468K
+
 - after factions
 
 300K    client.en.f0aa5c0f.js
@@ -27,6 +29,8 @@ Tracking the size of bundles over time.
 24K     voxel.en.cbd9922c.js
 196K    vendor.aeb089a8.js
 184K    pvendor.b22c1888.js
+
+Main entry point: 496K (+7%)
 
 - after eslint and babel update
 
@@ -42,6 +46,8 @@ Tracking the size of bundles over time.
 196K    vendor.68b754c1.js
 184K    pvendor.d90d4d43.js
 
+Main entry point: 500K (+6.8%)
+
 - preact with preact/compat
 
 304K    client.en.7f4cf318.js
@@ -56,3 +62,5 @@ Tracking the size of bundles over time.
 24K     voxel.en.ecd33811.js
 36K     vendor.f5c6b315.js
 32K     pvendor.bb73175f.js
+
+Main entry point: 340K (-32%)
