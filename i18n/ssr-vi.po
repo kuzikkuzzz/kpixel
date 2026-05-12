@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: admin@pixelplanet.fun\n"
-"PO-Revision-Date: 2026-05-04 15:30+0000\n"
-"Last-Translator: Yuki_ <yuki@noreply.pixelplanet.fun>\n"
+"PO-Revision-Date: 2026-05-12 00:30+0000\n"
+"Last-Translator: Ngvn <ngvn@noreply.pixelplanet.fun>\n"
 "Language-Team: Vietnamese <https://translate.gs-os.com/projects/ppfun/server/"
 "vi/>\n"
 "Language: vi\n"
@@ -58,7 +58,7 @@ msgid "Application successfully added"
 msgstr "Đã thêm chương trình thành công"
 
 msgid "Avatar can only be an image"
-msgstr "Ảnh đại diện chỉ có thể là ảnh"
+msgstr "Ảnh đại diện phải là tệp tin ảnh"
 
 msgid "Avatar not given or not an image"
 msgstr "Ảnh đại diện không được cung cấp hoặc không phải một ảnh"
@@ -115,7 +115,7 @@ msgstr ""
 
 #. when leaving a faction and you are the last owner
 msgid "Can not orphan a faction"
-msgstr "Không thể bỏ rơi một nhóm"
+msgstr "Không thể kiến nhóm không có người"
 
 #, javascript-format
 msgid ""
