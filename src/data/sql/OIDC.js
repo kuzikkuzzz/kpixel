@@ -284,7 +284,7 @@ export async function createOIDCClient(
 
     const existingClients = await conn.query(
       // eslint-disable-next-line max-len
-      'SELECT name, id, secret, BIN_TO_UUID(uuid) AS uuid, secret FROM OIDCClients WHERE uid = ?',
+      'SELECT name, id, secret, BIN_TO_UUID(uuid) AS uuid FROM OIDCClients WHERE uid = ?',
       [uid],
     );
     if (uuid) {
