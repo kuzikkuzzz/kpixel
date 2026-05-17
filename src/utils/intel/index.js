@@ -214,7 +214,17 @@ export const checkMail = queue(async (email) => {
   if (tld === 'sbs' || tld === 'cyou') {
     return true;
   }
-  if (domain.endsWith('okcx.edu.rs')) {
+  if (domain.endsWith('okcx.edu.rs')
+    || domain.endsWith('pindush.net')
+    || domain.endsWith('noriina.shop')
+  ) {
+    return true;
+  }
+  if (![
+    'gmail.com', 'outlook.com', 'yandex.ru', 'yandex.com', 'protonmail.com',
+    'proton.me', 'proton.com', 'hotmail.com', 'icloud.com', 'mail.com',
+    'googlemail.com', 'esponamail.com', 'windowslive.com',
+  ].includes(domain)) {
     return true;
   }
   const cache = disposableEmailDomainCache.get(domain);
