@@ -32,9 +32,7 @@ CREATE TABLE IF NOT EXISTS CaptchaSolutions (
   -- when it expires, usually only a few minutes
   expires datetime NOT NULL,
 
-  PRIMARY KEY (id),
-  KEY ip (ip),
-  CONSTRAINT CaptchaSolutions_ibfk_1 FOREIGN KEY (ip) REFERENCES IPs (ip) ON DELETE CASCADE ON UPDATE CASCADE
+  PRIMARY KEY (id)
 );
 
 -- temporary js challenge solution storage
@@ -49,7 +47,5 @@ CREATE TABLE IF NOT EXISTS ChallengeSolutions (
   -- when it expires, usually only a few minutes
   expires datetime NOT NULL,
 
-  PRIMARY KEY (solution),
-  KEY ip (ip),
-  CONSTRAINT ChallengeSolutions_ibfk_1 FOREIGN KEY (ip) REFERENCES IPs (ip) ON DELETE CASCADE ON UPDATE CASCADE
+  PRIMARY KEY (solution)
 );
