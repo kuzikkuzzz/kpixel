@@ -525,7 +525,10 @@ export async function getIIDsOfIPs(ipStrings) {
   let replacements;
   if (ipStrings) {
     if (Array.isArray(ipStrings)) {
-      if (ipStrings.length && ipStrings.length <= 300) {
+      if (ipStrings.length) {
+        if (ipStrings.length > 1000) {
+          ipStrings.length = 1000;
+        }
         const placeholder = ipStrings
           .map(() => 'SELECT IP_TO_BIN(?) AS \'ip\'').join(' UNION ALL ');
         where += `i.ip IN (SELECT l.ip FROM (${placeholder}) AS l)`;
