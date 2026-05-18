@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: admin@pixelplanet.fun\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2025-11-02 16:40+0000\n"
+"PO-Revision-Date: 2026-05-18 16:50+0000\n"
 "Last-Translator: 568d2b17a2a549b58c9e72614f849ff2 "
 "<568d2b17a2a549b58c9e72614f849ff2@noreply.pixelplanet.fun>\n"
 "Language-Team: Portuguese <https://translate.gs-os.com/projects/ppfun/client/"
@@ -13,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 5.14\n"
+"X-Generator: Weblate 5.15.2\n"
 
 msgid " which is in "
 msgstr " que é em "
@@ -52,10 +52,10 @@ msgid "(0 = infinite)"
 msgstr "(0 = infinito)"
 
 msgid "(click a role to activate it)"
-msgstr ""
+msgstr "(selecione um cargo para ativá-lo)"
 
 msgid "(click a role to assign or remove it)"
-msgstr ""
+msgstr "(selecione um cargo para o atribuir ou remover)"
 
 msgid "+last hour"
 msgstr "+ultima hora"
@@ -70,6 +70,9 @@ msgid ""
 "A flag representing the role, it should be 16x11 pixels. If left empty, "
 "users with this role selected will still show their own flags."
 msgstr ""
+"Uma bandeira que representa o cargo. Deve ter 16x11 píxeis. Se deixares este "
+"campo vazio, os utilizadores com este cargo selecionado continuarão a "
+"mostrar as suas próprias bandeiras."
 
 msgid "A new verification mail is getting sent to you."
 msgstr "Uma nova verificação de e-mail está sendo enviada para você."
@@ -78,6 +81,9 @@ msgid ""
 "A role has all the permissions of all levels below and equal to it. In "
 "example: Every role with a power level of >=50 can manage invites (50)."
 msgstr ""
+"Uma cargo tem todas as permissões de todos os níveis inferiores e iguais ao "
+"seu. Por exemplo: qualquer função com um nível de poder >=50 pode gerir "
+"convites (50)."
 
 msgid "ACCESS MODTOOLS"
 msgstr "ACEDER A FERRAMENTAS DE MODERAÇÃO"
@@ -89,17 +95,17 @@ msgid "Add Template"
 msgstr "Adicionar Template"
 
 msgid "Add a new E-Mail Address here:"
-msgstr ""
+msgstr "Adicione um novo endereço de E-Mail aqui:"
 
 #. This if for moderation tools, it's not important to translate this
 msgid "Admintools"
 msgstr "Ferramentas de Administrador"
 
 msgid "Age"
-msgstr ""
+msgstr "Idade"
 
 msgid "All members of this faction are hidden"
-msgstr ""
+msgstr "Todos os membros desta facção estão privados"
 
 msgid "All sound effects will be disabled."
 msgstr "Todos os efeitos sonoros serão desativados."
@@ -111,7 +117,7 @@ msgid "Always show movement control buttons"
 msgstr "Mostra sempre os botões para controlo de movimento"
 
 msgid "An image representing your faction"
-msgstr ""
+msgstr "Uma imagem que representa sua facção"
 
 msgid "Anti Aliasing"
 msgstr "Anti Aliasing"
@@ -123,31 +129,32 @@ msgid "Archive"
 msgstr "Arquivo"
 
 msgid "Assign Roles"
-msgstr ""
+msgstr "Atribuir Cargos"
 
 msgid "Assign new Mod"
 msgstr "Adicionar um novo moderador"
 
 msgid "Assign role per default to new members"
-msgstr ""
+msgstr "Atribuir cargo por padrão a novos membros"
 
 msgid "Assign roles below their own"
-msgstr ""
+msgstr "Atribuir cargos abaixo do seu próprio nível"
 
 msgid "Assign this role to every new member automatically on join."
 msgstr ""
+"Atribuir este cargo automaticamente a todos os novos membros ao entrarem."
 
 msgid "Assigned role per default"
-msgstr ""
+msgstr "Cargo atribuído por padrão"
 
 msgid "Attach File"
-msgstr ""
+msgstr "Anexar ficheiro"
 
 msgid "Auto Zoom In"
 msgstr "Dar zoom automático"
 
 msgid "Avatar"
-msgstr ""
+msgstr "Avatar"
 
 msgid "Back"
 msgstr "Atrás"
@@ -159,13 +166,13 @@ msgid "Badges"
 msgstr "Crachás"
 
 msgid "Ban"
-msgstr ""
+msgstr "Banir"
 
 msgid "Ban media"
-msgstr ""
+msgstr "Banir multimédia"
 
 msgid "Ban members"
-msgstr ""
+msgstr "Banir membros"
 
 msgid "Banned"
 msgstr "Banido"
@@ -174,7 +181,7 @@ msgid "Banned? Detected as Proxy?"
 msgstr "Banido? Detectado como Proxy?"
 
 msgid "Bans"
-msgstr ""
+msgstr "Banimentos"
 
 msgid "Block"
 msgstr "Bloquear"
@@ -187,6 +194,10 @@ msgid ""
 "users to start messaging you. You can still start new DMs with other users "
 "and already ongoing DMs will still be open."
 msgstr ""
+"Bloquear todas as mensagens privadas. Ao ativar esta opção, outros "
+"utilizadores deixarão de conseguir iniciar conversas contigo. Continuarás a "
+"poder iniciar novas mensagens privadas com outros utilizadores e as "
+"conversas já existentes permanecerão abertas."
 
 msgid "Blocked"
 msgstr "Bloqueado"
@@ -253,7 +264,7 @@ msgid "Caught by"
 msgstr "Flagrado por"
 
 msgid "Change Flag"
-msgstr ""
+msgstr "Alterar bandeira"
 
 msgid "Change Happened"
 msgstr "Mudar o nome de utilizador"
@@ -265,7 +276,7 @@ msgid "Change Password"
 msgstr "Mudar a senha"
 
 msgid "Channel"
-msgstr ""
+msgstr "Canal"
 
 msgid "Channel settings"
 msgstr "Configuração de canal"
@@ -324,7 +335,7 @@ msgstr ""
 "Os cleaners podem aplicar cores não definidas com tempo de espera zero."
 
 msgid "Clear"
-msgstr ""
+msgstr "Limpar"
 
 #, javascript-format
 msgid ""
@@ -338,7 +349,7 @@ msgid "Click a color in palette to select it"
 msgstr "Clique em uma cor na paleta para selecioná-la"
 
 msgid "Click here to cease representation."
-msgstr ""
+msgstr "Clica aqui para deixar de representar."
 
 msgid "Click here to request a new verification mail."
 msgstr "Clique aqui para pedir um novo e-mail de verificação."
@@ -347,7 +358,7 @@ msgid "Click to Load Captcha"
 msgstr "Clique para Carregar o Captcha"
 
 msgid "Click to remove"
-msgstr ""
+msgstr "Clica para remover"
 
 msgid "Clone"
 msgstr "Clonar"
@@ -362,25 +373,25 @@ msgid "Close Palette"
 msgstr "Fechar paleta"
 
 msgid "Compact Chat"
-msgstr ""
+msgstr "Compacte o Chat"
 
 msgid "Compact Palette"
 msgstr "Paleta Compacta"
 
 msgid "Confirm"
-msgstr ""
+msgstr "Confirmar"
 
 msgid "Confirm Ban"
-msgstr ""
+msgstr "Confirmar Banimento"
 
 msgid "Confirm Delete"
-msgstr ""
+msgstr "Confirmar Remoção"
 
 msgid "Confirm Kick"
-msgstr ""
+msgstr "Confirmar Expulsão"
 
 msgid "Confirm Leave"
-msgstr ""
+msgstr "Confirmar Saída"
 
 msgid "Confirm New Password"
 msgstr "Confirme a senha nova"
@@ -389,7 +400,7 @@ msgid "Confirm Password"
 msgstr "Confirmar Senha"
 
 msgid "Confirm your password."
-msgstr ""
+msgstr "Confirma a tua palavra-passe."
 
 #, javascript-format
 msgid "Connection error ${ code } :("
@@ -555,10 +566,10 @@ msgid "Description"
 msgstr ""
 
 msgid "Description can't be empty"
-msgstr ""
+msgstr "Descrição não pode estar vazia"
 
 msgid "Description must be shorter than 1000 characters"
-msgstr ""
+msgstr "A descrição deve ter menos de 1000 caracteres"
 
 msgid "Description of your faction"
 msgstr ""
@@ -886,7 +897,7 @@ msgid "Import templates"
 msgstr "Importar templates"
 
 msgid "Incorrect password"
-msgstr ""
+msgstr "Palavra-passe incorreta"
 
 msgid "Interval"
 msgstr "Intervalo"
@@ -1063,7 +1074,7 @@ msgid "Name"
 msgstr "Nome"
 
 msgid "Name can only contain the characters: a-z . _ and -"
-msgstr ""
+msgstr "O nome só pode conter os caracteres: a-z . _ e -"
 
 msgid "Name can't be empty."
 msgstr "Nome não pode estar vazio."

@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: admin@pixelplanet.fun\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2025-10-29 22:40+0000\n"
+"PO-Revision-Date: 2026-05-18 16:50+0000\n"
 "Last-Translator: 568d2b17a2a549b58c9e72614f849ff2 "
 "<568d2b17a2a549b58c9e72614f849ff2@noreply.pixelplanet.fun>\n"
 "Language-Team: Portuguese <https://translate.gs-os.com/projects/ppfun/server/"
@@ -13,7 +13,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 5.14\n"
+"X-Generator: Weblate 5.15.2\n"
 
 msgid "1bit"
 msgstr "1bit"
@@ -35,7 +35,7 @@ msgstr ""
 "diária é resetada à 00:00 UTC."
 
 msgid "A file was too large"
-msgstr ""
+msgstr "Ficheiro demasiado grande"
 
 msgid "Access modtools"
 msgstr "Aceder às ferramentas de moderador"
@@ -62,72 +62,76 @@ msgid "Application successfully added"
 msgstr "Aplicação adicionada com sucesso"
 
 msgid "Avatar can only be an image"
-msgstr ""
+msgstr "Avatar só pode ser uma imagem"
 
 msgid "Avatar not given or not an image"
-msgstr ""
+msgstr "Avatar não fornecido ou não é uma imagem"
 
 msgid "Black and White canvas"
 msgstr "Canvas preto e branco"
 
 msgid "Can not change a role above your own"
-msgstr ""
+msgstr "Não podes mudar um cargo acima do teu"
 
 msgid "Can not change a role that is equal to your own"
-msgstr ""
+msgstr "Não podes mudar um cargo igual ao teu"
 
 msgid "Can not change the default setting of this role"
-msgstr ""
+msgstr "Não é possível alterar a definição padrão deste cargo"
 
 msgid "Can not change the powerlevel of a role equal or above you"
 msgstr ""
+"Não é possível alterar o nível de poder de um cargo igual ou superior à tua"
 
 msgid "Can not change the powerlevel of the Sovereign"
-msgstr ""
+msgstr "Não é possível alterar o nível de poder do Soberano"
 
 msgid "Can not chat while being banned"
 msgstr "Não é possível conversar enquanto estiver banido"
 
 msgid "Can not create a role on the same level as yours"
-msgstr ""
+msgstr "Não é possível criar um cargo no mesmo nível que o teu"
 
 msgid "Can not create a role with a powerlevel beyond yours"
-msgstr ""
+msgstr "Não é possível criar um cargo com um nível de poder superior ao teu"
 
 msgid "Can not delete a role on the same level as yours"
-msgstr ""
+msgstr "Não é possível eliminar um cargo no mesmo nível que o teu"
 
 msgid "Can not delete this role"
-msgstr ""
+msgstr "Não é possivel apagar este cargo"
 
 msgid "Can not elevate the powerlevel of a role beyond yours"
-msgstr ""
+msgstr "Não é possível elevar o nível de poder de um cargo acima do teu"
 
 msgid "Can not elevate the powerlevel of a role to yours"
-msgstr ""
+msgstr "Não é possível elevar o nível de poder de um cargo para o teu nível"
 
 #, javascript-format
 msgid "Can not have more than ${ MAX_ROLES_PER_FACTION } faction roles"
-msgstr ""
+msgstr "Não é possível ter mais de ${ MAX_ROLES_PER_FACTION } cargos na facção"
 
 msgid "Can not have more than 20 invites per faction"
-msgstr ""
+msgstr "Não é possível ter mais de 20 convites por facção"
 
 msgid "Can not modify user equal to you or above you"
 msgstr ""
+"Não é possível modificar um utilizador com o mesmo nível ou superior ao teu"
 
 #. when leaving a faction and you are the last owner
 msgid "Can not orphan a faction"
-msgstr ""
+msgstr "Não é possível deixar uma fação sem proprietário"
 
 #, javascript-format
 msgid ""
 "Can not upload this many files at once, only 5 are allowed, you have $"
 "{ amountOfFiles }"
 msgstr ""
+"Não é possível enviar tantos ficheiros de uma vez. Apenas 5 são permitidos, "
+"mas tens ${ amountOfFiles }"
 
 msgid "Can only have one Sovereign role"
-msgstr ""
+msgstr "Só pode existir um cargo de Soberano"
 
 msgid "Click here"
 msgstr "Clique aqui"
@@ -155,10 +159,10 @@ msgid "Coronavirus"
 msgstr "Coronavirus"
 
 msgid "Could not change the flag of this role"
-msgstr ""
+msgstr "Não foi possível alterar a bandeira deste cargo"
 
 msgid "Could not change this setting. Maybe try again later."
-msgstr ""
+msgstr "Não foi possível alterar esta definição. Tenta novamente mais tarde."
 
 msgid "Could not close this Session."
 msgstr "Não foi possível fechar esta Sessão."
@@ -167,19 +171,19 @@ msgid "Could not find this login method"
 msgstr "Não foi possível encontrar este método de login"
 
 msgid "Could not leave this channel"
-msgstr ""
+msgstr "Não é possivel sair deste canal"
 
 msgid "Could not set this factions avatar"
-msgstr ""
+msgstr "Não foi possível definir o avatar desta facção"
 
 msgid "Could not set your avatar"
-msgstr ""
+msgstr "Não foi possível definir o teu avatar"
 
 msgid "Could not set your faction role"
-msgstr ""
+msgstr "Não foi possível definir o teu cargo na facção"
 
 msgid "Could not upload all files"
-msgstr ""
+msgstr "Não foi possível enviar todos os ficheiros"
 
 msgid "Couldn't find this mail in our database"
 msgstr "Não conseguimos achar esse e-mail no nosso banco de dados"
@@ -191,10 +195,10 @@ msgid "Delete Application"
 msgstr "REMOVER APLICAÇÃO"
 
 msgid "Description can't be empty"
-msgstr ""
+msgstr "Descrição não pode estar vazia"
 
 msgid "Description must be shorter than 1000 characters"
-msgstr ""
+msgstr "A descrição deve ter menos de 1000 caracteres"
 
 msgid "Display name for your OIDC client"
 msgstr "Mostre o seu nome para o seu cliente OIDC"
@@ -237,13 +241,15 @@ msgid ""
 "File ${ filename } has ${ sizeMB } MB and is too large. It may only be $"
 "{ MAX_FILE_SIZE_MB } MB"
 msgstr ""
+"O ficheiro ${ filename } tem ${ sizeMB } MB e é demasiado grande. O tamanho "
+"máximo permitido é ${ MAX_FILE_SIZE_MB } MB"
 
 #, javascript-format
 msgid "File ${ filename } has an invalid extension"
-msgstr ""
+msgstr "O ficheiro ${ filename } tem uma extensão inválida"
 
 msgid "File is broken"
-msgstr ""
+msgstr "O ficheiro está corrompido"
 
 #. 'client_secret' is a technical term and should not be translated
 msgid ""
@@ -292,10 +298,10 @@ msgstr ""
 "mail foi ${ ip })."
 
 msgid "Incorrect password"
-msgstr ""
+msgstr "Palavra-passe incorreta"
 
 msgid "Invalid type of media"
-msgstr ""
+msgstr "Tipo de multimédia inválido"
 
 msgid "Invalid url :( Please check your mail again."
 msgstr "URL inválido :( Por favor, olhe seu email de novo."
@@ -304,10 +310,10 @@ msgid "Just admins can do that"
 msgstr "Apenas administradores podem fazer isso"
 
 msgid "Just janny, mod or admin can do that"
-msgstr ""
+msgstr "Apenas um janny, mod ou administrador pode fazer isso"
 
 msgid "Just mods and admins can do that"
-msgstr ""
+msgstr "Apenas mods e administradores podem fazer isso"
 
 msgid "Know that an account exists"
 msgstr "Verificar se a conta existe"
@@ -335,11 +341,13 @@ msgid "Mail verification"
 msgstr "Verificação de e-mail"
 
 msgid "MimeType or extension not known or supported"
-msgstr ""
+msgstr "Tipo MIME ou extensão desconhecida ou não suportada"
 
 #, javascript-format
 msgid "Mimetype ${ mimeType } of file ${ filename } is invalid or not allowed"
 msgstr ""
+"O tipo MIME ${ mimeType } do ficheiro ${ filename } é inválido ou não é "
+"permitido"
 
 msgid "Minimap"
 msgstr "Minimapa"
@@ -364,7 +372,7 @@ msgid "Name already in use."
 msgstr "Nome já se encontra em uso."
 
 msgid "Name can only contain the characters: a-z . _ and -"
-msgstr ""
+msgstr "O nome só pode conter os caracteres: a-z . _ e -"
 
 msgid "Name can't be empty."
 msgstr "Nome não pode estar vazio."
@@ -388,7 +396,7 @@ msgid "New Password"
 msgstr "Nova senha"
 
 msgid "No Avatar given"
-msgstr ""
+msgstr "Nenhum avatar fornecido"
 
 msgid "No Captcha given"
 msgstr "Nenhum Captcha fornecido"
