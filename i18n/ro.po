@@ -83,6 +83,12 @@ msgstr ""
 msgid "ACCESS MODTOOLS"
 msgstr "ACCESEAZĂ UNELTE MODERATOR"
 
+#. modlogLink has the text "Moderation Log"
+#, javascript-format
+msgid ""
+"Actions taken by moderators on the canvas can be seen in the ${ modlogLink }."
+msgstr ""
+
 msgid "Add Grid (uncheck if you need a 1:1 template)"
 msgstr "Adaugă o Grilă (debifează dacă ai nevoie de template 1:1)"
 
@@ -725,6 +731,9 @@ msgstr "Factor"
 msgid "File"
 msgstr "Filă"
 
+msgid "Filter"
+msgstr ""
+
 msgid "Fish Display"
 msgstr "Display de pești"
 
@@ -1042,6 +1051,12 @@ msgstr ""
 
 msgid "Minimum Color Distance"
 msgstr "Distanța Minimă de Culoare"
+
+msgid "Moderation Log"
+msgstr ""
+
+msgid "Moderation Logs"
+msgstr ""
 
 msgid "Moderators can access all Canvas, Watch and IID tools."
 msgstr ""
@@ -1529,6 +1544,9 @@ msgstr "Selectează Culoare"
 msgid "Selected Flag:"
 msgstr "Steagul selectat:"
 
+msgid "Selected moderation actions that happened within the past two weeks."
+msgstr ""
+
 msgid "Send"
 msgstr "Trimite"
 
@@ -1719,6 +1737,10 @@ msgid "This permission is required"
 msgstr "Această permisiune este necesară"
 
 msgid "This user has not password set"
+msgstr ""
+
+#. Column title in tables
+msgid "Time"
 msgstr ""
 
 msgid "Timeout"

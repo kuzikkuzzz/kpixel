@@ -76,6 +76,12 @@ msgstr ""
 msgid "ACCESS MODTOOLS"
 msgstr "访问管理员工具"
 
+#. modlogLink has the text "Moderation Log"
+#, javascript-format
+msgid ""
+"Actions taken by moderators on the canvas can be seen in the ${ modlogLink }."
+msgstr ""
+
 msgid "Add Grid (uncheck if you need a 1:1 template)"
 msgstr "添加网格（若您需要1比1模板则取消选中）"
 
@@ -710,6 +716,9 @@ msgstr "因素"
 msgid "File"
 msgstr "文件"
 
+msgid "Filter"
+msgstr ""
+
 msgid "Fish Display"
 msgstr "鱼类展示"
 
@@ -1016,6 +1025,12 @@ msgstr "成员"
 
 msgid "Minimum Color Distance"
 msgstr "最小颜色距离"
+
+msgid "Moderation Log"
+msgstr ""
+
+msgid "Moderation Logs"
+msgstr ""
 
 msgid "Moderators can access all Canvas, Watch and IID tools."
 msgstr "版主可以访问所有 Canvas、Watch 和 IID 工具。"
@@ -1492,6 +1507,9 @@ msgstr "选定颜色"
 msgid "Selected Flag:"
 msgstr ""
 
+msgid "Selected moderation actions that happened within the past two weeks."
+msgstr ""
+
 msgid "Send"
 msgstr "发送"
 
@@ -1678,6 +1696,10 @@ msgstr "需要此权限"
 
 msgid "This user has not password set"
 msgstr "此用户未设置密码"
+
+#. Column title in tables
+msgid "Time"
+msgstr ""
 
 msgid "Timeout"
 msgstr "暂停"

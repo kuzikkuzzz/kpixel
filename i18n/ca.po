@@ -87,6 +87,12 @@ msgstr ""
 msgid "ACCESS MODTOOLS"
 msgstr "ACCEDEIX A LES EINES DE MODERADOR"
 
+#. modlogLink has the text "Moderation Log"
+#, javascript-format
+msgid ""
+"Actions taken by moderators on the canvas can be seen in the ${ modlogLink }."
+msgstr ""
+
 msgid "Add Grid (uncheck if you need a 1:1 template)"
 msgstr "Afegeix Quadrícula (desactiva-ho si necessites una plantilla 1:1)"
 
@@ -747,6 +753,9 @@ msgstr "Factor"
 msgid "File"
 msgstr "Arxiu"
 
+msgid "Filter"
+msgstr ""
+
 msgid "Fish Display"
 msgstr "Visualització dels Peixos"
 
@@ -1067,6 +1076,12 @@ msgstr "Membres"
 
 msgid "Minimum Color Distance"
 msgstr "Distància de Color Mínima"
+
+msgid "Moderation Log"
+msgstr ""
+
+msgid "Moderation Logs"
+msgstr ""
 
 msgid "Moderators can access all Canvas, Watch and IID tools."
 msgstr "Els Moderadors poden accedir a totes les eines de Llenç, Watch i IID."
@@ -1563,6 +1578,9 @@ msgstr "Color Seleccionat"
 msgid "Selected Flag:"
 msgstr "Bandera Seleccionada:"
 
+msgid "Selected moderation actions that happened within the past two weeks."
+msgstr ""
+
 msgid "Send"
 msgstr "Envia"
 
@@ -1767,6 +1785,10 @@ msgstr "Aquest permís és necessari"
 
 msgid "This user has not password set"
 msgstr "Aquest usuari no té contrasenya"
+
+#. Column title in tables
+msgid "Time"
+msgstr ""
 
 msgid "Timeout"
 msgstr ""

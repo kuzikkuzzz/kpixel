@@ -85,6 +85,12 @@ msgstr ""
 msgid "ACCESS MODTOOLS"
 msgstr "PRISTUPI MOD SUČELJU"
 
+#. modlogLink has the text "Moderation Log"
+#, javascript-format
+msgid ""
+"Actions taken by moderators on the canvas can be seen in the ${ modlogLink }."
+msgstr ""
+
 msgid "Add Grid (uncheck if you need a 1:1 template)"
 msgstr "Dodaj rešetku (poništite ako vam je potreban predložak 1:1)"
 
@@ -732,6 +738,9 @@ msgstr "Faktor"
 msgid "File"
 msgstr "Datoteka"
 
+msgid "Filter"
+msgstr ""
+
 msgid "Fish Display"
 msgstr "Prikaz ribetine"
 
@@ -1049,6 +1058,12 @@ msgstr "Članovi"
 
 msgid "Minimum Color Distance"
 msgstr "Minimalna udaljenost boja"
+
+msgid "Moderation Log"
+msgstr ""
+
+msgid "Moderation Logs"
+msgstr ""
 
 msgid "Moderators can access all Canvas, Watch and IID tools."
 msgstr "Moderatori imaju pristup cijelom platnu, pregledu i IID alatima."
@@ -1536,6 +1551,9 @@ msgstr "Odabrana boja"
 msgid "Selected Flag:"
 msgstr "Odabrana zastava:"
 
+msgid "Selected moderation actions that happened within the past two weeks."
+msgstr ""
+
 msgid "Send"
 msgstr "Pošalji"
 
@@ -1731,6 +1749,10 @@ msgstr "Ovo dopuštenje je potrebno"
 
 msgid "This user has not password set"
 msgstr "Ovaj korisnik nema postavljenu lozinku"
+
+#. Column title in tables
+msgid "Time"
+msgstr ""
 
 msgid "Timeout"
 msgstr "Pauza"

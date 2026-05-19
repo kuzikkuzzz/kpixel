@@ -236,8 +236,8 @@ msgid ""
 "File ${ filename } has ${ sizeMB } MB and is too large. It may only be $"
 "{ MAX_FILE_SIZE_MB } MB"
 msgstr ""
-"Tệp tin ${ filename } chứa ${ sizeMB } MB và quá lớn. Nó chỉ có thể chứa ${ "
-"MAX_FILE_SIZE_MB } MB"
+"Tệp tin ${ filename } chứa ${ sizeMB } MB và quá lớn. Nó chỉ có thể chứa $"
+"{ MAX_FILE_SIZE_MB } MB"
 
 #, javascript-format
 msgid "File ${ filename } has an invalid extension"

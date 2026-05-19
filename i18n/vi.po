@@ -81,6 +81,12 @@ msgstr ""
 msgid "ACCESS MODTOOLS"
 msgstr "TRUY CẬP CÔNG CỤ MOD"
 
+#. modlogLink has the text "Moderation Log"
+#, javascript-format
+msgid ""
+"Actions taken by moderators on the canvas can be seen in the ${ modlogLink }."
+msgstr ""
+
 msgid "Add Grid (uncheck if you need a 1:1 template)"
 msgstr "Thêm lưới (không chọn nếu cần ảnh mẫu 1:1)"
 
@@ -733,6 +739,9 @@ msgstr "Hệ số"
 msgid "File"
 msgstr "Tệp"
 
+msgid "Filter"
+msgstr ""
+
 msgid "Fish Display"
 msgstr "Trưng bày cá"
 
@@ -1049,6 +1058,12 @@ msgstr "Những thành viên"
 
 msgid "Minimum Color Distance"
 msgstr "Khoảng cách màu tối thiểu"
+
+msgid "Moderation Log"
+msgstr ""
+
+msgid "Moderation Logs"
+msgstr ""
 
 msgid "Moderators can access all Canvas, Watch and IID tools."
 msgstr "Mod có thể truy cập mọi khung vẽ, theo dõi và các công cụ IID."
@@ -1427,8 +1442,8 @@ msgstr "Xoá một phương thức đăng nhập:"
 #, javascript-format
 msgid "Represents ${ activeFactionTitle } as ${ activeFactionRoleName }"
 msgstr ""
-"Đại diện cho nhóm ${ activeFactionTitle }với vai trò ${ "
-"activeFactionRoleName }"
+"Đại diện cho nhóm ${ activeFactionTitle }với vai trò $"
+"{ activeFactionRoleName }"
 
 msgid "Require Verification to Place"
 msgstr "Yêu cầu xác thực để đặt"
@@ -1543,6 +1558,9 @@ msgstr "Màu đã chọn"
 
 msgid "Selected Flag:"
 msgstr "Các cờ đã chọn:"
+
+msgid "Selected moderation actions that happened within the past two weeks."
+msgstr ""
 
 msgid "Send"
 msgstr "Gửi"
@@ -1740,6 +1758,10 @@ msgstr "Quyền hạn này cần thiết"
 
 msgid "This user has not password set"
 msgstr "Người dùng này chưa đặt mật khẩu"
+
+#. Column title in tables
+msgid "Time"
+msgstr ""
 
 msgid "Timeout"
 msgstr "Hết thời gian chờ"

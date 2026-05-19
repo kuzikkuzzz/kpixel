@@ -89,6 +89,12 @@ msgstr ""
 msgid "ACCESS MODTOOLS"
 msgstr "TOEGANG TOT MODTOOLS"
 
+#. modlogLink has the text "Moderation Log"
+#, javascript-format
+msgid ""
+"Actions taken by moderators on the canvas can be seen in the ${ modlogLink }."
+msgstr ""
+
 msgid "Add Grid (uncheck if you need a 1:1 template)"
 msgstr "Raster toevoegen (uitvinken als u een 1:1-sjabloon nodig heeft)"
 
@@ -739,6 +745,9 @@ msgstr "Factor"
 msgid "File"
 msgstr "Bestand"
 
+msgid "Filter"
+msgstr ""
+
 msgid "Fish Display"
 msgstr "Vis Weergave"
 
@@ -1059,6 +1068,12 @@ msgstr "Leden"
 
 msgid "Minimum Color Distance"
 msgstr "Minimale kleurafstand"
+
+msgid "Moderation Log"
+msgstr ""
+
+msgid "Moderation Logs"
+msgstr ""
 
 msgid "Moderators can access all Canvas, Watch and IID tools."
 msgstr "Moderators hebben toegang tot alle Canvas-, Watch- en IID-tools."
@@ -1552,6 +1567,9 @@ msgstr "Geselecteerde kleur"
 msgid "Selected Flag:"
 msgstr "Geselecteerde Vlag:"
 
+msgid "Selected moderation actions that happened within the past two weeks."
+msgstr ""
+
 msgid "Send"
 msgstr "Versturen"
 
@@ -1749,6 +1767,10 @@ msgid "This permission is required"
 msgstr "Deze toestemming is vereist"
 
 msgid "This user has not password set"
+msgstr ""
+
+#. Column title in tables
+msgid "Time"
 msgstr ""
 
 msgid "Timeout"

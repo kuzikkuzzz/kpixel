@@ -81,6 +81,12 @@ msgstr ""
 msgid "ACCESS MODTOOLS"
 msgstr "ALIRU MODERIGAJN ILOJN"
 
+#. modlogLink has the text "Moderation Log"
+#, javascript-format
+msgid ""
+"Actions taken by moderators on the canvas can be seen in the ${ modlogLink }."
+msgstr ""
+
 msgid "Add Grid (uncheck if you need a 1:1 template)"
 msgstr "Aldonu Kradon (ne elektu se necesus 1:1 proporcion)"
 
@@ -734,6 +740,9 @@ msgstr "Faktoro"
 msgid "File"
 msgstr "Dosiero"
 
+msgid "Filter"
+msgstr ""
+
 msgid "Fish Display"
 msgstr "Fiŝa Ekspozicio"
 
@@ -1055,6 +1064,12 @@ msgstr ""
 
 msgid "Minimum Color Distance"
 msgstr "Minimuma Kolordistanco"
+
+msgid "Moderation Log"
+msgstr ""
+
+msgid "Moderation Logs"
+msgstr ""
 
 msgid "Moderators can access all Canvas, Watch and IID tools."
 msgstr "Moderigantoj povas aliri ĉiujn ilojn de Canvas, Watch kaj IID."
@@ -1545,6 +1560,9 @@ msgstr "Selektu Lingvon"
 msgid "Selected Flag:"
 msgstr ""
 
+msgid "Selected moderation actions that happened within the past two weeks."
+msgstr ""
+
 msgid "Send"
 msgstr "Sendi"
 
@@ -1738,6 +1756,10 @@ msgid "This permission is required"
 msgstr "Ĉi tiu permeso estas necesa"
 
 msgid "This user has not password set"
+msgstr ""
+
+#. Column title in tables
+msgid "Time"
 msgstr ""
 
 msgid "Timeout"

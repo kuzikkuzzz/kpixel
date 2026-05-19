@@ -88,6 +88,12 @@ msgstr ""
 msgid "ACCESS MODTOOLS"
 msgstr "MODERATÖR ARAÇLARINA ERİŞ"
 
+#. modlogLink has the text "Moderation Log"
+#, javascript-format
+msgid ""
+"Actions taken by moderators on the canvas can be seen in the ${ modlogLink }."
+msgstr ""
+
 msgid "Add Grid (uncheck if you need a 1:1 template)"
 msgstr "Izgara ekle (eğer 1:1 bir şablon istiyorsanız bu seçeneği kapatın)"
 
@@ -739,6 +745,9 @@ msgstr "Çarpan"
 msgid "File"
 msgstr "Dosya"
 
+msgid "Filter"
+msgstr ""
+
 msgid "Fish Display"
 msgstr "Balık Sergisi"
 
@@ -1058,6 +1067,12 @@ msgstr "Üyeler"
 
 msgid "Minimum Color Distance"
 msgstr "Minimum Renk Farkı"
+
+msgid "Moderation Log"
+msgstr ""
+
+msgid "Moderation Logs"
+msgstr ""
 
 msgid "Moderators can access all Canvas, Watch and IID tools."
 msgstr ""
@@ -1557,6 +1572,9 @@ msgstr "Seçili Renk"
 msgid "Selected Flag:"
 msgstr "Seçili Bayrak:"
 
+msgid "Selected moderation actions that happened within the past two weeks."
+msgstr ""
+
 msgid "Send"
 msgstr "Gönder"
 
@@ -1752,6 +1770,10 @@ msgid "This permission is required"
 msgstr "Bu izin zorunludur"
 
 msgid "This user has not password set"
+msgstr ""
+
+#. Column title in tables
+msgid "Time"
 msgstr ""
 
 msgid "Timeout"

@@ -88,6 +88,12 @@ msgstr ""
 msgid "ACCESS MODTOOLS"
 msgstr "Aksesoni veglat e moderatorit"
 
+#. modlogLink has the text "Moderation Log"
+#, javascript-format
+msgid ""
+"Actions taken by moderators on the canvas can be seen in the ${ modlogLink }."
+msgstr ""
+
 msgid "Add Grid (uncheck if you need a 1:1 template)"
 msgstr "Shto Rrjetën (hiqni shenjën nëse keni nevojë për një shabllon 1:1)"
 
@@ -740,6 +746,9 @@ msgstr "Faktori"
 msgid "File"
 msgstr "Skedar"
 
+msgid "Filter"
+msgstr ""
+
 msgid "Fish Display"
 msgstr "Shfaqja e Peshqve"
 
@@ -1060,6 +1069,12 @@ msgstr "Pjesëtarët"
 
 msgid "Minimum Color Distance"
 msgstr "Distanca Minimale e Ngjyrave"
+
+msgid "Moderation Log"
+msgstr ""
+
+msgid "Moderation Logs"
+msgstr ""
 
 msgid "Moderators can access all Canvas, Watch and IID tools."
 msgstr "Moderatorët mund të aksesojnë të gjitha veglat Canvas, Watch dhe IID."
@@ -1552,6 +1567,9 @@ msgstr "Ngjyra e Zgjedhur"
 msgid "Selected Flag:"
 msgstr "Flamuri i përzgjedhur:"
 
+msgid "Selected moderation actions that happened within the past two weeks."
+msgstr ""
+
 msgid "Send"
 msgstr "Dërgo"
 
@@ -1750,6 +1768,10 @@ msgstr "Kjo leje është e detyrueshme"
 
 msgid "This user has not password set"
 msgstr "Ky përdorues nuk ka vendosur fjalëkalim akoma"
+
+#. Column title in tables
+msgid "Time"
+msgstr ""
 
 msgid "Timeout"
 msgstr "Vonesë"
