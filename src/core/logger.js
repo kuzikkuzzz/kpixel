@@ -216,6 +216,7 @@ const AUTHLOG_TYPE = {
   'RESET_MAIL_FAILURE': 0x09,
   'SENT_RESET_MAIL': 0x0A,
   'BANME': 0x0B,
+  'MALWARE_BAN': 0x0C,
 };
 
 const AUTHLOG_DESCRIPTIONS = {
@@ -230,6 +231,7 @@ const AUTHLOG_DESCRIPTIONS = {
   [AUTHLOG_TYPE.RESET_MAIL_FAILURE]: 'Could not send password reset mail',
   [AUTHLOG_TYPE.SENT_RESET_MAIL]: 'Sent password reset mail',
   [AUTHLOG_TYPE.BANME]: 'Autobanned',
+  [AUTHLOG_TYPE.MALWARE_BAN]: 'Malware banned',
 };
 
 const AUTHLOG_PERMISSION = {
@@ -244,6 +246,7 @@ const AUTHLOG_PERMISSION = {
   [AUTHLOG_TYPE.RESET_MAIL_FAILURE]: USERLVL.ADMIN,
   [AUTHLOG_TYPE.SENT_RESET_MAIL]: USERLVL.ADMIN,
   [AUTHLOG_TYPE.BANME]: USERLVL.ADMIN,
+  [AUTHLOG_TYPE.MALWARE_BAN]: USERLVL.ADMIN,
 };
 
 export class AuthLogger {
@@ -304,6 +307,10 @@ export class AuthLogger {
 
   static banme(userId, ...params) {
     logAuthAction(AUTHLOG_TYPE.BANME, params, userId);
+  }
+
+  static malwareBan(userId, ...params) {
+    logAuthAction(AUTHLOG_TYPE.MALWARE_BAN, params, userId);
   }
 }
 
