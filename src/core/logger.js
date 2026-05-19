@@ -211,6 +211,11 @@ const AUTHLOG_TYPE = {
   'LOGIN': 0x04,
   'DELETE_USER': 0x05,
   'ADD_EMAIL': 0x06,
+  'CHANGE_PASSWORD': 0x07,
+  'LOGOUT': 0x08,
+  'RESET_MAIL_FAILURE': 0x09,
+  'SENT_RESET_MAIL': 0x0A,
+  'BANME': 0x0B,
 };
 
 const AUTHLOG_DESCRIPTIONS = {
@@ -220,6 +225,11 @@ const AUTHLOG_DESCRIPTIONS = {
   [AUTHLOG_TYPE.LOGIN]: 'Logged in',
   [AUTHLOG_TYPE.DELETE_USER]: 'Deleted user',
   [AUTHLOG_TYPE.ADD_EMAIL]: 'Added email',
+  [AUTHLOG_TYPE.CHANGE_PASSWORD]: 'Changed password',
+  [AUTHLOG_TYPE.LOGOUT]: 'Logged out',
+  [AUTHLOG_TYPE.RESET_MAIL_FAILURE]: 'Could not send password reset mail',
+  [AUTHLOG_TYPE.SENT_RESET_MAIL]: 'Sent password reset mail',
+  [AUTHLOG_TYPE.BANME]: 'Autobanned',
 };
 
 const AUTHLOG_PERMISSION = {
@@ -229,6 +239,11 @@ const AUTHLOG_PERMISSION = {
   [AUTHLOG_TYPE.LOGIN]: USERLVL.MOD,
   [AUTHLOG_TYPE.DELETE_USER]: USERLVL.CHATMOD,
   [AUTHLOG_TYPE.ADD_EMAIL]: USERLVL.MOD,
+  [AUTHLOG_TYPE.CHANGE_PASSWORD]: USERLVL.MOD,
+  [AUTHLOG_TYPE.LOGOUT]: USERLVL.MOD,
+  [AUTHLOG_TYPE.RESET_MAIL_FAILURE]: USERLVL.ADMIN,
+  [AUTHLOG_TYPE.SENT_RESET_MAIL]: USERLVL.ADMIN,
+  [AUTHLOG_TYPE.BANME]: USERLVL.ADMIN,
 };
 
 export class AuthLogger {
@@ -269,6 +284,26 @@ export class AuthLogger {
 
   static addEmail(user, ...params) {
     logAuthAction(AUTHLOG_TYPE.ADD_EMAIL, params, user.id);
+  }
+
+  static changePassword(user) {
+    logAuthAction(AUTHLOG_TYPE.CHANGE_PASSWORD, [], user.id);
+  }
+
+  static logout(user) {
+    logAuthAction(AUTHLOG_TYPE.LOGOUT, [], user.id);
+  }
+
+  static resetMailFailure(...params) {
+    logAuthAction(AUTHLOG_TYPE.RESET_MAIL_FAILURE, params, null);
+  }
+
+  static sentResetMail(...params) {
+    logAuthAction(AUTHLOG_TYPE.SENT_RESET_MAIL, params, null);
+  }
+
+  static banme(userId, ...params) {
+    logAuthAction(AUTHLOG_TYPE.BANME, params, userId);
   }
 }
 

@@ -65,8 +65,6 @@ async function captcha(req, res) {
       throw new Error('Could not generate unique Captcha');
     }
 
-    logger.info(`CAPTCHA ${ipString} got captcha with text: ${text}`);
-
     res.set({
       'Content-Type': 'image/svg+xml',
       'Captcha-Id': id,

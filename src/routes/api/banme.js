@@ -2,17 +2,16 @@
  * report that user should be banned
  */
 
-import logger from '../../core/logger.js';
+import { AuthLogger } from '../../core/logger.js';
 import { upsertBan } from '../../core/ban.js';
 
 async function banme(req, res) {
   req.tickRateLimiter(3000);
 
   const { body: { code }, ip: { ipString } } = req;
-  const uid = req.user?.id;
+  const uid = req.user?.id || null;
 
-  // eslint-disable-next-line max-len
-  logger.info(`AUTOBAN ${code} - ${ipString} of user ${uid} with ua "${req.headers['user-agent']}"`);
+  AuthLogger.banme(uid, code, ipString, req.headers['user-agent']);
 
   let reason = 'AUTOBAN';
   let duration = 0;

@@ -2,7 +2,7 @@
  * request password reset mail
  */
 
-import logger from '../../../core/logger.js';
+import { AuthLogger } from '../../../core/logger.js';
 import mailProvider from '../../../core/MailProvider.js';
 import { validateEMail } from '../../../utils/validation.js';
 
@@ -32,9 +32,7 @@ export default async (req, res) => {
     email, ipString, host, lang,
   );
   if (error) {
-    // eslint-disable-next-line max-len
-    logger.info(`AUTH: Could not send password reset mail for email ${email} by ${ipString}`);
-
+    AuthLogger.resetMailFailure(email, ipString);
     res.status(400);
     res.json({
       errors: [error],
@@ -42,8 +40,7 @@ export default async (req, res) => {
     return;
   }
 
-  // eslint-disable-next-line max-len
-  logger.info(`AUTH: Sent password reset mail for email ${email} by ${ipString}`);
+  AuthLogger.sentResetMail(email, ipString);
 
   res.status(200);
   res.json({
