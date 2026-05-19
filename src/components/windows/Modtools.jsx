@@ -11,6 +11,7 @@ import Canvastools from '../Canvastools.jsx';
 import Admintools from '../Admintools.jsx';
 import Watchtools from '../Watchtools.jsx';
 import Mediatools from '../Mediatools.jsx';
+import ModLogTools from '../ModLogTools.jsx';
 import IIDTools from '../IIDTools.jsx';
 import { USERLVL } from '../../core/constants.js';
 
@@ -20,6 +21,7 @@ const CONTENT = {
   Watch: Watchtools,
   IID: IIDTools,
   Media: Mediatools,
+  Logs: ModLogTools,
 };
 
 function Modtools() {
@@ -50,6 +52,7 @@ function Modtools() {
         case 'Canvas':
           return userlvl >= USERLVL.JANNY;
         case 'Media':
+        case 'Logs':
           return userlvl >= USERLVL.CHATMOD;
         default:
           return false;

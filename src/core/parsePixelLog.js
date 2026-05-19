@@ -1,4 +1,5 @@
 import fs from 'fs';
+import path from 'path';
 import readline from 'readline';
 
 import { PixelLogger } from './logger.js';
@@ -16,7 +17,10 @@ function parseFile(cb) {
   let day = date.getUTCDate();
   if (day < 10) day = `0${day}`;
   if (month < 10) month = `0${month}`;
-  const filename = `${PixelLogger.prefix}${year}-${month}-${day}.log`;
+  const filename = path.resolve(
+    import.meta.dirname, 'log',
+    `${PixelLogger.prefix}${year}-${month}-${day}.log`,
+  );
 
   return new Promise((resolve, reject) => {
     const fileStream = fs.createReadStream(filename);

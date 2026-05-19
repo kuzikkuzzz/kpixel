@@ -8,6 +8,7 @@ import useLink from './hooks/link.js';
 import { cdn } from '../utils/utag.js';
 import { getUrlsFromMediaIdAndName } from '../utils/media/utils.js';
 import { numberToStringFull } from '../core/utils.js';
+import MdParagraph from './markdown/MdParagraph.jsx';
 
 const Table = ({
   rows, columnIds, types, uniqueColumnKey = 0, sortColumnKey = 0,
@@ -22,7 +23,8 @@ const Table = ({
     title: t`Title`,
     name: t`Name`,
     description: t`Description`,
-
+    /* t: Column title in tables */
+    time: t`Time`,
     /* t: Column title of column indicating whether or not a faction is able to be joined in public */
     ispublic: c('statistics-table').t`Public`,
     members: t`Members`,
@@ -46,26 +48,31 @@ const Table = ({
     <table>
       <thead>
         <tr>
-          {columnIds.map((col, ind) => (
-            <th
-              key={col}
-              style={
-                (sortBy === ind) ? {
-                  cursor: 'pointer',
-                  fontWeight: 'normal',
-                } : {
-                  cursor: 'pointer',
+          {columnIds.map((col, ind) => {
+            if (types[ind] === 'hidden') {
+              return null;
+            }
+            return (
+              <th
+                key={col}
+                style={
+                  (sortBy === ind) ? {
+                    cursor: 'pointer',
+                    fontWeight: 'normal',
+                  } : {
+                    cursor: 'pointer',
+                  }
                 }
-              }
-              onClick={() => {
-                if (sortBy === ind) {
-                  setSortAsc(!sortAsc);
-                } else {
-                  setSortBy(ind);
-                }
-              }}
-            >{columnIdToNames[col] || col}</th>
-          ))}
+                onClick={() => {
+                  if (sortBy === ind) {
+                    setSortAsc(!sortAsc);
+                  } else {
+                    setSortBy(ind);
+                  }
+                }}
+              >{columnIdToNames[col] || col}</th>
+            );
+          })}
         </tr>
       </thead>
       <tbody>
@@ -93,13 +100,15 @@ const Table = ({
 
               switch (type) {
                 case 'bool':
-                  return (<td key={key}>{val && 'X'}</td>);
+                  return <td key={key}>{val && 'X'}</td>;
                 case 'number':
                   return (
                     <td key={key} className="number-cell">
                       {numberToStringFull(val)}
                     </td>
                   );
+                case 'mdstring' :
+                  return <td><MdParagraph text={val} /></td>;
                 case 'faction': {
                   if (!val) {
                     return (<td key={key}>{t`Private`}</td>);
@@ -202,6 +211,8 @@ const Table = ({
                       (new Date(val)).toLocaleDateString()
                     }</td>
                   );
+                case 'hidden':
+                  return null;
                 default:
                   return (<td key={key}>{val}</td>);
               }

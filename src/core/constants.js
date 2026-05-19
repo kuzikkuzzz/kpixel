@@ -230,6 +230,7 @@ export const AVAILABLE_POPUPS = [
   'SEARCH',
   'CONVERTER',
   'I',
+  'MODLOG',
 ];
 
 /*

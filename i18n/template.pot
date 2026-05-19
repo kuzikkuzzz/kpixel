@@ -7,30 +7,30 @@ msgstr ""
 msgid " which is in "
 msgstr ""
 
-#: src/components/windows/Help.jsx:121
+#: src/components/windows/Help.jsx:136
 #, javascript-format
 msgid "${ mouseSymbol } Hold left mouse button and drag mouse to rotate"
 msgstr ""
 
-#: src/components/windows/Help.jsx:113
-#: src/components/windows/Help.jsx:124
+#: src/components/windows/Help.jsx:128
+#: src/components/windows/Help.jsx:139
 #, javascript-format
 msgid "${ mouseSymbol } Left click or ${ touchSymbol } tap to place a pixel"
 msgstr ""
 
-#: src/components/windows/Help.jsx:123
+#: src/components/windows/Help.jsx:138
 #, javascript-format
 msgid "${ mouseSymbol } Right click and drag mouse to pan"
 msgstr ""
 
-#: src/components/windows/Help.jsx:125
+#: src/components/windows/Help.jsx:140
 #, javascript-format
 msgid ""
 "${ mouseSymbol } Right click or ${ touchSymbol } double-tap to remove a "
 "pixel"
 msgstr ""
 
-#: src/components/windows/Help.jsx:122
+#: src/components/windows/Help.jsx:137
 #, javascript-format
 msgid ""
 "${ mouseSymbol } Scroll mouse wheel or hold ${ mouseSymbol } middle mouse "
@@ -79,6 +79,14 @@ msgstr ""
 
 #: src/components/windows/OIDCConsent.jsx:66
 msgid "ACCESS MODTOOLS"
+msgstr ""
+
+#: src/components/windows/Help.jsx:102
+#. modlogLink has the text "Moderation Log"
+#, javascript-format
+msgid ""
+"Actions taken by moderators on the canvas can be seen in the ${ modlogLink "
+"}."
 msgstr ""
 
 #: src/components/windows/Converter.jsx:362
@@ -167,7 +175,7 @@ msgid "Auto Zoom In"
 msgstr ""
 
 #: src/components/SocialSettings.jsx:89
-#: src/components/Table.jsx:21
+#: src/components/Table.jsx:22
 #: src/components/windows/Faction.jsx:1488
 #: src/components/windows/MyFactions.jsx:199
 msgid "Avatar"
@@ -177,7 +185,7 @@ msgstr ""
 msgid "Back"
 msgstr ""
 
-#: src/components/windows/index.js:44
+#: src/components/windows/index.js:45
 msgid "Badge Display"
 msgstr ""
 
@@ -202,7 +210,7 @@ msgstr ""
 msgid "Banned"
 msgstr ""
 
-#: src/components/windows/Help.jsx:86
+#: src/components/windows/Help.jsx:97
 msgid "Banned? Detected as Proxy?"
 msgstr ""
 
@@ -301,7 +309,7 @@ msgstr ""
 msgid "Canvas"
 msgstr ""
 
-#: src/components/windows/index.js:41
+#: src/components/windows/index.js:42
 msgid "Canvas Archive"
 msgstr ""
 
@@ -314,7 +322,7 @@ msgid "Canvas Error"
 msgstr ""
 
 #: src/components/menus/mainMenu.js:54
-#: src/components/windows/index.js:40
+#: src/components/windows/index.js:41
 msgid "Canvas Selection"
 msgstr ""
 
@@ -354,7 +362,7 @@ msgstr ""
 msgid "Charts"
 msgstr ""
 
-#: src/components/windows/index.js:39
+#: src/components/windows/index.js:40
 msgid "Chat"
 msgstr ""
 
@@ -419,15 +427,15 @@ msgstr ""
 msgid "Clear"
 msgstr ""
 
-#: src/components/windows/Help.jsx:114
-#: src/components/windows/Help.jsx:126
+#: src/components/windows/Help.jsx:129
+#: src/components/windows/Help.jsx:141
 #, javascript-format
 msgid ""
 "Click ${ mouseSymbol } middle mouse button or ${ touchSymbol } long-tap to "
 "select current hovering color"
 msgstr ""
 
-#: src/components/windows/Help.jsx:102
+#: src/components/windows/Help.jsx:117
 msgid "Click a color in palette to select it"
 msgstr ""
 
@@ -523,8 +531,8 @@ msgstr ""
 msgid "Consent"
 msgstr ""
 
-#: src/components/windows/Help.jsx:100
-#: src/components/windows/Help.jsx:116
+#: src/components/windows/Help.jsx:115
+#: src/components/windows/Help.jsx:131
 msgid "Controls"
 msgstr ""
 
@@ -534,7 +542,7 @@ msgstr ""
 
 #: src/components/menus/mainMenu.js:193
 #: src/components/windows/Converter.jsx:191
-#: src/components/windows/index.js:38
+#: src/components/windows/index.js:39
 msgid "Converter"
 msgstr ""
 
@@ -595,8 +603,8 @@ msgstr ""
 msgid "Copy to Clipboard"
 msgstr ""
 
-#: src/store/actions/fetch.js:722
-#: src/store/actions/fetch.js:816
+#: src/store/actions/fetch.js:726
+#: src/store/actions/fetch.js:820
 msgid "Could not connect to server"
 msgstr ""
 
@@ -609,8 +617,8 @@ msgstr ""
 msgid "Could not load captcha"
 msgstr ""
 
-#: src/store/actions/fetch.js:700
-#: src/store/actions/fetch.js:805
+#: src/store/actions/fetch.js:704
+#: src/store/actions/fetch.js:809
 msgid "Could not process files"
 msgstr ""
 
@@ -655,17 +663,17 @@ msgstr ""
 msgid "Create roles"
 msgstr ""
 
-#: src/components/windows/Help.jsx:141
+#: src/components/windows/Help.jsx:156
 #, javascript-format
 msgid "Credit for the Palette of the 2bit canvas goes to ${ donendoLink }."
 msgstr ""
 
-#: src/components/windows/Help.jsx:135
+#: src/components/windows/Help.jsx:150
 #, javascript-format
 msgid "Credit for the Palette of the Moon goes to ${ starhouseLink }."
 msgstr ""
 
-#: src/components/windows/Help.jsx:138
+#: src/components/windows/Help.jsx:153
 #, javascript-format
 msgid "Credit for the Palette of the Top10 canvas goes to ${ vinikLink }."
 msgstr ""
@@ -690,7 +698,7 @@ msgstr ""
 msgid "DM"
 msgstr ""
 
-#: src/components/Table.jsx:33
+#: src/components/Table.jsx:35
 msgid "Daily Pixels"
 msgstr ""
 
@@ -706,7 +714,7 @@ msgstr ""
 msgid "Daily Pixels per Player"
 msgstr ""
 
-#: src/components/Table.jsx:32
+#: src/components/Table.jsx:34
 #: src/components/windows/Faction.jsx:782
 #: src/components/windows/User.jsx:166
 #: src/components/windows/UserArea.jsx:116
@@ -748,7 +756,7 @@ msgstr ""
 msgid "Deny"
 msgstr ""
 
-#: src/components/Table.jsx:24
+#: src/components/Table.jsx:25
 #: src/components/windows/Faction.jsx:776
 #: src/components/windows/Faction.jsx:1549
 #: src/components/windows/MyFactions.jsx:222
@@ -837,7 +845,7 @@ msgstr ""
 msgid "Download Template"
 msgstr ""
 
-#: src/components/windows/Help.jsx:110
+#: src/components/windows/Help.jsx:125
 #, javascript-format
 msgid "Drag ${ mouseSymbol } mouse or ${ touchSymbol } pan to move"
 msgstr ""
@@ -847,12 +855,12 @@ msgstr ""
 msgid "Duration"
 msgstr ""
 
-#: src/components/windows/Help.jsx:57
+#: src/components/windows/Help.jsx:68
 #: src/controls/keypress.js:222
 msgid "Easter Egg OFF"
 msgstr ""
 
-#: src/components/windows/Help.jsx:58
+#: src/components/windows/Help.jsx:69
 #: src/controls/keypress.js:221
 msgid "Easter Egg ON"
 msgstr ""
@@ -990,7 +998,7 @@ msgstr ""
 msgid "Export enabled templates"
 msgstr ""
 
-#: src/components/windows/index.js:50
+#: src/components/windows/index.js:51
 msgid "Faction"
 msgstr ""
 
@@ -1022,7 +1030,12 @@ msgstr ""
 msgid "File"
 msgstr ""
 
-#: src/components/windows/index.js:43
+#: src/components/ModLogTools.jsx:95
+#: src/components/windows/Modlog.jsx:36
+msgid "Filter"
+msgstr ""
+
+#: src/components/windows/index.js:44
 msgid "Fish Display"
 msgstr ""
 
@@ -1030,11 +1043,11 @@ msgstr ""
 msgid "For"
 msgstr ""
 
-#: src/components/windows/Help.jsx:128
+#: src/components/windows/Help.jsx:143
 msgid "For Developers"
 msgstr ""
 
-#: src/components/windows/Help.jsx:82
+#: src/components/windows/Help.jsx:93
 #, javascript-format
 msgid ""
 "For any legal issues, please contact ${ mailLink }. If you want to delete "
@@ -1128,7 +1141,7 @@ msgstr ""
 msgid "Groups"
 msgstr ""
 
-#: src/components/windows/Help.jsx:76
+#: src/components/windows/Help.jsx:87
 msgid "Have fun!"
 msgstr ""
 
@@ -1138,7 +1151,7 @@ msgstr ""
 
 #: src/components/BanInfo.jsx:87
 #: src/components/menus/mainMenu.js:227
-#: src/components/windows/index.js:35
+#: src/components/windows/index.js:36
 msgid "Help"
 msgstr ""
 
@@ -1156,7 +1169,7 @@ msgstr ""
 msgid "Hide from profile"
 msgstr ""
 
-#: src/components/windows/Help.jsx:75
+#: src/components/windows/Help.jsx:86
 msgid ""
 "Higher zoomlevels take some time to update, the 3D globe gets updated at "
 "least once per day."
@@ -1167,7 +1180,7 @@ msgstr ""
 msgid "Historical View"
 msgstr ""
 
-#: src/components/windows/Help.jsx:112
+#: src/components/windows/Help.jsx:127
 #, javascript-format
 msgid "Hold left ${ bindShift } for pencil (to place while moving mouse)"
 msgstr ""
@@ -1196,11 +1209,11 @@ msgstr ""
 msgid "IP Actions"
 msgstr ""
 
-#: src/components/windows/Help.jsx:90
+#: src/components/windows/Help.jsx:105
 msgid "Identifiers"
 msgstr ""
 
-#: src/components/windows/Help.jsx:88
+#: src/components/windows/Help.jsx:99
 #, javascript-format
 msgid ""
 "If you got detected as proxy, but you aren't using one, or think that you "
@@ -1209,7 +1222,7 @@ msgid ""
 "the ban message."
 msgstr ""
 
-#: src/components/windows/Help.jsx:91
+#: src/components/windows/Help.jsx:106
 msgid ""
 "If you talk to moderators or administrators, you might get asked for one of "
 "the following identifiers:"
@@ -1253,11 +1266,11 @@ msgstr ""
 msgid "Invalid color selected"
 msgstr ""
 
-#: src/components/windows/index.js:53
+#: src/components/windows/index.js:55
 msgid "Invite"
 msgstr ""
 
-#: src/components/windows/Help.jsx:78
+#: src/components/windows/Help.jsx:89
 msgid "Invited to Chat"
 msgstr ""
 
@@ -1286,7 +1299,7 @@ msgstr ""
 msgid "Join Faction"
 msgstr ""
 
-#: src/components/Table.jsx:30
+#: src/components/Table.jsx:32
 msgid "Joined"
 msgstr ""
 
@@ -1327,7 +1340,7 @@ msgstr ""
 msgid "Leave Faction"
 msgstr ""
 
-#: src/components/windows/Help.jsx:81
+#: src/components/windows/Help.jsx:92
 msgid "Legal Requests"
 msgstr ""
 
@@ -1424,7 +1437,7 @@ msgstr ""
 msgid "Manage invites"
 msgstr ""
 
-#: src/components/windows/Help.jsx:84
+#: src/components/windows/Help.jsx:95
 msgid "Map Data"
 msgstr ""
 
@@ -1436,7 +1449,7 @@ msgstr ""
 msgid "Media Actions"
 msgstr ""
 
-#: src/components/Table.jsx:28
+#: src/components/Table.jsx:30
 #: src/components/windows/Faction.jsx:90
 #: src/components/windows/Faction.jsx:798
 msgid "Members"
@@ -1446,12 +1459,21 @@ msgstr ""
 msgid "Minimum Color Distance"
 msgstr ""
 
+#: src/components/windows/Help.jsx:62
+#: src/components/windows/index.js:54
+msgid "Moderation Log"
+msgstr ""
+
+#: src/components/windows/Modlog.jsx:34
+msgid "Moderation Logs"
+msgstr ""
+
 #: src/components/Admintools.jsx:403
 msgid "Moderators can access all Canvas, Watch and IID tools."
 msgstr ""
 
 #: src/components/menus/mainMenu.js:157
-#: src/components/windows/index.js:47
+#: src/components/windows/index.js:48
 #. This if for moderation tools, it's not important to translate this
 msgid "Modtools"
 msgstr ""
@@ -1469,13 +1491,13 @@ msgid "Muted Sound"
 msgstr ""
 
 #: src/components/menus/mainMenu.js:119
-#: src/components/windows/index.js:49
+#: src/components/windows/index.js:50
 msgid "My Factions"
 msgstr ""
 
 #: src/components/LogInForm.jsx:325
 #: src/components/LogInForm.jsx:330
-#: src/components/Table.jsx:23
+#: src/components/Table.jsx:24
 #: src/components/windows/Faction.jsx:1160
 #: src/components/windows/Faction.jsx:1328
 #: src/components/windows/MyFactions.jsx:188
@@ -1537,8 +1559,8 @@ msgstr ""
 msgid "No"
 msgstr ""
 
-#: src/store/actions/fetch.js:670
-#: src/store/actions/fetch.js:743
+#: src/store/actions/fetch.js:674
+#: src/store/actions/fetch.js:747
 msgid "No File selected to upload"
 msgstr ""
 
@@ -1570,6 +1592,7 @@ msgstr ""
 #: src/components/Canvastools.jsx:215
 #: src/components/IIDTools.jsx:111
 #: src/components/Mediatools.jsx:48
+#: src/components/ModLogTools.jsx:90
 #: src/components/Watchtools.jsx:99
 #: src/components/windows/Faction.jsx:752
 msgid "Not Allowed"
@@ -1589,7 +1612,7 @@ msgstr ""
 msgid "Note: Your active Faction may overwrite your flag settings."
 msgstr ""
 
-#: src/components/windows/index.js:66
+#: src/components/windows/index.js:68
 msgid "OIDC LogIn"
 msgstr ""
 
@@ -1648,11 +1671,11 @@ msgstr ""
 msgid "Open in PopUp"
 msgstr ""
 
-#: src/components/windows/Help.jsx:129
+#: src/components/windows/Help.jsx:144
 msgid "OpenID Connect Client registration"
 msgstr ""
 
-#: src/components/windows/Help.jsx:74
+#: src/components/windows/Help.jsx:85
 msgid ""
 "Our main canvas is a huge worldmap, you can place wherever you like, but "
 "you will have to wait a specific Cooldown between pixels. You can check out "
@@ -1758,12 +1781,12 @@ msgstr ""
 msgid "Pixel protected"
 msgstr ""
 
-#: src/components/Table.jsx:35
-#: src/components/Table.jsx:38
+#: src/components/Table.jsx:37
+#: src/components/Table.jsx:40
 msgid "Pixels"
 msgstr ""
 
-#: src/components/windows/Help.jsx:73
+#: src/components/windows/Help.jsx:84
 msgid "Place color pixels on a large canvas with other players online!"
 msgstr ""
 
@@ -1813,51 +1836,51 @@ msgstr ""
 msgid "Powerlevel of this role. See table below for an explanation."
 msgstr ""
 
-#: src/components/windows/Help.jsx:109
-#: src/components/windows/Help.jsx:119
+#: src/components/windows/Help.jsx:124
+#: src/components/windows/Help.jsx:134
 #, javascript-format
 msgid "Press ${ bindAUp }, ${ bindALeft }, ${ bindADown }, ${ bindARight } to move"
 msgstr ""
 
-#: src/components/windows/Help.jsx:103
+#: src/components/windows/Help.jsx:118
 #, javascript-format
 msgid "Press ${ bindG } to toggle grid"
 msgstr ""
 
-#: src/components/windows/Help.jsx:105
+#: src/components/windows/Help.jsx:120
 #, javascript-format
 msgid "Press ${ bindH } to toggle historical view"
 msgstr ""
 
-#: src/components/windows/Help.jsx:120
+#: src/components/windows/Help.jsx:135
 #, javascript-format
 msgid "Press ${ bindQ } and ${ bindE } to fly up and down"
 msgstr ""
 
-#: src/components/windows/Help.jsx:107
+#: src/components/windows/Help.jsx:122
 #, javascript-format
 msgid "Press ${ bindQ } or ${ bindE } to zoom"
 msgstr ""
 
-#: src/components/windows/Help.jsx:106
+#: src/components/windows/Help.jsx:121
 #, javascript-format
 msgid "Press ${ bindR } to copy coordinates"
 msgstr ""
 
-#: src/components/windows/Help.jsx:108
-#: src/components/windows/Help.jsx:118
+#: src/components/windows/Help.jsx:123
+#: src/components/windows/Help.jsx:133
 #, javascript-format
 msgid "Press ${ bindW }, ${ bindA }, ${ bindS }, ${ bindD } to move"
 msgstr ""
 
-#: src/components/windows/Help.jsx:104
+#: src/components/windows/Help.jsx:119
 #, javascript-format
 msgid "Press ${ bindX } to toggle showing of pixel activity"
 msgstr ""
 
 #: src/components/SocialSettings.jsx:209
-#: src/components/Table.jsx:105
-#: src/components/Table.jsx:133
+#: src/components/Table.jsx:114
+#: src/components/Table.jsx:142
 msgid "Private"
 msgstr ""
 
@@ -1875,8 +1898,8 @@ msgstr ""
 msgid "Range Banned"
 msgstr ""
 
-#: src/components/Table.jsx:34
-#: src/components/Table.jsx:37
+#: src/components/Table.jsx:36
+#: src/components/Table.jsx:39
 msgid "Rank"
 msgstr ""
 
@@ -1902,8 +1925,10 @@ msgstr ""
 msgid "Reason"
 msgstr ""
 
+#: src/components/ModLogTools.jsx:112
 #: src/components/RefreshPrompt.jsx:14
 #: src/components/windows/Faction.jsx:828
+#: src/components/windows/Modlog.jsx:53
 #: src/components/windows/User.jsx:233
 msgid "Refresh"
 msgstr ""
@@ -2002,7 +2027,7 @@ msgstr ""
 msgid "Revoke consent of third party applications:"
 msgstr ""
 
-#: src/components/Table.jsx:29
+#: src/components/Table.jsx:31
 msgid "Role"
 msgstr ""
 
@@ -2046,7 +2071,7 @@ msgstr ""
 msgid "Scale Image"
 msgstr ""
 
-#: src/components/windows/Help.jsx:111
+#: src/components/windows/Help.jsx:126
 #, javascript-format
 msgid "Scroll ${ mouseSymbol } mouse wheel or ${ touchSymbol } pinch to zoom"
 msgstr ""
@@ -2054,7 +2079,7 @@ msgstr ""
 #: src/components/menus/mainMenu.js:139
 #: src/components/windows/Search.jsx:59
 #: src/components/windows/Search.jsx:92
-#: src/components/windows/index.js:52
+#: src/components/windows/index.js:53
 msgid "Search"
 msgstr ""
 
@@ -2062,6 +2087,8 @@ msgstr ""
 msgid "Search Existing Faction"
 msgstr ""
 
+#: src/components/ModLogTools.jsx:98
+#: src/components/windows/Modlog.jsx:39
 #: src/components/windows/Search.jsx:85
 msgid "Search Term"
 msgstr ""
@@ -2119,6 +2146,10 @@ msgstr ""
 msgid "Selected Flag:"
 msgstr ""
 
+#: src/components/windows/Modlog.jsx:35
+msgid "Selected moderation actions that happened within the past two weeks."
+msgstr ""
+
 #: src/components/GlobalCaptcha.jsx:105
 msgid "Send"
 msgstr ""
@@ -2160,7 +2191,7 @@ msgid ""
 msgstr ""
 
 #: src/components/menus/mainMenu.js:219
-#: src/components/windows/index.js:36
+#: src/components/windows/index.js:37
 msgid "Settings"
 msgstr ""
 
@@ -2208,7 +2239,7 @@ msgstr ""
 msgid "Social Settings"
 msgstr ""
 
-#: src/components/windows/Help.jsx:79
+#: src/components/windows/Help.jsx:90
 #, javascript-format
 msgid "Source for pixelplanet on ${ gitLink } or ${ downloadHereLink }."
 msgstr ""
@@ -2226,7 +2257,7 @@ msgid "Start checking for Malware"
 msgstr ""
 
 #: src/components/menus/mainMenu.js:211
-#: src/components/windows/index.js:48
+#: src/components/windows/index.js:49
 msgid "Statistics"
 msgstr ""
 
@@ -2282,7 +2313,7 @@ msgstr ""
 
 #: src/components/menus/mainMenu.js:200
 #: src/components/windows/Templates.jsx:55
-#: src/components/windows/index.js:45
+#: src/components/windows/index.js:46
 msgid "Templates"
 msgstr ""
 
@@ -2293,7 +2324,7 @@ msgid ""
 "pixelplanet account ${ accountName }"
 msgstr ""
 
-#: src/components/windows/Help.jsx:85
+#: src/components/windows/Help.jsx:96
 msgid ""
 "The bare map data that we use, together with converted OpenStreetMap tiles "
 "for orientation, can be downloaded from mega.nz here: "
@@ -2359,6 +2390,11 @@ msgstr ""
 msgid "This user has not password set"
 msgstr ""
 
+#: src/components/Table.jsx:27
+#. Column title in tables
+msgid "Time"
+msgstr ""
+
 #: src/ui/PixelTransferController.js:68
 #: src/ui/PixelTransferController.js:163
 msgid "Timeout"
@@ -2376,7 +2412,7 @@ msgid ""
 "on the template, should be one pixel on the canvas."
 msgstr ""
 
-#: src/components/Table.jsx:22
+#: src/components/Table.jsx:23
 #: src/components/windows/Faction.jsx:1538
 #: src/components/windows/MyFactions.jsx:211
 msgid "Title"
@@ -2536,7 +2572,7 @@ msgstr ""
 msgid "Use our custom cursor"
 msgstr ""
 
-#: src/components/windows/index.js:51
+#: src/components/windows/index.js:52
 msgid "User"
 msgstr ""
 
@@ -2545,7 +2581,7 @@ msgid "User Account"
 msgstr ""
 
 #: src/components/menus/mainMenu.js:106
-#: src/components/windows/index.js:37
+#: src/components/windows/index.js:38
 msgid "User Area"
 msgstr ""
 
@@ -2589,7 +2625,7 @@ msgstr ""
 msgid "Users"
 msgstr ""
 
-#: src/components/windows/Help.jsx:80
+#: src/components/windows/Help.jsx:91
 #, javascript-format
 msgid "We are Libre Software under the ${ agplLink }, "
 msgstr ""
@@ -2601,7 +2637,7 @@ msgid ""
 "how the canvas was at that time."
 msgstr ""
 
-#: src/components/windows/Help.jsx:132
+#: src/components/windows/Help.jsx:147
 msgid ""
 "We thank the following artists, who made their palettes available to the "
 "public on"
@@ -2656,7 +2692,7 @@ msgstr ""
 msgid "Yesterday"
 msgstr ""
 
-#: src/components/windows/Help.jsx:83
+#: src/components/windows/Help.jsx:94
 msgid ""
 "You are a teacher and a pupil is playing this game, despite it not being "
 "suitable for them? Send us an email."
@@ -2707,7 +2743,7 @@ msgstr ""
 msgid "You are weird"
 msgstr ""
 
-#: src/components/windows/Help.jsx:129
+#: src/components/windows/Help.jsx:144
 msgid ""
 "You can connect to pixelplanet and use pixelplanet accounts for oauth / "
 "oidc login. See here: "
@@ -2752,7 +2788,7 @@ msgid "You have to be logged in to place on this canvas"
 msgstr ""
 
 #: src/store/actions/fetch.js:40
-#: src/store/actions/fetch.js:786
+#: src/store/actions/fetch.js:790
 msgid "You made too many requests"
 msgstr ""
 
@@ -2868,7 +2904,7 @@ msgstr ""
 msgid "by"
 msgstr ""
 
-#: src/components/windows/Help.jsx:80
+#: src/components/windows/Help.jsx:91
 msgid "check compliance here"
 msgstr ""
 
@@ -2881,7 +2917,7 @@ msgstr ""
 msgid "days"
 msgstr ""
 
-#: src/components/windows/Help.jsx:47
+#: src/components/windows/Help.jsx:48
 msgid "download here"
 msgstr ""
 
@@ -2897,7 +2933,7 @@ msgstr ""
 msgid "or register here:"
 msgstr ""
 
-#: src/components/windows/Help.jsx:78
+#: src/components/windows/Help.jsx:89
 msgid "recommended"
 msgstr ""
 
@@ -2922,12 +2958,12 @@ msgstr ""
 msgid "z out of bounds"
 msgstr ""
 
-#: src/components/windows/index.js:42
+#: src/components/windows/index.js:43
 msgctxt "media-player"
 msgid "Player"
 msgstr ""
 
-#: src/components/windows/Help.jsx:29
+#: src/components/windows/Help.jsx:30
 msgctxt "keybinds"
 msgid "A"
 msgstr ""
@@ -2937,23 +2973,23 @@ msgctxt "keybinds"
 msgid "B"
 msgstr ""
 
-#: src/components/windows/Help.jsx:31
+#: src/components/windows/Help.jsx:32
 msgctxt "keybinds"
 msgid "D"
 msgstr ""
 
-#: src/components/windows/Help.jsx:27
+#: src/components/windows/Help.jsx:28
 msgctxt "keybinds"
 msgid "E"
 msgstr ""
 
-#: src/components/windows/Help.jsx:22
+#: src/components/windows/Help.jsx:23
 #: src/components/windows/Settings.jsx:72
 msgctxt "keybinds"
 msgid "G"
 msgstr ""
 
-#: src/components/windows/Help.jsx:24
+#: src/components/windows/Help.jsx:25
 #: src/components/windows/Settings.jsx:158
 msgctxt "keybinds"
 msgid "H"
@@ -2969,22 +3005,22 @@ msgctxt "keybinds"
 msgid "N"
 msgstr ""
 
-#: src/components/windows/Help.jsx:26
+#: src/components/windows/Help.jsx:27
 msgctxt "keybinds"
 msgid "Q"
 msgstr ""
 
-#: src/components/windows/Help.jsx:25
+#: src/components/windows/Help.jsx:26
 msgctxt "keybinds"
 msgid "R"
 msgstr ""
 
-#: src/components/windows/Help.jsx:30
+#: src/components/windows/Help.jsx:31
 msgctxt "keybinds"
 msgid "S"
 msgstr ""
 
-#: src/components/windows/Help.jsx:38
+#: src/components/windows/Help.jsx:39
 msgctxt "keybinds"
 msgid "Shift"
 msgstr ""
@@ -2994,12 +3030,12 @@ msgctxt "keybinds"
 msgid "T"
 msgstr ""
 
-#: src/components/windows/Help.jsx:28
+#: src/components/windows/Help.jsx:29
 msgctxt "keybinds"
 msgid "W"
 msgstr ""
 
-#: src/components/windows/Help.jsx:23
+#: src/components/windows/Help.jsx:24
 #: src/components/windows/Settings.jsx:80
 msgctxt "keybinds"
 msgid "X"
@@ -3010,7 +3046,7 @@ msgctxt "channel-list"
 msgid "Public"
 msgstr ""
 
-#: src/components/Table.jsx:27
+#: src/components/Table.jsx:29
 #. Column title of column indicating whether or not a faction is able to be joined in public
 msgctxt "statistics-table"
 msgid "Public"

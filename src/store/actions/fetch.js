@@ -463,6 +463,10 @@ export function requestRankings() {
   );
 }
 
+export function requestModLogs() {
+  return makeAPIGETRequest('/api/modlogs');
+}
+
 export function requestSearch(type, term) {
   return makeAPIPOSTRequest(
     '/api/search',

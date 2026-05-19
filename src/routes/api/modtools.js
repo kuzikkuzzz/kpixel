@@ -10,7 +10,7 @@ import fileUpload from 'express-fileupload';
 import urlEncoded from '../../middleware/formData.js';
 import { requireOidc } from '../../middleware/oidc.js';
 import CanvasCleaner from '../../core/CanvasCleaner.js';
-import logger from '../../core/logger.js';
+import logger, { AuthLogger } from '../../core/logger.js';
 import {
   executeTextAction,
   executeIIDAction,
@@ -50,7 +50,7 @@ router.use(requireOidc('modtools', true));
  * make sure User is logged in and at least Mod
  */
 router.use(async (req, res, next) => {
-  req.tickRateLimiter(3000);
+  req.tickRateLimiter(1000);
   /*
    * special case for oauth, this user object has only a subset of values
    */
@@ -62,6 +62,7 @@ router.use(async (req, res, next) => {
     logger.warn(
       `MODTOOLS> ${req.ip.ipString} tried to access modtools without login`,
     );
+    req.tickRateLimiter(3000);
     const { t } = req.ttag;
     next(new Error(t`You are not logged in`));
     return;
@@ -71,12 +72,13 @@ router.use(async (req, res, next) => {
     logger.warn(
       `MODTOOLS: ${req.ip.ipString} / ${req.user.id} tried to access modtools`,
     );
+    req.tickRateLimiter(3000);
     const { t } = req.ttag;
     next(new Error(t`You are not allowed to access this page`));
     return;
   }
 
-  if (!req.body?.cleanerstat) {
+  if (!req.body?.cleanerstat && !req.body?.livelog) {
     logger.info(
       `MODTOOLS> access ${req.user.name}[${req.user.id}] -  ${req.ip.ipString}`,
     );
@@ -89,6 +91,13 @@ router.use(async (req, res, next) => {
  */
 router.post('/', async (req, res, next) => {
   try {
+    if (req.body.livelog) {
+      const ret = await AuthLogger.printLogs(
+        req.user.userlvl, parseInt(req.body.lastts, 10) || 0,
+      );
+      res.json(ret);
+      return;
+    }
     if (req.body.mediaaction) {
       const { mediaidormbid, mediaaction, reason } = req.body;
       const msg = await executeMediaAction(

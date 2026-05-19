@@ -46,6 +46,7 @@ import fish from './fish.js';
 import badge from './badge.js';
 import banme from './banme.js';
 import media from './media.js';
+import modlogs from './modlogs.js';
 
 const router = express.Router();
 
@@ -103,6 +104,8 @@ router.post('/factionmembers', factionmembers);
 router.post('/factioninvitedata', factioninvitedata);
 
 router.use('/auth', auth);
+
+router.use('/modlogs', modlogs);
 
 router.use('/modtools', modtools);
 

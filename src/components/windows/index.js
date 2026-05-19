@@ -22,6 +22,7 @@ const reloadOnCatch = () => Promise.resolve({ default: RefreshPrompt });
 /* eslint-disable max-len */
 const Modtools = preactLazy(() => import(/* webpackChunkName: "modtools" */ './Modtools.jsx').catch(reloadOnCatch));
 const Statistics = preactLazy(() => import(/* webpackChunkName: "stats" */ './Statistics.jsx').catch(reloadOnCatch));
+const Modlog = preactLazy(() => import(/* webpackChunkName: "stats" */ './Modlog.jsx').catch(reloadOnCatch));
 const Converter = preactLazy(() => import(/* webpackChunkName: "converter" */ './Converter.jsx').catch(reloadOnCatch));
 const Invite = preactLazy(() => import(/* webpackChunkName: "invite" */ './Invite.jsx').catch(reloadOnCatch));
 const OIDCConsent = preactLazy(() => import(/* webpackChunkName: "oidc" */ './OIDCConsent.jsx').catch(reloadOnCatch));
@@ -50,6 +51,7 @@ export default {
   FACTION: [Faction, t`Faction`, true],
   USER: [User, t`User`, true],
   SEARCH: [Search, t`Search`, true],
+  MODLOG: [Modlog, t`Moderation Log`, false],
   I: [Invite, t`Invite`, true],
   /*
    * OIDC Consent is a very special case, because it is only available as

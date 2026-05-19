@@ -80,9 +80,10 @@ export default [
       'jsx-a11y/label-has-associated-control': 'off',
       'react/prop-types': 'off',
       /*
-       * react rule we did not have before, long-term goal of turning it on
+       * react rule we did not have before and we are still unsure about
        */
-      'react-hooks/set-state-in-effect': 'off',
+      'react-hooks/set-state-in-effect': 'warn',
+      'react-hooks/immutability': 'warn',
     },
 
     settings: {

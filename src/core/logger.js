@@ -104,10 +104,11 @@ export class ModtoolsLogger {
   static async printLogs(accessUserlvl) {
     const logs = await getRecentModLogs(accessUserlvl);
     return logs.map(
-      ({ type, params, muid, name, createdAtTs }) => [
-        `@[${name ? escapeMd(name) : 'N/A'}](${muid || 0})`,
-        parseModLogs[type](...params),
+      ({ type, params, name, username, createdAtTs }) => [
         createdAtTs,
+        (username) ? `${name},${username}` : 'N/A',
+        parseModLogs[type](...params),
+        type,
       ],
     );
   }
@@ -240,10 +241,10 @@ export class AuthLogger {
     return logs.filter(
       ({ type }) => AUTHLOG_PERMISSION[type] <= accessUserlvl,
     ).map(({
-      type, params, uid, name, createdAt,
-    // eslint-disable-next-line max-len
-    }) => `${createdAt.toLocaleDateString()}-${createdAt.toLocaleTimeString()} ${name ? escapeMd(name) : 'N/A'} ${uid || 0} ${AUTHLOG_DESCRIPTIONS[type].replaceAll(' ', '-')} ${params.join(' ')}`,
-    ).join('\n');
+      type, params, uid, name, createdAtTs,
+    }) => [
+      createdAtTs, type, AUTHLOG_DESCRIPTIONS[type], params, uid, name,
+    ]);
   }
 
   static newUser(user, ...params) {

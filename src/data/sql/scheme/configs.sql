@@ -25,7 +25,7 @@ CREATE TABLE IF NOT EXISTS CanvasModLogs (
   -- userlvl required to see log
   -- USERLVL.ANONYM
   accessUserlvl tinyint unsigned NOT NULL DEFAULT 0,
-  createdAt datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  createdAt datetime(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3),
 
   PRIMARY KEY (id),
   KEY muid (muid),
@@ -44,7 +44,7 @@ CREATE TABLE IF NOT EXISTS ModLogs (
   -- userlvl required to see log
   -- USERLVL.ADMIN
   accessUserlvl tinyint unsigned NOT NULL DEFAULT 100,
-  createdAt datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  createdAt datetime(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3),
 
   PRIMARY KEY (id),
   KEY muid (muid),
@@ -60,9 +60,8 @@ CREATE TABLE IF NOT EXISTS AuthLogs (
   params JSON NOT NULL CHECK (JSON_TYPE(params) = 'ARRAY'),
   -- uid of user
   uid int unsigned,
-  createdAt datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  createdAt datetime(3) NOT NULL DEFAULT CURRENT_TIMESTAMP(3),
 
   PRIMARY KEY (id),
-  KEY uid (uid),
-  CONSTRAINT AuthLogs_ibfk_1 FOREIGN KEY (uid) REFERENCES Users (id) ON DELETE SET NULL ON UPDATE CASCADE
+  KEY uid (uid)
 );

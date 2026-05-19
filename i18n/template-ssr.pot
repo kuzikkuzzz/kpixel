@@ -97,7 +97,7 @@ msgstr ""
 msgid "Can not change the powerlevel of the Sovereign"
 msgstr ""
 
-#: src/core/ChatProvider.js:358
+#: src/core/ChatProvider.js:357
 msgid "Can not chat while being banned"
 msgstr ""
 
@@ -259,7 +259,7 @@ msgstr ""
 msgid "Double click on globe to go back."
 msgstr ""
 
-#: src/routes/api/auth/register.js:85
+#: src/routes/api/auth/register.js:86
 msgid "E-Mail already in use."
 msgstr ""
 
@@ -296,7 +296,7 @@ msgstr ""
 msgid "Error"
 msgstr ""
 
-#: src/routes/api/auth/register.js:123
+#: src/routes/api/auth/register.js:124
 msgid "Failed to create a new user :("
 msgstr ""
 
@@ -378,15 +378,15 @@ msgstr ""
 msgid "Invalid url :( Please check your mail again."
 msgstr ""
 
-#: src/routes/api/modtools.js:341
+#: src/routes/api/modtools.js:306
 msgid "Just admins can do that"
 msgstr ""
 
-#: src/routes/api/modtools.js:120
+#: src/routes/api/modtools.js:121
 msgid "Just janny, mod or admin can do that"
 msgstr ""
 
-#: src/routes/api/modtools.js:218
+#: src/routes/api/modtools.js:203
 msgid "Just mods and admins can do that"
 msgstr ""
 
@@ -457,7 +457,7 @@ msgid ""
 "art) or art larger than 1.5k x 1.5k pixels."
 msgstr ""
 
-#: src/routes/api/auth/register.js:88
+#: src/routes/api/auth/register.js:89
 #: src/routes/api/factioncreate.js:70
 #: src/routes/api/userchange.js:102
 msgid "Name already in use."
@@ -490,7 +490,7 @@ msgstr ""
 msgid "Name must be shorter than 26 characters"
 msgstr ""
 
-#: src/routes/api/auth/local.js:19
+#: src/routes/api/auth/local.js:21
 msgid "Name or Email does not exist!"
 msgstr ""
 
@@ -502,7 +502,7 @@ msgstr ""
 msgid "No Avatar given"
 msgstr ""
 
-#: src/routes/api/auth/register.js:31
+#: src/routes/api/auth/register.js:32
 msgid "No Captcha given"
 msgstr ""
 
@@ -605,11 +605,11 @@ msgstr ""
 msgid "Place color pixels on an map styled canvas with other players online"
 msgstr ""
 
-#: src/routes/api/auth/register.js:82
+#: src/routes/api/auth/register.js:83
 msgid "Please try again."
 msgstr ""
 
-#: src/core/ChatProvider.js:390
+#: src/core/ChatProvider.js:389
 msgid "Please use int channel"
 msgstr ""
 
@@ -684,7 +684,7 @@ msgstr ""
 msgid "Server Error"
 msgstr ""
 
-#: src/routes/api/auth/delete_account.js:22
+#: src/routes/api/auth/delete_account.js:23
 msgid "Server error while deleting user."
 msgstr ""
 
@@ -717,7 +717,7 @@ msgstr ""
 msgid "Special canvas to spread awareness of SARS-CoV2 (take the vax)."
 msgstr ""
 
-#: src/core/ChatProvider.js:398
+#: src/core/ChatProvider.js:397
 msgid "Stop flooding."
 msgstr ""
 
@@ -765,7 +765,7 @@ msgstr ""
 msgid "This application uses a login method we do not support"
 msgstr ""
 
-#: src/routes/api/auth/local.js:26
+#: src/routes/api/auth/local.js:28
 msgid ""
 "This email / password combination got hacked and leaked. To protect this "
 "account, the password has been reset. Please use the \"Forgot my password\" "
@@ -782,7 +782,7 @@ msgid ""
 msgstr ""
 
 #: src/routes/api/auth/change_mail.js:23
-#: src/routes/api/auth/register.js:101
+#: src/routes/api/auth/register.js:102
 msgid "This email provider is not allowed"
 msgstr ""
 
@@ -852,7 +852,7 @@ msgstr ""
 msgid "Top10"
 msgstr ""
 
-#: src/routes/api/auth/register.js:74
+#: src/routes/api/auth/register.js:75
 msgid "Unknown Captcha Error"
 msgstr ""
 
@@ -874,7 +874,7 @@ msgstr ""
 msgid "User doesn't exist in our database :("
 msgstr ""
 
-#: src/routes/api/auth/register.js:91
+#: src/routes/api/auth/register.js:92
 #: src/routes/api/userchange.js:78
 msgid "Username already in use."
 msgstr ""
@@ -944,12 +944,12 @@ msgstr ""
 msgid "You are banned from this faction"
 msgstr ""
 
-#: src/core/ChatProvider.js:368
+#: src/core/ChatProvider.js:367
 #, javascript-format
 msgid "You are muted for another ${ timeMin } minutes"
 msgstr ""
 
-#: src/core/ChatProvider.js:370
+#: src/core/ChatProvider.js:369
 #, javascript-format
 msgid "You are muted for another ${ ttl } seconds"
 msgstr ""
@@ -963,7 +963,7 @@ msgid "You are not banned"
 msgstr ""
 
 #: src/middleware/session.js:302
-#: src/routes/api/modtools.js:68
+#: src/routes/api/modtools.js:67
 msgid "You are not logged in"
 msgstr ""
 
@@ -971,16 +971,16 @@ msgstr ""
 msgid "You are now verified :)"
 msgstr ""
 
-#: src/core/ChatProvider.js:363
+#: src/core/ChatProvider.js:362
 msgid "You are permanently muted, join our guilded to appeal the mute"
 msgstr ""
 
-#: src/core/ChatProvider.js:334
+#: src/core/ChatProvider.js:333
 #, javascript-format
 msgid "You are sending messages too fast, you have to wait ${ waitTime }s :("
 msgstr ""
 
-#: src/core/ChatProvider.js:423
+#: src/core/ChatProvider.js:422
 msgid "You attached too many files"
 msgstr ""
 
@@ -988,15 +988,15 @@ msgstr ""
 msgid "You can not delete this login method, because you have nothing else left."
 msgstr ""
 
-#: src/routes/api/auth/register.js:110
+#: src/routes/api/auth/register.js:111
 msgid "You can not register an account while you are banned"
 msgstr ""
 
-#: src/routes/api/auth/register.js:107
+#: src/routes/api/auth/register.js:108
 msgid "You can not register an account with a proxy"
 msgstr ""
 
-#: src/core/ChatProvider.js:355
+#: src/core/ChatProvider.js:354
 msgid "You can not send chat messages while using a proxy"
 msgstr ""
 
@@ -1018,7 +1018,7 @@ msgid ""
 "client_secret needed to make use of this."
 msgstr ""
 
-#: src/core/ChatProvider.js:421
+#: src/core/ChatProvider.js:420
 msgid "You can't send a message this long :("
 msgstr ""
 
@@ -1032,11 +1032,11 @@ msgid ""
 "Methods\"."
 msgstr ""
 
-#: src/core/ChatProvider.js:338
+#: src/core/ChatProvider.js:337
 msgid "You don't have access to this channel"
 msgstr ""
 
-#: src/routes/api/auth/register.js:62
+#: src/routes/api/auth/register.js:63
 msgid "You failed your captcha"
 msgstr ""
 
@@ -1082,7 +1082,7 @@ msgstr ""
 msgid "You sent an empty password or invalid data :("
 msgstr ""
 
-#: src/routes/api/auth/register.js:59
+#: src/routes/api/auth/register.js:60
 msgid "You took too long, try again"
 msgstr ""
 
@@ -1090,7 +1090,7 @@ msgstr ""
 msgid "You will be automatically redirected after 15s"
 msgstr ""
 
-#: src/routes/api/auth/register.js:71
+#: src/routes/api/auth/register.js:72
 msgid "Your Browser looks shady"
 msgstr ""
 
@@ -1102,15 +1102,15 @@ msgstr ""
 msgid "Your account needs to be verified to access this page"
 msgstr ""
 
-#: src/core/ChatProvider.js:343
+#: src/core/ChatProvider.js:342
 msgid "Your country is temporary muted from this chat channel"
 msgstr ""
 
-#: src/routes/api/auth/register.js:68
+#: src/routes/api/auth/register.js:69
 msgid "Your device looks weird"
 msgstr ""
 
-#: src/core/ChatProvider.js:381
+#: src/core/ChatProvider.js:380
 msgid "Your mail has to be verified in order to chat"
 msgstr ""
 

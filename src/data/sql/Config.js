@@ -131,8 +131,9 @@ export async function getRecentModLogs(accessUserlvl = 0) {
   try {
     const [logs, canvasLogs] = await Promise.all([
       pool.query(
-        `SELECT ml.type, ml.params, ml.muid, mu.name,
-  UNIX_TIMESTAMP(ml.createdAt) * 1000 AS createdAtTs FROM (
+
+        `SELECT ml.type, ml.params, ml.muid, mu.name, mu.username,
+ROUND(UNIX_TIMESTAMP(ml.createdAt) * 1000) AS createdAtTs FROM (
     SELECT * FROM ModLogs ORDER BY id DESC LIMIT 500
   ) ml
     LEFT JOIN Users mu ON mu.id = ml.muid
@@ -141,8 +142,8 @@ export async function getRecentModLogs(accessUserlvl = 0) {
       ),
       pool.query(
         // eslint-disable-next-line
-        `SELECT ml.type, ml.params, ml.muid, mu.name, ml.canvasIdent, ml.x, ml.y, ml.width, ml.height
-  UNIX_TIMESTAMP(ml.createdAt) * 1000 AS createdAtTs FROM (
+        `SELECT ml.type, ml.params, ml.muid, mu.name, mu.username, ml.canvasIdent, ml.x, ml.y, ml.width, ml.height,
+ROUND(UNIX_TIMESTAMP(ml.createdAt) * 1000) AS createdAtTs FROM (
     SELECT * FROM CanvasModLogs ORDER BY id DESC LIMIT 1000
   ) ml
     LEFT JOIN Users mu ON mu.id = ml.muid
@@ -151,6 +152,7 @@ export async function getRecentModLogs(accessUserlvl = 0) {
       ),
     ]);
     for (const log of logs) {
+      log.createdAtTs = Number(log.createdAtTs);
       log.params = JSON.parse(log.params);
     }
     for (const log of canvasLogs) {
@@ -158,6 +160,7 @@ export async function getRecentModLogs(accessUserlvl = 0) {
       log.params = [canvasIdent, x, y, width, height].concat(
         JSON.parse(log.params),
       );
+      log.createdAtTs = Number(log.createdAtTs);
       delete log.canvasIdent;
       delete log.x;
       delete log.y;
@@ -165,7 +168,7 @@ export async function getRecentModLogs(accessUserlvl = 0) {
       delete log.height;
       logs.push(log);
     }
-    return logs;
+    return logs.sort((a, b) => a.createdAtTs - b.createdAtTs);
   } catch (error) {
     console.error(`SQL Error on getRecentModLogs: ${error.message}`);
     return [];
@@ -184,14 +187,16 @@ export async function getRecentAuthLogs(lastTs = 0) {
     const cutoffDate = (lastTs)
       ? new Date(lastTs) : new Date(Date.now() - 2 * 24 * 3600 * 1000);
     const logs = await pool.query(
-      `SELECT al.type, al.params, al.uid, u.name, al.createdAt FROM (
+      `SELECT al.type, al.params, al.uid, u.name,
+ROUND(UNIX_TIMESTAMP(al.createdAt) * 1000) AS createdAtTs FROM (
   SELECT * FROM AuthLogs ORDER BY id DESC LIMIT 200
 ) al
   LEFT JOIN Users u ON u.id = al.uid
-WHERE al.createdAt > ?`,
+WHERE al.createdAt > ? ORDER BY al.createdAt DESC`,
       [cutoffDate],
     );
     for (const log of logs) {
+      log.createdAtTs = Number(log.createdAtTs);
       log.params = JSON.parse(log.params);
     }
     return logs;

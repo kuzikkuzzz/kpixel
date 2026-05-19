@@ -5,8 +5,8 @@ import { useState, useEffect, useContext } from 'preact/hooks';
 import { Fragment } from 'preact';
 import { useSelector, useStore } from '../../store/react-redux/index.js';
 import { t, jt } from 'ttag';
-import IoIosRefresh from '../../icons/IoIosRefresh.svg';
 
+import IoIosRefresh from '../../icons/IoIosRefresh.svg';
 import { cdn } from '../../utils/utag.js';
 import { getUrlsFromMediaIdAndName } from '../../utils/media/utils.js';
 import WindowContext from '../context/window.js';

@@ -6,15 +6,16 @@ import { useCallback } from 'preact/hooks';
 import { Fragment } from 'preact';
 import { useSelector, useDispatch } from '../../store/react-redux/index.js';
 import { c, t, jt } from 'ttag';
+
 import GiMouse from '../../icons/GiMouse.svg';
 import MdTouchApp from '../../icons/MdTouchApp.svg';
-
 import GetIID from '../GetIID.jsx';
 import ClipboardCopyField from '../ClipboardCopyField.jsx';
 import useLongPress from '../hooks/useLongPress.js';
 import { toggleEasterEgg } from '../../store/actions/index.js';
 import { notify } from '../../store/actions/thunks.js';
 import { cdn, u } from '../../utils/utag.js';
+import useLink from '../hooks/link.js';
 
 /* eslint-disable max-len */
 
@@ -51,6 +52,16 @@ const Help = () => {
   const easterEgg = useSelector((state) => state.gui.easterEgg);
   const userId = useSelector((state) => state.user.id);
 
+  const link = useLink();
+  const modlogLink = (
+    <span
+      role="button"
+      tabIndex={0}
+      className="modallink"
+      onClick={() => link('MODLOG')}
+    >{t`Moderation Log`}</span>
+  );
+
   const onLongPress = useCallback(() => {
     dispatch(toggleEasterEgg());
     dispatch(notify((easterEgg)
@@ -86,6 +97,10 @@ const Help = () => {
       <h3>{t`Banned? Detected as Proxy?`}</h3>
       <div>
         <p>{jt`If you got detected as proxy, but you aren't using one, or think that you got wrongfully banned, please go to our ${guildedLink} or send us an e-mail to ${mailLink} and, in case of a ban, include the BID you got in the ban message.`}</p>
+        <p>{
+          /* t: modlogLink has the text "Moderation Log" */
+          jt`Actions taken by moderators on the canvas can be seen in the ${modlogLink}.`
+        }</p>
       </div>
       <h3>{t`Identifiers`}</h3>
       <p>{t`If you talk to moderators or administrators, you might get asked for one of the following identifiers:`}</p>
