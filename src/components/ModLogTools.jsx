@@ -80,7 +80,10 @@ const ModLogTools = () => {
   const logText = useMemo(() => {
     let filteredLogLines = logLines;
     if (filterTerm) {
-      filteredLogLines = filteredLogLines.filter((l) => l.includes(filterTerm));
+      const insensitiveFilterTerm = filterTerm.toLowerCase();
+      filteredLogLines = filteredLogLines.filter(
+        (l) => l.toLowerCase().includes(insensitiveFilterTerm),
+      );
     }
     return filteredLogLines.join('\n');
   }, [logLines, filterTerm]);

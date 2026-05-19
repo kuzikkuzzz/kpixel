@@ -552,14 +552,16 @@ export function getUserByEmail(email) {
  */
 export async function getNameThatIsNotTaken(name) {
   let limit = 5;
+
   let [user] = await pool.query('SELECT id FROM Users WHERE name = ?', [name]);
   while (user) {
     limit -= 1;
-    if (!limit) {
-      return randomUUID().split('-').join('');
+    if (limit <= 0) {
+      name = randomUUID().split('-').join('');
+    } else {
+      // eslint-disable-next-line max-len
+      name = name.substring(0, 18) + ' ' + Math.random().toString(36).substring(2, 7) + (new Date()).getUTCFullYear().toString().substring(2);
     }
-    // eslint-disable-next-line max-len
-    name = `${name.substring(0, 15)}-${Math.random().toString(36).substring(2, 10)}`;
     // eslint-disable-next-line no-await-in-loop
     [user] = await pool.query(
       'SELECT id FROM Users WHERE name = ?', [name],

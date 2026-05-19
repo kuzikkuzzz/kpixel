@@ -10,6 +10,7 @@ import {
 
 import { AuthLogger } from '../core/logger.js';
 import { sign, unsign, generateTinyToken } from '../utils/hash.js';
+import generateName from '../utils/generateName.js';
 import { openSession } from '../middleware/session.js';
 import { parseDevice } from '../middleware/device.js';
 import errorPage from '../middleware/errorPage.js';
@@ -198,11 +199,14 @@ router.get('/r/:abbr', parseDevice, async (req, res) => {
        */
       const tokens = await provider.validateAuthorizationCode(code, codeVerifier);
       const claims = decodeIdToken(tokens.idToken());
+      /*
+       * 'name' claim would be a full name that is a RL name, we shall not use
+       * that
+       */
       ({
         sub: tpid,
         email,
         email_verified: emailVerified,
-        name: preferredName,
         picture: avatarUrl,
       } = claims);
       if (emailVerified) {
@@ -268,13 +272,11 @@ router.get('/r/:abbr', parseDevice, async (req, res) => {
       }
       /*
        * vk account creation is so restrictive, consider it verified if it
-       * exists
+       * exists.
+       * user.first_name and user.last_name would be RL names, we can not use
+       * that
        */
       tpidVerified = true;
-      preferredName = user.first_name;
-      if (user.last_name) {
-        preferredName += ` ${user.last_name.charAt(0)}.`;
-      }
       break;
     }
     default:
@@ -293,6 +295,10 @@ router.get('/r/:abbr', parseDevice, async (req, res) => {
   /* don't accept emails that aren't verified */
   if (!emailVerified) {
     email = null;
+  }
+  /* if we got no preferred name, use a dummy */
+  if (!preferredName) {
+    preferredName = generateName();
   }
   /* make sure name and email have proper format */
   preferredName = sanitizeName(preferredName);
@@ -315,64 +321,69 @@ router.get('/r/:abbr', parseDevice, async (req, res) => {
    * get or create the user account
    */
 
-  const promises = [];
-  let userData;
-  /* try with associated email if it is verified */
-  if (email && emailVerified) {
-    userData = await getUserByEmail(email);
-  }
-  /* try with tpid */
-  if (!userData && tpid) {
-    userData = await getUserByTpid(providerType, tpid);
-  }
-
-  const { ip } = req;
-  const [iid] = await Promise.all([
-    getIIDofIP(ip.ipString),
-    ip.getAllowance(),
-  ]);
-  /* create new user */
-  if (!userData) {
-    preferredName = await getNameThatIsNotTaken(preferredName);
-    userData = await createNewUser(preferredName, null);
-    if (!userData) {
-      throw new Error('Could not create user');
+  try {
+    const promises = [];
+    let userData;
+    /* try with associated email if it is verified */
+    if (email && emailVerified) {
+      userData = await getUserByEmail(email);
+    }
+    /* try with tpid */
+    if (!userData && tpid) {
+      userData = await getUserByTpid(providerType, tpid);
     }
 
-    AuthLogger.newOAuthUser(
-      userData, email?.substring(email.indexOf('@')), iid, ip.country,
-      providerName,
-    );
-  } else {
-    AuthLogger.oAuthLogin(
-      userData, email?.substring(email.indexOf('@')), iid, ip.country,
-      providerName,
-    );
-  }
+    const { ip } = req;
+    const [iid] = await Promise.all([
+      getIIDofIP(ip.ipString),
+      ip.getAllowance(),
+    ]);
+    /* create new user */
+    if (!userData) {
+      preferredName = await getNameThatIsNotTaken(preferredName);
+      userData = await createNewUser(preferredName, null);
+      if (!userData) {
+        throw new Error('Could not create user');
+      }
 
-  if (tpid) {
-    promises.push(
-      addOrReplaceTpid(userData.id, providerType, tpid, tpidVerified),
-    );
-  }
-  if (email && emailVerified) {
-    promises.push(
-      addOrReplaceTpid(userData.id, THREEPID_PROVIDERS.EMAIL, email),
-    );
-  }
-  if ((tpidVerified || emailVerified)
-    && userData.userlvl === USERLVL.REGISTERED
-  ) {
-    promises.push(setUserProperty(userData.id, 'userlvl', USERLVL.VERIFIED));
-  }
-  await Promise.all(promises);
+      AuthLogger.newOAuthUser(
+        userData, email?.substring(email.indexOf('@')), iid, ip.country,
+        providerName,
+      );
+    } else {
+      AuthLogger.oAuthLogin(
+        userData, email?.substring(email.indexOf('@')), iid, ip.country,
+        providerName,
+      );
+    }
 
-  /*
-   * at this point we have userData of { id, name, password, userlvl }
-   */
+    if (tpid) {
+      promises.push(
+        addOrReplaceTpid(userData.id, providerType, tpid, tpidVerified),
+      );
+    }
+    if (email && emailVerified) {
+      promises.push(
+        addOrReplaceTpid(userData.id, THREEPID_PROVIDERS.EMAIL, email),
+      );
+    }
+    if ((tpidVerified || emailVerified)
+      && userData.userlvl === USERLVL.REGISTERED
+    ) {
+      promises.push(setUserProperty(userData.id, 'userlvl', USERLVL.VERIFIED));
+    }
+    await Promise.all(promises);
 
-  /* creates req.user */
-  await openSession(req, res, userData.id, 168);
+    /*
+    * at this point we have userData of { id, name, password, userlvl }
+    */
+
+    /* creates req.user */
+    await openSession(req, res, userData.id, 168);
+  } catch (error) {
+    console.error(`OAUTH Login Error: ${error.message}`);
+    throw error;
+  }
 
   /*
   * on logins for openid connect reauthentification, we should split the

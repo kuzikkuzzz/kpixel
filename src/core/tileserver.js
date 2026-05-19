@@ -149,7 +149,8 @@ class CanvasUpdater {
         fs.mkdirSync(this.canvasTileFolder);
       }
       logger.warn(
-        'Tiling: tiledir empty, will initialize it, this can take some time',
+        // eslint-disable-next-line max-len
+        `Tiling: tiledir ${this.canvasTileFolder} empty, will initialize it, this can take some time`,
       );
       enqueueTask({
         task: 'initializeTiles',
