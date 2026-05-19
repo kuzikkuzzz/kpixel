@@ -12,6 +12,7 @@ DELETE FROM IPTrusts WHERE expires IS NOT NULL AND expires <= NOW();
 DELETE FROM IPHumans WHERE expires IS NOT NULL AND expires <= NOW();
 DELETE FROM CaptchaSolutions WHERE expires < NOW();
 DELETE FROM ChallengeSolutions WHERE expires < NOW();
+DELETE FROM AuthLogs WHERE createdAt < NOW() - INTERVAL 14 DAY;
 
 -- delete DM channels with less than 2 members
 -- CHANNEL_TYPES.DM
