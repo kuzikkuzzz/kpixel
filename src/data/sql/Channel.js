@@ -146,7 +146,6 @@ export async function getDefaultChannel(name) {
 export async function setUserChannelMute(channelId, userId, mute) {
   try {
     await pool.query(
-
       'UPDATE UserChannels SET muted = ? WHERE cid = ? AND uid = ?',
       [(mute) ? 1 : 0, channelId, userId],
     );

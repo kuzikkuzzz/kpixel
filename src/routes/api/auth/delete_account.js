@@ -2,20 +2,21 @@
  * request password change
  */
 
-import logger from '../../../core/logger.js';
+import { AuthLogger } from '../../../core/logger.js';
 import socketEvents from '../../../socket/socketEvents.js';
 import { deleteUser } from '../../../data/sql/User.js';
+import { getIIDofIP } from '../../../data/sql/IP.js';
 import { deleteUserFromRanks } from '../../../data/redis/cooldown.js';
 import { clearCookie } from '../../../middleware/session.js';
 
 export default async (req, res) => {
-  const { t } = req.ttag;
+  const { ttag: { t }, user, ip } = req;
 
-  const { user } = req;
   const dmChannels = await deleteUser(user.id);
 
-  // eslint-disable-next-line max-len
-  logger.info(`AUTH: Deleted user ${user.name}(${user.id}) by ${req.ip.ipString}`);
+  const iid = await getIIDofIP(ip.ipString);
+  AuthLogger.deleteUser(user, iid, ip.country);
+
   if (!dmChannels) {
     res.status(500);
     res.json({

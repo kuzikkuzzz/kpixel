@@ -3,7 +3,6 @@
  */
 
 import client from './client.js';
-import logger from '../../core/logger.js';
 
 const DATA_KEY = 'clr:dat';
 const STAT_KEY = 'clr:sta';
@@ -20,7 +19,7 @@ export async function getData() {
     for (let i = 0; i < parsedData.length - 1; i += 1) {
       const num = parseInt(parsedData[i], 10);
       if (Number.isNaN(num)) {
-        logger.warn(
+        console.warn(
           // eslint-disable-next-line max-len
           `[CanvasCleaner] ${DATA_KEY} in redis does not seem legit (int conversion).`,
         );
@@ -31,7 +30,7 @@ export async function getData() {
     if (parsedData.length === 6) {
       return parsedData;
     }
-    logger.warn(
+    console.warn(
       `[CanvasCleaner] ${DATA_KEY} in redis does not seem legit.`,
     );
   }
@@ -51,7 +50,7 @@ export async function setData(canvasId, x, y, u, v, methodName) {
     || Number.isNaN(parseInt(u, 10))
     || Number.isNaN(parseInt(v, 10))
   ) {
-    logger.warn(
+    console.warn(
       `[CanvasCleaner] can not write ${dataStr} to redis, seems not legit.`,
     );
     return null;
@@ -70,7 +69,7 @@ export async function getStatus() {
   if (stat) {
     const parsedStat = stat.toString().split(':');
     if (parsedStat.length !== 2) {
-      logger.warn(
+      console.warn(
         `[CanvasCleaner] ${STAT_KEY} in redis is incomplete.`,
       );
     } else {
@@ -79,7 +78,7 @@ export async function getStatus() {
       if (!Number.isNaN(cIter)) {
         return [cIter, running];
       }
-      logger.warn(
+      console.warn(
         `[CanvasCleaner] ${STAT_KEY} in redis does not seem legit.`,
       );
     }
@@ -98,7 +97,7 @@ export async function setStatus(cIter, running) {
   if (
     Number.isNaN(parseInt(cIter, 10))
   ) {
-    logger.warn(
+    console.warn(
       `[CanvasCleaner] can not write ${statString} to redis, seems not legit.`,
     );
     return null;

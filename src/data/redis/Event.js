@@ -9,7 +9,6 @@ import { commandOptions } from 'redis';
 /* eslint-disable no-await-in-loop */
 
 import client from './client.js';
-import logger from '../../core/logger.js';
 import RedisCanvas from './RedisCanvas.js';
 
 const EVENT_SUCCESS_KEY = 'evt:succ';
@@ -63,7 +62,7 @@ export async function clearOldEvent() {
   const pos = await getEventArea();
   if (pos) {
     const [i, j] = pos;
-    logger.info(`Restore last event area at ${i}/${j}`);
+    console.info(`Restore last event area at ${i}/${j}`);
     // 3x3 chunk area centered at i,j
     for (let jc = j - 1; jc <= j + 1; jc += 1) {
       for (let ic = i - 1; ic <= i + 1; ic += 1) {
@@ -74,27 +73,27 @@ export async function clearOldEvent() {
             chunkKey,
           );
           if (!chunk) {
-            logger.warn(
+            console.warn(
 
               `Couldn't get chunk event backup for ${ic}/${jc}, which is weird`,
             );
             continue;
           }
           if (chunk.length <= 1) {
-            logger.info(
+            console.info(
 
               `Tiny chunk in event backup, not-generated chunk at ${ic}/${jc}`,
             );
             await RedisCanvas.delChunk(ic, jc, CANVAS_ID);
           } else {
-            logger.info(
+            console.info(
               `Restoring chunk ${ic}/${jc} from event`,
             );
             await RedisCanvas.setChunk(ic, jc, chunk, CANVAS_ID);
           }
           await client.del(chunkKey);
         } catch (error) {
-          logger.error(
+          console.error(
             // eslint-disable-next-line max-len
             `Couldn't restore chunk from RpgEvent ${EVENT_BACKUP_PREFIX}:${ic}:${jc} : ${error.message}`,
           );
@@ -118,7 +117,7 @@ export async function setNextEvent(minutes, i, j) {
       try {
         chunk = await RedisCanvas.getChunk(CANVAS_ID, ic, jc);
       } catch (error) {
-        logger.error(
+        console.error(
           // eslint-disable-next-line max-len
           `Could not load chunk ch:${CANVAS_ID}:${ic}:${jc} for RpgEvent backup: ${error.message}`,
         );

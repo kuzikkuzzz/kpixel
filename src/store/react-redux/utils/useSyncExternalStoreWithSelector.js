@@ -6,6 +6,13 @@
  *
  */
 
+/*
+ * It's copied from Meta. If they do not adhere to their own recommended
+ * linting rules, it is not our problem.
+ */
+
+/* eslint-disable */
+
 import { useRef, useEffect, useMemo } from 'preact/hooks';
 
 import { useSyncExternalStore } from 'preact/compat';

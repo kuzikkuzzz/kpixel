@@ -3,7 +3,6 @@
  */
 import WebSocket from 'ws';
 
-import logger from '../core/logger.js';
 import canvases from '../core/canvases.js';
 import MassRateLimiter from '../utils/MassRateLimiter.js';
 import Counter from '../utils/Counter.js';
@@ -65,7 +64,7 @@ class SocketServer {
   }
 
   initialize() {
-    logger.info('Starting websocket server');
+    console.info('Starting websocket server');
 
     const wss = new WebSocket.Server({
       perMessageDeflate: false,
@@ -76,7 +75,7 @@ class SocketServer {
     this.wss = wss;
 
     wss.on('error', (e) => {
-      logger.error(`WebSocket Server Error ${e.message}`);
+      console.error(`WebSocket Server Error ${e.message}`);
     });
 
     wss.on('connection', (ws, req) => {
@@ -98,7 +97,7 @@ class SocketServer {
 
       ws.on('error', (e) => {
         // eslint-disable-next-line max-len
-        logger.error(`WebSocket Client Error for ${ws.user?.data.name}: ${e.message}`);
+        console.error(`WebSocket Client Error for ${ws.user?.data.name}: ${e.message}`);
       });
 
       ws.on('close', () => {
@@ -253,7 +252,7 @@ class SocketServer {
       rateLimiter.forceTrigger(ip, blockTime);
       const amount = this.killAllWsByUerIp(ip);
       if (amount) {
-        logger.warn(`Killed ${amount} connections for RateLimit`);
+        console.warn(`Killed ${amount} connections for RateLimit`);
       }
     });
 
@@ -291,7 +290,7 @@ class SocketServer {
   }
 
   static async onRateLimitTrigger(ip, blockTime, reason) {
-    logger.warn(
+    console.warn(
       `Client ${ip} triggered Socket-RateLimit by ${reason}.`,
     );
     socketEvents.broadcastRateLimitTrigger(ip, blockTime);
@@ -319,7 +318,7 @@ class SocketServer {
      */
     if (!isCORSAllowed(request)) {
       // eslint-disable-next-line max-len
-      logger.info(`Rejected CORS request on websocket from ${ipString} via ${request.headers.origin}, expected ${request.ip.getHost(false, true)}`);
+      console.info(`Rejected CORS request on websocket from ${ipString} via ${request.headers.origin}, expected ${request.ip.getHost(false, true)}`);
       socket.write('HTTP/1.1 403 Forbidden\r\n\r\n');
       socket.destroy();
       return;
@@ -369,7 +368,7 @@ class SocketServer {
         // eslint-disable-next-line no-underscore-dangle
         ws._sender.sendFrame(frames, (err) => {
           if (err) {
-            logger.error(
+            console.error(
 
               `WebSocket broadcast error on ${ws.ip.ipString} : ${err.message}`,
             );
@@ -515,7 +514,7 @@ class SocketServer {
           ws.readyState === WebSocket.OPEN
           && ts > ws.timeLastMsg
         ) {
-          logger.info(`Killing dead websocket from ${ws.ip.ipString}`);
+          console.info(`Killing dead websocket from ${ws.ip.ipString}`);
           ws.terminate();
           resolve();
         }
@@ -565,7 +564,7 @@ class SocketServer {
       }
       socketEvents.setOnlineUsers(online, ipUsers);
     } catch (err) {
-      logger.error(`WebSocket online broadcast error: ${err.message}`);
+      console.error(`WebSocket online broadcast error: ${err.message}`);
     }
   }
 
@@ -637,7 +636,7 @@ class SocketServer {
       }
     } catch (err) {
       // eslint-disable-next-line max-len
-      logger.error(`Got invalid ws text message ${text} from ${ipString}, with error: ${err.message}`);
+      console.error(`Got invalid ws text message ${text} from ${ipString}, with error: ${err.message}`);
     }
   }
 
@@ -672,7 +671,7 @@ class SocketServer {
           const { canvasId, connectedTs } = ws;
 
           if (canvasId === null) {
-            logger.info(`Closing websocket without canvas from ${ipString}`);
+            console.info(`Closing websocket without canvas from ${ipString}`);
             ws.close();
             return;
           }
@@ -762,7 +761,7 @@ class SocketServer {
           break;
       }
     } catch (e) {
-      logger.error(`WebSocket Client Binary Message Error: ${e.message}`);
+      console.error(`WebSocket Client Binary Message Error: ${e.message}`);
     }
   }
 

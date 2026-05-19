@@ -67,7 +67,7 @@ export const USERLVL = {
   CLEANER: 50,
   JANNY: 65,
   MOD: 80,
-  ADMIN: 100,
+  ADMIN: 100, // sql hardcoded
 };
 
 export const PROXY_FLAGS = {

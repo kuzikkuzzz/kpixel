@@ -1,7 +1,7 @@
 import fs from 'fs';
 import readline from 'readline';
 
-import { PIXELLOGGER_PREFIX } from './logger.js';
+import { PixelLogger } from './logger.js';
 import { getNamesToIds } from '../data/sql/User.js';
 import {
   getIIDsOfIPs,
@@ -16,7 +16,7 @@ function parseFile(cb) {
   let day = date.getUTCDate();
   if (day < 10) day = `0${day}`;
   if (month < 10) month = `0${month}`;
-  const filename = `${PIXELLOGGER_PREFIX}${year}-${month}-${day}.log`;
+  const filename = `${PixelLogger.prefix}${year}-${month}-${day}.log`;
 
   return new Promise((resolve, reject) => {
     const fileStream = fs.createReadStream(filename);

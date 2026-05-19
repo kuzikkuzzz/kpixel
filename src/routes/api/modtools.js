@@ -10,9 +10,7 @@ import fileUpload from 'express-fileupload';
 import urlEncoded from '../../middleware/formData.js';
 import { requireOidc } from '../../middleware/oidc.js';
 import CanvasCleaner from '../../core/CanvasCleaner.js';
-import chatProvider from '../../core/ChatProvider.js';
-import { escapeMd } from '../../core/utils.js';
-import logger, { modtoolsLogger } from '../../core/logger.js';
+import logger from '../../core/logger.js';
 import {
   executeTextAction,
   executeIIDAction,
@@ -90,17 +88,11 @@ router.use(async (req, res, next) => {
  * Post for chatmod + cleaner + janny + mod + admin
  */
 router.post('/', async (req, res, next) => {
-  const bLogger = (text) => {
-    logger.info(
-      `MODTOOLS>IID>${req.user.name}[${req.user.id}]> ${text}`,
-    );
-  };
-
   try {
     if (req.body.mediaaction) {
       const { mediaidormbid, mediaaction, reason } = req.body;
       const msg = await executeMediaAction(
-        mediaaction, mediaidormbid, reason, req.user.id, bLogger,
+        mediaaction, mediaidormbid, reason, req.user,
       );
       res.send(msg);
       return;
@@ -127,21 +119,6 @@ router.use(async (req, res, next) => {
  * Post for janny + mod + admin
  */
 router.post('/', async (req, res, next) => {
-  const aLogger = (text) => {
-    const timeString = new Date().toLocaleTimeString();
-
-    const logText = `@[${escapeMd(req.user.name)}](${req.user.id}) ${text}`;
-    modtoolsLogger.info(
-      `${timeString} | MODTOOLS> ${logText}`,
-    );
-    chatProvider.broadcastChatMessage(
-      'info',
-      logText,
-      chatProvider.enChannelId,
-      chatProvider.infoUserId,
-    );
-  };
-
   try {
     if (req.body.protaction) {
       const {
@@ -152,7 +129,7 @@ router.post('/', async (req, res, next) => {
         ulcoor,
         brcoor,
         canvasid,
-        aLogger,
+        req.user,
       );
       res.status(ret).send(msg);
       return;
@@ -197,8 +174,7 @@ router.post('/', async (req, res, next) => {
         ulcoor,
         brcoor,
         canvasid,
-        aLogger,
-        (req.user.userlvl >= USERLVL.ADMIN),
+        req.user,
       );
       res.status(ret).send(msg);
       return;
@@ -225,27 +201,6 @@ router.use(async (req, res, next) => {
  * post just for admin + mod
  */
 router.post('/', async (req, res, next) => {
-  const aLogger = (text) => {
-    const timeString = new Date().toLocaleTimeString();
-
-    const logText = `@[${escapeMd(req.user.name)}](${req.user.id}) ${text}`;
-    modtoolsLogger.info(
-      `${timeString} | MODTOOLS> ${logText}`,
-    );
-    chatProvider.broadcastChatMessage(
-      'info',
-      logText,
-      chatProvider.enChannelId,
-      chatProvider.infoUserId,
-    );
-  };
-
-  const bLogger = (text) => {
-    logger.info(
-      `MODTOOLS>IID>${req.user.name}[${req.user.id}]> ${text}`,
-    );
-  };
-
   try {
     if (req.body.cleanerstat) {
       const ret = CanvasCleaner.reportStatus();
@@ -284,6 +239,8 @@ router.post('/', async (req, res, next) => {
         iidaction, iid, bid, iidoruser,
         identifiers, reason, time, username,
       } = req.body;
+      // eslint-disable-next-line max-len
+      logger.info(`MODTOOLS>IID>${req.user.name}[${req.user.id}]> ${iidaction} ${iid} ${bid} ${iidoruser} ${identifiers}`);
       const ret = await executeIIDAction(
         iidaction,
         iid,
@@ -293,8 +250,7 @@ router.post('/', async (req, res, next) => {
         reason,
         time,
         username,
-        req.user.id,
-        bLogger,
+        req.user,
       );
       res.send(ret);
       return;
@@ -308,7 +264,7 @@ router.post('/', async (req, res, next) => {
         ulcoor,
         brcoor,
         canvasid,
-        aLogger,
+        req.user,
       );
       res.status(ret).send(msg);
       return;
@@ -320,7 +276,7 @@ router.post('/', async (req, res, next) => {
         req.files?.image?.data,
         coords,
         canvasid,
-        aLogger,
+        req.user,
       );
       res.status(ret).send(msg);
       return;
@@ -348,10 +304,6 @@ router.use(async (req, res, next) => {
  * Post just for admin
  */
 router.post('/', async (req, res, next) => {
-  const aLogger = (text) => {
-    logger.info(`ADMIN> ${req.user.name}[${req.user.id}]> ${text}`);
-  };
-
   try {
     if (req.body.textaction) {
       /*
@@ -361,7 +313,7 @@ router.post('/', async (req, res, next) => {
       const ret = await executeTextAction(
         req.body.textaction,
         req.body.text,
-        aLogger,
+        req.user,
       );
       res.send(ret);
       return;
@@ -391,7 +343,7 @@ router.post('/', async (req, res, next) => {
       return;
     }
     if (req.body.quickaction) {
-      const ret = await executeQuickAction(req.body.quickaction, aLogger);
+      const ret = await executeQuickAction(req.body.quickaction, req.user);
       res.send(ret);
       return;
     }

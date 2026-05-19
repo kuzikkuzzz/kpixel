@@ -8,6 +8,7 @@ import {
   CodeChallengeMethod, OAuth2Tokens,
 } from 'arctic';
 
+import { AuthLogger } from '../core/logger.js';
 import { sign, unsign, generateTinyToken } from '../utils/hash.js';
 import { openSession } from '../middleware/session.js';
 import { parseDevice } from '../middleware/device.js';
@@ -18,6 +19,7 @@ import {
   getUserByEmail, getUserByTpid, getNameThatIsNotTaken, createNewUser,
   setUserProperty,
 } from '../data/sql/User.js';
+import { getIIDofIP } from '../data/sql/IP.js';
 import { addOrReplaceTpid } from '../data/sql/ThreePID.js';
 
 import {
@@ -323,17 +325,29 @@ router.get('/r/:abbr', parseDevice, async (req, res) => {
   if (!userData && tpid) {
     userData = await getUserByTpid(providerType, tpid);
   }
+
+  const { ip } = req;
+  const [iid] = await Promise.all([
+    getIIDofIP(ip.ipString),
+    ip.getAllowance(),
+  ]);
   /* create new user */
   if (!userData) {
     preferredName = await getNameThatIsNotTaken(preferredName);
-    console.log(
-
-      `TP LOGIN: Create new user from ${providerName} oauth login ${tpid}`,
-    );
     userData = await createNewUser(preferredName, null);
     if (!userData) {
       throw new Error('Could not create user');
     }
+
+    AuthLogger.newOAuthUser(
+      userData, email?.substring(email.indexOf('@')), iid, ip.country,
+      providerName,
+    );
+  } else {
+    AuthLogger.oAuthLogin(
+      userData, email?.substring(email.indexOf('@')), iid, ip.country,
+      providerName,
+    );
   }
 
   if (tpid) {

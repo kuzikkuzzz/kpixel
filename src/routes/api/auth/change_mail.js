@@ -4,7 +4,7 @@
 
 import mailProvider from '../../../core/MailProvider.js';
 
-import logger from '../../../core/logger.js';
+import { AuthLogger } from '../../../core/logger.js';
 import { validateEMail } from '../../../utils/validation.js';
 import { checkMailOverShards } from '../../../utils/intel/index.js';
 import { setEmail, getTPIDsOfUser } from '../../../data/sql/ThreePID.js';
@@ -60,8 +60,9 @@ export default async (req, res) => {
     });
   }
 
-  // eslint-disable-next-line max-len
-  logger.info(`AUTH: Changed mail for user ${user.name}(${user.id}) to ${email} by ${req.ip.ipString}`);
+  AuthLogger.addEmail(
+    req.user, req.ip.country, email.substring(email.indexOf('@')),
+  );
 
   mailProvider.sendVerifyMail(email, user.name, req.ip.getHost(), lang);
 

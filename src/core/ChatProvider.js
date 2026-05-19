@@ -1,7 +1,6 @@
 /*
  * class for chat communications
  */
-import logger from './logger.js';
 import RateLimiter from '../utils/RateLimiter.js';
 import {
   findIdByNameOrId, getDummyUser, getLastIPOfUser,
@@ -402,7 +401,7 @@ export class ChatProvider {
       user.lastMessage = message;
     }
 
-    logger.info(
+    console.info(
       `Received chat message ${message} from ${name} / ${ip.ipString}`,
     );
     try {
@@ -499,7 +498,7 @@ export class ChatProvider {
     } catch {
       // nothing
     }
-    logger.info(`${initiator} muted user ${userPing}`);
+    console.info(`${initiator} muted user ${userPing}`);
     return null;
   }
 
@@ -538,7 +537,7 @@ export class ChatProvider {
         // nothing
       }
     }
-    logger.info(`Unmuted user ${userPing}`);
+    console.info(`Unmuted user ${userPing}`);
     return null;
   }
 
@@ -568,7 +567,7 @@ export class ChatProvider {
         // nothing
       }
     }
-    logger.info(`Purging public messages of user ${userPing}`);
+    console.info(`Purging public messages of user ${userPing}`);
     return null;
   }
 }

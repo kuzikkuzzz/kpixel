@@ -15,6 +15,7 @@ import { forceCaptcha, resetAllCaptchas } from '../data/sql/Captcha.js';
 import { rollCaptchaFonts } from './captchaserver.js';
 import { getBanInfos } from '../data/sql/Ban.js';
 import { getTPIDsOfUser, getTPIDHistoryOfUser } from '../data/sql/ThreePID.js';
+import { ModtoolsLogger } from './logger.js';
 import {
   ban, unban, whitelist, unwhitelist, banMedia, unbanMedia,
 } from './ban.js';
@@ -50,10 +51,11 @@ import rollbackCanvasArea from './rollback.js';
 /**
  * Execute admin text actions, text can be a list of ips or iids or anything
  * @param action what to do with the ips
- * @param ip already sanitized ip
+ * @param text whatever
+ * @param user admin user
  * @return text of success
  */
-export async function executeTextAction(action, text, logger = null) {
+export async function executeTextAction(action, text, user) {
   if (action === 'announce' && text?.length > 6) {
     socketEvents.broadcastAnnouncement(text);
     return 'Sent announcement';
@@ -95,13 +97,13 @@ export async function executeTextAction(action, text, logger = null) {
     }
     out += '\n';
 
-    if (logger) logger(`${action} ${value}`);
+    ModtoolsLogger.adminTextAction(user, action, value);
   }
   return out;
 }
 
-export async function executeQuickAction(action, logger = null) {
-  if (logger) logger(action);
+export async function executeQuickAction(action, user) {
+  ModtoolsLogger.adminQuickAction(user, action);
 
   switch (action) {
     case 'rollcaptchafonts': {
@@ -198,13 +200,8 @@ export async function executeIIDAction(
   /* duration in ms */
   time,
   username,
-  muid,
-  logger = null,
+  modUser,
 ) {
-  if (logger) {
-    logger(`${action} ${iid} ${bid} ${iidOrUserIdOrName} ${identifiers}`);
-  }
-
   let duration;
   const identifierUuidList = [];
   const identifierUserIdList = [];
@@ -350,11 +347,13 @@ export async function executeIIDAction(
         out += '\n';
         out += await printBans(banInfos);
       }
+      ModtoolsLogger.modViewAction(modUser, action, iidOrUserIdOrName);
       return out;
     }
     case 'listonline': {
       const { onlineIPUsers } = socketEvents;
       const ipToIdMap = await getIIDsOfIPs(Object.keys(onlineIPUsers));
+      ModtoolsLogger.modViewAction(modUser, action);
       return Object.entries(onlineIPUsers).map(
         ([ip, uidList]) => `${uidList.join(' ')} ${ipToIdMap.get(ip) || 'N/A'}`,
       ).sort().join('\n');
@@ -377,6 +376,7 @@ export async function executeIIDAction(
         }
       }
       const [iids, userIds] = await findAlts(userId, ipString, duration);
+      ModtoolsLogger.modViewAction(modUser, action, iidOrUserIdOrName);
       return `UserIds:\n${userIds.join('\n')}\n\nIIDs:\n${iids.join('\n')}\n`;
     }
     case 'baninfo': {
@@ -384,11 +384,13 @@ export async function executeIIDAction(
       if (!banInfos?.length) {
         return 'No such ban found';
       }
+      ModtoolsLogger.modViewAction(modUser, action, bid);
       return printBans(banInfos);
     }
     case 'givecaptcha': {
       await forceCaptcha(ipString);
       socketEvents.reloadIP(ipString, true);
+      ModtoolsLogger.modIIDAction(modUser, action, iid);
       return `Forced captcha on ${iid}`;
     }
     case 'changeusername': {
@@ -410,12 +412,13 @@ export async function executeIIDAction(
         return `${out}Couldn't change ${targetUser.username}, ${username} probably already exists.`;
       }
       socketEvents.reloadUser(targetUser.id);
+      ModtoolsLogger.modIIDAction(modUser, action, targetUser.id, username);
       return `${out}Changed username of ${targetUser.username} to ${username}`;
     }
     case 'ban': {
       const [bannedIpStrings, bannedUserIds] = await ban(
         null, identifierUserIdList, identifierUuidList,
-        false, true, reason, duration || null, muid,
+        false, true, reason, duration || null, modUser.id,
       );
       if (bannedIpStrings.length || bannedUserIds.length) {
         // eslint-disable-next-line max-len
@@ -426,7 +429,7 @@ export async function executeIIDAction(
     case 'unban': {
       const [unbannedIpStrings, unbannedUserIds] = await unban(
         null, identifierUserIdList, identifierUuidList, identifierUuidList,
-        true, true, muid,
+        true, true, modUser.id,
       );
       let ret = '';
       if (unbannedIpStrings.length) {
@@ -467,12 +470,8 @@ export async function executeIIDAction(
  * @param mediaId
  */
 export async function executeMediaAction(
-  action, mediaIdOrMbid, reason, muid, logger = null,
+  action, mediaIdOrMbid, reason, user,
 ) {
-  if (logger) {
-    logger(`media ${action} ${mediaIdOrMbid} ${reason}`);
-  }
-
   switch (action) {
     case 'ban': {
       if (!mediaIdOrMbid) {
@@ -482,10 +481,11 @@ export async function executeMediaAction(
       if (!reason) {
         throw new Error('No valid reason given');
       }
-      const result = await banMedia(mediaIdOrMbid, reason, muid);
+      const result = await banMedia(mediaIdOrMbid, reason, user.id);
       if (!result) {
         throw new Error('Could not ban media');
       }
+      ModtoolsLogger.banMedia(user, mediaIdOrMbid, reason);
       // eslint-disable-next-line max-len
       return `Successfully banned media, affected:\n${result[0]} users\n${result[1]} IPs\n ${result[2]} channels`;
     }
@@ -497,6 +497,7 @@ export async function executeMediaAction(
       if (!success) {
         throw new Error('Could not unban media');
       }
+      ModtoolsLogger.unbanMedia(user, mediaIdOrMbid);
       return 'Successfully unbaned media';
     }
     default:
@@ -510,6 +511,7 @@ export async function executeMediaAction(
  * @param file imagefile
  * @param coords coord sin X_Y format
  * @param canvasid numerical canvas id as string
+ * @param user mod user
  * @return [ret, msg] http status code and message
  */
 export async function executeImageAction(
@@ -517,7 +519,7 @@ export async function executeImageAction(
   buffer,
   coords,
   canvasid,
-  logger = null,
+  user,
 ) {
   if (!coords) {
     return [403, 'Coordinates not defined'];
@@ -577,8 +579,9 @@ export async function executeImageAction(
       wipe, protect,
     );
 
-    // eslint-disable-next-line max-len
-    if (logger) logger(`loaded image with *${pxlCount}*pxls to #${canvas.ident},${x},${y} (+*${x}*+\\_+*${y}*+ - +*${x + info.width - 1}*+\\_+*${y + info.height - 1}*+)`);
+    ModtoolsLogger.setCanvasCleaner(
+      user, canvas.ident, x, y, info.width, info.height, pxlCount, action,
+    );
     return [
       200,
       `Successfully loaded image wth ${pxlCount}pxls to ${x}/${y}`,
@@ -732,12 +735,13 @@ export async function executeWatchAction(
   return { info: 'Invalid action given' };
 }
 
-/*
+/**
  * Execute actions for cleaning/filtering canvas
  * @param action what to do
  * @param ulcoor coords of upper-left corner in X_Y format
  * @param brcoor coords of bottom-right corner in X_Y format
  * @param canvasid numerical canvas id as string
+ * @param user mod user
  * @return [ret, msg] http status code and message
  */
 export async function executeCleanerAction(
@@ -745,7 +749,7 @@ export async function executeCleanerAction(
   ulcoor,
   brcoor,
   canvasid,
-  logger = null,
+  user,
 ) {
   if (!canvasid) {
     return [403, 'canvasid not defined'];
@@ -771,18 +775,21 @@ export async function executeCleanerAction(
   if (error) {
     return [403, error];
   }
+  ModtoolsLogger.setCanvasCleaner(
+    user, canvas.ident, x, y, u - x + 1, v - y + 1, action,
+  );
   // eslint-disable-next-line max-len
   const report = `set Canvas Cleaner to *"${action}"* from #${canvas.ident},${x},${y} to #${canvas.ident},${u},${v}`;
-  if (logger) logger(report);
   return [200, report];
 }
 
-/*
+/**
  * Execute actions for protecting areas
  * @param action what to do
  * @param ulcoor coords of upper-left corner in X_Y format
  * @param brcoor coords of bottom-right corner in X_Y format
  * @param canvasid numerical canvas id as string
+ * @param user mod user
  * @return [ret, msg] http status code and message
  */
 export async function executeProtAction(
@@ -790,7 +797,7 @@ export async function executeProtAction(
   ulcoor,
   brcoor,
   canvasid,
-  logger = null,
+  user,
 ) {
   if (!canvasid) {
     return [403, 'canvasid not defined'];
@@ -828,13 +835,13 @@ export async function executeProtAction(
     height,
     protect,
   );
-  if (logger) {
-    logger(
-      (protect)
-      // eslint-disable-next-line max-len
-        ? `protected *${width}*x*${height}* area at #${canvas.ident},${x},${y} with *${pxlCount}*pxls (+*${x}*+\\_+*${y}*+ - +*${u}*+\\_+*${v}*+)`
-      // eslint-disable-next-line max-len
-        : `unprotect *${width}*x*${height}* area at #${canvas.ident},${x},${y} with *${pxlCount}*pxls (+*${x}*+\\_+*${y}*+ - +*${u}*+\\_+*${v}*+)`,
+  if (protect) {
+    ModtoolsLogger.protect(
+      user, canvas.ident, x, y, width, height, pxlCount,
+    );
+  } else {
+    ModtoolsLogger.unprotect(
+      user, canvas.ident, x, y, width, height, pxlCount,
     );
   }
   return [
@@ -847,13 +854,14 @@ export async function executeProtAction(
   ];
 }
 
-/*
+/**
  * Execute rollback
  * @param date in format YYYYMMdd
  * @param time in format hhmm
  * @param ulcoor coords of upper-left corner in X_Y format
  * @param brcoor coords of bottom-right corner in X_Y format
  * @param canvasid numerical canvas id as string
+ * @param user mod user
  * @return [ret, msg] http status code and message
  */
 export async function executeRollback(
@@ -862,8 +870,7 @@ export async function executeRollback(
   ulcoor,
   brcoor,
   canvasid,
-  logger = null,
-  isAdmin = false,
+  user,
 ) {
   if (!canvasid) {
     return [403, 'canvasid not defined'];
@@ -893,7 +900,7 @@ export async function executeRollback(
 
   const width = u - x + 1;
   const height = v - y + 1;
-  if (!isAdmin && width * height > 1000000) {
+  if (user.userlvl < USERLVL.ADMIN && width * height > 1000000) {
     return [403, 'Can not rollback more than 1m pixels at once'];
   }
 
@@ -906,12 +913,9 @@ export async function executeRollback(
     date,
     time,
   );
-  if (logger) {
-    logger(
-    // eslint-disable-next-line max-len
-      `rolled back to *${date}* for *${width}*x*${height}* area at #${canvas.ident},${x},${y} with *${pxlCount}*pxls (+*${x}*+\\_+*${y}*+ - +*${u}*+\\_+*${v}*+)`,
-    );
-  }
+  ModtoolsLogger.rollback(
+    user, canvas.ident, x, y, width, height, date, time, pxlCount,
+  );
   return [
     200,
     // eslint-disable-next-line max-len

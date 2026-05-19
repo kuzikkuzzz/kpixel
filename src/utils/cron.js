@@ -4,8 +4,6 @@
  */
 import { HOUR } from '../core/constants.js';
 
-import logger from '../core/logger.js';
-
 class Cron {
   // timestamp of last run
   lastRun;
@@ -40,13 +38,13 @@ class Cron {
     const curTime = curDate.getTime();
     if (curTime + 120000 > this.lastRun + this.interval * HOUR) {
       // eslint-disable-next-line max-len
-      logger.info(`${curDate.toUTCString()}> Run cron events for interval: ${this.interval}h`);
+      console.info(`${curDate.toUTCString()}> Run cron events for interval: ${this.interval}h`);
       this.lastRun = curTime;
       this.functions.forEach(async (item) => {
         try {
           await item();
         } catch (err) {
-          logger.error(`Error on cron job ${item?.name}: ${err.message}`);
+          console.error(`Error on cron job ${item?.name}: ${err.message}`);
         }
       });
     }

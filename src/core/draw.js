@@ -5,7 +5,7 @@
 import {
   getPixelFromChunkOffset, isIntervalActive,
 } from './utils.js';
-import logger, { pixelLogger } from './logger.js';
+import logger, { PixelLogger } from './logger.js';
 import allowPlace from '../data/redis/cooldown.js';
 import socketEvents from '../socket/socketEvents.js';
 import { getCooldownFactor } from './CooldownModifiers.js';
@@ -274,7 +274,7 @@ export default async function drawByOffsets(
         logRetCode = retCode;
       }
 
-      pixelLogger.info(
+      PixelLogger.log(
         // eslint-disable-next-line max-len
         `${startTime} ${ipString} ${userId} ${canvasId} ${coords} ${color} ${logRetCode}`,
       );

@@ -8,7 +8,6 @@ import express from 'express';
 import http from 'http';
 
 import forceGC from './core/forceGC.js';
-import logger from './core/logger.js';
 import rankings, { Ranks } from './core/Ranks.js';
 import { sync as syncSql, cleanUp as cleanUpSql } from './data/sql/index.js';
 import { sync as syncAssets } from './core/assets.js';
@@ -20,6 +19,7 @@ import rpgEvent from './core/RpgEvent.js';
 import { initialize as initializeFishing } from './core/Fishing.js';
 import canvasCleaner from './core/CanvasCleaner.js';
 import mailProvider from './core/MailProvider.js';
+import { ModtoolsLogger, PixelLogger } from './core/logger.js';
 import { User } from './middleware/session.js';
 import { HourlyCron, DailyCron } from './utils/cron.js';
 
@@ -70,7 +70,7 @@ async function wsupgrade(request, socket, head) {
       socket.destroy();
     }
   } catch (err) {
-    logger.error(`WebSocket upgrade error: ${err.message}`);
+    console.error(`WebSocket upgrade error: ${err.message}`);
     socket.write('HTTP/1.1 503 Service Unavailable\r\n\r\n');
     socket.destroy();
   }
@@ -106,7 +106,14 @@ syncSql()
   .then(syncAssets)
   .then(async () => {
     User.setMailProvider(mailProvider);
-    chatProvider.initialize();
+
+    /*
+     * First make sure chatProvider is ready, then tell logger where it is.
+     * Logger needs it for printing to chat.
+     */
+    await chatProvider.initialize();
+    ModtoolsLogger.chatProvider = chatProvider;
+
     startAllCanvasLoops();
     loadCaptchaFontsFromDb();
     usersocket.initialize();
@@ -116,16 +123,13 @@ syncSql()
     // start http server
     const startServer = () => {
       server.listen(PORT, HOST, () => {
-        logger.info(
-          'info',
-          `HTTP Server listening on port ${PORT}`,
-        );
+        console.info(`HTTP Server listening on port ${PORT}`);
       });
     };
     startServer();
     // catch errors of server
     server.on('error', (e) => {
-      logger.error(
+      console.error(
         `HTTP Server Error ${e.code} occurred, trying again in 5s...`,
       );
       setTimeout(() => {
@@ -141,12 +145,13 @@ syncSql()
      * i.e. to know if it is the shard that runs the event
      */
     if (socketEvents.isCluster && socketEvents.important) {
-      logger.info('I am the main shard');
+      console.info('I am the main shard');
     }
 
     await rankings.initialize();
     HourlyCron.hook(Ranks.setHourlyRanking);
     DailyCron.hook(Ranks.setDailyRanking);
+    DailyCron.hook(PixelLogger.prepareLogFile);
 
     HourlyCron.hook(async () => {
       if (!socketEvents.important) {

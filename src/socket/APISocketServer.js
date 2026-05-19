@@ -13,7 +13,6 @@ import socketEvents from './socketEvents.js';
 import { dehydrateOnlineCounter } from './packets/server.js';
 import chatProvider from '../core/ChatProvider.js';
 import { setPixelByCoords } from '../core/setPixel.js';
-import logger from '../core/logger.js';
 import { APISOCKET_KEY } from '../core/config.js';
 import authenticateAPIClient from './authenticateAPIClient.js';
 import { getBasicUserInfo, getChatStaff } from '../data/sql/User.js';
@@ -80,7 +79,7 @@ class APISocketServer {
   }
 
   initialize() {
-    logger.info('Starting API websocket server');
+    console.info('Starting API websocket server');
 
     const wss = new WebSocket.Server({
       perMessageDeflate: false,
@@ -91,7 +90,7 @@ class APISocketServer {
     this.wss = wss;
 
     wss.on('error', (e) => {
-      logger.error(`APIWebSocket Server Error ${e.message}`);
+      console.error(`APIWebSocket Server Error ${e.message}`);
     });
 
     wss.on('connection', async (ws) => {
@@ -142,12 +141,12 @@ class APISocketServer {
     if (!headers.authorization
       || !APISOCKET_KEY
       || headers.authorization !== `Bearer ${APISOCKET_KEY}`) {
-      logger.warn(`API ws request from ${ip} not authenticated`);
+      console.warn(`API ws request from ${ip} not authenticated`);
       socket.write('HTTP/1.1 401 Unauthorized\r\n\r\n');
       socket.destroy();
       return;
     }
-    logger.warn(`API ws request from ${ip} successfully authenticated`);
+    console.warn(`API ws request from ${ip} successfully authenticated`);
 
     this.wss.handleUpgrade(request, socket, head, (ws) => {
       this.wss.emit('connection', ws, request);
@@ -248,7 +247,7 @@ class APISocketServer {
                 // eslint-disable-next-line no-underscore-dangle
                 ws._socket.write(buffer);
               } catch (error) {
-                logger.error(`WebSocket broadcast error: ${error.message}`);
+                console.error(`WebSocket broadcast error: ${error.message}`);
               }
             });
           }
@@ -324,9 +323,9 @@ class APISocketServer {
         } else if (even === 'reloadUser') {
           ws.subReloadUser = true;
         } else {
-          logger.info(`APISocket wanted to sub to nonexistent  ${even}`);
+          console.info(`APISocket wanted to sub to nonexistent  ${even}`);
         }
-        logger.info(`APISocket client subscribed to ${even}`);
+        console.info(`APISocket client subscribed to ${even}`);
         return;
       }
       if (command === 'setpxl') {
@@ -362,7 +361,7 @@ class APISocketServer {
           /* ordinary user */
           const userData = await APISocketServer.#getUserData(username);
           if (!userData) {
-            logger.info(`Cound not get data of ${username} for matrix chat`);
+            console.info(`Cound not get data of ${username} for matrix chat`);
             accepted = false;
           } else if (userData.isMuted) {
             accepted = false;
@@ -417,9 +416,9 @@ class APISocketServer {
         ]));
         return;
       }
-      logger.info(`Received unknown api-ws message ${message}`);
+      console.info(`Received unknown api-ws message ${message}`);
     } catch (err) {
-      logger.error(`Got undecipherable api-ws message ${message}, ${err}`);
+      console.error(`Got undecipherable api-ws message ${message}, ${err}`);
     }
   }
 

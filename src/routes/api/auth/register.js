@@ -1,7 +1,8 @@
-import logger from '../../../core/logger.js';
+import { AuthLogger } from '../../../core/logger.js';
 import {
   createNewUser, getUsersByNameOrEmail,
 } from '../../../data/sql/User.js';
+import { getIIDofIP } from '../../../data/sql/IP.js';
 import { addOrReplaceTpid } from '../../../data/sql/ThreePID.js';
 import { checkVerificationSolutions } from '../../../data/sql/Captcha.js';
 import mailProvider from '../../../core/MailProvider.js';
@@ -129,9 +130,14 @@ export default async (req, res) => {
    * we could allow registering without email if we change validation and
    * put this under an if
    */
-  await addOrReplaceTpid(user.id, THREEPID_PROVIDERS.EMAIL, email);
+  const [iid] = await Promise.all([
+    getIIDofIP(ip.ipString),
+    addOrReplaceTpid(user.id, THREEPID_PROVIDERS.EMAIL, email),
+  ]);
 
-  logger.info(`Created new user ${name} ${email} ${ip.ipString}`);
+  AuthLogger.newUser(
+    user, email.substring(email.indexOf('@')), iid, ip.country,
+  );
 
   /* session duration, null for permanent */
   let { durationsel: durationHours } = req.body;

@@ -1,8 +1,9 @@
 /*
  * local login with mail / name and password
  */
-import logger from '../../../core/logger.js';
+import { AuthLogger } from '../../../core/logger.js';
 import { getUsersByNameOrEmail } from '../../../data/sql/User.js';
+import { getIIDofIP } from '../../../data/sql/IP.js';
 import { compareToHash } from '../../../utils/hash.js';
 import socketEvents from '../../../socket/socketEvents.js';
 
@@ -10,6 +11,7 @@ import getMe from '../../../core/me.js';
 import { openSession } from '../../../middleware/session.js';
 
 export default async (req, res) => {
+  req.tickRateLimiter(3000);
   const { ttag: { t }, body: { nameoremail, password }, ip } = req;
 
   const users = await getUsersByNameOrEmail(nameoremail, null);
@@ -26,8 +28,6 @@ export default async (req, res) => {
           t`This email / password combination got hacked and leaked. To protect this account, the password has been reset. Please use the "Forgot my password" function below to set a new password. In the future, consider not installing malware, Thank You.`,
         );
       }
-      // eslint-disable-next-line max-len
-      logger.info(`AUTH: Incorrect login attempt for ${nameoremail} by ${ip.ipString}`);
       throw new Error('Incorrect password!');
     }
 
@@ -52,12 +52,14 @@ export default async (req, res) => {
       }
     }
 
-    const token = await openSession(
-      req, res, user.id, durationHours, returnToken,
-    );
-    logger.info(
-      `AUTH: Logged in user ${user.name}(${user.id}) by ${ip.ipString}`,
-    );
+    const [token, iid] = await Promise.all([
+      openSession(
+        req, res, user.id, durationHours, returnToken,
+      ),
+      getIIDofIP(ip.ipString),
+    ]);
+
+    AuthLogger.login(req.user, iid, ip.country);
 
     const responseData = {
       success: true,
