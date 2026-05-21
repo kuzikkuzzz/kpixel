@@ -32,7 +32,7 @@ function parseFile(cb) {
     rl.on('line', (line) => cb(line.split(' ')));
 
     rl.on('error', (err) => {
-      reject(err);
+      console.error(`Pixellogger read error: ${err.message}`);
     });
 
     rl.on('close', () => {

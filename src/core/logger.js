@@ -340,9 +340,13 @@ export class PixelLogger {
           return;
         };
         const filePath = path.join(logdir, file);
-        const stats = fs.statSync(filePath);
-        if (stats.mtimeMs < cutoffTime) {
-          fs.rmSync(filePath);
+        try {
+          const stats = fs.statSync(filePath);
+          if (stats.mtimeMs < cutoffTime) {
+            fs.rmSync(filePath);
+          }
+        } catch {
+          /* may be reached if a different process removed the file already */
         }
       });
 
@@ -368,7 +372,7 @@ export class PixelLogger {
         encoding: 'utf8',
       });
       newFileStream.on('error', (error) => {
-        console.error(`Pixellog ERROR: ${error.message}`);
+        console.error(`Pixellog Error: ${error.message}`);
         PixelLogger.#pauseTill = Date.now() + 30000;
       });
       PixelLogger.fileStream = newFileStream;
@@ -377,7 +381,7 @@ export class PixelLogger {
         oldStream.end();
       }
     } catch (error) {
-      console.error(`Pixellog ERROR: ${error.message}`);
+      console.error(`Pixellog Error: ${error.message}`);
       PixelLogger.#pauseTill = Date.now() + 10000;
     }
   }
