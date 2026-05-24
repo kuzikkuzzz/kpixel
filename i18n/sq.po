@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: admin@pixelplanet.fun\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2026-05-22 20:30+0000\n"
+"PO-Revision-Date: 2026-05-24 07:30+0000\n"
 "Last-Translator: Extreme Motorsex <em@noreply.pixelplanet.fun>\n"
 "Language-Team: Albanian <https://translate.gs-os.com/projects/ppfun/client/"
 "sq/>\n"
@@ -103,7 +103,7 @@ msgid "Add Template"
 msgstr "Shto Shabllon"
 
 msgid "Add a new E-Mail Address here:"
-msgstr "Fusni një email të ri ktu:"
+msgstr "Shto një email të ri këtu:"
 
 #. This if for moderation tools, it's not important to translate this
 msgid "Admintools"
