@@ -1,0 +1,1181 @@
+msgid ""
+msgstr ""
+"Last-Translator: Automatically generated\n"
+"Language-Team: none\n"
+"Language: szl\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
+"|| n%100>=20) ? 1 : 2;\n"
+
+#: src/canvasesDesc.js:27
+msgid "1bit"
+msgstr ""
+
+#: src/canvasesDesc.js:29
+msgid "2bit"
+msgstr ""
+
+#: src/canvasesDesc.js:23
+msgid "3D Canvas"
+msgstr ""
+
+#: src/ssr/Globe.jsx:33
+msgid "A 3D globe of our whole map"
+msgstr ""
+
+#: src/canvasesDesc.js:40
+msgid ""
+"A canvas for the most active players from the the previous day. Daily "
+"ranking updates at 00:00 UTC."
+msgstr ""
+
+#: src/routes/api/media.js:314
+msgid "A file was too large"
+msgstr ""
+
+#: src/routes/oidc/register.js:161
+msgid "Access modtools"
+msgstr ""
+
+#: src/routes/oidc/register.js:231
+msgid "Add Application"
+msgstr ""
+
+#: src/routes/oidc/register.js:30
+msgid "Add an Application (OIDC Client)"
+msgstr ""
+
+#: src/routes/oidc/register.js:182
+msgid "Add new application"
+msgstr ""
+
+#: src/routes/api/auth/resend_verify.js:25
+msgid "An error occured. Please try again later."
+msgstr ""
+
+#: src/routes/oidc/register.js:110
+msgid "Application changed successfully"
+msgstr ""
+
+#: src/routes/oidc/register.js:59
+msgid "Application deleted"
+msgstr ""
+
+#: src/routes/oidc/register.js:112
+msgid "Application successfully added"
+msgstr ""
+
+#: src/routes/api/factionchange.js:112
+#: src/routes/api/profilechange.js:34
+msgid "Avatar can only be an image"
+msgstr ""
+
+#: src/routes/api/factioncreate.js:68
+msgid "Avatar not given or not an image"
+msgstr ""
+
+#: src/canvasesDesc.js:39
+msgid "Black and White canvas"
+msgstr ""
+
+#: src/routes/api/factionrolechange.js:43
+#: src/routes/api/factionroledelete.js:33
+#: src/routes/api/factionrolejoin.js:52
+msgid "Can not change a role above your own"
+msgstr ""
+
+#: src/routes/api/factionrolechange.js:48
+#: src/routes/api/factionrolejoin.js:57
+msgid "Can not change a role that is equal to your own"
+msgstr ""
+
+#: src/routes/api/factionrolechange.js:60
+msgid "Can not change the default setting of this role"
+msgstr ""
+
+#: src/routes/api/factionrolechange.js:82
+msgid "Can not change the powerlevel of a role equal or above you"
+msgstr ""
+
+#: src/routes/api/factionrolechange.js:78
+msgid "Can not change the powerlevel of the Sovereign"
+msgstr ""
+
+#: src/core/ChatProvider.js:357
+msgid "Can not chat while being banned"
+msgstr ""
+
+#: src/routes/api/factionrolecreate.js:55
+msgid "Can not create a role on the same level as yours"
+msgstr ""
+
+#: src/routes/api/factionrolecreate.js:49
+msgid "Can not create a role with a powerlevel beyond yours"
+msgstr ""
+
+#: src/routes/api/factionroledelete.js:35
+msgid "Can not delete a role on the same level as yours"
+msgstr ""
+
+#: src/routes/api/factionroledelete.js:27
+msgid "Can not delete this role"
+msgstr ""
+
+#: src/routes/api/factionrolechange.js:88
+msgid "Can not elevate the powerlevel of a role beyond yours"
+msgstr ""
+
+#: src/routes/api/factionrolechange.js:98
+msgid "Can not elevate the powerlevel of a role to yours"
+msgstr ""
+
+#: src/routes/api/factionrolecreate.js:76
+#, javascript-format
+msgid "Can not have more than ${ MAX_ROLES_PER_FACTION } faction roles"
+msgstr ""
+
+#: src/routes/api/factioninvitecreate.js:32
+msgid "Can not have more than 20 invites per faction"
+msgstr ""
+
+#: src/routes/api/factionkickban.js:46
+#: src/routes/api/factionrolejoin.js:49
+#: src/routes/api/factionroleleave.js:34
+msgid "Can not modify user equal to you or above you"
+msgstr ""
+
+#. when leaving a faction and you are the last owner
+#: src/routes/api/factionkickban.js:62
+#: src/routes/api/factionleave.js:28
+#: src/routes/api/factionroleleave.js:36
+msgid "Can not orphan a faction"
+msgstr ""
+
+#: src/routes/api/media.js:92
+#, javascript-format
+msgid ""
+"Can not upload this many files at once, only 5 are allowed, you have ${ "
+"amountOfFiles }"
+msgstr ""
+
+#: src/routes/api/factionrolechange.js:93
+#: src/routes/api/factionrolecreate.js:52
+msgid "Can only have one Sovereign role"
+msgstr ""
+
+#: src/ssr/modalShell.js:30
+#: src/ssr/shell.js:26
+msgid "Click here"
+msgstr ""
+
+#: src/core/MailProvider.js:72
+msgid "Click to Verify"
+msgstr ""
+
+#: src/routes/oidc/register.js:186
+#: src/routes/oidc/register.js:247
+msgid "Client Name"
+msgstr ""
+
+#: src/routes/reset_password.js:123
+msgid "Confirm New Password"
+msgstr ""
+
+#: src/canvasesDesc.js:42
+msgid ""
+"Conquer land on a smaller earth with protected ocean. Shares cooldown with "
+"earth canvas!"
+msgstr ""
+
+#: src/routes/oidc/register.js:133
+msgid "Consent"
+msgstr ""
+
+#: src/canvasesDesc.js:24
+msgid "Coronavirus"
+msgstr ""
+
+#: src/routes/api/factionrolechange.js:148
+msgid "Could not change the flag of this role"
+msgstr ""
+
+#: src/routes/api/userchange.js:45
+#: src/routes/api/userchange.js:55
+msgid "Could not change this setting. Maybe try again later."
+msgstr ""
+
+#: src/routes/api/auth/close_session.js:13
+#: src/routes/api/auth/revoke_consent.js:12
+msgid "Could not close this Session."
+msgstr ""
+
+#: src/routes/api/auth/remove_tpid.js:18
+msgid "Could not find this login method"
+msgstr ""
+
+#: src/routes/api/leavechan.js:29
+msgid "Could not leave this channel"
+msgstr ""
+
+#: src/routes/api/factionchange.js:117
+msgid "Could not set this factions avatar"
+msgstr ""
+
+#: src/routes/api/profilechange.js:39
+msgid "Could not set your avatar"
+msgstr ""
+
+#: src/routes/api/profilechange.js:76
+msgid "Could not set your faction role"
+msgstr ""
+
+#: src/routes/api/media.js:318
+msgid "Could not upload all files"
+msgstr ""
+
+#: src/core/MailProvider.js:163
+msgid "Couldn't find this mail in our database"
+msgstr ""
+
+#: src/routes/oidc/register.js:219
+#: src/routes/oidc/register.js:321
+msgid "Default"
+msgstr ""
+
+#: src/routes/oidc/register.js:333
+msgid "Delete Application"
+msgstr ""
+
+#: src/utils/validation.js:111
+msgid "Description can't be empty"
+msgstr ""
+
+#: src/utils/validation.js:114
+msgid "Description must be shorter than 1000 characters"
+msgstr ""
+
+#: src/routes/oidc/register.js:193
+#: src/routes/oidc/register.js:255
+msgid "Display name for your OIDC client"
+msgstr ""
+
+#: src/ssr/Globe.jsx:46
+msgid "Double click on globe to go back."
+msgstr ""
+
+#: src/routes/api/auth/register.js:86
+msgid "E-Mail already in use."
+msgstr ""
+
+#: src/canvasesDesc.js:21
+msgid "Earth"
+msgstr ""
+
+#: src/routes/oidc/register.js:238
+msgid "Edit existing applications"
+msgstr ""
+
+#: src/utils/validation.js:19
+msgid "Email can't be empty."
+msgstr ""
+
+#: src/utils/validation.js:21
+msgid "Email can't be longer than 40 characters."
+msgstr ""
+
+#: src/utils/validation.js:22
+msgid "Email should at least contain a dot"
+msgstr ""
+
+#: src/utils/validation.js:20
+msgid "Email should be at least 5 characters long."
+msgstr ""
+
+#: src/utils/validation.js:25
+msgid "Email should contain a @"
+msgstr ""
+
+#: src/middleware/errorPage.js:19
+#: src/routes/oidc/register.js:118
+msgid "Error"
+msgstr ""
+
+#: src/routes/api/auth/register.js:124
+msgid "Failed to create a new user :("
+msgstr ""
+
+#: src/routes/api/media.js:126
+#, javascript-format
+msgid ""
+"File ${ filename } has ${ sizeMB } MB and is too large. It may only be ${ "
+"MAX_FILE_SIZE_MB } MB"
+msgstr ""
+
+#: src/routes/api/media.js:138
+#, javascript-format
+msgid "File ${ filename } has an invalid extension"
+msgstr ""
+
+#: src/routes/api/media.js:304
+msgid "File is broken"
+msgstr ""
+
+#. 'client_secret' is a technical term and should not be translated
+#: src/routes/oidc/register.js:294
+msgid ""
+"Generate a new client_secret. The old secret will become invalid "
+"immediately."
+msgstr ""
+
+#: src/routes/oidc/register.js:156
+msgid "Get email address"
+msgstr ""
+
+#: src/routes/oidc/register.js:176
+msgid "Get the amount of Pixels placed and ranking"
+msgstr ""
+
+#: src/core/MailProvider.js:73
+msgid "Have fun and don't hesitate to contact us if you encounter any problems :)"
+msgstr ""
+
+#: src/core/MailProvider.js:137
+msgid "Hello"
+msgstr ""
+
+#: src/routes/reset_password.js:113
+#, javascript-format
+msgid "Hello ${ email }, you can set your new password here:"
+msgstr ""
+
+#: src/core/MailProvider.js:71
+#: src/core/MailProvider.js:107
+#, javascript-format
+msgid "Hello ${ name }"
+msgstr ""
+
+#: src/core/MailProvider.js:109
+msgid ""
+"If this was you, please ignore this email. If it wasn't you, please go to "
+"<a href=\"https://pixelplanet.fun\">pixelplanet.fun</a> and log-out any "
+"session that you are unaware of under \"Login Methods\" in the User Area "
+"and change your password."
+msgstr ""
+
+#: src/core/MailProvider.js:139
+#, javascript-format
+msgid ""
+"If you did not request this mail, please just ignore it (the ip that "
+"requested this mail was ${ ip })."
+msgstr ""
+
+#: src/utils/validation.js:72
+msgid "Incorrect password"
+msgstr ""
+
+#: src/routes/api/media.js:145
+#: src/routes/api/media.js:294
+msgid "Invalid type of media"
+msgstr ""
+
+#: src/routes/reset_password.js:95
+msgid "Invalid url :( Please check your mail again."
+msgstr ""
+
+#: src/routes/api/modtools.js:306
+msgid "Just admins can do that"
+msgstr ""
+
+#: src/routes/api/modtools.js:121
+msgid "Just janny, mod or admin can do that"
+msgstr ""
+
+#: src/routes/api/modtools.js:203
+msgid "Just mods and admins can do that"
+msgstr ""
+
+#: src/routes/oidc/register.js:141
+msgid "Know that an account exists"
+msgstr ""
+
+#. "scopes" is a technical term and should not be translated
+#: src/routes/oidc/register.js:129
+msgid "List of available scopes"
+msgstr ""
+
+#: src/ssr/Globe.jsx:47
+msgid "Loading..."
+msgstr ""
+
+#: src/core/MailProvider.js:106
+msgid "Login from new location on PixelPlanet"
+msgstr ""
+
+#: src/routes/oidc/auth.js:79
+#: src/routes/oidc/consent.js:50
+msgid "Login is required"
+msgstr ""
+
+#: src/routes/api/auth/change_mail.js:34
+msgid "Mail is already in use!"
+msgstr ""
+
+#: src/core/MailProvider.js:147
+msgid "Mail is not configured on the server"
+msgstr ""
+
+#: src/routes/api/auth/verify.js:15
+#: src/routes/api/auth/verify.js:23
+#: src/routes/api/auth/verify.js:33
+msgid "Mail verification"
+msgstr ""
+
+#: src/routes/api/media.js:291
+msgid "MimeType or extension not known or supported"
+msgstr ""
+
+#: src/routes/api/media.js:133
+#, javascript-format
+msgid "Mimetype ${ mimeType } of file ${ filename } is invalid or not allowed"
+msgstr ""
+
+#: src/canvasesDesc.js:30
+msgid "Minimap"
+msgstr ""
+
+#: src/canvasesDesc.js:38
+msgid "Mirror of PixelCanvas"
+msgstr ""
+
+#: src/canvasesDesc.js:37
+msgid "Mirror of PixelZone"
+msgstr ""
+
+#: src/canvasesDesc.js:22
+msgid "Moon"
+msgstr ""
+
+#: src/canvasesDesc.js:34
+msgid ""
+"Moon canvas. Safe space for art. No flags or large text (unless part of "
+"art) or art larger than 1.5k x 1.5k pixels."
+msgstr ""
+
+#: src/routes/api/auth/register.js:89
+#: src/routes/api/factioncreate.js:70
+#: src/routes/api/userchange.js:102
+msgid "Name already in use."
+msgstr ""
+
+#: src/utils/validation.js:104
+msgid "Name can only contain the characters: a-z . _ and -"
+msgstr ""
+
+#: src/utils/validation.js:32
+#: src/utils/validation.js:96
+msgid "Name can't be empty."
+msgstr ""
+
+#: src/utils/validation.js:43
+msgid "Name contains invalid character like @, /, \\ or #"
+msgstr ""
+
+#: src/routes/oidc/register.js:86
+msgid "Name is too long"
+msgstr ""
+
+#: src/utils/validation.js:33
+#: src/utils/validation.js:98
+msgid "Name must be at least 2 characters long"
+msgstr ""
+
+#: src/utils/validation.js:34
+#: src/utils/validation.js:101
+msgid "Name must be shorter than 26 characters"
+msgstr ""
+
+#: src/routes/api/auth/local.js:21
+msgid "Name or Email does not exist!"
+msgstr ""
+
+#: src/routes/reset_password.js:117
+msgid "New Password"
+msgstr ""
+
+#: src/routes/api/factioncreate.js:39
+msgid "No Avatar given"
+msgstr ""
+
+#: src/routes/api/auth/register.js:32
+msgid "No Captcha given"
+msgstr ""
+
+#: src/routes/api/badge.js:16
+#: src/routes/api/fish.js:16
+msgid "No or invalid fish id."
+msgstr ""
+
+#: src/utils/validation.js:129
+msgid "No password given."
+msgstr ""
+
+#. "redirect_uris" is a technical term and should not be translated
+#: src/routes/oidc/register.js:77
+msgid "No redirect_uris given."
+msgstr ""
+
+#: src/routes/api/badge.js:20
+msgid "No such badge found"
+msgstr ""
+
+#: src/routes/api/fish.js:20
+msgid "No such fish found"
+msgstr ""
+
+#: src/routes/oidc/register.js:204
+msgid "One redirect URIs per line"
+msgstr ""
+
+#: src/routes/oidc/register.js:305
+msgid "One redirect_uri per line"
+msgstr ""
+
+#. "redirect_uris" is a technical term and should not be translated
+#: src/routes/oidc/register.js:73
+msgid "Only five redirect_uris are allowed per client"
+msgstr ""
+
+#: src/canvasesDesc.js:41
+msgid "Only four colors. Same rules as moon!"
+msgstr ""
+
+#: src/routes/oidc/register.js:141
+#: src/routes/oidc/register.js:151
+#: src/routes/oidc/register.js:171
+msgid "OpenID Connect specs"
+msgstr ""
+
+#: src/core/MailProvider.js:72
+#: src/core/MailProvider.js:138
+msgid "Or by copying following url:"
+msgstr ""
+
+#: src/canvasesDesc.js:33
+msgid "Our main canvas, a huge map of the world. Place anywhere you like!"
+msgstr ""
+
+#: src/utils/validation.js:132
+msgid "Password must be at least 6 characters long."
+msgstr ""
+
+#: src/utils/validation.js:135
+msgid "Password must be shorter than 60 characters."
+msgstr ""
+
+#: src/routes/reset_password.js:78
+msgid "Password successfully changed."
+msgstr ""
+
+#: src/routes/oidc/register.js:134
+msgid "Permission"
+msgstr ""
+
+#: src/canvasesDesc.js:26
+msgid "PixelCanvas"
+msgstr ""
+
+#: src/ssr/Globe.jsx:32
+msgid "PixelPlanet.Fun 3DGlobe"
+msgstr ""
+
+#: src/canvasesDesc.js:25
+msgid "PixelZone"
+msgstr ""
+
+#: src/routes/oidc/register.js:125
+#, javascript-format
+msgid ""
+"Pixelplanet fulfills the OpenID Connect (OIDC) specifications. So an "
+"application that supports OIDC could ask for consent and login using "
+"pixelplanet accounts. The required endpoints can be auto-discovered via the "
+"${ wellKnownUrl } URL."
+msgstr ""
+
+#: src/canvasesDesc.js:35
+msgid "Place Voxels on a 3D canvas with others."
+msgstr ""
+
+#: src/ssr/mainHTML.js:110
+msgid "Place color pixels on an map styled canvas with other players online"
+msgstr ""
+
+#: src/routes/api/auth/register.js:83
+msgid "Please try again."
+msgstr ""
+
+#: src/core/ChatProvider.js:389
+msgid "Please use int channel"
+msgstr ""
+
+#: src/routes/oidc/register.js:166
+msgid "Read Badges and fishes"
+msgstr ""
+
+#: src/routes/oidc/register.js:151
+msgid "Read name, username and account age"
+msgstr ""
+
+#: src/routes/oidc/register.js:197
+#: src/routes/oidc/register.js:298
+msgid "Redirect URIs"
+msgstr ""
+
+#: src/routes/oidc/register.js:171
+msgid "Regularly update this data"
+msgstr ""
+
+#: src/routes/api/media.js:311
+msgid "Request stalled"
+msgstr ""
+
+#. 'client_secret' is a technical term and should not be translated
+#: src/routes/oidc/register.js:290
+msgid "Reroll client_secret"
+msgstr ""
+
+#: src/core/MailProvider.js:138
+#: src/routes/reset_password.js:110
+#: src/routes/reset_password.js:112
+msgid "Reset Password"
+msgstr ""
+
+#: src/routes/reset_password.js:25
+#: src/routes/reset_password.js:91
+#: src/routes/reset_password.js:110
+msgid "Reset your password here"
+msgstr ""
+
+#: src/routes/api/factionrolechange.js:140
+msgid "Role flag can only be an image"
+msgstr ""
+
+#: src/routes/api/factionrolechange.js:143
+msgid "Role flag needs to be 16x11"
+msgstr ""
+
+#: src/routes/api/auth/remove_tpid.js:25
+#: src/routes/api/factionbans.js:30
+#: src/routes/api/factioncreate.js:72
+#: src/routes/api/factioncreate.js:78
+#: src/routes/api/factiondelete.js:30
+#: src/routes/api/factioninvitecreate.js:34
+#: src/routes/api/factioninvitedelete.js:28
+#: src/routes/api/factioninvites.js:28
+#: src/routes/api/factioninviteuse.js:38
+#: src/routes/api/factioninviteuse.js:43
+#: src/routes/api/factionjoin.js:39
+#: src/routes/api/factionkickban.js:64
+#: src/routes/api/factionkickban.js:90
+#: src/routes/api/factionleave.js:30
+#: src/routes/api/factionmembers.js:34
+#: src/routes/api/factionrolecreate.js:79
+#: src/routes/api/factionroledelete.js:37
+#: src/routes/api/factionrolejoin.js:62
+#: src/routes/api/factionroleleave.js:38
+#: src/routes/api/media.js:178
+#: src/routes/api/media.js:307
+#: src/utils/validation.js:74
+msgid "Server Error"
+msgstr ""
+
+#: src/routes/api/auth/delete_account.js:23
+msgid "Server error while deleting user."
+msgstr ""
+
+#: src/core/MailProvider.js:108
+msgid "Someone logged into your account from a new location, with the IP:"
+msgstr ""
+
+#: src/routes/oidc/register.js:215
+msgid "Space-separated list of available scopes"
+msgstr ""
+
+#: src/routes/oidc/register.js:328
+msgid ""
+"Space-separated list of default scopes, they will be used on requests if no "
+"other scope is given."
+msgstr ""
+
+#. 'scope' is used as a technical term here, do not translate that word
+#: src/routes/oidc/register.js:227
+msgid ""
+"Space-separated list of default scopes, they will be used on requests where "
+"no other scope is given."
+msgstr ""
+
+#: src/routes/oidc/register.js:317
+msgid "Space-separated list of scopes that should be available"
+msgstr ""
+
+#: src/canvasesDesc.js:36
+msgid "Special canvas to spread awareness of SARS-CoV2 (take the vax)."
+msgstr ""
+
+#: src/core/ChatProvider.js:397
+msgid "Stop flooding."
+msgstr ""
+
+#: src/routes/reset_password.js:128
+msgid "Submit"
+msgstr ""
+
+#: src/core/MailProvider.js:74
+#: src/core/MailProvider.js:110
+#: src/core/MailProvider.js:140
+msgid "Thanks"
+msgstr ""
+
+#: src/utils/media/serverUtils.js:160
+#, javascript-format
+msgid "The file ${ filename } is banned ${ reason }. Ban ID: ${ mbid }"
+msgstr ""
+
+#: src/routes/api/badge.js:25
+msgid "The user owning this badge is private"
+msgstr ""
+
+#: src/routes/api/fish.js:25
+msgid "The user owning this fish is private"
+msgstr ""
+
+#: src/middleware/oidc.js:227
+#: src/middleware/oidc.js:250
+msgid "This application is not allowed to login"
+msgstr ""
+
+#: src/middleware/oidc.js:269
+msgid "This application redirects to an unallowed page"
+msgstr ""
+
+#: src/middleware/oidc.js:264
+msgid "This application sent a faulty login request with no redirection"
+msgstr ""
+
+#: src/middleware/oidc.js:237
+msgid "This application uses a PKCE method we do not support"
+msgstr ""
+
+#: src/middleware/oidc.js:223
+msgid "This application uses a login method we do not support"
+msgstr ""
+
+#: src/routes/api/auth/local.js:28
+msgid ""
+"This email / password combination got hacked and leaked. To protect this "
+"account, the password has been reset. Please use the \"Forgot my password\" "
+"function below to set a new password. In the future, consider not "
+"installing malware, Thank You."
+msgstr ""
+
+#: src/utils/validation.js:70
+msgid ""
+"This email / password combination got hacked and leaked. To protect this "
+"account, the password has been reset. Please use the \"Forgot my password\" "
+"function on the LogIn page to set a new password. In the future, consider "
+"not installing malware, Thank You."
+msgstr ""
+
+#: src/routes/api/auth/change_mail.js:23
+#: src/routes/api/auth/register.js:102
+msgid "This email provider is not allowed"
+msgstr ""
+
+#: src/routes/api/factionbans.js:22
+#: src/routes/api/factioninfo.js:25
+#: src/routes/api/factioninvites.js:20
+#: src/routes/api/factionjoin.js:25
+#: src/routes/api/factionjoin.js:42
+#: src/routes/api/factionkickban.js:59
+#: src/routes/api/factionkickban.js:67
+#: src/routes/api/factionleave.js:25
+#: src/routes/api/factionleave.js:33
+#: src/routes/api/factionmembers.js:25
+#: src/routes/api/factionunban.js:31
+msgid "This faction does not exist"
+msgstr ""
+
+#: src/routes/api/factioninviteuse.js:34
+#: src/routes/api/factionjoin.js:35
+msgid "This faction is full"
+msgstr ""
+
+#: src/routes/api/factioninfo.js:29
+#: src/routes/api/factionmembers.js:28
+msgid "This faction is private"
+msgstr ""
+
+#: src/utils/media/serverUtils.js:162
+#, javascript-format
+msgid "This media is banned ${ reason }. Ban ID: ${ mbid }"
+msgstr ""
+
+#: src/routes/reset_password.js:48
+msgid "This password-reset link isn't valid anymore :("
+msgstr ""
+
+#: src/utils/validation.js:67
+msgid "This user has not password set"
+msgstr ""
+
+#: src/routes/api/userinfo.js:26
+msgid "This user is private"
+msgstr ""
+
+#: src/utils/validation.js:79
+msgid "Title can't be empty."
+msgstr ""
+
+#: src/utils/validation.js:90
+msgid "Title contains invalid character like @, /, \\ or #"
+msgstr ""
+
+#: src/utils/validation.js:80
+msgid "Title must be at least 2 characters long"
+msgstr ""
+
+#: src/utils/validation.js:81
+msgid "Title must be shorter than 26 characters"
+msgstr ""
+
+#. "redirect_uris" is a technical term and should not be translated
+#: src/routes/oidc/register.js:67
+msgid "Too many or too long redirect_uris"
+msgstr ""
+
+#: src/canvasesDesc.js:28
+msgid "Top10"
+msgstr ""
+
+#: src/routes/api/auth/register.js:75
+msgid "Unknown Captcha Error"
+msgstr ""
+
+#: src/routes/api/media.js:355
+#: src/routes/api/media.js:397
+#, javascript-format
+msgid "Unknown field ${ name } in request"
+msgstr ""
+
+#: src/routes/oidc/register.js:332
+msgid "Update Application"
+msgstr ""
+
+#: src/routes/oidc/register.js:146
+msgid "User ID and verification level"
+msgstr ""
+
+#: src/routes/reset_password.js:68
+msgid "User doesn't exist in our database :("
+msgstr ""
+
+#: src/routes/api/auth/register.js:92
+#: src/routes/api/userchange.js:78
+msgid "Username already in use."
+msgstr ""
+
+#: src/routes/api/userchange.js:66
+msgid "Username can not start with pp_"
+msgstr ""
+
+#: src/utils/validation.js:57
+msgid "Username can only contain the characters: a-z . _ and -"
+msgstr ""
+
+#: src/utils/validation.js:49
+msgid "Username can't be empty."
+msgstr ""
+
+#: src/utils/validation.js:51
+msgid "Username must be at least 2 characters long"
+msgstr ""
+
+#: src/utils/validation.js:54
+msgid "Username must be shorter than 26 characters"
+msgstr ""
+
+#: src/core/MailProvider.js:155
+msgid ""
+"We already sent you a mail with instructions. Please wait before requesting "
+"another mail."
+msgstr ""
+
+#: src/core/MailProvider.js:91
+#, javascript-format
+msgid ""
+"We already sent you a verification mail, you can request another one in ${ "
+"minLeft } minutes."
+msgstr ""
+
+#: src/routes/api/media.js:99
+#: src/routes/api/media.js:297
+msgid "We currently do not allow file uploads"
+msgstr ""
+
+#: src/core/MailProvider.js:70
+#, javascript-format
+msgid "Welcome ${ name } to PixelPlanet, please verify your mail"
+msgstr ""
+
+#: src/routes/api/userchange.js:64
+msgid "You already chose your username"
+msgstr ""
+
+#: src/routes/api/userchange.js:90
+msgid "You already have that name."
+msgstr ""
+
+#: src/routes/api/factioninviteuse.js:32
+#: src/routes/api/factionjoin.js:33
+msgid "You are already part of this faction"
+msgstr ""
+
+#: src/routes/api/auth/resend_verify.js:14
+msgid "You are already verified."
+msgstr ""
+
+#: src/routes/api/factioninviteuse.js:30
+#: src/routes/api/factionjoin.js:31
+msgid "You are banned from this faction"
+msgstr ""
+
+#: src/core/ChatProvider.js:367
+#, javascript-format
+msgid "You are muted for another ${ timeMin } minutes"
+msgstr ""
+
+#: src/core/ChatProvider.js:369
+#, javascript-format
+msgid "You are muted for another ${ ttl } seconds"
+msgstr ""
+
+#: src/routes/api/modtools.js:77
+msgid "You are not allowed to access this page"
+msgstr ""
+
+#: src/routes/api/baninfo.js:15
+msgid "You are not banned"
+msgstr ""
+
+#: src/middleware/session.js:302
+#: src/routes/api/modtools.js:67
+msgid "You are not logged in"
+msgstr ""
+
+#: src/routes/api/auth/verify.js:23
+msgid "You are now verified :)"
+msgstr ""
+
+#: src/core/ChatProvider.js:362
+msgid "You are permanently muted, join our guilded to appeal the mute"
+msgstr ""
+
+#: src/core/ChatProvider.js:333
+#, javascript-format
+msgid "You are sending messages too fast, you have to wait ${ waitTime }s :("
+msgstr ""
+
+#: src/core/ChatProvider.js:422
+msgid "You attached too many files"
+msgstr ""
+
+#: src/routes/api/auth/remove_tpid.js:22
+msgid "You can not delete this login method, because you have nothing else left."
+msgstr ""
+
+#: src/routes/api/auth/register.js:111
+msgid "You can not register an account while you are banned"
+msgstr ""
+
+#: src/routes/api/auth/register.js:108
+msgid "You can not register an account with a proxy"
+msgstr ""
+
+#: src/core/ChatProvider.js:354
+msgid "You can not send chat messages while using a proxy"
+msgstr ""
+
+#: src/routes/api/factioncreate.js:60
+#, javascript-format
+msgid "You can only be owner of ${ MAX_OWNED_FACTIONS_PER_USER } factions in total"
+msgstr ""
+
+#: src/routes/api/factioncreate.js:55
+#: src/routes/api/factioninviteuse.js:27
+#: src/routes/api/factionjoin.js:28
+#, javascript-format
+msgid "You can only have ${ MAX_FACTIONS_PER_USER } factions in total"
+msgstr ""
+
+#: src/routes/oidc/register.js:126
+msgid ""
+"You can register your own application here to get the client_id and "
+"client_secret needed to make use of this."
+msgstr ""
+
+#: src/core/ChatProvider.js:420
+msgid "You can't send a message this long :("
+msgstr ""
+
+#: src/routes/api/media.js:86
+msgid "You did not provide all necessary information"
+msgstr ""
+
+#: src/routes/api/auth/resend_verify.js:21
+msgid ""
+"You do not have any email adress set. Please add one under \"Login "
+"Methods\"."
+msgstr ""
+
+#: src/core/ChatProvider.js:337
+msgid "You don't have access to this channel"
+msgstr ""
+
+#: src/routes/api/auth/register.js:63
+msgid "You failed your captcha"
+msgstr ""
+
+#: src/core/MailProvider.js:136
+msgid "You forgot your password for PixelPlanet? Get a new one here"
+msgstr ""
+
+#: src/routes/oidc/register.js:62
+msgid "You have to fill out all fields"
+msgstr ""
+
+#: src/routes/oidc/register.js:33
+msgid "You must be logged in to access this page"
+msgstr ""
+
+#: src/routes/api/factioninviteuse.js:36
+#: src/routes/api/factionjoin.js:37
+msgid "You need an invite to join this faction"
+msgstr ""
+
+#. "scope" is a technical term and should not be translated
+#: src/routes/oidc/register.js:93
+msgid "You need to define a valid scope"
+msgstr ""
+
+#: src/routes/reset_password.js:29
+msgid "You need to directly access this page in the browser :("
+msgstr ""
+
+#: src/routes/api/media.js:106
+#: src/routes/api/media.js:301
+#, javascript-format
+msgid "You reached your maximum upload quota of ${ MAX_USER_MEDIA_SIZE_MB } MB"
+msgstr ""
+
+#: src/core/MailProvider.js:138
+msgid ""
+"You requested to get a new password. You can change your password within "
+"the next 30min here: "
+msgstr ""
+
+#: src/routes/reset_password.js:38
+msgid "You sent an empty password or invalid data :("
+msgstr ""
+
+#: src/routes/api/auth/register.js:60
+msgid "You took too long, try again"
+msgstr ""
+
+#: src/ssr/redirectionModal.js:16
+msgid "You will be automatically redirected after 15s"
+msgstr ""
+
+#: src/routes/api/auth/register.js:72
+msgid "Your Browser looks shady"
+msgstr ""
+
+#: src/routes/api/factioncreate.js:65
+msgid "Your account must be at least two weeks old before you can create a faction"
+msgstr ""
+
+#: src/routes/oidc/register.js:38
+msgid "Your account needs to be verified to access this page"
+msgstr ""
+
+#: src/core/ChatProvider.js:342
+msgid "Your country is temporary muted from this chat channel"
+msgstr ""
+
+#: src/routes/api/auth/register.js:69
+msgid "Your device looks weird"
+msgstr ""
+
+#: src/core/ChatProvider.js:380
+msgid "Your mail has to be verified in order to chat"
+msgstr ""
+
+#: src/routes/api/auth/verify.js:33
+msgid ""
+"Your mail verification code is invalid or already expired :(, please "
+"request a new one."
+msgstr ""
+
+#: src/routes/reset_password.js:57
+msgid "Your passwords do not match :("
+msgstr ""
+
+#. This media is banned xyz
+#: src/utils/media/serverUtils.js:150
+msgid "because it is propaganda"
+msgstr ""
+
+#. This media is banned xyz
+#: src/utils/media/serverUtils.js:142
+msgid "for being an attempt to scam people"
+msgstr ""
+
+#. This media is banned xyz
+#: src/utils/media/serverUtils.js:138
+msgid "for being degenerate"
+msgstr ""
+
+#. This media is banned xyz
+#: src/utils/media/serverUtils.js:134
+msgid "for containing CSAM"
+msgstr ""
+
+#. This media is banned xyz
+#: src/utils/media/serverUtils.js:130
+msgid "for containing graphic violence"
+msgstr ""
+
+#. This media is banned xyz
+#: src/utils/media/serverUtils.js:154
+msgid "for containing personal information"
+msgstr ""
+
+#. This media is banned xyz
+#: src/utils/media/serverUtils.js:146
+msgid "for glorifying terrorism"
+msgstr ""
+
+#. "redirect_uris" is a technical term and should not be translated
+#: src/routes/oidc/register.js:83
+msgid "redirect_uris does not look legit"
+msgstr ""
+
+#: src/ssr/modalShell.js:30
+#: src/ssr/shell.js:26
+msgid "to go back to pixelplanet"
+msgstr ""
+
+#: src/core/MailProvider.js:72
+msgid ""
+"welcome to our little community of pixelplacers, to use your account, you "
+"have to verify your mail. You can do that here: "
+msgstr ""

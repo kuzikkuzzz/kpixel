@@ -1,17 +1,19 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: admin@pixelplanet.fun\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: \n"
-"Last-Translator: weblate <weblate@noreply.pixelplanet.fun>\n"
-"Language-Team: \n"
+"PO-Revision-Date: 2026-05-25 09:55+0000\n"
+"Last-Translator: оmar <omar@noreply.pixelplanet.fun>\n"
+"Language-Team: Arabic <https://translate.gs-os.com/projects/ppfun/server/ar/>"
+"\n"
 "Language: ar\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
-"&& n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5);\n"
-"X-Generator: Poedit 3.6\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 "
+"&& n%100<=10 ? 3 : n%100>=11 ? 4 : 5;\n"
+"X-Generator: Weblate 2026.5\n"
 
 msgid "1bit"
 msgstr "1 بت"
@@ -33,99 +35,100 @@ msgstr ""
 "الساعة 00:00 بالتوقيت العالمي المنسق."
 
 msgid "A file was too large"
-msgstr ""
+msgstr "الملف كان كبير"
 
 msgid "Access modtools"
-msgstr ""
+msgstr "الوصول لادوات الادمن"
 
 msgid "Add Application"
-msgstr ""
+msgstr "اضف تطبيق"
 
 msgid "Add an Application (OIDC Client)"
-msgstr ""
+msgstr "اضف تطبيق (خادم OIDC)"
 
 msgid "Add new application"
-msgstr ""
+msgstr "اضف تطبيق جديد"
 
 msgid "An error occured. Please try again later."
-msgstr ""
+msgstr "حدث خطأ. الرجاء المحاولة لاحقًا."
 
 msgid "Application changed successfully"
-msgstr ""
+msgstr "تم تغير التطبيق بنجاح"
 
 msgid "Application deleted"
-msgstr ""
+msgstr "تم حذف التطبيق"
 
 msgid "Application successfully added"
-msgstr ""
+msgstr "تم اضافة التطبيق بنجاح"
 
 msgid "Avatar can only be an image"
-msgstr ""
+msgstr "الصورة الشخصية يمكن ان تكون فقط ملف صورة"
 
 msgid "Avatar not given or not an image"
-msgstr ""
+msgstr "الصورة الشخصية لم تُعطى او ليست ملف صورة"
 
 msgid "Black and White canvas"
 msgstr "لوحة أبيض وأسود"
 
 msgid "Can not change a role above your own"
-msgstr ""
+msgstr "لا يمكن تغيير رتبة أعلى من خاصتك"
 
 msgid "Can not change a role that is equal to your own"
-msgstr ""
+msgstr "لا يمكن تغيير رتبة تساوي رتبتك"
 
 msgid "Can not change the default setting of this role"
-msgstr ""
+msgstr "لا يمكن تغيير الاعدادات الافتراضية لهذه الرتبة"
 
 msgid "Can not change the powerlevel of a role equal or above you"
-msgstr ""
+msgstr "لا يمكن تغيير قدرة الرتبة لرتبة تساوي رتبتك او اعلى منك"
 
 msgid "Can not change the powerlevel of the Sovereign"
-msgstr ""
+msgstr "لا يمكن تغيير قدرة الرتبة للمالك"
 
 msgid "Can not chat while being banned"
-msgstr ""
+msgstr "لا يمكن التحدث و انت محظور"
 
 msgid "Can not create a role on the same level as yours"
-msgstr ""
+msgstr "لا يمكن إنشاء رتبة بنفس مستوى رتبتك"
 
 msgid "Can not create a role with a powerlevel beyond yours"
-msgstr ""
+msgstr "لا يمكن إنشاء رتبة مع قدرة رتبة اعلى من خاصتك"
 
 msgid "Can not delete a role on the same level as yours"
-msgstr ""
+msgstr "لا يمكن حذف رتبة بنفس المستوى مع خاصتك"
 
 msgid "Can not delete this role"
-msgstr ""
+msgstr "لا يمكن حذف هذه الرتبة"
 
 msgid "Can not elevate the powerlevel of a role beyond yours"
-msgstr ""
+msgstr "لا يمكن رفع قدرة الرتبة لرتبة اعلى من خاصتك"
 
 msgid "Can not elevate the powerlevel of a role to yours"
-msgstr ""
+msgstr "لا يمكن رفع قدرة الرتبة لرتبة خاصتك"
 
 #, javascript-format
 msgid "Can not have more than ${ MAX_ROLES_PER_FACTION } faction roles"
-msgstr ""
+msgstr "لا يمكن الحصول على اكثر من${ MAX_ROLES_PER_FACTION }رتب تحالف"
 
 msgid "Can not have more than 20 invites per faction"
-msgstr ""
+msgstr "لا يمكن الحصول على اكثر من 20 دعوة لكل تحالف"
 
 msgid "Can not modify user equal to you or above you"
-msgstr ""
+msgstr "لا يمكن تعديل مستخدم مُساوي لك او اعلى منك"
 
 #. when leaving a faction and you are the last owner
 msgid "Can not orphan a faction"
-msgstr ""
+msgstr "لا يمكن ان يصبح التحالف يتيم"
 
 #, javascript-format
 msgid ""
 "Can not upload this many files at once, only 5 are allowed, you have $"
 "{ amountOfFiles }"
 msgstr ""
+"لا يمكن رفع كل هذه الملفات مرة واحدة، فقط 5 متاحة، انت لديك${ amountOfFiles }"
 
 msgid "Can only have one Sovereign role"
-msgstr ""
+msgstr "يمكن الحصول على رتبة ملك واحدة فقط"
 
 msgid "Click here"
 msgstr "اضغط هنا"
@@ -134,7 +137,7 @@ msgid "Click to Verify"
 msgstr "اضغط هنا للتوثيق"
 
 msgid "Client Name"
-msgstr ""
+msgstr "اسم الخادم"
 
 msgid "Confirm New Password"
 msgstr "تأكيد كلمة المرور الجديدة"
@@ -145,55 +148,55 @@ msgid ""
 msgstr "غزو ​​أرضًا أصغر حجمًا ذات محيط محمي. تشارك فترة التهدئة مع لوحة الأرض!"
 
 msgid "Consent"
-msgstr ""
+msgstr "القبول"
 
 msgid "Coronavirus"
 msgstr "كورونا"
 
 msgid "Could not change the flag of this role"
-msgstr ""
+msgstr "لم يتمكن تغيير العلم الخاص بهذه الرتبة"
 
 msgid "Could not change this setting. Maybe try again later."
-msgstr ""
+msgstr "لم يتمكن من تغيير هذه الاعدادات، حاول مره اخرى لاحقا"
 
 msgid "Could not close this Session."
-msgstr ""
+msgstr "لم يتمكن من اغلاق هذه الجلسة"
 
 msgid "Could not find this login method"
-msgstr ""
+msgstr "لم يتمكن من ايجاد هذه الطريقة لتسجيل الدخول"
 
 msgid "Could not leave this channel"
-msgstr ""
+msgstr "لم يتمكن الخروج من هذه القناة"
 
 msgid "Could not set this factions avatar"
-msgstr ""
+msgstr "لم يتمكن من وضع هذه الصورة للصورة الشخصية الخاصة بالتحالف"
 
 msgid "Could not set your avatar"
-msgstr ""
+msgstr "لم يتمكن من وضع الصورة الشخصية"
 
 msgid "Could not set your faction role"
-msgstr ""
+msgstr "لم يتمكن من وضع رتبة التحالف خاصتك"
 
 msgid "Could not upload all files"
-msgstr ""
+msgstr "لم يتمكن من رفع الملفات"
 
 msgid "Couldn't find this mail in our database"
 msgstr "لم نتمكن من العثور على هذا البريد في قاعدة البيانات الخاصة بنا"
 
 msgid "Default"
-msgstr ""
+msgstr "الافتراضي"
 
 msgid "Delete Application"
-msgstr ""
+msgstr "حذف التطبيق"
 
 msgid "Description can't be empty"
-msgstr ""
+msgstr "لا يمكن للوصف ان يكون فارغ"
 
 msgid "Description must be shorter than 1000 characters"
-msgstr ""
+msgstr "على الوصف ان يكون اقصر من 1000 حرف"
 
 msgid "Display name for your OIDC client"
-msgstr ""
+msgstr "إظهار اسم الخادم OIDC خاصتك"
 
 msgid "Double click on globe to go back."
 msgstr "انقر نقرًا مزدوجًا فوق الكرة الأرضية للرجوع."
@@ -205,7 +208,7 @@ msgid "Earth"
 msgstr "الارض"
 
 msgid "Edit existing applications"
-msgstr ""
+msgstr "تعديل تطبيق موجود"
 
 msgid "Email can't be empty."
 msgstr "لا يمكن أن يكون البريد الإلكتروني فارغًا."
@@ -223,34 +226,36 @@ msgid "Email should contain a @"
 msgstr "يجب أن يحتوي البريد الإلكتروني على @"
 
 msgid "Error"
-msgstr ""
+msgstr "خطأ"
 
 msgid "Failed to create a new user :("
-msgstr ""
+msgstr "فشل إنشاء مستخدم جديد :("
 
 #, javascript-format
 msgid ""
 "File ${ filename } has ${ sizeMB } MB and is too large. It may only be $"
 "{ MAX_FILE_SIZE_MB } MB"
 msgstr ""
+"الملف${ filename }يمتلك${ sizeMB }ميغابت و هو جداً كبير. يجب ان يكوف فقط الى$"
+"{ MAX_FILE_SIZE_MB }ميغابت"
 
 #, javascript-format
 msgid "File ${ filename } has an invalid extension"
-msgstr ""
+msgstr "الملف${ filename }يمتلك امتداد غير صالح"
 
 msgid "File is broken"
-msgstr ""
+msgstr "الملف تالف"
 
 #. 'client_secret' is a technical term and should not be translated
 msgid ""
 "Generate a new client_secret. The old secret will become invalid immediately."
-msgstr ""
+msgstr "توليد client_secret جديد. السري القديم سيصبح غير صالح على فور"
 
 msgid "Get email address"
-msgstr ""
+msgstr "الحصول على البريد الإلكتروني"
 
 msgid "Get the amount of Pixels placed and ranking"
-msgstr ""
+msgstr "الحصول على عدد البكسلات الموضوعة و التصنيف"
 
 msgid ""
 "Have fun and don't hesitate to contact us if you encounter any problems :)"
@@ -261,7 +266,7 @@ msgstr "مرحبا"
 
 #, javascript-format
 msgid "Hello ${ email }, you can set your new password here:"
-msgstr ""
+msgstr "مرحبا${ email }، يمكن وضع رمزك السري الجديد هنا:"
 
 #, javascript-format
 msgid "Hello ${ name }"
@@ -273,6 +278,10 @@ msgid ""
 "that you are unaware of under \"Login Methods\" in the User Area and change "
 "your password."
 msgstr ""
+"اذا هذا كنت انت، ارجو ان تتجاهل هذا البريد. ان لم يمكن انت، ارجو الذهاب "
+"الى<a href=\"https://pixelplanet.fun\">pixelplanet.fun</a> و تسجيل الخروج من "
+"جميع الجلسات لا تعرفها ضمن \"طرق تسجيل الدخول\" في منطقة المستخدم وقم بتغيير "
+"كلمة المرور الخاصة بك."
 
 #, javascript-format
 msgid ""
@@ -283,7 +292,7 @@ msgstr ""
 "{ ip })."
 
 msgid "Incorrect password"
-msgstr ""
+msgstr "الرمز السري غير صحيح"
 
 msgid "Invalid type of media"
 msgstr ""

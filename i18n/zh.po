@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: admin@pixelplanet.fun\n"
-"PO-Revision-Date: 2026-04-29 22:09+0000\n"
+"PO-Revision-Date: 2026-05-25 09:55+0000\n"
 "Last-Translator: Extreme Motorsex <em@noreply.pixelplanet.fun>\n"
 "Language-Team: Chinese (Simplified Han script) <https://translate.gs-os.com/"
 "projects/ppfun/client/zh_Hans/>\n"
@@ -9,7 +9,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.15.2\n"
+"X-Generator: Weblate 2026.5\n"
 
 msgid " which is in "
 msgstr " 包含在 "
@@ -80,7 +80,7 @@ msgstr "访问管理员工具"
 #, javascript-format
 msgid ""
 "Actions taken by moderators on the canvas can be seen in the ${ modlogLink }."
-msgstr ""
+msgstr "版主在画布上采取的操作可以在${ modlogLink }中查看。"
 
 msgid "Add Grid (uncheck if you need a 1:1 template)"
 msgstr "添加网格（若您需要1比1模板则取消选中）"
@@ -717,7 +717,7 @@ msgid "File"
 msgstr "文件"
 
 msgid "Filter"
-msgstr ""
+msgstr "筛选"
 
 msgid "Fish Display"
 msgstr "鱼类展示"
@@ -1027,10 +1027,10 @@ msgid "Minimum Color Distance"
 msgstr "最小颜色距离"
 
 msgid "Moderation Log"
-msgstr ""
+msgstr "审核日志"
 
 msgid "Moderation Logs"
-msgstr ""
+msgstr "审核日志"
 
 msgid "Moderators can access all Canvas, Watch and IID tools."
 msgstr "版主可以访问所有 Canvas、Watch 和 IID 工具。"
@@ -1157,7 +1157,7 @@ msgid "Opacity of Overlay in percent."
 msgstr "叠加层的不透明度百分比。"
 
 msgid "Open"
-msgstr ""
+msgstr "打开"
 
 msgid "Open Chat"
 msgstr "开放聊天"
@@ -1188,13 +1188,13 @@ msgid "Overlay OFF"
 msgstr "叠加层关闭"
 
 msgid "Overlay ON"
-msgstr ""
+msgstr "叠加层开启"
 
 msgid "Overlay Opacity"
 msgstr "叠加不透明度"
 
 msgid "Overview"
-msgstr ""
+msgstr "概述"
 
 msgid "Palette Download"
 msgstr "调色板下载"
@@ -1253,7 +1253,7 @@ msgid "Pixel protected"
 msgstr "像素保护"
 
 msgid "Pixels"
-msgstr ""
+msgstr "像素"
 
 msgid "Place color pixels on a large canvas with other players online!"
 msgstr "在线与其他玩家一起，在大画布上放置彩色像素！"
@@ -1285,10 +1285,10 @@ msgid "Potato Mode"
 msgstr "土豆模式"
 
 msgid "Powerlevel"
-msgstr ""
+msgstr "能量等级"
 
 msgid "Powerlevel of this role. See table below for an explanation."
-msgstr ""
+msgstr "该角色的权力等级。详情请参见下表。"
 
 #, javascript-format
 msgid ""
@@ -1337,7 +1337,7 @@ msgid "Range Banned"
 msgstr "禁射"
 
 msgid "Rank"
-msgstr ""
+msgstr "秩"
 
 msgid "Ranked"
 msgstr "排名"
@@ -1376,7 +1376,7 @@ msgid "Remove"
 msgstr "消除"
 
 msgid "Remove Chatmod"
-msgstr ""
+msgstr "移除聊天版主"
 
 msgid "Remove Cleaner"
 msgstr "去除清洁剂"
@@ -1388,14 +1388,14 @@ msgid "Remove Moderator"
 msgstr "移除版主"
 
 msgid "Remove Roles"
-msgstr ""
+msgstr "移除角色"
 
 msgid "Remove a Login method:"
 msgstr "移除登录方式："
 
 #, javascript-format
 msgid "Represents ${ activeFactionTitle } as ${ activeFactionRoleName }"
-msgstr ""
+msgstr "将${ activeFactionTitle }表示为${ activeFactionRoleName }"
 
 msgid "Require Verification to Place"
 msgstr "需要验证才能放置"
@@ -1428,13 +1428,13 @@ msgid "Revoke consent of third party applications:"
 msgstr "撤销对第三方应用程序的同意："
 
 msgid "Role"
-msgstr ""
+msgstr "角色"
 
 msgid "Role Flags"
-msgstr ""
+msgstr "角色标志"
 
 msgid "Roles"
-msgstr ""
+msgstr "角色"
 
 msgid "Roll different Captcha Fonts"
 msgstr "轮换不同的验证码字体"
@@ -1456,19 +1456,19 @@ msgid "Scroll ${ mouseSymbol } mouse wheel or ${ touchSymbol } pinch to zoom"
 msgstr "滚动鼠标滚轮 ${mouseSymbol} 或捏合手势 ${touchSymbol} 进行缩放"
 
 msgid "Search"
-msgstr ""
+msgstr "搜索"
 
 msgid "Search Existing Faction"
-msgstr ""
+msgstr "搜索现有派系"
 
 msgid "Search Term"
-msgstr ""
+msgstr "搜索词"
 
 msgid "See hidden users in member list"
-msgstr ""
+msgstr "查看成员列表中的隐藏用户"
 
 msgid "Select Avatar of this Faction. Supported Formats: jpg, gif, png, webp"
-msgstr ""
+msgstr "选择此阵营的头像。支持的格式：jpg、gif、png、webp"
 
 msgid "Select Date above"
 msgstr "请在上方选择日期"
@@ -1477,13 +1477,13 @@ msgid "Select File"
 msgstr "选择文件"
 
 msgid "Select Flag"
-msgstr ""
+msgstr "选择标志"
 
 msgid "Select Language"
 msgstr "选择语言"
 
 msgid "Select a valid powerlevel"
-msgstr ""
+msgstr "选择有效的功率级别"
 
 msgid "Select a valid pwerlevel"
 msgstr ""
@@ -1520,7 +1520,7 @@ msgid "Serpentine"
 msgstr "蛇形"
 
 msgid "Server Error"
-msgstr ""
+msgstr "服务器错误"
 
 msgid "Server answered with gibberish :("
 msgstr "服务器回复的是乱码 :("
@@ -2044,7 +2044,7 @@ msgid "Your ban expires at "
 msgstr ""
 
 msgid "Your device looks weird"
-msgstr ""
+msgstr "你的设备看起来很奇怪"
 
 msgid ""
 "Your did not set your username yet. A username is required to login to other "
@@ -2063,7 +2063,7 @@ msgid ""
 msgstr ""
 
 msgid "a hidden faction"
-msgstr ""
+msgstr "隐藏派系"
 
 msgid "affects"
 msgstr ""
