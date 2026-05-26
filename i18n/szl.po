@@ -1,16 +1,20 @@
 msgid ""
 msgstr ""
-"Last-Translator: Automatically generated\n"
-"Language-Team: none\n"
+"Report-Msgid-Bugs-To: admin@pixelplanet.fun\n"
+"PO-Revision-Date: 2026-05-26 10:30+0000\n"
+"Last-Translator: kyvvra <silesianreal@noreply.pixelplanet.fun>\n"
+"Language-Team: Silesian <https://translate.gs-os.com/projects/ppfun/client/"
+"szl/>\n"
 "Language: szl\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 2026.5\n"
 
 #: src/components/BanInfo.jsx:118
 msgid " which is in "
-msgstr ""
+msgstr " kery je w "
 
 #: src/components/windows/Help.jsx:136
 #, javascript-format
@@ -100,11 +104,11 @@ msgstr ""
 
 #: src/components/windows/Templates.jsx:142
 msgid "Add Template"
-msgstr ""
+msgstr "Dodej muster"
 
 #: src/components/ChangeMail.jsx:234
 msgid "Add a new E-Mail Address here:"
-msgstr ""
+msgstr "Dodej nowy adres e-mail tu:"
 
 #. This if for moderation tools, it's not important to translate this
 #: src/components/menus/mainMenu.js:157
@@ -515,7 +519,7 @@ msgstr ""
 
 #: src/components/ChangePassword.jsx:112
 msgid "Confirm New Password"
-msgstr ""
+msgstr "Potwiyrdź Nowe Hasło"
 
 #: src/components/ChangePassword.jsx:112
 #: src/components/LogInForm.jsx:369
@@ -534,7 +538,7 @@ msgstr ""
 
 #: src/components/windows/OIDCConsent.jsx:227
 msgid "Consent"
-msgstr ""
+msgstr "Zgoda"
 
 #: src/components/windows/Help.jsx:115
 #: src/components/windows/Help.jsx:131
@@ -771,11 +775,11 @@ msgstr ""
 
 #: src/utils/validation.js:111
 msgid "Description can't be empty"
-msgstr ""
+msgstr "Ôpis niy może być prōzny"
 
 #: src/utils/validation.js:114
 msgid "Description must be shorter than 1000 characters"
-msgstr ""
+msgstr "Ôpis musi być krōtszy ôd 1000 znakōw"
 
 #: src/components/windows/Faction.jsx:1556
 #: src/components/windows/MyFactions.jsx:229
@@ -895,11 +899,11 @@ msgstr ""
 
 #: src/utils/validation.js:19
 msgid "Email can't be empty."
-msgstr ""
+msgstr "E-mail niy może być prōżny."
 
 #: src/utils/validation.js:21
 msgid "Email can't be longer than 40 characters."
-msgstr ""
+msgstr "E-mail niy może być dugszy jak 40 znakōw."
 
 #: src/components/LogInForm.jsx:355
 msgid ""
@@ -909,15 +913,15 @@ msgstr ""
 
 #: src/utils/validation.js:22
 msgid "Email should at least contain a dot"
-msgstr ""
+msgstr "E-mail winno zawiyrać co nojmniyj kropka"
 
 #: src/utils/validation.js:20
 msgid "Email should be at least 5 characters long."
-msgstr ""
+msgstr "E-mail winno być nojmniyj 5 znakōw dugości."
 
 #: src/utils/validation.js:25
 msgid "Email should contain a @"
-msgstr ""
+msgstr "E-mail winno zawiyrać @"
 
 #: src/components/windows/Templates.jsx:63
 msgid "Enable Overlay"
@@ -982,7 +986,7 @@ msgstr ""
 #: src/components/windows/User.jsx:91
 #: src/components/windows/User.jsx:222
 msgid "Error"
-msgstr ""
+msgstr "Błōnd"
 
 #: src/ui/PixelTransferController.js:182
 #, javascript-format
@@ -1116,11 +1120,11 @@ msgstr ""
 
 #: src/components/windows/OIDCConsent.jsx:60
 msgid "Get email address"
-msgstr ""
+msgstr "Zyskej e-mail"
 
 #: src/components/windows/OIDCConsent.jsx:62
 msgid "Get the amount of Pixels placed and ranking"
-msgstr ""
+msgstr "Zyskej wielość umiyszczōnych Pikselōw i ranking"
 
 #: src/components/menus/mainMenu.js:72
 msgid "Globe View"
@@ -1247,7 +1251,7 @@ msgstr ""
 
 #: src/utils/validation.js:72
 msgid "Incorrect password"
-msgstr ""
+msgstr "Niyprawidłowe hasło"
 
 #: src/components/Watchtools.jsx:147
 msgid "Interval"
@@ -1334,7 +1338,7 @@ msgstr ""
 
 #: src/components/windows/OIDCConsent.jsx:72
 msgid "Know that an account exists"
-msgstr ""
+msgstr "Wiedz, jak kōnto istnieje"
 
 #: src/components/windows/MyFactions.jsx:438
 msgid "Leave"
@@ -1384,7 +1388,7 @@ msgstr ""
 #: src/components/windows/MyFactions.jsx:179
 #: src/components/windows/User.jsx:93
 msgid "Loading..."
-msgstr ""
+msgstr "Ładowanie..."
 
 #: src/components/menus/mainMenu.js:129
 msgid "Log in or Register"
@@ -1511,21 +1515,21 @@ msgstr ""
 
 #: src/utils/validation.js:104
 msgid "Name can only contain the characters: a-z . _ and -"
-msgstr ""
+msgstr "Miano może zawiyrać ino znaki: a-z . _ i -"
 
 #: src/utils/validation.js:32
 #: src/utils/validation.js:96
 msgid "Name can't be empty."
-msgstr ""
+msgstr "Miano niy może być prōżne."
 
 #: src/utils/validation.js:43
 msgid "Name contains invalid character like @, /, \\ or #"
-msgstr ""
+msgstr "Miano ma niyważny znak, taki jak @, /, \\ abo #"
 
 #: src/utils/validation.js:33
 #: src/utils/validation.js:98
 msgid "Name must be at least 2 characters long"
-msgstr ""
+msgstr "Miano winno zawiyrać co nojmynij 2 znakōw"
 
 #: src/utils/validation.js:34
 #: src/utils/validation.js:101
