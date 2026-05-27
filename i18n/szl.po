@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: admin@pixelplanet.fun\n"
-"PO-Revision-Date: 2026-05-26 10:30+0000\n"
+"PO-Revision-Date: 2026-05-27 11:30+0000\n"
 "Last-Translator: kyvvra <silesianreal@noreply.pixelplanet.fun>\n"
 "Language-Team: Silesian <https://translate.gs-os.com/projects/ppfun/client/"
 "szl/>\n"
@@ -196,11 +196,11 @@ msgstr ""
 
 #: src/components/windows/index.js:45
 msgid "Badge Display"
-msgstr ""
+msgstr "Wyświytlanie ôsiōngniyńć"
 
 #: src/components/BadgeList.jsx:21
 msgid "Badges"
-msgstr ""
+msgstr "Ôsiōngniyńcio"
 
 #: src/components/windows/Faction.jsx:1073
 msgid "Ban"
@@ -917,7 +917,7 @@ msgstr "E-mail winno zawiyrać co nojmniyj kropka"
 
 #: src/utils/validation.js:20
 msgid "Email should be at least 5 characters long."
-msgstr "E-mail winno być nojmniyj 5 znakōw dugości."
+msgstr "E-mail winno mieć ôdugłość aby 5 znakōw."
 
 #: src/utils/validation.js:25
 msgid "Email should contain a @"
@@ -1124,7 +1124,7 @@ msgstr "Zyskej e-mail"
 
 #: src/components/windows/OIDCConsent.jsx:62
 msgid "Get the amount of Pixels placed and ranking"
-msgstr "Zyskej wielość umiyszczōnych Pikselōw i ranking"
+msgstr "Zyskej wielość umiyszczōnych pikselōw i ranking"
 
 #: src/components/menus/mainMenu.js:72
 msgid "Globe View"
@@ -1529,12 +1529,12 @@ msgstr "Miano ma niyważny znak, taki jak @, /, \\ abo #"
 #: src/utils/validation.js:33
 #: src/utils/validation.js:98
 msgid "Name must be at least 2 characters long"
-msgstr "Miano winno zawiyrać co nojmynij 2 znakōw"
+msgstr "Miano ma mieć ôdugłość aby 2 znakōw"
 
 #: src/utils/validation.js:34
 #: src/utils/validation.js:101
 msgid "Name must be shorter than 26 characters"
-msgstr ""
+msgstr "Miano ma być krōtsze ôd 26 znakōw"
 
 #: src/components/windows/Faction.jsx:1167
 msgid "Name of this role"
@@ -1558,7 +1558,7 @@ msgstr ""
 
 #: src/components/ChangePassword.jsx:104
 msgid "New Password"
-msgstr ""
+msgstr "Nowe hasło"
 
 #: src/components/ChangeUsername.jsx:67
 msgid "New Username"
@@ -1587,7 +1587,7 @@ msgstr ""
 
 #: src/utils/validation.js:129
 msgid "No password given."
-msgstr ""
+msgstr "Niy podano hasła."
 
 #: src/components/windows/Search.jsx:105
 msgid "No results."
@@ -1730,15 +1730,15 @@ msgstr ""
 
 #: src/utils/validation.js:132
 msgid "Password must be at least 6 characters long."
-msgstr ""
+msgstr "Hasło ma mieć ôdugłość aby 6 znakōw."
 
 #: src/utils/validation.js:135
 msgid "Password must be shorter than 60 characters."
-msgstr ""
+msgstr "Hasło ma być krōtsze ôd 60 znakōw."
 
 #: src/components/ChangePassword.jsx:45
 msgid "Password successfully changed."
-msgstr ""
+msgstr "Hasło zmiyniōno z powodzyniem."
 
 #: src/components/ChangePassword.jsx:22
 msgid "Passwords do not match."
@@ -1756,7 +1756,7 @@ msgstr ""
 #: src/components/windows/Faction.jsx:1424
 #: src/components/windows/OIDCConsent.jsx:228
 msgid "Permission"
-msgstr ""
+msgstr "Pozwolyni"
 
 #: src/components/windows/Faction.jsx:1419
 msgid "Permissions of Powerlevels"
@@ -1922,11 +1922,11 @@ msgstr ""
 
 #: src/components/windows/OIDCConsent.jsx:64
 msgid "Read Badges and fishes"
-msgstr ""
+msgstr "Pokoż ôsiongniyńcio i ryby"
 
 #: src/components/windows/OIDCConsent.jsx:58
 msgid "Read name, username and account age"
-msgstr ""
+msgstr "Pokoż pseudōnim, miano ôd używocza i czas tworzynio kōnta"
 
 #: src/components/BanInfo.jsx:104
 #: src/components/IIDTools.jsx:153
@@ -1952,7 +1952,7 @@ msgstr ""
 
 #: src/components/windows/OIDCConsent.jsx:68
 msgid "Regularly update this data"
-msgstr ""
+msgstr "Regularnie rychtuj te dane"
 
 #: src/components/Captcha.jsx:268
 msgid "Reload"
@@ -2173,7 +2173,7 @@ msgstr ""
 
 #: src/utils/validation.js:74
 msgid "Server Error"
-msgstr ""
+msgstr "Feler serwera"
 
 #: src/store/actions/fetch.js:323
 msgid "Server answered with gibberish :("
@@ -2305,7 +2305,7 @@ msgstr ""
 #: src/components/windows/Faction.jsx:1649
 #: src/components/windows/MyFactions.jsx:267
 msgid "Submit"
-msgstr ""
+msgstr "Złōż"
 
 #: src/components/windows/OIDCConsent.jsx:216
 msgid "Switch Account"
@@ -2376,6 +2376,10 @@ msgid ""
 "function on the LogIn page to set a new password. In the future, consider "
 "not installing malware, Thank You."
 msgstr ""
+"Tyn e-mail / kōmbinacyjo hasła ôstała zhakowano i wyciekła. Coby ôchrōnić to "
+"konto, hasło było resetowane. Prosza użyć pōniższyj funkcyje \"Zapōmniōł "
+"żech hasła\" na strōnce logowanio, coby nastawić nowe hasło. W prziszłości "
+"rozwożaj niy instalować złośliwego ôprogramowanio. Dziynki."
 
 #: src/components/windows/Faction.jsx:1717
 msgid "This faction has no invites"
@@ -2397,7 +2401,7 @@ msgstr ""
 
 #: src/utils/validation.js:67
 msgid "This user has not password set"
-msgstr ""
+msgstr "Tyn używocz niy nastawił hasła"
 
 #. Column title in tables
 #: src/components/Table.jsx:27
@@ -2429,19 +2433,19 @@ msgstr ""
 
 #: src/utils/validation.js:79
 msgid "Title can't be empty."
-msgstr ""
+msgstr "Tytuł niy może być prōżny."
 
 #: src/utils/validation.js:90
 msgid "Title contains invalid character like @, /, \\ or #"
-msgstr ""
+msgstr "Tytuł ma niyważny znak, taki jak @,/,\\ or #"
 
 #: src/utils/validation.js:80
 msgid "Title must be at least 2 characters long"
-msgstr ""
+msgstr "Tytuł ma mieć ôdugłość aby 2 znakōw"
 
 #: src/utils/validation.js:81
 msgid "Title must be shorter than 26 characters"
-msgstr ""
+msgstr "Tytuł musi być krōtszy ôd 26 znakōw"
 
 #: src/components/windows/Faction.jsx:1545
 #: src/components/windows/MyFactions.jsx:218
@@ -2550,7 +2554,7 @@ msgstr ""
 
 #: src/components/GlobalCaptcha.jsx:72
 msgid "Unknown Captcha Error"
-msgstr ""
+msgstr "Niyznōmy feler Captcha"
 
 #: src/store/actions/fetch.js:136
 #: src/store/actions/fetch.js:156
@@ -2562,7 +2566,7 @@ msgstr ""
 #: src/store/actions/fetch.js:294
 #: src/store/actions/fetch.js:313
 msgid "Unknown Error"
-msgstr ""
+msgstr "Niyznōmy feler"
 
 #: src/controls/keypress.js:199
 msgid "Unmuted Sound"
@@ -2596,7 +2600,7 @@ msgstr ""
 
 #: src/components/windows/OIDCConsent.jsx:70
 msgid "User ID and verification level"
-msgstr ""
+msgstr "ID używocza i poziōm weryfikacyjo"
 
 #: src/components/Admintools.jsx:374
 #: src/components/LogInForm.jsx:336
@@ -2611,7 +2615,7 @@ msgstr ""
 
 #: src/utils/validation.js:57
 msgid "Username can only contain the characters: a-z . _ and -"
-msgstr ""
+msgstr "Miano używocza może zawiyrać ino znaki: a-z . _ i -"
 
 #: src/components/ChangeUsername.jsx:61
 #: src/components/windows/OIDCConsent.jsx:302
@@ -2620,15 +2624,15 @@ msgstr ""
 
 #: src/utils/validation.js:49
 msgid "Username can't be empty."
-msgstr ""
+msgstr "Miano używocza niy może być prōżne."
 
 #: src/utils/validation.js:51
 msgid "Username must be at least 2 characters long"
-msgstr ""
+msgstr "Miano używocza ma mieć ôdugłość aby 2 znakōw"
 
 #: src/utils/validation.js:54
 msgid "Username must be shorter than 26 characters"
-msgstr ""
+msgstr "Miano używocza musi być krōtsze ôd 26 znakōw"
 
 #: src/components/windows/Search.jsx:25
 msgid "Users"

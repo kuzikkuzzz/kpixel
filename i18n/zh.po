@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: admin@pixelplanet.fun\n"
-"PO-Revision-Date: 2026-05-25 09:55+0000\n"
+"PO-Revision-Date: 2026-05-27 11:30+0000\n"
 "Last-Translator: Extreme Motorsex <em@noreply.pixelplanet.fun>\n"
 "Language-Team: Chinese (Simplified Han script) <https://translate.gs-os.com/"
 "projects/ppfun/client/zh_Hans/>\n"
@@ -1499,16 +1499,16 @@ msgstr ""
 "您可以在这里访问已存档的画布："
 
 msgid "Select your Avatar. Supported Formats: jpg, gif, png, webp"
-msgstr ""
+msgstr "选择您的头像。支持的格式：jpg、gif、png、webp"
 
 msgid "Selected Color"
 msgstr "选定颜色"
 
 msgid "Selected Flag:"
-msgstr ""
+msgstr "已选旗帜："
 
 msgid "Selected moderation actions that happened within the past two weeks."
-msgstr ""
+msgstr "过去两周内发生的部分审核操作。"
 
 msgid "Send"
 msgstr "发送"
@@ -1569,7 +1569,7 @@ msgid "Show templates as overlays ingame."
 msgstr "在游戏中以叠加层的形式显示模板。"
 
 msgid "Shrink"
-msgstr ""
+msgstr "收缩"
 
 msgid "Size"
 msgstr "尺寸"
@@ -1582,7 +1582,7 @@ msgstr "社交场合"
 
 #, javascript-format
 msgid "Source for pixelplanet on ${ gitLink } or ${ downloadHereLink }."
-msgstr ""
+msgstr "pixelplanet 的源代码位于 ${ gitLink } 或${ downloadHereLink }。"
 
 msgid "Stacking till"
 msgstr "堆叠式收银机"
@@ -1650,7 +1650,7 @@ msgstr ""
 "更改。"
 
 msgid "The password for your account."
-msgstr ""
+msgstr "您的账户密码。"
 
 msgid "Themes"
 msgstr "主题"
@@ -1677,9 +1677,11 @@ msgid ""
 "function on the LogIn page to set a new password. In the future, consider "
 "not installing malware, Thank You."
 msgstr ""
+"您的邮箱／密码组合已被盗用并泄露。为保护此账户，密码已重置。请使用登录页面上"
+"的“忘记密码”功能设置新密码。今后请尽量不要安装恶意软件，谢谢。"
 
 msgid "This faction has no invites"
-msgstr ""
+msgstr "该派系没有邀请函"
 
 msgid ""
 "This is the name that other people see, e.g. in Chat. You can change it at "
@@ -1689,7 +1691,7 @@ msgstr ""
 "外，所有字符均可使用。"
 
 msgid "This login may only work if your account is verified."
-msgstr ""
+msgstr "只有经过验证的帐户才能使用此登录方式。"
 
 msgid "This permission is required"
 msgstr "需要此权限"
@@ -1699,7 +1701,7 @@ msgstr "此用户未设置密码"
 
 #. Column title in tables
 msgid "Time"
-msgstr ""
+msgstr "时间"
 
 msgid "Timeout"
 msgstr "暂停"
@@ -1718,7 +1720,7 @@ msgstr ""
 "应该对应画布上的一个像素。"
 
 msgid "Title"
-msgstr ""
+msgstr "标题"
 
 msgid "Title can't be empty."
 msgstr "标题不能为空。"
@@ -1733,7 +1735,7 @@ msgid "Title must be shorter than 26 characters"
 msgstr "标题必须少于26字符"
 
 msgid "Title of your faction"
-msgstr ""
+msgstr "你的阵营名称"
 
 msgid "To use this page, enter your Password:"
 msgstr "要使用此页面，请输入您的密码："
@@ -1766,7 +1768,7 @@ msgid "Total Online Users"
 msgstr "在线用户总数"
 
 msgid "Total Pixels per Faction"
-msgstr ""
+msgstr "每个阵营的总像素数"
 
 msgid "Total Pixels per Player"
 msgstr "每位玩家的总像素数"
@@ -1775,30 +1777,32 @@ msgid "Total Pixels placed per day"
 msgstr "每日像素总数"
 
 msgid "Total Rank"
-msgstr ""
+msgstr "总排名"
 
 msgid ""
 "Turn every pixel in area to 0 (YOU REALLY SHOULDN'T DO THAT ON ANY AREA THAT "
 "ISN'T ALREADY MOSTLY 0)"
 msgstr ""
+"将区域内的每个像素值都变为 0（千万不要对任何并非大部分像素值都为 0 的区域执行"
+"此操作）"
 
 msgid "Turn on grid to highlight pixel borders."
-msgstr ""
+msgstr "开启网格线以高亮显示像素边界。"
 
 msgid "Type of Mod"
-msgstr ""
+msgstr "版主类型"
 
 msgid "Type the characters from the following image:"
 msgstr "请输入下图中的字符："
 
 msgid "Unban media"
-msgstr ""
+msgstr "解禁媒体"
 
 msgid "Unban members"
-msgstr ""
+msgstr "解除成员禁令"
 
 msgid "Unblock"
-msgstr ""
+msgstr "解除封锁"
 
 msgid "Unblock Users"
 msgstr "解除用户封锁"
@@ -1816,10 +1820,10 @@ msgid "Until the browser closes"
 msgstr "直到浏览器关闭"
 
 msgid "Upload images to canvas"
-msgstr ""
+msgstr "上传图片到画布"
 
 msgid "Use our custom cursor"
-msgstr ""
+msgstr "使用我们自定义的光标"
 
 msgid "User"
 msgstr "用户"
@@ -1828,22 +1832,22 @@ msgid "User Account"
 msgstr "用户帐户"
 
 msgid "User Area"
-msgstr ""
+msgstr "用户区"
 
 msgid "User ID and verification level"
 msgstr "用户 ID 和验证级别"
 
 msgid "User Name"
-msgstr ""
+msgstr "用户名"
 
 msgid "Username"
-msgstr ""
+msgstr "用户名"
 
 msgid "Username can only contain the characters: a-z . _ and -"
 msgstr "用户名只能包含以下字符：a-z . _ 和 -"
 
 msgid "Username can only contain the characters: a-z A-z . _ and -"
-msgstr ""
+msgstr "用户名只能包含以下字符：a-z A-Z . _ 和 -"
 
 msgid "Username can't be empty."
 msgstr "用户名不能为空。"
@@ -1855,31 +1859,33 @@ msgid "Username must be shorter than 26 characters"
 msgstr "用户名长度必须少于 26 个字符"
 
 msgid "Users"
-msgstr ""
+msgstr "用户"
 
 #, javascript-format
 msgid "We are Libre Software under the ${ agplLink }, "
-msgstr ""
+msgstr "我们是遵循${ agplLink }许可协议的自由软件， "
 
 msgid ""
 "We decided to archive it as a timelapse with lossless encoded webm. Taking a "
 "screenshot from the timelapse results in a perfect 1:1 representation of how "
 "the canvas was at that time."
 msgstr ""
+"我们决定将其存档为无损编码的webm格式延时视频。从延时视频中截取屏幕截图，可以"
+"完美地 1:1 还原当时画布的状态。"
 
 msgid ""
 "We thank the following artists, who made their palettes available to the "
 "public on"
-msgstr ""
+msgstr "我们感谢以下艺术家，他们向公众公开了他们的调色板"
 
 msgid "Weird"
-msgstr ""
+msgstr "诡异的"
 
 msgid "What the pencil should draw on the current canvas."
-msgstr ""
+msgstr "铅笔应该在当前的画布上画什么。"
 
 msgid "Whether or not this invite can only be used once."
-msgstr ""
+msgstr "此邀请是否只能使用一次。"
 
 msgid ""
 "While we tend to not delete canvases, some canvases are started for fun or "
@@ -1887,27 +1893,30 @@ msgid ""
 "become dull and inactive after a while, at which point there is no reason to "
 "keep them and we may decide to remove them."
 msgstr ""
+"虽然我们通常不会删除画布，但有些画布是为了好玩而创建的，或者应喜欢当前流行梗"
+"的用户的要求而创建的。一段时间后，这些画布可能会变得黯淡无光，失去活力，这时"
+"就没有理由保留它们了，我们可能会决定将它们移除。"
 
 msgid "Why?"
-msgstr ""
+msgstr "为什么？"
 
 msgid "Width"
-msgstr ""
+msgstr "宽度"
 
 msgid "Wrong Color"
-msgstr ""
+msgstr "颜色错误"
 
 msgid "YOU CAN ONLY CHOOSE YOUR USERNAME ONCE!"
-msgstr ""
+msgstr "你只能选择一次用户名！"
 
 msgid "Yes"
-msgstr ""
+msgstr "是的"
 
 msgid "Yes, really delete Me"
-msgstr ""
+msgstr "是的，真的要删除我"
 
 msgid "Yesterday"
-msgstr ""
+msgstr "昨天"
 
 msgid ""
 "You are a teacher and a pupil is playing this game, despite it not being "
@@ -1924,53 +1933,57 @@ msgstr ""
 "上您可以从下方获取的 BID 进报。"
 
 msgid "You are currently not a member of any faction."
-msgstr ""
+msgstr "你目前不属于任何派系。"
 
 msgid "You are currently not allowed to access this game."
-msgstr ""
+msgstr "您目前无权访问此游戏。"
 
 msgid ""
 "You are currently not representing any faction. To represent one, activate a "
 "role in one of your factions below."
-msgstr ""
+msgstr "您目前未代表任何阵营。要代表某个阵营，请在下方激活您所在阵营的角色。"
 
 #, javascript-format
 msgid ""
 "You are currently representing ${ activeFactionTitle } as ${ activeRoleName }"
-msgstr ""
+msgstr "您当前将${ activeFactionTitle }表示为${ activeRoleName }"
 
 #, javascript-format
 msgid "You are logged in as ${ name } [${ username }]."
-msgstr ""
+msgstr "您已以 ${ name } [ ${ username } ] 身份登录。"
 
 msgid "You are not allowed to play this game right now :("
-msgstr ""
+msgstr "你现在不能玩这个游戏 :("
 
 msgid "You are using a Proxy."
-msgstr ""
+msgstr "您正在使用代理服务器。"
 
 msgid "You are weird"
-msgstr ""
+msgstr "你真奇怪"
 
 msgid ""
 "You can connect to pixelplanet and use pixelplanet accounts for oauth / oidc "
 "login. See here: "
 msgstr ""
+"您可以连接到pixelplanet并使用pixelplanet帐户进行OAuth/OIDC登录。详情请见此处"
+"： "
 
 msgid "You can not access this canvas yet, because your pixel score is too low"
-msgstr ""
+msgstr "您目前无法访问此画布，因为您的像素得分太低"
 
 msgid "You can now place more on pixelplanet.fun :)"
-msgstr ""
+msgstr "现在你可以在pixelplanet.fun上放置更多东西了:)"
 
 #, javascript-format
 msgid ""
 "You caught a Phish! It is a ${ FISH_TYPES[type].name } with ${ size }kg! As "
 "a bonus, your cooldown is reduced."
 msgstr ""
+"你钓到了一条鱼！它是一条重 ${ size }kg 的 ${ FISH_TYPES[type].name } 鱼！此外"
+"，你的冷却时间缩短了。"
 
 msgid "You did not consent"
-msgstr ""
+msgstr "你没有同意"
 
 msgid "You failed your captcha"
 msgstr "你的验证码验证失败了"
@@ -1979,22 +1992,22 @@ msgstr "你的验证码验证失败了"
 msgid ""
 "You have been invited to join us on pixelplanet. We currently have $"
 "{ memberCount } members."
-msgstr ""
+msgstr "您已受邀加入 pixelplanet。我们目前有 ${ memberCount } 位成员。"
 
 msgid "You have no users blocked"
-msgstr ""
+msgstr "您没有屏蔽任何用户"
 
 msgid "You have to be logged in to place on this canvas"
-msgstr ""
+msgstr "您必须登录才能在此画布上放置内容"
 
 msgid "You made too many requests"
-msgstr ""
+msgstr "你提出的请求太多了"
 
 msgid "You must be logged in to chat"
-msgstr ""
+msgstr "您必须登录才能聊天"
 
 msgid "You must enter a UserId"
-msgstr ""
+msgstr "您必须输入用户 ID"
 
 msgid "You must enter a mediaId or media BID"
 msgstr ""
