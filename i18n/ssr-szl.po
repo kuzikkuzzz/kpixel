@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: admin@pixelplanet.fun\n"
-"PO-Revision-Date: 2026-05-27 11:30+0000\n"
+"PO-Revision-Date: 2026-05-28 14:30+0000\n"
 "Last-Translator: kyvvra <silesianreal@noreply.pixelplanet.fun>\n"
 "Language-Team: Silesian <https://translate.gs-os.com/projects/ppfun/server/"
 "szl/>\n"
@@ -230,7 +230,7 @@ msgstr "Niy mōg wyleźć z tego kanału"
 
 #: src/routes/api/factionchange.js:117
 msgid "Could not set this factions avatar"
-msgstr "Niy mōg nastać awatara tej frakcyji"
+msgstr "Niy mōg nastać awatara tyj frakcyji"
 
 #: src/routes/api/profilechange.js:39
 msgid "Could not set your avatar"
@@ -625,7 +625,7 @@ msgid ""
 "${ wellKnownUrl } URL."
 msgstr ""
 "PixelPlanet spōłnio ze sztandardym OpenID Connect (OIDC). Beztoż kożdo "
-"aplikacyjo, co wspiyro OIDC, poradzi spytać ô pozwolynie i zaloguje ludzi "
+"aplikacyjo, co wspiyro OIDC, poradzi spytać ô pozwolynie i zalogōje ludzi "
 "bez jejich kōnta ze PixelPlanet. Wszyjske potrzebne pyńkty (endpoints) idzie "
 "znolyź we ${ wellKnownUrl } URL."
 
@@ -964,112 +964,116 @@ msgstr ""
 #: src/routes/api/media.js:99
 #: src/routes/api/media.js:297
 msgid "We currently do not allow file uploads"
-msgstr ""
+msgstr "Chwilowo niy zezwolōmy na przesyłanie plikōw"
 
 #: src/core/MailProvider.js:70
 #, javascript-format
 msgid "Welcome ${ name } to PixelPlanet, please verify your mail"
-msgstr ""
+msgstr "Witej ${ name } na PixelPlanet, prosza, zweryfikuj swōj e-mail"
 
 #: src/routes/api/userchange.js:64
 msgid "You already chose your username"
-msgstr ""
+msgstr "Już żeś wybroł swoje miano używocza"
 
 #: src/routes/api/userchange.js:90
 msgid "You already have that name."
-msgstr ""
+msgstr "Już żeś wybroł to miano."
 
 #: src/routes/api/factioninviteuse.js:32
 #: src/routes/api/factionjoin.js:33
 msgid "You are already part of this faction"
-msgstr ""
+msgstr "Jeś już tajlōm tyj frakcyjo"
 
 #: src/routes/api/auth/resend_verify.js:14
 msgid "You are already verified."
-msgstr ""
+msgstr "Jeś już zweryfikowany."
 
 #: src/routes/api/factioninviteuse.js:30
 #: src/routes/api/factionjoin.js:31
 msgid "You are banned from this faction"
-msgstr ""
+msgstr "Jeś zakozany z tyj frakcyjo"
 
 #: src/core/ChatProvider.js:367
 #, javascript-format
 msgid "You are muted for another ${ timeMin } minutes"
-msgstr ""
+msgstr "Jeś wyciszōny na dalsze ${ timeMin } minut"
 
 #: src/core/ChatProvider.js:369
 #, javascript-format
 msgid "You are muted for another ${ ttl } seconds"
-msgstr ""
+msgstr "Jeś wyciszōny na dalsze ${ ttl } sekund"
 
 #: src/routes/api/modtools.js:77
 msgid "You are not allowed to access this page"
-msgstr ""
+msgstr "Jeś niydozwolōny by wlyźć na te strōna"
 
 #: src/routes/api/baninfo.js:15
 msgid "You are not banned"
-msgstr ""
+msgstr "Niy jeś zakozany"
 
 #: src/middleware/session.js:302
 #: src/routes/api/modtools.js:67
 msgid "You are not logged in"
-msgstr ""
+msgstr "Niy jeś zalogowōny"
 
 #: src/routes/api/auth/verify.js:23
 msgid "You are now verified :)"
-msgstr ""
+msgstr "Teroz jeś już zalogowōny :)"
 
 #: src/core/ChatProvider.js:362
 msgid "You are permanently muted, join our guilded to appeal the mute"
-msgstr ""
+msgstr "Jeś wyciszōny na stałe, wlyź na nasz Guilded coby sie ôdwołać"
 
 #: src/core/ChatProvider.js:333
 #, javascript-format
 msgid "You are sending messages too fast, you have to wait ${ waitTime }s :("
-msgstr ""
+msgstr "Posyłosz wiadomości za gibko, poczekej ${ waitTime }s :("
 
 #: src/core/ChatProvider.js:422
 msgid "You attached too many files"
-msgstr ""
+msgstr "Doł żeś za wiela plikōw"
 
 #: src/routes/api/auth/remove_tpid.js:22
 msgid "You can not delete this login method, because you have nothing else left."
-msgstr ""
+msgstr "Niy możesz wydupić tej metody logowanio, bo nic inkszego ci niy ôstało."
 
 #: src/routes/api/auth/register.js:111
 msgid "You can not register an account while you are banned"
-msgstr ""
+msgstr "Niy idzie założyć kōnta jak sie je zakozany"
 
 #: src/routes/api/auth/register.js:108
 msgid "You can not register an account with a proxy"
-msgstr ""
+msgstr "Niy idzie założyć kōnta z proxy"
 
 #: src/core/ChatProvider.js:354
 msgid "You can not send chat messages while using a proxy"
-msgstr ""
+msgstr "Niy idzie posyłoć wiadomości gdy je sie na proxy"
 
 #: src/routes/api/factioncreate.js:60
 #, javascript-format
 msgid "You can only be owner of ${ MAX_OWNED_FACTIONS_PER_USER } factions in total"
 msgstr ""
+"Można być ino posiedzicielem ${ MAX_OWNED_FACTIONS_PER_USER } frakcyji w "
+"sumie"
 
 #: src/routes/api/factioncreate.js:55
 #: src/routes/api/factioninviteuse.js:27
 #: src/routes/api/factionjoin.js:28
 #, javascript-format
 msgid "You can only have ${ MAX_FACTIONS_PER_USER } factions in total"
-msgstr ""
+msgstr "Można mieć ino ${ MAX_FACTIONS_PER_USER } frakcyji w sumie"
 
 #: src/routes/oidc/register.js:126
 msgid ""
 "You can register your own application here to get the client_id and "
 "client_secret needed to make use of this."
 msgstr ""
+"Możesz założyć tu włosno aplikacyjo, coby dostać client_id i client_secret "
+"potrzebne do użycio tego."
 
 #: src/core/ChatProvider.js:420
 msgid "You can't send a message this long :("
-msgstr ""
+msgstr "Niy możesz posyłoć wiadomości takej dugej :("
 
 #: src/routes/api/media.js:86
 msgid "You did not provide all necessary information"

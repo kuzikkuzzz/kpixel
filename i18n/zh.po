@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: admin@pixelplanet.fun\n"
-"PO-Revision-Date: 2026-05-27 11:30+0000\n"
+"PO-Revision-Date: 2026-05-28 14:30+0000\n"
 "Last-Translator: Extreme Motorsex <em@noreply.pixelplanet.fun>\n"
 "Language-Team: Chinese (Simplified Han script) <https://translate.gs-os.com/"
 "projects/ppfun/client/zh_Hans/>\n"
@@ -1965,7 +1965,7 @@ msgid ""
 "You can connect to pixelplanet and use pixelplanet accounts for oauth / oidc "
 "login. See here: "
 msgstr ""
-"您可以连接到pixelplanet并使用pixelplanet帐户进行OAuth/OIDC登录。详情请见此处"
+"您可以连接到pixelplanet并使用pixelplanet帐户进行oauth/oidc登录。详情请见此处"
 "： "
 
 msgid "You can not access this canvas yet, because your pixel score is too low"
@@ -2007,54 +2007,56 @@ msgid "You must be logged in to chat"
 msgstr "您必须登录才能聊天"
 
 msgid "You must enter a UserId"
-msgstr "您必须输入用户 ID"
+msgstr "您必须输入用户Id"
 
 msgid "You must enter a mediaId or media BID"
-msgstr ""
+msgstr "您必须输入媒体 ID 或媒体 BID"
 
 msgid "You must enter a reason"
-msgstr ""
+msgstr "您必须输入原因"
 
 msgid "You must enter a username"
-msgstr ""
+msgstr "您必须输入用户名"
 
 msgid "You must enter an BID"
-msgstr ""
+msgstr "您必须输入BID"
 
 msgid "You must enter an IID"
-msgstr ""
+msgstr "您必须输入IID"
 
 msgid "You must enter an IID or UserId"
-msgstr ""
+msgstr "您必须输入IID或UserId"
 
 msgid "You must enter at least one IID, User Id or BID"
-msgstr ""
+msgstr "您必须至少输入一个 IID、用户 ID 或 BID"
 
 msgid "You must select an avatar for your faction"
-msgstr ""
+msgstr "你必须为你的阵营选择一个头像"
 
 msgid "You took too long, try again."
-msgstr ""
+msgstr "你用时太久了，请重试。"
 
 msgid ""
 "Your Browser doesn't allow us to use AudioContext to play sounds. Do you "
 "have some privacy feature blocking us?"
 msgstr ""
+"您的浏览器不允许我们使用 AudioContext 播放声音。您是否启用了某些隐私设置阻止"
+"了我们？"
 
 msgid "Your Browser looks shady"
 msgstr "你的浏览器看起来可疑"
 
 msgid "Your Factions"
-msgstr ""
+msgstr "你的派系"
 
 msgid "Your Internet Provider is banned from this game"
-msgstr ""
+msgstr "您的网络服务提供商已被禁止参与此游戏"
 
 msgid "Your Roles"
-msgstr ""
+msgstr "你的角色"
 
 msgid "Your ban expires at "
-msgstr ""
+msgstr "您的禁令将于何时到期 "
 
 msgid "Your device looks weird"
 msgstr "你的设备看起来很奇怪"
@@ -2062,28 +2064,28 @@ msgstr "你的设备看起来很奇怪"
 msgid ""
 "Your did not set your username yet. A username is required to login to other "
 "applications. You can set it now:"
-msgstr ""
+msgstr "您尚未设置用户名。登录其他应用程序需要用户名。您现在即可设置："
 
 msgid "Your name is:"
-msgstr ""
+msgstr "你的名字是："
 
 msgid "Your next pixels are ready"
-msgstr ""
+msgstr "您的下一个像素已准备就绪"
 
 msgid ""
 "Zoom in instead of placing a pixel when you tap the canvas and your zoom is "
 "small."
-msgstr ""
+msgstr "当点击画布且缩放级别较小时，放大而不是放置像素。"
 
 msgid "a hidden faction"
 msgstr "隐藏派系"
 
 msgid "affects"
-msgstr ""
+msgstr "影响"
 
 #, javascript-format
 msgid "and ${ canvas.req } Pixels set"
-msgstr ""
+msgstr "和 ${ canvas.req } 像素设置"
 
 msgid "by"
 msgstr "经过"
@@ -2120,77 +2122,77 @@ msgid "try again after ${ ti }min"
 msgstr "请在${ ti }分钟后重试"
 
 msgid "x out of bounds"
-msgstr ""
+msgstr "x 出界"
 
 msgid "y out of bounds"
-msgstr ""
+msgstr "y 出界"
 
 msgid "z out of bounds"
-msgstr ""
+msgstr "z 出界"
 
 msgctxt "media-player"
 msgid "Player"
-msgstr ""
+msgstr "媒体播放器"
 
 msgctxt "keybinds"
 msgid "A"
-msgstr ""
+msgstr "A"
 
 msgctxt "keybinds"
 msgid "B"
-msgstr ""
+msgstr "B"
 
 msgctxt "keybinds"
 msgid "D"
-msgstr ""
+msgstr "D"
 
 msgctxt "keybinds"
 msgid "E"
-msgstr ""
+msgstr "E"
 
 msgctxt "keybinds"
 msgid "G"
-msgstr ""
+msgstr "G"
 
 msgctxt "keybinds"
 msgid "H"
-msgstr ""
+msgstr "H"
 
 msgctxt "keybinds"
 msgid "M"
-msgstr ""
+msgstr "M"
 
 msgctxt "keybinds"
 msgid "N"
-msgstr ""
+msgstr "N"
 
 msgctxt "keybinds"
 msgid "Q"
-msgstr ""
+msgstr "Q"
 
 msgctxt "keybinds"
 msgid "R"
-msgstr ""
+msgstr "R"
 
 msgctxt "keybinds"
 msgid "S"
-msgstr ""
+msgstr "S"
 
 msgctxt "keybinds"
 msgid "Shift"
-msgstr ""
+msgstr "Shift"
 
 msgctxt "keybinds"
 msgid "T"
-msgstr ""
+msgstr "T"
 
 msgctxt "keybinds"
 msgid "W"
-msgstr ""
+msgstr "W"
 
 msgctxt "keybinds"
 msgid "X"
-msgstr ""
+msgstr "X"
 
 msgctxt "channel-list"
 msgid "Public"
