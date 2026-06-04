@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: admin@pixelplanet.fun\n"
-"PO-Revision-Date: 2026-05-28 14:30+0000\n"
+"PO-Revision-Date: 2026-06-04 11:36+0000\n"
 "Last-Translator: kyvvra <silesianreal@noreply.pixelplanet.fun>\n"
 "Language-Team: Silesian <https://translate.gs-os.com/projects/ppfun/server/"
 "szl/>\n"
@@ -14,11 +14,11 @@ msgstr ""
 
 #: src/canvasesDesc.js:27
 msgid "1bit"
-msgstr "1bit"
+msgstr "1-bit"
 
 #: src/canvasesDesc.js:29
 msgid "2bit"
-msgstr "2bit"
+msgstr "2-bit"
 
 #: src/canvasesDesc.js:23
 msgid "3D Canvas"
@@ -42,7 +42,7 @@ msgstr "Plik bōł za dupny"
 
 #: src/routes/oidc/register.js:161
 msgid "Access modtools"
-msgstr "Wlyź do modtools"
+msgstr "Wlyź do norzyńdzi modōw"
 
 #: src/routes/oidc/register.js:231
 msgid "Add Application"
@@ -89,16 +89,16 @@ msgstr "Czorno-Biołe płōtno"
 #: src/routes/api/factionroledelete.js:33
 #: src/routes/api/factionrolejoin.js:52
 msgid "Can not change a role above your own"
-msgstr "Niy idzie zmiynić roli na srogszo ôd swoji"
+msgstr "Niy idzie zmiynić roli na srogszo ôd twojyj"
 
 #: src/routes/api/factionrolechange.js:48
 #: src/routes/api/factionrolejoin.js:57
 msgid "Can not change a role that is equal to your own"
-msgstr "Niy idzie zmiynić roli kiero je rōwno twojyj włosnyj"
+msgstr "Niy idzie zmiynić roli kiero je rōwno twojyj"
 
 #: src/routes/api/factionrolechange.js:60
 msgid "Can not change the default setting of this role"
-msgstr "Niy idzie zmiynić sztandarowego nastawiynia tyj roli"
+msgstr "Niy idzie zmiynić sztandarowego ustawiynia tyj roli"
 
 #: src/routes/api/factionrolechange.js:82
 msgid "Can not change the powerlevel of a role equal or above you"
@@ -114,11 +114,11 @@ msgstr "Niy idzie godać na czacie, kej ciy wyciepali"
 
 #: src/routes/api/factionrolecreate.js:55
 msgid "Can not create a role on the same level as yours"
-msgstr "Niy idzie dodać roli na poziōmie rōwnym jak twojyj"
+msgstr "Niy idzie stworzić roli na poziōmie rōwnym jak twojyj"
 
 #: src/routes/api/factionrolecreate.js:49
 msgid "Can not create a role with a powerlevel beyond yours"
-msgstr "Niy idzie dodać poziōmu roli srōgszyj ôd twojyj"
+msgstr "Niy idzie stworzić poziōmu roli srōgszyj ôd twojyj"
 
 #: src/routes/api/factionroledelete.js:35
 msgid "Can not delete a role on the same level as yours"
@@ -164,7 +164,7 @@ msgid ""
 "Can not upload this many files at once, only 5 are allowed, you have ${ "
 "amountOfFiles }"
 msgstr ""
-"Niy idzie przesyłać tylu plikōw na roz, ino 5 je dozwolōnych, ty mōsz ${ "
+"Niy idzie przesyłać tylu plikōw na roz, ino 5 je przizwolōnych, ty mōsz ${ "
 "amountOfFiles }"
 
 #: src/routes/api/factionrolechange.js:93
@@ -213,7 +213,7 @@ msgstr "Not mōg zmiynić fana tyj roli"
 #: src/routes/api/userchange.js:45
 #: src/routes/api/userchange.js:55
 msgid "Could not change this setting. Maybe try again later."
-msgstr "Niy mōg zmiynić tego ustawiynio. Możno sprōbuj potym."
+msgstr "Niy mōg zmiynić tego ustawiynia. Możno sprōbuj potym."
 
 #: src/routes/api/auth/close_session.js:13
 #: src/routes/api/auth/revoke_consent.js:12
@@ -313,7 +313,7 @@ msgstr "Błōnd"
 
 #: src/routes/api/auth/register.js:124
 msgid "Failed to create a new user :("
-msgstr "Niy szło dodać nowego używocza :("
+msgstr "Niy szło stworzić nowego używocza :("
 
 #: src/routes/api/media.js:126
 #, javascript-format
@@ -338,7 +338,7 @@ msgstr "Plik je popsuty"
 msgid ""
 "Generate a new client_secret. The old secret will become invalid "
 "immediately."
-msgstr "Wygyneruj nowy client_secret. Stary sekret zaroz stanie się niyważny."
+msgstr "Wygyneruj nowy client_secret. Stary sekret stanie się niyważny ôd razu."
 
 #: src/routes/oidc/register.js:156
 msgid "Get email address"
@@ -387,8 +387,8 @@ msgid ""
 "If you did not request this mail, please just ignore it (the ip that "
 "requested this mail was ${ ip })."
 msgstr ""
-"Jeźli ty niy poprosiyłeś ô ten e-mail, prosza cie, zignoruj ja (ip kery "
-"poprosiył ô tyn e-mail był ${ ip })."
+"Jeźli ty niy poprosiōłeś ô ten e-mail, prosza zignoruj ja (ip kery poprosiył "
+"ô tyn e-mail bōł ${ ip })."
 
 #: src/utils/validation.js:72
 msgid "Incorrect password"
@@ -397,7 +397,7 @@ msgstr "Niyprawidłowe hasło"
 #: src/routes/api/media.js:145
 #: src/routes/api/media.js:294
 msgid "Invalid type of media"
-msgstr "Niyważno zorta mediōw"
+msgstr "Niyważno zorta mydiōw"
 
 #: src/routes/reset_password.js:95
 msgid "Invalid url :( Please check your mail again."
@@ -502,7 +502,7 @@ msgstr "Miano niy może być prōżne."
 
 #: src/utils/validation.js:43
 msgid "Name contains invalid character like @, /, \\ or #"
-msgstr "Miano ma niyważny znak, taki jak @, /, \\ abo #"
+msgstr "Miano mo niyważny znak, taki jak @, /, \\ abo #"
 
 #: src/routes/oidc/register.js:86
 msgid "Name is too long"
@@ -511,12 +511,12 @@ msgstr "Miano je za dugie"
 #: src/utils/validation.js:33
 #: src/utils/validation.js:98
 msgid "Name must be at least 2 characters long"
-msgstr "Miano ma mieć ôdugłość aby 2 znakōw"
+msgstr "Miano mo mieć ôdugłość aby 2 znakōw"
 
 #: src/utils/validation.js:34
 #: src/utils/validation.js:101
 msgid "Name must be shorter than 26 characters"
-msgstr "Miano ma być krōtsze ôd 26 znakōw"
+msgstr "Miano mo być krōtsze ôd 26 znakōw"
 
 #: src/routes/api/auth/local.js:21
 msgid "Name or Email does not exist!"
@@ -550,11 +550,11 @@ msgstr "Niy podano redirect_uris."
 
 #: src/routes/api/badge.js:20
 msgid "No such badge found"
-msgstr "Niy ma takego ôsiōngniyńcio"
+msgstr "Niy mo takego ôsiōngniyńcio"
 
 #: src/routes/api/fish.js:20
 msgid "No such fish found"
-msgstr "Ni ma takej ryby"
+msgstr "Ni mo takej ryby"
 
 #: src/routes/oidc/register.js:204
 msgid "One redirect URIs per line"
@@ -590,11 +590,11 @@ msgstr "Nasze głōwne płōtno, dupno karta świata. Rysuj kaj ino lubisz!"
 
 #: src/utils/validation.js:132
 msgid "Password must be at least 6 characters long."
-msgstr "Hasło ma mieć ôdugłość aby 6 znakōw."
+msgstr "Hasło mo mieć ôdugłość aby 6 znakōw."
 
 #: src/utils/validation.js:135
 msgid "Password must be shorter than 60 characters."
-msgstr "Hasło ma być krōtsze ôd 60 znakōw."
+msgstr "Hasło mo być krōtsze ôd 60 znakōw."
 
 #: src/routes/reset_password.js:78
 msgid "Password successfully changed."
@@ -635,7 +635,8 @@ msgstr "Rysuj woksele na płōtnie 3D z inkszymi."
 
 #: src/ssr/mainHTML.js:110
 msgid "Place color pixels on an map styled canvas with other players online"
-msgstr "Rysuj piksele na płōtnie we stylu karty z inkszymi we internecie"
+msgstr ""
+"Rysuj piksele na płōtnie we stylu karty z inkszymi groczami w internecie"
 
 #: src/routes/api/auth/register.js:83
 msgid "Please try again."
@@ -722,7 +723,7 @@ msgstr "Feler serwera we czasie wyciepywanio używocza."
 
 #: src/core/MailProvider.js:108
 msgid "Someone logged into your account from a new location, with the IP:"
-msgstr "Ktoś sie zalogowoł na twoje konto ze inkszego placu, z IP:"
+msgstr "Ftoś sie zalogowoł na twoje kōnto ze inkszego placu, z IP:"
 
 #: src/routes/oidc/register.js:215
 msgid "Space-separated list of available scopes"
@@ -810,7 +811,7 @@ msgid ""
 "installing malware, Thank You."
 msgstr ""
 "Tyn e-mail / kōmbinacyjo hasła ôstała zhakowano i wyciekła. Coby ôchrōnić to "
-"konto, hasło było resetowane. Prosza użyć pōniższyj funkcyje \"Zapōmniōł "
+"kōnto, hasło bōło resetowane. Prosza użyć pōniższyj funkcyje \"Zapōmniōł "
 "żech hasła\", coby nastawić nowe hasło. W prziszłości rozwożaj niy "
 "instalować złośliwego ôprogramowanio. Dziynki."
 
@@ -822,14 +823,14 @@ msgid ""
 "not installing malware, Thank You."
 msgstr ""
 "Tyn e-mail / kōmbinacyjo hasła ôstała zhakowano i wyciekła. Coby ôchrōnić to "
-"konto, hasło było resetowane. Prosza użyć pōniższyj funkcyje \"Zapōmniōł "
+"kōnto, hasło bōło resetowane. Prosza użyć pōniższyj funkcyje \"Zapōmniōł "
 "żech hasła\" na strōnce logowanio, coby nastawić nowe hasło. W prziszłości "
 "rozwożaj niy instalować złośliwego ôprogramowanio. Dziynki."
 
 #: src/routes/api/auth/change_mail.js:23
 #: src/routes/api/auth/register.js:102
 msgid "This email provider is not allowed"
-msgstr "Tyn dostawca e-mail jest niydozwolōny"
+msgstr "Tyn dostawca e-mail je niydozwolōny"
 
 #: src/routes/api/factionbans.js:22
 #: src/routes/api/factioninfo.js:25
@@ -858,7 +859,7 @@ msgstr "Ta frakcyjo je prywatna"
 #: src/utils/media/serverUtils.js:162
 #, javascript-format
 msgid "This media is banned ${ reason }. Ban ID: ${ mbid }"
-msgstr "Ta media je zakozany ${ reason }. ID zakozu: ${ mbid }"
+msgstr "Ta mydia je zakozany ${ reason }. ID zakozu: ${ mbid }"
 
 #: src/routes/reset_password.js:48
 msgid "This password-reset link isn't valid anymore :("
@@ -878,11 +879,11 @@ msgstr "Tytuł niy może być prōżny."
 
 #: src/utils/validation.js:90
 msgid "Title contains invalid character like @, /, \\ or #"
-msgstr "Tytuł ma niyważny znak, taki jak @,/,\\ or #"
+msgstr "Tytuł mo niyważny znak, taki jak @,/,\\ or #"
 
 #: src/utils/validation.js:80
 msgid "Title must be at least 2 characters long"
-msgstr "Tytuł ma mieć ôdugłość aby 2 znakōw"
+msgstr "Tytuł mo mieć ôdugłość aby 2 znakōw"
 
 #: src/utils/validation.js:81
 msgid "Title must be shorter than 26 characters"
@@ -938,7 +939,7 @@ msgstr "Miano używocza niy może być prōżne."
 
 #: src/utils/validation.js:51
 msgid "Username must be at least 2 characters long"
-msgstr "Miano używocza ma mieć ôdugłość aby 2 znakōw"
+msgstr "Miano używocza mo mieć ôdugłość aby 2 znakōw"
 
 #: src/utils/validation.js:54
 msgid "Username must be shorter than 26 characters"
@@ -969,7 +970,7 @@ msgstr "Chwilowo niy zezwolōmy na przesyłanie plikōw"
 #: src/core/MailProvider.js:70
 #, javascript-format
 msgid "Welcome ${ name } to PixelPlanet, please verify your mail"
-msgstr "Witej ${ name } na PixelPlanet, prosza, zweryfikuj swōj e-mail"
+msgstr "Witej ${ name } na PixelPlanet, prosza zweryfikuj swōj e-mail"
 
 #: src/routes/api/userchange.js:64
 msgid "You already chose your username"
@@ -1018,7 +1019,7 @@ msgstr "Niy jeś zalogowōny"
 
 #: src/routes/api/auth/verify.js:23
 msgid "You are now verified :)"
-msgstr "Teroz jeś już zalogowōny :)"
+msgstr "Teroz jeś już zweryfikowany :)"
 
 #: src/core/ChatProvider.js:362
 msgid "You are permanently muted, join our guilded to appeal the mute"
@@ -1027,15 +1028,15 @@ msgstr "Jeś wyciszōny na stałe, wlyź na nasz Guilded coby sie ôdwołać"
 #: src/core/ChatProvider.js:333
 #, javascript-format
 msgid "You are sending messages too fast, you have to wait ${ waitTime }s :("
-msgstr "Posyłosz wiadomości za gibko, poczekej ${ waitTime }s :("
+msgstr "Posyłosz wiadōmości za gibko, poczekej ${ waitTime }s :("
 
 #: src/core/ChatProvider.js:422
 msgid "You attached too many files"
-msgstr "Doł żeś za wiela plikōw"
+msgstr "Prziłōnczyłeś za wiela plikōw"
 
 #: src/routes/api/auth/remove_tpid.js:22
 msgid "You can not delete this login method, because you have nothing else left."
-msgstr "Niy możesz wydupić tej metody logowanio, bo nic inkszego ci niy ôstało."
+msgstr "Niy możesz wydupić tyj metody logowanio, bo nic inkszego ci niy ôstało."
 
 #: src/routes/api/auth/register.js:111
 msgid "You can not register an account while you are banned"
@@ -1047,7 +1048,7 @@ msgstr "Niy idzie założyć kōnta z proxy"
 
 #: src/core/ChatProvider.js:354
 msgid "You can not send chat messages while using a proxy"
-msgstr "Niy idzie posyłoć wiadomości gdy je sie na proxy"
+msgstr "Niy idzie posyłoć wiadōmości gdy je sie na proxy"
 
 #: src/routes/api/factioncreate.js:60
 #, javascript-format
@@ -1073,157 +1074,165 @@ msgstr ""
 
 #: src/core/ChatProvider.js:420
 msgid "You can't send a message this long :("
-msgstr "Niy możesz posyłoć wiadomości takej dugej :("
+msgstr "Niy możesz posyłoć wiadōmości takej dugej :("
 
 #: src/routes/api/media.js:86
 msgid "You did not provide all necessary information"
-msgstr ""
+msgstr "Niy dał żeś wszyjskich potrzebnych informacyji"
 
 #: src/routes/api/auth/resend_verify.js:21
 msgid ""
 "You do not have any email adress set. Please add one under \"Login "
 "Methods\"."
 msgstr ""
+"Niy mōsz zrychtowanego żodnego e-maila. Prosza dodej jeden w \"Metody "
+"Logowanio\"."
 
 #: src/core/ChatProvider.js:337
 msgid "You don't have access to this channel"
-msgstr ""
+msgstr "Niy mōsz dostympu do tego kanału"
 
 #: src/routes/api/auth/register.js:63
 msgid "You failed your captcha"
-msgstr ""
+msgstr "Zrypoł żeś captche"
 
 #: src/core/MailProvider.js:136
 msgid "You forgot your password for PixelPlanet? Get a new one here"
-msgstr ""
+msgstr "Zapomniōłeś hasła do PixelPlanet? Zyskej nowy tukej"
 
 #: src/routes/oidc/register.js:62
 msgid "You have to fill out all fields"
-msgstr ""
+msgstr "Trza wypełnić wszyjskie pola"
 
 #: src/routes/oidc/register.js:33
 msgid "You must be logged in to access this page"
-msgstr ""
+msgstr "Trza być zalogowany, coby dostać sie do tyj strōny"
 
 #: src/routes/api/factioninviteuse.js:36
 #: src/routes/api/factionjoin.js:37
 msgid "You need an invite to join this faction"
-msgstr ""
+msgstr "Potrzebne je zaproszynie by wlyźć do tyj frakcyji"
 
 #. "scope" is a technical term and should not be translated
 #: src/routes/oidc/register.js:93
 msgid "You need to define a valid scope"
-msgstr ""
+msgstr "Trza zdefiniować ważny scope"
 
 #: src/routes/reset_password.js:29
 msgid "You need to directly access this page in the browser :("
-msgstr ""
+msgstr "Trza wlyźć w ta strōno z przeglōndarki :("
 
 #: src/routes/api/media.js:106
 #: src/routes/api/media.js:301
 #, javascript-format
 msgid "You reached your maximum upload quota of ${ MAX_USER_MEDIA_SIZE_MB } MB"
 msgstr ""
+"Ôsiōngnōłeś maksymalno wielość przesyłanio ô wielości ${ "
+"MAX_USER_MEDIA_SIZE_MB } MB"
 
 #: src/core/MailProvider.js:138
 msgid ""
 "You requested to get a new password. You can change your password within "
 "the next 30min here: "
 msgstr ""
+"Poprosiōłeś ô nowe hasło. Możesz zmiynić hasło w dalszych 30 minutach tukej: "
 
 #: src/routes/reset_password.js:38
 msgid "You sent an empty password or invalid data :("
-msgstr ""
+msgstr "Posłał żeś prōżne hasło abo niyważne dane :("
 
 #: src/routes/api/auth/register.js:60
 msgid "You took too long, try again"
-msgstr ""
+msgstr "Za dugo ci to zeszło, sprōbuj jeszcze rōz"
 
 #: src/ssr/redirectionModal.js:16
 msgid "You will be automatically redirected after 15s"
-msgstr ""
+msgstr "Bydziesz autōmatycznie przekerowany po 15s"
 
 #: src/routes/api/auth/register.js:72
 msgid "Your Browser looks shady"
-msgstr ""
+msgstr "Twoja przeglōndarka wyglōnda lewo"
 
 #: src/routes/api/factioncreate.js:65
 msgid "Your account must be at least two weeks old before you can create a faction"
-msgstr ""
+msgstr "Twoje kōnto musi mieć nojmniyj dwa tygodnie, coby szło dodać frakcyjo"
 
 #: src/routes/oidc/register.js:38
 msgid "Your account needs to be verified to access this page"
-msgstr ""
+msgstr "Twoje kōnto musi być zweryfikowane, coby dostać sie do tyj strōny"
 
 #: src/core/ChatProvider.js:342
 msgid "Your country is temporary muted from this chat channel"
-msgstr ""
+msgstr "Twōj kraj je wyciszōny z tego kanału"
 
 #: src/routes/api/auth/register.js:69
 msgid "Your device looks weird"
-msgstr ""
+msgstr "Twoje ustrojstwo wyglōnda dziwnie"
 
 #: src/core/ChatProvider.js:380
 msgid "Your mail has to be verified in order to chat"
-msgstr ""
+msgstr "Twōj e-mail musi być zweryfikowany, coby czatować"
 
 #: src/routes/api/auth/verify.js:33
 msgid ""
 "Your mail verification code is invalid or already expired :(, please "
 "request a new one."
 msgstr ""
+"Twōj kod weryfikacyjny e-maila je felerne abo wygasłe :(, prosza weź se nowy."
 
 #: src/routes/reset_password.js:57
 msgid "Your passwords do not match :("
-msgstr ""
+msgstr "Twoje hasła niy pasujo"
 
 #. This media is banned xyz
 #: src/utils/media/serverUtils.js:150
 msgid "because it is propaganda"
-msgstr ""
+msgstr "bo to je propaganda"
 
 #. This media is banned xyz
 #: src/utils/media/serverUtils.js:142
 msgid "for being an attempt to scam people"
-msgstr ""
+msgstr "bo prōbuje ocyganić ludzi"
 
 #. This media is banned xyz
 #: src/utils/media/serverUtils.js:138
 msgid "for being degenerate"
-msgstr ""
+msgstr "bo je zdegynerowano"
 
 #. This media is banned xyz
 #: src/utils/media/serverUtils.js:134
 msgid "for containing CSAM"
-msgstr ""
+msgstr "bo mo materyje ô seksualnych nadużyciach wobec dzieckōw"
 
 #. This media is banned xyz
 #: src/utils/media/serverUtils.js:130
 msgid "for containing graphic violence"
-msgstr ""
+msgstr "bo mo fest krwawe sceny"
 
 #. This media is banned xyz
 #: src/utils/media/serverUtils.js:154
 msgid "for containing personal information"
-msgstr ""
+msgstr "bo mo materyje informacyji ôsobistych"
 
 #. This media is banned xyz
 #: src/utils/media/serverUtils.js:146
 msgid "for glorifying terrorism"
-msgstr ""
+msgstr "bo wychwalo terroryzm"
 
 #. "redirect_uris" is a technical term and should not be translated
 #: src/routes/oidc/register.js:83
 msgid "redirect_uris does not look legit"
-msgstr ""
+msgstr "redirect_uris niy wyglōndo dobrze"
 
 #: src/ssr/modalShell.js:30
 #: src/ssr/shell.js:26
 msgid "to go back to pixelplanet"
-msgstr ""
+msgstr "coby wrōcić do PixelPlanet"
 
 #: src/core/MailProvider.js:72
 msgid ""
 "welcome to our little community of pixelplacers, to use your account, you "
 "have to verify your mail. You can do that here: "
 msgstr ""
+"witej w naszej małej społeczności pikselowych majstrōw, coby użyć kōnta, "
+"trza zweryfikować swōj e-mail. Idzie to zrobić tukej: "
