@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: admin@pixelplanet.fun\n"
-"PO-Revision-Date: 2026-06-04 11:36+0000\n"
+"PO-Revision-Date: 2026-06-05 12:30+0000\n"
 "Last-Translator: kyvvra <silesianreal@noreply.pixelplanet.fun>\n"
 "Language-Team: Silesian <https://translate.gs-os.com/projects/ppfun/server/"
 "szl/>\n"
@@ -34,7 +34,7 @@ msgid ""
 "ranking updates at 00:00 UTC."
 msgstr ""
 "Płōtno dlo nojbarzij aktywnych groczy z piyrwyjszego dnia. Dziynne "
-"aktualizacyje rankingu ô 00:00 UTC."
+"rychtowanio rankingu ô 00:00 UTC."
 
 #: src/routes/api/media.js:314
 msgid "A file was too large"
@@ -102,11 +102,11 @@ msgstr "Niy idzie zmiynić sztandarowego ustawiynia tyj roli"
 
 #: src/routes/api/factionrolechange.js:82
 msgid "Can not change the powerlevel of a role equal or above you"
-msgstr "Niy idzie zmiynić poziōmu roli rōwnyj abo srōgszyj ôd twojyj"
+msgstr "Niy idzie zmiynić poziōmu władzy roli rōwnyj abo srōgszyj ôd twojyj"
 
 #: src/routes/api/factionrolechange.js:78
 msgid "Can not change the powerlevel of the Sovereign"
-msgstr "Niy idzie zmiynić poziōmu roli Suweryna"
+msgstr "Niy idzie zmiynić poziōmu władzy roli Suweryna"
 
 #: src/core/ChatProvider.js:357
 msgid "Can not chat while being banned"
@@ -118,7 +118,7 @@ msgstr "Niy idzie stworzić roli na poziōmie rōwnym jak twojyj"
 
 #: src/routes/api/factionrolecreate.js:49
 msgid "Can not create a role with a powerlevel beyond yours"
-msgstr "Niy idzie stworzić poziōmu roli srōgszyj ôd twojyj"
+msgstr "Niy idzie stworzić poziōmu władzy roli srōgszyj ôd twojyj"
 
 #: src/routes/api/factionroledelete.js:35
 msgid "Can not delete a role on the same level as yours"
@@ -130,11 +130,11 @@ msgstr "Niy idzie wyciepać tyj roli"
 
 #: src/routes/api/factionrolechange.js:88
 msgid "Can not elevate the powerlevel of a role beyond yours"
-msgstr "Niy idzie dźwignōnć poziōmu roli srōgszyj ôd twojyj"
+msgstr "Niy idzie dźwignōnć poziōmu władzy roli srōgszyj ôd twojyj"
 
 #: src/routes/api/factionrolechange.js:98
 msgid "Can not elevate the powerlevel of a role to yours"
-msgstr "Niy idzie dźwignōnć poziōmu roli do twojyj"
+msgstr "Niy idzie dźwignōnć poziōmu władzy roli do twojij"
 
 #: src/routes/api/factionrolecreate.js:76
 #, javascript-format
@@ -493,7 +493,7 @@ msgstr "Miano je już zajynte."
 
 #: src/utils/validation.js:104
 msgid "Name can only contain the characters: a-z . _ and -"
-msgstr "Miano może zawiyrać ino znaki: a-z . _ i -"
+msgstr "Miano może zawiyrać ino znaki: a-z, -, . i _"
 
 #: src/utils/validation.js:32
 #: src/utils/validation.js:96
@@ -567,7 +567,7 @@ msgstr "Jedyn redirect_uri na lynijo"
 #. "redirect_uris" is a technical term and should not be translated
 #: src/routes/oidc/register.js:73
 msgid "Only five redirect_uris are allowed per client"
-msgstr "Je ino piyńć redirect_uris na kliynta"
+msgstr "Je ino piyńć przizwolōnych redirect_uris na kliynta"
 
 #: src/canvasesDesc.js:41
 msgid "Only four colors. Same rules as moon!"
@@ -582,7 +582,7 @@ msgstr "Specyfikacyje OpenID Connect"
 #: src/core/MailProvider.js:72
 #: src/core/MailProvider.js:138
 msgid "Or by copying following url:"
-msgstr "Abo ôd kopiowanio nastympujōncego URL:"
+msgstr "Abo ôd skopiowanio nastympujōncego URL:"
 
 #: src/canvasesDesc.js:33
 msgid "Our main canvas, a huge map of the world. Place anywhere you like!"
@@ -635,8 +635,7 @@ msgstr "Rysuj woksele na płōtnie 3D z inkszymi."
 
 #: src/ssr/mainHTML.js:110
 msgid "Place color pixels on an map styled canvas with other players online"
-msgstr ""
-"Rysuj piksele na płōtnie we stylu karty z inkszymi groczami w internecie"
+msgstr "Rysuj piksele na płōtnie we stylu karty z inkszymi aktywnymi groczami"
 
 #: src/routes/api/auth/register.js:83
 msgid "Please try again."
@@ -757,7 +756,7 @@ msgstr "Ekstra płōtno do przodowanio uwogi na SARS-CoV2 (dej sie wyszczepić).
 
 #: src/core/ChatProvider.js:397
 msgid "Stop flooding."
-msgstr "Zastopuj spamowanie."
+msgstr "Przestań zalewać czat."
 
 #: src/routes/reset_password.js:128
 msgid "Submit"
@@ -896,7 +895,7 @@ msgstr "Za wiela abo za dugi redirect_uris"
 
 #: src/canvasesDesc.js:28
 msgid "Top10"
-msgstr "Top10"
+msgstr "Top-10"
 
 #: src/routes/api/auth/register.js:75
 msgid "Unknown Captcha Error"
@@ -931,7 +930,7 @@ msgstr "Miano używocza niy może zaczynać sie ôd pp_"
 
 #: src/utils/validation.js:57
 msgid "Username can only contain the characters: a-z . _ and -"
-msgstr "Miano używocza może zawiyrać ino znaki: a-z . _ i -"
+msgstr "Miano używocza może zawiyrać ino znaki: a-z, -, . i _"
 
 #: src/utils/validation.js:49
 msgid "Username can't be empty."
@@ -1006,7 +1005,7 @@ msgstr "Jeś wyciszōny na dalsze ${ ttl } sekund"
 
 #: src/routes/api/modtools.js:77
 msgid "You are not allowed to access this page"
-msgstr "Jeś niydozwolōny by wlyźć na te strōna"
+msgstr "Niy mōsz przizwolynio by wlyźć na te strōna"
 
 #: src/routes/api/baninfo.js:15
 msgid "You are not banned"

@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: admin@pixelplanet.fun\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2026-06-04 11:36+0000\n"
+"PO-Revision-Date: 2026-06-05 12:30+0000\n"
 "Last-Translator: steinbergowitz <steinbergowitz@noreply.pixelplanet.fun>\n"
 "Language-Team: Azerbaijani <https://translate.gs-os.com/projects/ppfun/"
 "server/az/>\n"
@@ -138,7 +138,7 @@ msgid "Client Name"
 msgstr "Alıcı adı"
 
 msgid "Confirm New Password"
-msgstr "Yeni Parolu Doğrulayın"
+msgstr "Yeni şifrəni doğrulayın"
 
 #, fuzzy
 msgid ""
@@ -191,10 +191,10 @@ msgid "Delete Application"
 msgstr "Tətbiqi sil"
 
 msgid "Description can't be empty"
-msgstr ""
+msgstr "Təsvir boş qala bilməz"
 
 msgid "Description must be shorter than 1000 characters"
-msgstr ""
+msgstr "Təsvir 1000 simvoldan qısa olmalıdır"
 
 msgid "Display name for your OIDC client"
 msgstr "OIDC alıcınız üçün göstərilən ad"
@@ -218,7 +218,7 @@ msgid "Email can't be longer than 40 characters."
 msgstr "Email 40 simvoldan uzun olabilməz."
 
 msgid "Email should at least contain a dot"
-msgstr "Email ən az 1 nöqtə içərməlidir"
+msgstr "E-poçtda ən azı bir nöqtə olmalıdır"
 
 msgid "Email should be at least 5 characters long."
 msgstr "Email ən az 5 simvol uzunluğunda olmalıdır."
@@ -251,10 +251,10 @@ msgid ""
 msgstr "Yeni client_secret yaradın. Köhnə gizli dərhal etibarsız olacaq."
 
 msgid "Get email address"
-msgstr "E-poçt ünvanını alın"
+msgstr "Email ünvanlarını əldə et"
 
 msgid "Get the amount of Pixels placed and ranking"
-msgstr "Sıralama və qoyulan Piksel sayını alın"
+msgstr "Yerləşdirilmiş piksellərin miqdarını və sıralamanı əldə et"
 
 msgid ""
 "Have fun and don't hesitate to contact us if you encounter any problems :)"
@@ -293,7 +293,7 @@ msgstr ""
 "emaili tələb edən IP ${ ip } idi)."
 
 msgid "Incorrect password"
-msgstr ""
+msgstr "Yanlış şifrə"
 
 msgid "Invalid type of media"
 msgstr ""
@@ -311,7 +311,7 @@ msgid "Just mods and admins can do that"
 msgstr ""
 
 msgid "Know that an account exists"
-msgstr "Bir hesabın mövcud olduğunu bilin"
+msgstr "Hesabın mövcud olduğunu bilin"
 
 #. "scopes" is a technical term and should not be translated
 msgid "List of available scopes"

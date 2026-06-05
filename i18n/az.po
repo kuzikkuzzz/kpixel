@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: admin@pixelplanet.fun\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2026-06-04 11:36+0000\n"
+"PO-Revision-Date: 2026-06-05 12:30+0000\n"
 "Last-Translator: steinbergowitz <steinbergowitz@noreply.pixelplanet.fun>\n"
 "Language-Team: Azerbaijani <https://translate.gs-os.com/projects/ppfun/"
 "client/az/>\n"
@@ -69,6 +69,8 @@ msgid ""
 "A flag representing the role, it should be 16x11 pixels. If left empty, "
 "users with this role selected will still show their own flags."
 msgstr ""
+"Rolu təmsil edən bayraq, ölçüləri 16x11 pixel olmalıdır. Boş buraxılarsa, bu "
+"rolu seçmiş istifadəçilərin öz bayraqları görüləcək."
 
 msgid "A new verification mail is getting sent to you."
 msgstr "Yeni bir doğrulama maili sizə göndərilir."
@@ -77,15 +79,20 @@ msgid ""
 "A role has all the permissions of all levels below and equal to it. In "
 "example: Every role with a power level of >=50 can manage invites (50)."
 msgstr ""
+"Bir rol bütün özündən aşağı və ya özünə bərabər səviyyələrin bütün "
+"icazələrinə malikdir. Məsələn: Güc səviyyəsi 50 və ya daha yüksək olan hər "
+"bir rol dəvətnamələri idarə edə bilər (50)."
 
 msgid "ACCESS MODTOOLS"
-msgstr ""
+msgstr "MODERATOR ALƏTLƏRİNƏ GİRİŞ"
 
 #. modlogLink has the text "Moderation Log"
 #, javascript-format
 msgid ""
 "Actions taken by moderators on the canvas can be seen in the ${ modlogLink }."
 msgstr ""
+"Moderatorların lövhədə həyata keçirdiyi əməliyyatlara ${ modlogLink } "
+"vasitəsilə baxmaq olar."
 
 msgid "Add Grid (uncheck if you need a 1:1 template)"
 msgstr "Tor elavə edin (1:1 şablona ehtiyacınız varsa bu seçənəyi bağlayın)"
@@ -94,17 +101,17 @@ msgid "Add Template"
 msgstr "Şablon əlavə et"
 
 msgid "Add a new E-Mail Address here:"
-msgstr ""
+msgstr "Buraya yeni bir E-Mail ünvanı əlavə et:"
 
 #. This if for moderation tools, it's not important to translate this
 msgid "Admintools"
-msgstr ""
+msgstr "Admin alətləri"
 
 msgid "Age"
-msgstr ""
+msgstr "Yaş"
 
 msgid "All members of this faction are hidden"
-msgstr ""
+msgstr "Bu fraksiyanın bütün üzvləri gizlidir"
 
 msgid "All sound effects will be disabled."
 msgstr "Bütün səs effektləri bağlanacaq."
@@ -116,7 +123,7 @@ msgid "Always show movement control buttons"
 msgstr "Həmişə hərəkət düymələrini göstər"
 
 msgid "An image representing your faction"
-msgstr ""
+msgstr "Fraksiyanızı təmsil edən bir şəkil"
 
 msgid "Anti Aliasing"
 msgstr "Kənar Yumuşaldma"
@@ -128,58 +135,58 @@ msgid "Archive"
 msgstr "Arxiv"
 
 msgid "Assign Roles"
-msgstr ""
+msgstr "Rolları təyin et"
 
 msgid "Assign new Mod"
 msgstr "Yeni Mod təyin edin"
 
 msgid "Assign role per default to new members"
-msgstr ""
+msgstr "Yeni üzvlərə avtomatik olaraq standart rol təyin et"
 
 msgid "Assign roles below their own"
-msgstr ""
+msgstr "Öz səviyyəsindən aşağı rolları təyin et"
 
 msgid "Assign this role to every new member automatically on join."
-msgstr ""
+msgstr "Bu rolu qoşulan hər yeni üzvə avtomatik olaraq təyin et."
 
 msgid "Assigned role per default"
-msgstr ""
+msgstr "Avtomatik təyin edilmiş rol"
 
 msgid "Attach File"
-msgstr ""
+msgstr "Fayl əlavə et"
 
 msgid "Auto Zoom In"
-msgstr "avtomatik yaxınlaşdır"
+msgstr "Avtomatik yaxınlaşdırma"
 
 msgid "Avatar"
-msgstr ""
+msgstr "Avatar"
 
 msgid "Back"
-msgstr ""
+msgstr "Geri"
 
 msgid "Badge Display"
-msgstr ""
+msgstr "Nişan göstərilməsi"
 
 msgid "Badges"
-msgstr ""
+msgstr "Nişanlar"
 
 msgid "Ban"
-msgstr ""
+msgstr "Qadağan et"
 
 msgid "Ban media"
-msgstr ""
+msgstr "Medianı qadağa et"
 
 msgid "Ban members"
-msgstr ""
+msgstr "Üzvləri qadağan et"
 
 msgid "Banned"
-msgstr "Banlandın"
+msgstr "Qadağan olundun"
 
 msgid "Banned? Detected as Proxy?"
-msgstr "Banlandınız?Proxy olaraq alğılandınız?"
+msgstr "Banlandınız? Proxy olaraq alğılandınız?"
 
 msgid "Bans"
-msgstr ""
+msgstr "Qadağalar"
 
 msgid "Block"
 msgstr "Blokla"
@@ -192,9 +199,12 @@ msgid ""
 "users to start messaging you. You can still start new DMs with other users "
 "and already ongoing DMs will still be open."
 msgstr ""
+"Bütün Şəxsi Mesajları Blokla. Bunu aktivləşdirdikdə, digər istifadəçilərin "
+"sizə mesaj göndərməsi mümkün olmayacaq. Siz hələ də digər istifadəçilərlə "
+"yeni DM-lər başlada bilərsiniz və artıq davam edən DM-lər açıq qalacaq."
 
 msgid "Blocked"
-msgstr ""
+msgstr "Bloklandı"
 
 msgid "Bottom-right corner"
 msgstr "Sağ-alt künc"
@@ -221,10 +231,10 @@ msgid "Can not import more than 20 or no template!"
 msgstr "20-dən çox və ya heç olmayan şablon daxil edilə bilməz!"
 
 msgid "Can't read? Reload:"
-msgstr "Oxuya bilmirsiniz?Yeniləyin:"
+msgstr "Oxuya bilmirsiniz? Yeniləyin:"
 
 msgid "Can't render 3D canvas, do you have WebGL2 disabled?"
-msgstr "3D löhvə renderlənəbilmədi,sizdə WebGL2 bağlıdır?"
+msgstr "3D löhvə renderlənəbilmədi, sizdə WebGL2 bağlıdır?"
 
 msgid "Cancel"
 msgstr "Ləğv et"
@@ -233,44 +243,43 @@ msgid "Cancel adding Template"
 msgstr "Şablon əlavə etməyi ləğv et"
 
 msgid "Canvas"
-msgstr "Löhvə"
+msgstr "Lövhə"
 
 msgid "Canvas Archive"
-msgstr "Löhvə Arxivi"
+msgstr "Lövhə Arxivi"
 
 msgid "Canvas Cleaner"
-msgstr "Löhvə Təmizləyicisi"
+msgstr "Lövhə Təmizləyicisi"
 
 msgid "Canvas Error"
-msgstr "Löhvə Xətası"
+msgstr "Lövhə Xətası"
 
 msgid "Canvas Selection"
-msgstr "Löhvə Seçimi"
+msgstr "Lövhə Seçimi"
 
 msgid "Captcha"
 msgstr "Captcha"
 
 msgid "Caught by"
-msgstr ""
+msgstr "Tərəfindən tutuldu"
 
 msgid "Change Flag"
-msgstr ""
+msgstr "Bayrağı dəyiş"
 
-#, fuzzy
 msgid "Change Happened"
-msgstr "Adı dəyişdirin"
+msgstr "Dəyişiklik baş verdi"
 
 msgid "Change Name"
-msgstr ""
+msgstr "Adı dəyiş"
 
 msgid "Change Password"
-msgstr "Şifrəni dəyişdirin"
+msgstr "Şifrəni dəyişdir"
 
 msgid "Channel"
-msgstr ""
+msgstr "Kanal"
 
 msgid "Channel settings"
-msgstr "Kanal ayarları"
+msgstr "Kanal tənzimləmələri"
 
 msgid "Charts"
 msgstr "Qrafiklər"
@@ -282,13 +291,13 @@ msgid "Chat here"
 msgstr "Burda söhbət edin"
 
 msgid "Check out past versions of the canvas."
-msgstr "Löhvənin keçmiş versiyalarına baxın."
+msgstr "Lövhənin keçmiş versiyalarına bax."
 
 msgid "Check to allow"
-msgstr ""
+msgstr "İcazə vermək üçün seç"
 
 msgid "Check who placed in an area"
-msgstr "Kimin bu bölgədə pixel qoyduğunu yoxlayın"
+msgstr "Kimin bu bölgədə pixel qoyduğunu yoxla"
 
 msgid "Choose Canvas"
 msgstr "Lövhə seçin"
@@ -300,7 +309,7 @@ msgid "Choose Strategy"
 msgstr "Strategiyanı seç"
 
 msgid "Choose Username"
-msgstr ""
+msgstr "İstifadəçi adı seç"
 
 msgid ""
 "Clean spare pixels that are surrounded by a single other color or unset "
@@ -308,7 +317,7 @@ msgid ""
 "two cooldowns)!)"
 msgstr ""
 "Tək başqa bir rəng və ya təyin olunmamış pixellərlə əhatə olunmuş pixelləri "
-"təmizləyin (QURULMUŞ PİXELLƏRƏ İCAZƏ VERƏN LÖHVƏLƏRDƏ ÇOX AQRESSİVDİR (iki "
+"təmizləyin (QURULMUŞ PİXELLƏRƏ İCAZƏ VERƏN LÖVHƏLƏRDƏ ÇOX AQRESSİVDİR (iki "
 "gözləmə müddəti olanlarda)!)"
 
 msgid "Clean spare pixels that are surrounded by unset pixels"
@@ -322,10 +331,10 @@ msgstr ""
 "olunmuş pixelləri təmizləyin"
 
 msgid "Cleaners can use 0cd blank colors."
-msgstr ""
+msgstr "Təmizləyicilər 0cd boş rənglərdən istifadə edə bilər."
 
 msgid "Clear"
-msgstr ""
+msgstr "Təmizlə"
 
 #, javascript-format
 msgid ""
@@ -339,7 +348,7 @@ msgid "Click a color in palette to select it"
 msgstr "Palitrada rəng seçmək üçün rəngin üzərinə basın"
 
 msgid "Click here to cease representation."
-msgstr ""
+msgstr "Təmsilçiliyi bitirmək üçün klikləyin."
 
 msgid "Click here to request a new verification mail."
 msgstr "Yeni doğrulama maili tələb etmək üçün bura basın."
@@ -348,7 +357,7 @@ msgid "Click to Load Captcha"
 msgstr "Captchanı yükləmək üçün basın"
 
 msgid "Click to remove"
-msgstr ""
+msgstr "Qaldırmaq üçün klikləyin"
 
 msgid "Clone"
 msgstr "Klon"
@@ -363,41 +372,41 @@ msgid "Close Palette"
 msgstr "Palitranı aç"
 
 msgid "Compact Chat"
-msgstr ""
+msgstr "Yığcam çat"
 
 msgid "Compact Palette"
-msgstr "Komplakt Palitra"
+msgstr "Yığcam Palitra"
 
 msgid "Confirm"
-msgstr ""
+msgstr "Təstiqlə"
 
 msgid "Confirm Ban"
-msgstr ""
+msgstr "Qadağanı təsdiqlə"
 
 msgid "Confirm Delete"
-msgstr ""
+msgstr "Silinməni Təsdiqlə"
 
 msgid "Confirm Kick"
-msgstr ""
+msgstr "Atılmanı təsdiqlə"
 
 msgid "Confirm Leave"
-msgstr ""
+msgstr "Çıxışı təsdiqlə"
 
 msgid "Confirm New Password"
-msgstr "Yeni parolu doğrulayın"
+msgstr "Yeni şifrəni doğrulayın"
 
 msgid "Confirm Password"
 msgstr "Şifrənizi doğrulayın"
 
 msgid "Confirm your password."
-msgstr ""
+msgstr "Şifrənizi təsdiqləyin."
 
 #, javascript-format
 msgid "Connection error ${ code } :("
 msgstr "Bağlantı xətası ${ code } :("
 
 msgid "Consent"
-msgstr ""
+msgstr "Razılıq"
 
 msgid "Controls"
 msgstr "Kontrollar"
@@ -415,6 +424,8 @@ msgid ""
 "Cooldown is usually automatically changed for a country that is dominating. "
 "In example in the case of a streamer raid."
 msgstr ""
+"Üstünlük təşkil edən ölkə üçün sərinləmə müddəti adətən avtomatik "
+"dəyişdirilir. Məsələn, bir streamer hücumu zamanı."
 
 msgid "Coordinates"
 msgstr "Koordinatlar"
@@ -429,34 +440,35 @@ msgid "Copy"
 msgstr "Kopyala"
 
 msgid "Copy Link"
-msgstr ""
+msgstr "Linki kopyala"
 
 msgid "Copy Selected to Clipboard"
-msgstr ""
+msgstr "Seçiləni panoya kopyala"
 
 msgid "Copy URL"
-msgstr ""
+msgstr "URL-ni kopyala"
 
 msgid "Copy UserId to Clipboard"
-msgstr ""
+msgstr "İstifadəçi İD-sini panoya kopyala"
 
 msgid "Copy to Clipboard"
-msgstr "Löhvəyə kopyalayın"
+msgstr "Lövhəyə kopyalayın"
 
 msgid "Could not connect to server"
-msgstr ""
+msgstr "Serverə qoşulmaq mümkün olmadı"
 
 msgid "Could not connect to server, please try again later :("
-msgstr "Servere bağlanılabilmədi,zəhmət olmasa sonra yenidən dənəyin :("
+msgstr ""
+"Serverə qoşulmaq mümkün olmadı, zəhmət olmasa sonra yenidən cəhd edin :("
 
 msgid "Could not load captcha"
-msgstr "Captcha yüklənəmədi"
+msgstr "Captcha yüklənə bilmədi"
 
 msgid "Could not process files"
-msgstr ""
+msgstr "Fayllar emal edilə bilmədi"
 
 msgid "Couldn't set Pixel"
-msgstr "Pixel ayarlanabilmədi"
+msgstr "Pixel ayarlana bilmədi"
 
 msgid "Countries Today"
 msgstr "Bugünkü Ölkələr"
@@ -465,25 +477,25 @@ msgid "Country"
 msgstr "Ölkə"
 
 msgid "Create Faction"
-msgstr ""
+msgstr "Fraksiya yarat"
 
 msgid "Create Invite"
-msgstr ""
+msgstr "Dəvət yarat"
 
 msgid "Create New Faction"
-msgstr ""
+msgstr "Yeni fraksiya yarat"
 
 msgid "Create New Invite"
-msgstr ""
+msgstr "Yeni dəvət yarat"
 
 msgid "Create New Role"
-msgstr ""
+msgstr "Yeni rol yarat"
 
 msgid "Create Role"
-msgstr ""
+msgstr "Rol yarat"
 
 msgid "Create roles"
-msgstr ""
+msgstr "Rollar yarat"
 
 #, javascript-format
 msgid "Credit for the Palette of the 2bit canvas goes to ${ donendoLink }."
@@ -498,75 +510,73 @@ msgid "Credit for the Palette of the Top10 canvas goes to ${ vinikLink }."
 msgstr "Top10 Lövhə palitrası üçün kredit ${ vinikLink }-ə gedir."
 
 msgid "Current Cooldown Changes per Country"
-msgstr ""
+msgstr "Hər Ölkə üzrə Cari Sərinləmə Dəyişiklikləri"
 
 msgid "Custom Cursor"
-msgstr ""
+msgstr "Fərdi Kursor"
 
 msgid "Custom Flag"
-msgstr ""
+msgstr "Fərdi bayraq"
 
 msgid "DM"
 msgstr "DM"
 
 msgid "Daily Pixels"
-msgstr ""
+msgstr "Günlük pixellər"
 
-#, fuzzy
 msgid "Daily Pixels per Country"
-msgstr "Saat başına oyunçular və pixellər"
+msgstr "Ölkə üzrə gündəlik piksellər"
 
 msgid "Daily Pixels per Faction"
-msgstr ""
+msgstr "Fraksiya üzrə gündəlik pixellər"
 
-#, fuzzy
 msgid "Daily Pixels per Player"
-msgstr "Bir gün içində toplam qoyulan pixellər"
+msgstr "Oyunçu başına gündəlik piksellər"
 
 msgid "Daily Rank"
 msgstr "Günlük Sıralama"
 
 msgid "Date of Award"
-msgstr ""
+msgstr "Mükafatın verilmə tarixi"
 
 msgid "Date of catch"
-msgstr ""
+msgstr "Tutulma tarixi"
 
 msgid "Delete"
-msgstr "Silin"
+msgstr "Sil"
 
 msgid "Delete Account"
 msgstr "Hesabı silin"
 
 msgid "Delete Faction"
-msgstr ""
+msgstr "Fraksiyanı silin"
 
 msgid "Delete My Account"
-msgstr ""
+msgstr "Hesabımı sil"
 
 msgid "Delete the faction"
-msgstr ""
+msgstr "Fraksiyanı sil"
 
 msgid "Deny"
-msgstr ""
+msgstr "Rədd et"
 
 msgid "Description"
-msgstr ""
+msgstr "Təsvir"
 
 msgid "Description can't be empty"
-msgstr ""
+msgstr "Təsvir boş qala bilməz"
 
 msgid "Description must be shorter than 1000 characters"
-msgstr ""
+msgstr "Təsvir 1000 simvoldan qısa olmalıdır"
 
 msgid "Description of your faction"
-msgstr ""
+msgstr "Fraksiyanızın təsviri"
 
 msgid ""
 "Didn't get an answer from pixelplanet. Try to refresh if this problem "
 "persists."
 msgstr ""
-"Pixelplanetdən yanıd alınmadı. Əgər sorun davam edirsə səhifəni yeniləyin."
+"Pixelplanetdən cavab alınmadı. Bu problem davam edərsə, səhifəni yeniləyin."
 
 msgid "Dimensions"
 msgstr "Ölçülər"
@@ -592,24 +602,26 @@ msgstr "IP-lərlə işlər aparın (hər sətirdə bir IP)"
 msgid ""
 "Don't let people find this faction in public search or look at its profile."
 msgstr ""
+"İnsanların bu fraksiyanı ictimai axtarışda tapmasına və ya profilinə "
+"baxmasına imkan verməyin."
 
 msgid "Don't remember"
-msgstr ""
+msgstr "Yadda saxlama"
 
 msgid "Don't show faction in search"
-msgstr ""
+msgstr "Axtarışda fraksiyanı göstərmə"
 
 msgid "Don't show me in global stats"
-msgstr "Məni qlobal statistikada göstərməyin"
+msgstr "Məni qlobal statistikada göstərmə"
 
 msgid "Done"
-msgstr ""
+msgstr "Bitdi"
 
 msgid "Download"
-msgstr ""
+msgstr "Yüklə"
 
 msgid "Download Template"
-msgstr "Template yüklə"
+msgstr "Şablon yüklə"
 
 #, javascript-format
 msgid "Drag ${ mouseSymbol } mouse or ${ touchSymbol } pan to move"
@@ -630,13 +642,13 @@ msgid "Edit"
 msgstr "Redaktə et"
 
 msgid "Edit faction"
-msgstr ""
+msgstr "Fraksiyanı redaktə et"
 
 msgid "Edit roles below their own"
-msgstr ""
+msgstr "Öz rollarının altındakı rolları redaktə et"
 
 msgid "Edit their own role and elevate users to their own level"
-msgstr ""
+msgstr "Öz rollarını redaktə edin və istifadəçiləri öz səviyyələrinə qaldırın"
 
 msgid "Email"
 msgstr "Email"
@@ -651,9 +663,11 @@ msgid ""
 "Email is used to verify your account. You might get a cofirmation mail after "
 "registering."
 msgstr ""
+"E-poçt hesabınızı təsdiqləmək üçün istifadə olunur. Qeydiyyatdan sonra "
+"təsdiq e-poçtu ala bilərsiniz."
 
 msgid "Email should at least contain a dot"
-msgstr "Email ən az 1 nöqtə içərməlidir"
+msgstr "E-poçtda ən azı bir nöqtə olmalıdır"
 
 msgid "Email should be at least 5 characters long."
 msgstr "Email ən az 5 simvol uzunluğunda olmalıdır."
@@ -680,13 +694,13 @@ msgid "Enter UserName of new Mod"
 msgstr "Yeni modun istifadəçi adını daxil edin"
 
 msgid "Enter a little text that describes your faction"
-msgstr ""
+msgstr "Fraksiyanızı təsvir edən kiçik bir mətn daxil edin"
 
 msgid "Enter search term and press Search."
-msgstr ""
+msgstr "Axtarış terminini daxil edin və Axtar düyməsini basın."
 
 msgid "Enter your mail address and we will send you a new password:"
-msgstr "Email adresinizi daxil edin və biz sizə yeni bir parol göndərəcəyik:"
+msgstr "Email ünvanınızı daxil edin və biz sizə yeni bir şifrə göndərəcəyik:"
 
 msgid "Error"
 msgstr "Xəta"
@@ -699,45 +713,47 @@ msgid "Error :("
 msgstr "Xəta :("
 
 msgid "Expand"
-msgstr ""
+msgstr "Genişləndir"
 
 msgid "Export enabled templates"
 msgstr "Açıq şablonları xaric et"
 
 msgid "Faction"
-msgstr ""
+msgstr "Fraksiya"
 
 msgid "Factions"
-msgstr ""
+msgstr "Fraksiyalar"
 
 msgid "Factions Today"
-msgstr ""
+msgstr "Fraksiyalar Bugün"
 
 msgid "Factions Total"
-msgstr ""
+msgstr "Fraksiyalar ümumi"
 
 msgid ""
 "Factions allow you to coordinate better with other players. Search for "
 "existing factions, find friends or create your own faction."
 msgstr ""
+"Fraksiyalar digər oyunçularla daha yaxşı koordinasiya etməyə imkan verir. "
+"Mövcud fraksiyaları axtarın, dostlar tapın və ya öz fraksiyanızı yaradın."
 
 msgid "Factor"
-msgstr ""
+msgstr "Amil"
 
 msgid "File"
 msgstr "Fayl"
 
 msgid "Filter"
-msgstr ""
+msgstr "Filtr"
 
 msgid "Fish Display"
-msgstr ""
+msgstr "Balıq nümayişi"
 
 msgid "For"
-msgstr ""
+msgstr "Üçün"
 
 msgid "For Developers"
-msgstr ""
+msgstr "Tərtibatçılar üçün"
 
 #, javascript-format
 msgid ""
@@ -745,46 +761,49 @@ msgid ""
 "your data, simply delete your account, this in fact wipes all privacy "
 "relevant traces. Your placed pixels will of course not be deleted."
 msgstr ""
+"Hər hansı hüquqi məsələlər üçün ${ mailLink } ilə əlaqə saxlayın. "
+"Məlumatlarınızı silmək istəyirsinizsə, sadəcə hesabınızı silin; bu, "
+"məxfiliklə bağlı bütün izləri faktiki olaraq aradan qaldırır. Lakin "
+"yerləşdirdiyiniz piksellər əlbəttə ki silinməyəcək."
 
 msgid "For one day"
-msgstr ""
+msgstr "Bir günlük"
 
 msgid "For one month"
-msgstr ""
+msgstr "Bir aylıq"
 
 msgid "For one week"
-msgstr ""
+msgstr "Bir həftəlik"
 
 msgid "For one year"
-msgstr ""
+msgstr "Bir illik"
 
 msgid "For when you are playing on a potato."
 msgstr "Kartoşka ilə oynayırsanızsa seçin."
 
 msgid "Forever"
-msgstr ""
+msgstr "Həmişəlik"
 
 msgid "From History"
-msgstr ""
+msgstr "Tarixdən"
 
-#, fuzzy
 msgid "From Template"
-msgstr "Şablonlar"
+msgstr "Şablondan"
 
 msgid "Get IID"
-msgstr "IID'yi əldə edin"
+msgstr "IID'yi əldə et"
 
 msgid "Get Pixels"
-msgstr "Pixelləri əldə edin"
+msgstr "Pixelləri əldə et"
 
 msgid "Get Users"
-msgstr "İstifadəçiləri əldə edin"
+msgstr "İstifadəçiləri əldə et"
 
 msgid "Get email address"
-msgstr ""
+msgstr "Email ünvanlarını əldə et"
 
 msgid "Get the amount of Pixels placed and ranking"
-msgstr ""
+msgstr "Yerləşdirilmiş piksellərin miqdarını və sıralamanı əldə et"
 
 msgid "Globe View"
 msgstr "Dünya Görünümü"
@@ -793,7 +812,7 @@ msgid "Go to"
 msgstr "Get"
 
 msgid "Grant"
-msgstr ""
+msgstr "İcazə ver"
 
 msgid "Grid OFF"
 msgstr "Tor bağlandı"
@@ -802,7 +821,7 @@ msgid "Grid ON"
 msgstr "Tor qoşuldu"
 
 msgid "Groups"
-msgstr ""
+msgstr "Qruplar"
 
 msgid "Have fun!"
 msgstr "Əylənin!"
@@ -821,20 +840,20 @@ msgstr ""
 "Burada yalnız biridir."
 
 msgid "Hide Embed"
-msgstr ""
+msgstr "Embedi gizlət"
 
 msgid "Hide from profile"
-msgstr ""
+msgstr "Profildən gizlət"
 
 msgid ""
 "Higher zoomlevels take some time to update, the 3D globe gets updated at "
 "least once per day."
 msgstr ""
-"Löhvəyə uzaqdan baxdıqca yenilənmə vaxtı artır.3D dünya hər gün ən az 1 dəfə "
-"yenilənir."
+"Löhvəyə uzaqdan baxdıqca yenilənmə vaxtı artır. 3D dünya hər gün ən az 1 "
+"dəfə yenilənir."
 
 msgid "Historical View"
-msgstr "Tarixsəl baxış"
+msgstr "Tarixi Görünüş"
 
 #, fuzzy, javascript-format
 msgid "Hold left ${ bindShift } for pencil (to place while moving mouse)"
@@ -849,10 +868,10 @@ msgid "I forgot my Password."
 msgstr "Şifrəmi unutdum."
 
 msgid "ID"
-msgstr ""
+msgstr "İD"
 
 msgid "IID (optional)"
-msgstr "IID(istəyə bağlıdır)"
+msgstr "IID (istəyə bağlıdır)"
 
 msgid "IID Actions"
 msgstr "IID fəaliyyətləri"
@@ -861,7 +880,7 @@ msgid "IP Actions"
 msgstr "IP fəaliyyətləri"
 
 msgid "Identifiers"
-msgstr ""
+msgstr "Tanıdıcılar"
 
 #, javascript-format
 msgid ""
@@ -870,11 +889,17 @@ msgid ""
 "mail to ${ mailLink } and, in case of a ban, include the BID you got in the "
 "ban message."
 msgstr ""
+"Əgər proksi kimi aşkarlandınız, amma onu istifadə etmirsinizsə, yaxud səhvən "
+"banlandığınızı düşünürsünüzsə, zəhmət olmasa ${ guildedLink } vasitəsilə "
+"bizimlə əlaqə saxlayın və ya ${ mailLink } ünvanına e-poçt göndərin. Ban "
+"halında, ban mesajında göstərilən BID-i daxil etməyi unutmayın."
 
 msgid ""
 "If you talk to moderators or administrators, you might get asked for one of "
 "the following identifiers:"
 msgstr ""
+"Moderatorlar və ya administratorlarla danışsanız, aşağıdakı tanıdıcılardan "
+"birini daxil etməyiniz istənə bilər:"
 
 msgid "Image Converter"
 msgstr "Şəkil Dönüşdürücüsü"
@@ -886,7 +911,7 @@ msgid "Import templates"
 msgstr "Şablonları daxil et"
 
 msgid "Incorrect password"
-msgstr ""
+msgstr "Yanlış şifrə"
 
 msgid "Interval"
 msgstr "İnterval"
@@ -895,7 +920,7 @@ msgid "Interval is invalid"
 msgstr "İnterval keçərsizdir"
 
 msgid "Invalid Canvas"
-msgstr "Keçərsiz taxta"
+msgstr "Keçərsiz lövhə"
 
 msgid "Invalid Coordinates"
 msgstr "Keçərsiz koordinatlar"
@@ -904,77 +929,81 @@ msgid "Invalid color selected"
 msgstr "Keçərsiz rənk seçildi"
 
 msgid "Invite"
-msgstr ""
+msgstr "Dəvət et"
 
 msgid "Invited to Chat"
-msgstr ""
+msgstr "Söhbətə dəvət edildi"
 
 msgid "Invites"
-msgstr ""
+msgstr "Dəvətlər"
 
 msgid "Is One-Time-Invite"
-msgstr ""
+msgstr "Birdəfəlik dəvətdir"
 
 msgid ""
 "It requests the following permissions. Uncheck what you don't want to grant:"
 msgstr ""
+"Aşağıdakı icazələri tələb edir. Vermək istəmədiyiniz icazələrin işarəsini "
+"götürün:"
 
 msgid "Jannies can rollback and protect, but not watch or ban."
 msgstr ""
+"Adminlər əməliyyatları geri qaytara və qoruyabilir, amma izləyə və ya ban "
+"edə bilməz."
 
 msgid "Join"
-msgstr ""
+msgstr "Qoşul"
 
 msgid "Join Faction"
-msgstr ""
+msgstr "Fraksiyaya qoşul"
 
 msgid "Joined"
-msgstr ""
+msgstr "Qoşuldu"
 
 msgid "Just for registered Users"
 msgstr "Yalnız qeydiyyatdan keçmiş istifadəçilər üçün"
 
 msgid "Just for verified Users"
-msgstr ""
+msgstr "Yalnız təsdiqlənmiş istifadəçilər üçün"
 
 msgid "Just the Top10 of yesterday can place here"
-msgstr "Yanlızca dünənin top 10'u bura piksel qoyabilər"
+msgstr "Yanlızca dünənin top 10-u bura piksel qoyabilər"
 
 msgid "Keep Ratio"
 msgstr "Nisbəti Qoru"
 
 msgid "Kick"
-msgstr ""
+msgstr "At"
 
 msgid "Kick members"
-msgstr ""
+msgstr "Üzvləri at"
 
 msgid "Know that an account exists"
-msgstr ""
+msgstr "Hesabın mövcud olduğunu bilin"
 
 msgid "Leave"
-msgstr ""
+msgstr "Tərk et"
 
 msgid "Leave Faction"
-msgstr ""
+msgstr "Fraksiyanı tərk et"
 
 msgid "Legal Requests"
-msgstr ""
+msgstr "Hüquqi Tələblər"
 
 msgid "Let everyone join this faction"
-msgstr ""
+msgstr "Hərkəsin bu fraksiyaya qoşulmasına icazə ver"
 
 msgid "Let people join this faction without needing an invite."
-msgstr ""
+msgstr "İnsanların dəvətsiz bu fraksiyaya qoşulmalarına icazə ver."
 
 msgid "Level"
-msgstr ""
+msgstr "Səviyyə"
 
 msgid "Light Grid"
-msgstr "İşıqlı grid"
+msgstr "İşıqlı tor"
 
 msgid "Load Captcha"
-msgstr "Captchanı yükləyin"
+msgstr "Captchanı yüklə"
 
 msgid "Loading"
 msgstr "Yüklənir"
@@ -983,46 +1012,46 @@ msgid "Loading..."
 msgstr "Yüklənir..."
 
 msgid "Log in or Register"
-msgstr ""
+msgstr "Daxil ol və ya qeydiyyatdan keç"
 
 msgid "Log out"
 msgstr "Çıxış edin"
 
 msgid "Log out a Session:"
-msgstr ""
+msgstr "Sessiyadan çıxın:"
 
 msgid "LogIn"
 msgstr "Daxil olun"
 
 msgid "Login Methods"
-msgstr ""
+msgstr "Daxil olma metodları"
 
 msgid "Login to access more features and stats."
 msgstr "Daha çox məlumata sahib olmaq üçün daxil olun."
 
 msgid "Login to grant access to other application."
-msgstr ""
+msgstr "Digər tətbiqə giriş icazəsi vermək üçün daxil olun."
 
 msgid "Login to join us."
-msgstr ""
+msgstr "Bizə qoşulmaq üçün daxil olun."
 
 msgid "Login to other application"
-msgstr ""
+msgstr "Digər tətbiqə daxil ol"
 
 msgid "Login with Name or Mail:"
 msgstr "Ad vəya Mail ilə daxil olun:"
 
 msgid "Make Screenshot"
-msgstr "Ekran görüntüsü al"
+msgstr "Ekran görüntüsü çək"
 
 msgid "Manage Moderators"
-msgstr "Moderatorları düzənlə"
+msgstr "Moderatorların idarəsi"
 
 msgid "Manage Templates"
-msgstr ""
+msgstr "Şablonların idarəsi"
 
 msgid "Manage invites"
-msgstr ""
+msgstr "Dəvətlərin idarəsi"
 
 msgid "Map Data"
 msgstr "Xəritə Qaynağı"
@@ -1062,7 +1091,7 @@ msgid "Muted Sound"
 msgstr "Səs bağlandı"
 
 msgid "My Factions"
-msgstr ""
+msgstr "Mənim fraksiyalarım"
 
 msgid "Name"
 msgstr "Ad"
