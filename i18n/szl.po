@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: admin@pixelplanet.fun\n"
-"PO-Revision-Date: 2026-06-05 12:30+0000\n"
+"PO-Revision-Date: 2026-06-06 13:30+0000\n"
 "Last-Translator: kyvvra <silesianreal@noreply.pixelplanet.fun>\n"
 "Language-Team: Silesian <https://translate.gs-os.com/projects/ppfun/client/"
 "szl/>\n"
@@ -26,7 +26,7 @@ msgstr "${ mouseSymbol } Trzimej lewy knefel myszy i suń myszkōm, coby ôbrōc
 #, javascript-format
 msgid "${ mouseSymbol } Left click or ${ touchSymbol } tap to place a pixel"
 msgstr ""
-"${ mouseSymbol } Kliknij lewym knefelem myszy abo ${ touchSymbol } kliknij, "
+"${ mouseSymbol } Kliknij lewym knefelem myszy abo ${ touchSymbol } dotknij, "
 "coby rysować"
 
 #: src/components/windows/Help.jsx:138
@@ -43,7 +43,7 @@ msgid ""
 "pixel"
 msgstr ""
 "${ mouseSymbol} Kliknij prawym knefelem abo ${ touchSymbol } dwukrotnie "
-"kliknij, coby wyciepać piksel"
+"dotknij, coby wyciepać piksel"
 
 #: src/components/windows/Help.jsx:137
 #, javascript-format
@@ -466,7 +466,7 @@ msgid ""
 "select current hovering color"
 msgstr ""
 "Kliknij ${ mouseSymbol} strzodkowy knefel myszy abo ${ touchSymbol } dugie-"
-"kliknyńcie, coby wybrać teroźno farba na kursōrze"
+"dotknyńcie, coby wybrać teroźno farba na kursōrze"
 
 #: src/components/windows/Help.jsx:117
 msgid "Click a color in palette to select it"
@@ -3027,7 +3027,7 @@ msgid ""
 "Zoom in instead of placing a pixel when you tap the canvas and your zoom is "
 "small."
 msgstr ""
-"Przybliż zamiast rysowanio piksela, kej klikniesz płōtno, a przybliżynie je "
+"Przybliż zamiast rysowanio piksela, kej dotkniesz płōtno, a przybliżynie je "
 "małe."
 
 #: src/components/windows/User.jsx:110

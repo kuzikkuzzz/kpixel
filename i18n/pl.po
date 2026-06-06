@@ -1,16 +1,16 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: admin@pixelplanet.fun\n"
-"PO-Revision-Date: 2026-04-29 22:09+0000\n"
+"PO-Revision-Date: 2026-06-06 13:30+0000\n"
 "Last-Translator: \"[☭]FalangaMan[Z]\" <falangaman@noreply.pixelplanet.fun>\n"
-"Language-Team: Polish <https://translate.gs-os.com/projects/ppfun/client/pl/"
-">\n"
+"Language-Team: Polish <https://translate.gs-os.com/projects/ppfun/client/pl/>"
+"\n"
 "Language: pl\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=3; plural=n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<10 "
 "|| n%100>=20) ? 1 : 2;\n"
-"X-Generator: Weblate 5.15.2\n"
+"X-Generator: Weblate 2026.5\n"
 
 msgid " which is in "
 msgstr " który jest w "
@@ -95,7 +95,7 @@ msgid "Add Template"
 msgstr "dodaj szablon"
 
 msgid "Add a new E-Mail Address here:"
-msgstr ""
+msgstr "Dodaj nowy adres E-mail tutaj:"
 
 #. This if for moderation tools, it's not important to translate this
 msgid "Admintools"
@@ -341,7 +341,7 @@ msgid "Click a color in palette to select it"
 msgstr "Kliknij kolor w palecie, aby go wybrać"
 
 msgid "Click here to cease representation."
-msgstr ""
+msgstr "Kliknij tutaj aby przestać reprezentować."
 
 msgid "Click here to request a new verification mail."
 msgstr "Kliknij tutaj, aby poprosić o nową wiadomość weryfikacyjną."
@@ -1021,7 +1021,7 @@ msgid "Manage Moderators"
 msgstr "Zarządzaj moderatorami"
 
 msgid "Manage Templates"
-msgstr ""
+msgstr "Zarządzanie Szablonami"
 
 msgid "Manage invites"
 msgstr ""
@@ -1058,7 +1058,7 @@ msgid "Move"
 msgstr "Przenieś"
 
 msgid "Mute Channel"
-msgstr ""
+msgstr "Wycisz Kanał"
 
 msgid "Muted Sound"
 msgstr "Dźwięk wyciszony"
@@ -1127,7 +1127,7 @@ msgid "No results."
 msgstr "Brak Wyników."
 
 msgid "Nobody is banned from this faction"
-msgstr ""
+msgstr "Nikt nie jest zbanowany z tej frakcji"
 
 msgid "Not Allowed"
 msgstr "Nie Dozwolony"
