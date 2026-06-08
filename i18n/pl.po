@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: admin@pixelplanet.fun\n"
-"PO-Revision-Date: 2026-06-06 13:30+0000\n"
-"Last-Translator: \"[☭]FalangaMan[Z]\" <falangaman@noreply.pixelplanet.fun>\n"
+"PO-Revision-Date: 2026-06-08 17:30+0000\n"
+"Last-Translator: kyvvra <silesianreal@noreply.pixelplanet.fun>\n"
 "Language-Team: Polish <https://translate.gs-os.com/projects/ppfun/client/pl/>"
 "\n"
 "Language: pl\n"
@@ -45,23 +45,23 @@ msgid ""
 "${ mouseSymbol } Scroll mouse wheel or hold ${ mouseSymbol } middle mouse "
 "button and drag to zoom"
 msgstr ""
-"${ mouseSymbol } Scrolluj lub przytrzymaj ${ mouseSymbol } środkowy przycisk "
-"myszy i przeciągnij, aby powiększyć"
+"${ mouseSymbol } Przewiń kółkiem myszy lub przytrzymaj ${ mouseSymbol } "
+"środkowy przycisk myszy i przeciągnij, aby powiększyć"
 
 msgid "(0 = infinite)"
 msgstr "(0 = nieskończony)"
 
 msgid "(click a role to activate it)"
-msgstr "(kliknij na role aby ją aktywować)"
+msgstr "(kliknij na rolę aby ją aktywować)"
 
 msgid "(click a role to assign or remove it)"
-msgstr "(kliknij na role aby ją nadać albo usunąć)"
+msgstr "(kliknij na rolę, aby ją nadać albo usunąć)"
 
 msgid "+last hour"
-msgstr "+Ostatnia Godzina"
+msgstr "+ostatnia godzina"
 
 msgid "...loading Login methods and sessions..."
-msgstr "...Ładowanie Metody Logowania i sesje..."
+msgstr "...Ładowanie metod logowania i sesje..."
 
 msgid "A Phish!"
 msgstr "Ryba!"
@@ -70,6 +70,8 @@ msgid ""
 "A flag representing the role, it should be 16x11 pixels. If left empty, "
 "users with this role selected will still show their own flags."
 msgstr ""
+"Flaga reprezentujaca rolę, powinna być 16x11 pikseli. Jeśli pozostanie "
+"pusta, użytkownicy z tą rolą będą pokazywali swoje własne flagi."
 
 msgid "A new verification mail is getting sent to you."
 msgstr "Zostanie do Ciebie wysłana nowa wiadomość weryfikacyjna."
@@ -78,88 +80,93 @@ msgid ""
 "A role has all the permissions of all levels below and equal to it. In "
 "example: Every role with a power level of >=50 can manage invites (50)."
 msgstr ""
+"Rola ma wszystkie permisje wszystkich poziomów poniżej i równej jej. Na "
+"przykład: Każda rola z poziomem władzy >=50 może zarządzać zaproszeniami (50)"
+"."
 
 msgid "ACCESS MODTOOLS"
-msgstr ""
+msgstr "WEJDŹ DO NARZĘDZI MODERATORA"
 
 #. modlogLink has the text "Moderation Log"
 #, javascript-format
 msgid ""
 "Actions taken by moderators on the canvas can be seen in the ${ modlogLink }."
 msgstr ""
+"Akcje podjęte przez moderatorów na płótnie mogą być widoczne w ${ "
+"modlogLink }."
 
 msgid "Add Grid (uncheck if you need a 1:1 template)"
-msgstr "Dodaj Siatkę (odznacz jeśli potrzebujesz szablonu 1:1)"
+msgstr "Dodaj siatkę (odznacz jeśli potrzebujesz szablonu 1:1)"
 
 msgid "Add Template"
-msgstr "dodaj szablon"
+msgstr "Dodaj szablon"
 
 msgid "Add a new E-Mail Address here:"
-msgstr "Dodaj nowy adres E-mail tutaj:"
+msgstr "Dodaj nowy adres e-mail tutaj:"
 
 #. This if for moderation tools, it's not important to translate this
 msgid "Admintools"
-msgstr "Narzędzia Admina"
+msgstr "Narzędzia admina"
 
 msgid "Age"
 msgstr "Wiek"
 
 msgid "All members of this faction are hidden"
-msgstr ""
+msgstr "Wszyscy członkowie tej frakcji są ukryci"
 
 msgid "All sound effects will be disabled."
-msgstr "wszystkie efekty dźwiękowe będą wyłączone."
+msgstr "Wszystkie efekty dźwiękowe będą wyłączone."
 
 msgid "Always show Movement Controls"
-msgstr "zawsze pokazuj kontrolki ruchu"
+msgstr "Zawsze pokazuj sterowanie ruchem"
 
 msgid "Always show movement control buttons"
-msgstr "zawsze pokazuj klawisze ruchu"
+msgstr "Zawsze pokazuj klawisze sterowania ruchem"
 
 msgid "An image representing your faction"
-msgstr ""
+msgstr "Zdjęcie reprezentujące twoją frakcję"
 
 msgid "Anti Aliasing"
-msgstr "anti aliasing"
+msgstr "Wygładzanie"
 
 msgid "Apply a filter to clean trash in large canvas areas."
 msgstr "Zastosuj filtr, aby wyczyścić śmieci na dużych obszarach płótna."
 
 msgid "Archive"
-msgstr "Archiwa"
+msgstr "Archiwum"
 
 msgid "Assign Roles"
-msgstr "Dodaj Role"
+msgstr "Nadaj role"
 
 msgid "Assign new Mod"
-msgstr "Przypisz nowego moda"
+msgstr "Nadaj nowego moda"
 
 msgid "Assign role per default to new members"
-msgstr ""
+msgstr "Nadaj rolę jako domyślną dla nowych członków"
 
 msgid "Assign roles below their own"
-msgstr ""
+msgstr "Nadaj role poniżej ich własnych"
 
 msgid "Assign this role to every new member automatically on join."
-msgstr ""
+msgstr "Nadaj tę rolę dla każdego nowego członka automatycznie, gdy dołączy."
 
 msgid "Assigned role per default"
-msgstr ""
+msgstr "Nadana rola domyślnie"
 
 msgid "Attach File"
-msgstr "Załącz Plik"
+msgstr "Załącz plik"
 
 msgid "Auto Zoom In"
 msgstr "Automatyczne przybliżenie"
 
 msgid "Avatar"
-msgstr "Zdjęcie Profilowe"
+msgstr "Awatar"
 
 msgid "Back"
-msgstr "Spowrotem"
+msgstr "Wstecz"
 
 msgid "Badge Display"
-msgstr "Pokaż Odznaki"
+msgstr "Wystawa odznak"
 
 msgid "Badges"
 msgstr "Odznaki"
@@ -168,37 +175,41 @@ msgid "Ban"
 msgstr "Zbanuj"
 
 msgid "Ban media"
-msgstr "Zbanuj media"
+msgstr "Zbanuj medium"
 
 msgid "Ban members"
-msgstr "Zbanuj Użytkowników"
+msgstr "Zbanuj użytkowników"
 
 msgid "Banned"
 msgstr "Zbanowany"
 
 msgid "Banned? Detected as Proxy?"
-msgstr "Zbanowany? Wykryty jako Proxy?"
+msgstr "Zbanowany? Wykryty jako proxy?"
 
 msgid "Bans"
 msgstr "Bany"
 
 msgid "Block"
-msgstr "Blok"
+msgstr "Zablokuj"
 
 msgid "Block DMs"
-msgstr "Blokuj DM"
+msgstr "Zablokuj prywatne wiadomości"
 
 msgid ""
 "Block all Private Messages. Enabling this will make it impossible for other "
 "users to start messaging you. You can still start new DMs with other users "
 "and already ongoing DMs will still be open."
 msgstr ""
+"Zablokuj wszystkie prywatne wiadomości. Włączanie tej opcji sprawi "
+"uniemożliwi innym użytkownikom wysłanie wiadomości do Ciebie. Możesz wciąż "
+"zacząć nowe prywatne wiadomości z innymi użytkownikami, a trwające już "
+"wiadomości prywatne wciąż będą otwarte."
 
 msgid "Blocked"
 msgstr "Zablokowany"
 
 msgid "Bottom-right corner"
-msgstr "Prawy-Dolny róg"
+msgstr "Prawy-dolny róg"
 
 msgid "Build image and set it to protected."
 msgstr "Zbuduj obraz i ustaw go jako chroniony."
@@ -210,24 +221,25 @@ msgid "Build image, but reset cooldown to unset-pixel cd."
 msgstr "Zbuduj obraz, ale zresetuj czas odnowienia do świeżych pixeli."
 
 msgid "By Mod"
-msgstr "Przez Administratora"
+msgstr "Przez moda"
 
 msgid "Calculate like GIMP"
 msgstr "Wylicz jako GIMP"
 
 msgid "Can not export more than 20 or no template!"
-msgstr "Nie można wyeksportować więcej niż 20 szablonów lub żadnego szablonu!"
+msgstr ""
+"Nie można wyeksportować więcej niż 20 szablonów lub nie wyeksportować "
+"żadnego!"
 
 msgid "Can not import more than 20 or no template!"
 msgstr ""
-"Nie można importować więcej niż 20 szablonów lub nie można zaimportować "
-"żadnego szablonu!"
+"Nie można zaimportować więcej niż 20 szablonów lub nie zaimportować żadnego!"
 
 msgid "Can't read? Reload:"
-msgstr "Nie możesz rozczytać? załaduj ponownie:"
+msgstr "Nie możesz się rozczytać? Załaduj ponownie:"
 
 msgid "Can't render 3D canvas, do you have WebGL2 disabled?"
-msgstr "Nie można wczytać płótna 3D, masz WebGL2 wyłączony?"
+msgstr "Nie można wczytać płótna 3D, czy masz wyłączony WebGL2?"
 
 msgid "Cancel"
 msgstr "Anuluj"
@@ -242,10 +254,10 @@ msgid "Canvas Archive"
 msgstr "Archiwum płótna"
 
 msgid "Canvas Cleaner"
-msgstr "Oczyszczacz Płótna"
+msgstr "Oczyszczacz płótna"
 
 msgid "Canvas Error"
-msgstr "Błąd Płótna"
+msgstr "Błąd płótna"
 
 msgid "Canvas Selection"
 msgstr "Wybór płótna"
@@ -254,25 +266,25 @@ msgid "Captcha"
 msgstr "Captcha"
 
 msgid "Caught by"
-msgstr "Złapana Przez"
+msgstr "Złapana przez"
 
 msgid "Change Flag"
-msgstr "Zmień Flage"
+msgstr "Zmień flage"
 
 msgid "Change Happened"
-msgstr "Nastąpiła Zmiana"
+msgstr "Nastąpiła zmiana"
 
 msgid "Change Name"
-msgstr "Zmień Nazwe"
+msgstr "Zmień nazwę"
 
 msgid "Change Password"
-msgstr "zmień hasło"
+msgstr "Zmień hasło"
 
 msgid "Channel"
 msgstr "Kanał"
 
 msgid "Channel settings"
-msgstr "ustawienia kanału"
+msgstr "Ustawienia kanału"
 
 msgid "Charts"
 msgstr "Wykresy"
@@ -287,7 +299,7 @@ msgid "Check out past versions of the canvas."
 msgstr "Sprawdź poprzednie wersje płótna."
 
 msgid "Check to allow"
-msgstr ""
+msgstr "Zaznacz, aby pozwolić"
 
 msgid "Check who placed in an area"
 msgstr "Sprawdź, kto stawiał pixele w danym obszarze"
@@ -299,10 +311,10 @@ msgid "Choose Color Mode"
 msgstr "Wybierz tryb koloru"
 
 msgid "Choose Strategy"
-msgstr "Wybierz strategie"
+msgstr "Wybierz strategię"
 
 msgid "Choose Username"
-msgstr "Wybierz Nazwe"
+msgstr "Wybierz nazwę użytkownika"
 
 msgid ""
 "Clean spare pixels that are surrounded by a single other color or unset "
@@ -324,7 +336,7 @@ msgstr ""
 "inny ustawiony piksel"
 
 msgid "Cleaners can use 0cd blank colors."
-msgstr ""
+msgstr "Oczyszczacze płócien mogą używać pustych kolorów o czasie odnowienia 0."
 
 msgid "Clear"
 msgstr "Wyczyść"
@@ -334,8 +346,8 @@ msgid ""
 "Click ${ mouseSymbol } middle mouse button or ${ touchSymbol } long-tap to "
 "select current hovering color"
 msgstr ""
-"Kliknij ${ mouseSymbol } środkowy przycisk myszy lub ${ touchSymbol } i "
-"przytrzymaj, aby wybrać bieżący kolor na który kieruje twój kursor"
+"Kliknij ${ mouseSymbol } środkowy przycisk myszy lub ${ touchSymbol } "
+"przytrzymaj, aby wybrać bieżący kolor, na którym kieruje twój kursor"
 
 msgid "Click a color in palette to select it"
 msgstr "Kliknij kolor w palecie, aby go wybrać"
@@ -344,16 +356,16 @@ msgid "Click here to cease representation."
 msgstr "Kliknij tutaj aby przestać reprezentować."
 
 msgid "Click here to request a new verification mail."
-msgstr "Kliknij tutaj, aby poprosić o nową wiadomość weryfikacyjną."
+msgstr "Kliknij tutaj, aby poprosić o nowy weryfikacyjny e-mail."
 
 msgid "Click to Load Captcha"
-msgstr "Kliknij aby załadować Captch'e"
+msgstr "Kliknij, aby załadować Captche"
 
 msgid "Click to remove"
-msgstr "Kliknij aby usunąć"
+msgstr "Kliknij, aby usunąć"
 
 msgid "Clone"
-msgstr "Skopiuj"
+msgstr "Klonuj"
 
 msgid "Close"
 msgstr "Zamknij"
@@ -362,28 +374,28 @@ msgid "Close Chat"
 msgstr "Zamknij czat"
 
 msgid "Close Palette"
-msgstr "Zamknij Palete"
+msgstr "Zamknij paletę"
 
 msgid "Compact Chat"
-msgstr "Kompaktowy Czat"
+msgstr "Kompaktuj czat"
 
 msgid "Compact Palette"
-msgstr "Kompaktowa paleta kolorów"
+msgstr "Kompaktuj paletę"
 
 msgid "Confirm"
 msgstr "Potwierdź"
 
 msgid "Confirm Ban"
-msgstr "Potwierdź Bana"
+msgstr "Potwierdź bana"
 
 msgid "Confirm Delete"
-msgstr "Potwierdż Usunięcie"
+msgstr "Potwierdż usunięcie"
 
 msgid "Confirm Kick"
-msgstr "Potwierdź wyjebanie"
+msgstr "Potwierdź wyrzucenie"
 
 msgid "Confirm Leave"
-msgstr "Potwierdż Opuszczenie"
+msgstr "Potwierdż opuszczenie"
 
 msgid "Confirm New Password"
 msgstr "Potwierdź nowe hasło"
@@ -392,7 +404,7 @@ msgid "Confirm Password"
 msgstr "Potwierdź hasło"
 
 msgid "Confirm your password."
-msgstr "Potwierdź Hasło."
+msgstr "Potwierdź hasło."
 
 #, javascript-format
 msgid "Connection error ${ code } :("
@@ -402,7 +414,7 @@ msgid "Consent"
 msgstr "Zgoda"
 
 msgid "Controls"
-msgstr "Sterownica"
+msgstr "Sterowanie"
 
 msgid "Convert an image to canvas colors"
 msgstr "Konwertuj obraz w kolory płótna"
@@ -411,12 +423,14 @@ msgid "Converter"
 msgstr "Konwerter"
 
 msgid "Cooldown"
-msgstr "cooldown"
+msgstr "Czas odnowienia"
 
 msgid ""
 "Cooldown is usually automatically changed for a country that is dominating. "
 "In example in the case of a streamer raid."
 msgstr ""
+"Czas odnowienia jest zazwyczaj automatycznie zmieniany dla krajów, które są "
+"dominujące. Na przykład podczas raidów streamerów."
 
 msgid "Coordinates"
 msgstr "Koordynaty"
@@ -431,46 +445,46 @@ msgid "Copy"
 msgstr "Kopiuj"
 
 msgid "Copy Link"
-msgstr "Skopiuj Link"
+msgstr "Skopiuj link"
 
 msgid "Copy Selected to Clipboard"
-msgstr ""
+msgstr "Skopiuj zaznaczone do schowka"
 
 msgid "Copy URL"
 msgstr "Kopiuj URL"
 
 msgid "Copy UserId to Clipboard"
-msgstr ""
+msgstr "Skopiuj ID użytkownika do schowka"
 
 msgid "Copy to Clipboard"
 msgstr "Skopiuj do schowka"
 
 msgid "Could not connect to server"
-msgstr ""
+msgstr "Nie mógł połączyć się do serwera"
 
 msgid "Could not connect to server, please try again later :("
-msgstr "Problem z połączeniem z serwerem, proszę spróbuj później :("
+msgstr "Nie mógł połączyć się do serwera, proszę spróbuj ponownie później :("
 
 msgid "Could not load captcha"
-msgstr "Nie byliśmy w stanie załadować Captch'y"
+msgstr "Nie mógł załadować Captchy"
 
 msgid "Could not process files"
-msgstr ""
+msgstr "Nie mógł przetworzyć plików"
 
 msgid "Couldn't set Pixel"
-msgstr "ustawienie pixela nie powiodło się"
+msgstr "Nie mógł postawić piksela"
 
 msgid "Countries Today"
 msgstr "Państwa dzisiaj"
 
 msgid "Country"
-msgstr "kraj"
+msgstr "Kraj"
 
 msgid "Create Faction"
-msgstr "Stwórz Frakcje"
+msgstr "Stwórz frakcje"
 
 msgid "Create Invite"
-msgstr "Stwórz Zaproszenie"
+msgstr "Stwórz zaproszenie"
 
 msgid "Create New Faction"
 msgstr "Stwórz Frakcje"
@@ -479,31 +493,31 @@ msgid "Create New Invite"
 msgstr "Stwórz Nowe Zaproszenie"
 
 msgid "Create New Role"
-msgstr "Stwórz Nową Role"
+msgstr "Stwórz nową rolę"
 
 msgid "Create Role"
-msgstr "Stwórz Role"
+msgstr "Stwórz rolę"
 
 msgid "Create roles"
-msgstr "Stwórz Role"
+msgstr "Stwórz role"
 
 #, javascript-format
 msgid "Credit for the Palette of the 2bit canvas goes to ${ donendoLink }."
-msgstr "Zaszczyt za palete kolorów płótna 2bit idzie do${ donendoLink }."
+msgstr "Zaszczyt za palete kolorów płótna 2bit idzie do ${ donendoLink }."
 
 #, javascript-format
 msgid "Credit for the Palette of the Moon goes to ${ starhouseLink }."
-msgstr "zaszczyt za palete kolorów księżyca idzie do ${ starhouseLink }."
+msgstr "Zaszczyt za palete kolorów płótna księżyca idzie do ${ starhouseLink }."
 
 #, javascript-format
 msgid "Credit for the Palette of the Top10 canvas goes to ${ vinikLink }."
-msgstr "Zaszczyt za palete kolorów płótna top 10 idzie do ${ vinikLink }."
+msgstr "Zaszczyt za palete kolorów płótna Top 10 idzie do ${ vinikLink }."
 
 msgid "Current Cooldown Changes per Country"
-msgstr ""
+msgstr "Aktualne zmiany czasów odnowień dla poszczególnych krajów"
 
 msgid "Custom Cursor"
-msgstr ""
+msgstr "Niestandardowy kursor"
 
 msgid "Custom Flag"
 msgstr "Custom Flaga"
@@ -559,7 +573,7 @@ msgid "Description can't be empty"
 msgstr "Opis nie może być pusty"
 
 msgid "Description must be shorter than 1000 characters"
-msgstr "Opis musi być krotszy niż 1000 liter"
+msgstr "Opis musi być krótszy niż 1000 znaków"
 
 msgid "Description of your faction"
 msgstr "Opis Twojej Frakcji"
@@ -592,7 +606,7 @@ msgstr ""
 "ekranie."
 
 msgid "Do stuff with IPs (one IP per line)"
-msgstr "Rób różne rzeczy z adresami IP (jeden adres IP na linię)"
+msgstr "Rób różne rzeczy z adresami IP (jeden adres IP na wiersz)"
 
 msgid ""
 "Don't let people find this faction in public search or look at its profile."
@@ -647,10 +661,10 @@ msgid "Email"
 msgstr "Email"
 
 msgid "Email can't be empty."
-msgstr "Okienko z mailem nie może być puste."
+msgstr "E-mail nie może być pusty."
 
 msgid "Email can't be longer than 40 characters."
-msgstr "mail nie może być dłuższy niż 40 znaków."
+msgstr "E-mail nie może być dłuższy niż 40 znaków."
 
 msgid ""
 "Email is used to verify your account. You might get a cofirmation mail after "
@@ -658,13 +672,13 @@ msgid ""
 msgstr ""
 
 msgid "Email should at least contain a dot"
-msgstr "mail powinien zawierać przynajmniej kropkę"
+msgstr "E-mail powinien zawierać przynajmniej kropkę"
 
 msgid "Email should be at least 5 characters long."
-msgstr "Mail powinien mieć przynajmniej 5 znaków."
+msgstr "E-mail powinien być przynajmniej 5 znaków długi."
 
 msgid "Email should contain a @"
-msgstr "mail powinien zawierać @"
+msgstr "E-mail powinien zawierać @"
 
 msgid "Enable Overlay"
 msgstr "Włącz nakładkę"
@@ -785,10 +799,10 @@ msgid "Get Users"
 msgstr "Sprawdź Użytkowników"
 
 msgid "Get email address"
-msgstr ""
+msgstr "Uzyskaj adres e-mail"
 
 msgid "Get the amount of Pixels placed and ranking"
-msgstr ""
+msgstr "Uzyskaj liczbę umieszczonych pikseli i ranking"
 
 msgid "Globe View"
 msgstr "Globusowy widok"
@@ -888,7 +902,7 @@ msgid "Import templates"
 msgstr "importuj szablony"
 
 msgid "Incorrect password"
-msgstr ""
+msgstr "Nieprawidłowe hasło"
 
 msgid "Interval"
 msgstr "Interwał"
@@ -923,6 +937,8 @@ msgstr ""
 
 msgid "Jannies can rollback and protect, but not watch or ban."
 msgstr ""
+"Mini-moderatory mogą przywracać i ochraniać, ale nie mogą sprawdzać, kto "
+"postawił piksele, ani banować."
 
 msgid "Join"
 msgstr "Dołącz"
@@ -952,7 +968,7 @@ msgid "Kick members"
 msgstr "Usuń Członków"
 
 msgid "Know that an account exists"
-msgstr ""
+msgstr "Wiedz, jak konto istnieje"
 
 msgid "Leave"
 msgstr "Opuść"
@@ -1033,7 +1049,7 @@ msgid "Maximize"
 msgstr "Maksymalizuj"
 
 msgid "Media Actions"
-msgstr ""
+msgstr "Akcje mediów"
 
 msgid "Members"
 msgstr "Członkowie"
@@ -1070,7 +1086,7 @@ msgid "Name"
 msgstr "Pseudonim"
 
 msgid "Name can only contain the characters: a-z . _ and -"
-msgstr ""
+msgstr "Nazwa może zawierać tylko a-z, ., _, i -"
 
 msgid "Name can't be empty."
 msgstr "Nazwa nie może być pusta."
@@ -1195,12 +1211,12 @@ msgid ""
 "and 7s on already set pixels."
 msgstr ""
 "Naszym głównym płótnem jest ogromna mapa świata, na której możesz stawiać "
-"pixele gdziekolwiek chcesz, ale będziesz musiał poczekać określony czas na "
-"kolejne pixele, Możesz sprawdzić czas odnowienia i wymagania w menu wyboru "
-"płótna (przycisk kuli ziemskiej na górze). Niektóre płótna mają inny czas "
-"odnowienia podczas zastępowania pikseli ustawionych przez użytkownika niż "
-"umieszczanie ich na nieustawionych pikselach 4s/7s oznacza 4s na świeżych "
-"pikselach i 7s na już postawionych pikselach."
+"piksele gdziekolwiek chcesz, ale będziesz musiał poczekać określony czas "
+"odnowienia na kolejne piksele , Możesz sprawdzić czas odnowieniai wymagania "
+"w menu wyboru płótna (przycisk globusu na górze). Niektóre płótna mają inny "
+"czas odnowienia podczas zastępowania pikseli ustawionych przez użytkownika "
+"niż umieszczania ich na nieustawionych pikselach 4s/7s oznacza 4s na "
+"świeżych pikselach i 7s na już postawionych pikselach."
 
 msgid "Overlay OFF"
 msgstr "Overlay WYŁ"
@@ -1244,7 +1260,7 @@ msgid "Pencil picks: "
 msgstr ""
 
 msgid "Permission"
-msgstr "Permisja"
+msgstr "Uprawnienie"
 
 msgid "Permissions of Powerlevels"
 msgstr ""
@@ -1369,7 +1385,7 @@ msgstr ""
 "czasu uniwersalnego."
 
 msgid "Read Badges and fishes"
-msgstr ""
+msgstr "Pokaż odznaki i ryby"
 
 msgid "Read name, username and account age"
 msgstr ""
@@ -1462,7 +1478,6 @@ msgstr "Role"
 msgid "Roll different Captcha Fonts"
 msgstr ""
 
-#, fuzzy
 msgid "Rollback an area of the canvas to a set date and time"
 msgstr "Przywróć strefę mapy do ustawionej daty (00:00 UTC)"
 
@@ -1520,10 +1535,10 @@ msgid ""
 "requirements.\n"
 "Archived canvases can be accessed here:"
 msgstr ""
-"Wybierz płótno które chcesz użyć.\n"
-"Każde płótno jest wyjątkowe i ma wiele różnych palet kolorów, cooldown'u "
-"pixeli i wymagań.\n"
-"Archiwa usuniętych płócien mogą być znalezione tutaj:"
+"Wybierz płótno, które chcesz użyć.\n"
+"Każde płótno jest wyjątkowe i ma wiele różnych palet kolorów, czasów "
+"odnowienia i wymagania.\n"
+"Archiwa usuniętych płócien można uzyskać tutaj:"
 
 msgid "Select your Avatar. Supported Formats: jpg, gif, png, webp"
 msgstr ""
@@ -1681,7 +1696,7 @@ msgid "Themes"
 msgstr "Motywy"
 
 msgid "This URL is not supported by our Media Player"
-msgstr ""
+msgstr "Ten URL nie jest wspierany przez nasz odtwarzacz mediów"
 
 msgid "This canvas doesn't exist"
 msgstr "Ten canvas nie istnieje"
@@ -1694,8 +1709,8 @@ msgid ""
 msgstr ""
 "To płótno zostało stworzone na prośbę w czasach politycznych konfliktów na "
 "głównym płótnie Ziemi. Było ono reprezentacją kompasu politycznego w skali "
-"1024x1024 z 5s cooldown'em i 60s limitem. Aktywowane było ono 11 Maja i "
-"utrzymywało swoją aktywność przez miesiąc dopóki nie zostało wyłączone 30 "
+"1024x1024 z czasem odnowienia 5s i 60s limitem. Aktywowane było ono 11 maja "
+"i utrzymywało swoją aktywność przez miesiąc dopóki nie zostało wyłączone 30 "
 "listopada."
 
 msgid ""
@@ -1822,7 +1837,7 @@ msgid "Type the characters from the following image:"
 msgstr "Wypisz znaki znajdujące się na obrazie poniżej:"
 
 msgid "Unban media"
-msgstr ""
+msgstr "Odbanuj medium"
 
 msgid "Unban members"
 msgstr ""
@@ -2006,6 +2021,8 @@ msgid ""
 "You caught a Phish! It is a ${ FISH_TYPES[type].name } with ${ size }kg! As "
 "a bonus, your cooldown is reduced."
 msgstr ""
+"Złapałeś rybę! Jest to ${ FISH_TYPES[type].name } z ${ size }kg! Jako bonus, "
+"twój czas odnowienia jest obniżony."
 
 msgid "You did not consent"
 msgstr ""
@@ -2035,7 +2052,7 @@ msgid "You must enter a UserId"
 msgstr ""
 
 msgid "You must enter a mediaId or media BID"
-msgstr ""
+msgstr "Musisz wpisać ID albo BID medium"
 
 msgid "You must enter a reason"
 msgstr ""
@@ -2059,7 +2076,7 @@ msgid "You must select an avatar for your faction"
 msgstr ""
 
 msgid "You took too long, try again."
-msgstr "Trwało to zbyt długo. Spróbuj ponownie."
+msgstr "Zajęło Tobie to zbyt długo. Spróbuj ponownie."
 
 msgid ""
 "Your Browser doesn't allow us to use AudioContext to play sounds. Do you "
@@ -2157,7 +2174,7 @@ msgstr "z poza granicami"
 
 msgctxt "media-player"
 msgid "Player"
-msgstr ""
+msgstr "Odtwarzacz"
 
 msgctxt "keybinds"
 msgid "A"
