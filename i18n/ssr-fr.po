@@ -1,23 +1,24 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: admin@pixelplanet.fun\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2024-04-23 16:07+0000\n"
-"Last-Translator: weblate <weblate@noreply.pixelplanet.fun>\n"
-"Language-Team: French <https://hosted.weblate.org/projects/pixelplanet/"
-"server/fr/>\n"
+"PO-Revision-Date: 2026-06-09 10:25+0000\n"
+"Last-Translator: Sylvainstein <sylvainstein@noreply.pixelplanet.fun>\n"
+"Language-Team: French <https://translate.gs-os.com/projects/ppfun/server/fr/>"
+"\n"
 "Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n > 1;\n"
-"X-Generator: Weblate 5.5-dev\n"
+"X-Generator: Weblate 2026.5\n"
 
 msgid "1bit"
 msgstr "1bit"
 
 msgid "2bit"
-msgstr ""
+msgstr "2bit"
 
 msgid "3D Canvas"
 msgstr "Toile 3D"
@@ -33,34 +34,34 @@ msgstr ""
 "journalier est mis à jour à minuit UTC."
 
 msgid "A file was too large"
-msgstr ""
+msgstr "Un ficher fichier était trop large"
 
 msgid "Access modtools"
-msgstr ""
+msgstr "Accès aux outils de modération"
 
 msgid "Add Application"
-msgstr ""
+msgstr "Ajouter une application"
 
 msgid "Add an Application (OIDC Client)"
-msgstr ""
+msgstr "Ajouter une application (client OpenID Connect)"
 
 msgid "Add new application"
-msgstr ""
+msgstr "Ajouter une nouvelle application"
 
 msgid "An error occured. Please try again later."
-msgstr ""
+msgstr "Une erreur est survenue. Veuillez réessayer plus tard."
 
 msgid "Application changed successfully"
-msgstr ""
+msgstr "L’application a été modifiée avec succès"
 
 msgid "Application deleted"
-msgstr ""
+msgstr "L’application a été supprimée"
 
 msgid "Application successfully added"
-msgstr ""
+msgstr "L’application a été ajouter avec succès"
 
 msgid "Avatar can only be an image"
-msgstr ""
+msgstr "L'avatar ne peut être qu'une image"
 
 msgid "Avatar not given or not an image"
 msgstr ""
@@ -69,47 +70,58 @@ msgid "Black and White canvas"
 msgstr "Une toile noire et blanche"
 
 msgid "Can not change a role above your own"
-msgstr ""
+msgstr "Vous ne pouvez pas modifier un rôle qui vous surpasse"
 
 msgid "Can not change a role that is equal to your own"
-msgstr ""
+msgstr "Vous ne pouvez pas modifier un rôle qui vous est égal"
 
 msgid "Can not change the default setting of this role"
 msgstr ""
 
 msgid "Can not change the powerlevel of a role equal or above you"
 msgstr ""
+"Vous ne pouvez pas modifier un rôle dont le niveau de privilèges est égal ou "
+"supérieur au vôtre"
 
 msgid "Can not change the powerlevel of the Sovereign"
-msgstr ""
+msgstr "Vous ne pouvez pas modifier le niveau de privilèges du Souverain"
 
 msgid "Can not chat while being banned"
 msgstr ""
 
 msgid "Can not create a role on the same level as yours"
 msgstr ""
+"Vous ne pouvez pas créer un rôle dont le niveau de privilèges est égal au "
+"vôtre"
 
 msgid "Can not create a role with a powerlevel beyond yours"
 msgstr ""
+"Vous ne pouvez pas créer un rôle dont le niveau de privilèges est supérieur "
+"au vôtre"
 
 msgid "Can not delete a role on the same level as yours"
 msgstr ""
+"Vous ne pouvez pas supprimer un rôle dont le niveau de privilèges est égal "
+"au vôtre"
 
 msgid "Can not delete this role"
-msgstr ""
+msgstr "Vous ne pouvez pas supprimer ce rôle"
 
 msgid "Can not elevate the powerlevel of a role beyond yours"
 msgstr ""
+"Vous ne pouvez pas attribuer un niveau de privilèges supérieur au vôtre à un "
+"rôle"
 
 msgid "Can not elevate the powerlevel of a role to yours"
-msgstr ""
+msgstr "Vous ne pouvez pas augmenter le niveau de privilèges de votre rôle"
 
 #, javascript-format
 msgid "Can not have more than ${ MAX_ROLES_PER_FACTION } faction roles"
 msgstr ""
+"Votre faction ne peut pas avoir plus de ${ MAX_ROLES_PER_FACTION } rôles"
 
 msgid "Can not have more than 20 invites per faction"
-msgstr ""
+msgstr "Votre faction ne peut pas avoir plus de 20 invitations"
 
 msgid "Can not modify user equal to you or above you"
 msgstr ""
