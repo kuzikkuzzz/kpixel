@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: admin@pixelplanet.fun\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2026-06-09 10:25+0000\n"
+"PO-Revision-Date: 2026-06-10 11:30+0000\n"
 "Last-Translator: Sylvainstein <sylvainstein@noreply.pixelplanet.fun>\n"
 "Language-Team: French <https://translate.gs-os.com/projects/ppfun/client/fr/>"
 "\n"
@@ -69,6 +69,8 @@ msgid ""
 "A flag representing the role, it should be 16x11 pixels. If left empty, "
 "users with this role selected will still show their own flags."
 msgstr ""
+"Drapeau représentant le rôle (16×11 px). S’il est vide, les utilisateurs "
+"conserveront leur propre drapeau."
 
 msgid "A new verification mail is getting sent to you."
 msgstr "Un nouveau courriel de verification se dirige vers vous."
@@ -88,10 +90,10 @@ msgid ""
 msgstr ""
 
 msgid "Add Grid (uncheck if you need a 1:1 template)"
-msgstr "Ajouter grille (décochez-vous si vous avez besoin d'une modèle 1:1)"
+msgstr "Ajouter grille (décochez si vous avez besoin d'un calque 1:1)"
 
 msgid "Add Template"
-msgstr "Ajouter un Template"
+msgstr "Ajouter un calque"
 
 msgid "Add a new E-Mail Address here:"
 msgstr ""
@@ -146,7 +148,7 @@ msgid "Assigned role per default"
 msgstr ""
 
 msgid "Attach File"
-msgstr ""
+msgstr "Joindre un fichier"
 
 msgid "Auto Zoom In"
 msgstr "Zoomer automatiquement"
@@ -218,10 +220,10 @@ msgid "Calculate like GIMP"
 msgstr ""
 
 msgid "Can not export more than 20 or no template!"
-msgstr ""
+msgstr "Impossible d’exporter plus de 20 calques ou aucun !"
 
 msgid "Can not import more than 20 or no template!"
-msgstr ""
+msgstr "Impossible d’importer plus de 20 calques ou aucun !"
 
 msgid "Can't read? Reload:"
 msgstr "Impossible à lire ? Rechargez :"
@@ -232,9 +234,8 @@ msgstr ""
 msgid "Cancel"
 msgstr "Annuler"
 
-#, fuzzy
 msgid "Cancel adding Template"
-msgstr "Télécharger modèle"
+msgstr "Annuler l'ajout du calque"
 
 #, fuzzy
 msgid "Canvas"
@@ -603,6 +604,8 @@ msgstr "Faire des choses avec les IPs (une adresse par ligne)"
 msgid ""
 "Don't let people find this faction in public search or look at its profile."
 msgstr ""
+"Empêchez les autres de trouver cette faction dans la recherche publique ou "
+"de consulter son profil."
 
 msgid "Don't remember"
 msgstr ""
@@ -620,7 +623,7 @@ msgid "Download"
 msgstr ""
 
 msgid "Download Template"
-msgstr "Télécharger modèle"
+msgstr "Télécharger le calque"
 
 #, javascript-format
 msgid "Drag ${ mouseSymbol } mouse or ${ touchSymbol } pan to move"
@@ -716,7 +719,7 @@ msgid "Expand"
 msgstr ""
 
 msgid "Export enabled templates"
-msgstr ""
+msgstr "Exporter les calques actifs"
 
 msgid "Faction"
 msgstr ""
@@ -781,9 +784,8 @@ msgstr ""
 msgid "From History"
 msgstr ""
 
-#, fuzzy
 msgid "From Template"
-msgstr "Télécharger modèle"
+msgstr "Du calque"
 
 msgid "Get IID"
 msgstr ""
@@ -898,7 +900,7 @@ msgid "Image Upload"
 msgstr "Téléchargement d'image"
 
 msgid "Import templates"
-msgstr ""
+msgstr "Importer des calques"
 
 msgid "Incorrect password"
 msgstr ""
@@ -1035,7 +1037,7 @@ msgid "Manage Moderators"
 msgstr "Gérer les modérateurs"
 
 msgid "Manage Templates"
-msgstr ""
+msgstr "Gérer les calques"
 
 msgid "Manage invites"
 msgstr ""
@@ -1617,7 +1619,7 @@ msgid "Show overlay as small individual pixels on high zoomlevels."
 msgstr ""
 
 msgid "Show templates as overlays ingame."
-msgstr ""
+msgstr "Afficher les calques en surimpression dans le jeu."
 
 msgid "Shrink"
 msgstr ""
@@ -1673,11 +1675,10 @@ msgid "Switched to ${ canvasName }"
 msgstr "Transféré à ${ canvasName }"
 
 msgid "Template Name"
-msgstr ""
+msgstr "Nom du calque"
 
-#, fuzzy
 msgid "Templates"
-msgstr "Télécharger modèle"
+msgstr "Calques"
 
 #, javascript-format
 msgid ""
@@ -1762,6 +1763,11 @@ msgid ""
 "that! Templates can show as overlay and you can draw over them. One pixel on "
 "the template, should be one pixel on the canvas."
 msgstr ""
+"Marre de toujours spammer la même couleur ? Vous voulez plutôt créer de "
+"l’art, mais vous devez compter les pixels à partir d’une autre image ? Les "
+"calques peuvent vous aider ! Ils peuvent s’afficher en surimpression et vous "
+"permettre de dessiner par-dessus. Un pixel dans le calque doit correspondre "
+"à un pixel sur la toile."
 
 msgid "Title"
 msgstr ""
