@@ -93,7 +93,7 @@ const Help = () => {
       <p>{jt`For any legal issues, please contact ${mailLink}. If you want to delete your data, simply delete your account, this in fact wipes all privacy relevant traces. Your placed pixels will of course not be deleted.`}</p>
       <p>{t`You are a teacher and a pupil is playing this game, despite it not being suitable for them? Send us an email.`}</p>
       <h3>{t`Map Data`}</h3>
-      <p>{t`The bare map data that we use, together with converted OpenStreetMap tiles for orientation, can be downloaded from mega.nz here: `}<a href="https://mega.nz/#!JpkBwAbJ!EnSLlZmKv3kEBE0HDhakTgAZZycD3ELjduajJxPGaXo">pixelplanetmap.zip</a> (422MB)</p>
+      <p>{t`The bare map data that we use, together with converted OpenStreetMap tiles for orientation, can be downloaded from mega.nz here: `}<a href="https://pixelplanet.fun/pixelplanetmap.zip">pixelplanetmap.zip</a> (422MB)</p>
       <h3>{t`Banned? Detected as Proxy?`}</h3>
       <div>
         <p>{jt`If you got detected as proxy, but you aren't using one, or think that you got wrongfully banned, please go to our ${guildedLink} or send us an e-mail to ${mailLink} and, in case of a ban, include the BID you got in the ban message.`}</p>
