@@ -3,16 +3,16 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: admin@pixelplanet.fun\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2025-11-05 20:44+0000\n"
-"Last-Translator: Extreme Motorsex <em@noreply.pixelplanet.fun>\n"
-"Language-Team: Greek <https://translate.gs-os.com/projects/ppfun/client/el/"
-">\n"
+"PO-Revision-Date: 2026-06-12 17:30+0000\n"
+"Last-Translator: phant0m <phant0m@noreply.pixelplanet.fun>\n"
+"Language-Team: Greek <https://translate.gs-os.com/projects/ppfun/client/el/>"
+"\n"
 "Language: gr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.14\n"
+"X-Generator: Weblate 2026.5\n"
 
 msgid " which is in "
 msgstr " που είναι μέσα "
@@ -52,10 +52,10 @@ msgid "(0 = infinite)"
 msgstr "(0 = άπειρο)"
 
 msgid "(click a role to activate it)"
-msgstr ""
+msgstr "(κάντε κλικ σε έναν ρόλο για να τον ενεργοποιήσετε)"
 
 msgid "(click a role to assign or remove it)"
-msgstr ""
+msgstr "(κάντε κλικ σε έναν ρόλο για να τον αναθέσετε ή να τον αφαιρέσετε)"
 
 msgid "+last hour"
 msgstr "+Προηγούμενη ώρα"
@@ -80,7 +80,7 @@ msgid ""
 msgstr ""
 
 msgid "ACCESS MODTOOLS"
-msgstr ""
+msgstr "ΠΡΟΣΒΑΣΗ ΣΤΑ ΕΡΓΑΛΕΙΑ ΔΙΑΧΕΙΡΙΣΤΗ"
 
 #. modlogLink has the text "Moderation Log"
 #, javascript-format
@@ -89,23 +89,23 @@ msgid ""
 msgstr ""
 
 msgid "Add Grid (uncheck if you need a 1:1 template)"
-msgstr "Προσθήκη πλέγματος (αποεπιλέξτε εάν χρειάζεστε ένα πρότυπο 1:1)"
+msgstr "Προσθήκη Πλέγματος (αποεπιλέξτε εάν χρειάζεστε ένα πρότυπο 1:1)"
 
 msgid "Add Template"
-msgstr "Προσθήκη πρωτοτύπου"
+msgstr "Προσθήκη Προτύπου"
 
 msgid "Add a new E-Mail Address here:"
 msgstr ""
 
 #. This if for moderation tools, it's not important to translate this
 msgid "Admintools"
-msgstr "Εργαλεία του admin"
+msgstr "Εργαλεία Διαχειριστή"
 
 msgid "Age"
-msgstr ""
+msgstr "Ηλικία"
 
 msgid "All members of this faction are hidden"
-msgstr ""
+msgstr "Όλα τα μέλη αυτής της φατρίας είναι κρυμμένα"
 
 msgid "All sound effects will be disabled."
 msgstr "Όλα τα ηχητικά εφέ θα απενεργοποιηθούν."
@@ -117,7 +117,7 @@ msgid "Always show movement control buttons"
 msgstr "Πάντα να φένοντε τα κουμπιά των χειρισμών Κίνησης"
 
 msgid "An image representing your faction"
-msgstr ""
+msgstr "Μια εικόνα που αντιπροσωπεύει τη φατρία σας"
 
 msgid "Anti Aliasing"
 msgstr "Anti Aliasing"
@@ -131,31 +131,31 @@ msgid "Archive"
 msgstr "Αρχείο"
 
 msgid "Assign Roles"
-msgstr ""
+msgstr "Ανάθεση Ρόλων"
 
 msgid "Assign new Mod"
-msgstr "Εκχώρηση νέου Mod"
+msgstr "Ορισμός Νέου Διαχειριστή"
 
 msgid "Assign role per default to new members"
-msgstr ""
+msgstr "Αυτόματη ανάθεση ρόλου σε νέα μέλη"
 
 msgid "Assign roles below their own"
-msgstr ""
+msgstr "Ανάθεση ρόλων χαμηλότερων από τον δικό τους"
 
 msgid "Assign this role to every new member automatically on join."
-msgstr ""
+msgstr "Αυτόματη ανάθεση αυτού του ρόλου σε κάθε νέο μέλος κατά την είσοδο."
 
 msgid "Assigned role per default"
-msgstr ""
+msgstr "Προεπιλεγμένος ανατεθειμένος ρόλος"
 
 msgid "Attach File"
-msgstr ""
+msgstr "Επισύναψη Αρχείου"
 
 msgid "Auto Zoom In"
 msgstr "Αυτόματο ζουμ"
 
 msgid "Avatar"
-msgstr ""
+msgstr "Avatar"
 
 msgid "Back"
 msgstr "Πίσω"
@@ -167,13 +167,13 @@ msgid "Badges"
 msgstr "Εμβλήματα"
 
 msgid "Ban"
-msgstr ""
+msgstr "Αποκλεισμός (Ban)"
 
 msgid "Ban media"
-msgstr ""
+msgstr "Αποκλεισμός αρχείων media"
 
 msgid "Ban members"
-msgstr ""
+msgstr "Αποκλεισμός μελών"
 
 msgid "Banned"
 msgstr "Αποκλείστηκες"
@@ -182,7 +182,7 @@ msgid "Banned? Detected as Proxy?"
 msgstr "Αποκλείστηκες; Εντοπίστηκε διακομιστής μεσολάβησης; (proxy)"
 
 msgid "Bans"
-msgstr ""
+msgstr "Αποκλεισμοί"
 
 msgid "Block"
 msgstr "Αποκλεισμός"
@@ -232,10 +232,10 @@ msgstr ""
 "WebGL2;"
 
 msgid "Cancel"
-msgstr "Ματαίωση"
+msgstr "Ακύρωση"
 
 msgid "Cancel adding Template"
-msgstr "Ακύρωση προσθήκης προτύπου"
+msgstr "Ακύρωση Προσθήκης Προτύπου"
 
 msgid "Canvas"
 msgstr "Κανβας"
@@ -247,10 +247,10 @@ msgid "Canvas Cleaner"
 msgstr "Καθαριστικό καμβά"
 
 msgid "Canvas Error"
-msgstr "Κάτι πήγε λάθος με τον κανβας :("
+msgstr "Κάτι πήγε λάθος με τον καμβά 😢"
 
 msgid "Canvas Selection"
-msgstr "Μη έγκυρος καμβάς"
+msgstr "Μη Έγκυρος Καμβάς"
 
 msgid "Captcha"
 msgstr "Captcha"
@@ -259,7 +259,7 @@ msgid "Caught by"
 msgstr "Πιάστηκε από"
 
 msgid "Change Flag"
-msgstr ""
+msgstr "Αλλαγή Σημαίας"
 
 msgid "Change Happened"
 msgstr "Υπέστη μία αλλαγή"
@@ -271,7 +271,7 @@ msgid "Change Password"
 msgstr "Άλλαξτε κωδικό"
 
 msgid "Channel"
-msgstr ""
+msgstr "Κανάλι"
 
 msgid "Channel settings"
 msgstr "Ρυθμίσεις καναλιού"
@@ -329,7 +329,7 @@ msgid "Cleaners can use 0cd blank colors."
 msgstr "Καθαριστές μπορούν να χρησιμοποιήσουν 0cd άχρωμα χρώματα."
 
 msgid "Clear"
-msgstr ""
+msgstr "Καθαρισμός"
 
 #, javascript-format
 msgid ""
@@ -343,7 +343,7 @@ msgid "Click a color in palette to select it"
 msgstr "Κάντε κλικ σε ένα χρώμα στην παλέτα για να το επιλέξετε"
 
 msgid "Click here to cease representation."
-msgstr ""
+msgstr "Κάντε κλικ εδώ για να σταματήσετε την εκπροσώπηση."
 
 msgid "Click here to request a new verification mail."
 msgstr "Κάντε κλικ εδώ για να ζητήσετε νέο μήνυμα επαλήθευσης."
@@ -352,7 +352,7 @@ msgid "Click to Load Captcha"
 msgstr "Κάντε κλικ για να φορτώσετε το Captcha"
 
 msgid "Click to remove"
-msgstr ""
+msgstr "Κάντε κλικ για αφαίρεση"
 
 msgid "Clone"
 msgstr "Κλωνοποίηση"
@@ -376,25 +376,25 @@ msgid "Confirm"
 msgstr ""
 
 msgid "Confirm Ban"
-msgstr ""
+msgstr "Επιβεβαίωση Αποκλεισμού"
 
 msgid "Confirm Delete"
-msgstr ""
+msgstr "Επιβεβαίωση Διαγραφής"
 
 msgid "Confirm Kick"
-msgstr ""
+msgstr "Επιβεβαίωση Αποβολής (Kick)"
 
 msgid "Confirm Leave"
-msgstr ""
+msgstr "Επιβεβαίωση Αποχώρησης"
 
 msgid "Confirm New Password"
-msgstr "Επιβεβαιώστε τον καινούριο σας κωδικό"
+msgstr "Επιβεβαίωση Κωδικού"
 
 msgid "Confirm Password"
 msgstr "Επιβεβαίωση Κωδικού"
 
 msgid "Confirm your password."
-msgstr ""
+msgstr "Επιβεβαιώστε τον κωδικό πρόσβασής σας."
 
 #, javascript-format
 msgid "Connection error ${ code } :("
@@ -472,25 +472,25 @@ msgid "Country"
 msgstr "Χώρα"
 
 msgid "Create Faction"
-msgstr ""
+msgstr "Δημιουργία Φατρίας"
 
 msgid "Create Invite"
-msgstr ""
+msgstr "Δημιουργία Πρόσκλησης"
 
 msgid "Create New Faction"
-msgstr ""
+msgstr "Δημιουργία Νέας Φατρίας"
 
 msgid "Create New Invite"
-msgstr ""
+msgstr "Δημιουργία Νέας Πρόσκλησης"
 
 msgid "Create New Role"
-msgstr ""
+msgstr "Δημιουργία Νέου Ρόλου"
 
 msgid "Create Role"
-msgstr ""
+msgstr "Δημιουργία Ρόλου"
 
 msgid "Create roles"
-msgstr ""
+msgstr "Δημιουργία ρόλων"
 
 #, javascript-format
 msgid "Credit for the Palette of the 2bit canvas goes to ${ donendoLink }."
@@ -512,20 +512,20 @@ msgid "Custom Cursor"
 msgstr "Προσαρμοσμένος cursor"
 
 msgid "Custom Flag"
-msgstr ""
+msgstr "Προσαρμοσμένη Σημαία"
 
 msgid "DM"
 msgstr "Προσωπικά Μηνύματα (DM)"
 
 msgid "Daily Pixels"
-msgstr ""
+msgstr "Ημερήσια Pixel"
 
 #, fuzzy
 msgid "Daily Pixels per Country"
 msgstr "Παίκτες και pixel ανά ώρα"
 
 msgid "Daily Pixels per Faction"
-msgstr ""
+msgstr "Ημερήσια Pixel ανά Φατρία"
 
 #, fuzzy
 msgid "Daily Pixels per Player"
@@ -548,28 +548,28 @@ msgid "Delete Account"
 msgstr "Διαγραφή λογαριασμού"
 
 msgid "Delete Faction"
-msgstr ""
+msgstr "Διαγραφή Φατρίας"
 
 msgid "Delete My Account"
-msgstr ""
+msgstr "Διαγραφή του Λογαριασμού μου"
 
 msgid "Delete the faction"
-msgstr ""
+msgstr "Διαγραφή της φατρίας"
 
 msgid "Deny"
 msgstr "Άρνηση"
 
 msgid "Description"
-msgstr ""
+msgstr "Περιγραφή"
 
 msgid "Description can't be empty"
-msgstr ""
+msgstr "Η περιγραφή δεν μπορεί να είναι κενή"
 
 msgid "Description must be shorter than 1000 characters"
-msgstr ""
+msgstr "Η περιγραφή πρέπει να είναι μικρότερη από 1000 χαρακτήρες"
 
 msgid "Description of your faction"
-msgstr ""
+msgstr "Περιγραφή της φατρίας σας"
 
 msgid ""
 "Didn't get an answer from pixelplanet. Try to refresh if this problem "
@@ -608,19 +608,19 @@ msgid "Don't remember"
 msgstr "Δεν θυμάμαι"
 
 msgid "Don't show faction in search"
-msgstr ""
+msgstr "Να μην εμφανίζεται η φατρία στην αναζήτηση"
 
 msgid "Don't show me in global stats"
 msgstr "Μην με εμφανίζετε στα παγκόσμια στατιστικά"
 
 msgid "Done"
-msgstr ""
+msgstr "Έτοιμο"
 
 msgid "Download"
-msgstr ""
+msgstr "Λήψη"
 
 msgid "Download Template"
-msgstr "Λήψη προτύπου"
+msgstr "Λήψη Προτύπου"
 
 #, javascript-format
 msgid "Drag ${ mouseSymbol } mouse or ${ touchSymbol } pan to move"
@@ -641,13 +641,14 @@ msgid "Edit"
 msgstr "Επεξεργασία"
 
 msgid "Edit faction"
-msgstr ""
+msgstr "Επεξεργασία φατρίας"
 
 msgid "Edit roles below their own"
-msgstr ""
+msgstr "Επεξεργασία ρόλων χαμηλότερων από τον δικό τους"
 
 msgid "Edit their own role and elevate users to their own level"
 msgstr ""
+"Επεξεργασία του δικού τους ρόλου και αναβάθμιση χρηστών στο επίπεδό τους"
 
 msgid "Email"
 msgstr "Μail"
@@ -693,10 +694,10 @@ msgid "Enter UserName of new Mod"
 msgstr "Εισαγάγετε Όνομα χρήστη του νέου Mod"
 
 msgid "Enter a little text that describes your faction"
-msgstr ""
+msgstr "Εισαγάγετε ένα σύντομο κείμενο που περιγράφει τη φατρία σας"
 
 msgid "Enter search term and press Search."
-msgstr ""
+msgstr "Εισαγάγετε όρο αναζήτησης και πατήστε Αναζήτηση."
 
 msgid "Enter your mail address and we will send you a new password:"
 msgstr ""
@@ -720,16 +721,16 @@ msgid "Export enabled templates"
 msgstr "Εξαγωγή ενεργοποιημένων προτύπων"
 
 msgid "Faction"
-msgstr ""
+msgstr "Φατρία"
 
 msgid "Factions"
-msgstr ""
+msgstr "Φατρίες"
 
 msgid "Factions Today"
-msgstr ""
+msgstr "Φατρίες Σήμερα"
 
 msgid "Factions Total"
-msgstr ""
+msgstr "Συνολικές Φατρίες"
 
 msgid ""
 "Factions allow you to coordinate better with other players. Search for "
@@ -743,7 +744,7 @@ msgid "File"
 msgstr "Αρχείο"
 
 msgid "Filter"
-msgstr ""
+msgstr "Φίλτρο"
 
 msgid "Fish Display"
 msgstr "Εμφάνιση ψαριών"
@@ -786,7 +787,7 @@ msgid "From History"
 msgstr "Από ιστορική ρύθμιση"
 
 msgid "From Template"
-msgstr "Από το προτύπο"
+msgstr "Από το Πρότυπο"
 
 msgid "Get IID"
 msgstr "Παρε το iid"
@@ -813,13 +814,13 @@ msgid "Grant"
 msgstr "Παραχώρηση"
 
 msgid "Grid OFF"
-msgstr "Πλέγμα Ενενεργό"
+msgstr "Πλέγμα: Ανενεργό"
 
 msgid "Grid ON"
-msgstr "Πλέγμα Ενεργο"
+msgstr "Πλέγμα: Ενεργό"
 
 msgid "Groups"
-msgstr ""
+msgstr "Ομάδες"
 
 msgid "Have fun!"
 msgstr "Καλα να περάσεις!"
@@ -863,7 +864,7 @@ msgid "How pixelplanet should look like."
 msgstr "Πώς πρέπει να μοιάζει το pixelplanet."
 
 msgid "I forgot my Password."
-msgstr "Ξεχάσα τον κωδικό."
+msgstr "Ξέχασα τον κωδικό μου"
 
 msgid "ID"
 msgstr ""
@@ -917,7 +918,7 @@ msgid "Interval is invalid"
 msgstr "Το διάστημα δεν είναι έγκυρο"
 
 msgid "Invalid Canvas"
-msgstr "Μη έγκυρος καμβάς"
+msgstr "Μη Έγκυρος Καμβάς"
 
 msgid "Invalid Coordinates"
 msgstr "Μη έγκυρες συντεταγμένες"
@@ -926,16 +927,16 @@ msgid "Invalid color selected"
 msgstr "Επιλέχθηκε μη έγκυρο χρώμα"
 
 msgid "Invite"
-msgstr ""
+msgstr "Πρόσκληση"
 
 msgid "Invited to Chat"
 msgstr "Καλεσμένος για συνομιλία"
 
 msgid "Invites"
-msgstr ""
+msgstr "Προσκλήσεις"
 
 msgid "Is One-Time-Invite"
-msgstr ""
+msgstr "Είναι Πρόσκληση Μίας Χρήσης"
 
 msgid ""
 "It requests the following permissions. Uncheck what you don't want to grant:"
@@ -948,13 +949,13 @@ msgstr ""
 "να απαγορεύουν."
 
 msgid "Join"
-msgstr ""
+msgstr "Συμμετοχή"
 
 msgid "Join Faction"
-msgstr ""
+msgstr "Συμμετοχή σε Φατρία"
 
 msgid "Joined"
-msgstr ""
+msgstr "Μπήκε"
 
 msgid "Just for registered Users"
 msgstr "Μόνο για εγγεγραμμένους χρήστες"
@@ -969,19 +970,19 @@ msgid "Keep Ratio"
 msgstr "Διατήρηση αναλογίας"
 
 msgid "Kick"
-msgstr ""
+msgstr "Αποβολή (Kick)"
 
 msgid "Kick members"
-msgstr ""
+msgstr "Αποβολή μελών"
 
 msgid "Know that an account exists"
 msgstr "Ξέροντας αυτός ο λογαριασμός υπάρχει"
 
 msgid "Leave"
-msgstr ""
+msgstr "Αποχώρηση"
 
 msgid "Leave Faction"
-msgstr ""
+msgstr "Αποχώρηση από Φατρία"
 
 msgid "Legal Requests"
 msgstr "Νόμιμα ζητήματα"
@@ -993,7 +994,7 @@ msgid "Let people join this faction without needing an invite."
 msgstr ""
 
 msgid "Level"
-msgstr ""
+msgstr "Επίπεδο"
 
 msgid "Light Grid"
 msgstr "Πλέγμα φωτός"
@@ -1008,10 +1009,10 @@ msgid "Loading..."
 msgstr "Φόρτωση.."
 
 msgid "Log in or Register"
-msgstr ""
+msgstr "Σύνδεση ή Εγγραφή"
 
 msgid "Log out"
-msgstr "Έξοδος"
+msgstr "Αποσύνδεση"
 
 msgid "Log out a Session:"
 msgstr "Αποσυνδέεστε από την συνεδρία:"
@@ -1031,7 +1032,7 @@ msgid "Login to grant access to other application."
 msgstr "Συνδεθείτε για να πάρετε πρόσβαση σε άλλες εφαρμογές."
 
 msgid "Login to join us."
-msgstr ""
+msgstr "Συνδεθείτε για να μπείτε μαζί μας."
 
 msgid "Login to other application"
 msgstr "Συνδέσμου από άλλη εφαρμογή"
@@ -1046,10 +1047,10 @@ msgid "Manage Moderators"
 msgstr "Διαχείριση συντονιστών"
 
 msgid "Manage Templates"
-msgstr ""
+msgstr "Διαχείριση Προτύπων"
 
 msgid "Manage invites"
-msgstr ""
+msgstr "Διαχείριση προσκλήσεων"
 
 msgid "Map Data"
 msgstr "Δεδομένα χάρτη"
@@ -1058,38 +1059,38 @@ msgid "Maximize"
 msgstr "Αύξηση ανώτερου βαθμού"
 
 msgid "Media Actions"
-msgstr ""
+msgstr "Ενέργειες Media"
 
 msgid "Members"
-msgstr ""
+msgstr "Μέλη"
 
 msgid "Minimum Color Distance"
 msgstr "Επιλέχθηκε μη έγκυρο χρώμα"
 
 msgid "Moderation Log"
-msgstr ""
+msgstr "Καταγραφή Ενεργειών Διαχειριστών"
 
 msgid "Moderation Logs"
-msgstr ""
+msgstr "Αρχεία Καταγραφής Διαχείρισης"
 
 msgid "Moderators can access all Canvas, Watch and IID tools."
 msgstr ""
 
 #. This if for moderation tools, it's not important to translate this
 msgid "Modtools"
-msgstr "Υλικά διαχειριστή"
+msgstr "Εργαλεία Διαχειριστή"
 
 msgid "Move"
 msgstr "Κίνηση"
 
 msgid "Mute Channel"
-msgstr ""
+msgstr "Σίγαση Καναλιού"
 
 msgid "Muted Sound"
-msgstr "Σίγαση ήχου"
+msgstr "Σίγαση Ήχου"
 
 msgid "My Factions"
-msgstr ""
+msgstr "Οι Φατρίες μου"
 
 msgid "Name"
 msgstr "Όνομα"
@@ -1110,10 +1111,10 @@ msgid "Name must be shorter than 26 characters"
 msgstr "Το όνομα πρέπει να είναι μικρότερο από 26 χαρακτήρες"
 
 msgid "Name of this role"
-msgstr ""
+msgstr "Όνομα αυτού του ρόλου"
 
 msgid "Name of your faction (this can not be changed later)"
-msgstr ""
+msgstr "Όνομα της φατρίας σας (δεν μπορεί να αλλάξει αργότερα)"
 
 msgid "Name or Email"
 msgstr "Όνομα ή Mail"
@@ -1122,7 +1123,7 @@ msgid "New Mail"
 msgstr "Νέo Mail"
 
 msgid "New Name"
-msgstr ""
+msgstr "Νέο Όνομα"
 
 msgid "New Password"
 msgstr "Νέος Κωδικός"
@@ -1149,19 +1150,19 @@ msgid "No password given."
 msgstr "Δεν δόθηκε κωδικός πρόσβασης."
 
 msgid "No results."
-msgstr ""
+msgstr "Δεν βρέθηκαν αποτελέσματα."
 
 msgid "Nobody is banned from this faction"
-msgstr ""
+msgstr "Κανείς δεν έχει αποκλειστεί από αυτή τη φατρία"
 
 msgid "Not Allowed"
-msgstr ""
+msgstr "Δεν Επιτρέπεται"
 
 msgid "Not allowed"
 msgstr "Δεν επιτρέπεται"
 
 msgid "Note"
-msgstr ""
+msgstr "Σημείωση"
 
 msgid "Note: Your active Faction may overwrite your flag settings."
 msgstr ""
@@ -1182,7 +1183,7 @@ msgid "Old Password"
 msgstr "Παλιός Κωδικός"
 
 msgid "One-Time"
-msgstr ""
+msgstr "Μίας χρήσης"
 
 msgid "Online Users"
 msgstr "Ενεργοί χρήστες"
@@ -1206,7 +1207,7 @@ msgid "Open Palette"
 msgstr "Άνοιγμα Παλέτας"
 
 msgid "Open in PopUp"
-msgstr ""
+msgstr "Άνοιγμα σε αναδυόμενο παράθυρο"
 
 msgid "OpenID Connect Client registration"
 msgstr ""
@@ -1237,10 +1238,10 @@ msgid "Overlay Opacity"
 msgstr ""
 
 msgid "Overview"
-msgstr ""
+msgstr "Επισκόπηση"
 
 msgid "Palette Download"
-msgstr "Λήψη προτύπου"
+msgstr "Λήψη Προτύπου"
 
 #, javascript-format
 msgid "Palette for ${ gimpLink }"
@@ -1270,25 +1271,25 @@ msgid "Pencil picks: "
 msgstr "Επιλεγμένο χρώμα: "
 
 msgid "Permission"
-msgstr ""
+msgstr "Δικαίωμα"
 
 msgid "Permissions of Powerlevels"
-msgstr ""
+msgstr "Δικαιώματα των Επιπέδων Ισχύος"
 
 msgid "Phish!"
-msgstr ""
+msgstr "Ψάρι!"
 
 msgid "Phishes"
-msgstr ""
+msgstr "Ψάρια"
 
 msgid "Ping"
 msgstr "Ανέφερε τον χρήστη (ping)"
 
 msgid "Pixel Notify OFF"
-msgstr "Ειδοποίηση Pixel Ανενεργή"
+msgstr "Ειδοποιήσεις Pixel: Ανενεργές"
 
 msgid "Pixel Notify ON"
-msgstr "Ειδοποίηση Pixel Ενεργή"
+msgstr "Ειδοποιήσεις Pixel: Ενεργές"
 
 msgid "Pixel Protection"
 msgstr "Προστασία Pixel"
@@ -1332,10 +1333,11 @@ msgid "Potato Mode"
 msgstr "Λειτουργία πατάτας"
 
 msgid "Powerlevel"
-msgstr ""
+msgstr "Επίπεδο Ισχύος"
 
 msgid "Powerlevel of this role. See table below for an explanation."
 msgstr ""
+"Επίπεδο ισχύος αυτού του ρόλου. Δείτε τον παρακάτω πίνακα για επεξήγηση."
 
 #, javascript-format
 msgid ""
@@ -1381,13 +1383,13 @@ msgid "Profile"
 msgstr "Προφιλ"
 
 msgid "Quick Actions"
-msgstr ""
+msgstr "Γρήγορες Ενέργειες"
 
 msgid "Range Banned"
 msgstr "Απαγόρευση εύρους"
 
 msgid "Rank"
-msgstr ""
+msgstr "Κατάταξη"
 
 msgid "Ranked"
 msgstr "Κατάταξη"
@@ -1428,19 +1430,19 @@ msgid "Remove"
 msgstr ""
 
 msgid "Remove Chatmod"
-msgstr ""
+msgstr "Κατάργηση Συντονιστή Συνομιλίας"
 
 msgid "Remove Cleaner"
-msgstr ""
+msgstr "Κατάργηση Καθαριστή"
 
 msgid "Remove Janny"
-msgstr ""
+msgstr "Κατάργηση Janny"
 
 msgid "Remove Moderator"
-msgstr "Κατάργηση Επόπτη"
+msgstr "Κατάργηση Διαχειριστή"
 
 msgid "Remove Roles"
-msgstr ""
+msgstr "Κατάργηση Ρόλων"
 
 msgid "Remove a Login method:"
 msgstr ""
@@ -1480,13 +1482,13 @@ msgid "Revoke consent of third party applications:"
 msgstr ""
 
 msgid "Role"
-msgstr ""
+msgstr "Ρόλος"
 
 msgid "Role Flags"
-msgstr ""
+msgstr "Σημαίες Ρόλων"
 
 msgid "Roles"
-msgstr ""
+msgstr "Ρόλοι"
 
 msgid "Roll different Captcha Fonts"
 msgstr ""
@@ -1512,16 +1514,16 @@ msgstr ""
 "για μεγέθυνση"
 
 msgid "Search"
-msgstr ""
+msgstr "Αναζήτηση"
 
 msgid "Search Existing Faction"
-msgstr ""
+msgstr "Αναζήτηση Υπάρχουσας Φατρίας"
 
 msgid "Search Term"
-msgstr ""
+msgstr "Όρος Αναζήτησης"
 
 msgid "See hidden users in member list"
-msgstr ""
+msgstr "Εμφάνιση κρυμμένων χρηστών στη λίστα μελών"
 
 msgid "Select Avatar of this Faction. Supported Formats: jpg, gif, png, webp"
 msgstr ""
@@ -1534,7 +1536,7 @@ msgid "Select File"
 msgstr "Επιλογή γλώσσας"
 
 msgid "Select Flag"
-msgstr ""
+msgstr "Επιλογή Σημαίας"
 
 msgid "Select Language"
 msgstr "Επιλογή γλώσσας"
@@ -1609,7 +1611,7 @@ msgid "Settings"
 msgstr "Ρυθμίσεις"
 
 msgid "Show Embedded"
-msgstr ""
+msgstr "Εμφάνιση Ενσωματωμένου"
 
 msgid "Show Grid"
 msgstr "Εμφάνιση πλέγματος"
@@ -1633,7 +1635,7 @@ msgid "Shrink"
 msgstr ""
 
 msgid "Size"
-msgstr ""
+msgstr "Μέγεθος"
 
 msgid "Small Pixels When Zoomed"
 msgstr ""
@@ -1676,7 +1678,7 @@ msgid "Submit"
 msgstr "Yπέβαλλε"
 
 msgid "Switch Account"
-msgstr ""
+msgstr "Αλλαγή Λογαριασμού"
 
 #, javascript-format
 msgid "Switched to ${ canvasName }"
@@ -1773,7 +1775,7 @@ msgid ""
 msgstr ""
 
 msgid "Title"
-msgstr ""
+msgstr "Τίτλος"
 
 msgid "Title can't be empty."
 msgstr ""
@@ -1788,7 +1790,7 @@ msgid "Title must be shorter than 26 characters"
 msgstr ""
 
 msgid "Title of your faction"
-msgstr ""
+msgstr "Τίτλος της φατρίας σας"
 
 msgid "To use this page, enter your Password:"
 msgstr ""
@@ -1844,19 +1846,19 @@ msgid "Turn on grid to highlight pixel borders."
 msgstr "Ενεργοποιήστε το πλέγμα για να επισημάνετε τα περιγράμματα των pixel."
 
 msgid "Type of Mod"
-msgstr ""
+msgstr "Τύπος Διαχειριστή"
 
 msgid "Type the characters from the following image:"
 msgstr "Πληκτρολογήστε τους χαρακτήρες από την παρακάτω εικόνα:"
 
 msgid "Unban media"
-msgstr ""
+msgstr "Άρση αποκλεισμού αρχείων media"
 
 msgid "Unban members"
-msgstr ""
+msgstr "Άρση αποκλεισμού μελών"
 
 msgid "Unblock"
-msgstr ""
+msgstr "Άρση αποκλεισμού"
 
 msgid "Unblock Users"
 msgstr "Ξεμπλοκάρισμα χρηστών"
@@ -1868,7 +1870,7 @@ msgid "Unknown Error"
 msgstr "Κάτι πήγε λάθος:("
 
 msgid "Unmuted Sound"
-msgstr "Διακοπή σίγασης ήχου"
+msgstr "Κατάργηση Σίγασης Ήχου"
 
 msgid "Until the browser closes"
 msgstr ""
@@ -1895,7 +1897,7 @@ msgid "User Name"
 msgstr "Ονομα χρήστη"
 
 msgid "Username"
-msgstr ""
+msgstr "Όνομα χρήστη"
 
 msgid "Username can only contain the characters: a-z . _ and -"
 msgstr ""
@@ -1913,7 +1915,7 @@ msgid "Username must be shorter than 26 characters"
 msgstr ""
 
 msgid "Users"
-msgstr ""
+msgstr "Χρήστες"
 
 #, javascript-format
 msgid "We are Libre Software under the ${ agplLink }, "
@@ -1978,7 +1980,7 @@ msgid "Yes, really delete Me"
 msgstr ""
 
 msgid "Yesterday"
-msgstr "Μόνο οι Top10 απο χθες μπορούν να τοποθετήσουν εδώ"
+msgstr "Χθες"
 
 msgid ""
 "You are a teacher and a pupil is playing this game, despite it not being "
@@ -2105,7 +2107,7 @@ msgid "Your Browser looks shady"
 msgstr ""
 
 msgid "Your Factions"
-msgstr ""
+msgstr "Οι Φατρίες σας"
 
 msgid "Your Internet Provider is banned from this game"
 msgstr ""
@@ -2113,7 +2115,7 @@ msgstr ""
 "αυτό το παιχνίδι."
 
 msgid "Your Roles"
-msgstr ""
+msgstr "Οι Ρόλοι σας"
 
 msgid "Your ban expires at "
 msgstr "Η απαγόρευσή σας λήγει στις "
