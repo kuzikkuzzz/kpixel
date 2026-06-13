@@ -311,6 +311,7 @@ const Chat = () => {
           <Fragment key="iptfr">
             <input
               key="iptre"
+              name="chat-input"
               style={{
                 flexGrow: 1,
                 minWidth: 40,

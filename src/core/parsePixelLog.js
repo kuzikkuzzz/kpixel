@@ -22,7 +22,7 @@ function parseFile(cb) {
     `${PixelLogger.prefix}${year}-${month}-${day}.log`,
   );
 
-  return new Promise((resolve, reject) => {
+  return new Promise((resolve) => {
     const fileStream = fs.createReadStream(filename);
 
     const rl = readline.createInterface({

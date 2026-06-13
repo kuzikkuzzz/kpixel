@@ -24,6 +24,7 @@ let mailChecker = () => null;
 if (USE_PROXYCHECK && PROXYCHECK_KEY) {
   const pc = new ProxyCheck(PROXYCHECK_KEY);
   proxyChecker = pc.checkIp;
+  // eslint-disable-next-line no-unused-vars
   mailChecker = pc.checkEmail;
 }
 
@@ -199,6 +200,7 @@ export const getIPIntel = queue(async (
   return [whoisData, proxyCheckData];
 });
 
+// eslint-disable-next-line no-unused-vars
 const disposableEmailDomainCache = new Map([
   ['aminating.com', true],
   ['fuckmeuwu.shop', true],
@@ -227,6 +229,10 @@ export const checkMail = queue(async (email) => {
   ].includes(domain)) {
     return true;
   }
+  return false;
+  /*
+   * deactivated because we have whitelist now
+   * TODO: enable it again
   const cache = disposableEmailDomainCache.get(domain);
   if (cache) {
     return cache;
@@ -239,6 +245,7 @@ export const checkMail = queue(async (email) => {
     disposableEmailDomainCache.set(domain, true);
   }
   return isDisposable;
+  */
 });
 
 /*
