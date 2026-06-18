@@ -3,16 +3,16 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: admin@pixelplanet.fun\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2025-10-29 16:40+0000\n"
+"PO-Revision-Date: 2026-06-18 12:46+0000\n"
 "Last-Translator: IR Führer <ir_fuhrer@noreply.pixelplanet.fun>\n"
-"Language-Team: Persian <https://translate.gs-os.com/projects/ppfun/server/fa/"
-">\n"
+"Language-Team: Persian <https://translate.gs-os.com/projects/ppfun/server/"
+"fa/>\n"
 "Language: fa\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n==0 || n==1);\n"
-"X-Generator: Weblate 5.14\n"
+"X-Generator: Weblate 2026.5\n"
 
 msgid "1bit"
 msgstr "یک بیت"
@@ -190,10 +190,10 @@ msgid "Delete Application"
 msgstr "حذف برنامه"
 
 msgid "Description can't be empty"
-msgstr ""
+msgstr "توضیحات نمی‌تواند خالی باشد"
 
 msgid "Description must be shorter than 1000 characters"
-msgstr ""
+msgstr "توضیحات باید کمتر از ۱۰۰۰ کاراکتر باشد"
 
 msgid "Display name for your OIDC client"
 msgstr "نام نمایشی برای کلاینت دو مرحله ای شما"
@@ -214,7 +214,7 @@ msgid "Email can't be empty."
 msgstr "ایمیل نمی تواند خالی باشد."
 
 msgid "Email can't be longer than 40 characters."
-msgstr "ایمیل نمی تواند بیشتر از 40 کاراکتر باشد."
+msgstr "ایمیل نمی‌تواند بیشتر از ۴۰ کاراکتر باشد."
 
 msgid "Email should at least contain a dot"
 msgstr "ایمیل حداقل باید حاوی یک نقطه باشد"
@@ -253,7 +253,7 @@ msgid "Get email address"
 msgstr "دریافت آدرس ایمیل"
 
 msgid "Get the amount of Pixels placed and ranking"
-msgstr "تعداد پیکسل‌های قرار داده شده و رتبه‌بندی را دریافت کنید"
+msgstr "دریافت تعداد پیکسل‌های قرار داده شده و رتبه‌بندی"
 
 msgid ""
 "Have fun and don't hesitate to contact us if you encounter any problems :)"
@@ -290,7 +290,7 @@ msgstr ""
 "کننده این نامه ${ ip } بود)."
 
 msgid "Incorrect password"
-msgstr ""
+msgstr "رمز عبور نادرست"
 
 msgid "Invalid type of media"
 msgstr ""
@@ -308,7 +308,7 @@ msgid "Just mods and admins can do that"
 msgstr ""
 
 msgid "Know that an account exists"
-msgstr "بدانید که یک حساب کاربری وجود دارد"
+msgstr "اطلاع از وجود یک حساب کاربری"
 
 #. "scopes" is a technical term and should not be translated
 msgid "List of available scopes"
@@ -362,13 +362,13 @@ msgid "Name already in use."
 msgstr ""
 
 msgid "Name can only contain the characters: a-z . _ and -"
-msgstr ""
+msgstr "نام فقط می‌تواند شامل کاراکترهای a-z . _ و - باشد"
 
 msgid "Name can't be empty."
 msgstr "نام نمی تواند خالی باشد."
 
 msgid "Name contains invalid character like @, /, \\ or #"
-msgstr "نام حاوی نویسه نامعتبر مانند @، /، \\ یا # است"
+msgstr "اسم نباید @ و # یا / از این چیزا داشته باشه"
 
 msgid "Name is too long"
 msgstr "نام خیلی طولانی است"
@@ -377,7 +377,7 @@ msgid "Name must be at least 2 characters long"
 msgstr "نام باید حداقل 2 کاراکتر باشد"
 
 msgid "Name must be shorter than 26 characters"
-msgstr "نام باید کمتر از 26 کاراکتر باشد"
+msgstr "نام باید کمتر از ۲۶ کاراکتر باشد"
 
 msgid "Name or Email does not exist!"
 msgstr "چنین اسم یا ایمیلی وجود ندارد!"
@@ -431,10 +431,10 @@ msgstr ""
 "بوم اصلی ما، نقشه عظیمی از جهان است. هر جایی که دوست دارید پیکسل بزارید!"
 
 msgid "Password must be at least 6 characters long."
-msgstr "رمز عبور باید حداقل 6 کاراکتر باشد."
+msgstr "رمز عبور باید حداقل ۶ کاراکتر باشد."
 
 msgid "Password must be shorter than 60 characters."
-msgstr "رمز عبور باید کمتر از 60 کاراکتر باشد."
+msgstr "رمز عبور باید کمتر از ۶۰ کاراکتر باشد."
 
 msgid "Password successfully changed."
 msgstr "رمز عبور با موفقیت تغییر کرد."
@@ -476,16 +476,16 @@ msgid "Please use int channel"
 msgstr "لطفا از کانال int استفاده کنید"
 
 msgid "Read Badges and fishes"
-msgstr "نشان‌ها و ماهی‌ها رو ببینید"
+msgstr "خواندن نشان‌ها و ماهی‌ها"
 
 msgid "Read name, username and account age"
-msgstr "دیدن نام، نام کاربری و سن حساب کاربری"
+msgstr "خواندن نام کاربری، یوزرنیم و سن حساب"
 
 msgid "Redirect URIs"
 msgstr "لینک های مرجوعی"
 
 msgid "Regularly update this data"
-msgstr "مرتباً این اطلاعات رو به‌روزرسانی کنید"
+msgstr "به‌روزرسانی منظم این داده‌ها"
 
 msgid "Request stalled"
 msgstr ""
@@ -507,7 +507,7 @@ msgid "Role flag needs to be 16x11"
 msgstr ""
 
 msgid "Server Error"
-msgstr ""
+msgstr "خطای سرور"
 
 msgid "Server error while deleting user."
 msgstr ""
@@ -589,10 +589,10 @@ msgid ""
 "function on the LogIn page to set a new password. In the future, consider "
 "not installing malware, Thank You."
 msgstr ""
-"این ترکیب ایمیل/رمز عبور هک یا فاش شده است. برای محافظت از این حساب، رمز "
-"عبور بازنشانی شده است. لطفاً از گزینه «رمز عبور خود را فراموش کرده‌ام» در "
-"پایین برای تنظیم رمز عبور جدید استفاده کنید. در آینده در نظر بگیرید که "
-"بدافزاری نصب نکنید، متشکرم."
+"این ترکیب ایمیل/رمز عبور هک و نشت کرده است. برای محافظت از این حساب، رمز "
+"عبور بازنشانی شده است. لطفاً از عملکرد «رمز عبورم را فراموش کرده‌ام» در صفحه "
+"ورود برای تنظیم رمز عبور جدید استفاده کنید. در آینده، از نصب بدافزار خودداری "
+"کنید. با تشکر."
 
 msgid "This email provider is not allowed"
 msgstr "این ارائه دهنده ایمیل مجاز نیست"
@@ -614,22 +614,22 @@ msgid "This password-reset link isn't valid anymore :("
 msgstr "این password-reset دیگر معتبر نیست :("
 
 msgid "This user has not password set"
-msgstr ""
+msgstr "این کاربر رمز عبور تنظیم نکرده است"
 
 msgid "This user is private"
 msgstr ""
 
 msgid "Title can't be empty."
-msgstr ""
+msgstr "عنوان نمی‌تواند خالی باشد."
 
 msgid "Title contains invalid character like @, /, \\ or #"
-msgstr ""
+msgstr "عنوان حاوی کاراکتر نامعتبر مانند @، /، \\ یا # است"
 
 msgid "Title must be at least 2 characters long"
-msgstr ""
+msgstr "عنوان باید حداقل ۲ کاراکتر باشد"
 
 msgid "Title must be shorter than 26 characters"
-msgstr ""
+msgstr "عنوان باید کمتر از ۲۶ کاراکتر باشد"
 
 #. "redirect_uris" is a technical term and should not be translated
 msgid "Too many or too long redirect_uris"
@@ -661,16 +661,16 @@ msgid "Username can not start with pp_"
 msgstr "نام کاربری نمی‌تواند با pp_ شروع شود"
 
 msgid "Username can only contain the characters: a-z . _ and -"
-msgstr "نام کاربری فقط می‌تواند شامل کاراکترهای a-z، _ و - باشد."
+msgstr "نام کاربری فقط می‌تواند شامل کاراکترهای a-z . _ و - باشد"
 
 msgid "Username can't be empty."
 msgstr "نام کاربری نمی‌تواند خالی باشد."
 
 msgid "Username must be at least 2 characters long"
-msgstr ""
+msgstr "نام کاربری باید حداقل ۲ کاراکتر باشد"
 
 msgid "Username must be shorter than 26 characters"
-msgstr ""
+msgstr "نام کاربری باید کمتر از ۲۶ کاراکتر باشد"
 
 msgid ""
 "We already sent you a mail with instructions. Please wait before requesting "
@@ -826,7 +826,7 @@ msgid "You will be automatically redirected after 15s"
 msgstr "پس از 15 ثانیه به طور خودکار هدایت می شوید"
 
 msgid "Your Browser looks shady"
-msgstr ""
+msgstr "مرورگر شما مشکوک به نظر می‌رسد"
 
 msgid ""
 "Your account must be at least two weeks old before you can create a faction"
@@ -839,7 +839,7 @@ msgid "Your country is temporary muted from this chat channel"
 msgstr "کشور شما موقتاً از این کانال چت بی‌صدا شده است"
 
 msgid "Your device looks weird"
-msgstr ""
+msgstr "دستگاه شما عجیب به نظر می‌رسد"
 
 msgid "Your mail has to be verified in order to chat"
 msgstr "برای چت کردن، ایمیل شما باید تأیید شود"
