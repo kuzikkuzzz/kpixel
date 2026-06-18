@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: admin@pixelplanet.fun\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2026-06-18 12:46+0000\n"
+"PO-Revision-Date: 2026-06-18 21:19+0000\n"
 "Last-Translator: IR Führer <ir_fuhrer@noreply.pixelplanet.fun>\n"
 "Language-Team: Persian <https://translate.gs-os.com/projects/ppfun/server/"
 "fa/>\n"
@@ -15,7 +15,7 @@ msgstr ""
 "X-Generator: Weblate 2026.5\n"
 
 msgid "1bit"
-msgstr "یک بیت"
+msgstr "1 بیت"
 
 msgid "2bit"
 msgstr "2بیت"
@@ -34,7 +34,7 @@ msgstr ""
 "00:00 UTC."
 
 msgid "A file was too large"
-msgstr ""
+msgstr "یک فایل بیش از حد بزرگ بود"
 
 msgid "Access modtools"
 msgstr "دسترسی به ابزار های مادریتوری"
@@ -61,72 +61,74 @@ msgid "Application successfully added"
 msgstr "برنامه با موفقیت اضافه شد"
 
 msgid "Avatar can only be an image"
-msgstr ""
+msgstr "آواتار فقط می‌تواند یک تصویر باشد"
 
 msgid "Avatar not given or not an image"
-msgstr ""
+msgstr "آواتار داده نشده یا تصویر نیست"
 
 msgid "Black and White canvas"
 msgstr "بوم سیاه و سفید"
 
 msgid "Can not change a role above your own"
-msgstr ""
+msgstr "نمی‌توان نقشی بالاتر از سطح خود را تغییر داد"
 
 msgid "Can not change a role that is equal to your own"
-msgstr ""
+msgstr "نمی‌توان نقشی هم‌سطح با خود را تغییر داد"
 
 msgid "Can not change the default setting of this role"
-msgstr ""
+msgstr "نمی‌توان تنظیم پیش‌فرض این نقش را تغییر داد"
 
 msgid "Can not change the powerlevel of a role equal or above you"
-msgstr ""
+msgstr "نمی‌توان سطح قدرت نقشی هم‌سطح یا بالاتر از خود را تغییر داد"
 
 msgid "Can not change the powerlevel of the Sovereign"
-msgstr ""
+msgstr "نمی‌توان سطح قدرت حاکم (Sovereign) را تغییر داد"
 
 msgid "Can not chat while being banned"
 msgstr "تا زمانی که بن هستی نمیتونی چت کنی"
 
 msgid "Can not create a role on the same level as yours"
-msgstr ""
+msgstr "نمی‌توان نقشی در همان سطح خود ایجاد کرد"
 
 msgid "Can not create a role with a powerlevel beyond yours"
-msgstr ""
+msgstr "نمی‌توان نقشی با سطح قدرت بالاتر از خود ایجاد کرد"
 
 msgid "Can not delete a role on the same level as yours"
-msgstr ""
+msgstr "نمی‌توان نقشی هم‌سطح با خود را حذف کرد"
 
 msgid "Can not delete this role"
-msgstr ""
+msgstr "نمی‌توان این نقش را حذف کرد"
 
 msgid "Can not elevate the powerlevel of a role beyond yours"
-msgstr ""
+msgstr "نمی‌توان سطح قدرت نقشی را بالاتر از خود ارتقا داد"
 
 msgid "Can not elevate the powerlevel of a role to yours"
-msgstr ""
+msgstr "نمی‌توان سطح قدرت نقشی را به سطح خود ارتقا داد"
 
 #, javascript-format
 msgid "Can not have more than ${ MAX_ROLES_PER_FACTION } faction roles"
-msgstr ""
+msgstr "نمی‌توان بیش از ${ MAX_ROLES_PER_FACTION } نقش در هر فکشن داشت"
 
 msgid "Can not have more than 20 invites per faction"
-msgstr ""
+msgstr "نمی‌توان بیش از ۲۰ دعوت‌نامه در هر فکشن داشت"
 
 msgid "Can not modify user equal to you or above you"
-msgstr ""
+msgstr "نمی‌توان کاربری هم‌سطح یا بالاتر از خود را تغییر داد"
 
 #. when leaving a faction and you are the last owner
 msgid "Can not orphan a faction"
-msgstr ""
+msgstr "نمی‌توان یک فکشن را بدون مالک رها کرد"
 
 #, javascript-format
 msgid ""
 "Can not upload this many files at once, only 5 are allowed, you have $"
 "{ amountOfFiles }"
 msgstr ""
+"نمی‌توان این تعداد فایل را یک‌باره آپلود کرد، فقط ۵ فایل مجاز است، شما ${ "
+"amountOfFiles } فایل دارید"
 
 msgid "Can only have one Sovereign role"
-msgstr ""
+msgstr "فقط می‌توان یک نقش حاکم (Sovereign) داشت"
 
 msgid "Click here"
 msgstr "اینجا کلیک کنید"
@@ -154,10 +156,10 @@ msgid "Coronavirus"
 msgstr "ویروس کرونا"
 
 msgid "Could not change the flag of this role"
-msgstr ""
+msgstr "پرچم این نقش قابل تغییر نبود"
 
 msgid "Could not change this setting. Maybe try again later."
-msgstr ""
+msgstr "این تنظیم قابل تغییر نبود. شاید بعداً دوباره تلاش کنید."
 
 msgid "Could not close this Session."
 msgstr "نتوانستیم این جلسه را ببندیم."
@@ -166,19 +168,19 @@ msgid "Could not find this login method"
 msgstr "این روش ورود به سیستم پیدا نشد"
 
 msgid "Could not leave this channel"
-msgstr ""
+msgstr "نمی‌توان از این کانال خارج شد"
 
 msgid "Could not set this factions avatar"
-msgstr ""
+msgstr "تصویر نمایه این گروه قابل تنظیم نبود"
 
 msgid "Could not set your avatar"
-msgstr ""
+msgstr "تصویر نمایه شما قابل تنظیم نبود"
 
 msgid "Could not set your faction role"
-msgstr ""
+msgstr "نقش گروهی شما قابل تنظیم نبود"
 
 msgid "Could not upload all files"
-msgstr ""
+msgstr "همه پرونده‌ها بارگذاری نشدند"
 
 msgid "Couldn't find this mail in our database"
 msgstr "این ایمیل در پایگاه داده ما یافت نشد"
@@ -236,18 +238,21 @@ msgid ""
 "File ${ filename } has ${ sizeMB } MB and is too large. It may only be $"
 "{ MAX_FILE_SIZE_MB } MB"
 msgstr ""
+"پرونده ${ filename } دارای ${ sizeMB } مگابایت است و بیش از حد بزرگ است. "
+"حداکثر مجاز ${ MAX_FILE_SIZE_MB } مگابایت است"
 
 #, javascript-format
 msgid "File ${ filename } has an invalid extension"
-msgstr ""
+msgstr "پرونده ${ filename } پسوند نامعتبری دارد"
 
 msgid "File is broken"
-msgstr ""
+msgstr "پرونده خراب است"
 
 #. 'client_secret' is a technical term and should not be translated
 msgid ""
 "Generate a new client_secret. The old secret will become invalid immediately."
 msgstr ""
+"یک 'client_secret' جدید تولید کنید. رمز قدیمی بلافاصله نامعتبر خواهد شد."
 
 msgid "Get email address"
 msgstr "دریافت آدرس ایمیل"
@@ -286,14 +291,14 @@ msgid ""
 "If you did not request this mail, please just ignore it (the ip that "
 "requested this mail was ${ ip })."
 msgstr ""
-"اگر شما این نامه را درخواست نکردید، لطفاً آن را نادیده بگیرید (IP درخواست "
-"کننده این نامه ${ ip } بود)."
+"اگر شما این ایمیل را درخواست نکرده‌اید، لطفاً آن را نادیده بگیرید (آی‌پی "
+"درخواست‌کننده این ایمیل ${ ip } بود)."
 
 msgid "Incorrect password"
 msgstr "رمز عبور نادرست"
 
 msgid "Invalid type of media"
-msgstr ""
+msgstr "نوع رسانه نامعتبر است"
 
 msgid "Invalid url :( Please check your mail again."
 msgstr "آدرس اینترنتی نامعتبر :( لطفا دوباره ایمیل خود را بررسی کنید."
@@ -302,17 +307,17 @@ msgid "Just admins can do that"
 msgstr "فقط ادمین ها میتونن این کار رو بکنن"
 
 msgid "Just janny, mod or admin can do that"
-msgstr ""
+msgstr "فقط نظافتچی، ناظم یا مدیر اجازه انجام این کار را دارند"
 
 msgid "Just mods and admins can do that"
-msgstr ""
+msgstr "فقط ناظمان و مدیران اجازه انجام این کار را دارند"
 
 msgid "Know that an account exists"
 msgstr "اطلاع از وجود یک حساب کاربری"
 
 #. "scopes" is a technical term and should not be translated
 msgid "List of available scopes"
-msgstr ""
+msgstr "فهرست\"scopes\" های موجود"
 
 msgid "Loading..."
 msgstr "بارگذاری..."
@@ -333,11 +338,11 @@ msgid "Mail verification"
 msgstr "تایید ایمیل"
 
 msgid "MimeType or extension not known or supported"
-msgstr ""
+msgstr "نوع Mime یا پسوند شناخته شده یا پشتیبانی نمی‌شود"
 
 #, javascript-format
 msgid "Mimetype ${ mimeType } of file ${ filename } is invalid or not allowed"
-msgstr ""
+msgstr "نوع Mime ${ mimeType } پرونده ${ filename } نامعتبر یا مجاز نیست"
 
 msgid "Minimap"
 msgstr "مینی‌مپ"
@@ -359,7 +364,7 @@ msgstr ""
 "هنری بزرگتر از 1.5k × 1.5k پیکسل باشد."
 
 msgid "Name already in use."
-msgstr ""
+msgstr "این نام قبلاً استفاده شده است."
 
 msgid "Name can only contain the characters: a-z . _ and -"
 msgstr "نام فقط می‌تواند شامل کاراکترهای a-z . _ و - باشد"
@@ -386,7 +391,7 @@ msgid "New Password"
 msgstr "رمز عبور جدید"
 
 msgid "No Avatar given"
-msgstr ""
+msgstr "تصویر نمایه مشخص نشده است"
 
 msgid "No Captcha given"
 msgstr "کپچا داده نشده است"
@@ -399,7 +404,7 @@ msgstr "رمز عبور داده نشده است."
 
 #. "redirect_uris" is a technical term and should not be translated
 msgid "No redirect_uris given."
-msgstr ""
+msgstr "هیچ \"redirect_uris\" ارائه نشده است."
 
 msgid "No such badge found"
 msgstr "نشان مورد نظر یافت نشد"
@@ -408,20 +413,20 @@ msgid "No such fish found"
 msgstr "ماهی مورد نظر پیدا نشد"
 
 msgid "One redirect URIs per line"
-msgstr ""
+msgstr "یک نشانی بازگردانی در هر خط"
 
 msgid "One redirect_uri per line"
-msgstr ""
+msgstr "یک redirect_uri در هر خط"
 
 #. "redirect_uris" is a technical term and should not be translated
 msgid "Only five redirect_uris are allowed per client"
-msgstr ""
+msgstr "فقط پنج redirect_uri برای هر کلاینت مجاز است"
 
 msgid "Only four colors. Same rules as moon!"
-msgstr ""
+msgstr "فقط چهار رنگ. قوانین مشابه بوم ماه!"
 
 msgid "OpenID Connect specs"
-msgstr ""
+msgstr "مشخصات OpenID Connect"
 
 msgid "Or by copying following url:"
 msgstr "یا با کپی کردن آدرس زیر:"
@@ -464,7 +469,7 @@ msgstr ""
 "طریق آدرس اینترنتی ${ wellKnownUrl } کشف شوند."
 
 msgid "Place Voxels on a 3D canvas with others."
-msgstr "Voxels را روی بوم سه بعدی با دیگران قرار دهید"
+msgstr "وکسل‌ها را با دیگران روی بوم سه‌بعدی قرار دهید."
 
 msgid "Place color pixels on an map styled canvas with other players online"
 msgstr "پیکسل‌های رنگی را روی بوم طرح‌دار نقشه با دیگر بازیکنان آنلاین قرار دهید"
@@ -488,11 +493,11 @@ msgid "Regularly update this data"
 msgstr "به‌روزرسانی منظم این داده‌ها"
 
 msgid "Request stalled"
-msgstr ""
+msgstr "درخواست متوقف شد"
 
 #. 'client_secret' is a technical term and should not be translated
 msgid "Reroll client_secret"
-msgstr ""
+msgstr "بازتولید client_secret"
 
 msgid "Reset Password"
 msgstr "بازنشانی رمز عبور"
@@ -501,39 +506,43 @@ msgid "Reset your password here"
 msgstr "رمز عبور خود را در اینجا بازنشانی کنید"
 
 msgid "Role flag can only be an image"
-msgstr ""
+msgstr "پرچم نقش فقط می‌تواند یک تصویر باشد"
 
 msgid "Role flag needs to be 16x11"
-msgstr ""
+msgstr "پرچم نقش باید ۱۶×۱۱ باشد"
 
 msgid "Server Error"
 msgstr "خطای سرور"
 
 msgid "Server error while deleting user."
-msgstr ""
+msgstr "خطای سرور هنگام حذف کاربر."
 
 msgid "Someone logged into your account from a new location, with the IP:"
 msgstr "شخصی از یک مکان جدید با IP زیر وارد حساب کاربری شما شده است:"
 
 msgid "Space-separated list of available scopes"
-msgstr ""
+msgstr "فهرست scope‌های موجود با فاصله جدا شده"
 
 msgid ""
 "Space-separated list of default scopes, they will be used on requests if no "
 "other scope is given."
 msgstr ""
+"فهرست scope‌های پیش‌فرض با فاصله جدا شده، در درخواست‌هایی که scope دیگری مشخص "
+"نشده استفاده خواهند شد."
 
 #. 'scope' is used as a technical term here, do not translate that word
 msgid ""
 "Space-separated list of default scopes, they will be used on requests where "
 "no other scope is given."
 msgstr ""
+"فهرستscope‌های پیش‌فرض با فاصله جدا شده، در درخواست‌هایی کهscope دیگری مشخص "
+"نشده استفاده خواهند شد."
 
 msgid "Space-separated list of scopes that should be available"
-msgstr ""
+msgstr "فهرست scope‌هایی که باید موجود باشند با فاصله جدا شده"
 
 msgid "Special canvas to spread awareness of SARS-CoV2 (take the vax)."
-msgstr "یک بوم مخصوص برای آگاه سازی درمورد ویروس کرونا"
+msgstr "بوم ویژه برای آگاهی‌بخشی درباره SARS-CoV2 (واکسن نزنید)."
 
 msgid "Stop flooding."
 msgstr "اینقدر پیام نفرست."
@@ -546,7 +555,7 @@ msgstr "ممنون"
 
 #, javascript-format
 msgid "The file ${ filename } is banned ${ reason }. Ban ID: ${ mbid }"
-msgstr ""
+msgstr "پرونده ${ filename } ممنوع شده ${ reason }. شناسه ممنوعیت: ${ mbid }"
 
 msgid "The user owning this badge is private"
 msgstr "کاربری که این نشان را دارد، خصوصی است"
@@ -565,12 +574,12 @@ msgstr ""
 "این برنامه یک درخواست ورود به سیستم معیوب و بدون تغییر مسیر مرجوعی ارسال کرد"
 
 msgid "This application uses a PKCE method we do not support"
-msgstr "این برنامه از روش PKCE استفاده می‌کند که ما از آن پشتیبانی نمی‌کنیم."
+msgstr "این برنامه از روش PKCE استفاده می‌کند که ما از آن پشتیبانی نمی‌کنیم"
 
 msgid "This application uses a login method we do not support"
 msgstr ""
 "این برنامه از روشی برای ورود به سیستم استفاده می‌کند که ما از آن پشتیبانی "
-"نمی‌کنیم."
+"نمی‌کنیم"
 
 msgid ""
 "This email / password combination got hacked and leaked. To protect this "
@@ -598,17 +607,17 @@ msgid "This email provider is not allowed"
 msgstr "این ارائه دهنده ایمیل مجاز نیست"
 
 msgid "This faction does not exist"
-msgstr ""
+msgstr "این گروه وجود ندارد"
 
 msgid "This faction is full"
-msgstr ""
+msgstr "این گروه ظرفیت آن تکمیل شده است"
 
 msgid "This faction is private"
-msgstr ""
+msgstr "این گروه خصوصی است"
 
 #, javascript-format
 msgid "This media is banned ${ reason }. Ban ID: ${ mbid }"
-msgstr ""
+msgstr "این رسانه ممنوع شده ${ reason }. شناسه ممنوعیت: ${ mbid }"
 
 msgid "This password-reset link isn't valid anymore :("
 msgstr "این password-reset دیگر معتبر نیست :("
@@ -617,7 +626,7 @@ msgid "This user has not password set"
 msgstr "این کاربر رمز عبور تنظیم نکرده است"
 
 msgid "This user is private"
-msgstr ""
+msgstr "این کاربر خصوصی است"
 
 msgid "Title can't be empty."
 msgstr "عنوان نمی‌تواند خالی باشد."
@@ -633,7 +642,7 @@ msgstr "عنوان باید کمتر از ۲۶ کاراکتر باشد"
 
 #. "redirect_uris" is a technical term and should not be translated
 msgid "Too many or too long redirect_uris"
-msgstr ""
+msgstr "redirect_uris بیش از حد زیاد یا طولانی است"
 
 msgid "Top10"
 msgstr "ده نفر برتر"
@@ -643,7 +652,7 @@ msgstr "کپچا یه خطایی داده که خودمم نمیدونم چیه"
 
 #, javascript-format
 msgid "Unknown field ${ name } in request"
-msgstr ""
+msgstr "فیلد ناشناخته ${ name } در درخواست"
 
 msgid "Update Application"
 msgstr "به‌روزرسانی برنامه"
@@ -688,26 +697,26 @@ msgstr ""
 "{ minLeft }دقیقه دیگر درخواست کنید."
 
 msgid "We currently do not allow file uploads"
-msgstr ""
+msgstr "در حال حاضر بارگذاری پرونده مجاز نیست"
 
-#, fuzzy, javascript-format
+#, javascript-format
 msgid "Welcome ${ name } to PixelPlanet, please verify your mail"
-msgstr "خوش اومدی آقای ${ name } به پیکسل پلنت. بی زحمت ایمیلت رو تایید کن"
+msgstr "خوش آمدید ${ name } به پیکسل‌پلنت، لطفاً ایمیل خود را تأیید کنید"
 
 msgid "You already chose your username"
-msgstr ""
+msgstr "شما قبلاً نام کاربری خود را انتخاب کرده‌اید"
 
 msgid "You already have that name."
-msgstr ""
+msgstr "شما قبلاً این نام را دارید."
 
 msgid "You are already part of this faction"
-msgstr ""
+msgstr "شما از قبل عضو این گروه هستید"
 
 msgid "You are already verified."
-msgstr ""
+msgstr "شما قبلاً تأیید شده‌اید."
 
 msgid "You are banned from this faction"
-msgstr ""
+msgstr "شما از این گروه محروم شده‌اید"
 
 #, javascript-format
 msgid "You are muted for another ${ timeMin } minutes"
@@ -729,54 +738,57 @@ msgstr "شما وارد نشده اید"
 msgid "You are now verified :)"
 msgstr "الان تایید شدی :)"
 
-#, fuzzy
 msgid "You are permanently muted, join our guilded to appeal the mute"
-msgstr "شما برای همیشه بی‌صدا شده‌اید، به گیلدد ما بپیوندید تا نادیده گرفته شود"
+msgstr "شما به طور دائم بی‌صدا شده‌اید، برای اعتراض به گیلدد ما بپیوندید"
 
 #, javascript-format
 msgid "You are sending messages too fast, you have to wait ${ waitTime }s :("
-msgstr "خیلی داری تند تند پیام میفرستی. باید ${ waitTime } صبر کنی"
+msgstr "شما خیلی سریع پیام ارسال می‌کنید، باید ${ waitTime } ثانیه صبر کنید :("
 
 msgid "You attached too many files"
-msgstr ""
+msgstr "شما پرونده‌های بیش از حدی پیوست کردید"
 
 msgid ""
 "You can not delete this login method, because you have nothing else left."
 msgstr ""
+"شما نمی‌توانید این روش ورود را حذف کنید، زیرا روش دیگری باقی نمانده است."
 
 msgid "You can not register an account while you are banned"
-msgstr ""
+msgstr "شما نمی‌توانید در زمان محرومیت حساب کاربری ثبت کنید"
 
 msgid "You can not register an account with a proxy"
-msgstr ""
+msgstr "شما نمی‌توانید با پروکسی حساب کاربری ثبت کنید"
 
-#, fuzzy
 msgid "You can not send chat messages while using a proxy"
-msgstr "تو نمیتونی با فیلترشکن پیام بفرستی"
+msgstr "شما نمی‌توانید هنگام استفاده از پروکسی پیام چت ارسال کنید"
 
 #, javascript-format
 msgid ""
 "You can only be owner of ${ MAX_OWNED_FACTIONS_PER_USER } factions in total"
 msgstr ""
+"شما در مجموع فقط می‌توانید مالک ${ MAX_OWNED_FACTIONS_PER_USER } گروه باشید"
 
 #, javascript-format
 msgid "You can only have ${ MAX_FACTIONS_PER_USER } factions in total"
-msgstr ""
+msgstr "شما در مجموع فقط می‌توانید ${ MAX_FACTIONS_PER_USER } گروه داشته باشید"
 
 msgid ""
 "You can register your own application here to get the client_id and "
 "client_secret needed to make use of this."
 msgstr ""
+"شما می‌توانید برنامه خود را اینجا ثبت کنید تا client_id و client_secret مورد "
+"نیاز برای استفاده از این قابلیت را دریافت کنید."
 
 msgid "You can't send a message this long :("
 msgstr "نمیشه اینقدر پیام بدی :("
 
 msgid "You did not provide all necessary information"
-msgstr ""
+msgstr "شما تمام اطلاعات لازم را ارائه نکرده‌اید"
 
 msgid ""
 "You do not have any email adress set. Please add one under \"Login Methods\"."
 msgstr ""
+"شما هیچ نشانی ایمیل تنظیم نکرده‌اید. لطفاً یکی در بخش «روش‌های ورود» افزود کنید."
 
 msgid "You don't have access to this channel"
 msgstr "تو به این کانال دسترسی نداری"
@@ -790,24 +802,24 @@ msgstr ""
 "دریافت کنید"
 
 msgid "You have to fill out all fields"
-msgstr ""
+msgstr "شما باید تمام فیلدها را پر کنید"
 
 msgid "You must be logged in to access this page"
-msgstr ""
+msgstr "برای دسترسی به این صفحه باید وارد شده باشید"
 
 msgid "You need an invite to join this faction"
-msgstr ""
+msgstr "برای پیوستن به این گروه به دعوت‌نامه نیاز دارید"
 
 #. "scope" is a technical term and should not be translated
 msgid "You need to define a valid scope"
-msgstr ""
+msgstr "شما باید یک scope معتبر تعریف کنید"
 
 msgid "You need to directly access this page in the browser :("
-msgstr ""
+msgstr "شما باید مستقیماً از مرورگر به این صفحه دسترسی داشته باشید :("
 
 #, javascript-format
 msgid "You reached your maximum upload quota of ${ MAX_USER_MEDIA_SIZE_MB } MB"
-msgstr ""
+msgstr "شما به سقف بارگذاری ${ MAX_USER_MEDIA_SIZE_MB } مگابایت خود رسیدید"
 
 msgid ""
 "You requested to get a new password. You can change your password within the "
@@ -820,7 +832,7 @@ msgid "You sent an empty password or invalid data :("
 msgstr "رمز خالی یا داده نامعتبر فرستادی :("
 
 msgid "You took too long, try again"
-msgstr ""
+msgstr "خیلی طول کشید، دوباره تلاش کنید"
 
 msgid "You will be automatically redirected after 15s"
 msgstr "پس از 15 ثانیه به طور خودکار هدایت می شوید"
@@ -831,9 +843,10 @@ msgstr "مرورگر شما مشکوک به نظر می‌رسد"
 msgid ""
 "Your account must be at least two weeks old before you can create a faction"
 msgstr ""
+"حساب کاربری شما باید حداقل دو هفته قدمت داشته باشد تا بتوانید گروه ایجاد کنید"
 
 msgid "Your account needs to be verified to access this page"
-msgstr ""
+msgstr "حساب کاربری شما برای دسترسی به این صفحه باید تأیید شده باشد"
 
 msgid "Your country is temporary muted from this chat channel"
 msgstr "کشور شما موقتاً از این کانال چت بی‌صدا شده است"
@@ -856,35 +869,35 @@ msgstr "رمزهای شما همخوانی ندارند :("
 
 #. This media is banned xyz
 msgid "because it is propaganda"
-msgstr ""
+msgstr "زیرا پروپاگاندا است"
 
 #. This media is banned xyz
 msgid "for being an attempt to scam people"
-msgstr ""
+msgstr "به دلیل تلاش برای کلاهبرداری از افراد"
 
 #. This media is banned xyz
 msgid "for being degenerate"
-msgstr ""
+msgstr "به دلیل محتوای منحط"
 
 #. This media is banned xyz
 msgid "for containing CSAM"
-msgstr ""
+msgstr "به دلیل حاوی سوءاستفاده جنسی از کودکان"
 
 #. This media is banned xyz
 msgid "for containing graphic violence"
-msgstr ""
+msgstr "به دلیل حاوی خشونت تصویری"
 
 #. This media is banned xyz
 msgid "for containing personal information"
-msgstr ""
+msgstr "به دلیل حاوی اطلاعات شخصی"
 
 #. This media is banned xyz
 msgid "for glorifying terrorism"
-msgstr ""
+msgstr "به دلیل تمجید از تروریسم"
 
 #. "redirect_uris" is a technical term and should not be translated
 msgid "redirect_uris does not look legit"
-msgstr ""
+msgstr "redirect_uris معتبر به نظر نمی‌رسد"
 
 msgid "to go back to pixelplanet"
 msgstr "برای بازگشت به pixelplanet"

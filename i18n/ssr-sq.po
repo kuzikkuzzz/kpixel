@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: admin@pixelplanet.fun\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2026-05-24 07:30+0000\n"
+"PO-Revision-Date: 2026-06-18 21:19+0000\n"
 "Last-Translator: Extreme Motorsex <em@noreply.pixelplanet.fun>\n"
 "Language-Team: Albanian <https://translate.gs-os.com/projects/ppfun/server/"
 "sq/>\n"
@@ -344,12 +344,12 @@ msgid "Mail verification"
 msgstr "Verifikim me email"
 
 msgid "MimeType or extension not known or supported"
-msgstr "Lloji MIME ose prapashtesa është e panjohur ose nuk mbështetet"
+msgstr "Lloji Mime ose prapashtesa është e panjohur ose nuk mbështetet"
 
 #, javascript-format
 msgid "Mimetype ${ mimeType } of file ${ filename } is invalid or not allowed"
 msgstr ""
-"Lloji MIME ${ mimeType } i skedarit ${ filename } është i pavlefshëm ose i "
+"Lloji Mime ${ mimeType } i skedarit ${ filename } është i pavlefshëm ose i "
 "palejuar"
 
 msgid "Minimap"
@@ -376,7 +376,7 @@ msgid "Name already in use."
 msgstr "Emri është në përdorim."
 
 msgid "Name can only contain the characters: a-z . _ and -"
-msgstr "Emri mund të ket vetëm karakteret: a-z . _ dhe -"
+msgstr "Emri mund të ketë vetëm karakteret: a-z . _ dhe -"
 
 msgid "Name can't be empty."
 msgstr "Emri nuk mund të jetë bosh."
@@ -406,7 +406,7 @@ msgid "No Captcha given"
 msgstr "Nuk është dhënë asnjë Captcha"
 
 msgid "No or invalid fish id."
-msgstr "Asnjë ID ose ID e pavlefshme peshku."
+msgstr "Asnjë id ose id e pavlefshme peshku."
 
 msgid "No password given."
 msgstr "Nuk është dhënë asnjë fjalëkalim."
@@ -438,7 +438,7 @@ msgid "OpenID Connect specs"
 msgstr "Specifikimet OpenID Connect"
 
 msgid "Or by copying following url:"
-msgstr "Ose duke kopjuar URL-në e mëposhtme:"
+msgstr "Ose duke kopjuar Url-në e mëposhtme:"
 
 msgid "Our main canvas, a huge map of the world. Place anywhere you like!"
 msgstr ""
@@ -636,7 +636,7 @@ msgid "This password-reset link isn't valid anymore :("
 msgstr "Kjo lidhje e rivendosjes së fjalëkalimit nuk është më e vlefshme :("
 
 msgid "This user has not password set"
-msgstr "Ky përdorues nuk ka vendosur fjalëkalim akoma"
+msgstr "Ky përdorues nuk ka vendosur një fjalëkalim"
 
 msgid "This user is private"
 msgstr "Ky përdorues është privat"
@@ -671,7 +671,7 @@ msgid "Update Application"
 msgstr "Përditëso aplikacionin"
 
 msgid "User ID and verification level"
-msgstr "User ID dhe niveli i verifikimit"
+msgstr "ID e përdoruesit dhe niveli i verifikimit"
 
 msgid "User doesn't exist in our database :("
 msgstr "Përdoruesi nuk ekziston në bazën tonë të të dhënave :("
@@ -875,7 +875,7 @@ msgid "Your country is temporary muted from this chat channel"
 msgstr "Shteti juaj është i heshtur përkohësisht nga ky kanal bisede"
 
 msgid "Your device looks weird"
-msgstr "Pajisja e juaj duket e çuditshme"
+msgstr "Pajisja juaj duket e çuditshme"
 
 msgid "Your mail has to be verified in order to chat"
 msgstr "Emaili juaj duhet të jetë i verifikuar në mënyrë që të bisedoni"
