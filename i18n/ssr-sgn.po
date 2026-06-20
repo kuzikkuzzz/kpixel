@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: admin@pixelplanet.fun\n"
-"PO-Revision-Date: 2026-01-03 22:40+0000\n"
+"PO-Revision-Date: 2026-06-20 21:15+0000\n"
 "Last-Translator: Extreme Motorsex <em@noreply.pixelplanet.fun>\n"
 "Language-Team: Sign Languages <https://translate.gs-os.com/projects/ppfun/"
 "server/sgn/>\n"
@@ -9,7 +9,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.14\n"
+"X-Generator: Weblate 2026.5\n"
 
 msgid "1bit"
 msgstr "1️⃣👈🤞👋"
@@ -18,119 +18,148 @@ msgid "2bit"
 msgstr "2️⃣👈🤞👋"
 
 msgid "3D Canvas"
-msgstr ""
+msgstr "3️⃣🤚 🤘✌️👇🤜✌️🖖"
 
 msgid "A 3D globe of our whole map"
-msgstr ""
+msgstr "✌️ 3️⃣🤚 🤛👍👌👈🤙 👌✋ 👌🙌☝️ 👐🖐️👌👍🤙 👆✌️👎"
 
 msgid ""
 "A canvas for the most active players from the the previous day. Daily "
 "ranking updates at 00:00 UTC."
 msgstr ""
+"✌️ 🤘✌️👇🤜✌️🖖 ✋👌☝️ 👋🖐️🤙 👆👌🖖👋 ✌️🤘👋🤞🤜🤙 👎👍✌️👏🤙☝️🖖 ✋☝️👌👆 "
+"👋🖐️🤙 👋🖐️🤙 👎☝️🤙🤜🤞👌🙌🖖 🤚✌️👏. 🤚✌️🤞👍👏 ☝️✌️👇👊🤞👇🤛 🙌👎🤚✌️👋🤙"
+"🖖 ✌️👋 0️⃣0️⃣:0️⃣0️⃣ 🙌👋🤘."
 
 msgid "A file was too large"
-msgstr ""
+msgstr "✌️ ✋🤞👍🤙 👐✌️🖖 👋👌👌 👍✌️☝️🤛🤙"
 
 msgid "Access modtools"
-msgstr ""
+msgstr "✌️🤘🤘🤙🖖🖖 👆👌🤚👋👌👌👍🖖"
 
 msgid "Add Application"
-msgstr ""
+msgstr "✌️🤚🤚 ✌️👎👎👍🤞🤘✌️👋🤞👌👇"
 
 msgid "Add an Application (OIDC Client)"
-msgstr ""
+msgstr "✌️🤚🤚 ✌️👇 ✌️👎👎👍🤞🤘✌️👋🤞👌👇 (👌🤞🤚🤘 🤘👍🤞🤙👇👋)"
 
 msgid "Add new application"
-msgstr ""
+msgstr "✌️🤚🤚 👇🤙👐 ✌️👎👎👍🤞🤘✌️👋🤞👌👇"
 
 msgid "An error occured. Please try again later."
-msgstr ""
+msgstr "✌️👇 🤙☝️☝️👌☝️ 👌🤘🤘🙌☝️🤙🤚. 👎👍🤙✌️🖖🤙 👋☝️👏 ✌️🤛✌️🤞👇 👍✌️👋🤙☝️."
 
 msgid "Application changed successfully"
-msgstr ""
+msgstr "✌️👎👎👍🤞🤘✌️👋🤞👌👇 🤘🖐️✌️👇🤛🤙🤚 🖖🙌🤘🤘🤙🖖🖖✋🙌👍👍👏"
 
 msgid "Application deleted"
-msgstr ""
+msgstr "✌️👎👎👍🤞🤘✌️👋🤞👌👇 🤚🤙👍🤙👋🤙🤚"
 
 msgid "Application successfully added"
-msgstr ""
+msgstr "✌️👎👎👍🤞🤘✌️👋🤞👌👇 🖖🙌🤘🤘🤙🖖🖖✋🙌👍👍👏 ✌️🤚🤚🤙🤚"
 
 msgid "Avatar can only be an image"
-msgstr ""
+msgstr "✌️🤜✌️👋✌️☝️ 🤘✌️👇 👌👇👍👏 👈🤙 ✌️👇 🤞👆✌️🤛🤙"
 
 msgid "Avatar not given or not an image"
-msgstr ""
+msgstr "✌️🤜✌️👋✌️☝️ 👇👌👋 🤛🤞🤜🤙👇 👌☝️ 👇👌👋 ✌️👇 🤞👆✌️🤛🤙"
 
 msgid "Black and White canvas"
-msgstr "👈👍✌️🤘👊 ✌️👇🤚 👐🖐🤞👋🤙 🤘✌️👇🤜✌️🖖"
+msgstr "👈👍✌️🤘👊 ✌️👇🤚 👐🖐️🤞👋🤙 🤘✌️👇🤜✌️🖖"
 
 msgid "Can not change a role above your own"
-msgstr ""
+msgstr "🤘✌️👇 👇👌👋 🤘🖐️✌️👇🤛🤙 ✌️ ☝️👌👍🤙 ✌️👈👌🤜🤙 👏👌🙌☝️ 👌👐👇"
 
 msgid "Can not change a role that is equal to your own"
 msgstr ""
+"🤘✌️👇 👇👌👋 🤘🖐️✌️👇🤛🤙 ✌️ ☝️👌👍🤙 👋🖐️✌️👋 🤞🖖 🤙🤝🙌✌️👍 👋👌 👏👌🙌"
+"☝️ 👌👐👇"
 
 msgid "Can not change the default setting of this role"
 msgstr ""
+"🤘✌️👇 👇👌👋 🤘🖐️✌️👇🤛🤙 👋🖐️🤙 🤚🤙✋✌️🙌👍👋 🖖🤙👋👋🤞👇🤛 👌✋ 👋🖐️🤞"
+"🖖 ☝️👌👍🤙"
 
 msgid "Can not change the powerlevel of a role equal or above you"
 msgstr ""
+"🤘✌️👇 👇👌👋 🤘🖐️✌️👇🤛🤙 👋🖐️🤙 👎👌👐🤙☝️👍🤙🤜🤙👍 👌✋ ✌️ ☝️👌👍🤙 🤙🤝"
+"🙌✌️👍 👌☝️ ✌️👈👌🤜🤙 👏👌🙌"
 
 msgid "Can not change the powerlevel of the Sovereign"
 msgstr ""
+"🤘✌️👇 👇👌👋 🤘🖐️✌️👇🤛🤙 👋🖐️🤙 👎👌👐🤙☝️👍🤙🤜🤙👍 👌✋ 👋🖐️🤙 🖖👌🤜🤙☝️"
+"🤙🤞🤛👇"
 
 msgid "Can not chat while being banned"
-msgstr ""
+msgstr "🤘✌️👇 👇👌👋 🤘🖐️✌️👋 👐🖐️🤞👍🤙 👈🤙🤞👇🤛 👈✌️👇👇🤙🤚"
 
 msgid "Can not create a role on the same level as yours"
 msgstr ""
+"🤘✌️👇 👇👌👋 🤘☝️🤙✌️👋🤙 ✌️ ☝️👌👍🤙 👌👇 👋🖐️🤙 🖖✌️👆🤙 👍🤙🤜🤙👍 ✌️🖖 "
+"👏👌🙌☝️🖖"
 
 msgid "Can not create a role with a powerlevel beyond yours"
 msgstr ""
+"🤘✌️👇 👇👌👋 🤘☝️🤙✌️👋🤙 ✌️ ☝️👌👍🤙 👐🤞👋🖐️ ✌️ 👎👌👐🤙☝️👍🤙🤜🤙👍 👈🤙"
+"👏👌👇🤚 👏👌🙌☝️🖖"
 
 msgid "Can not delete a role on the same level as yours"
 msgstr ""
+"🤘✌️👇 👇👌👋 🤚🤙👍🤙👋🤙 ✌️ ☝️👌👍🤙 👌👇 👋🖐️🤙 🖖✌️👆🤙 👍🤙🤜🤙👍 ✌️🖖 "
+"👏👌🙌☝️🖖"
 
 msgid "Can not delete this role"
-msgstr ""
+msgstr "🤘✌️👇 👇👌👋 🤚🤙👍🤙👋🤙 👋🖐️🤞🖖 ☝️👌👍🤙"
 
 msgid "Can not elevate the powerlevel of a role beyond yours"
 msgstr ""
+"🤘✌️👇 👇👌👋 🤙👍🤙🤜✌️👋🤙 👋🖐️🤙 👎👌👐🤙☝️👍🤙🤜🤙👍 👌✋ ✌️ ☝️👌👍🤙 👈"
+"🤙👏👌👇🤚 👏👌🙌☝️🖖"
 
 msgid "Can not elevate the powerlevel of a role to yours"
 msgstr ""
+"🤘✌️👇 👇👌👋 🤙👍🤙🤜✌️👋🤙 👋🖐️🤙 👎👌👐🤙☝️👍🤙🤜🤙👍 👌✋ ✌️ ☝️👌👍🤙 👋"
+"👌 👏👌🙌☝️🖖"
 
 #, javascript-format
 msgid "Can not have more than ${ MAX_ROLES_PER_FACTION } faction roles"
 msgstr ""
+"🤘✌️👇 👇👌👋 🖐️✌️🤜🤙 👆👌☝️🤙 👋🖐️✌️👇 ${ MAX_ROLES_PER_FACTION } ✋✌️🤘👋"
+"🤞👌👇 ☝️👌👍🤙🖖"
 
 msgid "Can not have more than 20 invites per faction"
 msgstr ""
+"🤘✌️👇 👇👌👋 🖐️✌️🤜🤙 👆👌☝️🤙 👋🖐️✌️👇 2️⃣0️⃣ 🤞👇🤜🤞👋🤙🖖 👎🤙☝️ ✋✌️🤘👋"
+"🤞👌👇"
 
 msgid "Can not modify user equal to you or above you"
 msgstr ""
+"🤘✌️👇 👇👌👋 👆👌🤚🤞✋👏 🙌🖖🤙☝️ 🤙🤝🙌✌️👍 👋👌 👏👌🙌 👌☝️ ✌️👈👌🤜🤙 👏"
+"👌🙌"
 
 #. when leaving a faction and you are the last owner
 msgid "Can not orphan a faction"
-msgstr ""
+msgstr "🤘✌️👇 👇👌👋 👌☝️👎🖐️✌️👇 ✌️ ✋✌️🤘👋🤞👌👇"
 
 #, javascript-format
 msgid ""
 "Can not upload this many files at once, only 5 are allowed, you have $"
 "{ amountOfFiles }"
 msgstr ""
+"🤘✌️👇 👇👌👋 🙌👎👍👌✌️🤚 👋🖐️🤞🖖 👆✌️👇👏 ✋🤞👍🤙🖖 ✌️👋 👌👇🤘🤙, 👌👇👍"
+"👏 5️⃣ ✌️☝️🤙 ✌️👍👍👌👐🤙🤚, 👏👌🙌 🖐️✌️🤜🤙 ${ amountOfFiles }"
 
 msgid "Can only have one Sovereign role"
-msgstr ""
+msgstr "🤘✌️👇 👌👇👍👏 🖐️✌️🤜🤙 👌👇🤙 🖖👌🤜🤙☝️🤙🤞🤛👇 ☝️👌👍🤙"
 
 msgid "Click here"
-msgstr "🤘👍🤞🤘👊 🖐🤙☝️🤙"
+msgstr "🤘👍🤞🤘👊 🖐️🤙☝️🤙"
 
 msgid "Click to Verify"
 msgstr "🤘👍🤞🤘👊 👋👌 🤜🤙☝️🤞✋👏"
 
 msgid "Client Name"
-msgstr ""
+msgstr "🤘👍🤞🤙👇👋 👇✌️👆🤙"
 
 msgid "Confirm New Password"
 msgstr "🤘👌👇✋🤞☝️👆 👇🤙👐 👎✌️🖖🖖👐👌☝️🤚"
@@ -139,6 +168,9 @@ msgid ""
 "Conquer land on a smaller earth with protected ocean. Shares cooldown with "
 "earth canvas!"
 msgstr ""
+"🤘👌👇🤝🙌🤙☝️ 👍✌️👇🤚 👌👇 ✌️ 🖖👆✌️👍👍🤙☝️ 🤙✌️☝️👋🖐️ 👐🤞👋🖐️ 👎☝️👌👋🤙"
+"🤘👋🤙🤚 👌🤘🤙✌️👇. 🖖🖐️✌️☝️🤙🖖 🤘👌👌👍🤚👌👐👇 👐🤞👋🖐️ 🤙✌️☝️👋🖐️ 🤘✌️👇"
+"🤜✌️🖖❗"
 
 msgid "Consent"
 msgstr "🤘👌👇🖖🤙👇👋"
@@ -147,121 +179,137 @@ msgid "Coronavirus"
 msgstr "🤘👌☝️👌👇✌️🤜🤞☝️🙌🖖"
 
 msgid "Could not change the flag of this role"
-msgstr ""
+msgstr "🤘👌🙌👍🤚 👇👌👋 🤘🖐️✌️👇🤛🤙 👋🖐️🤙 ✋👍✌️🤛 👌✋ 👋🖐️🤞🖖 ☝️👌👍🤙"
 
 msgid "Could not change this setting. Maybe try again later."
 msgstr ""
+"🤘👌🙌👍🤚 👇👌👋 🤘🖐️✌️👇🤛🤙 👋🖐️🤞🖖 🖖🤙👋👋🤞👇🤛. 👆✌️👏👈🤙 👋☝️👏 ✌️"
+"🤛✌️🤞👇 👍✌️👋🤙☝️."
 
 msgid "Could not close this Session."
-msgstr ""
+msgstr "🤘👌🙌👍🤚 👇👌👋 🤘👍👌🖖🤙 👋🖐️🤞🖖 🖖🤙🖖🖖🤞👌👇."
 
 msgid "Could not find this login method"
-msgstr ""
+msgstr "🤘👌🙌👍🤚 👇👌👋 ✋🤞👇🤚 👋🖐️🤞🖖 👍👌🤛🤞👇 👆🤙👋🖐️👌🤚"
 
 msgid "Could not leave this channel"
-msgstr ""
+msgstr "🤘👌🙌👍🤚 👇👌👋 👍🤙✌️🤜🤙 👋🖐️🤞🖖 🤘🖐️✌️👇👇🤙👍"
 
 msgid "Could not set this factions avatar"
-msgstr ""
+msgstr "🤘👌🙌👍🤚 👇👌👋 🖖🤙👋 👋🖐️🤞🖖 ✋✌️🤘👋🤞👌👇🖖 ✌️🤜✌️👋✌️☝️"
 
 msgid "Could not set your avatar"
-msgstr ""
+msgstr "🤘👌🙌👍🤚 👇👌👋 🖖🤙👋 👏👌🙌☝️ ✌️🤜✌️👋✌️☝️"
 
 msgid "Could not set your faction role"
-msgstr ""
+msgstr "🤘👌🙌👍🤚 👇👌👋 🖖🤙👋 👏👌🙌☝️ ✋✌️🤘👋🤞👌👇 ☝️👌👍🤙"
 
 msgid "Could not upload all files"
-msgstr ""
+msgstr "🤘👌🙌👍🤚 👇👌👋 🙌👎👍👌✌️🤚 ✌️👍👍 ✋🤞👍🤙🖖"
 
 msgid "Couldn't find this mail in our database"
-msgstr "🤘👌🙌👍🤚👇👋 ✋🤞👇🤚 👋🖐🤞🖖 👆✌️🤞👍 🤞👇 👌🙌☝️ 🤚✌️👋✌️👈✌️🖖🤙"
+msgstr "🤘👌🙌👍🤚👇👋 ✋🤞👇🤚 👋🖐️🤞🖖 👆✌️🤞👍 🤞👇 👌🙌☝️ 🤚✌️👋✌️👈✌️🖖🤙"
 
 msgid "Default"
-msgstr ""
+msgstr "🤚🤙✋✌️🙌👍👋"
 
 msgid "Delete Application"
-msgstr ""
+msgstr "🤚🤙👍🤙👋🤙 ✌️👎👎👍🤞🤘✌️👋🤞👌👇"
 
 msgid "Description can't be empty"
-msgstr ""
+msgstr "🤚🤙🖖🤘☝️🤞👎👋🤞👌👇 🤘✌️👇👋 👈🤙 🤙👆👎👋👏"
 
 msgid "Description must be shorter than 1000 characters"
 msgstr ""
+"🤚🤙🖖🤘☝️🤞👎👋🤞👌👇 👆🙌🖖👋 👈🤙 🖖🖐️👌☝️👋🤙☝️ 👋🖐️✌️👇 1️⃣0️⃣0️⃣0️⃣ 🤘🖐️✌️"
+"☝️✌️🤘👋🤙☝️🖖"
 
 msgid "Display name for your OIDC client"
-msgstr ""
+msgstr "🤚🤞🖖👎👍✌️👏 👇✌️👆🤙 ✋👌☝️ 👏👌🙌☝️ 👌🤞🤚🤘 🤘👍🤞🤙👇👋"
 
 msgid "Double click on globe to go back."
 msgstr "🤚👌🙌👈👍🤙 🤘👍🤞🤘👊 👌👇 🤛👍👌👈🤙 👋👌 🤛👌 👈✌️🤘👊."
 
 msgid "E-Mail already in use."
-msgstr "🤙-👆✌️🤞👍 ✌️👍☝️🤙✌️🤚👏 🤞👇 🙌🖖🤙."
+msgstr "🤙➖👆✌️🤞👍 ✌️👍☝️🤙✌️🤚👏 🤞👇 🙌🖖🤙."
 
 msgid "Earth"
-msgstr "🤙✌️☝️👋🖐"
+msgstr "🤙✌️☝️👋🖐️"
 
 msgid "Edit existing applications"
-msgstr ""
+msgstr "🤙🤚🤞👋 🤙👉🤞🖖👋🤞👇🤛 ✌️👎👎👍🤞🤘✌️👋🤞👌👇🖖"
 
 msgid "Email can't be empty."
 msgstr "🤙👆✌️🤞👍 🤘✌️👇👋 👈🤙 🤙👆👎👋👏."
 
 msgid "Email can't be longer than 40 characters."
-msgstr ""
+msgstr "🤙👆✌️🤞👍 🤘✌️👇👋 👈🤙 👍👌👇🤛🤙☝️ 👋🖐️✌️👇 4️⃣0️⃣ 🤘🖐️✌️☝️✌️🤘👋🤙☝️🖖."
 
 msgid "Email should at least contain a dot"
-msgstr "🤙👆✌️🤞👍 🖖🖐👌🙌👍🤚 ✌️👋 👍🤙✌️🖖👋 🤘👌👇👋✌️🤞👇 ✌️ 🤚👌👋"
+msgstr "🤙👆✌️🤞👍 🖖🖐️👌🙌👍🤚 ✌️👋 👍🤙✌️🖖👋 🤘👌👇👋✌️🤞👇 ✌️ 🤚👌👋"
 
 msgid "Email should be at least 5 characters long."
 msgstr ""
+"🤙👆✌️🤞👍 🖖🖐️👌🙌👍🤚 👈🤙 ✌️👋 👍🤙✌️🖖👋 5️⃣ 🤘🖐️✌️☝️✌️🤘👋🤙☝️🖖 👍👌👇"
+"🤛."
 
 msgid "Email should contain a @"
-msgstr "🤙👆✌️🤞👍 🖖🖐👌🙌👍🤚 🤘👌👇👋✌️🤞👇 ✌️ @"
+msgstr "🤙👆✌️🤞👍 🖖🖐️👌🙌👍🤚 🤘👌👇👋✌️🤞👇 ✌️ @"
 
 msgid "Error"
 msgstr "🤙☝️☝️👌☝️"
 
 msgid "Failed to create a new user :("
-msgstr ""
+msgstr "✋✌️🤞👍🤙🤚 👋👌 🤘☝️🤙✌️👋🤙 ✌️ 👇🤙👐 🙌🖖🤙☝️ :("
 
 #, javascript-format
 msgid ""
 "File ${ filename } has ${ sizeMB } MB and is too large. It may only be $"
 "{ MAX_FILE_SIZE_MB } MB"
 msgstr ""
+"✋🤞👍🤙 ${ filename } 🖐️✌️🖖 ${ sizeMB } 👆👈 ✌️👇🤚 🤞🖖 👋👌👌 👍✌️☝️🤛"
+"🤙. 🤞👋 👆✌️👏 👌👇👍👏 👈🤙 ${ MAX_FILE_SIZE_MB } 👆👈"
 
 #, javascript-format
 msgid "File ${ filename } has an invalid extension"
-msgstr ""
+msgstr "✋🤞👍🤙 ${ filename } 🖐️✌️🖖 ✌️👇 🤞👇🤜✌️👍🤞🤚 🤙👉👋🤙👇🖖🤞👌👇"
 
 msgid "File is broken"
-msgstr ""
+msgstr "✋🤞👍🤙 🤞🖖 👈☝️👌👊🤙👇"
 
 #. 'client_secret' is a technical term and should not be translated
 msgid ""
 "Generate a new client_secret. The old secret will become invalid immediately."
 msgstr ""
+"🤛🤙👇🤙☝️✌️👋🤙 ✌️ 👇🤙👐 🤘👍🤞🤙👇👋_🖖🤙🤘☝️🤙👋. 👋🖐️🤙 👌👍🤚 🖖🤙🤘☝️"
+"🤙👋 👐🤞👍👍 👈🤙🤘👌👆🤙 🤞👇🤜✌️👍🤞🤚 🤞👆👆🤙🤚🤞✌️👋🤙👍👏."
 
 msgid "Get email address"
-msgstr ""
+msgstr "🤛🤙👋 🤙👆✌️🤞👍 ✌️🤚🤚☝️🤙🖖🖖"
 
 msgid "Get the amount of Pixels placed and ranking"
 msgstr ""
+"🤛🤙👋 👋🖐️🤙 ✌️👆👌🙌👇👋 👌✋ 👎🤞👉🤙👍🖖 👎👍✌️🤘🤙🤚 ✌️👇🤚 ☝️✌️👇👊🤞👇"
+"🤛"
 
 msgid ""
 "Have fun and don't hesitate to contact us if you encounter any problems :)"
 msgstr ""
+"🖐️✌️🤜🤙 ✋🙌👇 ✌️👇🤚 🤚👌👇👋 🖐️🤙🖖🤞👋✌️👋🤙 👋👌 🤘👌👇👋✌️🤘👋 🙌🖖 🤞"
+"✋ 👏👌🙌 🤙👇🤘👌🙌👇👋🤙☝️ ✌️👇👏 👎☝️👌👈👍🤙👆🖖 :)"
 
 msgid "Hello"
-msgstr "🖐🤙👍👍👌"
+msgstr "🖐️🤙👍👍👌"
 
 #, javascript-format
 msgid "Hello ${ email }, you can set your new password here:"
 msgstr ""
+"🖐️🤙👍👍👌 ${ email }, 👏👌🙌 🤘✌️👇 🖖🤙👋 👏👌🙌☝️ 👇🤙👐 👎✌️🖖🖖👐👌☝️🤚 "
+"🖐️🤙☝️🤙:"
 
 #, javascript-format
 msgid "Hello ${ name }"
-msgstr "🖐🤙👍👍👌 ${ name }"
+msgstr "🖐️🤙👍👍👌 ${ name }"
 
 msgid ""
 "If this was you, please ignore this email. If it wasn't you, please go to <a "
@@ -269,65 +317,77 @@ msgid ""
 "that you are unaware of under \"Login Methods\" in the User Area and change "
 "your password."
 msgstr ""
+"🤞✋ 👋🖐️🤞🖖 👐✌️🖖 👏👌🙌, 👎👍🤙✌️🖖🤙 🤞🤛👇👌☝️🤙 👋🖐️🤞🖖 🤙👆✌️🤞👍. "
+"🤞✋ 🤞👋 👐✌️🖖👇👋 👏👌🙌, 👎👍🤙✌️🖖🤙 🤛👌 👋👌 <a href=\"https://"
+"pixelplanet.fun\">👎🤞👉🤙👍👎👍✌️👇🤙👋.✋🙌👇</a> ✌️👇🤚 👍👌🤛➖👌🙌👋 ✌️"
+"👇👏 🖖🤙🖖🖖🤞👌👇 👋🖐️✌️👋 👏👌🙌 ✌️☝️🤙 🙌👇✌️👐✌️☝️🤙 👌✋ 🙌👇🤚🤙☝️ "
+"\"👍👌🤛🤞👇 👆🤙👋🖐️👌🤚🖖\" 🤞👇 👋🖐️🤙 🙌🖖🤙☝️ ✌️☝️🤙✌️ ✌️👇🤚 🤘🖐️✌️👇🤛"
+"🤙 👏👌🙌☝️ 👎✌️🖖🖖👐👌☝️🤚."
 
 #, javascript-format
 msgid ""
 "If you did not request this mail, please just ignore it (the ip that "
 "requested this mail was ${ ip })."
 msgstr ""
-"🤞✋ 👏👌🙌 🤚🤞🤚 👇👌👋 ☝️🤙🤝🙌🤙🖖👋 👋🖐🤞🖖 👆✌️🤞👍, 👎👍🤙✌️🖖🤙 ✊🙌🖖"
-"👋 🤞🤛👇👌☝️🤙 🤞👋 (👋🖐🤙 🤞👎 👋🖐✌️👋 ☝️🤙🤝🙌🤙🖖👋🤙🤚 👋🖐🤞🖖 👆✌️🤞👍 👐✌️"
-"🖖 ${ ip })."
+"🤞✋ 👏👌🙌 🤚🤞🤚 👇👌👋 ☝️🤙🤝🙌🤙🖖👋 👋🖐️🤞🖖 👆✌️🤞👍, 👎👍🤙✌️🖖🤙 ✊🙌"
+"🖖👋 🤞🤛👇👌☝️🤙 🤞👋 (👋🖐️🤙 🤞👎 👋🖐️✌️👋 ☝️🤙🤝🙌🤙🖖👋🤙🤚 👋🖐️🤞🖖 👆✌️"
+"🤞👍 👐✌️🖖 ${ ip })."
 
 msgid "Incorrect password"
-msgstr ""
+msgstr "🤞👇🤘👌☝️☝️🤙🤘👋 👎✌️🖖🖖👐👌☝️🤚"
 
 msgid "Invalid type of media"
-msgstr ""
+msgstr "🤞👇🤜✌️👍🤞🤚 👋👏👎🤙 👌✋ 👆🤙🤚🤞✌️"
 
 msgid "Invalid url :( Please check your mail again."
-msgstr "🤞👇🤜✌️👍🤞🤚 🙌☝️👍 😔 👎👍🤙✌️🖖🤙 🤘🖐🤙🤘👊 👏👌🙌☝️ 👆✌️🤞👍 ✌️🤛✌️🤞👇."
+msgstr ""
+"🤞👇🤜✌️👍🤞🤚 🙌☝️👍 :( 👎👍🤙✌️🖖🤙 🤘🖐️🤙🤘👊 👏👌🙌☝️ 👆✌️🤞👍 ✌️🤛✌️🤞"
+"👇."
 
 msgid "Just admins can do that"
-msgstr "✊🙌🖖👋 ✌️🤚👆🤞👇🖖 🤘✌️👇 🤚👌 👋🖐✌️👋"
+msgstr "✊🙌🖖👋 ✌️🤚👆🤞👇🖖 🤘✌️👇 🤚👌 👋🖐️✌️👋"
 
 msgid "Just janny, mod or admin can do that"
-msgstr ""
+msgstr "✊🙌🖖👋 ✊✌️👇👇👏, 👆👌🤚 👌☝️ ✌️🤚👆🤞👇 🤘✌️👇 🤚👌 👋🖐️✌️👋"
 
 msgid "Just mods and admins can do that"
-msgstr ""
+msgstr "✊🙌🖖👋 👆👌🤚🖖 ✌️👇🤚 ✌️🤚👆🤞👇🖖 🤘✌️👇 🤚👌 👋🖐️✌️👋"
 
 msgid "Know that an account exists"
-msgstr ""
+msgstr "👊👇👌👐 👋🖐️✌️👋 ✌️👇 ✌️🤘🤘👌🙌👇👋 🤙👉🤞🖖👋🖖"
 
 #. "scopes" is a technical term and should not be translated
 msgid "List of available scopes"
-msgstr ""
+msgstr "👍🤞🖖👋 👌✋ ✌️🤜✌️🤞👍✌️👈👍🤙 🖖🤘👌👎🤙🖖"
 
 msgid "Loading..."
 msgstr "👍👌✌️🤚🤞👇🤛..."
 
 msgid "Login from new location on PixelPlanet"
-msgstr ""
+msgstr "👍👌🤛🤞👇 ✋☝️👌👆 👇🤙👐 👍👌🤘✌️👋🤞👌👇 👌👇 👎🤞👉🤙👍👎👍✌️👇🤙👋"
 
 msgid "Login is required"
-msgstr ""
+msgstr "👍👌🤛🤞👇 🤞🖖 ☝️🤙🤝🙌🤞☝️🤙🤚"
 
 msgid "Mail is already in use!"
-msgstr ""
+msgstr "👆✌️🤞👍 🤞🖖 ✌️👍☝️🤙✌️🤚👏 🤞👇 🙌🖖🤙❗"
 
 msgid "Mail is not configured on the server"
-msgstr "👆✌️🤞👍 🤞🖖 👇👌👋 🤘👌👇✋🤞🤛🙌☝️🤙🤚 👌👇 👋🖐🤙 🖖🤙☝️🤜🤙☝️"
+msgstr "👆✌️🤞👍 🤞🖖 👇👌👋 🤘👌👇✋🤞🤛🙌☝️🤙🤚 👌👇 👋🖐️🤙 🖖🤙☝️🤜🤙☝️"
 
 msgid "Mail verification"
 msgstr "👆✌️🤞👍 🤜🤙☝️🤞✋🤞🤘✌️👋🤞👌👇"
 
 msgid "MimeType or extension not known or supported"
 msgstr ""
+"👆🤞👆🤙👋👏👎🤙 👌☝️ 🤙👉👋🤙👇🖖🤞👌👇 👇👌👋 👊👇👌👐👇 👌☝️ 🖖🙌👎👎👌☝️"
+"👋🤙🤚"
 
 #, javascript-format
 msgid "Mimetype ${ mimeType } of file ${ filename } is invalid or not allowed"
 msgstr ""
+"👆🤞👆🤙👋👏👎🤙 ${ mimeType } 👌✋ ✋🤞👍🤙 ${ filename } 🤞🖖 🤞👇🤜✌️👍🤞"
+"🤚 👌☝️ 👇👌👋 ✌️👍👍👌👐🤙🤚"
 
 msgid "Minimap"
 msgstr "👆🤞👇🤞👆✌️👎"
@@ -345,96 +405,110 @@ msgid ""
 "Moon canvas. Safe space for art. No flags or large text (unless part of art) "
 "or art larger than 1.5k x 1.5k pixels."
 msgstr ""
+"👆👌👌👇 🤘✌️👇🤜✌️🖖. 🖖✌️✋🤙 🖖👎✌️🤘🤙 ✋👌☝️ ✌️☝️👋. 👇👌 ✋👍✌️🤛🖖 👌"
+"☝️ 👍✌️☝️🤛🤙 👋🤙👉👋 (🙌👇👍🤙🖖🖖 👎✌️☝️👋 👌✋ ✌️☝️👋) 👌☝️ ✌️☝️👋 👍✌️☝️"
+"🤛🤙☝️ 👋🖐️✌️👇 1️⃣.5️⃣👊 👉 1️⃣.5️⃣👊 👎🤞👉🤙👍🖖."
 
 msgid "Name already in use."
-msgstr ""
+msgstr "👇✌️👆🤙 ✌️👍☝️🤙✌️🤚👏 🤞👇 🙌🖖🤙."
 
 msgid "Name can only contain the characters: a-z . _ and -"
 msgstr ""
+"👇✌️👆🤙 🤘✌️👇 👌👇👍👏 🤘👌👇👋✌️🤞👇 👋🖐️🤙 🤘🖐️✌️☝️✌️🤘👋🤙☝️🖖: ✌️➖🙏 "
+". _ ✌️👇🤚 ➖"
 
 msgid "Name can't be empty."
 msgstr "👇✌️👆🤙 🤘✌️👇👋 👈🤙 🤙👆👎👋👏."
 
 msgid "Name contains invalid character like @, /, \\ or #"
 msgstr ""
-"👇✌️👆🤙 🤘👌👇👋✌️🤞👇🖖 🤞👇🤜✌️👍🤞🤚 🤘🖐✌️☝️✌️🤘👋🤙☝️ 👍🤞👊🤙 @, /, \\ 👌☝️ #️⃣"
+"👇✌️👆🤙 🤘👌👇👋✌️🤞👇🖖 🤞👇🤜✌️👍🤞🤚 🤘🖐️✌️☝️✌️🤘👋🤙☝️ 👍🤞👊🤙 @, /, \\"
+" 👌☝️ #"
 
 msgid "Name is too long"
-msgstr ""
+msgstr "👇✌️👆🤙 🤞🖖 👋👌👌 👍👌👇🤛"
 
 msgid "Name must be at least 2 characters long"
-msgstr ""
+msgstr "👇✌️👆🤙 👆🙌🖖👋 👈🤙 ✌️👋 👍🤙✌️🖖👋 2️⃣ 🤘🖐️✌️☝️✌️🤘👋🤙☝️🖖 👍👌👇🤛"
 
 msgid "Name must be shorter than 26 characters"
-msgstr ""
+msgstr "👇✌️👆🤙 👆🙌🖖👋 👈🤙 🖖🖐️👌☝️👋🤙☝️ 👋🖐️✌️👇 2️⃣6️⃣ 🤘🖐️✌️☝️✌️🤘👋🤙☝️🖖"
 
 msgid "Name or Email does not exist!"
-msgstr ""
+msgstr "👇✌️👆🤙 👌☝️ 🤙👆✌️🤞👍 🤚👌🤙🖖 👇👌👋 🤙👉🤞🖖👋❗"
 
 msgid "New Password"
 msgstr "👇🤙👐 👎✌️🖖🖖👐👌☝️🤚"
 
 msgid "No Avatar given"
-msgstr ""
+msgstr "👇👌 ✌️🤜✌️👋✌️☝️ 🤛🤞🤜🤙👇"
 
 msgid "No Captcha given"
-msgstr "👇👌 🤘✌️👎👋🤘🖐✌️ 🤛🤞🤜🤙👇"
+msgstr "👇👌 🤘✌️👎👋🤘🖐️✌️ 🤛🤞🤜🤙👇"
 
 msgid "No or invalid fish id."
-msgstr ""
+msgstr "👇👌 👌☝️ 🤞👇🤜✌️👍🤞🤚 ✋🤞🖖🖐️ 🤞🤚."
 
 msgid "No password given."
 msgstr "👇👌 👎✌️🖖🖖👐👌☝️🤚 🤛🤞🤜🤙👇."
 
 #. "redirect_uris" is a technical term and should not be translated
 msgid "No redirect_uris given."
-msgstr ""
+msgstr "👇👌 ☝️🤙🤚🤞☝️🤙🤘👋_🙌☝️🤞🖖 🤛🤞🤜🤙👇."
 
 msgid "No such badge found"
-msgstr ""
+msgstr "👇👌 🖖🙌🤘🖐️ 👈✌️🤚🤛🤙 ✋👌🙌👇🤚"
 
 msgid "No such fish found"
-msgstr ""
+msgstr "👇👌 🖖🙌🤘🖐️ ✋🤞🖖🖐️ ✋👌🙌👇🤚"
 
 msgid "One redirect URIs per line"
-msgstr ""
+msgstr "👌👇🤙 ☝️🤙🤚🤞☝️🤙🤘👋 🙌☝️🤞🖖 👎🤙☝️ 👍🤞👇🤙"
 
 msgid "One redirect_uri per line"
-msgstr ""
+msgstr "👌👇🤙 ☝️🤙🤚🤞☝️🤙🤘👋_🙌☝️🤞 👎🤙☝️ 👍🤞👇🤙"
 
 #. "redirect_uris" is a technical term and should not be translated
 msgid "Only five redirect_uris are allowed per client"
 msgstr ""
+"👌👇👍👏 ✋🤞🤜🤙 ☝️🤙🤚🤞☝️🤙🤘👋_🙌☝️🤞🖖 ✌️☝️🤙 ✌️👍👍👌👐🤙🤚 👎🤙☝️ 🤘👍"
+"🤞🤙👇👋"
 
 msgid "Only four colors. Same rules as moon!"
-msgstr ""
+msgstr "👌👇👍👏 ✋👌🙌☝️ 🤘👌👍👌☝️🖖. 🖖✌️👆🤙 ☝️🙌👍🤙🖖 ✌️🖖 👆👌👌👇❗"
 
 msgid "OpenID Connect specs"
-msgstr ""
+msgstr "👌👎🤙👇🤞🤚 🤘👌👇👇🤙🤘👋 🖖👎🤙🤘🖖"
 
 msgid "Or by copying following url:"
 msgstr "👌☝️ 👈👏 🤘👌👎👏🤞👇🤛 ✋👌👍👍👌👐🤞👇🤛 🙌☝️👍:"
 
 msgid "Our main canvas, a huge map of the world. Place anywhere you like!"
 msgstr ""
+"👌🙌☝️ 👆✌️🤞👇 🤘✌️👇🤜✌️🖖, ✌️ 🖐️🙌🤛🤙 👆✌️👎 👌✋ 👋🖐️🤙 👐👌☝️👍🤚. 👎👍"
+"✌️🤘🤙 ✌️👇👏👐🖐️🤙☝️🤙 👏👌🙌 👍🤞👊🤙❗"
 
 msgid "Password must be at least 6 characters long."
 msgstr ""
+"👎✌️🖖🖖👐👌☝️🤚 👆🙌🖖👋 👈🤙 ✌️👋 👍🤙✌️🖖👋 6️⃣ 🤘🖐️✌️☝️✌️🤘👋🤙☝️🖖 👍👌👇"
+"🤛."
 
 msgid "Password must be shorter than 60 characters."
 msgstr ""
+"👎✌️🖖🖖👐👌☝️🤚 👆🙌🖖👋 👈🤙 🖖🖐️👌☝️👋🤙☝️ 👋🖐️✌️👇 6️⃣0️⃣ 🤘🖐️✌️☝️✌️🤘👋🤙"
+"☝️🖖."
 
 msgid "Password successfully changed."
-msgstr "👎✌️🖖🖖👐👌☝️🤚 🖖🙌🤘🤘🤙🖖🖖✋🙌👍👍👏 🤘🖐✌️👇🤛🤙🤚."
+msgstr "👎✌️🖖🖖👐👌☝️🤚 🖖🙌🤘🤘🤙🖖🖖✋🙌👍👍👏 🤘🖐️✌️👇🤛🤙🤚."
 
 msgid "Permission"
-msgstr ""
+msgstr "👎🤙☝️👆🤞🖖🖖🤞👌👇"
 
 msgid "PixelCanvas"
 msgstr "👎🤞👉🤙👍🤘✌️👇🤜✌️🖖"
 
 msgid "PixelPlanet.Fun 3DGlobe"
-msgstr ""
+msgstr "👎🤞👉🤙👍👎👍✌️👇🤙👋.✋🙌👇 3️⃣🤚🤛👍👌👈🤙"
 
 msgid "PixelZone"
 msgstr "👎🤞👉🤙👍🙏👌👇🤙"
@@ -446,80 +520,98 @@ msgid ""
 "pixelplanet accounts. The required endpoints can be auto-discovered via the $"
 "{ wellKnownUrl } URL."
 msgstr ""
+"👎🤞👉🤙👍👎👍✌️👇🤙👋 ✋🙌👍✋🤞👍👍🖖 👋🖐️🤙 👌👎🤙👇🤞🤚 🤘👌👇👇🤙🤘👋 "
+"(👌🤞🤚🤘) 🖖👎🤙🤘🤞✋🤞🤘✌️👋🤞👌👇🖖. 🖖👌 ✌️👇 ✌️👎👎👍🤞🤘✌️👋🤞👌👇 👋"
+"🖐️✌️👋 🖖🙌👎👎👌☝️👋🖖 👌🤞🤚🤘 🤘👌🙌👍🤚 ✌️🖖👊 ✋👌☝️ 🤘👌👇🖖🤙👇👋 ✌️👇"
+"🤚 👍👌🤛🤞👇 🙌🖖🤞👇🤛 👎🤞👉🤙👍👎👍✌️👇🤙👋 ✌️🤘🤘👌🙌👇👋🖖. 👋🖐️🤙 ☝️🤙"
+"🤝🙌🤞☝️🤙🤚 🤙👇🤚👎👌🤞👇👋🖖 🤘✌️👇 👈🤙 ✌️🙌👋👌➖🤚🤞🖖🤘👌🤜🤙☝️🤙🤚 🤜"
+"🤞✌️ 👋🖐️🤙 ${ wellKnownUrl } 🙌☝️👍."
 
 msgid "Place Voxels on a 3D canvas with others."
-msgstr ""
+msgstr "👎👍✌️🤘🤙 🤜👌👉🤙👍🖖 👌👇 ✌️ 3️⃣🤚 🤘✌️👇🤜✌️🖖 👐🤞👋🖐️ 👌👋🖐️🤙☝️🖖."
 
 msgid "Place color pixels on an map styled canvas with other players online"
 msgstr ""
-"👎👍✌️🤘🤙 🤘👌👍👌☝️ 👎🤞👉🤙👍🖖 👌👇 ✌️👇 👆✌️👎 🖖👋👏👍🤙🤚 🤘✌️👇🤜✌️🖖 👐🤞"
-"👋🖐 👌👋🖐🤙☝️ 👎👍✌️👏🤙☝️🖖 👌👇👍🤞👇🤙"
+"👎👍✌️🤘🤙 🤘👌👍👌☝️ 👎🤞👉🤙👍🖖 👌👇 ✌️👇 👆✌️👎 🖖👋👏👍🤙🤚 🤘✌️👇🤜✌️"
+"🖖 👐🤞👋🖐️ 👌👋🖐️🤙☝️ 👎👍✌️👏🤙☝️🖖 👌👇👍🤞👇🤙"
 
 msgid "Please try again."
-msgstr ""
+msgstr "👎👍🤙✌️🖖🤙 👋☝️👏 ✌️🤛✌️🤞👇."
 
 msgid "Please use int channel"
-msgstr "👎👍🤙✌️🖖🤙 🙌🖖🤙 🤞👇👋 🤘🖐✌️👇👇🤙👍"
+msgstr "👎👍🤙✌️🖖🤙 🙌🖖🤙 🤞👇👋 🤘🖐️✌️👇👇🤙👍"
 
 msgid "Read Badges and fishes"
-msgstr ""
+msgstr "☝️🤙✌️🤚 👈✌️🤚🤛🤙🖖 ✌️👇🤚 ✋🤞🖖🖐️🤙🖖"
 
 msgid "Read name, username and account age"
-msgstr ""
+msgstr "☝️🤙✌️🤚 👇✌️👆🤙, 🙌🖖🤙☝️👇✌️👆🤙 ✌️👇🤚 ✌️🤘🤘👌🙌👇👋 ✌️🤛🤙"
 
 msgid "Redirect URIs"
-msgstr ""
+msgstr "☝️🤙🤚🤞☝️🤙🤘👋 🙌☝️🤞🖖"
 
 msgid "Regularly update this data"
-msgstr ""
+msgstr "☝️🤙🤛🙌👍✌️☝️👍👏 🙌👎🤚✌️👋🤙 👋🖐️🤞🖖 🤚✌️👋✌️"
 
 msgid "Request stalled"
-msgstr ""
+msgstr "☝️🤙🤝🙌🤙🖖👋 🖖👋✌️👍👍🤙🤚"
 
 #. 'client_secret' is a technical term and should not be translated
 msgid "Reroll client_secret"
-msgstr ""
+msgstr "☝️🤙☝️👌👍👍 🤘👍🤞🤙👇👋_🖖🤙🤘☝️🤙👋"
 
 msgid "Reset Password"
 msgstr "☝️🤙🖖🤙👋 👎✌️🖖🖖👐👌☝️🤚"
 
 msgid "Reset your password here"
-msgstr "☝️🤙🖖🤙👋 👏👌🙌☝️ 👎✌️🖖🖖👐👌☝️🤚 🖐🤙☝️🤙"
+msgstr "☝️🤙🖖🤙👋 👏👌🙌☝️ 👎✌️🖖🖖👐👌☝️🤚 🖐️🤙☝️🤙"
 
 msgid "Role flag can only be an image"
-msgstr ""
+msgstr "☝️👌👍🤙 ✋👍✌️🤛 🤘✌️👇 👌👇👍👏 👈🤙 ✌️👇 🤞👆✌️🤛🤙"
 
 msgid "Role flag needs to be 16x11"
-msgstr ""
+msgstr "☝️👌👍🤙 ✋👍✌️🤛 👇🤙🤙🤚🖖 👋👌 👈🤙 1️⃣6️⃣👉1️⃣1️⃣"
 
 msgid "Server Error"
-msgstr ""
+msgstr "🖖🤙☝️🤜🤙☝️ 🤙☝️☝️👌☝️"
 
 msgid "Server error while deleting user."
-msgstr ""
+msgstr "🖖🤙☝️🤜🤙☝️ 🤙☝️☝️👌☝️ 👐🖐️🤞👍🤙 🤚🤙👍🤙👋🤞👇🤛 🙌🖖🤙☝️."
 
 msgid "Someone logged into your account from a new location, with the IP:"
 msgstr ""
+"🖖👌👆🤙👌👇🤙 👍👌🤛🤛🤙🤚 🤞👇👋👌 👏👌🙌☝️ ✌️🤘🤘👌🙌👇👋 ✋☝️👌👆 ✌️ 👇🤙"
+"👐 👍👌🤘✌️👋🤞👌👇, 👐🤞👋🖐️ 👋🖐️🤙 🤞👎:"
 
 msgid "Space-separated list of available scopes"
-msgstr ""
+msgstr "🖖👎✌️🤘🤙➖🖖🤙👎✌️☝️✌️👋🤙🤚 👍🤞🖖👋 👌✋ ✌️🤜✌️🤞👍✌️👈👍🤙 🖖🤘👌👎🤙🖖"
 
 msgid ""
 "Space-separated list of default scopes, they will be used on requests if no "
 "other scope is given."
 msgstr ""
+"🖖👎✌️🤘🤙➖🖖🤙👎✌️☝️✌️👋🤙🤚 👍🤞🖖👋 👌✋ 🤚🤙✋✌️🙌👍👋 🖖🤘👌👎🤙🖖, 👋"
+"🖐️🤙👏 👐🤞👍👍 👈🤙 🙌🖖🤙🤚 👌👇 ☝️🤙🤝🙌🤙🖖👋🖖 🤞✋ 👇👌 👌👋🖐️🤙☝️ 🖖🤘"
+"👌👎🤙 🤞🖖 🤛🤞🤜🤙👇."
 
 #. 'scope' is used as a technical term here, do not translate that word
 msgid ""
 "Space-separated list of default scopes, they will be used on requests where "
 "no other scope is given."
 msgstr ""
+"🖖👎✌️🤘🤙➖🖖🤙👎✌️☝️✌️👋🤙🤚 👍🤞🖖👋 👌✋ 🤚🤙✋✌️🙌👍👋 🖖🤘👌👎🤙🖖, 👋"
+"🖐️🤙👏 👐🤞👍👍 👈🤙 🙌🖖🤙🤚 👌👇 ☝️🤙🤝🙌🤙🖖👋🖖 👐🖐️🤙☝️🤙 👇👌 👌👋🖐️🤙"
+"☝️ 🖖🤘👌👎🤙 🤞🖖 🤛🤞🤜🤙👇."
 
 msgid "Space-separated list of scopes that should be available"
 msgstr ""
+"🖖👎✌️🤘🤙➖🖖🤙👎✌️☝️✌️👋🤙🤚 👍🤞🖖👋 👌✋ 🖖🤘👌👎🤙🖖 👋🖐️✌️👋 🖖🖐️👌🙌👍"
+"🤚 👈🤙 ✌️🤜✌️🤞👍✌️👈👍🤙"
 
 msgid "Special canvas to spread awareness of SARS-CoV2 (take the vax)."
 msgstr ""
+"🖖👎🤙🤘🤞✌️👍 🤘✌️👇🤜✌️🖖 👋👌 🖖👎☝️🤙✌️🤚 ✌️👐✌️☝️🤙👇🤙🖖🖖 👌✋ 🖖✌️☝️"
+"🖖➖🤘👌🤜2️⃣ (👋✌️👊🤙 👋🖐️🤙 🤜✌️👉)."
 
 msgid "Stop flooding."
 msgstr "🖖👋👌👎 ✋👍👌👌🤚🤞👇🤛."
@@ -528,32 +620,42 @@ msgid "Submit"
 msgstr "🖖🙌👈👆🤞👋"
 
 msgid "Thanks"
-msgstr "👋🖐✌️👇👊🖖"
+msgstr "👋🖐️✌️👇👊🖖"
 
 #, javascript-format
 msgid "The file ${ filename } is banned ${ reason }. Ban ID: ${ mbid }"
 msgstr ""
+"👋🖐️🤙 ✋🤞👍🤙 ${ filename } 🤞🖖 👈✌️👇👇🤙🤚 ${ reason }. 👈✌️👇 🤞🤚: ${ "
+"mbid }"
 
 msgid "The user owning this badge is private"
-msgstr ""
+msgstr "👋🖐️🤙 🙌🖖🤙☝️ 👌👐👇🤞👇🤛 👋🖐️🤞🖖 👈✌️🤚🤛🤙 🤞🖖 👎☝️🤞🤜✌️👋🤙"
 
 msgid "The user owning this fish is private"
-msgstr ""
+msgstr "👋🖐️🤙 🙌🖖🤙☝️ 👌👐👇🤞👇🤛 👋🖐️🤞🖖 ✋🤞🖖🖐️ 🤞🖖 👎☝️🤞🤜✌️👋🤙"
 
 msgid "This application is not allowed to login"
-msgstr ""
+msgstr "👋🖐️🤞🖖 ✌️👎👎👍🤞🤘✌️👋🤞👌👇 🤞🖖 👇👌👋 ✌️👍👍👌👐🤙🤚 👋👌 👍👌🤛🤞👇"
 
 msgid "This application redirects to an unallowed page"
 msgstr ""
+"👋🖐️🤞🖖 ✌️👎👎👍🤞🤘✌️👋🤞👌👇 ☝️🤙🤚🤞☝️🤙🤘👋🖖 👋👌 ✌️👇 🙌👇✌️👍👍👌👐🤙"
+"🤚 👎✌️🤛🤙"
 
 msgid "This application sent a faulty login request with no redirection"
 msgstr ""
+"👋🖐️🤞🖖 ✌️👎👎👍🤞🤘✌️👋🤞👌👇 🖖🤙👇👋 ✌️ ✋✌️🙌👍👋👏 👍👌🤛🤞👇 ☝️🤙🤝🙌"
+"🤙🖖👋 👐🤞👋🖐️ 👇👌 ☝️🤙🤚🤞☝️🤙🤘👋🤞👌👇"
 
 msgid "This application uses a PKCE method we do not support"
 msgstr ""
+"👋🖐️🤞🖖 ✌️👎👎👍🤞🤘✌️👋🤞👌👇 🙌🖖🤙🖖 ✌️ 👎👊🤘🤙 👆🤙👋🖐️👌🤚 👐🤙 🤚👌 "
+"👇👌👋 🖖🙌👎👎👌☝️👋"
 
 msgid "This application uses a login method we do not support"
 msgstr ""
+"👋🖐️🤞🖖 ✌️👎👎👍🤞🤘✌️👋🤞👌👇 🙌🖖🤙🖖 ✌️ 👍👌🤛🤞👇 👆🤙👋🖐️👌🤚 👐🤙 🤚"
+"👌 👇👌👋 🖖🙌👎👎👌☝️👋"
 
 msgid ""
 "This email / password combination got hacked and leaked. To protect this "
@@ -561,6 +663,12 @@ msgid ""
 "function below to set a new password. In the future, consider not installing "
 "malware, Thank You."
 msgstr ""
+"👋🖐️🤞🖖 🤙👆✌️🤞👍 / 👎✌️🖖🖖👐👌☝️🤚 🤘👌👆👈🤞👇✌️👋🤞👌👇 🤛👌👋 🖐️✌️🤘👊"
+"🤙🤚 ✌️👇🤚 👍🤙✌️👊🤙🤚. 👋👌 👎☝️👌👋🤙🤘👋 👋🖐️🤞🖖 ✌️🤘🤘👌🙌👇👋, 👋🖐️"
+"🤙 👎✌️🖖🖖👐👌☝️🤚 🖐️✌️🖖 👈🤙🤙👇 ☝️🤙🖖🤙👋. 👎👍🤙✌️🖖🤙 🙌🖖🤙 👋🖐️🤙 "
+"\"✋👌☝️🤛👌👋 👆👏 👎✌️🖖🖖👐👌☝️🤚\" ✋🙌👇🤘👋🤞👌👇 👈🤙👍👌👐 👋👌 🖖🤙"
+"👋 ✌️ 👇🤙👐 👎✌️🖖🖖👐👌☝️🤚. 🤞👇 👋🖐️🤙 ✋🙌👋🙌☝️🤙, 🤘👌👇🖖🤞🤚🤙☝️ 👇"
+"👌👋 🤞👇🖖👋✌️👍👍🤞👇🤛 👆✌️👍👐✌️☝️🤙, 👋🖐️✌️👇👊 👏👌🙌."
 
 msgid ""
 "This email / password combination got hacked and leaked. To protect this "
@@ -568,131 +676,153 @@ msgid ""
 "function on the LogIn page to set a new password. In the future, consider "
 "not installing malware, Thank You."
 msgstr ""
+"👋🖐️🤞🖖 🤙👆✌️🤞👍 / 👎✌️🖖🖖👐👌☝️🤚 🤘👌👆👈🤞👇✌️👋🤞👌👇 🤛👌👋 🖐️✌️🤘👊"
+"🤙🤚 ✌️👇🤚 👍🤙✌️👊🤙🤚. 👋👌 👎☝️👌👋🤙🤘👋 👋🖐️🤞🖖 ✌️🤘🤘👌🙌👇👋, 👋🖐️"
+"🤙 👎✌️🖖🖖👐👌☝️🤚 🖐️✌️🖖 👈🤙🤙👇 ☝️🤙🖖🤙👋. 👎👍🤙✌️🖖🤙 🙌🖖🤙 👋🖐️🤙 "
+"\"✋👌☝️🤛👌👋 👆👏 👎✌️🖖🖖👐👌☝️🤚\" ✋🙌👇🤘👋🤞👌👇 👌👇 👋🖐️🤙 👍👌🤛🤞"
+"👇 👎✌️🤛🤙 👋👌 🖖🤙👋 ✌️ 👇🤙👐 👎✌️🖖🖖👐👌☝️🤚. 🤞👇 👋🖐️🤙 ✋🙌👋🙌☝️"
+"🤙, 🤘👌👇🖖🤞🤚🤙☝️ 👇👌👋 🤞👇🖖👋✌️👍👍🤞👇🤛 👆✌️👍👐✌️☝️🤙, 👋🖐️✌️👇👊 "
+"👏👌🙌."
 
 msgid "This email provider is not allowed"
-msgstr "👋🖐🤞🖖 🤙👆✌️🤞👍 👎☝️👌🤜🤞🤚🤙☝️ 🤞🖖 👇👌👋 ✌️👍👍👌👐🤙🤚"
+msgstr "👋🖐️🤞🖖 🤙👆✌️🤞👍 👎☝️👌🤜🤞🤚🤙☝️ 🤞🖖 👇👌👋 ✌️👍👍👌👐🤙🤚"
 
 msgid "This faction does not exist"
-msgstr ""
+msgstr "👋🖐️🤞🖖 ✋✌️🤘👋🤞👌👇 🤚👌🤙🖖 👇👌👋 🤙👉🤞🖖👋"
 
 msgid "This faction is full"
-msgstr ""
+msgstr "👋🖐️🤞🖖 ✋✌️🤘👋🤞👌👇 🤞🖖 ✋🙌👍👍"
 
 msgid "This faction is private"
-msgstr ""
+msgstr "👋🖐️🤞🖖 ✋✌️🤘👋🤞👌👇 🤞🖖 👎☝️🤞🤜✌️👋🤙"
 
 #, javascript-format
 msgid "This media is banned ${ reason }. Ban ID: ${ mbid }"
-msgstr ""
+msgstr "👋🖐️🤞🖖 👆🤙🤚🤞✌️ 🤞🖖 👈✌️👇👇🤙🤚 ${ reason }. 👈✌️👇 🤞🤚: ${ mbid }"
 
 msgid "This password-reset link isn't valid anymore :("
 msgstr ""
-"👋🖐🤞🖖 👎✌️🖖🖖👐👌☝️🤚-☝️🤙🖖🤙👋 👍🤞👇👊 🤞🖖👇👋 🤜✌️👍🤞🤚 ✌️👇👏👆👌☝️🤙 😔"
+"👋🖐️🤞🖖 👎✌️🖖🖖👐👌☝️🤚➖☝️🤙🖖🤙👋 👍🤞👇👊 🤞🖖👇👋 🤜✌️👍🤞🤚 ✌️👇👏👆👌"
+"☝️🤙 :("
 
 msgid "This user has not password set"
-msgstr ""
+msgstr "👋🖐️🤞🖖 🙌🖖🤙☝️ 🖐️✌️🖖 👇👌👋 👎✌️🖖🖖👐👌☝️🤚 🖖🤙👋"
 
 msgid "This user is private"
-msgstr ""
+msgstr "👋🖐️🤞🖖 🙌🖖🤙☝️ 🤞🖖 👎☝️🤞🤜✌️👋🤙"
 
 msgid "Title can't be empty."
-msgstr ""
+msgstr "👋🤞👋👍🤙 🤘✌️👇👋 👈🤙 🤙👆👎👋👏."
 
 msgid "Title contains invalid character like @, /, \\ or #"
 msgstr ""
+"👋🤞👋👍🤙 🤘👌👇👋✌️🤞👇🖖 🤞👇🤜✌️👍🤞🤚 🤘🖐️✌️☝️✌️🤘👋🤙☝️ 👍🤞👊🤙 @, /, "
+"\\ 👌☝️ #"
 
 msgid "Title must be at least 2 characters long"
-msgstr ""
+msgstr "👋🤞👋👍🤙 👆🙌🖖👋 👈🤙 ✌️👋 👍🤙✌️🖖👋 2️⃣ 🤘🖐️✌️☝️✌️🤘👋🤙☝️🖖 👍👌👇🤛"
 
 msgid "Title must be shorter than 26 characters"
-msgstr ""
+msgstr "👋🤞👋👍🤙 👆🙌🖖👋 👈🤙 🖖🖐️👌☝️👋🤙☝️ 👋🖐️✌️👇 2️⃣6️⃣ 🤘🖐️✌️☝️✌️🤘👋🤙☝️🖖"
 
 #. "redirect_uris" is a technical term and should not be translated
 msgid "Too many or too long redirect_uris"
-msgstr ""
+msgstr "👋👌👌 👆✌️👇👏 👌☝️ 👋👌👌 👍👌👇🤛 ☝️🤙🤚🤞☝️🤙🤘👋_🙌☝️🤞🖖"
 
 msgid "Top10"
 msgstr "👋👌👎🔟"
 
 msgid "Unknown Captcha Error"
-msgstr "🙌👇👊👇👌👐👇 🤘✌️👎👋🤘🖐✌️ 🤙☝️☝️👌☝️"
+msgstr "🙌👇👊👇👌👐👇 🤘✌️👎👋🤘🖐️✌️ 🤙☝️☝️👌☝️"
 
 #, javascript-format
 msgid "Unknown field ${ name } in request"
-msgstr ""
+msgstr "🙌👇👊👇👌👐👇 ✋🤞🤙👍🤚 ${ name } 🤞👇 ☝️🤙🤝🙌🤙🖖👋"
 
 msgid "Update Application"
-msgstr ""
+msgstr "🙌👎🤚✌️👋🤙 ✌️👎👎👍🤞🤘✌️👋🤞👌👇"
 
 msgid "User ID and verification level"
-msgstr ""
+msgstr "🙌🖖🤙☝️ 🤞🤚 ✌️👇🤚 🤜🤙☝️🤞✋🤞🤘✌️👋🤞👌👇 👍🤙🤜🤙👍"
 
 msgid "User doesn't exist in our database :("
-msgstr "🙌🖖🤙☝️ 🤚👌🤙🖖👇👋 🤙👉🤞🖖👋 🤞👇 👌🙌☝️ 🤚✌️👋✌️👈✌️🖖🤙 😔"
+msgstr "🙌🖖🤙☝️ 🤚👌🤙🖖👇👋 🤙👉🤞🖖👋 🤞👇 👌🙌☝️ 🤚✌️👋✌️👈✌️🖖🤙 :("
 
 msgid "Username already in use."
 msgstr "🙌🖖🤙☝️👇✌️👆🤙 ✌️👍☝️🤙✌️🤚👏 🤞👇 🙌🖖🤙."
 
 msgid "Username can not start with pp_"
-msgstr ""
+msgstr "🙌🖖🤙☝️👇✌️👆🤙 🤘✌️👇 👇👌👋 🖖👋✌️☝️👋 👐🤞👋🖐️ 👎👎_"
 
 msgid "Username can only contain the characters: a-z . _ and -"
 msgstr ""
+"🙌🖖🤙☝️👇✌️👆🤙 🤘✌️👇 👌👇👍👏 🤘👌👇👋✌️🤞👇 👋🖐️🤙 🤘🖐️✌️☝️✌️🤘👋🤙☝️🖖: "
+"✌️➖🙏 . _ ✌️👇🤚 ➖"
 
 msgid "Username can't be empty."
-msgstr ""
+msgstr "🙌🖖🤙☝️👇✌️👆🤙 🤘✌️👇👋 👈🤙 🤙👆👎👋👏."
 
 msgid "Username must be at least 2 characters long"
 msgstr ""
+"🙌🖖🤙☝️👇✌️👆🤙 👆🙌🖖👋 👈🤙 ✌️👋 👍🤙✌️🖖👋 2️⃣ 🤘🖐️✌️☝️✌️🤘👋🤙☝️🖖 👍👌👇"
+"🤛"
 
 msgid "Username must be shorter than 26 characters"
 msgstr ""
+"🙌🖖🤙☝️👇✌️👆🤙 👆🙌🖖👋 👈🤙 🖖🖐️👌☝️👋🤙☝️ 👋🖐️✌️👇 2️⃣6️⃣ 🤘🖐️✌️☝️✌️🤘👋🤙"
+"☝️🖖"
 
 msgid ""
 "We already sent you a mail with instructions. Please wait before requesting "
 "another mail."
 msgstr ""
-"👐🤙 ✌️👍☝️🤙✌️🤚👏 🖖🤙👇👋 👏👌🙌 ✌️ 👆✌️🤞👍 👐🤞👋🖐 🤞👇🖖👋☝️🙌🤘👋🤞👌👇🖖. "
-"👎👍🤙✌️🖖🤙 👐✌️🤞👋 👈🤙✋👌☝️🤙 ☝️🤙🤝🙌🤙🖖👋🤞👇🤛 ✌️👇👌👋🖐🤙☝️ 👆✌️🤞👍."
+"👐🤙 ✌️👍☝️🤙✌️🤚👏 🖖🤙👇👋 👏👌🙌 ✌️ 👆✌️🤞👍 👐🤞👋🖐️ 🤞👇🖖👋☝️🙌🤘👋🤞👌"
+"👇🖖. 👎👍🤙✌️🖖🤙 👐✌️🤞👋 👈🤙✋👌☝️🤙 ☝️🤙🤝🙌🤙🖖👋🤞👇🤛 ✌️👇👌👋🖐️🤙☝️ "
+"👆✌️🤞👍."
 
 #, javascript-format
 msgid ""
 "We already sent you a verification mail, you can request another one in $"
 "{ minLeft } minutes."
 msgstr ""
+"👐🤙 ✌️👍☝️🤙✌️🤚👏 🖖🤙👇👋 👏👌🙌 ✌️ 🤜🤙☝️🤞✋🤞🤘✌️👋🤞👌👇 👆✌️🤞👍, 👏"
+"👌🙌 🤘✌️👇 ☝️🤙🤝🙌🤙🖖👋 ✌️👇👌👋🖐️🤙☝️ 👌👇🤙 🤞👇 ${ minLeft } 👆🤞👇🙌👋"
+"🤙🖖."
 
 msgid "We currently do not allow file uploads"
-msgstr ""
+msgstr "👐🤙 🤘🙌☝️☝️🤙👇👋👍👏 🤚👌 👇👌👋 ✌️👍👍👌👐 ✋🤞👍🤙 🙌👎👍👌✌️🤚🖖"
 
 #, javascript-format
 msgid "Welcome ${ name } to PixelPlanet, please verify your mail"
 msgstr ""
+"👐🤙👍🤘👌👆🤙 ${ name } 👋👌 👎🤞👉🤙👍👎👍✌️👇🤙👋, 👎👍🤙✌️🖖🤙 🤜🤙☝️🤞✋"
+"👏 👏👌🙌☝️ 👆✌️🤞👍"
 
 msgid "You already chose your username"
-msgstr ""
+msgstr "👏👌🙌 ✌️👍☝️🤙✌️🤚👏 🤘🖐️👌🖖🤙 👏👌🙌☝️ 🙌🖖🤙☝️👇✌️👆🤙"
 
 msgid "You already have that name."
-msgstr ""
+msgstr "👏👌🙌 ✌️👍☝️🤙✌️🤚👏 🖐️✌️🤜🤙 👋🖐️✌️👋 👇✌️👆🤙."
 
 msgid "You are already part of this faction"
-msgstr ""
+msgstr "👏👌🙌 ✌️☝️🤙 ✌️👍☝️🤙✌️🤚👏 👎✌️☝️👋 👌✋ 👋🖐️🤞🖖 ✋✌️🤘👋🤞👌👇"
 
 msgid "You are already verified."
-msgstr ""
+msgstr "👏👌🙌 ✌️☝️🤙 ✌️👍☝️🤙✌️🤚👏 🤜🤙☝️🤞✋🤞🤙🤚."
 
 msgid "You are banned from this faction"
-msgstr ""
+msgstr "👏👌🙌 ✌️☝️🤙 👈✌️👇👇🤙🤚 ✋☝️👌👆 👋🖐️🤞🖖 ✋✌️🤘👋🤞👌👇"
 
 #, javascript-format
 msgid "You are muted for another ${ timeMin } minutes"
-msgstr "👏👌🙌 ✌️☝️🤙 👆🙌👋🤙🤚 ✋👌☝️ ✌️👇👌👋🖐🤙☝️ ${ timeMin } 👆🤞👇🙌👋🤙🖖"
+msgstr "👏👌🙌 ✌️☝️🤙 👆🙌👋🤙🤚 ✋👌☝️ ✌️👇👌👋🖐️🤙☝️ ${ timeMin } 👆🤞👇🙌👋🤙🖖"
 
 #, javascript-format
 msgid "You are muted for another ${ ttl } seconds"
-msgstr "👏👌🙌 ✌️☝️🤙 👆🙌👋🤙🤚 ✋👌☝️ ✌️👇👌👋🖐🤙☝️ ${ ttl } 🖖🤙🤘👌👇🤚🖖"
+msgstr "👏👌🙌 ✌️☝️🤙 👆🙌👋🤙🤚 ✋👌☝️ ✌️👇👌👋🖐️🤙☝️ ${ ttl } 🖖🤙🤘👌👇🤚🖖"
 
 msgid "You are not allowed to access this page"
-msgstr "👏👌🙌 ✌️☝️🤙 👇👌👋 ✌️👍👍👌👐🤙🤚 👋👌 ✌️🤘🤘🤙🖖🖖 👋🖐🤞🖖 👎✌️🤛🤙"
+msgstr "👏👌🙌 ✌️☝️🤙 👇👌👋 ✌️👍👍👌👐🤙🤚 👋👌 ✌️🤘🤘🤙🖖🖖 👋🖐️🤞🖖 👎✌️🤛🤙"
 
 msgid "You are not banned"
 msgstr "👏👌🙌 ✌️☝️🤙 👇👌👋 👈✌️👇👇🤙🤚"
@@ -701,168 +831,203 @@ msgid "You are not logged in"
 msgstr "👏👌🙌 ✌️☝️🤙 👇👌👋 👍👌🤛🤛🤙🤚 🤞👇"
 
 msgid "You are now verified :)"
-msgstr "👏👌🙌 ✌️☝️🤙 👇👌👐 🤜🤙☝️🤞✋🤞🤙🤚 😊"
+msgstr "👏👌🙌 ✌️☝️🤙 👇👌👐 🤜🤙☝️🤞✋🤞🤙🤚 :)"
 
 msgid "You are permanently muted, join our guilded to appeal the mute"
 msgstr ""
-"👏👌🙌 ✌️☝️🤙 👎🤙☝️👆✌️👇🤙👇👋👍👏 👆🙌👋🤙🤚, ✊👌🤞👇 👌🙌☝️ 🤛🙌🤞👍🤚🤙🤚 👋"
-"👌 ✌️👎👎🤙✌️👍 👋🖐🤙 👆🙌👋🤙"
+"👏👌🙌 ✌️☝️🤙 👎🤙☝️👆✌️👇🤙👇👋👍👏 👆🙌👋🤙🤚, ✊👌🤞👇 👌🙌☝️ 🤛🙌🤞👍🤚🤙"
+"🤚 👋👌 ✌️👎👎🤙✌️👍 👋🖐️🤙 👆🙌👋🤙"
 
 #, javascript-format
 msgid "You are sending messages too fast, you have to wait ${ waitTime }s :("
 msgstr ""
-"👏👌🙌 ✌️☝️🤙 🖖🤙👇🤚🤞👇🤛 👆🤙🖖🖖✌️🤛🤙🖖 👋👌👌 ✋✌️🖖👋, 👏👌🙌 🖐✌️🤜🤙 👋"
-"👌 👐✌️🤞👋 ${ waitTime }🖖 😔"
+"👏👌🙌 ✌️☝️🤙 🖖🤙👇🤚🤞👇🤛 👆🤙🖖🖖✌️🤛🤙🖖 👋👌👌 ✋✌️🖖👋, 👏👌🙌 🖐️✌️🤜"
+"🤙 👋👌 👐✌️🤞👋 ${ waitTime }🖖 :("
 
 msgid "You attached too many files"
-msgstr ""
+msgstr "👏👌🙌 ✌️👋👋✌️🤘🖐️🤙🤚 👋👌👌 👆✌️👇👏 ✋🤞👍🤙🖖"
 
 msgid ""
 "You can not delete this login method, because you have nothing else left."
 msgstr ""
+"👏👌🙌 🤘✌️👇 👇👌👋 🤚🤙👍🤙👋🤙 👋🖐️🤞🖖 👍👌🤛🤞👇 👆🤙👋🖐️👌🤚, 👈🤙🤘✌️"
+"🙌🖖🤙 👏👌🙌 🖐️✌️🤜🤙 👇👌👋🖐️🤞👇🤛 🤙👍🖖🤙 👍🤙✋👋."
 
 msgid "You can not register an account while you are banned"
 msgstr ""
+"👏👌🙌 🤘✌️👇 👇👌👋 ☝️🤙🤛🤞🖖👋🤙☝️ ✌️👇 ✌️🤘🤘👌🙌👇👋 👐🖐️🤞👍🤙 👏👌🙌 "
+"✌️☝️🤙 👈✌️👇👇🤙🤚"
 
 msgid "You can not register an account with a proxy"
 msgstr ""
+"👏👌🙌 🤘✌️👇 👇👌👋 ☝️🤙🤛🤞🖖👋🤙☝️ ✌️👇 ✌️🤘🤘👌🙌👇👋 👐🤞👋🖐️ ✌️ 👎☝️👌"
+"👉👏"
 
 msgid "You can not send chat messages while using a proxy"
 msgstr ""
-"👏👌🙌 🤘✌️👇 👇👌👋 🖖🤙👇🤚 🤘🖐✌️👋 👆🤙🖖🖖✌️🤛🤙🖖 👐🖐🤞👍🤙 🙌🖖🤞👇🤛 ✌️ 👎"
-"☝️👌👉👏"
+"👏👌🙌 🤘✌️👇 👇👌👋 🖖🤙👇🤚 🤘🖐️✌️👋 👆🤙🖖🖖✌️🤛🤙🖖 👐🖐️🤞👍🤙 🙌🖖🤞👇"
+"🤛 ✌️ 👎☝️👌👉👏"
 
 #, javascript-format
 msgid ""
 "You can only be owner of ${ MAX_OWNED_FACTIONS_PER_USER } factions in total"
 msgstr ""
+"👏👌🙌 🤘✌️👇 👌👇👍👏 👈🤙 👌👐👇🤙☝️ 👌✋ ${ MAX_OWNED_FACTIONS_PER_USER } "
+"✋✌️🤘👋🤞👌👇🖖 🤞👇 👋👌👋✌️👍"
 
 #, javascript-format
 msgid "You can only have ${ MAX_FACTIONS_PER_USER } factions in total"
 msgstr ""
+"👏👌🙌 🤘✌️👇 👌👇👍👏 🖐️✌️🤜🤙 ${ MAX_FACTIONS_PER_USER } ✋✌️🤘👋🤞👌👇🖖 "
+"🤞👇 👋👌👋✌️👍"
 
 msgid ""
 "You can register your own application here to get the client_id and "
 "client_secret needed to make use of this."
 msgstr ""
+"👏👌🙌 🤘✌️👇 ☝️🤙🤛🤞🖖👋🤙☝️ 👏👌🙌☝️ 👌👐👇 ✌️👎👎👍🤞🤘✌️👋🤞👌👇 🖐️🤙☝️"
+"🤙 👋👌 🤛🤙👋 👋🖐️🤙 🤘👍🤞🤙👇👋_🤞🤚 ✌️👇🤚 🤘👍🤞🤙👇👋_🖖🤙🤘☝️🤙👋 👇🤙"
+"🤙🤚🤙🤚 👋👌 👆✌️👊🤙 🙌🖖🤙 👌✋ 👋🖐️🤞🖖."
 
 msgid "You can't send a message this long :("
-msgstr "👏👌🙌 🤘✌️👇👋 🖖🤙👇🤚 ✌️ 👆🤙🖖🖖✌️🤛🤙 👋🖐🤞🖖 👍👌👇🤛 😔"
+msgstr "👏👌🙌 🤘✌️👇👋 🖖🤙👇🤚 ✌️ 👆🤙🖖🖖✌️🤛🤙 👋🖐️🤞🖖 👍👌👇🤛 :("
 
 msgid "You did not provide all necessary information"
 msgstr ""
+"👏👌🙌 🤚🤞🤚 👇👌👋 👎☝️👌🤜🤞🤚🤙 ✌️👍👍 👇🤙🤘🤙🖖🖖✌️☝️👏 🤞👇✋👌☝️👆✌️"
+"👋🤞👌👇"
 
 msgid ""
 "You do not have any email adress set. Please add one under \"Login Methods\"."
 msgstr ""
+"👏👌🙌 🤚👌 👇👌👋 🖐️✌️🤜🤙 ✌️👇👏 🤙👆✌️🤞👍 ✌️🤚☝️🤙🖖🖖 🖖🤙👋. 👎👍🤙✌️🖖"
+"🤙 ✌️🤚🤚 👌👇🤙 🙌👇🤚🤙☝️ \"👍👌🤛🤞👇 👆🤙👋🖐️👌🤚🖖\"."
 
 msgid "You don't have access to this channel"
-msgstr "👏👌🙌 🤚👌👇👋 🖐✌️🤜🤙 ✌️🤘🤘🤙🖖🖖 👋👌 👋🖐🤞🖖 🤘🖐✌️👇👇🤙👍"
+msgstr "👏👌🙌 🤚👌👇👋 🖐️✌️🤜🤙 ✌️🤘🤘🤙🖖🖖 👋👌 👋🖐️🤞🖖 🤘🖐️✌️👇👇🤙👍"
 
 msgid "You failed your captcha"
-msgstr "👏👌🙌 ✋✌️🤞👍🤙🤚 👏👌🙌☝️ 🤘✌️👎👋🤘🖐✌️"
+msgstr "👏👌🙌 ✋✌️🤞👍🤙🤚 👏👌🙌☝️ 🤘✌️👎👋🤘🖐️✌️"
 
 msgid "You forgot your password for PixelPlanet? Get a new one here"
 msgstr ""
+"👏👌🙌 ✋👌☝️🤛👌👋 👏👌🙌☝️ 👎✌️🖖🖖👐👌☝️🤚 ✋👌☝️ 👎🤞👉🤙👍👎👍✌️👇🤙👋"
+"❓ 🤛🤙👋 ✌️ 👇🤙👐 👌👇🤙 🖐️🤙☝️🤙"
 
 msgid "You have to fill out all fields"
-msgstr ""
+msgstr "👏👌🙌 🖐️✌️🤜🤙 👋👌 ✋🤞👍👍 👌🙌👋 ✌️👍👍 ✋🤞🤙👍🤚🖖"
 
 msgid "You must be logged in to access this page"
-msgstr ""
+msgstr "👏👌🙌 👆🙌🖖👋 👈🤙 👍👌🤛🤛🤙🤚 🤞👇 👋👌 ✌️🤘🤘🤙🖖🖖 👋🖐️🤞🖖 👎✌️🤛🤙"
 
 msgid "You need an invite to join this faction"
-msgstr ""
+msgstr "👏👌🙌 👇🤙🤙🤚 ✌️👇 🤞👇🤜🤞👋🤙 👋👌 ✊👌🤞👇 👋🖐️🤞🖖 ✋✌️🤘👋🤞👌👇"
 
 #. "scope" is a technical term and should not be translated
 msgid "You need to define a valid scope"
-msgstr ""
+msgstr "👏👌🙌 👇🤙🤙🤚 👋👌 🤚🤙✋🤞👇🤙 ✌️ 🤜✌️👍🤞🤚 🖖🤘👌👎🤙"
 
 msgid "You need to directly access this page in the browser :("
 msgstr ""
+"👏👌🙌 👇🤙🤙🤚 👋👌 🤚🤞☝️🤙🤘👋👍👏 ✌️🤘🤘🤙🖖🖖 👋🖐️🤞🖖 👎✌️🤛🤙 🤞👇 👋"
+"🖐️🤙 👈☝️👌👐🖖🤙☝️ :("
 
 #, javascript-format
 msgid "You reached your maximum upload quota of ${ MAX_USER_MEDIA_SIZE_MB } MB"
 msgstr ""
+"👏👌🙌 ☝️🤙✌️🤘🖐️🤙🤚 👏👌🙌☝️ 👆✌️👉🤞👆🙌👆 🙌👎👍👌✌️🤚 🤝🙌👌👋✌️ 👌✋ $"
+"{ MAX_USER_MEDIA_SIZE_MB } 👆👈"
 
 msgid ""
 "You requested to get a new password. You can change your password within the "
 "next 30min here: "
 msgstr ""
+"👏👌🙌 ☝️🤙🤝🙌🤙🖖👋🤙🤚 👋👌 🤛🤙👋 ✌️ 👇🤙👐 👎✌️🖖🖖👐👌☝️🤚. 👏👌🙌 🤘✌️"
+"👇 🤘🖐️✌️👇🤛🤙 👏👌🙌☝️ 👎✌️🖖🖖👐👌☝️🤚 👐🤞👋🖐️🤞👇 👋🖐️🤙 👇🤙👉👋 3️⃣0️⃣👆"
+"🤞👇 🖐️🤙☝️🤙: "
 
 msgid "You sent an empty password or invalid data :("
 msgstr ""
-"👏👌🙌 🖖🤙👇👋 ✌️👇 🤙👆👎👋👏 👎✌️🖖🖖👐👌☝️🤚 👌☝️ 🤞👇🤜✌️👍🤞🤚 🤚✌️👋✌️ 😔"
+"👏👌🙌 🖖🤙👇👋 ✌️👇 🤙👆👎👋👏 👎✌️🖖🖖👐👌☝️🤚 👌☝️ 🤞👇🤜✌️👍🤞🤚 🤚✌️👋"
+"✌️ :("
 
 msgid "You took too long, try again"
-msgstr ""
+msgstr "👏👌🙌 👋👌👌👊 👋👌👌 👍👌👇🤛, 👋☝️👏 ✌️🤛✌️🤞👇"
 
 msgid "You will be automatically redirected after 15s"
 msgstr ""
+"👏👌🙌 👐🤞👍👍 👈🤙 ✌️🙌👋👌👆✌️👋🤞🤘✌️👍👍👏 ☝️🤙🤚🤞☝️🤙🤘👋🤙🤚 ✌️✋👋🤙"
+"☝️ 1️⃣5️⃣🖖"
 
 msgid "Your Browser looks shady"
-msgstr ""
+msgstr "👏👌🙌☝️ 👈☝️👌👐🖖🤙☝️ 👍👌👌👊🖖 🖖🖐️✌️🤚👏"
 
 msgid ""
 "Your account must be at least two weeks old before you can create a faction"
 msgstr ""
+"👏👌🙌☝️ ✌️🤘🤘👌🙌👇👋 👆🙌🖖👋 👈🤙 ✌️👋 👍🤙✌️🖖👋 👋👐👌 👐🤙🤙👊🖖 👌👍"
+"🤚 👈🤙✋👌☝️🤙 👏👌🙌 🤘✌️👇 🤘☝️🤙✌️👋🤙 ✌️ ✋✌️🤘👋🤞👌👇"
 
 msgid "Your account needs to be verified to access this page"
 msgstr ""
+"👏👌🙌☝️ ✌️🤘🤘👌🙌👇👋 👇🤙🤙🤚🖖 👋👌 👈🤙 🤜🤙☝️🤞✋🤞🤙🤚 👋👌 ✌️🤘🤘🤙🖖"
+"🖖 👋🖐️🤞🖖 👎✌️🤛🤙"
 
 msgid "Your country is temporary muted from this chat channel"
 msgstr ""
-"👏👌🙌☝️ 🤘👌🙌👇👋☝️👏 🤞🖖 👋🤙👆👎👌☝️✌️☝️👏 👆🙌👋🤙🤚 ✋☝️👌👆 👋🖐🤞🖖 🤘🖐✌️👋 "
-"🤘🖐✌️👇👇🤙👍"
+"👏👌🙌☝️ 🤘👌🙌👇👋☝️👏 🤞🖖 👋🤙👆👎👌☝️✌️☝️👏 👆🙌👋🤙🤚 ✋☝️👌👆 👋🖐️🤞🖖 "
+"🤘🖐️✌️👋 🤘🖐️✌️👇👇🤙👍"
 
 msgid "Your device looks weird"
-msgstr ""
+msgstr "👏👌🙌☝️ 🤚🤙🤜🤞🤘🤙 👍👌👌👊🖖 👐🤙🤞☝️🤚"
 
 msgid "Your mail has to be verified in order to chat"
 msgstr ""
-"👏👌🙌☝️ 👆✌️🤞👍 🖐✌️🖖 👋👌 👈🤙 🤜🤙☝️🤞✋🤞🤙🤚 🤞👇 👌☝️🤚🤙☝️ 👋👌 🤘🖐✌️👋"
+"👏👌🙌☝️ 👆✌️🤞👍 🖐️✌️🖖 👋👌 👈🤙 🤜🤙☝️🤞✋🤞🤙🤚 🤞👇 👌☝️🤚🤙☝️ 👋👌 🤘🖐️"
+"✌️👋"
 
 msgid ""
 "Your mail verification code is invalid or already expired :(, please request "
 "a new one."
 msgstr ""
-"👏👌🙌☝️ 👆✌️🤞👍 🤜🤙☝️🤞✋🤞🤘✌️👋🤞👌👇 🤘👌🤚🤙 🤞🖖 🤞👇🤜✌️👍🤞🤚 👌☝️ ✌️👍☝️🤙"
-"✌️🤚👏 🤙👉👎🤞☝️🤙🤚 😔, 👎👍🤙✌️🖖🤙 ☝️🤙🤝🙌🤙🖖👋 ✌️ 👇🤙👐 👌👇🤙."
+"👏👌🙌☝️ 👆✌️🤞👍 🤜🤙☝️🤞✋🤞🤘✌️👋🤞👌👇 🤘👌🤚🤙 🤞🖖 🤞👇🤜✌️👍🤞🤚 👌☝️ "
+"✌️👍☝️🤙✌️🤚👏 🤙👉👎🤞☝️🤙🤚 :(, 👎👍🤙✌️🖖🤙 ☝️🤙🤝🙌🤙🖖👋 ✌️ 👇🤙👐 👌👇"
+"🤙."
 
 msgid "Your passwords do not match :("
-msgstr "👏👌🙌☝️ 👎✌️🖖🖖👐👌☝️🤚🖖 🤚👌 👇👌👋 👆✌️👋🤘🖐 😔"
+msgstr "👏👌🙌☝️ 👎✌️🖖🖖👐👌☝️🤚🖖 🤚👌 👇👌👋 👆✌️👋🤘🖐️ :("
 
 #. This media is banned xyz
 msgid "because it is propaganda"
-msgstr ""
+msgstr "👈🤙🤘✌️🙌🖖🤙 🤞👋 🤞🖖 👎☝️👌👎✌️🤛✌️👇🤚✌️"
 
 #. This media is banned xyz
 msgid "for being an attempt to scam people"
-msgstr ""
+msgstr "✋👌☝️ 👈🤙🤞👇🤛 ✌️👇 ✌️👋👋🤙👆👎👋 👋👌 🖖🤘✌️👆 👎🤙👌👎👍🤙"
 
 #. This media is banned xyz
 msgid "for being degenerate"
-msgstr ""
+msgstr "✋👌☝️ 👈🤙🤞👇🤛 🤚🤙🤛🤙👇🤙☝️✌️👋🤙"
 
 #. This media is banned xyz
 msgid "for containing CSAM"
-msgstr ""
+msgstr "✋👌☝️ 🤘👌👇👋✌️🤞👇🤞👇🤛 🤘🖖✌️👆"
 
 #. This media is banned xyz
 msgid "for containing graphic violence"
-msgstr ""
+msgstr "✋👌☝️ 🤘👌👇👋✌️🤞👇🤞👇🤛 🤛☝️✌️👎🖐️🤞🤘 🤜🤞👌👍🤙👇🤘🤙"
 
 #. This media is banned xyz
 msgid "for containing personal information"
-msgstr ""
+msgstr "✋👌☝️ 🤘👌👇👋✌️🤞👇🤞👇🤛 👎🤙☝️🖖👌👇✌️👍 🤞👇✋👌☝️👆✌️👋🤞👌👇"
 
 #. This media is banned xyz
 msgid "for glorifying terrorism"
-msgstr ""
+msgstr "✋👌☝️ 🤛👍👌☝️🤞✋👏🤞👇🤛 👋🤙☝️☝️👌☝️🤞🖖👆"
 
 #. "redirect_uris" is a technical term and should not be translated
 msgid "redirect_uris does not look legit"
-msgstr ""
+msgstr "☝️🤙🤚🤞☝️🤙🤘👋_🙌☝️🤞🖖 🤚👌🤙🖖 👇👌👋 👍👌👌👊 👍🤙🤛🤞👋"
 
 msgid "to go back to pixelplanet"
 msgstr "👋👌 🤛👌 👈✌️🤘👊 👋👌 👎🤞👉🤙👍👎👍✌️👇🤙👋"
@@ -871,9 +1036,9 @@ msgid ""
 "welcome to our little community of pixelplacers, to use your account, you "
 "have to verify your mail. You can do that here: "
 msgstr ""
-"👐🤙👍🤘👌👆🤙 👋👌 👌🙌☝️ 👍🤞👋👋👍🤙 🤘👌👆👆🙌👇🤞👋👏 👌✋ 👎🤞👉🤙👍👎👍"
-"✌️🤘🤙☝️🖖, 👋👌 🙌🖖🤙 👏👌🙌☝️ ✌️🤘🤘👌🙌👇👋, 👏👌🙌 🖐✌️🤜🤙 👋👌 🤜🤙☝️🤞✋👏 "
-"👏👌🙌☝️ 👆✌️🤞👍. 👏👌🙌 🤘✌️👇 🤚👌 👋🖐✌️👋 🖐🤙☝️🤙: "
+"👐🤙👍🤘👌👆🤙 👋👌 👌🙌☝️ 👍🤞👋👋👍🤙 🤘👌👆👆🙌👇🤞👋👏 👌✋ 👎🤞👉🤙👍👎"
+"👍✌️🤘🤙☝️🖖, 👋👌 🙌🖖🤙 👏👌🙌☝️ ✌️🤘🤘👌🙌👇👋, 👏👌🙌 🖐️✌️🤜🤙 👋👌 🤜🤙"
+"☝️🤞✋👏 👏👌🙌☝️ 👆✌️🤞👍. 👏👌🙌 🤘✌️👇 🤚👌 👋🖐️✌️👋 🖐️🤙☝️🤙: "
 
 #~ msgid "You are banned"
 #~ msgstr "👏👌🙌 ✌️☝️🤙 👈✌️👇👇🤙🤚"
