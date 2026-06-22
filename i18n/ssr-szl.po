@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: admin@pixelplanet.fun\n"
-"PO-Revision-Date: 2026-06-05 12:30+0000\n"
+"PO-Revision-Date: 2026-06-22 11:30+0000\n"
 "Last-Translator: kyvvra <silesianreal@noreply.pixelplanet.fun>\n"
 "Language-Team: Silesian <https://translate.gs-os.com/projects/ppfun/server/"
 "szl/>\n"
@@ -110,7 +110,7 @@ msgstr "Niy idzie zmiynić poziōmu władzy roli Suweryna"
 
 #: src/core/ChatProvider.js:357
 msgid "Can not chat while being banned"
-msgstr "Niy idzie godać na czacie, kej ciy wyciepali"
+msgstr "Niy idzie gŏdać na czacie, kej jeś zakŏzany"
 
 #: src/routes/api/factionrolecreate.js:55
 msgid "Can not create a role on the same level as yours"
@@ -188,7 +188,7 @@ msgstr "Miano Kliynta"
 
 #: src/routes/reset_password.js:123
 msgid "Confirm New Password"
-msgstr "Potwiyrdź Nowe Hasło"
+msgstr "Potwiyrdź nowe hasło"
 
 #: src/canvasesDesc.js:42
 msgid ""
@@ -296,7 +296,7 @@ msgstr "E-mail niy może być dugszy jak 40 znakōw."
 
 #: src/utils/validation.js:22
 msgid "Email should at least contain a dot"
-msgstr "E-mail winno zawiyrać co nojmniyj kropka"
+msgstr "E-mail winno zawiyrać co nŏjmniyj kropke"
 
 #: src/utils/validation.js:20
 msgid "Email should be at least 5 characters long."
@@ -338,7 +338,7 @@ msgstr "Plik je popsuty"
 msgid ""
 "Generate a new client_secret. The old secret will become invalid "
 "immediately."
-msgstr "Wygyneruj nowy client_secret. Stary sekret stanie się niyważny ôd razu."
+msgstr "Wygyneruj nowy client_secret. Stary sekret stanie się niywŏżny ôd razu."
 
 #: src/routes/oidc/register.js:156
 msgid "Get email address"
@@ -401,7 +401,7 @@ msgstr "Niyważno zorta mydiōw"
 
 #: src/routes/reset_password.js:95
 msgid "Invalid url :( Please check your mail again."
-msgstr "Niyważny URL :( Prosza sprawdź zaś twój e-mail."
+msgstr "Niywŏżny URL :( Prosza sprawdź zaś twój e-mail."
 
 #: src/routes/api/modtools.js:306
 msgid "Just admins can do that"
@@ -417,7 +417,7 @@ msgstr "Ino moderatory i adminy mogōm to zrobić"
 
 #: src/routes/oidc/register.js:141
 msgid "Know that an account exists"
-msgstr "Wiedz, jak kōnto istnieje"
+msgstr "Wiedz, jeźli kōnto istnieje"
 
 #. "scopes" is a technical term and should not be translated
 #: src/routes/oidc/register.js:129
@@ -458,7 +458,7 @@ msgstr "MIME-Typ abo rozszyrzynie niyznōme ani wsparte"
 #: src/routes/api/media.js:133
 #, javascript-format
 msgid "Mimetype ${ mimeType } of file ${ filename } is invalid or not allowed"
-msgstr "MIME-Typ ${ mimeType } pliku ${ filename } je niyważny abo niydozwolōny"
+msgstr "MIME-Typ ${ mimeType } pliku ${ filename } je niywŏżny abo niydozwolōny"
 
 #: src/canvasesDesc.js:30
 msgid "Minimap"
@@ -502,7 +502,7 @@ msgstr "Miano niy może być prōżne."
 
 #: src/utils/validation.js:43
 msgid "Name contains invalid character like @, /, \\ or #"
-msgstr "Miano mo niyważny znak, taki jak @, /, \\ abo #"
+msgstr "Miano mŏ niywŏżny znak, taki jak @, /, \\ abo #"
 
 #: src/routes/oidc/register.js:86
 msgid "Name is too long"
@@ -511,12 +511,12 @@ msgstr "Miano je za dugie"
 #: src/utils/validation.js:33
 #: src/utils/validation.js:98
 msgid "Name must be at least 2 characters long"
-msgstr "Miano mo mieć ôdugłość aby 2 znakōw"
+msgstr "Miano mŏ mieć ôdugłość aby 2 znakōw"
 
 #: src/utils/validation.js:34
 #: src/utils/validation.js:101
 msgid "Name must be shorter than 26 characters"
-msgstr "Miano mo być krōtsze ôd 26 znakōw"
+msgstr "Miano mŏ być krōtsze ôd 26 znakōw"
 
 #: src/routes/api/auth/local.js:21
 msgid "Name or Email does not exist!"
@@ -537,7 +537,7 @@ msgstr "Niy podano Captcha"
 #: src/routes/api/badge.js:16
 #: src/routes/api/fish.js:16
 msgid "No or invalid fish id."
-msgstr "Brak abo niyważny ID ryby."
+msgstr "Brak abo niywŏżny ID ryby."
 
 #: src/utils/validation.js:129
 msgid "No password given."
@@ -590,11 +590,11 @@ msgstr "Nasze głōwne płōtno, dupno karta świata. Rysuj kaj ino lubisz!"
 
 #: src/utils/validation.js:132
 msgid "Password must be at least 6 characters long."
-msgstr "Hasło mo mieć ôdugłość aby 6 znakōw."
+msgstr "Hasło mŏ mieć ôdugłość aby 6 znakōw."
 
 #: src/utils/validation.js:135
 msgid "Password must be shorter than 60 characters."
-msgstr "Hasło mo być krōtsze ôd 60 znakōw."
+msgstr "Hasło mŏ być krōtsze ôd 60 znakōw."
 
 #: src/routes/reset_password.js:78
 msgid "Password successfully changed."
@@ -602,7 +602,7 @@ msgstr "Hasło zmiyniōno z powodzyniem."
 
 #: src/routes/oidc/register.js:134
 msgid "Permission"
-msgstr "Pozwolyni"
+msgstr "Pozwolynie"
 
 #: src/canvasesDesc.js:26
 msgid "PixelCanvas"
@@ -647,11 +647,11 @@ msgstr "Prosza sprōbuj kanału miyndzynarodowego"
 
 #: src/routes/oidc/register.js:166
 msgid "Read Badges and fishes"
-msgstr "Pokoż ôsiongniyńcio i ryby"
+msgstr "Pokŏż ôsiongniyńciŏ i ryby"
 
 #: src/routes/oidc/register.js:151
 msgid "Read name, username and account age"
-msgstr "Pokoż pseudōnim, miano ôd używocza i czas tworzynio kōnta"
+msgstr "Pokŏż pseudōnim, miano ôd używŏcza i czas tworzyniŏ kōnta"
 
 #: src/routes/oidc/register.js:197
 #: src/routes/oidc/register.js:298
@@ -821,10 +821,10 @@ msgid ""
 "function on the LogIn page to set a new password. In the future, consider "
 "not installing malware, Thank You."
 msgstr ""
-"Tyn e-mail / kōmbinacyjo hasła ôstała zhakowano i wyciekła. Coby ôchrōnić to "
-"kōnto, hasło bōło resetowane. Prosza użyć pōniższyj funkcyje \"Zapōmniōł "
-"żech hasła\" na strōnce logowanio, coby nastawić nowe hasło. W prziszłości "
-"rozwożaj niy instalować złośliwego ôprogramowanio. Dziynki."
+"Tyn e-mail / kōmbinacyjŏ hasła ôstała zhakowanŏ i wyciekła. Coby ôchrōnić to "
+"kōnto, hasło bōło resetowane. Proszã użyć pōniższyj funkcyji \"Zapōmniōł "
+"żech hasła\" na strōnce logowaniŏ, coby nastawić nowe hasło. W prziszłości "
+"rozwŏżaj niy instalować złośliwego ôprogramowaniŏ. Dziynki."
 
 #: src/routes/api/auth/change_mail.js:23
 #: src/routes/api/auth/register.js:102
@@ -866,7 +866,7 @@ msgstr "Tyn link do resetowanio hasła już niy je ważny :("
 
 #: src/utils/validation.js:67
 msgid "This user has not password set"
-msgstr "Tyn używocz niy nastawił hasła"
+msgstr "Tyn używŏcz niy nastawił hasła"
 
 #: src/routes/api/userinfo.js:26
 msgid "This user is private"
@@ -878,11 +878,11 @@ msgstr "Tytuł niy może być prōżny."
 
 #: src/utils/validation.js:90
 msgid "Title contains invalid character like @, /, \\ or #"
-msgstr "Tytuł mo niyważny znak, taki jak @,/,\\ or #"
+msgstr "Tytuł mŏ niywŏżny znak, taki jak @,/,\\ or #"
 
 #: src/utils/validation.js:80
 msgid "Title must be at least 2 characters long"
-msgstr "Tytuł mo mieć ôdugłość aby 2 znakōw"
+msgstr "Tytuł mŏ mieć ôdugłość aby 2 znakōw"
 
 #: src/utils/validation.js:81
 msgid "Title must be shorter than 26 characters"
@@ -899,7 +899,7 @@ msgstr "Top-10"
 
 #: src/routes/api/auth/register.js:75
 msgid "Unknown Captcha Error"
-msgstr "Niyznōmy feler Captcha"
+msgstr "Niyznŏny feler Captchy"
 
 #: src/routes/api/media.js:355
 #: src/routes/api/media.js:397
@@ -913,7 +913,7 @@ msgstr "Rychtuj aplikacyjo"
 
 #: src/routes/oidc/register.js:146
 msgid "User ID and verification level"
-msgstr "ID używocza i poziōm weryfikacyjo"
+msgstr "ID używŏcza i poziōm weryfikacyji"
 
 #: src/routes/reset_password.js:68
 msgid "User doesn't exist in our database :("
@@ -930,19 +930,19 @@ msgstr "Miano używocza niy może zaczynać sie ôd pp_"
 
 #: src/utils/validation.js:57
 msgid "Username can only contain the characters: a-z . _ and -"
-msgstr "Miano używocza może zawiyrać ino znaki: a-z, -, . i _"
+msgstr "Miano używŏcza może zawiyrać ino znaki: a-z, -, . i _"
 
 #: src/utils/validation.js:49
 msgid "Username can't be empty."
-msgstr "Miano używocza niy może być prōżne."
+msgstr "Miano używŏcza niy może być prōżne."
 
 #: src/utils/validation.js:51
 msgid "Username must be at least 2 characters long"
-msgstr "Miano używocza mo mieć ôdugłość aby 2 znakōw"
+msgstr "Miano używŏcza mŏ mieć ôdugłość aby 2 znakōw"
 
 #: src/utils/validation.js:54
 msgid "Username must be shorter than 26 characters"
-msgstr "Miano używocza musi być krōtsze ôd 26 znakōw"
+msgstr "Miano używŏcza musi być krōtsze ôd 26 znakōw"
 
 #: src/core/MailProvider.js:155
 msgid ""
@@ -1093,7 +1093,7 @@ msgstr "Niy mōsz dostympu do tego kanału"
 
 #: src/routes/api/auth/register.js:63
 msgid "You failed your captcha"
-msgstr "Zrypoł żeś captche"
+msgstr "Zrypŏł żeś captche"
 
 #: src/core/MailProvider.js:136
 msgid "You forgot your password for PixelPlanet? Get a new one here"
@@ -1166,7 +1166,7 @@ msgstr "Twōj kraj je wyciszōny z tego kanału"
 
 #: src/routes/api/auth/register.js:69
 msgid "Your device looks weird"
-msgstr "Twoje ustrojstwo wyglōnda dziwnie"
+msgstr "Twoje ustrojstwŏ wyglōnda dziwnie"
 
 #: src/core/ChatProvider.js:380
 msgid "Your mail has to be verified in order to chat"

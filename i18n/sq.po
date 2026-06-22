@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: admin@pixelplanet.fun\n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2026-06-19 21:30+0000\n"
+"PO-Revision-Date: 2026-06-22 11:30+0000\n"
 "Last-Translator: Extreme Motorsex <em@noreply.pixelplanet.fun>\n"
 "Language-Team: Albanian <https://translate.gs-os.com/projects/ppfun/client/"
 "sq/>\n"
@@ -86,7 +86,7 @@ msgstr ""
 "shembull: Secili rol me fuqinë e nivelit >=50 mund të menaxhojë ftesat (50)."
 
 msgid "ACCESS MODTOOLS"
-msgstr "Aksesoni veglat e moderatorit"
+msgstr "AKSESONI VEGLAT E MODERATORIT"
 
 #. modlogLink has the text "Moderation Log"
 #, javascript-format

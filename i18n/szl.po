@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: admin@pixelplanet.fun\n"
-"PO-Revision-Date: 2026-06-06 13:30+0000\n"
+"PO-Revision-Date: 2026-06-22 11:30+0000\n"
 "Last-Translator: kyvvra <silesianreal@noreply.pixelplanet.fun>\n"
 "Language-Team: Silesian <https://translate.gs-os.com/projects/ppfun/client/"
 "szl/>\n"
@@ -14,7 +14,7 @@ msgstr ""
 
 #: src/components/BanInfo.jsx:118
 msgid " which is in "
-msgstr " kery je w "
+msgstr " kery je we "
 
 #: src/components/windows/Help.jsx:136
 #, javascript-format
@@ -27,7 +27,7 @@ msgstr "${ mouseSymbol } Trzimej lewy knefel myszy i suń myszkōm, coby ôbrōc
 msgid "${ mouseSymbol } Left click or ${ touchSymbol } tap to place a pixel"
 msgstr ""
 "${ mouseSymbol } Kliknij lewym knefelem myszy abo ${ touchSymbol } dotknij, "
-"coby rysować"
+"coby rysowŏć"
 
 #: src/components/windows/Help.jsx:138
 #, javascript-format
@@ -42,8 +42,8 @@ msgid ""
 "${ mouseSymbol } Right click or ${ touchSymbol } double-tap to remove a "
 "pixel"
 msgstr ""
-"${ mouseSymbol} Kliknij prawym knefelem abo ${ touchSymbol } dwukrotnie "
-"dotknij, coby wyciepać piksel"
+"${ mouseSymbol } Kliknij prawym knefelem abo ${ touchSymbol } dwukrotnie "
+"dotknij, coby wyciepŏć piksel"
 
 #: src/components/windows/Help.jsx:137
 #, javascript-format
@@ -60,19 +60,19 @@ msgstr "(0 = niyskōńczōne)"
 
 #: src/components/windows/MyFactions.jsx:415
 msgid "(click a role to activate it)"
-msgstr "(kliknij rola, coby jom aktywować)"
+msgstr "(kliknij rolã, coby jōm aktywować)"
 
 #: src/components/windows/Faction.jsx:1039
 msgid "(click a role to assign or remove it)"
-msgstr "(kliknij rola, coby jom przipisać abo wyciepać)"
+msgstr "(kliknij rolã, coby jōm przipisać abo wyciepać)"
 
 #: src/components/windows/Statistics.jsx:219
 msgid "+last hour"
-msgstr "+ôstatnio godzina"
+msgstr "+ôstatniŏ godzina"
 
 #: src/components/ChangeMail.jsx:184
 msgid "...loading Login methods and sessions..."
-msgstr "...ładowanie Metod Logowanio i sesji..."
+msgstr "...ładowanie Metod Logowaniŏ i sesiji..."
 
 #: src/components/Fish.jsx:39
 msgid "A Phish!"
@@ -83,20 +83,20 @@ msgid ""
 "A flag representing the role, it should be 16x11 pixels. If left empty, "
 "users with this role selected will still show their own flags."
 msgstr ""
-"Fana reprezyntujōncy rola, winna być 16x11 pikselōw. Jeźli ôstanie prōżna, "
-"używocze z tōm rolōm bydōm pokozywać swojo własno fane."
+"Fana reprezyntujōncŏ rolã, winna być 16x11 pikselōw. Jeźli ôstanie prōżna, "
+"używŏcze z tōm rolōm bydōm pokŏzywać swojōm własnōm fane."
 
 #: src/components/UserMessages.jsx:46
 msgid "A new verification mail is getting sent to you."
-msgstr "Na nowo posłano e-mail z weryfikacyjo do wōs."
+msgstr "Na nowo posłano e-mail z weryfikacyjŏ do wŏs."
 
 #: src/components/windows/Faction.jsx:1420
 msgid ""
 "A role has all the permissions of all levels below and equal to it. In "
 "example: Every role with a power level of >=50 can manage invites (50)."
 msgstr ""
-"Rola mo wszyjskie uprawniynia ze wszyjskich poziomōw niżyj abo rōwnych ôd "
-"niej. Na przikład: Kożdo rola, keryj poziōm władzy je >=50 może rzōndzić "
+"Rola mŏ wszyjskie uprawniyniŏ ze wszyjskich poziomōw niżyj abo rōwnych ôd "
+"niej. Na przikład: Kożdŏ rola, keryj poziōm władzy je >=50 może rzōndzić "
 "zaproszyniami (50)."
 
 #: src/components/windows/OIDCConsent.jsx:66
@@ -109,7 +109,7 @@ msgstr "WLYŹ DO NORZYŃDZI MODŌW"
 msgid ""
 "Actions taken by moderators on the canvas can be seen in the ${ modlogLink "
 "}."
-msgstr "To, co moderatory zrobiły na płōtnie idzie zoczyć w ${ modlogLink }."
+msgstr "To, co moderatory zrobiły na płōtnie idzie zobŏczyć w ${ modlogLink }."
 
 #: src/components/windows/Converter.jsx:362
 msgid "Add Grid (uncheck if you need a 1:1 template)"
@@ -134,7 +134,7 @@ msgstr "Wiek"
 
 #: src/components/windows/Faction.jsx:877
 msgid "All members of this faction are hidden"
-msgstr "Wszyscy czōnki tej frakcyjo sōm skryni"
+msgstr "Wszyjscy czōnki tej frakcyji sōm skryni"
 
 #: src/components/windows/Settings.jsx:101
 msgid "All sound effects will be disabled."
@@ -142,15 +142,15 @@ msgstr "Wszyjskie szmery bydōm wyłōnczōne."
 
 #: src/components/windows/Settings.jsx:87
 msgid "Always show Movement Controls"
-msgstr "Zawsze pokozuj kōntrole ruchu"
+msgstr "Zawsze pokŏzuj kōntrole ruchu"
 
 #: src/components/windows/Settings.jsx:92
 msgid "Always show movement control buttons"
-msgstr "Zawsze pokozuj knefele kōntroli ruchu"
+msgstr "Zawsze pokŏzuj knefele kōntroli ruchu"
 
 #: src/components/windows/MyFactions.jsx:207
 msgid "An image representing your faction"
-msgstr "Ôbraz reprezyntujōncy twoja frakcyjo"
+msgstr "Ôbraz reprezyntujōncy twojōm frakcyjŏ"
 
 #: src/components/windows/Converter.jsx:523
 msgid "Anti Aliasing"
@@ -158,7 +158,7 @@ msgstr "Wygładzanie"
 
 #: src/components/Canvastools.jsx:506
 msgid "Apply a filter to clean trash in large canvas areas."
-msgstr "Zastosuj filtr do czyszczynio chłamu na srogich placach płōtna."
+msgstr "Zastosuj filtr do czyszczyniŏ chłamu na srogich placach płōtna."
 
 #: src/components/windows/CanvasSelect.jsx:43
 msgid "Archive"
@@ -166,27 +166,27 @@ msgstr "Archiwum"
 
 #: src/components/windows/Faction.jsx:997
 msgid "Assign Roles"
-msgstr "Przipisuj role"
+msgstr "Przipisz role"
 
 #: src/components/Admintools.jsx:362
 msgid "Assign new Mod"
-msgstr "Przipisuj nowego moda"
+msgstr "Przipisz nowego moda"
 
 #: src/components/windows/Faction.jsx:1206
 msgid "Assign role per default to new members"
-msgstr "Przipisuj rola sztandarowo nowym czōnkōm"
+msgstr "Przipisz rolã sztandarowo nowym czōnkōm"
 
 #: src/components/windows/Faction.jsx:1443
 msgid "Assign roles below their own"
-msgstr "Przipisuj role niżyj ôd jejich włosnych"
+msgstr "Przipisz role niżyj ôd jejich włŏsnych"
 
 #: src/components/windows/Faction.jsx:1208
 msgid "Assign this role to every new member automatically on join."
-msgstr "Przipisuj ta rola kożdymu nowymu czōnkowi autōmatycznie przi wlyźeniu."
+msgstr "Przipisz ta rolã kŏżdymu nowymu czōnkowi autōmatycznie przy wlyźeniu."
 
 #: src/components/windows/Faction.jsx:1352
 msgid "Assigned role per default"
-msgstr "Przipisano rola sztandarowo"
+msgstr "Przipisanŏ rola sztandarowo"
 
 #: src/components/FileUpload.jsx:561
 msgid "Attach File"
@@ -194,7 +194,7 @@ msgstr "Prziłōncz plik"
 
 #: src/components/windows/Settings.jsx:118
 msgid "Auto Zoom In"
-msgstr "Automatyczne przybliżynie"
+msgstr "Automatyczne przibliżynie"
 
 #: src/components/SocialSettings.jsx:89
 #: src/components/Table.jsx:22
@@ -209,36 +209,36 @@ msgstr "Wrōć"
 
 #: src/components/windows/index.js:45
 msgid "Badge Display"
-msgstr "Wystawo ôsiōngniyńć"
+msgstr "Wystawŏ ôsiōngniyńć"
 
 #: src/components/BadgeList.jsx:21
 msgid "Badges"
-msgstr "Ôsiōngniyńcio"
+msgstr "Ôsiōngniyńciŏ"
 
 #: src/components/windows/Faction.jsx:1073
 msgid "Ban"
-msgstr "Zakaz"
+msgstr "Zakŏz"
 
 #: src/components/Mediatools.jsx:91
 #: src/components/embeds/LocalMedia.jsx:234
 msgid "Ban media"
-msgstr "Zakaz mydiōw"
+msgstr "Zakŏz mydiōw"
 
 #: src/components/windows/Faction.jsx:1447
 msgid "Ban members"
-msgstr "Wyciep czōnkōw"
+msgstr "Zakŏż czōnkōw"
 
 #: src/ui/PixelTransferController.js:155
 msgid "Banned"
-msgstr "Zakozany"
+msgstr "Zakŏzany"
 
 #: src/components/windows/Help.jsx:97
 msgid "Banned? Detected as Proxy?"
-msgstr "Zakozany? Wykryty za proxy?"
+msgstr "Zakŏzany? Wykryty za proxy?"
 
 #: src/components/windows/Faction.jsx:91
 msgid "Bans"
-msgstr "Zakozania"
+msgstr "Zakŏzania"
 
 #: src/components/menus/userContextMenu.js:58
 #: src/components/windows/User.jsx:243
@@ -256,14 +256,14 @@ msgid ""
 "users to start messaging you. You can still start new DMs with other users "
 "and already ongoing DMs will still be open."
 msgstr ""
-"Zablokuj wszyjskie przywatne wiadōmości. Włōnczynie tego sprawi, iże inksze "
-"używocze niy bydōm mogli do ciebie wysyłać wiadomości. Ale furt mōsz prawo "
-"zaczynać nowe prywatne wiadōmości z inkszymi używoczami, a już trwajōnce "
+"Zablokuj wszyjskie przywatne wiadōmości. Włōnczynie tego sprawi, że inni "
+"używŏcze niy bydōm mogli do ciebie wysyłŏć wiadomości. Ale furt mōsz prawo "
+"zaczynać nowe prywatne wiadōmości z inkszymi używŏczami, a już trwajōnce "
 "prywatne wiadōmości bydōm dalej ôtworzōne."
 
 #: src/ui/PixelTransferController.js:172
 msgid "Blocked"
-msgstr "Zablokowany"
+msgstr "Zablokowŏny"
 
 #: src/components/Canvastools.jsx:378
 #: src/components/Canvastools.jsx:455
@@ -282,7 +282,7 @@ msgstr "Zbuduj ôbraz na płōtnie."
 
 #: src/components/Canvastools.jsx:182
 msgid "Build image, but reset cooldown to unset-pixel cd."
-msgstr "Zbuduj ôbraz, ale resetuj ôdliczanie naniystawiōnych pikselōw."
+msgstr "Zbuduj ôbraz, ale resetuj ôdliczanie na niynŏstŏwiōnych pikselach."
 
 #: src/components/BanInfo.jsx:109
 msgid "By Mod"
@@ -290,23 +290,23 @@ msgstr "Ôd moda"
 
 #: src/components/windows/Converter.jsx:329
 msgid "Calculate like GIMP"
-msgstr "Ôbliczaj jak GIMP"
+msgstr "Ôbliczŏj jak GIMP"
 
 #: src/ui/templateLoader.js:226
 msgid "Can not export more than 20 or no template!"
-msgstr "Niy idzie eksportować wiyncyj jak 20 abo żodnego mustra!"
+msgstr "Niy idzie eksportować wiyncyj jak 20 abo żŏdnego mustra!"
 
 #: src/ui/templateLoader.js:252
 msgid "Can not import more than 20 or no template!"
-msgstr "Niy idzie importować wiyncyj jak 20 abo żodnego mustra!"
+msgstr "Niy idzie importować wiyncyj jak 20 abo żŏdnego mustra!"
 
 #: src/components/Captcha.jsx:264
 msgid "Can't read? Reload:"
-msgstr "Niy umiesz przeczytać? Przeładuj:"
+msgstr "Niy umiysz przeczytać? Przeładuj:"
 
 #: src/ui/rendererFactory.js:38
 msgid "Can't render 3D canvas, do you have WebGL2 disabled?"
-msgstr "Niy idzie zrenderować płōtna 3D, mōsz wyłōnczony WebGL2?"
+msgstr "Niy idzie zrenderować płōtna 3D, mŏsz wyłōnczony WebGL2?"
 
 #: src/components/ChangeMail.jsx:247
 #: src/components/ChangePassword.jsx:125
@@ -323,11 +323,11 @@ msgstr "Niy idzie zrenderować płōtna 3D, mōsz wyłōnczony WebGL2?"
 #: src/components/windows/Invite.jsx:135
 #: src/components/windows/MyFactions.jsx:273
 msgid "Cancel"
-msgstr "Anuluj"
+msgstr "Anōluj"
 
 #: src/components/windows/Templates.jsx:135
 msgid "Cancel adding Template"
-msgstr "Anuluj przidawanie mustra"
+msgstr "Anōluj przidowanie mustra"
 
 #: src/components/TemplateItem.jsx:55
 #: src/components/TemplateItemEdit.jsx:121
@@ -337,7 +337,7 @@ msgstr "Płōtno"
 
 #: src/components/windows/index.js:42
 msgid "Canvas Archive"
-msgstr "Archiwum płōtna"
+msgstr "Archiwum płōtōw"
 
 #: src/components/Canvastools.jsx:504
 msgid "Canvas Cleaner"
@@ -358,11 +358,11 @@ msgstr "Captcha"
 
 #: src/components/windows/FishDisplay.jsx:78
 msgid "Caught by"
-msgstr "Chycony bez"
+msgstr "Chycony przez"
 
 #: src/components/windows/Faction.jsx:1293
 msgid "Change Flag"
-msgstr "Zmiyń fana"
+msgstr "Zmiyń fanã"
 
 #: src/store/actions/index.js:21
 msgid "Change Happened"
@@ -394,7 +394,7 @@ msgstr "Czat"
 
 #: src/components/windows/Chat.jsx:328
 msgid "Chat here"
-msgstr "Godoj tukej"
+msgstr "Gŏdŏj tukej"
 
 #: src/components/windows/Settings.jsx:161
 msgid "Check out past versions of the canvas."
@@ -402,11 +402,11 @@ msgstr "Pojrzyj przeszłe wersyje płōtna."
 
 #: src/components/windows/OIDCConsent.jsx:239
 msgid "Check to allow"
-msgstr "Zaznōcz, coby przizwolić"
+msgstr "Zaznŏcz, coby przizwolić"
 
 #: src/components/Watchtools.jsx:127
 msgid "Check who placed in an area"
-msgstr "Sprawdź, fto rysował na danym ôbszarze"
+msgstr "Sprawdź, fto rysowŏł na danym ôbszarze"
 
 #: src/components/Canvastools.jsx:242
 #: src/components/windows/Converter.jsx:192
@@ -419,11 +419,11 @@ msgstr "Wybierz tryb farby"
 
 #: src/components/windows/Converter.jsx:262
 msgid "Choose Strategy"
-msgstr "Wybierz strategie"
+msgstr "Wybierz strategiã"
 
 #: src/components/windows/UserArea.jsx:163
 msgid "Choose Username"
-msgstr "Wybierz miano używocza"
+msgstr "Wybierz miano używŏcza"
 
 #: src/components/Canvastools.jsx:200
 msgid ""
@@ -432,7 +432,7 @@ msgid ""
 "are two cooldowns)!)"
 msgstr ""
 "Czyścij zapasowe piksele, co sōm ôtoczōne jednōm inkszōm farbōm abo "
-"niyustawiōnymi pikselami (BARDZO AGRESYWNE NA PŁŌTNACH, KERE PRZIZWALAJŌM "
+"niyustawiōnymi pikselami (BARDZO AGRESYWNE NA PŁŌTNACH, KERE PRZIZWALAJŌM NA "
 "NIYUSTAWIŌNE PIKSELE (kaj sōm dwa ôdliczania)!)"
 
 #: src/components/Canvastools.jsx:192
@@ -466,19 +466,19 @@ msgid ""
 "select current hovering color"
 msgstr ""
 "Kliknij ${ mouseSymbol} strzodkowy knefel myszy abo ${ touchSymbol } dugie-"
-"dotknyńcie, coby wybrać teroźno farba na kursōrze"
+"dotknyńcie, coby wybrać teroźno farbã na kursōrze"
 
 #: src/components/windows/Help.jsx:117
 msgid "Click a color in palette to select it"
-msgstr "Kliknij na farbe we palecie, coby ja wybrać"
+msgstr "Kliknij na farbe we palecie, coby jōm wybrać"
 
 #: src/components/windows/MyFactions.jsx:306
 msgid "Click here to cease representation."
-msgstr "Kliknij tukej, coby ustōmpić reprezyntacyjo."
+msgstr "Kliknij tukej, coby ustōmpić reprezyntacyji."
 
 #: src/components/UserMessages.jsx:50
 msgid "Click here to request a new verification mail."
-msgstr "Kliknij tukej, coby zapytać ô nowy weryfikacyjno e-mail."
+msgstr "Kliknij tukej, coby zapytać ô nowy weryfikacyjny e-mail."
 
 #: src/components/Captcha.jsx:235
 msgid "Click to Load Captcha"
@@ -508,7 +508,7 @@ msgstr "Zamknij czat"
 
 #: src/components/buttons/PalselButton.jsx:32
 msgid "Close Palette"
-msgstr "Zamknij paleta"
+msgstr "Zamknij paletã"
 
 #: src/components/menus/channelContextMenu.js:44
 msgid "Compact Chat"
@@ -516,7 +516,7 @@ msgstr "Kōmpaktuj czat"
 
 #: src/components/windows/Settings.jsx:126
 msgid "Compact Palette"
-msgstr "Kōmpaktuj paleta"
+msgstr "Kōmpaktuj paletã"
 
 #: src/components/windows/Faction.jsx:993
 #: src/components/windows/Faction.jsx:1035
@@ -525,7 +525,7 @@ msgstr "Potwiyrdź"
 
 #: src/components/windows/Faction.jsx:1073
 msgid "Confirm Ban"
-msgstr "Potwiyrdź zakaz"
+msgstr "Potwiyrdź zakŏz"
 
 #: src/components/windows/Faction.jsx:1375
 #: src/components/windows/Faction.jsx:1611
@@ -543,7 +543,7 @@ msgstr "Potwiyrdź wylezienie"
 
 #: src/components/ChangePassword.jsx:112
 msgid "Confirm New Password"
-msgstr "Potwiyrdź Nowe Hasło"
+msgstr "Potwiyrdź nowe hasło"
 
 #: src/components/ChangePassword.jsx:112
 #: src/components/LogInForm.jsx:369
@@ -558,7 +558,7 @@ msgstr "Potwiyrdź swoje hasło."
 #: src/store/actions/fetch.js:55
 #, javascript-format
 msgid "Connection error ${ code } :("
-msgstr "Feler połōnczynio ${ code } :("
+msgstr "Feler połōnczyniŏ ${ code } :("
 
 #: src/components/windows/OIDCConsent.jsx:227
 msgid "Consent"
@@ -588,8 +588,8 @@ msgid ""
 "Cooldown is usually automatically changed for a country that is dominating. "
 "In example in the case of a streamer raid."
 msgstr ""
-"Ôdliczanie je zwykle autōmatycznie zmiyniane dlo dōminujōncego kraju. Na "
-"przikłod kej idzie najazd streamera."
+"Ôdliczanie je zwykle autōmatycznie zmiyniane dlŏ dōminujōncego kraju. Na "
+"przikłod kej je najazd streamera."
 
 #: src/components/TemplateItem.jsx:58
 #: src/components/TemplateItemEdit.jsx:140
@@ -616,11 +616,11 @@ msgstr "Skopiuj"
 
 #: src/components/ClipboardCopyField.jsx:15
 msgid "Copy Link"
-msgstr "Skopiuj link"
+msgstr "Skopiuj łōncze"
 
 #: src/components/Watchtools.jsx:503
 msgid "Copy Selected to Clipboard"
-msgstr "Kopia wybrana do schowka"
+msgstr "Skopiuj zaznaczone do schowka"
 
 #: src/components/windows/BadgeDisplay.jsx:73
 #: src/components/windows/FishDisplay.jsx:87
@@ -629,7 +629,7 @@ msgstr "Skopiuj URL"
 
 #: src/components/Watchtools.jsx:474
 msgid "Copy UserId to Clipboard"
-msgstr "Skopiuj ID używocza do schowka"
+msgstr "Skopiuj ID używŏcza do schowka"
 
 #: src/components/CoordinatesBox.jsx:48
 #: src/components/Watchtools.jsx:425
@@ -646,7 +646,7 @@ msgstr "Niy mōg sie połōnczyć ze serwerem"
 #: src/store/actions/fetch.js:88
 #: src/store/actions/fetch.js:114
 msgid "Could not connect to server, please try again later :("
-msgstr "Niy mōg sie połōnczyć ze serwerem, prosza sprōbuj potym :("
+msgstr "Niy mōg sie połōnczyć ze serwerem, proszã sprōbuj potym :("
 
 #: src/components/Captcha.jsx:67
 msgid "Could not load captcha"
@@ -659,11 +659,11 @@ msgstr "Niy mōg przetworzić plikōw"
 
 #: src/ui/PixelTransferController.js:177
 msgid "Couldn't set Pixel"
-msgstr "Ustawiynie piksela niy zadziało"
+msgstr "Postawiynie piksela niy zadziało"
 
 #: src/components/windows/Statistics.jsx:94
 msgid "Countries Today"
-msgstr "Kraje dzisioj"
+msgstr "Kraje dzisiŏj"
 
 #: src/components/CooldownChanges.jsx:26
 #: src/components/windows/Statistics.jsx:216
@@ -672,7 +672,7 @@ msgstr "Kraj"
 
 #: src/components/windows/MyFactions.jsx:185
 msgid "Create Faction"
-msgstr "Stwōrz frakcyjo"
+msgstr "Stwōrz frakcyjŏ"
 
 #: src/components/windows/Faction.jsx:1629
 msgid "Create Invite"
@@ -680,7 +680,7 @@ msgstr "Stwōrz zaproszynie"
 
 #: src/components/windows/MyFactions.jsx:490
 msgid "Create New Faction"
-msgstr "Stwōrz nowo frakcyjo"
+msgstr "Stwōrz nowŏ frakcyjŏ"
 
 #: src/components/windows/Faction.jsx:1728
 msgid "Create New Invite"
@@ -688,11 +688,11 @@ msgstr "Stwōrz nowe zaproszynie"
 
 #: src/components/windows/Faction.jsx:1408
 msgid "Create New Role"
-msgstr "Stwōrz nowo rola"
+msgstr "Stwōrz nowŏ rolã"
 
 #: src/components/windows/Faction.jsx:1157
 msgid "Create Role"
-msgstr "Stwōrz rola"
+msgstr "Stwōrz rolã"
 
 #: src/components/windows/Faction.jsx:1459
 msgid "Create roles"
@@ -701,17 +701,17 @@ msgstr "Stwōrz role"
 #: src/components/windows/Help.jsx:156
 #, javascript-format
 msgid "Credit for the Palette of the 2bit canvas goes to ${ donendoLink }."
-msgstr "Zasługa za paleta płōtna 2-bit je do ${ donendoLink }."
+msgstr "Zasługa za palete płōtna 2-bit idzie dlŏ ${ donendoLink }."
 
 #: src/components/windows/Help.jsx:150
 #, javascript-format
 msgid "Credit for the Palette of the Moon goes to ${ starhouseLink }."
-msgstr "Zasługa za paleta płōtna miesiōnczka je do ${ starhouseLink }."
+msgstr "Zasługa za palete płōtna miesiōnczka idzie dlŏ ${ starhouseLink }."
 
 #: src/components/windows/Help.jsx:153
 #, javascript-format
 msgid "Credit for the Palette of the Top10 canvas goes to ${ vinikLink }."
-msgstr "Zasługa za paleta płōtna Top-10 je do ${ vinikLink }."
+msgstr "Zasługa za palete płōtna Top-10 idzie dlŏ ${ vinikLink }."
 
 #: src/components/CooldownChanges.jsx:22
 msgid "Current Cooldown Changes per Country"
@@ -724,7 +724,7 @@ msgstr "Niysztandardowy kursor"
 #: src/components/SocialSettings.jsx:141
 #: src/components/windows/Faction.jsx:1171
 msgid "Custom Flag"
-msgstr "Niysztandardowo fana"
+msgstr "Niysztandardowo fanã"
 
 #: src/components/ChannelDropDown.jsx:84
 #: src/components/menus/userContextMenu.js:51
@@ -743,26 +743,26 @@ msgstr "Dziynne piksele na kraj"
 
 #: src/components/windows/Statistics.jsx:187
 msgid "Daily Pixels per Faction"
-msgstr "Dziynne piksele na frakcyjo"
+msgstr "Dziynne piksele na frakcyje"
 
 #: src/components/windows/Statistics.jsx:185
 msgid "Daily Pixels per Player"
-msgstr "Dziynne piksele na grocza"
+msgstr "Dziynne piksele na grŏczy"
 
 #: src/components/Table.jsx:34
 #: src/components/windows/Faction.jsx:782
 #: src/components/windows/User.jsx:166
 #: src/components/windows/UserArea.jsx:116
 msgid "Daily Rank"
-msgstr "Dziynna ranga"
+msgstr "Dziynna rangã"
 
 #: src/components/windows/BadgeDisplay.jsx:60
 msgid "Date of Award"
-msgstr "Data prziznanio"
+msgstr "Data prziznaniŏ"
 
 #: src/components/windows/FishDisplay.jsx:74
 msgid "Date of catch"
-msgstr "Data złapanio"
+msgstr "Data złapaniŏ"
 
 #: src/components/TemplateItemEdit.jsx:173
 #: src/components/windows/Faction.jsx:1375
@@ -776,7 +776,7 @@ msgstr "Wyciep kōnto"
 
 #: src/components/windows/Faction.jsx:1611
 msgid "Delete Faction"
-msgstr "Wyciep frakcyjo"
+msgstr "Wyciep frakcyjŏ"
 
 #: src/components/DeleteAccount.jsx:80
 msgid "Delete My Account"
@@ -784,7 +784,7 @@ msgstr "Wyciep moje kōnto"
 
 #: src/components/windows/Faction.jsx:1471
 msgid "Delete the faction"
-msgstr "Wyciep ta frakcyjo"
+msgstr "Wyciep ta frakcyjŏ"
 
 #: src/components/windows/OIDCConsent.jsx:276
 #: src/components/windows/OIDCConsent.jsx:314
@@ -810,7 +810,7 @@ msgstr "Ôpis musi być krōtszy ôd 1000 znakōw"
 #: src/components/windows/Faction.jsx:1556
 #: src/components/windows/MyFactions.jsx:229
 msgid "Description of your faction"
-msgstr "Ôpis twojij frakcyje"
+msgstr "Ôpis twojij frakcyji"
 
 #: src/ui/PixelTransferController.js:70
 #: src/ui/PixelTransferController.js:165
@@ -818,7 +818,7 @@ msgid ""
 "Didn't get an answer from pixelplanet. Try to refresh if this problem "
 "persists."
 msgstr ""
-"Niy dostoł ôdpowiedzi ôd PixelPlanet. Sprōbuj ôdświyżyć, jeźli tyn problym "
+"Niy dostŏł ôdpowiedzi ôd PixelPlanet. Sprōbuj ôdświyżyć, jeźli tyn problym "
 "niy przestawo sie."
 
 #: src/components/CanvasItem.jsx:65
@@ -837,7 +837,7 @@ msgstr "Wyłōncz ôłōwek historyji"
 
 #: src/components/buttons/PencilButton.jsx:58
 msgid "Disable Overlay Pencil"
-msgstr "Wyłōncz ôłōwek nakłodki"
+msgstr "Wyłōncz ôłōwek nakłŏdki"
 
 #: src/components/buttons/PencilButton.jsx:50
 msgid "Disable Pencil"
@@ -846,32 +846,32 @@ msgstr "Wyłōncz ôłōwek"
 #: src/components/windows/Settings.jsx:131
 msgid "Display Palette in a compact form that takes less screen space."
 msgstr ""
-"Wyświytlaj paleta we kōmpaktowej formie, kero zajmuje mynij przestrzyństwa "
-"na ekranie."
+"Wyświytl paletã we kōmpaktowej formie, kera zajmuje mniyj przestrzyństwa na "
+"ekranie."
 
 #: src/components/Admintools.jsx:201
 msgid "Do stuff with IPs (one IP per line)"
-msgstr "Rōb roztōmajte rzeczy z adresami IP (jedyn adres IP na lynijo)"
+msgstr "Rōb rzeczy z adresami IP (jedyn adres IP na lynije)"
 
 #: src/components/windows/Faction.jsx:1569
 #: src/components/windows/MyFactions.jsx:242
 msgid "Don't let people find this faction in public search or look at its profile."
 msgstr ""
-"Dej pozōr, coby ludzie niy mogli znoleźć tej frakcyjo w publicznym szukaniu "
+"Dej pozōr, coby ludzie niy mogli znŏleźć tej frakcyji w publicznym szukaniu "
 "abo zajzdrzili sie jego profilu."
 
 #: src/components/windows/OIDCConsent.jsx:263
 msgid "Don't remember"
-msgstr "Niy pamiyntnij"
+msgstr "Niy pamiyntŏj"
 
 #: src/components/windows/Faction.jsx:1567
 #: src/components/windows/MyFactions.jsx:240
 msgid "Don't show faction in search"
-msgstr "Niy pokozuj frakcyje w poszukowaniu"
+msgstr "Niy pokŏzuj frakcyji w poszukiwŏniu"
 
 #: src/components/SocialSettings.jsx:218
 msgid "Don't show me in global stats"
-msgstr "Niy pokozuj mi w globalnych statystykach"
+msgstr "Niy pokŏzuj mnie w globalnych statystykach"
 
 #: src/components/ChangeName.jsx:59
 #: src/components/ChangeUsername.jsx:73
@@ -915,15 +915,15 @@ msgstr "Edytuj"
 
 #: src/components/windows/Faction.jsx:1463
 msgid "Edit faction"
-msgstr "Edytuj frakcyje"
+msgstr "Edytuj frakcyjŏ"
 
 #: src/components/windows/Faction.jsx:1455
 msgid "Edit roles below their own"
-msgstr "Edytuj role pōniżyj jejich włosnych"
+msgstr "Edytuj role pōniżyj jejich włŏsnych"
 
 #: src/components/windows/Faction.jsx:1467
 msgid "Edit their own role and elevate users to their own level"
-msgstr "Edytuj jejich włosno rola i dźwignij używoczy na swōj włosny poziōm"
+msgstr "Edytuj jejich włŏsnŏ rolã i dźwignij używŏczy na swōj włŏsny poziōm"
 
 #: src/components/LogInForm.jsx:305
 #: src/components/LogInForm.jsx:347
@@ -944,12 +944,12 @@ msgid ""
 "Email is used to verify your account. You might get a cofirmation mail "
 "after registering."
 msgstr ""
-"E-mail je używany do weryfikacyje twojigo konta. Po założeniu kōnta możesz "
+"E-mail je używany do weryfikacyji twojigo konta. Po założeniu kōnta możesz "
 "dostać potwierdzajōncy e-mail."
 
 #: src/utils/validation.js:22
 msgid "Email should at least contain a dot"
-msgstr "E-mail winno zawiyrać co nojmniyj kropka"
+msgstr "E-mail winno zawiyrać co nŏjmniyj kropke"
 
 #: src/utils/validation.js:20
 msgid "Email should be at least 5 characters long."
@@ -961,7 +961,7 @@ msgstr "E-mail winno zawiyrać @"
 
 #: src/components/windows/Templates.jsx:63
 msgid "Enable Overlay"
-msgstr "Włōncz nakłodke"
+msgstr "Włōncz nakłŏdke"
 
 #: src/components/buttons/PencilButton.jsx:45
 msgid "Enable Pencil"
@@ -982,15 +982,15 @@ msgstr "Wprowadź powōd"
 
 #: src/components/Admintools.jsx:365
 msgid "Enter UserName of new Mod"
-msgstr "Wprowadź miano używocza nowego moda"
+msgstr "Wprowadź miano używŏcza nowego moda"
 
 #: src/components/windows/MyFactions.jsx:225
 msgid "Enter a little text that describes your faction"
-msgstr "Wprowadź mały tekst, co ôpisuje twoja frakcyjo"
+msgstr "Wprowadź mały tekst, co ôpisuje twojōm frakcyje"
 
 #: src/components/windows/Search.jsx:105
 msgid "Enter search term and press Search."
-msgstr "Wprowadź wyszukowany termin i kliknij wyszukaj."
+msgstr "Wprowadź wyszukŏwany termin i kliknij wyszukaj."
 
 #: src/components/LogInForm.jsx:293
 msgid "Enter your mail address and we will send you a new password:"
@@ -1045,7 +1045,7 @@ msgstr "Eksportuj włōnczone mustry"
 
 #: src/components/windows/index.js:51
 msgid "Faction"
-msgstr "Frakcyjo"
+msgstr "Frakcyjŏ"
 
 #: src/components/ChannelDropDown.jsx:86
 #: src/components/windows/Search.jsx:26
@@ -1055,19 +1055,19 @@ msgstr "Frakcyje"
 
 #: src/components/windows/Statistics.jsx:93
 msgid "Factions Today"
-msgstr "Frakcyje dzisioj"
+msgstr "Frakcyje dzisiŏj"
 
 #: src/components/windows/Statistics.jsx:92
 msgid "Factions Total"
-msgstr "Frakcyje ôgōlnie"
+msgstr "Frakcyje łōncznie"
 
 #: src/components/windows/MyFactions.jsx:473
 msgid ""
 "Factions allow you to coordinate better with other players. Search for "
 "existing factions, find friends or create your own faction."
 msgstr ""
-"Frakcyje przizwlajōm na lepsze koordynowanie sie z inkszymi groczami. "
-"Wyszukaj istniyjōncych frakcyji, znojdź kamratōw abo stworz włosno frakcyjo."
+"Frakcyje przizwlajōm na lepsze koordynowanie sie z inkszymi grŏczami. "
+"Wyszukaj istniyjōncych frakcyji, znŏjdź kamratōw abo stwōrz włosnŏ frakcyjŏ."
 
 #: src/components/CooldownChanges.jsx:27
 msgid "Factor"
@@ -1084,15 +1084,15 @@ msgstr "Filtr"
 
 #: src/components/windows/index.js:44
 msgid "Fish Display"
-msgstr "Wystawo ryb"
+msgstr "Wystawŏ ryb"
 
 #: src/components/windows/BadgeDisplay.jsx:64
 msgid "For"
-msgstr "Dlo"
+msgstr "Dlŏ"
 
 #: src/components/windows/Help.jsx:143
 msgid "For Developers"
-msgstr "Dlo deweloperōw"
+msgstr "Dlŏ deweloperōw"
 
 #: src/components/windows/Help.jsx:93
 #, javascript-format
@@ -1101,9 +1101,9 @@ msgid ""
 "your data, simply delete your account, this in fact wipes all privacy "
 "relevant traces. Your placed pixels will of course not be deleted."
 msgstr ""
-"W przipadku problemōw prawnych, prosza kōntaktować sie z ${ mailLink }. "
+"W przipadku problemōw prawnych, proszã kōntaktować sie z ${ mailLink }. "
 "Jeźli chcesz wyciepać swoje dane, po prostu usuń swoje kōnto, to wymazuje "
-"wszyske szlaki zwiōnzane z prywatnościōm. Twoje umiyszczōne piksele niy "
+"wszyjskie szlaki zwiōnzane z prywatnościōm. Twoje umiyszczōne piksele niy "
 "bydōm usuniynte."
 
 #: src/components/windows/OIDCConsent.jsx:264
@@ -1130,7 +1130,7 @@ msgstr "Na jedyn rok"
 
 #: src/components/windows/Settings.jsx:138
 msgid "For when you are playing on a potato."
-msgstr "Kedy grosz na kartoflu."
+msgstr "Kedy grŏsz na kartoflu."
 
 #: src/components/LogInForm.jsx:230
 #: src/components/LogInForm.jsx:390
@@ -1158,7 +1158,7 @@ msgstr "Zyskej piksele"
 
 #: src/components/Watchtools.jsx:284
 msgid "Get Users"
-msgstr "Zyskej używoczy"
+msgstr "Zyskej używŏczy"
 
 #: src/components/windows/OIDCConsent.jsx:60
 msgid "Get email address"
@@ -1227,7 +1227,7 @@ msgid ""
 "Higher zoomlevels take some time to update, the 3D globe gets updated at "
 "least once per day."
 msgstr ""
-"Srogsze poziōmy powiyniszenio potrzebujōm trocha czasu na zrychtowanie, "
+"Srogsze poziōmy powiyniszyniŏ potrzebujōm trochã czasu na zrychtowanie, "
 "globus 3D je rychtowany aby raz na dziyń."
 
 #: src/components/menus/mainMenu.js:87
@@ -1239,7 +1239,7 @@ msgstr "Widok historyczny"
 #, javascript-format
 msgid "Hold left ${ bindShift } for pencil (to place while moving mouse)"
 msgstr ""
-"Trzimej lewy ${ bindShift } dlo ôłōwka (do umiyszczynio przi suniyńciu "
+"Trzimej lewy ${ bindShift } dlŏ ôłōwka (do umiyszczyniŏ przy suniyńciu "
 "myszkōm)"
 
 #: src/components/windows/Settings.jsx:182
@@ -1278,17 +1278,17 @@ msgid ""
 "e-mail to ${ mailLink } and, in case of a ban, include the BID you got in "
 "the ban message."
 msgstr ""
-"Jeźli ôstōłeś wykryty jako proxy, ale niy używōsz go, abo myślisz iże "
-"ôstōłeś felernie zakozany, prosza wlyź na nasz ${ guildedLink } abo poślij "
-"nam e-mail na ${ mailLink } i, w przipadku zakozu, załōncz BID, kery żech "
-"dostoł w kōmunikacie o zakozaniu."
+"Jeźli ôstōłeś wykryty jako proxy, ale niy używŏsz go, abo myślisz że ôstōłeś "
+"felernie zakŏzany, proszã wlyź na nasz ${ guildedLink } abo poślij nam e-"
+"mail na ${ mailLink } i, w przipadku zakŏzu, załōncz BID, kery żech dostŏł w "
+"kōmunikacie o zakŏzaniu."
 
 #: src/components/windows/Help.jsx:106
 msgid ""
 "If you talk to moderators or administrators, you might get asked for one of "
 "the following identifiers:"
 msgstr ""
-"Jeźli godasz z moderatorami abo administratorami, możesz być poproszōny ô "
+"Jeźli gŏdŏsz z moderatorami abo administratorami, możesz być poproszōny ô "
 "jedyn z nastympujōncych idyntyfikatorōw:"
 
 #: src/components/windows/Converter.jsx:242
@@ -1313,21 +1313,21 @@ msgstr "Ôdstymp"
 
 #: src/components/Watchtools.jsx:38
 msgid "Interval is invalid"
-msgstr "Ôdstymp je niyważny"
+msgstr "Ôdstymp je niywŏżny"
 
 #: src/ui/PixelTransferController.js:102
 msgid "Invalid Canvas"
-msgstr "Niyważne płōtno"
+msgstr "Niywŏżne płōtno"
 
 #: src/ui/PixelTransferController.js:106
 #: src/ui/PixelTransferController.js:110
 #: src/ui/PixelTransferController.js:114
 msgid "Invalid Coordinates"
-msgstr "Niyważne namiary"
+msgstr "Niywŏżne namiary"
 
 #: src/ui/PixelTransferController.js:119
 msgid "Invalid color selected"
-msgstr "Nieważna ôbrana farba"
+msgstr "Niewŏżnŏ ôbrana farba"
 
 #: src/components/windows/index.js:55
 msgid "Invite"
@@ -1348,13 +1348,13 @@ msgstr "Je jednorazowym zaproszyniem"
 #: src/components/windows/OIDCConsent.jsx:223
 msgid "It requests the following permissions. Uncheck what you don't want to grant:"
 msgstr ""
-"Wymogo ô nastympujōnce przizwolynia. Ôdznacz to, co niy chcesz prziznać:"
+"Wymŏgŏ ô nastympujōnce przizwolynia. Ôdznacz to, co niy chcesz prziznać:"
 
 #: src/components/Admintools.jsx:405
 msgid "Jannies can rollback and protect, but not watch or ban."
 msgstr ""
-"Mini-moderatory mogōm prziwrōcić i ôchrōnić piksele, ale niy mogōm zoboczyć, "
-"fto rysował piksele abo zakozać groczy."
+"Mini-moderatory mogōm prziwrōcić i ôchrōnić piksele, ale niy mogōm zobŏczyć, "
+"fto rysował piksele abo zakŏzać grŏczy."
 
 #: src/components/windows/Invite.jsx:124
 msgid "Join"
@@ -1363,7 +1363,7 @@ msgstr "Wlyź"
 #: src/components/windows/Faction.jsx:842
 #: src/components/windows/Faction.jsx:847
 msgid "Join Faction"
-msgstr "Wlyź do frakcyjo"
+msgstr "Wlyź do frakcyji"
 
 #: src/components/Table.jsx:32
 msgid "Joined"
@@ -1371,19 +1371,19 @@ msgstr "Prziłōnczōny"
 
 #: src/ui/PixelTransferController.js:122
 msgid "Just for registered Users"
-msgstr "Ino dlo używoczy z kōntem"
+msgstr "Ino dlŏ używŏczy z kōntem"
 
 #: src/ui/PixelTransferController.js:168
 msgid "Just for verified Users"
-msgstr "Ino dlo zweryfikowanych używoczy"
+msgstr "Ino dlŏ zweryfikowanych używŏczy"
 
 #: src/ui/PixelTransferController.js:147
 msgid "Just the Top10 of yesterday can place here"
-msgstr "Ino top 10 groczy ze wczorej mōgo tutaj rysować"
+msgstr "Ino top 10 groczy ze wczorej mōgōm tukej rysować"
 
 #: src/components/windows/Converter.jsx:510
 msgid "Keep Ratio"
-msgstr "Utrzimuj stosunek"
+msgstr "Utrzimŏj stosunek"
 
 #: src/components/windows/Faction.jsx:1058
 msgid "Kick"
@@ -1395,7 +1395,7 @@ msgstr "Wykop czōnkōw"
 
 #: src/components/windows/OIDCConsent.jsx:72
 msgid "Know that an account exists"
-msgstr "Wiedz, jak kōnto istnieje"
+msgstr "Wiedz, jeźli kōnto istnieje"
 
 #: src/components/windows/MyFactions.jsx:438
 msgid "Leave"
@@ -1404,7 +1404,7 @@ msgstr "Wyleź"
 #: src/components/windows/Faction.jsx:856
 #: src/components/windows/Faction.jsx:866
 msgid "Leave Faction"
-msgstr "Wyleź z frakcyjo"
+msgstr "Wyleź z frakcyji"
 
 #: src/components/windows/Help.jsx:92
 msgid "Legal Requests"
@@ -1413,12 +1413,12 @@ msgstr "Prawne prośby"
 #: src/components/windows/Faction.jsx:1580
 #: src/components/windows/MyFactions.jsx:253
 msgid "Let everyone join this faction"
-msgstr "Pozwōl kożdymu wlyźć do tyj frakcyje"
+msgstr "Pozwōl kŏżdymu wlyźć do tyj frakcyji"
 
 #: src/components/windows/Faction.jsx:1582
 #: src/components/windows/MyFactions.jsx:255
 msgid "Let people join this faction without needing an invite."
-msgstr "Pozwōl ludziōm wlyźć do tyj frakcyje bez zaproszynio."
+msgstr "Pozwōl ludziōm wlyźć do tyj frakcyji bez zaproszyniŏ."
 
 #: src/components/windows/Faction.jsx:1426
 msgid "Level"
@@ -1465,7 +1465,7 @@ msgstr "Zaloguj sie"
 
 #: src/components/windows/UserArea.jsx:172
 msgid "Login Methods"
-msgstr "Metody logowanio"
+msgstr "Metody logowaniŏ"
 
 #: src/components/windows/UserArea.jsx:84
 msgid "Login to access more features and stats."
@@ -1473,7 +1473,7 @@ msgstr "Zaloguj sie, coby dostać dostymp do wiyncyj funkcyji i statystyk."
 
 #: src/components/windows/OIDCConsent.jsx:83
 msgid "Login to grant access to other application."
-msgstr "Zaloguj sie, coby prziznać dostymp do inkszyj aplikacyjo."
+msgstr "Zaloguj sie, coby prziznać dostymp do inkszych aplikacyji."
 
 #: src/components/windows/Invite.jsx:140
 msgid "Login to join us."
@@ -1481,27 +1481,27 @@ msgstr "Zaloguj sie, coby prziłōnczyć sie do nōs."
 
 #: src/components/windows/OIDCConsent.jsx:205
 msgid "Login to other application"
-msgstr "Zaloguj sie do inkszyj aplikacyje"
+msgstr "Zaloguj sie do inkszyj aplikacyji"
 
 #: src/components/LogInForm.jsx:202
 msgid "Login with Name or Mail:"
-msgstr "Zaloguj sie mianym abo e-mailem:"
+msgstr "Zaloguj sie mianem abo e-mailem:"
 
 #: src/components/menus/mainMenu.js:96
 msgid "Make Screenshot"
-msgstr "Zrōb zdjyńcie ekranu"
+msgstr "Zrōb migawke"
 
 #: src/components/Admintools.jsx:312
 msgid "Manage Moderators"
-msgstr "Zarzōndzaj moderatorami"
+msgstr "Zarzōndzŏj moderatorami"
 
 #: src/components/menus/mainMenu.js:166
 msgid "Manage Templates"
-msgstr "Zarzōndzaj mustrami"
+msgstr "Zarzōndzŏj mustrami"
 
 #: src/components/windows/Faction.jsx:1431
 msgid "Manage invites"
-msgstr "Zarzōndzaj zaproszyniami"
+msgstr "Zarzōndzŏj zaproszyniami"
 
 #: src/components/windows/Help.jsx:95
 msgid "Map Data"
@@ -1523,7 +1523,7 @@ msgstr "Czōnki"
 
 #: src/components/windows/Converter.jsx:302
 msgid "Minimum Color Distance"
-msgstr "Minimalno ôdległość farb"
+msgstr "Minimalnŏ ôdległość farb"
 
 #: src/components/windows/Help.jsx:62
 #: src/components/windows/index.js:54
@@ -1583,17 +1583,17 @@ msgstr "Miano niy może być prōżne."
 
 #: src/utils/validation.js:43
 msgid "Name contains invalid character like @, /, \\ or #"
-msgstr "Miano mo niyważny znak, taki jak @, /, \\ abo #"
+msgstr "Miano mŏ niywŏżny znak, taki jak @, /, \\ abo #"
 
 #: src/utils/validation.js:33
 #: src/utils/validation.js:98
 msgid "Name must be at least 2 characters long"
-msgstr "Miano mo mieć ôdugłość aby 2 znakōw"
+msgstr "Miano mŏ mieć ôdugłość aby 2 znakōw"
 
 #: src/utils/validation.js:34
 #: src/utils/validation.js:101
 msgid "Name must be shorter than 26 characters"
-msgstr "Miano mo być krōtsze ôd 26 znakōw"
+msgstr "Miano mŏ być krōtsze ôd 26 znakōw"
 
 #: src/components/windows/Faction.jsx:1167
 msgid "Name of this role"
@@ -1601,7 +1601,7 @@ msgstr "Miano tyj roli"
 
 #: src/components/windows/MyFactions.jsx:195
 msgid "Name of your faction (this can not be changed later)"
-msgstr "Miano twojij frakcyje (niy może być zmiyniōne potym)"
+msgstr "Miano twojij frakcyji (niy może być zmiyniōne potym)"
 
 #: src/components/LogInForm.jsx:214
 msgid "Name or Email"
@@ -1621,7 +1621,7 @@ msgstr "Nowe hasło"
 
 #: src/components/ChangeUsername.jsx:67
 msgid "New Username"
-msgstr "Nowe miano używocza"
+msgstr "Nowe miano używŏcza"
 
 #: src/components/CanvasItem.jsx:45
 msgid "No"
@@ -1630,7 +1630,7 @@ msgstr "Niy"
 #: src/store/actions/fetch.js:674
 #: src/store/actions/fetch.js:747
 msgid "No File selected to upload"
-msgstr "Brak wybranego pliku do przesyłanio"
+msgstr "Brak wybranego pliku do przesyłaniŏ"
 
 #: src/store/actions/index.js:413
 msgid "No Phish!"
@@ -1638,11 +1638,11 @@ msgstr "Niyma ryby!"
 
 #: src/components/SocialSettings.jsx:154
 msgid "No flag selected"
-msgstr "Niy wybrano fana"
+msgstr "Niy wybrano fanã"
 
 #: src/components/GlobalCaptcha.jsx:60
 msgid "No or invalid captcha text"
-msgstr "Brak abo niyważny tekst captchy"
+msgstr "Brak abo niywŏżny tekst captchy"
 
 #: src/utils/validation.js:129
 msgid "No password given."
@@ -1654,7 +1654,7 @@ msgstr "Brak wynikōw."
 
 #: src/components/windows/Faction.jsx:1103
 msgid "Nobody is banned from this faction"
-msgstr "Nikt niy je zakozany z tej frakcyje"
+msgstr "Nikt niy je zakŏzany ze tyj frakcyji"
 
 #: src/components/Admintools.jsx:175
 #: src/components/Canvastools.jsx:215
@@ -1679,7 +1679,7 @@ msgstr "Napomniynie"
 #: src/components/SocialSettings.jsx:193
 msgid "Note: Your active Faction may overwrite your flag settings."
 msgstr ""
-"Napomniynie: Twoja aktywna frakcyjo może przepisać ustawiynia twojej fany."
+"Napomniynie: Twoja aktywna frakcyjŏ może nadpisać ustawiynia twojej fany."
 
 #: src/components/windows/index.js:68
 msgid "OIDC LogIn"
@@ -1697,7 +1697,7 @@ msgstr "Wyrōwnaj"
 
 #: src/store/actions/index.js:414
 msgid "Oh no, the phish escaped. Better luck next time!"
-msgstr "O niy, ryba uciykneła. Możno nastympnym razym bydzie lepij!"
+msgstr "O niy, ryba uciykneła. Może nastympnym razym bydzie lepij!"
 
 #: src/components/ChangePassword.jsx:90
 msgid "Old Password"
@@ -1709,19 +1709,19 @@ msgstr "Jednorazowy"
 
 #: src/components/CanvasItem.jsx:30
 msgid "Online Users"
-msgstr "Aktywni używocze"
+msgstr "Aktywni używŏcze"
 
 #: src/components/OnlineBox.jsx:57
 msgid "Online Users on Canvas"
-msgstr "Aktywni używocze na płōtnie"
+msgstr "Aktywni używŏcze na płōtnie"
 
 #: src/ui/PixelTransferController.js:169
 msgid "Only verified Users are currently allowed to play."
-msgstr "Ino zweryfikowani używocze mōgom teraz grać."
+msgstr "Ino zweryfikowani używŏcze mōgom teraz grać."
 
 #: src/components/windows/Templates.jsx:97
 msgid "Opacity of Overlay in percent."
-msgstr "Przejzdrzistość nakłodki w procyntach."
+msgstr "Przejzdrzistość nakłŏdki w procyntach."
 
 #: src/components/windows/MyFactions.jsx:450
 msgid "Open"
@@ -1733,7 +1733,7 @@ msgstr "Ôtwōrz czat"
 
 #: src/components/buttons/PalselButton.jsx:32
 msgid "Open Palette"
-msgstr "Ôtwōrz paleta"
+msgstr "Ôtwōrz paletã"
 
 #: src/components/embeds/LocalMedia.jsx:262
 #: src/components/markdown/MdLink.jsx:121
@@ -1742,7 +1742,7 @@ msgstr "Ôtworz we wyskokujōncym ôknie"
 
 #: src/components/windows/Help.jsx:144
 msgid "OpenID Connect Client registration"
-msgstr "Registracyjo kliynta OpenID Connect"
+msgstr "Registracyjŏ kliynta OpenID Connect"
 
 #: src/components/windows/Help.jsx:85
 msgid ""
@@ -1755,22 +1755,22 @@ msgid ""
 msgstr ""
 "Nasze głōwne płōtno to ôgrōmno karta świata, możesz rysować kaj chcesz, ale "
 "musisz ôczekować na kōnkretne ôdliczanie miyndzy pikselami. Możesz sprawdzić "
-"czas ôdliczanio i wymogania w menu wybōru płōtna (knefel globusu na gōrze ). "
-"Niykere płōtna majōm inkszy czas ôdliczanio do zastōmpiynio pikselōw "
-"narysowanych bez używocza aniżeli rysowanie na pikselu niyustawiōnym. no. 4s/"
-"7s ôznaczo 4s na świyżych pikselach i 7s na już narysowanych pikselach."
+"czas ôdliczaniŏ i wymŏgania w menu wybōru płōtna (knefel globusu na gōrze ). "
+"Niykere płōtna majōm inkszy czas ôdliczaniŏ do zastōmpiyniŏ pikselōw "
+"narysowanych bez używŏcza aniżeli rysowanie na pikselu niyustawiōnym. np. 4s/"
+"7s ôznaczŏ 4s na świyżych pikselach i 7s na już narysowanych pikselach."
 
 #: src/controls/keypress.js:215
 msgid "Overlay OFF"
-msgstr "Nakłodka wyłōnczōna"
+msgstr "Nakłŏdka wyłōnczōna"
 
 #: src/controls/keypress.js:214
 msgid "Overlay ON"
-msgstr "Nakłodka włōnczōna"
+msgstr "Nakłŏdka włōnczōna"
 
 #: src/components/windows/Templates.jsx:83
 msgid "Overlay Opacity"
-msgstr "Przejzdrzistość nakłodki"
+msgstr "Przejzdrzistość nakłŏdki"
 
 #: src/components/windows/Faction.jsx:89
 msgid "Overview"
@@ -1778,12 +1778,12 @@ msgstr "Pōdglōnd"
 
 #: src/components/windows/Converter.jsx:219
 msgid "Palette Download"
-msgstr "Pobierz paleta"
+msgstr "Pobierz paletã"
 
 #: src/components/windows/Converter.jsx:221
 #, javascript-format
 msgid "Palette for ${ gimpLink }"
-msgstr "Paleta dlo ${ gimpLink }"
+msgstr "Paleta dlŏ ${ gimpLink }"
 
 #: src/components/ChangeMail.jsx:175
 #: src/components/ChangePassword.jsx:104
@@ -1796,11 +1796,11 @@ msgstr "Hasło"
 
 #: src/utils/validation.js:132
 msgid "Password must be at least 6 characters long."
-msgstr "Hasło mo mieć ôdugłość aby 6 znakōw."
+msgstr "Hasło mŏ mieć ôdugłość aby 6 znakōw."
 
 #: src/utils/validation.js:135
 msgid "Password must be shorter than 60 characters."
-msgstr "Hasło mo być krōtsze ôd 60 znakōw."
+msgstr "Hasło mŏ być krōtsze ôd 60 znakōw."
 
 #: src/components/ChangePassword.jsx:45
 msgid "Password successfully changed."
@@ -1808,25 +1808,25 @@ msgstr "Hasło zmiyniōno z powodzyniem."
 
 #: src/components/ChangePassword.jsx:22
 msgid "Passwords do not match."
-msgstr "Hasła niy pasujo."
+msgstr "Hasła niy pasujŏ."
 
 #: src/components/windows/Settings.jsx:165
 #, javascript-format
 msgid "Pencil Mode for ${ canvasName } canvas"
-msgstr "Tryb ôłōwka dlo ${ canvasName } płōtna"
+msgstr "Tryb ôłōwka dlŏ ${ canvasName } płōtna"
 
 #: src/store/actions/thunks.js:424
 msgid "Pencil picks: "
-msgstr "Wybōry ôłōwkōw: "
+msgstr "Wybōr ôłōwkã: "
 
 #: src/components/windows/Faction.jsx:1424
 #: src/components/windows/OIDCConsent.jsx:228
 msgid "Permission"
-msgstr "Pozwolyni"
+msgstr "Pozwolynie"
 
 #: src/components/windows/Faction.jsx:1419
 msgid "Permissions of Powerlevels"
-msgstr "Pozwolynia poziomōw władzy"
+msgstr "Pozwolyniŏ poziomōw władzy"
 
 #: src/store/actions/index.js:406
 msgid "Phish!"
@@ -1863,7 +1863,7 @@ msgstr "Piksele"
 
 #: src/components/windows/Help.jsx:84
 msgid "Place color pixels on a large canvas with other players online!"
-msgstr "Rysuj farbiste piksele na srogim płōtnie z inkszymi aktywnymi groczami!"
+msgstr "Rysuj farbiste piksele na srogim płōtnie z inkszymi aktywnymi grŏczami!"
 
 #: src/components/OnlineBox.jsx:85
 #: src/components/windows/Faction.jsx:788
@@ -1878,22 +1878,22 @@ msgstr "Zrōb szmer, kej przichodzōm nowe wiadōmość czatu"
 
 #: src/core/chartSettings.js:127
 msgid "Players and Pixels per hour"
-msgstr "Grocze i piksele na godzina"
+msgstr "Grŏcze i piksele na godzine"
 
 #: src/ui/PixelTransferController.js:138
 msgid "Please prove that you are human"
-msgstr "Prosza dowodź, iże jesteś czowiekiem"
+msgstr "Proszã dowodź, że jesteś czōwiekiem"
 
 #: src/store/actions/index.js:21
 msgid "Please refresh the website"
-msgstr "Prosza ôdświyżyć strona"
+msgstr "Proszã ôdświyżyć strone"
 
 #: src/components/UserMessages.jsx:34
 msgid ""
 "Please verify your mail address or add a new one, otherwise your account "
 "could get deleted in the future."
 msgstr ""
-"Prosza zweryfikować swōj adres e-mail abo dodej nowy, inakszyj, twoje kōnto "
+"Proszã zweryfikować swōj adres e-mail abo dodej nowy, inakszyj, twoje kōnto "
 "może być wyciepane w prziszłości."
 
 #: src/components/windows/Archive.jsx:11
@@ -1912,7 +1912,7 @@ msgstr "Poziōm władzy"
 #: src/components/windows/Faction.jsx:1195
 msgid "Powerlevel of this role. See table below for an explanation."
 msgstr ""
-"Poziōm władzy tyj roli. Patrz na tabela pōniżyj, coby dostać wyklarowanie."
+"Poziōm władzy tyj roli. Patrz na tabelã pōniżyj, coby dostŏć wyklarowanie."
 
 #: src/components/windows/Help.jsx:124
 #: src/components/windows/Help.jsx:134
@@ -1935,7 +1935,7 @@ msgstr "Kliknij ${ bindH }, coby przełōnczyć na widok historyczny"
 #: src/components/windows/Help.jsx:135
 #, javascript-format
 msgid "Press ${ bindQ } and ${ bindE } to fly up and down"
-msgstr "Kliknij ${ bindQ } i ${ bindE }, coby powiyniszać w gōra i w dōł"
+msgstr "Kliknij ${ bindQ } i ${ bindE }, coby powiyniszać w gōrã i w dōł"
 
 #: src/components/windows/Help.jsx:122
 #, javascript-format
@@ -1957,7 +1957,7 @@ msgstr ""
 #: src/components/windows/Help.jsx:119
 #, javascript-format
 msgid "Press ${ bindX } to toggle showing of pixel activity"
-msgstr "Kliknij ${ bindX }, coby przełōnczyć pokozywanie aktywności pikselōw"
+msgstr "Kliknij ${ bindX }, coby przełōnczyć pokŏzywanie aktywności pikselōw"
 
 #: src/components/SocialSettings.jsx:209
 #: src/components/Table.jsx:114
@@ -1977,7 +1977,7 @@ msgstr "Gibke akcyje"
 
 #: src/ui/PixelTransferController.js:159
 msgid "Range Banned"
-msgstr "Ôbszar adresu je zakozany"
+msgstr "Ôbszar adresu je zakŏzany"
 
 #: src/components/Table.jsx:36
 #: src/components/Table.jsx:39
@@ -1996,11 +1996,11 @@ msgstr ""
 
 #: src/components/windows/OIDCConsent.jsx:64
 msgid "Read Badges and fishes"
-msgstr "Pokoż ôsiongniyńcio i ryby"
+msgstr "Pokŏż ôsiongniyńciŏ i ryby"
 
 #: src/components/windows/OIDCConsent.jsx:58
 msgid "Read name, username and account age"
-msgstr "Pokoż pseudōnim, miano ôd używocza i czas tworzynio kōnta"
+msgstr "Pokŏż pseudōnim, miano ôd używŏcza i czas tworzyniŏ kōnta"
 
 #: src/components/BanInfo.jsx:104
 #: src/components/IIDTools.jsx:153
@@ -2034,7 +2034,7 @@ msgstr "Załaduj pōnownie"
 
 #: src/components/windows/OIDCConsent.jsx:255
 msgid "Remember this decision: "
-msgstr "Pamiyntaj ô tyj decyzyji: "
+msgstr "Pamiyntŏj ô tyj decyzyji: "
 
 #: src/components/DeleteList.jsx:31
 msgid "Remove"
@@ -2050,7 +2050,7 @@ msgstr "Usuń czyszczōncego"
 
 #: src/components/Admintools.jsx:327
 msgid "Remove Janny"
-msgstr "Usuń mini-moderatora"
+msgstr "Usuń myńszego-moderatora"
 
 #: src/components/Admintools.jsx:315
 msgid "Remove Moderator"
@@ -2062,7 +2062,7 @@ msgstr "Usuń role"
 
 #: src/components/ChangeMail.jsx:192
 msgid "Remove a Login method:"
-msgstr "Usuń metode logowanio:"
+msgstr "Usuń metode logowaniŏ:"
 
 #: src/components/windows/User.jsx:135
 #, javascript-format
@@ -2071,11 +2071,11 @@ msgstr "Reprezyntuje ${ activeFactionTitle } za ${ activeFactionRoleName }"
 
 #: src/components/Admintools.jsx:282
 msgid "Require Verification to Place"
-msgstr "Wymoga weryfikacyji by rysować"
+msgstr "Wymŏga weryfikacyji, coby rysować"
 
 #: src/components/CanvasItem.jsx:51
 msgid "Requirements"
-msgstr "Wymogi"
+msgstr "Wymŏgŏnia"
 
 #: src/components/windows/Converter.jsx:537
 msgid "Reset"
@@ -2083,7 +2083,7 @@ msgstr "Reset"
 
 #: src/components/Admintools.jsx:252
 msgid "Reset Captchas of ALL Users"
-msgstr "Resetuj captche dlo WSZYJSKICH używoczy"
+msgstr "Resetuj captche dlŏ WSZYJSKICH używŏczy"
 
 #: src/components/LogInForm.jsx:280
 msgid "Reset your password"
@@ -2170,7 +2170,7 @@ msgstr "Szukej"
 
 #: src/components/windows/MyFactions.jsx:484
 msgid "Search Existing Faction"
-msgstr "Szukej istniyjōnco frakcyjo"
+msgstr "Szukej istniyjōncōm frakcyje"
 
 #: src/components/ModLogTools.jsx:98
 #: src/components/windows/Modlog.jsx:39
@@ -2180,11 +2180,11 @@ msgstr "Szukej termin"
 
 #: src/components/windows/Faction.jsx:1439
 msgid "See hidden users in member list"
-msgstr "Zobocz skrytych używoczy na wykozie czōnkōw"
+msgstr "Zobŏcz skrytych używŏczy na wykŏzie czōnkōw"
 
 #: src/components/windows/Faction.jsx:1528
 msgid "Select Avatar of this Faction. Supported Formats: jpg, gif, png, webp"
-msgstr "Wybierz awatar tyj frakcyje. Wsparte formaty: jpg, gif, png, webp"
+msgstr "Wybierz awatar tyj frakcyji. Wsparte formaty: jpg, gif, png, webp"
 
 #: src/components/HistorySelect.jsx:181
 msgid "Select Date above"
@@ -2196,11 +2196,11 @@ msgstr "Wybierz plik"
 
 #: src/components/SocialSettings.jsx:185
 msgid "Select Flag"
-msgstr "Wybierz fana"
+msgstr "Wybierz fanã"
 
 #: src/components/windows/Settings.jsx:189
 msgid "Select Language"
-msgstr "Wybierz jynzyk"
+msgstr "Wybierz gŏdke"
 
 #: src/components/windows/Faction.jsx:555
 msgid "Select a valid powerlevel"
@@ -2218,7 +2218,7 @@ msgid ""
 "Archived canvases can be accessed here:"
 msgstr ""
 "Wybierz płōtno, kerego chcesz użyć.\n"
-"Kożde płōtno je wyjōntkowe i mo inksze palety, ôdliczania i wymogania.\n"
+"Kŏżde płōtno je wyjōntkowe i mŏ inksze palety, ôdliczania i wymŏgania.\n"
 "Dostymp do zaarchiwizowanych płōtn je tukej:"
 
 #: src/components/SocialSettings.jsx:133
@@ -2228,16 +2228,16 @@ msgstr "Wybierz swōj awatar. Wsparte formaty: jpg, gif, png, webp"
 #: src/components/windows/Settings.jsx:65
 #: src/store/actions/thunks.js:427
 msgid "Selected Color"
-msgstr "Wybierz farba"
+msgstr "Wybranŏ farba"
 
 #: src/components/SocialSettings.jsx:145
 msgid "Selected Flag:"
-msgstr "Wybrano fana:"
+msgstr "Wybranŏ fana:"
 
 #: src/components/windows/Modlog.jsx:35
 msgid "Selected moderation actions that happened within the past two weeks."
 msgstr ""
-"Wybrane akcyje moderatorōw, co miały miyjsce w czasie ôstatnich dwōch tydni."
+"Wybrane akcyje moderatorōw, co miŏły miyjsce w czasie ôstatnich dwōch tydni."
 
 #: src/components/GlobalCaptcha.jsx:105
 msgid "Send"
@@ -2245,7 +2245,7 @@ msgstr "Wyślij"
 
 #: src/components/LogInForm.jsx:284
 msgid "Sent you a mail with instructions to reset your password."
-msgstr "Posłaliśmy my ci e-mail z instrukcyjami, jak resetować hasło."
+msgstr "Posłaliśmy ci e-mail z instrukcyjami, jak resetować hasło."
 
 #: src/components/windows/Converter.jsx:300
 msgid "Serpentine"
@@ -2257,11 +2257,11 @@ msgstr "Feler serwera"
 
 #: src/store/actions/fetch.js:323
 msgid "Server answered with gibberish :("
-msgstr "Serwer ôdpowiedzioł głupota :("
+msgstr "Serwer ôdpowiedziŏł głupotōm :("
 
 #: src/ui/PixelTransferController.js:152
 msgid "Server got confused by your pixels. Are you playing on multiple devices?"
-msgstr "Serwer je zamiyszany bez twoje piksele. Grasz na wielu ustrojstwach?"
+msgstr "Serwer je zamiyszany przez twoje piksele. Grasz na wielu ustrojstwach?"
 
 #: src/components/windows/UserArea.jsx:183
 msgid "Set Password"
@@ -2280,7 +2280,7 @@ msgid ""
 "Setting a password allows you to login by username or email, rather than "
 "only relying on 3rd party login."
 msgstr ""
-"Ustawiynie hasła przizwolo na zalogowanie sie bez miana używocza abo e-"
+"Ustawiynie hasła przizwolŏ na zalogowanie sie bez miana używŏcza abo e-"
 "maila, a niy polygać ino na logowaniu ôd ôsōb trzecich."
 
 #: src/components/menus/mainMenu.js:219
@@ -2290,33 +2290,33 @@ msgstr "Ustawiynia"
 
 #: src/components/markdown/MdLink.jsx:144
 msgid "Show Embedded"
-msgstr "Pokaż ôsadzynia"
+msgstr "Pokŏż ôsadzone"
 
 #: src/components/windows/Settings.jsx:71
 msgid "Show Grid"
-msgstr "Pokaż nec"
+msgstr "Pokŏż nec"
 
 #: src/components/windows/Settings.jsx:145
 msgid "Show Grid in white instead of black."
-msgstr "Pokaż siatka w bieli zamiast czornym."
+msgstr "Pokŏż siatka w bieli zamiast czŏrnym."
 
 #: src/components/windows/Settings.jsx:79
 msgid "Show Pixel Activity"
-msgstr "Pokaż aktywność pikselōw"
+msgstr "Pokŏż aktywność pikselōw"
 
 #: src/components/windows/Settings.jsx:84
 msgid "Show circles where pixels are placed."
-msgstr "Pokaż koła, kaj sōm rysowane piksele."
+msgstr "Pokŏż koła, kaj sōm rysowane piksele."
 
 #: src/components/windows/Templates.jsx:76
 msgid "Show overlay as small individual pixels on high zoomlevels."
 msgstr ""
-"Pokaż nakłodke jako małe indywidualne piksele na srogich poziōmach "
-"powiynkszynia."
+"Pokaż nakłŏdke jako małe indywidualne piksele na srogich poziōmach "
+"powiynkszyniŏ."
 
 #: src/components/windows/Templates.jsx:68
 msgid "Show templates as overlays ingame."
-msgstr "Pokaż mustry jako nakłodki w grze."
+msgstr "Pokaż mustry jako nakłŏdki w grze."
 
 #: src/components/embeds/LocalMedia.jsx:270
 msgid "Shrink"
@@ -2349,7 +2349,7 @@ msgstr "Zacznij czatować tukej"
 
 #: src/components/Admintools.jsx:306
 msgid "Start checking for Malware"
-msgstr "Zacznij sprawdzać, eli mōsz złośliwe ôprogramowanie"
+msgstr "Zacznij sprawdzać, jeźli mŏsz złośliwe ôprogramowanie"
 
 #: src/components/menus/mainMenu.js:211
 #: src/components/windows/index.js:49
@@ -2358,7 +2358,7 @@ msgstr "Statystyki"
 
 #: src/components/Canvastools.jsx:219
 msgid "Status: Not running"
-msgstr "Status: Niy działo"
+msgstr "Status: Niy działŏ"
 
 #: src/components/LogInForm.jsx:224
 #: src/components/LogInForm.jsx:384
@@ -2371,11 +2371,11 @@ msgstr "Zatrzymaj czyszczōncego"
 
 #: src/components/Admintools.jsx:295
 msgid "Stop checking for Malware"
-msgstr "Przestań sprawdzać, eli mōsz złośliwe ôprogramowanie"
+msgstr "Przestań sprawdzać, jeźli mŏsz złośliwe ôprogramowanie"
 
 #: src/components/Admintools.jsx:271
 msgid "Stop requiring Verification to Place"
-msgstr "Przestań wymogać weryfikacyje do rysowanio"
+msgstr "Przestań wymŏgać weryfikacyji do rysowaniŏ"
 
 #: src/components/Admintools.jsx:242
 #: src/components/Admintools.jsx:416
@@ -2410,7 +2410,7 @@ msgstr "Miano mustra"
 #: src/components/windows/Templates.jsx:55
 #: src/components/windows/index.js:46
 msgid "Templates"
-msgstr "Mustra"
+msgstr "Mustry"
 
 #: src/components/windows/OIDCConsent.jsx:207
 #, javascript-format
@@ -2418,7 +2418,7 @@ msgid ""
 "The application ${ appName } at ${ appUrl } wants to login with your "
 "pixelplanet account ${ accountName }"
 msgstr ""
-"Aplikacyjo ${ appName } na ${ appUrl } chce sie zalogować twojim kōntym "
+"Aplikacyja ${ appName } na ${ appUrl } chce sie zalogować twojim kōntem "
 "PixelPlanet ${ accountName }"
 
 #: src/components/windows/Help.jsx:96
@@ -2426,8 +2426,8 @@ msgid ""
 "The bare map data that we use, together with converted OpenStreetMap tiles "
 "for orientation, can be downloaded from mega.nz here: "
 msgstr ""
-"Surowe dane karty co używōmy, razem z przekształcōnymi kaflami OpenStreetMap "
-"do ôriyntacyje, idzie pobrać z mega.nz tukej: "
+"Surowe dane karty co używŏmy, razem z przekształcōnymi kaflami OpenStreetMap "
+"do ôriyntacyji, idzie pobrać z mega.nz tukej: "
 
 #: src/components/LogInForm.jsx:344
 msgid ""
@@ -2447,7 +2447,7 @@ msgstr "Motywy"
 
 #: src/components/windows/Player.jsx:16
 msgid "This URL is not supported by our Media Player"
-msgstr "Tyn URL niy je wsparty bez nasz ôdtworzak multimedialny"
+msgstr "Tyn URL niy je wsparty przez nasz ôdtworzak multimedialny"
 
 #: src/ui/PixelTransferController.js:103
 msgid "This canvas doesn't exist"
@@ -2460,10 +2460,10 @@ msgid ""
 "with a 5s cooldown and 60s stacking. It got launched on May 11th and "
 "remained active for months till it got shut down on November 30th."
 msgstr ""
-"To płōtno było poprosiōne o w czasie kōnfliktōw politycznych na głōwnym "
-"płōtnie. To była reprezyntacyjo kōmpasu politycznego w rozmiarach 1024x1024 "
-"z czasym ôdliczanil 5s i rezerwōm do 60s. Ôstoł uruchomiōny 11 moja i ôstoł "
-"aktywny bez miesiōnce, aż ôstoł zamknięty 30 listopada."
+"To płōtno było poprosiōne w czasie kōnfliktōw politycznych na głōwnym "
+"płōtnie. To była reprezyntacyjŏ kōmpasu politycznego w rozmiarach 1024x1024 "
+"z czasem ôdliczaniŏ 5s i rezerwōm do 60s. Ôstoł uruchomiōny 11 moja i ôstoł "
+"aktywny przez miesiōnce, aż ôstoł zamkniynty 30 listopada."
 
 #: src/utils/validation.js:70
 msgid ""
@@ -2472,22 +2472,22 @@ msgid ""
 "function on the LogIn page to set a new password. In the future, consider "
 "not installing malware, Thank You."
 msgstr ""
-"Tyn e-mail / kōmbinacyjo hasła ôstała zhakowano i wyciekła. Coby ôchrōnić to "
-"kōnto, hasło bōło resetowane. Prosza użyć pōniższyj funkcyje \"Zapōmniōł "
-"żech hasła\" na strōnce logowanio, coby nastawić nowe hasło. W prziszłości "
-"rozwożaj niy instalować złośliwego ôprogramowanio. Dziynki."
+"Tyn e-mail / kōmbinacyjŏ hasła ôstała zhakowanŏ i wyciekła. Coby ôchrōnić to "
+"kōnto, hasło bōło resetowane. Proszã użyć pōniższyj funkcyji \"Zapōmniōł "
+"żech hasła\" na strōnce logowaniŏ, coby nastawić nowe hasło. W prziszłości "
+"rozwŏżaj niy instalować złośliwego ôprogramowaniŏ. Dziynki."
 
 #: src/components/windows/Faction.jsx:1717
 msgid "This faction has no invites"
-msgstr "Ta frakcyjo niy mo zaproszyń"
+msgstr "Ta frakcyjŏ niy mŏ zaproszyń"
 
 #: src/components/LogInForm.jsx:333
 msgid ""
 "This is the name that other people see, e.g. in Chat. You can change it at "
 "any time. All characters except @, /, , >, < and # are allowed."
 msgstr ""
-"To je miano, co inksi używocze widzōm, np. w czacie. Idzie je zmiynić kiedy "
-"ino chcesz. Wszyjskie znaki z wyjōntkym @, /, , >, < i # sōm przizwolōne."
+"To je miano, co inksi używŏcze widzōm, np. w czacie. Idzie je zmiynić kiedy "
+"ino chcesz. Wszyjskie znaki z wyjōntkiym @, /, , >, < i # sōm przizwolōne."
 
 #: src/components/windows/OIDCConsent.jsx:250
 msgid "This login may only work if your account is verified."
@@ -2495,16 +2495,16 @@ msgstr "Tyn login może działać ino tedy, kej twoje kōnto je zweryfikowane."
 
 #: src/components/windows/OIDCConsent.jsx:239
 msgid "This permission is required"
-msgstr "To pozwolynie je wymogane"
+msgstr "To pozwolynie je wymŏgane"
 
 #: src/utils/validation.js:67
 msgid "This user has not password set"
-msgstr "Tyn używocz niy nastawił hasła"
+msgstr "Tyn używŏcz niy nastawił hasła"
 
 #. Column title in tables
 #: src/components/Table.jsx:27
 msgid "Time"
-msgstr "Czas"
+msgstr "Czŏs"
 
 #: src/ui/PixelTransferController.js:68
 #: src/ui/PixelTransferController.js:163
@@ -2513,7 +2513,7 @@ msgstr "Przerwa"
 
 #: src/components/Captcha.jsx:185
 msgid "Tip: Not case-sensitive; I and l are the same"
-msgstr "Porada: Srogość znakōw niy mo znaczynio; I i l sōm takie same"
+msgstr "Porada: Srogość znakōw niy mŏ znaczyniŏ; I i l sōm takie same"
 
 #: src/components/windows/Templates.jsx:59
 msgid ""
@@ -2524,7 +2524,7 @@ msgid ""
 msgstr ""
 "Pōnużōny umiyszczaniem pojedynczyj farby? Chcesz zamiast tego stworzić "
 "rysōnek, ale musisz rachować piksele z inkszego ôbrazu? Mustry mogōm ci w "
-"tym pōmōc! Mustry mogōm sie pokozywać jako nakłodka, a ty możesz nad niymi "
+"tym pōmōc! Mustry mogōm sie pokŏzywać jako nakłŏdka, a ty możesz nad niymi "
 "rysować. Jedyn piksel na mustrze, winno być jednym pikselym na płōtnie."
 
 #: src/components/Table.jsx:23
@@ -2539,11 +2539,11 @@ msgstr "Tytuł niy może być prōżny."
 
 #: src/utils/validation.js:90
 msgid "Title contains invalid character like @, /, \\ or #"
-msgstr "Tytuł mo niyważny znak, taki jak @,/,\\ or #"
+msgstr "Tytuł mŏ niywŏżny znak, taki jak @,/,\\ or #"
 
 #: src/utils/validation.js:80
 msgid "Title must be at least 2 characters long"
-msgstr "Tytuł mo mieć ôdugłość aby 2 znakōw"
+msgstr "Tytuł mŏ mieć ôdugłość aby 2 znakōw"
 
 #: src/utils/validation.js:81
 msgid "Title must be shorter than 26 characters"
@@ -2552,7 +2552,7 @@ msgstr "Tytuł musi być krōtszy ôd 26 znakōw"
 #: src/components/windows/Faction.jsx:1545
 #: src/components/windows/MyFactions.jsx:218
 msgid "Title of your faction"
-msgstr "Tytuł twojij frakcyjo"
+msgstr "Tytuł twojij frakcyji"
 
 #: src/components/ChangeMail.jsx:169
 msgid "To use this page, enter your Password:"
@@ -2567,7 +2567,7 @@ msgstr "Dzisiej"
 #: src/components/windows/User.jsx:162
 #: src/components/windows/UserArea.jsx:112
 msgid "Today Placed Pixels"
-msgstr "Dzisiejsze umieszczōne piksele"
+msgstr "Dzisiejsze umiyszczōne piksele"
 
 #: src/core/chartSettings.js:30
 msgid "Top 10 Countries [pxls / day]"
@@ -2579,11 +2579,11 @@ msgstr "Top 10 dziynny ranking"
 
 #: src/core/chartSettings.js:221
 msgid "Top 10 Players [pxls / day]"
-msgstr "Top 10 groczy [piksele / dziyń]"
+msgstr "Top 10 grŏczy [piksele / dziyń]"
 
 #: src/components/windows/Statistics.jsx:188
 msgid "Top 10 Players from Yesterday"
-msgstr "Top 10 groczy ze wczorej"
+msgstr "Top 10 grŏczy ze wczorej"
 
 #: src/components/Canvastools.jsx:356
 #: src/components/Canvastools.jsx:433
@@ -2599,15 +2599,15 @@ msgstr "Ôgōlnie"
 
 #: src/components/OnlineBox.jsx:72
 msgid "Total Online Users"
-msgstr "Ôgōlni aktywny używocze"
+msgstr "Ôgōlni aktywni używŏcze"
 
 #: src/components/windows/Statistics.jsx:186
 msgid "Total Pixels per Faction"
-msgstr "Ôgōlne piksele na frakcyjo"
+msgstr "Ôgōlne piksele na frakcyjŏ"
 
 #: src/components/windows/Statistics.jsx:184
 msgid "Total Pixels per Player"
-msgstr "Ôgōlne piksele na grocza"
+msgstr "Ôgōlne piksele na grŏcza"
 
 #: src/core/chartSettings.js:347
 msgid "Total Pixels placed per day"
@@ -2617,14 +2617,14 @@ msgstr "Ôgōlne piksele umiyszczōne na dziyń"
 #: src/components/windows/User.jsx:176
 #: src/components/windows/UserArea.jsx:126
 msgid "Total Rank"
-msgstr "Ôgōlno ranga"
+msgstr "Ôgōlnŏ ranga"
 
 #: src/components/Canvastools.jsx:204
 msgid ""
 "Turn every pixel in area to 0 (YOU REALLY SHOULDN'T DO THAT ON ANY AREA "
 "THAT ISN'T ALREADY MOSTLY 0)"
 msgstr ""
-"Zmień kożdy piksel na ôbszarze na 0 (NIY WINNOŚ TEGO ROBIĆ NA ÔBSZARZE, KERY "
+"Zmień kŏżdy piksel na ôbszarze na 0 (NIY WINNYŚ TEGO ROBIĆ NA ÔBSZARZE, KERY "
 "NIY JE JUŻ Z WIYNKSZA 0)"
 
 #: src/components/windows/Settings.jsx:76
@@ -2641,11 +2641,11 @@ msgstr "Wpisz znaki z nastympujōncego ôbrazu:"
 
 #: src/components/Mediatools.jsx:130
 msgid "Unban media"
-msgstr "Ôdzakōż"
+msgstr "Ôdzakŏż medyje"
 
 #: src/components/windows/Faction.jsx:1451
 msgid "Unban members"
-msgstr "Ôdzakōż czōnkōw"
+msgstr "Ôdzakŏż czōnkōw"
 
 #: src/components/windows/User.jsx:243
 #: src/components/windows/User.jsx:249
@@ -2654,11 +2654,11 @@ msgstr "Ôdblokuj"
 
 #: src/components/SocialSettings.jsx:224
 msgid "Unblock Users"
-msgstr "Ôdblokuj używoczy"
+msgstr "Ôdblokuj używŏczy"
 
 #: src/components/GlobalCaptcha.jsx:72
 msgid "Unknown Captcha Error"
-msgstr "Niyznōmy feler Captcha"
+msgstr "Niyznŏny feler Captchy"
 
 #: src/store/actions/fetch.js:136
 #: src/store/actions/fetch.js:156
@@ -2670,7 +2670,7 @@ msgstr "Niyznōmy feler Captcha"
 #: src/store/actions/fetch.js:294
 #: src/store/actions/fetch.js:313
 msgid "Unknown Error"
-msgstr "Niyznōmy feler"
+msgstr "Niyznŏny feler"
 
 #: src/controls/keypress.js:199
 msgid "Unmuted Sound"
@@ -2691,56 +2691,56 @@ msgstr "Użyj naszego niysztandarowego kursora"
 
 #: src/components/windows/index.js:52
 msgid "User"
-msgstr "Używocz"
+msgstr "Używŏcz"
 
 #: src/components/CanvasItem.jsx:54
 msgid "User Account"
-msgstr "Kōnto używocza"
+msgstr "Kōnto używŏcza"
 
 #: src/components/menus/mainMenu.js:106
 #: src/components/windows/index.js:38
 msgid "User Area"
-msgstr "Ôbszar używocza"
+msgstr "Ôbszar używŏcza"
 
 #: src/components/windows/OIDCConsent.jsx:70
 msgid "User ID and verification level"
-msgstr "ID używocza i poziōm weryfikacyjo"
+msgstr "ID używŏcza i poziōm weryfikacyji"
 
 #: src/components/Admintools.jsx:374
 #: src/components/LogInForm.jsx:336
 #: src/components/LogInForm.jsx:341
 #: src/components/windows/OIDCConsent.jsx:308
 msgid "User Name"
-msgstr "Miano używocza"
+msgstr "Miano używŏcza"
 
 #: src/components/IIDTools.jsx:255
 msgid "Username"
-msgstr "Miano używocza"
+msgstr "Miano używŏcza"
 
 #: src/utils/validation.js:57
 msgid "Username can only contain the characters: a-z . _ and -"
-msgstr "Miano używocza może zawiyrać ino znaki: a-z, -, . i _"
+msgstr "Miano używŏcza może zawiyrać ino znaki: a-z, -, . i _"
 
 #: src/components/ChangeUsername.jsx:61
 #: src/components/windows/OIDCConsent.jsx:302
 msgid "Username can only contain the characters: a-z A-z . _ and -"
-msgstr "Miano używocza może zawiyrać ino znaki: a-z, A-Z, -, . i _"
+msgstr "Miano używŏcza może zawiyrać ino znaki: a-z, A-Z, -, . i _"
 
 #: src/utils/validation.js:49
 msgid "Username can't be empty."
-msgstr "Miano używocza niy może być prōżne."
+msgstr "Miano używŏcza niy może być prōżne."
 
 #: src/utils/validation.js:51
 msgid "Username must be at least 2 characters long"
-msgstr "Miano używocza mo mieć ôdugłość aby 2 znakōw"
+msgstr "Miano używŏcza mŏ mieć ôdugłość aby 2 znakōw"
 
 #: src/utils/validation.js:54
 msgid "Username must be shorter than 26 characters"
-msgstr "Miano używocza musi być krōtsze ôd 26 znakōw"
+msgstr "Miano używŏcza musi być krōtsze ôd 26 znakōw"
 
 #: src/components/windows/Search.jsx:25
 msgid "Users"
-msgstr "Używocze"
+msgstr "Używŏcze"
 
 #: src/components/windows/Help.jsx:91
 #, javascript-format
@@ -2753,9 +2753,9 @@ msgid ""
 "a screenshot from the timelapse results in a perfect 1:1 representation of "
 "how the canvas was at that time."
 msgstr ""
-"Decydowali my zaarchiwizować to jako zopis przeszłości ze bezstratnymi "
-"zakodowanymi mediami internetowymi. Zrobiynie zdjyńcio ekranu z zopisu "
-"przeszłości daje reprezyntacyjo 1:1 tego, jak było płōtno w tym czasie."
+"Decydowali my zaarchiwizować to jako zŏpis przeszłości ze bezstratnymi "
+"zakodowanymi mydiami internetowymi. Zrobiynie zdjyńciŏ ekranu z zŏpisu "
+"przeszłości daje reprezyntacyjŏ 1:1 tego, jak było płōtno w tym czasie."
 
 #: src/components/windows/Help.jsx:147
 msgid ""
@@ -2769,7 +2769,7 @@ msgstr "Dziwny"
 
 #: src/components/windows/Settings.jsx:173
 msgid "What the pencil should draw on the current canvas."
-msgstr "Co ôłōwek winno rysować na teroźnym płōtnie."
+msgstr "Kery ôłōwek winno rysować na teroźnym płōtnie."
 
 #: src/components/windows/Faction.jsx:1641
 msgid "Whether or not this invite can only be used once."
@@ -2782,8 +2782,8 @@ msgid ""
 "become dull and inactive after a while, at which point there is no reason "
 "to keep them and we may decide to remove them."
 msgstr ""
-"Raczej niy usuwōmy płōtnōw, ale niykere płōtnie sōm rozpoczynane dlo zabawy "
-"abo za prośbōm używoczy, co lubiōm teroźny popularny mem. Te płōtna mogōm po "
+"Raczej niy usuwŏmy płōtnōw, ale niykere płōtnie sōm rozpoczynane dlŏ zabawy "
+"abo za prośbōm używŏczy, co lubiōm teroźny popularny mem. Te płōtna mogōm po "
 "pewnym czasie stać sie ćmawe i niyaktywne, wtedy niy ma powodu, coby je "
 "kōntynuować, abo mogymy je usuniynć."
 
@@ -2802,7 +2802,7 @@ msgstr "Felerna farba"
 #: src/components/ChangeUsername.jsx:60
 #: src/components/windows/OIDCConsent.jsx:301
 msgid "YOU CAN ONLY CHOOSE YOUR USERNAME ONCE!"
-msgstr "IDZIE WYBRAĆ SWŌJE MIANO UŻYWOCZA INO RAZ!"
+msgstr "IDZIE WYBRAĆ SWŌJE MIANO UŻYWŎCZA INO RAZ!"
 
 #: src/components/CanvasItem.jsx:45
 msgid "Yes"
@@ -2810,7 +2810,7 @@ msgstr "Ja"
 
 #: src/components/DeleteAccount.jsx:80
 msgid "Yes, really delete Me"
-msgstr "Ja, naprowda mnie usuń"
+msgstr "Ja, naprŏwda mnie usuń"
 
 #: src/components/windows/Statistics.jsx:91
 msgid "Yesterday"
@@ -2821,7 +2821,7 @@ msgid ""
 "You are a teacher and a pupil is playing this game, despite it not being "
 "suitable for them? Send us an email."
 msgstr ""
-"Jeś rechtōrym, a szkolorz gra w to, mimo że to niy ôdpowiado im? Poślij nōm "
+"Jeś rechtōrym, a szkolŏrz gra w to, mimo że to niy ôdpowiado im? Poślij nōm "
 "e-mail."
 
 #: src/components/BanInfo.jsx:94
@@ -2830,12 +2830,12 @@ msgid ""
 "You are banned. You think it is unjustified? Check out the ${ helpButton } "
 "on how to appeal. And don't forget to include the BID you can get below."
 msgstr ""
-"Jeś zakozany. Myślisz, iże to je głupota? Sprawdź ${ helpButton } jak "
+"Jeś zakŏzany. Myślisz, że to je głupota? Sprawdź ${ helpButton } jak "
 "ôdwołować sie. I niy zapōmnij załōnczyć BID, możesz go dostać niżyj."
 
 #: src/components/windows/MyFactions.jsx:471
 msgid "You are currently not a member of any faction."
-msgstr "Teroźnie niy jeś czōnkiem żodnyj frakcyje."
+msgstr "Teroźnie niy jeś czōnkiem żŏdnyj frakcyji."
 
 #: src/ui/PixelTransferController.js:173
 msgid "You are currently not allowed to access this game."
@@ -2846,8 +2846,8 @@ msgid ""
 "You are currently not representing any faction. To represent one, activate "
 "a role in one of your factions below."
 msgstr ""
-"Teroźnie niy reprezyntujesz żodnyj frakcyje. Coby reprezyntować jedna, "
-"aktywuj jakoś rola w jednyj z twojich frakcyji niżyj."
+"Teroźnie niy reprezyntujesz żŏdnyj frakcyji. Coby reprezyntować jednōm, "
+"aktywuj jakoś rolã w jednyj z twojich frakcyji niżyj."
 
 #: src/components/windows/MyFactions.jsx:292
 #, javascript-format
@@ -2863,11 +2863,11 @@ msgstr "Jeś zalogowany za ${ name } [${ username }]."
 
 #: src/components/ReplacementMessage.jsx:16
 msgid "You are not allowed to play this game right now :("
-msgstr "Niy możesz teraz grać w ta gra :("
+msgstr "Niy możesz teraz grać w tōm gre :("
 
 #: src/ui/PixelTransferController.js:143
 msgid "You are using a Proxy."
-msgstr "Używosz proxy."
+msgstr "Używŏsz proxy."
 
 #: src/ui/PixelTransferController.js:150
 msgid "You are weird"
@@ -2878,13 +2878,13 @@ msgid ""
 "You can connect to pixelplanet and use pixelplanet accounts for oauth / "
 "oidc login. See here: "
 msgstr ""
-"Możesz sie połōnczyć z PixelPlanet i użyć kōntōw PixelPlanet do logowanio "
+"Możesz sie połōnczyć z PixelPlanet i użyć kōntōw PixelPlanet do logowaniŏ "
 "OAuth / OIDC. Zobōcz tutaj: "
 
 #: src/ui/PixelTransferController.js:128
 msgid "You can not access this canvas yet, because your pixel score is too low"
 msgstr ""
-"Niy mōsz jeszcze dostympu do tego płōtna, pōniywoż mōsz za dość pikselōw"
+"Niy mŏsz jeszcze dostympu do tego płōtna, pōniywŏż mŏsz za dość pikselōw"
 
 #: src/store/middleware/notifications.js:36
 msgid "You can now place more on pixelplanet.fun :)"
@@ -2897,7 +2897,7 @@ msgid ""
 "a bonus, your cooldown is reduced."
 msgstr ""
 "Chyciōłeś rybe! Je to ${ FISH_TYPES[type].name } z ${ size }kg! Za bonus, "
-"twōj czas ôdliczanio je zmyńszony."
+"twōj czas ôdliczaniŏ je zmyńszony."
 
 #: src/components/windows/OIDCConsent.jsx:177
 msgid "You did not consent"
@@ -2905,7 +2905,7 @@ msgstr "Niy zgodziłeś sie"
 
 #: src/components/GlobalCaptcha.jsx:57
 msgid "You failed your captcha"
-msgstr "Zrypoł żeś captche"
+msgstr "Zrypŏł żeś captche"
 
 #: src/components/windows/Invite.jsx:100
 #, javascript-format
@@ -2913,12 +2913,12 @@ msgid ""
 "You have been invited to join us on pixelplanet. We currently have ${ "
 "memberCount } members."
 msgstr ""
-"Byłeś zaproszōny do prziłōnczenia sie do nōs na PixelPlanet. Teroźnie mamy $"
+"Byłeś zaproszōny do prziłōnczenia sie do nŏs na PixelPlanet. Teroźnie mamy $"
 "{ memberCount } czōnkōw."
 
 #: src/components/SocialSettings.jsx:239
 msgid "You have no users blocked"
-msgstr "Niy masz zablokowanych używoczy"
+msgstr "Niy masz zablokowanych używŏczy"
 
 #: src/ui/PixelTransferController.js:123
 msgid "You have to be logged in to place on this canvas"
@@ -2931,7 +2931,7 @@ msgstr "Zrobiōłeś za moc prośb"
 
 #: src/components/windows/Chat.jsx:361
 msgid "You must be logged in to chat"
-msgstr "Musisz być zalogowany by czatować"
+msgstr "Musisz być zalogowany, coby czatować"
 
 #: src/components/IIDTools.jsx:60
 msgid "You must enter a UserId"
@@ -2948,7 +2948,7 @@ msgstr "Musisz wprowadzić powōd"
 
 #: src/components/IIDTools.jsx:63
 msgid "You must enter a username"
-msgstr "Musisz wprowadzić miano używocza"
+msgstr "Musisz wprowadzić miano używŏcza"
 
 #: src/components/IIDTools.jsx:41
 msgid "You must enter an BID"
@@ -2960,15 +2960,15 @@ msgstr "Musisz wprowadzić IID"
 
 #: src/components/IIDTools.jsx:53
 msgid "You must enter an IID or UserId"
-msgstr "Musisz wprowadzić IID abo ID używocza"
+msgstr "Musisz wprowadzić IID abo ID używŏcza"
 
 #: src/components/IIDTools.jsx:80
 msgid "You must enter at least one IID, User Id or BID"
-msgstr "Musisz wprowadzić aby IID, ID używocza abo BID"
+msgstr "Musisz wprowadzić aby IID, ID używŏcza abo BID"
 
 #: src/components/windows/MyFactions.jsx:134
 msgid "You must select an avatar for your faction"
-msgstr "Musisz wybrać awatar do swojij frakcyje"
+msgstr "Musisz wybrać awatar do swojij frakcyji"
 
 #: src/components/GlobalCaptcha.jsx:54
 msgid "You took too long, try again."
@@ -2979,8 +2979,8 @@ msgid ""
 "Your Browser doesn't allow us to use AudioContext to play sounds. Do you "
 "have some privacy feature blocking us?"
 msgstr ""
-"Twoja przeglōndarka niy przizwolo nōm na używanie AudioContext do "
-"ôdtworzanio szmerōw. Mosz jakoś funkcyjo prywatności, co nos blokuje?"
+"Twoja przeglōndarka niy przizwolŏ nōm na używanie AudioContext do "
+"ôdtworzaniŏ szmerōw. Mŏsz jakoś funkcyjŏ prywatności, co nŏs blokuje?"
 
 #: src/components/GlobalCaptcha.jsx:66
 msgid "Your Browser looks shady"
@@ -2992,7 +2992,7 @@ msgstr "Twoje frakcyje"
 
 #: src/ui/PixelTransferController.js:160
 msgid "Your Internet Provider is banned from this game"
-msgstr "Twōj dostowca internetu je zakozany w tyj grze"
+msgstr "Twōj dostŏwca internetu je zakŏzany w tyj grze"
 
 #: src/components/windows/MyFactions.jsx:380
 msgid "Your Roles"
@@ -3000,19 +3000,19 @@ msgstr "Twoje role"
 
 #: src/components/BanInfo.jsx:116
 msgid "Your ban expires at "
-msgstr "Twōj zakoz wygaso za "
+msgstr "Twōj zakŏz wygasŏ za "
 
 #: src/components/GlobalCaptcha.jsx:63
 msgid "Your device looks weird"
-msgstr "Twoje ustrojstwo wyglōnda dziwnie"
+msgstr "Twoje ustrojstwŏ wyglōnda dziwnie"
 
 #: src/components/windows/OIDCConsent.jsx:288
 msgid ""
 "Your did not set your username yet. A username is required to login to "
 "other applications. You can set it now:"
 msgstr ""
-"Niy ustawiōłeś jeszcze miana używocza. Do zalogowanio sie do inkszych "
-"aplikacyji wymogo sie miano używocza. Możesz go ustawić teroz:"
+"Niy ustawiōłeś jeszcze miana używŏcza. Do zalogowaniŏ sie do inkszych "
+"aplikacyji wymŏgo sie miano używŏcza. Możesz go ustawić terŏz:"
 
 #: src/components/windows/UserArea.jsx:135
 msgid "Your name is:"
@@ -3027,16 +3027,16 @@ msgid ""
 "Zoom in instead of placing a pixel when you tap the canvas and your zoom is "
 "small."
 msgstr ""
-"Przybliż zamiast rysowanio piksela, kej dotkniesz płōtno, a przybliżynie je "
+"Przybliż zamiast rysowaniŏ piksela, kej dotkniesz płōtno, a przybliżynie je "
 "małe."
 
 #: src/components/windows/User.jsx:110
 msgid "a hidden faction"
-msgstr "ukryta frakcyjo"
+msgstr "ukryta frakcyja"
 
 #: src/components/windows/Faction.jsx:1113
 msgid "affects"
-msgstr "wpływo"
+msgstr "wpływŏ"
 
 #: src/components/CanvasItem.jsx:56
 #, javascript-format
@@ -3045,7 +3045,7 @@ msgstr "i ${ canvas.req } narysowanych pikseli"
 
 #: src/components/windows/Faction.jsx:1115
 msgid "by"
-msgstr "bez"
+msgstr "przez"
 
 #: src/components/windows/Help.jsx:91
 msgid "check compliance here"
@@ -3054,7 +3054,7 @@ msgstr "sprawdź zgodliwość tukej"
 #: src/components/windows/Faction.jsx:1117
 #: src/components/windows/Faction.jsx:1676
 msgid "created at"
-msgstr "stworzōne w"
+msgstr "stworzōne na"
 
 #: src/components/windows/User.jsx:184
 msgid "days"
@@ -3066,7 +3066,7 @@ msgstr "pobierz tukej"
 
 #: src/components/windows/Faction.jsx:1119
 msgid "lift"
-msgstr "dźwignii"
+msgstr "dźwignij"
 
 #: src/components/LogInForm.jsx:251
 msgid "or login with:"
@@ -3104,7 +3104,7 @@ msgstr "z poza granicami"
 #: src/components/windows/index.js:43
 msgctxt "media-player"
 msgid "Player"
-msgstr "Grocz"
+msgstr "Grŏcz"
 
 #: src/components/windows/Help.jsx:30
 msgctxt "keybinds"

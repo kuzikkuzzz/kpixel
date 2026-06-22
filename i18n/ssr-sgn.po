@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: admin@pixelplanet.fun\n"
-"PO-Revision-Date: 2026-06-20 21:15+0000\n"
+"PO-Revision-Date: 2026-06-22 11:30+0000\n"
 "Last-Translator: Extreme Motorsex <em@noreply.pixelplanet.fun>\n"
 "Language-Team: Sign Languages <https://translate.gs-os.com/projects/ppfun/"
 "server/sgn/>\n"
@@ -260,7 +260,7 @@ msgid "Error"
 msgstr "🤙☝️☝️👌☝️"
 
 msgid "Failed to create a new user :("
-msgstr "✋✌️🤞👍🤙🤚 👋👌 🤘☝️🤙✌️👋🤙 ✌️ 👇🤙👐 🙌🖖🤙☝️ :("
+msgstr "✋✌️🤞👍🤙🤚 👋👌 🤘☝️🤙✌️👋🤙 ✌️ 👇🤙👐 🙌🖖🤙☝️ 😔"
 
 #, javascript-format
 msgid ""
@@ -296,7 +296,7 @@ msgid ""
 "Have fun and don't hesitate to contact us if you encounter any problems :)"
 msgstr ""
 "🖐️✌️🤜🤙 ✋🙌👇 ✌️👇🤚 🤚👌👇👋 🖐️🤙🖖🤞👋✌️👋🤙 👋👌 🤘👌👇👋✌️🤘👋 🙌🖖 🤞"
-"✋ 👏👌🙌 🤙👇🤘👌🙌👇👋🤙☝️ ✌️👇👏 👎☝️👌👈👍🤙👆🖖 :)"
+"✋ 👏👌🙌 🤙👇🤘👌🙌👇👋🤙☝️ ✌️👇👏 👎☝️👌👈👍🤙👆🖖 😊"
 
 msgid "Hello"
 msgstr "🖐️🤙👍👍👌"
@@ -341,7 +341,7 @@ msgstr "🤞👇🤜✌️👍🤞🤚 👋👏👎🤙 👌✋ 👆🤙🤚🤞
 
 msgid "Invalid url :( Please check your mail again."
 msgstr ""
-"🤞👇🤜✌️👍🤞🤚 🙌☝️👍 :( 👎👍🤙✌️🖖🤙 🤘🖐️🤙🤘👊 👏👌🙌☝️ 👆✌️🤞👍 ✌️🤛✌️🤞"
+"🤞👇🤜✌️👍🤞🤚 🙌☝️👍 😔 👎👍🤙✌️🖖🤙 🤘🖐️🤙🤘👊 👏👌🙌☝️ 👆✌️🤞👍 ✌️🤛✌️🤞"
 "👇."
 
 msgid "Just admins can do that"
@@ -703,7 +703,7 @@ msgstr "👋🖐️🤞🖖 👆🤙🤚🤞✌️ 🤞🖖 👈✌️👇👇�
 msgid "This password-reset link isn't valid anymore :("
 msgstr ""
 "👋🖐️🤞🖖 👎✌️🖖🖖👐👌☝️🤚➖☝️🤙🖖🤙👋 👍🤞👇👊 🤞🖖👇👋 🤜✌️👍🤞🤚 ✌️👇👏👆👌"
-"☝️🤙 :("
+"☝️🤙 😔"
 
 msgid "This user has not password set"
 msgstr "👋🖐️🤞🖖 🙌🖖🤙☝️ 🖐️✌️🖖 👇👌👋 👎✌️🖖🖖👐👌☝️🤚 🖖🤙👋"
@@ -746,7 +746,7 @@ msgid "User ID and verification level"
 msgstr "🙌🖖🤙☝️ 🤞🤚 ✌️👇🤚 🤜🤙☝️🤞✋🤞🤘✌️👋🤞👌👇 👍🤙🤜🤙👍"
 
 msgid "User doesn't exist in our database :("
-msgstr "🙌🖖🤙☝️ 🤚👌🤙🖖👇👋 🤙👉🤞🖖👋 🤞👇 👌🙌☝️ 🤚✌️👋✌️👈✌️🖖🤙 :("
+msgstr "🙌🖖🤙☝️ 🤚👌🤙🖖👇👋 🤙👉🤞🖖👋 🤞👇 👌🙌☝️ 🤚✌️👋✌️👈✌️🖖🤙 😔"
 
 msgid "Username already in use."
 msgstr "🙌🖖🤙☝️👇✌️👆🤙 ✌️👍☝️🤙✌️🤚👏 🤞👇 🙌🖖🤙."
@@ -831,7 +831,7 @@ msgid "You are not logged in"
 msgstr "👏👌🙌 ✌️☝️🤙 👇👌👋 👍👌🤛🤛🤙🤚 🤞👇"
 
 msgid "You are now verified :)"
-msgstr "👏👌🙌 ✌️☝️🤙 👇👌👐 🤜🤙☝️🤞✋🤞🤙🤚 :)"
+msgstr "👏👌🙌 ✌️☝️🤙 👇👌👐 🤜🤙☝️🤞✋🤞🤙🤚 😊"
 
 msgid "You are permanently muted, join our guilded to appeal the mute"
 msgstr ""
@@ -842,7 +842,7 @@ msgstr ""
 msgid "You are sending messages too fast, you have to wait ${ waitTime }s :("
 msgstr ""
 "👏👌🙌 ✌️☝️🤙 🖖🤙👇🤚🤞👇🤛 👆🤙🖖🖖✌️🤛🤙🖖 👋👌👌 ✋✌️🖖👋, 👏👌🙌 🖐️✌️🤜"
-"🤙 👋👌 👐✌️🤞👋 ${ waitTime }🖖 :("
+"🤙 👋👌 👐✌️🤞👋 ${ waitTime }🖖 😔"
 
 msgid "You attached too many files"
 msgstr "👏👌🙌 ✌️👋👋✌️🤘🖐️🤙🤚 👋👌👌 👆✌️👇👏 ✋🤞👍🤙🖖"
@@ -890,7 +890,7 @@ msgstr ""
 "🤙🤚🤙🤚 👋👌 👆✌️👊🤙 🙌🖖🤙 👌✋ 👋🖐️🤞🖖."
 
 msgid "You can't send a message this long :("
-msgstr "👏👌🙌 🤘✌️👇👋 🖖🤙👇🤚 ✌️ 👆🤙🖖🖖✌️🤛🤙 👋🖐️🤞🖖 👍👌👇🤛 :("
+msgstr "👏👌🙌 🤘✌️👇👋 🖖🤙👇🤚 ✌️ 👆🤙🖖🖖✌️🤛🤙 👋🖐️🤞🖖 👍👌👇🤛 😔"
 
 msgid "You did not provide all necessary information"
 msgstr ""
@@ -930,7 +930,7 @@ msgstr "👏👌🙌 👇🤙🤙🤚 👋👌 🤚🤙✋🤞👇🤙 ✌️ �
 msgid "You need to directly access this page in the browser :("
 msgstr ""
 "👏👌🙌 👇🤙🤙🤚 👋👌 🤚🤞☝️🤙🤘👋👍👏 ✌️🤘🤘🤙🖖🖖 👋🖐️🤞🖖 👎✌️🤛🤙 🤞👇 👋"
-"🖐️🤙 👈☝️👌👐🖖🤙☝️ :("
+"🖐️🤙 👈☝️👌👐🖖🤙☝️ 😔"
 
 #, javascript-format
 msgid "You reached your maximum upload quota of ${ MAX_USER_MEDIA_SIZE_MB } MB"
@@ -949,7 +949,7 @@ msgstr ""
 msgid "You sent an empty password or invalid data :("
 msgstr ""
 "👏👌🙌 🖖🤙👇👋 ✌️👇 🤙👆👎👋👏 👎✌️🖖🖖👐👌☝️🤚 👌☝️ 🤞👇🤜✌️👍🤞🤚 🤚✌️👋"
-"✌️ :("
+"✌️ 😔"
 
 msgid "You took too long, try again"
 msgstr "👏👌🙌 👋👌👌👊 👋👌👌 👍👌👇🤛, 👋☝️👏 ✌️🤛✌️🤞👇"
@@ -991,11 +991,11 @@ msgid ""
 "a new one."
 msgstr ""
 "👏👌🙌☝️ 👆✌️🤞👍 🤜🤙☝️🤞✋🤞🤘✌️👋🤞👌👇 🤘👌🤚🤙 🤞🖖 🤞👇🤜✌️👍🤞🤚 👌☝️ "
-"✌️👍☝️🤙✌️🤚👏 🤙👉👎🤞☝️🤙🤚 :(, 👎👍🤙✌️🖖🤙 ☝️🤙🤝🙌🤙🖖👋 ✌️ 👇🤙👐 👌👇"
+"✌️👍☝️🤙✌️🤚👏 🤙👉👎🤞☝️🤙🤚 😔, 👎👍🤙✌️🖖🤙 ☝️🤙🤝🙌🤙🖖👋 ✌️ 👇🤙👐 👌👇"
 "🤙."
 
 msgid "Your passwords do not match :("
-msgstr "👏👌🙌☝️ 👎✌️🖖🖖👐👌☝️🤚🖖 🤚👌 👇👌👋 👆✌️👋🤘🖐️ :("
+msgstr "👏👌🙌☝️ 👎✌️🖖🖖👐👌☝️🤚🖖 🤚👌 👇👌👋 👆✌️👋🤘🖐️ 😔"
 
 #. This media is banned xyz
 msgid "because it is propaganda"
