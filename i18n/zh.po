@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: admin@pixelplanet.fun\n"
-"PO-Revision-Date: 2026-05-28 14:30+0000\n"
+"PO-Revision-Date: 2026-06-24 07:30+0000\n"
 "Last-Translator: Extreme Motorsex <em@noreply.pixelplanet.fun>\n"
 "Language-Team: Chinese (Simplified Han script) <https://translate.gs-os.com/"
 "projects/ppfun/client/zh_Hans/>\n"
@@ -1910,7 +1910,7 @@ msgid "YOU CAN ONLY CHOOSE YOUR USERNAME ONCE!"
 msgstr "你只能选择一次用户名！"
 
 msgid "Yes"
-msgstr "是的"
+msgstr "是"
 
 msgid "Yes, really delete Me"
 msgstr "是的，真的要删除我"
