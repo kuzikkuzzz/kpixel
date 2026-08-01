@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: admin@pixelplanet.fun\n"
-"PO-Revision-Date: 2026-06-08 17:30+0000\n"
-"Last-Translator: kyvvra <silesianreal@noreply.pixelplanet.fun>\n"
+"PO-Revision-Date: 2026-08-01 21:06+0000\n"
+"Last-Translator: Marshadow <marshadow@noreply.pixelplanet.fun>\n"
 "Language-Team: Polish <https://translate.gs-os.com/projects/ppfun/client/pl/>"
 "\n"
 "Language: pl\n"
@@ -526,18 +526,17 @@ msgid "DM"
 msgstr "DM"
 
 msgid "Daily Pixels"
-msgstr ""
+msgstr "Dzienne pixele"
 
 #, fuzzy
 msgid "Daily Pixels per Country"
 msgstr "Gracze i pixele na godzine"
 
 msgid "Daily Pixels per Faction"
-msgstr ""
+msgstr "Dzienne pixele według frakcji"
 
-#, fuzzy
 msgid "Daily Pixels per Player"
-msgstr "Całkowita liczba pikseli postawionych dziennie"
+msgstr "Dzienne pixele według graczy"
 
 msgid "Daily Rank"
 msgstr "Dzienny Ranking"
@@ -552,19 +551,19 @@ msgid "Delete"
 msgstr "usuń"
 
 msgid "Delete Account"
-msgstr "usuń konto"
+msgstr "Usuń Konto"
 
 msgid "Delete Faction"
 msgstr "Usuń Frakcje"
 
 msgid "Delete My Account"
-msgstr ""
+msgstr "Usuń Moje Konto"
 
 msgid "Delete the faction"
 msgstr "Usuń Frakcje"
 
 msgid "Deny"
-msgstr ""
+msgstr "Odrzuć"
 
 msgid "Description"
 msgstr "Opis"
@@ -595,7 +594,7 @@ msgid "Disable History Pencil"
 msgstr "Wyłącz pędzel historyczny"
 
 msgid "Disable Overlay Pencil"
-msgstr "wyłącz pędzel overlaya"
+msgstr "Wyłącz Pędzel Nakładki"
 
 msgid "Disable Pencil"
 msgstr "Wyłącz Ołówek"
@@ -611,12 +610,14 @@ msgstr "Rób różne rzeczy z adresami IP (jeden adres IP na wiersz)"
 msgid ""
 "Don't let people find this faction in public search or look at its profile."
 msgstr ""
+"Nie zezwalaj ludziom na znalezienie tej frakcji w publicznym wyszukiwaniu "
+"lub patrzeć na jej profil."
 
 msgid "Don't remember"
-msgstr "Nie zapamietuj"
+msgstr "Nie zapamiętuj"
 
 msgid "Don't show faction in search"
-msgstr "Nie pokazuj frakcji w wyszukiwarce"
+msgstr "Nie pokazuj frakcji w wyszukiwaniu"
 
 msgid "Don't show me in global stats"
 msgstr "Nie pokazuj mnie w statystykach globalnych"
@@ -652,10 +653,10 @@ msgid "Edit faction"
 msgstr "Edytuj Frakcje"
 
 msgid "Edit roles below their own"
-msgstr ""
+msgstr "Edytuj niższe role"
 
 msgid "Edit their own role and elevate users to their own level"
-msgstr ""
+msgstr "Edytuj własną role i nadawaj innym ten sam poziom"
 
 msgid "Email"
 msgstr "Email"
@@ -670,18 +671,20 @@ msgid ""
 "Email is used to verify your account. You might get a cofirmation mail after "
 "registering."
 msgstr ""
+"E-mail jest używany do zweryfikowania twojego konta. Możesz otrzymać "
+"potwierdzenie po jego zarejestrowaniu."
 
 msgid "Email should at least contain a dot"
 msgstr "E-mail powinien zawierać przynajmniej kropkę"
 
 msgid "Email should be at least 5 characters long."
-msgstr "E-mail powinien być przynajmniej 5 znaków długi."
+msgstr "E-mail powinien być długi na przynajmniej 5 znaków."
 
 msgid "Email should contain a @"
 msgstr "E-mail powinien zawierać @"
 
 msgid "Enable Overlay"
-msgstr "Włącz nakładkę"
+msgstr "Włącz Nakładkę"
 
 msgid "Enable Pencil"
 msgstr "Włącz Pędzel"
@@ -690,19 +693,19 @@ msgid "Enable chat notifications"
 msgstr "Włącz powiadomienia czatu"
 
 msgid "Enter Characters"
-msgstr "Wpisz znaki"
+msgstr "Wpisz Znaki"
 
 msgid "Enter Reason"
-msgstr "Prowadź Powód"
+msgstr "Wprowadź Powód"
 
 msgid "Enter UserName of new Mod"
 msgstr "Wprowadź nazwę użytkownika nowego moda"
 
 msgid "Enter a little text that describes your faction"
-msgstr ""
+msgstr "Napisz krótki opis twojej frakcji"
 
 msgid "Enter search term and press Search."
-msgstr ""
+msgstr "Wpisz szukaną frazę i naciśnij Szukaj."
 
 msgid "Enter your mail address and we will send you a new password:"
 msgstr "Wpisz swój adres mailowy i wyślemy ci twoje nowe hasło:"
@@ -739,6 +742,8 @@ msgid ""
 "Factions allow you to coordinate better with other players. Search for "
 "existing factions, find friends or create your own faction."
 msgstr ""
+"Frakcje pozwalają ci na lepszą koordynacje z innymi graczami. Wyszukaj "
+"istniejących frakcji, znajdź przyjaciół lub stwórz swoją własną frakcje."
 
 msgid "Factor"
 msgstr "Mnożnik"
@@ -747,16 +752,16 @@ msgid "File"
 msgstr "Plik"
 
 msgid "Filter"
-msgstr ""
+msgstr "Filtr"
 
 msgid "Fish Display"
-msgstr "Pokaż Rybe"
+msgstr "Pokaż Rybę"
 
 msgid "For"
 msgstr "Dla"
 
 msgid "For Developers"
-msgstr ""
+msgstr "Dla Deweloperów"
 
 #, javascript-format
 msgid ""
@@ -764,6 +769,10 @@ msgid ""
 "your data, simply delete your account, this in fact wipes all privacy "
 "relevant traces. Your placed pixels will of course not be deleted."
 msgstr ""
+"W przypadku jakichkolwiek kwestii prawnych, prosimy o kontakt na ${ "
+"mailLink }. jeżeli chcesz usunąć swoje dane, po prostu usuń swoje konto, "
+"spowoduje to usunięcie danych istotnych z punktu widzenia prywatności. "
+"Umieszczone przez Ciebie piksele oczywiście nie zostaną usunięte."
 
 msgid "For one day"
 msgstr "Przez Jeden Dzień"
@@ -784,13 +793,13 @@ msgid "Forever"
 msgstr "Na Zawsze"
 
 msgid "From History"
-msgstr "Z historii"
+msgstr "Z Historii"
 
 msgid "From Template"
-msgstr "Z szablonu"
+msgstr "Z Szablonu"
 
 msgid "Get IID"
-msgstr "otrzymaj IID"
+msgstr "Otrzymaj IID"
 
 msgid "Get Pixels"
 msgstr "Sprawdź Pixele"
@@ -802,7 +811,7 @@ msgid "Get email address"
 msgstr "Uzyskaj adres e-mail"
 
 msgid "Get the amount of Pixels placed and ranking"
-msgstr "Uzyskaj liczbę umieszczonych pikseli i ranking"
+msgstr "Uzyskaj liczbę umieszczonych Pixeli i ranking"
 
 msgid "Globe View"
 msgstr "Globusowy widok"
@@ -814,7 +823,7 @@ msgid "Grant"
 msgstr "Nadaj"
 
 msgid "Grid OFF"
-msgstr "Siatka Wył"
+msgstr "Siatka WYŁ"
 
 msgid "Grid ON"
 msgstr "Siatka WŁ"
@@ -839,20 +848,20 @@ msgstr ""
 "Aktualnie jest tylko jedno."
 
 msgid "Hide Embed"
-msgstr ""
+msgstr "Ukryj Załącznik"
 
 msgid "Hide from profile"
-msgstr ""
+msgstr "Ukryj z profilu"
 
 msgid ""
 "Higher zoomlevels take some time to update, the 3D globe gets updated at "
 "least once per day."
 msgstr ""
-"Aktualizacja dalszych zoomów, zajmuje trochę czasu, płótno 3D jest "
-"aktualizowane co najmniej raz dziennie."
+"Aktualizacja wyższych poziomów przybliżenia, zajmuje trochę czasu, płótno 3D "
+"jest aktualizowane co najmniej raz dziennie."
 
 msgid "Historical View"
-msgstr "Wgląd na historie"
+msgstr "Wgląd na Historie"
 
 #, fuzzy, javascript-format
 msgid "Hold left ${ bindShift } for pencil (to place while moving mouse)"
