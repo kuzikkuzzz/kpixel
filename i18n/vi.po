@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Report-Msgid-Bugs-To: admin@pixelplanet.fun\n"
-"PO-Revision-Date: 2026-05-09 00:30+0000\n"
+"PO-Revision-Date: 2026-08-18 06:49+0000\n"
 "Last-Translator: Ngvn <ngvn@noreply.pixelplanet.fun>\n"
 "Language-Team: Vietnamese <https://translate.gs-os.com/projects/ppfun/client/"
 "vi/>\n"
@@ -9,7 +9,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Weblate 5.15.2\n"
+"X-Generator: Weblate 2026.5\n"
 
 msgid " which is in "
 msgstr " tức là sau "
@@ -85,7 +85,7 @@ msgstr "TRUY CẬP CÔNG CỤ MOD"
 #, javascript-format
 msgid ""
 "Actions taken by moderators on the canvas can be seen in the ${ modlogLink }."
-msgstr ""
+msgstr "Những hành động do mod trên khung vẽ có thể tìm thấy ở ${ modlogLink }."
 
 msgid "Add Grid (uncheck if you need a 1:1 template)"
 msgstr "Thêm lưới (không chọn nếu cần ảnh mẫu 1:1)"
@@ -740,7 +740,7 @@ msgid "File"
 msgstr "Tệp"
 
 msgid "Filter"
-msgstr ""
+msgstr "Bộ lọc"
 
 msgid "Fish Display"
 msgstr "Trưng bày cá"
@@ -1060,10 +1060,10 @@ msgid "Minimum Color Distance"
 msgstr "Khoảng cách màu tối thiểu"
 
 msgid "Moderation Log"
-msgstr ""
+msgstr "Nhật kí quản lí"
 
 msgid "Moderation Logs"
-msgstr ""
+msgstr "Nhật ký quản lý"
 
 msgid "Moderators can access all Canvas, Watch and IID tools."
 msgstr "Mod có thể truy cập mọi khung vẽ, theo dõi và các công cụ IID."
@@ -1560,7 +1560,7 @@ msgid "Selected Flag:"
 msgstr "Các cờ đã chọn:"
 
 msgid "Selected moderation actions that happened within the past two weeks."
-msgstr ""
+msgstr "Chọn một hành động quản trị đã xẩy ra trong vòng 2 tuần trước."
 
 msgid "Send"
 msgstr "Gửi"
@@ -1761,7 +1761,7 @@ msgstr "Người dùng này chưa đặt mật khẩu"
 
 #. Column title in tables
 msgid "Time"
-msgstr ""
+msgstr "Thời gian"
 
 msgid "Timeout"
 msgstr "Hết thời gian chờ"
